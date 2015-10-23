@@ -1,3 +1,5 @@
+// UVa 343 - What Base Is This?
+
 package main
 
 import (
