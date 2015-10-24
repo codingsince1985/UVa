@@ -66,7 +66,7 @@ func baseN(num int, base int) string {
 	var number string
 	for num > 0 {
 		digit := num % base
-		number += toStr(digit)
+		number = toStr(digit) + number
 		num = (num - digit) / base
 	}
 	return number
