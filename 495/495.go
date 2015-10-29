@@ -4,21 +4,20 @@ package main
 
 import (
 	"fmt"
+	"math/big"
 	"os"
 )
 
-const MAX_DIGITS = 1050
-
-var f [5001][MAX_DIGITS]int
+var f [5001]big.Int
 
 func prepare() {
-	f[1][0] = 1;
+	f[0] = *big.NewInt(0)
+	f[1] = *big.NewInt(1)
+	var tmp big.Int
 	for i := 2; i <= 5000; i ++ {
-		for j := 0; j < MAX_DIGITS - 2; j ++ {
-			f[i][j] += f[i - 1][j] + f[i - 2][j]
-			f[i][j + 1] += f[i][j] / 10
-			f[i][j] %= 10
-		}
+		tmp = *big.NewInt(0)
+		tmp.Add(&f[i - 1], &f[i - 2])
+		f[i] = tmp
 	}
 }
 
@@ -33,17 +32,7 @@ func main() {
 		if err != nil {
 			break;
 		}
-		var skip = true
 		fmt.Fprintf(out, "The Fibonacci number for %d is ", n)
-		for j := MAX_DIGITS - 1; j >= 0; j -- {
-			tmp := f[n][j]
-			if tmp != 0 {
-				skip = false
-			}
-			if !skip {
-				fmt.Fprintf(out, "%d", tmp)
-			}
-		}
-		fmt.Fprintln(out)
+		fmt.Fprintf(out, "%v\n", &f[n])
 	}
 }
