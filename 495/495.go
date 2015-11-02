@@ -8,16 +8,15 @@ import (
 	"os"
 )
 
-var f [5001]*big.Int
+const MAX = 5001
+
+var f [MAX]big.Int
 
 func prepare() {
-	f[0] = big.NewInt(0)
-	f[1] = big.NewInt(1)
-	var tmp *big.Int
-	for i := 2; i <= 5000; i ++ {
-		tmp = big.NewInt(0)
-		tmp.Add(f[i - 1], f[i - 2])
-		f[i] = tmp
+	f[0].SetInt64(0)
+	f[1].SetInt64(1)
+	for i := 2; i < MAX; i ++ {
+		f[i].Add(&f[i - 1], &f[i - 2])
 	}
 }
 
@@ -32,7 +31,8 @@ func main() {
 		if err != nil {
 			break;
 		}
-		fmt.Fprintf(out, "The Fibonacci number for %d is ", n)
-		fmt.Fprintf(out, "%v\n", f[n])
+		fmt.Fprintf(out, "The Fibonacci number for %d is %v\n", n, &f[n])
 	}
+	in.Close()
+	out.Close()
 }
