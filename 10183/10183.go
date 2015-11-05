@@ -10,20 +10,17 @@ import (
 
 const MAX = 101
 
-var p []*big.Int
+var p []big.Int
 
 func prepare() {
-	p = make([]*big.Int, 0)
-	p0 := big.NewInt(1)
-	p = append(p, p0)
-	p1 := big.NewInt(1)
-	p = append(p, p1)
+	p = make([]big.Int, 2)
+	p[0].SetInt64(1)
+	p[1].SetInt64(1)
 
-	var tmp *big.Int
 	var s string
 	for i := 2;; i ++ {
-		tmp = big.NewInt(0)
-		tmp = tmp.Add(p[i - 2], p[i - 1])
+		var tmp big.Int
+		tmp.Add(&p[i - 2], &p[i - 1])
 		s = fmt.Sprintf("%v", tmp)
 		if len(s) > MAX {
 			break;
@@ -38,8 +35,7 @@ func do() {
 
 	var a, b string
 	var c int
-	n1 := big.NewInt(0)
-	n2 := big.NewInt(0)
+	var n1, n2 big.Int
 	l := len(p)
 	for {
 		fmt.Fscanf(in, "%s %s", &a, &b)
@@ -51,10 +47,10 @@ func do() {
 
 		c = 0
 		for i := 1; i < l; i ++ {
-			if p[i].Cmp(n1) >= 0 && p[i].Cmp(n2) <= 0 {
+			if p[i].Cmp(&n1) >= 0 && p[i].Cmp(&n2) <= 0 {
 				c++
 			}
-			if p[i].Cmp(n2) > 0 {
+			if p[i].Cmp(&n2) > 0 {
 				break;
 			}
 		}
