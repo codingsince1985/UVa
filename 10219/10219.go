@@ -1,6 +1,6 @@
 // UVa 10219 - Find the ways !
 
-// n C k = n! / k!(n-k)!
+// c(n, k) = n! / (k!(n-k)!)
 // log(n!) = log(n) + log(n-1) + log(n-2) + ... + log(1)
 
 package main
