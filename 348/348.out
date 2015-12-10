@@ -1,0 +1,3 @@
+Case 1: (A1 x (A2 x A3))
+Case 2: ((A1 x A2) x A3)
+Case 3: ((A1 x (A2 x A3)) x ((A4 x A5) x A6))
