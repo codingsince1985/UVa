@@ -1,4 +1,4 @@
-// Uva 612 - DNA Sorting
+// UVa 612 - DNA Sorting
 
 package main
 
