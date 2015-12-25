@@ -8,31 +8,30 @@ import (
 	"math"
 )
 
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+
 func findMax(s [][]int) int {
 	l := len(s)
-	max := math.MinInt32
-	for i := 0; i < l - 1; i++ {
-		for j := 0; j < l - 1; j++ {
-			for k := i; k < l; k++ {
-				for m := j; m < l; m++ {
-					tmp := s[k][m]
-					if i != 0 && j != 0 {
-						tmp += s[i - 1][j - 1]
-					}
-					if i != 0 {
-						tmp -= s[i - 1][m]
-					}
-					if j != 0 {
-						tmp -= s[k][j - 1]
-					}
-					if tmp > max {
-						max = tmp
-					}
+	msf := math.MinInt32
+	for i := 0; i < l; i++ {
+		for j := i; j < l; j++ {
+			meh := 0
+			for k := 0; k < l; k++ {
+				tmp := s[j][k]
+				if i > 0 {
+					tmp -= s[i - 1][k]
 				}
+				meh = max(meh + tmp, tmp)
+				msf = max(msf, meh)
 			}
 		}
 	}
-	return max
+	return msf
 }
 
 func prefixSum(r [][]int) [][]int {
@@ -42,10 +41,8 @@ func prefixSum(r [][]int) [][]int {
 		s[i] = make([]int, l)
 	}
 	for i := 0; i < l; i++ {
-		ss := 0
 		for j := 0; j < l; j++ {
-			ss += r[i][j]
-			s[i][j] = ss
+			s[i][j] = r[i][j]
 			if i > 0 {
 				s[i][j] += s[i - 1][j]
 			}
