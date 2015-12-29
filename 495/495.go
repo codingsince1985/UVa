@@ -24,7 +24,10 @@ func main() {
 	prepare()
 
 	in, _ := os.Open("495.in")
+	defer in.Close()
 	out, _ := os.Create("495.out")
+	defer out.Close()
+
 	var n int
 	for {
 		_, err := fmt.Fscanf(in, "%d", &n)
@@ -33,6 +36,4 @@ func main() {
 		}
 		fmt.Fprintf(out, "The Fibonacci number for %d is %v\n", n, &f[n])
 	}
-	in.Close()
-	out.Close()
 }

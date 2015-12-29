@@ -29,7 +29,10 @@ func f(b int) uint64 {
 func main() {
 	prepare()
 	in, _ := os.Open("10450.in")
+	defer in.Close()
 	out, _ := os.Create("10450.out")
+	defer out.Close()
+
 	var n int
 	fmt.Fscanf(in, "%d", &n)
 	var b int
@@ -37,6 +40,4 @@ func main() {
 		fmt.Fscanf(in, "%d", &b)
 		fmt.Fprintf(out, "Scenario #%d:\n%v\n\n", i + 1, f(b))
 	}
-	in.Close()
-	out.Close()
 }

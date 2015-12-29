@@ -31,7 +31,10 @@ func main() {
 	prepare()
 
 	in, _ := os.Open("10303.in")
+	defer in.Close()
 	out, _ := os.Create("10303.out")
+	defer out.Close()
+
 	var n int
 	for {
 		_, err := fmt.Fscanf(in, "%d", &n)
@@ -40,7 +43,4 @@ func main() {
 		}
 		fmt.Fprintln(out, &t[n])
 	}
-
-	in.Close()
-	out.Close()
 }

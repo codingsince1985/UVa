@@ -29,7 +29,10 @@ func c(n, m int) big.Int {
 
 func main() {
 	in, _ := os.Open("530.in")
+	defer in.Close()
 	out, _ := os.Create("530.out")
+	defer out.Close()
+
 	var n, m int
 	for {
 		fmt.Fscanf(in, "%d %d", &n, &m)
@@ -39,6 +42,4 @@ func main() {
 		r := c(n, m)
 		fmt.Fprintln(out, &r)
 	}
-	in.Close()
-	out.Close()
 }

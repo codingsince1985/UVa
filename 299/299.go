@@ -22,7 +22,10 @@ func swap(t []int) int {
 
 func main() {
 	in, _ := os.Open("299.in")
+	defer in.Close()
 	out, _ := os.Create("299.out")
+	defer out.Close()
+
 	var n, m int
 	var t []int
 	fmt.Fscanf(in, "%d", &n)
@@ -34,6 +37,4 @@ func main() {
 		}
 		fmt.Fprintf(out, "Optimal train swapping takes %d swaps.\n", swap(t))
 	}
-	in.Close()
-	out.Close()
 }

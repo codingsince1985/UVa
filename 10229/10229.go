@@ -62,7 +62,10 @@ func prepare() {
 func main() {
 	prepare()
 	in, _ := os.Open("10229.in")
+	defer in.Close()
 	out, _ = os.Create("10229.out")
+	defer out.Close()
+
 	var n, m int64
 	for {
 		_, err := fmt.Fscanf(in, "%d %d", &n, &m)
@@ -71,6 +74,4 @@ func main() {
 		}
 		calc(n, m)
 	}
-	in.Close()
-	out.Close()
 }

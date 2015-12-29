@@ -16,6 +16,8 @@ var done = false
 
 func main() {
 	out, _ := os.Create("485.out")
+	defer out.Close()
+
 	for !done {
 		var one big.Int
 		one.SetInt64(1)
@@ -39,5 +41,4 @@ func main() {
 		}
 		fmt.Fprintln(out)
 	}
-	out.Close()
 }

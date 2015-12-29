@@ -39,7 +39,10 @@ func isCarmichael(n int) bool {
 
 func main() {
 	in, _ := os.Open("10006.in")
+	defer in.Close()
 	out, _ := os.Create("10006.out")
+	defer out.Close()
+
 	var n int
 	for {
 		fmt.Fscanf(in, "%d", &n)
@@ -52,6 +55,4 @@ func main() {
 			fmt.Fprintf(out, "%d is normal.\n", n)
 		}
 	}
-	in.Close()
-	out.Close()
 }

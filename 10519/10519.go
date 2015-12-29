@@ -14,7 +14,10 @@ func main() {
 	two.SetInt64(2)
 
 	in, _ := os.Open("10519.in")
+	defer in.Close()
 	out, _ := os.Create("10519.out")
+	defer out.Close()
+
 	for {
 		_, err := fmt.Fscanf(in, "%s", &s)
 		if err != nil {
@@ -30,6 +33,4 @@ func main() {
 		tmp.Add(&tmp, &two)
 		fmt.Fprintln(out, &tmp)
 	}
-	in.Close()
-	out.Close()
 }

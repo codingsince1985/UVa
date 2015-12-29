@@ -57,7 +57,10 @@ func main() {
 	p[2] = true
 
 	in, _ := os.Open("294.in")
+	defer in.Close()
 	out, _ := os.Create("294.out")
+	defer out.Close()
+
 	var n, L, U int
 	fmt.Fscanf(in, "%d", &n)
 	for i := 0; i < n; i ++ {
@@ -72,6 +75,4 @@ func main() {
 		}
 		fmt.Fprintf(out, "Between %d and %d, %d has a maximum of %d divisors.\n", L, U, num, max)
 	}
-	in.Close()
-	out.Close()
 }

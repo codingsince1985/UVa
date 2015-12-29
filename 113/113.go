@@ -16,7 +16,10 @@ const MAX_K = 1000000000
 
 func main() {
 	in, _ := os.Open("113.in")
+	defer in.Close()
 	out, _ := os.Create("113.out")
+	defer out.Close()
+
 	var ns int
 	var ps string
 	var p, k, n, tmp big.Int
@@ -49,6 +52,4 @@ func main() {
 			}
 		}
 	}
-	in.Close()
-	out.Close()
 }

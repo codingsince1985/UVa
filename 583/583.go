@@ -42,7 +42,10 @@ func factorize(n int) []string {
 
 func main() {
 	in, _ := os.Open("583.in")
+	defer in.Close()
 	out, _ := os.Create("583.out")
+	defer out.Close()
+
 	var n int
 	for {
 		fmt.Fscanf(in, "%d", &n)
@@ -53,6 +56,4 @@ func main() {
 		fmt.Fprintf(out, "%d = ", n)
 		fmt.Fprintln(out, strings.Join(p, " x "))
 	}
-	in.Close()
-	out.Close()
 }

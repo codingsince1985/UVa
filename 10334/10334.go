@@ -23,7 +23,10 @@ func main() {
 	prepare()
 
 	in, _ := os.Open("10334.in")
+	defer in.Close()
 	out, _ := os.Create("10334.out")
+	defer out.Close()
+
 	var n int
 	for {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
@@ -31,6 +34,4 @@ func main() {
 		}
 		fmt.Fprintln(out, &f[n])
 	}
-	in.Close()
-	out.Close()
 }

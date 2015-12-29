@@ -21,7 +21,10 @@ func digitsOfFactorial(n int) float64 {
 
 func main() {
 	in, _ := os.Open("10219.in")
+	defer in.Close()
 	out, _ := os.Create("10219.out")
+	defer out.Close()
+
 	var n, k int
 	for {
 		_, err := fmt.Fscanf(in, "%d %d", &n, &k)
@@ -31,6 +34,4 @@ func main() {
 		result := digitsOfFactorial(n) - (digitsOfFactorial(k) + digitsOfFactorial(n - k))
 		fmt.Fprintln(out, int(result) + 1)
 	}
-	in.Close()
-	out.Close()
 }

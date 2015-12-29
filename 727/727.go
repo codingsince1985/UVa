@@ -25,7 +25,10 @@ func push(s string) {
 
 func main() {
 	in, _ := os.Open("727.in")
+	defer in.Close()
 	out, _ = os.Create("727.out")
+	defer out.Close()
+
 	var n int
 	fmt.Fscanf(in, "%d\n\n", &n)
 	var s string
@@ -63,6 +66,4 @@ func main() {
 		}
 		fmt.Fprintln(out)
 	}
-	in.Close()
-	out.Close()
 }

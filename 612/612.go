@@ -37,7 +37,10 @@ func unsorted(s string) int {
 
 func main() {
 	in, _ := os.Open("612.in")
+	defer in.Close()
 	out, _ := os.Create("612.out")
+	defer out.Close()
+
 	var N, n, m int
 	var s dna
 	fmt.Fscanf(in, "%d", &N)
@@ -53,6 +56,4 @@ func main() {
 		}
 		fmt.Fprintln(out)
 	}
-	in.Close()
-	out.Close()
 }

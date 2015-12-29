@@ -22,7 +22,10 @@ func swap(t []int) int {
 
 func main() {
 	in, _ := os.Open("10327.in")
+	defer in.Close()
 	out, _ := os.Create("10327.out")
+	defer out.Close()
+
 	var n int
 	var a []int
 	for {
@@ -35,6 +38,4 @@ func main() {
 		}
 		fmt.Fprintf(out, "Minimum exchange operations : %d\n", swap(a))
 	}
-	in.Close()
-	out.Close()
 }

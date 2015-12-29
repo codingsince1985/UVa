@@ -31,7 +31,9 @@ func prepare() {
 
 func do() {
 	in, _ := os.Open("10183.in")
+	defer in.Close()
 	out, _ := os.Create("10183.out")
+	defer out.Close()
 
 	var a, b string
 	var c int
@@ -56,9 +58,6 @@ func do() {
 		}
 		fmt.Fprintln(out, c)
 	}
-
-	in.Close()
-	out.Close()
 }
 
 func main() {

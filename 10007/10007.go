@@ -27,7 +27,10 @@ func prepare() {
 
 func do() {
 	in, _ := os.Open("10007.in")
+	defer in.Close()
 	out, _ := os.Create("10007.out")
+	defer out.Close()
+
 	var tmp big.Int
 	var n int
 	for {
@@ -38,8 +41,6 @@ func do() {
 		tmp.Mul(&fact[n], &catalan[n])
 		fmt.Fprintf(out, "%v\n", &tmp)
 	}
-	in.Close()
-	out.Close()
 }
 func main() {
 	prepare()
