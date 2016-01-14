@@ -33,7 +33,7 @@ func main() {
 			break
 		}
 		a = make([]int, n)
-		for i := 0; i < n; i++ {
+		for i := range a {
 			fmt.Fscanf(in, "%d", &a[i])
 		}
 		fmt.Fprintf(out, "Minimum exchange operations : %d\n", swap(a))

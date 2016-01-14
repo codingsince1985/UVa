@@ -50,8 +50,8 @@ func getUpperColor(t int, c sides) int {
 func solve(c []sides) ([][6][2]int, int, [2]int) {
 	l := len(c)
 	dp := make([][6]int, l)
-	for i := 0; i < l; i++ {
-		for j := 0; j < 6; j++ {
+	for i := range dp {
+		for j := range dp[i] {
 			dp[i][j] = 1
 		}
 	}
@@ -109,7 +109,7 @@ func main() {
 			break
 		}
 		c = make([]sides, n)
-		for i := 0; i < n; i++ {
+		for i := range c {
 			fmt.Fscanf(in, "%d%d%d%d%d%d", &s1, &s2, &s3, &s4, &s5, &s6, )
 			cube := sides{s1, s2, s3, s4, s5, s6}
 			c[i] = cube

@@ -50,7 +50,7 @@ func trace(op [][]int) []string {
 
 func make2dint(d1, d2 int) [][]int {
 	s := make([][]int, d1 + 1)
-	for i := 0; i <= d1; i++ {
+	for i := range s {
 		s[i] = make([]int, d2 + 1)
 	}
 	return s

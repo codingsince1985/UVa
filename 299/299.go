@@ -32,7 +32,7 @@ func main() {
 	for i := 0; i < n; i++ {
 		fmt.Fscanf(in, "%d", &m)
 		t = make([]int, m)
-		for j := 0; j < m; j++ {
+		for j := range t {
 			fmt.Fscanf(in, "%d", &t[j])
 		}
 		fmt.Fprintf(out, "Optimal train swapping takes %d swaps.\n", swap(t))

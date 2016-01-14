@@ -11,7 +11,7 @@ func lds(h []int) int {
 	max := 1
 	l := len(h)
 	m := make([]int, l)
-	for i := 0; i < l; i++ {
+	for i := range m {
 		m[i] = 1
 	}
 

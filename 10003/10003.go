@@ -54,9 +54,9 @@ func main() {
 		}
 
 		dp = make([][]int, newl)
-		for i := 0; i < newl; i++ {
+		for i := range dp {
 			dp[i] = make([]int, newl)
-			for j := 0; j < newl; j++ {
+			for j := range dp[i] {
 				dp[i][j] = -1
 			}
 		}

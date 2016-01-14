@@ -33,7 +33,7 @@ func (a nodes) Less(i, j int) bool {
 func lis(n []node) ([]int, int) {
 	l := len(n)
 	dp := make([]int, l + 1)
-	for i := 0; i <= l; i++ {
+	for i := range dp {
 		dp[i] = 1
 	}
 

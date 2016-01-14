@@ -37,11 +37,11 @@ func findMax(s [][]int) int {
 func prefixSum(r [][]int) [][]int {
 	l := len(r)
 	s := make([][]int, l)
-	for i := 0; i < l; i++ {
+	for i := range s {
 		s[i] = make([]int, l)
 	}
-	for i := 0; i < l; i++ {
-		for j := 0; j < l; j++ {
+	for i := range s {
+		for j := range s[i] {
 			s[i][j] = r[i][j]
 			if i > 0 {
 				s[i][j] += s[i - 1][j]
@@ -63,12 +63,12 @@ func main() {
 			break
 		}
 		r := make([][]int, n)
-		for i := 0; i < n; i++ {
+		for i := range r {
 			r[i] = make([]int, n)
 		}
 
-		for i := 0; i < n; i++ {
-			for j := 0; j < n; j++ {
+		for i := range r {
+			for j := range r[i] {
 				fmt.Fscanf(in, "%d", &r[i][j])
 			}
 		}

@@ -40,7 +40,7 @@ func main() {
 	for i := 0; i < c; i++ {
 		fmt.Fscanf(in, "%d%d%d", &n, &t, &m)
 		c := make([]int, m)
-		for j := 0; j < m; j++ {
+		for j := range c {
 			fmt.Fscanf(in, "%d", &c[j])
 		}
 		time, trip := solve(n, t, c)

@@ -24,9 +24,9 @@ func max(a, b int) int {
 func lcs(a, b []string) string {
 	l1, l2 := len(a), len(b)
 	dp := make([][][]string, l1 + 1)
-	for i := 0; i <= l1; i++ {
+	for i := range dp {
 		dp[i] = make([][]string, l2 + 1)
-		for j := 0; j <= l2; j++ {
+		for j := range dp[i] {
 			dp[i][j] = make([]string, 0)
 		}
 	}

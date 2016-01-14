@@ -18,7 +18,6 @@ func main() {
 	var v float64
 	var vi int
 	var dp []int
-	cn := len(cs)
 	for {
 		fmt.Fscanf(in, "%f", &v)
 		if v == 0 {
@@ -28,7 +27,7 @@ func main() {
 		dp = make([]int, vi + 1)
 		dp[0] = 1
 
-		for i := 0; i < cn; i++ {
+		for i := range cs {
 			c := cs[i]
 			for j := c; j <= vi; j++ {
 				dp[j] += dp[j - c]

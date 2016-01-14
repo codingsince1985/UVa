@@ -15,9 +15,9 @@ var (
 
 func makeCache(n int) {
 	c = make([][][2]int, n)
-	for i := 0; i < n; i ++ {
+	for i := range c {
 		c[i] = make([][2]int, n)
-		for j := 0; j < n; j++ {
+		for j := range c[i] {
 			c[i][j][0] = math.MaxInt32
 		}
 	}
@@ -77,7 +77,7 @@ func main() {
 			break
 		}
 		m = make([][2]int, n)
-		for i := 0; i < n; i++ {
+		for i := range m {
 			fmt.Fscanf(in, "%d%d", &m[i][0], &m[i][1])
 		}
 		makeCache(n)

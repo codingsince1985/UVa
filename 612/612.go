@@ -47,7 +47,7 @@ func main() {
 	for i := 0; i < N; i++ {
 		fmt.Fscanf(in, "\n%d %d", &n, &m)
 		s = make([]string, m)
-		for j := 0; j < m; j++ {
+		for j := range s {
 			fmt.Fscanf(in, "%s", &s[j])
 		}
 		sort.Sort(s)

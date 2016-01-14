@@ -17,7 +17,7 @@ func min(a, b int) int {
 func solve(m [][]byte) int {
 	l := len(m)
 	dp := make([][]int, l + 1)
-	for i := 0; i <= l; i++ {
+	for i := range dp {
 		dp[i] = make([]int, l + 1)
 	}
 
@@ -57,7 +57,7 @@ func main() {
 			if first {
 				n = len(l)
 				m = make([][]byte, n)
-				for j := 0; j < n; j++ {
+				for j := range m {
 					m[j] = make([]byte, n)
 				}
 				first = false

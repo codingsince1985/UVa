@@ -46,10 +46,10 @@ func main() {
 		count ++
 		r1 = make([]int, n1)
 		r2 = make([]int, n2)
-		for i := 0; i < n1; i++ {
+		for i := range r1 {
 			fmt.Fscanf(in, "%d", &r1[i])
 		}
-		for i := 0; i < n2; i++ {
+		for i := range r2 {
 			fmt.Fscanf(in, "%d", &r2[i])
 		}
 

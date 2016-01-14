@@ -17,7 +17,7 @@ func max(a, b int) int {
 func lcs(s1, s2 []int) int {
 	l := len(s1)
 	dp := make([][]int, l + 1)
-	for i := 0; i <= l; i++ {
+	for i := range dp {
 		dp[i] = make([]int, l + 1)
 	}
 

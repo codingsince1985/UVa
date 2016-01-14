@@ -17,7 +17,7 @@ func max(a, b int) int {
 func knapsack(p, w []int, tw int) int {
 	l := len(p)
 	dp := make([][]int, l + 1)
-	for i := 0; i <= l; i++ {
+	for i := range dp {
 		dp[i] = make([]int, tw + 1)
 	}
 
@@ -47,7 +47,7 @@ func main() {
 		fmt.Fscanf(in, "%d", &n)
 		p := make([]int, n)
 		w := make([]int, n)
-		for j := 0; j < n; j++ {
+		for j := range p {
 			fmt.Fscanf(in, "%d%d", &p[j], &w[j])
 		}
 		fmt.Fscanf(in, "%d", &g)

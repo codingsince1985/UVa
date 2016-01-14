@@ -16,7 +16,7 @@ func min(a, b int) int {
 
 func make2d(d1, d2 int) [][]int {
 	s := make([][]int, d1)
-	for i := 0; i < d1; i++ {
+	for i := range s {
 		s[i] = make([]int, d2)
 	}
 	return s

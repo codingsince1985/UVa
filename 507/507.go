@@ -45,7 +45,7 @@ func main() {
 	for i := 0; i < b; i++ {
 		fmt.Fscanf(in, "%d", &r)
 		s = make([]int, r - 1)
-		for j := 0; j < r - 1; j++ {
+		for j := range s {
 			fmt.Fscanf(in, "%d", &s[j])
 		}
 		start, end, _ := maxsub(s)
