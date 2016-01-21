@@ -1,6 +1,6 @@
 UVa Online Judge solutions in Golang
 ==
-
+```
 UVa 100 - The 3n + 1 problem
 UVa 101 - The Blocks Problem
 UVa 108 - Maximum Sum
@@ -79,7 +79,7 @@ UVa 10450 - World Cup Noise
 UVa 10465 - Homer Simpson
 UVa 10519 - !! Really Strange !!
 UVa 10579 - Fibonacci Numbers
-
+```
 License
 ==
 The UVa Golang solutions are under the terms of the MIT license. See LICENSE for details.
