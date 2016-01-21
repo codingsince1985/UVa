@@ -65,7 +65,7 @@ func main() {
 	fmt.Fscanf(in, "%d", &n)
 	for i := 0; i < n; i ++ {
 		var num, max, new int
-		fmt.Fscanf(in, "%d %d", &L, &U)
+		fmt.Fscanf(in, "%d%d", &L, &U)
 		for j := L; j <= U; j ++ {
 			factors := factorize(j)
 			if new = numberOfDivisors(factors); new > max {

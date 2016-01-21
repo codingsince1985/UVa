@@ -15,7 +15,7 @@ func main() {
 
 	var s, t string
 	for {
-		if _, err := fmt.Fscanf(in, "%s %s", &s, &t); err != nil {
+		if _, err := fmt.Fscanf(in, "%s%s", &s, &t); err != nil {
 			break
 		}
 		idx, count := 0, 0

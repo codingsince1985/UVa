@@ -50,10 +50,13 @@ func baseN(num int, base int) string {
 
 func main() {
 	in, _ := os.Open("389.in")
+	defer in.Close()
 	out, _ := os.Create("389.out")
+	defer out.Close()
+
 	var number string
 	var b1, b2 int
-	_, err := fmt.Fscanf(in, "%s %d %d", &number, &b1, &b2)
+	_, err := fmt.Fscanf(in, "%s%d%d", &number, &b1, &b2)
 	for err == nil {
 		bt := base10(number, b1)
 		num := baseN(bt, b2)
@@ -62,7 +65,7 @@ func main() {
 		} else {
 			fmt.Fprintf(out, "%7s\n", num)
 		}
-		_, err = fmt.Fscanf(in, "%s %d %d", &number, &b1, &b2)
+		_, err = fmt.Fscanf(in, "%s%d%d", &number, &b1, &b2)
 	}
 
 }

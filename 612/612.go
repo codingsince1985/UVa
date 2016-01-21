@@ -45,7 +45,7 @@ func main() {
 	var s dna
 	fmt.Fscanf(in, "%d", &N)
 	for i := 0; i < N; i++ {
-		fmt.Fscanf(in, "\n%d %d", &n, &m)
+		fmt.Fscanf(in, "\n%d%d", &n, &m)
 		s = make([]string, m)
 		for j := range s {
 			fmt.Fscanf(in, "%s", &s[j])

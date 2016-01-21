@@ -35,7 +35,7 @@ func main() {
 
 	var n, m int
 	for {
-		fmt.Fscanf(in, "%d %d", &n, &m)
+		fmt.Fscanf(in, "%d%d", &n, &m)
 		if (n == 0 && m == 0) {
 			break
 		}

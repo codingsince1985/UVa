@@ -22,7 +22,9 @@ func mod(b, p, m int) int {
 
 func main() {
 	in, _ := os.Open("374.in")
+	defer in.Close()
 	out, _ := os.Create("374.out")
+	defer out.Close()
 
 	var b, p, m int
 	for {

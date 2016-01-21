@@ -40,7 +40,7 @@ func do() {
 	var n1, n2 big.Int
 	l := len(p)
 	for {
-		fmt.Fscanf(in, "%s %s", &a, &b)
+		fmt.Fscanf(in, "%s%s", &a, &b)
 		if a == "0" && b == "0" {
 			break;
 		}

@@ -14,21 +14,19 @@ type Number struct {
 }
 
 var nums []Number
-var out *os.File
 
 func prepare() {
 	in, _ := os.Open("355.in")
+	defer in.Close()
 	nums = make([]Number, 0)
 
 	var b1, b2 int
 	var num string
-	i, _ := fmt.Fscanf(in, "%d %d %s", &b1, &b2, &num)
+	i, _ := fmt.Fscanf(in, "%d%d%s", &b1, &b2, &num)
 	for ; i > 0; {
 		nums = append(nums, Number{b1, b2, num})
-		i, _ = fmt.Fscanf(in, "%d %d %s", &b1, &b2, &num)
+		i, _ = fmt.Fscanf(in, "%d%d%s", &b1, &b2, &num)
 	}
-
-	out, _ = os.Create("355.out")
 }
 
 func toStr(d int) string {
@@ -73,6 +71,9 @@ func baseN(num int, base int) string {
 }
 
 func do() {
+	out, _ := os.Create("355.out")
+	defer out.Close()
+
 	for _, number := range nums {
 		bt := base10(number.num, number.b1)
 		if bt == -1 {

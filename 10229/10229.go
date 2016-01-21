@@ -68,7 +68,7 @@ func main() {
 
 	var n, m int64
 	for {
-		_, err := fmt.Fscanf(in, "%d %d", &n, &m)
+		_, err := fmt.Fscanf(in, "%d%d", &n, &m)
 		if err != nil {
 			break
 		}

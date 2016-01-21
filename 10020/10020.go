@@ -75,7 +75,7 @@ func main() {
 		ls = make([][2]int, 0)
 		var l [2]int
 		for {
-			if fmt.Fscanf(in, "%d %d", &l[0], &l[1]); l[0] == 0 && l[1] == 0 {
+			if fmt.Fscanf(in, "%d%d", &l[0], &l[1]); l[0] == 0 && l[1] == 0 {
 				break
 			}
 			ls = append(ls, l)

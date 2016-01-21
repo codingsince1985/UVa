@@ -9,20 +9,19 @@ import (
 )
 
 var numbers [][2]string
-var out *os.File
 
 func prepare() {
 	in, _ := os.Open("343.in")
+	defer in.Close()
+
 	numbers = make([][2]string, 0)
 	var i = -1
 	var a, b string
-	i, _ = fmt.Fscanf(in, "%s %s", &a, &b)
+	i, _ = fmt.Fscanf(in, "%s%s", &a, &b)
 	for ; i != 0; {
 		numbers = append(numbers, [...]string{a, b})
-		i, _ = fmt.Fscanf(in, "%s %s", &a, &b)
+		i, _ = fmt.Fscanf(in, "%s%s", &a, &b)
 	}
-
-	out, _ = os.Create("343.out")
 }
 
 func getNumber(d rune) int {
@@ -56,6 +55,9 @@ func base10(number string, base int) int {
 }
 
 func do() {
+	out, _ := os.Create("343.out")
+	defer out.Close()
+
 	for _, nums := range numbers {
 		a1, a2 := nums[0], nums[1]
 		b1, b2 := minBase(a1), minBase(a2)

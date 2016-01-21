@@ -27,7 +27,7 @@ func main() {
 
 	var n, k int
 	for {
-		_, err := fmt.Fscanf(in, "%d %d", &n, &k)
+		_, err := fmt.Fscanf(in, "%d%d", &n, &k)
 		if err != nil {
 			break
 		}
