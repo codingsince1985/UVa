@@ -1,0 +1,7 @@
+Case 1: A = 3, limit = 100, number of terms = 8
+Case 2: A = 34, limit = 100, number of terms = 14
+Case 3: A = 75, limit = 250, number of terms = 3
+Case 4: A = 27, limit = 2147483647, number of terms = 112
+Case 5: A = 101, limit = 304, number of terms = 26
+Case 6: A = 101, limit = 303, number of terms = 1
+Case 7: A = 1, limit = 10, number of terms = 1
