@@ -48,8 +48,7 @@ func main() {
 	var l, h int
 	cache = make(map[int]int)
 	for {
-		fmt.Fscanf(in, "%d%d", &l, &h)
-		if l == 0 && h == 0 {
+		if fmt.Fscanf(in, "%d%d", &l, &h); l == 0 && h == 0 {
 			break
 		}
 		num, max := solve(l, h)

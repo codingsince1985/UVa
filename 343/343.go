@@ -14,22 +14,21 @@ func prepare() {
 	in, _ := os.Open("343.in")
 	defer in.Close()
 
-	numbers = make([][2]string, 0)
-	var i = -1
+	numbers = nil
+	var i int
 	var a, b string
 	i, _ = fmt.Fscanf(in, "%s%s", &a, &b)
-	for ; i != 0; {
-		numbers = append(numbers, [...]string{a, b})
+	for i != 0 {
+		numbers = append(numbers, [2]string{a, b})
 		i, _ = fmt.Fscanf(in, "%s%s", &a, &b)
 	}
 }
 
-func getNumber(d rune) int {
-	digit := int(d)
-	if digit >= 48 && digit <= 57 {
-		return digit - 48
-	} else if digit >= 65 && digit <= 90 {
-		return digit - 55
+func getNumber(digit rune) int {
+	if digit >= '0' && digit <= '9' {
+		return int(digit - '0')
+	} else if digit >= 'A' && digit <= 'Z' {
+		return int(digit - 'A') + 10
 	}
 	return -1
 }
@@ -68,8 +67,8 @@ func do() {
 				num2 := base10(a2, j)
 				if num1 == num2 {
 					fmt.Fprintf(out, "%s (base %d) = %s (base %d)\n", a1, i, a2, j)
-					found = true;
-					break;
+					found = true
+					break
 				}
 			}
 		}

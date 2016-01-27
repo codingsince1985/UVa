@@ -11,7 +11,7 @@ func solve(a, l int) int {
 	count := 0
 	for {
 		if a > l {
-			break;
+			break
 		}
 		count ++
 		if a == 1 {
@@ -34,8 +34,7 @@ func main() {
 
 	var a, l, kase int
 	for {
-		fmt.Fscanf(in, "%d%d", &a, &l)
-		if a < 0 {
+		if fmt.Fscanf(in, "%d%d", &a, &l); a < 0 {
 			break
 		}
 		kase ++

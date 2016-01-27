@@ -25,8 +25,7 @@ func main() {
 	var p, k, n, tmp big.Int
 	var i, i1, i2 int64
 	for {
-		_, err := fmt.Fscanf(in, "%d\n%s", &ns, &ps)
-		if err != nil {
+		if _, err := fmt.Fscanf(in, "%d\n%s", &ns, &ps); err != nil {
 			break
 		}
 		p.SetString(ps, 10)

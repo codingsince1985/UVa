@@ -26,9 +26,6 @@ func lcs(a, b []string) string {
 	dp := make([][][]string, l1 + 1)
 	for i := range dp {
 		dp[i] = make([][]string, l2 + 1)
-		for j := range dp[i] {
-			dp[i][j] = make([]string, 0)
-		}
 	}
 	for i := 1; i <= l1; i++ {
 		for j := 1; j <= l2; j++ {
@@ -55,8 +52,7 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	a := make([]string, 0)
-	b := make([]string, 0)
+	var a, b []string
 	var l string
 	first := true
 	for {
@@ -67,8 +63,8 @@ func main() {
 			first = !first
 			if first {
 				fmt.Fprintln(out, lcs(a, b))
-				a = make([]string, 0)
-				b = make([]string, 0)
+				a = nil
+				b = nil
 			}
 			continue
 		}

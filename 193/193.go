@@ -16,12 +16,6 @@ var (
 	n, max int
 )
 
-func buildLink(links *map[int][]int, n1, n2 int) {
-	if _, ok := (*links)[n1]; !ok {
-	}
-	(*links)[n1] = append((*links)[n1], n2)
-}
-
 func ok(curr int) bool {
 	adjs := links[curr]
 	for _, v := range adjs {
@@ -42,7 +36,7 @@ func dfs(curr int) {
 		}
 		if count > max {
 			max = count
-			answer = make([]string, 0)
+			answer = nil
 			for i := 1; i <= n; i++ {
 				if black[i] {
 					answer = append(answer, strconv.Itoa(i))
@@ -75,8 +69,8 @@ func main() {
 		links = make(map[int][]int)
 		for j := 0; j < k; j++ {
 			fmt.Fscanf(in, "%d%d", &n1, &n2)
-			buildLink(&links, n1, n2)
-			buildLink(&links, n2, n1)
+			links[n1] = append(links[n1], n2)
+			links[n2] = append(links[n2], n1)
 		}
 		dfs(1)
 		fmt.Fprintln(out, max)

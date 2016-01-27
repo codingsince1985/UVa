@@ -36,7 +36,7 @@ func solve(l, r int, ls [][2]int) [][2]int {
 		}
 	}
 
-	ret := make([][2]int, 0)
+	var ret [][2]int
 	if idx == -1 {
 		return ret
 	}
@@ -72,7 +72,6 @@ func main() {
 		var m int
 		fmt.Fscanf(in, "\n%d", &m)
 		var ls lines
-		ls = make([][2]int, 0)
 		var l [2]int
 		for {
 			if fmt.Fscanf(in, "%d%d", &l[0], &l[1]); l[0] == 0 && l[1] == 0 {

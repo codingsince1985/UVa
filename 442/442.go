@@ -16,8 +16,8 @@ func solve(out *os.File, s string) {
 		return
 	}
 
-	e := make([][2]int, 0)
-	p := make([]string, 0)
+	var e [][2]int
+	var p []string
 	count := 0
 	var a, b [2]int
 

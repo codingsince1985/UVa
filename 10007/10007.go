@@ -34,9 +34,8 @@ func do() {
 	var tmp big.Int
 	var n int
 	for {
-		fmt.Fscanf(in, "%d", &n)
-		if n == 0 {
-			break;
+		if fmt.Fscanf(in, "%d", &n); n == 0 {
+			break
 		}
 		tmp.Mul(&fact[n], &catalan[n])
 		fmt.Fprintf(out, "%v\n", &tmp)

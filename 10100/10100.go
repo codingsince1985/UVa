@@ -36,7 +36,7 @@ func lcs(t1, t2 []string) int {
 }
 
 func convertNonLetter(s string) string {
-	r := []rune(s)
+	r := []byte(s)
 	for i, v := range s {
 		if !(v >= 'A' && v <= 'Z' || v >= 'a' && v <= 'z' || v == ' ' || v >= '0' && v <= '9') {
 			r[i] = ' '

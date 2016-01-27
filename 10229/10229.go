@@ -12,7 +12,7 @@ var I, O, A [2][2]big.Int
 var two big.Int
 var out *os.File
 
-func multiply(a, b *[2][2]big.Int, m int64) [2][2]big.Int {
+func multiply(a, b [2][2]big.Int, m int64) [2][2]big.Int {
 	var mod, pow big.Int
 	pow.SetInt64(m)
 	mod.Exp(&two, &pow, nil)
@@ -35,10 +35,10 @@ func calc(n, m int64) {
 	x, y := I, A
 	for n != 0 {
 		if n & 1 == 1 {
-			tmp = multiply(&x, &y, m)
+			tmp = multiply(x, y, m)
 			x = tmp
 		}
-		tmp = multiply(&y, &y, m)
+		tmp = multiply(y, y, m)
 		y = tmp
 		n /= 2
 	}
@@ -68,8 +68,7 @@ func main() {
 
 	var n, m int64
 	for {
-		_, err := fmt.Fscanf(in, "%d%d", &n, &m)
-		if err != nil {
+		if _, err := fmt.Fscanf(in, "%d%d", &n, &m); err != nil {
 			break
 		}
 		calc(n, m)

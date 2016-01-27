@@ -19,8 +19,7 @@ func main() {
 	defer out.Close()
 
 	for {
-		_, err := fmt.Fscanf(in, "%s", &s)
-		if err != nil {
+		if _, err := fmt.Fscanf(in, "%s", &s); err != nil {
 			break
 		}
 		if s == "0" {

@@ -23,7 +23,7 @@ func solve(c []int, l, r int) int {
 	}
 	if l + 1 == r {
 		dp[l][r] = 0
-		return 0;
+		return 0
 	}
 	dp[l][r] = math.MaxInt32
 	for i := l + 1; i < r; i++ {
@@ -41,8 +41,7 @@ func main() {
 	var l, n int
 	var c []int
 	for {
-		fmt.Fscanf(in, "%d", &l)
-		if l == 0 {
+		if fmt.Fscanf(in, "%d", &l); l == 0 {
 			break
 		}
 		fmt.Fscanf(in, "%d", &n)

@@ -12,15 +12,16 @@ type node struct {
 	path []byte
 }
 
-func bfs(links map[string][]string, fm, to string) []byte {
+var links map[string][]string
+
+func bfs(fm, to string) []byte {
 	visited := make(map[string]bool)
-	queue, h, l := make([]node, 0), 0, 0
-
 	visited[fm] = true
-	queue = append(queue, node{fm, []byte{fm[0]}}); l++
+	var queue []node
+	queue = append(queue, node{fm, []byte{fm[0]}})
 
-	for l != 0 {
-		curr := queue[h]; h++; l--
+	for len(queue) != 0 {
+		curr := queue[0]; queue = queue[1:]
 		adjs := links[curr.n]
 		for _, v := range adjs {
 			if _, ok := visited[v]; !ok {
@@ -33,18 +34,11 @@ func bfs(links map[string][]string, fm, to string) []byte {
 					return newPath
 				}
 				visited[v] = true
-				queue = append(queue, node{v, newPath}); l++
+				queue = append(queue, node{v, newPath})
 			}
 		}
 	}
 	return nil
-}
-
-func buildLink(links map[string][]string, fm, to string) {
-	if _, ok := links[fm]; !ok {
-		links[fm] = make([]string, 0)
-	}
-	links[fm] = append(links[fm], to)
 }
 
 func main() {
@@ -54,7 +48,6 @@ func main() {
 	defer out.Close()
 
 	var kase, m, n int
-	var links map[string][]string
 	var fm, to string
 	fmt.Fscanf(in, "%d\n", &kase)
 	for i := 0; i < kase; i++ {
@@ -62,12 +55,12 @@ func main() {
 		links = make(map[string][]string)
 		for j := 0; j < m; j++ {
 			fmt.Fscanf(in, "%s%s", &fm, &to)
-			buildLink(links, fm, to)
-			buildLink(links, to, fm)
+			links[fm] = append(links[fm], to)
+			links[to] = append(links[to], fm)
 		}
 		for j := 0; j < n; j++ {
 			fmt.Fscanf(in, "%s%s", &fm, &to)
-			path := bfs(links, fm, to)
+			path := bfs(fm, to)
 			for _, v := range path {
 				fmt.Fprintf(out, "%c", v)
 			}

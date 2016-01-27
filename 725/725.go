@@ -34,7 +34,7 @@ func notIn(n int, m map[int]bool) bool {
 }
 
 func solve(n int) [][2]int {
-	ans := make([][2]int, 0)
+	var ans [][2]int
 	for i := 10234; i <= 98765; i++ {
 		if ok, m := unique(i); ok {
 			d := i / n
@@ -59,8 +59,7 @@ func main() {
 
 	var n int
 	for {
-		fmt.Fscanf(in, "%d", &n)
-		if n == 0 {
+		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
 		ans := solve(n)

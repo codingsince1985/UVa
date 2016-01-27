@@ -21,7 +21,7 @@ func solve(m [][]byte) int {
 		dp[i] = make([]int, l + 1)
 	}
 
-	max := 0;
+	max := 0
 	for i := 1; i <= l; i++ {
 		for j := 1; j <= l; j++ {
 			if m[i - 1][j - 1] == '1' {
@@ -50,8 +50,7 @@ func main() {
 		count := 0
 		for {
 			l = ""
-			fmt.Fscanf(in, "%s", &l)
-			if l == "" {
+			if fmt.Fscanf(in, "%s", &l); l == "" {
 				break
 			}
 			if first {

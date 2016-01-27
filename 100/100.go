@@ -26,8 +26,7 @@ func calculate(i int) int {
 func solve(i, j int) int {
 	max := 0
 	for k := i; k <= j; k++ {
-		m := calculate(k)
-		if m > max {
+		if m := calculate(k); m > max {
 			max = m
 		}
 	}

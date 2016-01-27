@@ -45,8 +45,7 @@ func main() {
 
 	var n int
 	for {
-		fmt.Fscanf(in, "%d", &n)
-		if n == 0 {
+		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
 		if isCarmichael(n) {

@@ -71,9 +71,6 @@ func buildMaze(r, c int, dir []string) {
 	for _, v := range dir {
 		f = v[0]
 		fm := node{r, c, toFace(f)}
-		if _, ok := maze[fm]; !ok {
-			maze[fm] = make([]node, 0)
-		}
 		for i := 1; i < len(v); i++ {
 			maze[fm] = append(maze[fm], toNode(r, c, f, v[i]))
 		}
@@ -82,24 +79,24 @@ func buildMaze(r, c int, dir []string) {
 
 func bfs(fm, to node) []node {
 	visited := make(map[node]bool)
-	queue := make([]qnode, 0); h, l := 0, 0
+	var queue []qnode
 
 	visited[fm] = true
 	rfm := realFrom(fm)
 	visited[rfm] = true
 	from := qnode{rfm, []node{fm, rfm}}
-	queue = append(queue, from); l++
+	queue = append(queue, from)
 
-	for l != 0 {
-		curr := queue[h]; h++; l--
+	for len(queue) != 0 {
+		curr := queue[0]; queue = queue[1:]
 		adjs := maze[curr.node]
 		for _, v := range adjs {
-			if (v.r == to.r && v.c == to.c) {
+			if v.r == to.r && v.c == to.c {
 				return append(curr.p, to)
 			}
 			if _, ok := visited[v]; !ok {
 				visited[v] = true
-				queue = append(queue, qnode{v, append(curr.p, v)}); l++
+				queue = append(queue, qnode{v, append(curr.p, v)})
 			}
 		}
 	}
@@ -135,9 +132,8 @@ func main() {
 	var r1, c1, r2, c2 int
 	var fm, to node
 	for {
-		fmt.Fscanf(in, "%s", &n)
-		if n == "END" {
-			break;
+		if fmt.Fscanf(in, "%s", &n); n == "END" {
+			break
 		}
 		fmt.Fscanf(in, "%d%d%s%d%d", &r1, &c1, &f, &r2, &c2)
 		fm = node{r1, c1, toFace(f[0])}
@@ -147,11 +143,10 @@ func main() {
 			if _, err := fmt.Fscanf(in, "%d%d", &r1, &c1); err != nil {
 				break
 			}
-			dir = make([]string, 0)
+			dir = nil
 			for {
-				fmt.Fscanf(in, "%s", &token)
-				if token == "*" {
-					break;
+				if fmt.Fscanf(in, "%s", &token); token == "*" {
+					break
 				}
 				dir = append(dir, token)
 			}

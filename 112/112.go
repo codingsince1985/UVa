@@ -14,7 +14,7 @@ type node struct {
 }
 
 func buildTree(line string) node {
-	if (len(line) == 0) {
+	if len(line) == 0 {
 		return node{}
 	}
 	var l, r, count int

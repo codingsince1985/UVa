@@ -19,8 +19,7 @@ func main() {
 	var vi int
 	var dp []int
 	for {
-		fmt.Fscanf(in, "%f", &v)
-		if v == 0 {
+		if fmt.Fscanf(in, "%f", &v); v == 0 {
 			break
 		}
 		vi = int(v * 100);

@@ -10,7 +10,7 @@ import (
 const MAX = 50
 
 var count int
-var stack[MAX] string
+var stack [MAX]string
 var out *os.File
 
 func pop() {
@@ -35,15 +35,14 @@ func main() {
 	for i := 0; i < n; i++ {
 		for {
 			s = ""
-			fmt.Fscanf(in, "%s\n", &s)
-			if len(s) == 0 {
+			if fmt.Fscanf(in, "%s\n", &s); len(s) == 0 {
 				break
 			}
 			if s == "+" || s == "-" {
 				for count > 0 && stack[count - 1] != "(" {
-					pop();
+					pop()
 				}
-				push(s);
+				push(s)
 			} else if s == "*" || s == "/" {
 				for count > 0 && stack[count - 1] != "(" && stack[count - 1] != "+" && stack[count - 1] != "-" {
 					pop()

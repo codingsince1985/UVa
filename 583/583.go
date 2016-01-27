@@ -11,7 +11,7 @@ import (
 )
 
 func factorize(n int) []string {
-	p := make([]string, 0)
+	var p []string
 
 	if n < 0 {
 		p = append(p, "-1")
@@ -48,8 +48,7 @@ func main() {
 
 	var n int
 	for {
-		fmt.Fscanf(in, "%d", &n)
-		if n == 0 {
+		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
 		p := factorize(n)

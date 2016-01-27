@@ -30,7 +30,7 @@ func main() {
 	var n int
 	for {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
-			break;
+			break
 		}
 		fmt.Fprintln(out, &f[n])
 	}

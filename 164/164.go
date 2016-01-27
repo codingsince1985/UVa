@@ -15,7 +15,7 @@ func min(a, b int) int {
 }
 
 func trace(op [][]int) []string {
-	ed := make([]string, 0)
+	var ed []string
 	ed = append(ed, "E")
 	l1, l2 := len(op) - 1, len(op[0]) - 1
 	for l1 != 0 && l2 != 0 {
@@ -94,7 +94,7 @@ func ed(s1, s2 string) []string {
 }
 
 func edit(ops[]string, s1, s2 string) []string {
-	ed := make([]string, 0)
+	var ed []string
 	p, p1, p2 := 1, 0, 0
 	var tmp string
 	for i := len(ops) - 1; i >= 0; i-- {
@@ -140,8 +140,7 @@ func main() {
 
 	var s1, s2 string
 	for {
-		fmt.Fscanf(in, "%s", &s1)
-		if s1 == "#" {
+		if fmt.Fscanf(in, "%s", &s1); s1 == "#" {
 			break
 		}
 		fmt.Fscanf(in, "%s", &s2)

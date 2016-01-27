@@ -14,12 +14,11 @@ type node struct {
 
 func bfs(legs map[string][]string, src, dest string) int {
 	visited := make(map[string]bool)
-	queue := make([]node, 0)
+	var queue []node
 	visited[src] = true
-	h, l := 0, 0
-	queue = append(queue, node{src, 0}); l++
-	for l != 0 {
-		curr := queue[h]; l--; h++
+	queue = append(queue, node{src, 0})
+	for len(queue) != 0 {
+		curr := queue[0]; queue = queue[1:]
 		adjs := legs[curr.n]
 		for _, adj := range adjs {
 			if adj == dest {
@@ -27,18 +26,11 @@ func bfs(legs map[string][]string, src, dest string) int {
 			}
 			if _, ok := visited[adj]; !ok {
 				visited[adj] = true
-				queue = append(queue, node{adj, curr.l + 1}); l++
+				queue = append(queue, node{adj, curr.l + 1})
 			}
 		}
 	}
 	return -1
-}
-
-func buildAdjacency(legs map[string][]string, wh1, wh2 string) {
-	if _, ok := legs[wh1]; !ok {
-		legs[wh1] = make([]string, 0)
-	}
-	legs[wh1] = append(legs[wh1], wh2)
 }
 
 func main() {
@@ -58,15 +50,15 @@ func main() {
 	for i := 0; i < kase; i++ {
 		fmt.Fscanf(in, "%d%d%d", &m, &n, &p)
 		wh = make([]string, m)
-		for j := 0; j < m; j++ {
+		for j := range wh {
 			fmt.Fscanf(in, "%s", &wh[j])
 		}
 
 		legs = make(map[string][]string)
 		for j := 0; j < n; j++ {
 			fmt.Fscanf(in, "%s%s", &wh1, &wh2)
-			buildAdjacency(legs, wh1, wh2)
-			buildAdjacency(legs, wh2, wh1)
+			legs[wh1] = append(legs[wh1], wh2)
+			legs[wh2] = append(legs[wh2], wh1)
 		}
 		fmt.Fprintf(out, "\nDATA SET  %d\n\n", i + 1)
 

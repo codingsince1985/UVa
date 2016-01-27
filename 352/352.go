@@ -7,14 +7,14 @@ import (
 	"os"
 )
 
-func dfs(m *[][]byte, cells *[][]int, x, y, d, count int) {
+func dfs(m [][]byte, cells [][]int, x, y, d, count int) {
 	if x < 0 || y < 0 || x >= d || y >= d {
 		return
 	}
-	if (*m)[x][y] != '1' || (*cells)[x][y] != 0 {
+	if m[x][y] != '1' || cells[x][y] != 0 {
 		return
 	}
-	(*cells)[x][y] = count
+	cells[x][y] = count
 	for dx := -1; dx <= 1; dx++ {
 		for dy := -1; dy <= 1; dy++ {
 			if dx == 0 && dy == 0 {
@@ -25,18 +25,18 @@ func dfs(m *[][]byte, cells *[][]int, x, y, d, count int) {
 	}
 }
 
-func floodFill(m *[][]byte) int {
+func floodFill(m [][]byte) int {
 	count := 0
-	d := len(*m)
+	d := len(m)
 	cells := make([][]int, d)
 	for i := range cells {
 		cells[i] = make([]int, d)
 	}
 	for i := range cells {
 		for j := range cells[i] {
-			if (*m)[i][j] == '1' && cells[i][j] == 0 {
+			if m[i][j] == '1' && cells[i][j] == 0 {
 				count ++
-				dfs(m, &cells, i, j, d, count)
+				dfs(m, cells, i, j, d, count)
 			}
 		}
 	}
@@ -65,6 +65,6 @@ func main() {
 				m[i][j] = line[j]
 			}
 		}
-		fmt.Fprintf(out, "Image number %d contains %d war eagles.\n", count, floodFill(&m))
+		fmt.Fprintf(out, "Image number %d contains %d war eagles.\n", count, floodFill(m))
 	}
 }

@@ -92,7 +92,7 @@ func main() {
 	out, _ := os.Create("10131.out")
 	defer out.Close()
 
-	n := make(nodes, 0)
+	var n nodes
 	var t1, t2 int
 	for {
 		if _, err := fmt.Fscanf(in, "%d%d", &t1, &t2); err != nil {

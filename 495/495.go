@@ -30,9 +30,8 @@ func main() {
 
 	var n int
 	for {
-		_, err := fmt.Fscanf(in, "%d", &n)
-		if err != nil {
-			break;
+		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
+			break
 		}
 		fmt.Fprintf(out, "The Fibonacci number for %d is %v\n", n, &f[n])
 	}

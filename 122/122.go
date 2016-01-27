@@ -42,22 +42,21 @@ func buildTree(nodes [][2]string) *node {
 }
 
 func bfs(head *node) []string {
-	ans := make([]string, 0)
-	queue := make([]node, 0)
-	h, l := 0, 0
+	var ans []string
+	var queue []node
+	queue = append(queue, *head)
 
-	queue = append(queue, *head); l++
-	for l != 0 {
-		curr := queue[h]; l--; h++
+	for len(queue) != 0 {
+		curr := queue[0]; queue = queue[1:]
 		if curr.n == -1 {
 			return nil
 		}
 		ans = append(ans, strconv.Itoa(curr.n))
 		if curr.l != nil {
-			queue = append(queue, *curr.l); l++
+			queue = append(queue, *curr.l)
 		}
 		if curr.r != nil {
-			queue = append(queue, *curr.r); l++
+			queue = append(queue, *curr.r)
 		}
 	}
 	return ans
@@ -70,7 +69,7 @@ func main() {
 	defer out.Close()
 
 	var token string
-	nodes := make([][2]string, 0)
+	var nodes [][2]string
 	for {
 		if _, err := fmt.Fscanf(in, "%s", &token); err != nil {
 			break
@@ -87,7 +86,7 @@ func main() {
 					fmt.Fprintln(out, strings.Join(ans, " "))
 				}
 			}
-			nodes = make([][2]string, 0)
+			nodes = nil
 		} else {
 			token = token[1:len(token) - 1]
 			tokens := strings.Split(token, ",")

@@ -23,7 +23,7 @@ func find(n int, s [][]node) int {
 }
 
 func lis(h []int) [][]node {
-	s := make([][]node, 0)
+	var s [][]node
 	t := []node{{h[0], 0}}
 	s = append(s, t)
 	l := len(h)
@@ -44,7 +44,7 @@ func lis(h []int) [][]node {
 }
 
 func output(out *os.File, s [][]node, l int) {
-	f := make([]int, 0)
+	var f []int
 	k := len(s)
 	fmt.Fprintf(out, "Max hits: %d\n", k)
 	for i := k - 1; i >= 0; i -- {
@@ -74,7 +74,7 @@ func main() {
 
 	var h []int
 	for i := 0; i < n; i++ {
-		h = make([]int, 0)
+		h = nil
 		for {
 			if _, err := fmt.Fscanf(in, "%d", &tmp); err != nil {
 				break

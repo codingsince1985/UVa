@@ -27,8 +27,7 @@ func main() {
 
 	var n, k int
 	for {
-		_, err := fmt.Fscanf(in, "%d%d", &n, &k)
-		if err != nil {
+		if _, err := fmt.Fscanf(in, "%d%d", &n, &k); err != nil {
 			break
 		}
 		result := digitsOfFactorial(n) - (digitsOfFactorial(k) + digitsOfFactorial(n - k))

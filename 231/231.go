@@ -43,7 +43,7 @@ func main() {
 			break
 		}
 		if first {
-			h = make([]int, 0)
+			h = nil
 			first = false
 			count ++
 		}

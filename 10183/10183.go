@@ -23,7 +23,7 @@ func prepare() {
 		tmp.Add(&p[i - 2], &p[i - 1])
 		s = fmt.Sprintf("%v", tmp)
 		if len(s) > MAX {
-			break;
+			break
 		}
 		p = append(p, tmp)
 	}
@@ -40,9 +40,8 @@ func do() {
 	var n1, n2 big.Int
 	l := len(p)
 	for {
-		fmt.Fscanf(in, "%s%s", &a, &b)
-		if a == "0" && b == "0" {
-			break;
+		if fmt.Fscanf(in, "%s%s", &a, &b); a == "0" && b == "0" {
+			break
 		}
 		n1.SetString(a, 10)
 		n2.SetString(b, 10)
@@ -53,7 +52,7 @@ func do() {
 				c++
 			}
 			if p[i].Cmp(&n2) > 0 {
-				break;
+				break
 			}
 		}
 		fmt.Fprintln(out, c)

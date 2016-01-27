@@ -9,7 +9,7 @@ import (
 
 func mod(b, p, m int) int {
 	if p == 0 {
-		return 1;
+		return 1
 	}
 	if p % 2 == 0 {
 		tmp := mod(b, p / 2, m)
@@ -28,9 +28,8 @@ func main() {
 
 	var b, p, m int
 	for {
-		_, err := fmt.Fscanf(in, "%d\n%d\n%d\n\n", &b, &p, &m)
-		if (err != nil) {
-			break;
+		if _, err := fmt.Fscanf(in, "%d\n%d\n%d\n\n", &b, &p, &m); err != nil {
+			break
 		}
 		fmt.Fprintln(out, mod(b, p, m))
 	}

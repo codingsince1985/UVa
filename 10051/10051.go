@@ -57,7 +57,7 @@ func solve(c []sides) ([][6][2]int, int, [2]int) {
 	}
 
 	pre := make([][6][2]int, l)
-	mx := 0;
+	mx := 0
 	var st [2]int
 
 	for i := 1; i < l; i++ {
@@ -82,7 +82,7 @@ func solve(c []sides) ([][6][2]int, int, [2]int) {
 }
 
 func output(out *os.File, pre [][6][2]int, mx int, st [2]int) {
-	res := make([][2]int, 0)
+	var res [][2]int
 	res = append(res, st)
 	for i := 0; i < mx - 1; i++ {
 		res = append(res, pre[st[0]][st[1]])
@@ -104,8 +104,7 @@ func main() {
 	var c []sides
 	count := 0
 	for {
-		fmt.Fscanf(in, "%d", &n)
-		if n == 0 {
+		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
 		c = make([]sides, n)

@@ -21,7 +21,7 @@ func prepare() {
 		tmp.Add(&f[i - 2], &f[i - 1])
 		s = fmt.Sprintf("%v", &tmp)
 		if len(s) > 1000 {
-			break;
+			break
 		}
 		f = append(f, tmp)
 	}
@@ -35,9 +35,8 @@ func do() {
 
 	var n int
 	for {
-		_, err := fmt.Fscanf(in, "%d", &n)
-		if err != nil {
-			break;
+		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
+			break
 		}
 		fmt.Fprintln(out, &f[n])
 	}

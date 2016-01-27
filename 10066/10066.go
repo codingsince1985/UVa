@@ -39,8 +39,7 @@ func main() {
 	var n1, n2, count int
 	var r1, r2 []int
 	for {
-		fmt.Fscanf(in, "%d%d", &n1, &n2)
-		if n1 == 0 && n2 == 0 {
+		if fmt.Fscanf(in, "%d%d", &n1, &n2); n1 == 0 && n2 == 0 {
 			break
 		}
 		count ++

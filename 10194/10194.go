@@ -57,7 +57,7 @@ func nextLine() string {
 }
 
 func values(m map[string]team) teams {
-	v := make([]team, 0)
+	var v []team
 	for _, value := range m {
 		v = append(v, value)
 	}

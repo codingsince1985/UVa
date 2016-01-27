@@ -97,8 +97,7 @@ func main() {
 	fmt.Fscanf(in, "%d", &n)
 	initBlocks()
 	for {
-		fmt.Fscanf(in, "%s", &s1)
-		if s1 == "quit" {
+		if fmt.Fscanf(in, "%s", &s1); s1 == "quit" {
 			break
 		}
 		fmt.Fscanf(in, "%d%s%d", &n1, &s2, &n2)

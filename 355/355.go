@@ -18,12 +18,12 @@ var nums []Number
 func prepare() {
 	in, _ := os.Open("355.in")
 	defer in.Close()
-	nums = make([]Number, 0)
+	nums = nil
 
 	var b1, b2 int
 	var num string
 	i, _ := fmt.Fscanf(in, "%d%d%s", &b1, &b2, &num)
-	for ; i > 0; {
+	for i > 0 {
 		nums = append(nums, Number{b1, b2, num})
 		i, _ = fmt.Fscanf(in, "%d%d%s", &b1, &b2, &num)
 	}
@@ -31,18 +31,16 @@ func prepare() {
 
 func toStr(d int) string {
 	if d <= 9 {
-		return string(48 + d)
-	} else {
-		return string(55 + d)
+		return string('0' + d)
 	}
+	return string('A' - 10 + d)
 }
 
 func toNum(digit rune) int {
-	d := int(digit)
-	if d >= 48 && d <= 57 {
-		return d - 48
-	} else if d >= 65 && d <= 90 {
-		return d - 55
+	if digit >= '0' && digit <= '9' {
+		return int(digit - '0')
+	} else if digit >= 'A' && digit <= 'Z' {
+		return int(digit - 'A') + 10
 	}
 	return -1
 }

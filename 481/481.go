@@ -31,7 +31,7 @@ func lis(l []int) [][]node {
 	var t []node
 	t = make([]node, 1)
 	t[0] = node{l[0], 0}
-	s := make([][]node, 0)
+	var s [][]node
 	s = append(s, t)
 	for i := 1; i < len(l); i++ {
 		last := s[len(s) - 1]
@@ -62,7 +62,7 @@ func main() {
 	defer out.Close()
 
 	var tmp int
-	l := make([]int, 0)
+	var l []int
 	for {
 		if _, err := fmt.Fscanf(in, "%d", &tmp); err != nil {
 			break
@@ -71,7 +71,7 @@ func main() {
 	}
 	s := lis(l)
 	idx := len(l)
-	lst := make([]int, 0)
+	var lst[]int
 	for i := len(s) - 1; i >= 0; i -- {
 		for j := len(s[i]) - 1; j >= 0; j-- {
 			if s[i][j].idx < idx {

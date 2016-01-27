@@ -23,7 +23,7 @@ func make2d(d1, d2 int) [][]int {
 }
 
 func trace(op [][]int) []string {
-	e := make([]string, 0)
+	var e []string
 	l1, l2 := len(op) - 1, len(op[0]) - 1
 	for l1 != 0 && l2 != 0 {
 		cur := op[l1][l2]
@@ -141,8 +141,7 @@ func main() {
 
 	var s1, s2 string
 	for {
-		_, err := fmt.Fscanf(in, "%s", &s1)
-		if err != nil {
+		if _, err := fmt.Fscanf(in, "%s", &s1); err != nil {
 			break
 		}
 		fmt.Fscanf(in, "%s", &s2)
