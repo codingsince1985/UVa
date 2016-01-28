@@ -18,7 +18,8 @@ func bfs(legs map[string][]string, src, dest string) int {
 	visited[src] = true
 	queue = append(queue, node{src, 0})
 	for len(queue) != 0 {
-		curr := queue[0]; queue = queue[1:]
+		curr := queue[0]
+		queue = queue[1:]
 		adjs := legs[curr.n]
 		for _, adj := range adjs {
 			if adj == dest {
@@ -60,7 +61,7 @@ func main() {
 			legs[wh1] = append(legs[wh1], wh2)
 			legs[wh2] = append(legs[wh2], wh1)
 		}
-		fmt.Fprintf(out, "\nDATA SET  %d\n\n", i + 1)
+		fmt.Fprintf(out, "\nDATA SET  %d\n\n", i+1)
 
 		var size int
 		var src, dest string
@@ -70,7 +71,7 @@ func main() {
 			if l == -1 {
 				fmt.Fprintf(out, "NO SHIPMENT POSSIBLE\n")
 			} else {
-				fmt.Fprintf(out, "$%d\n", l * 100 * size)
+				fmt.Fprintf(out, "$%d\n", l*100*size)
 			}
 		}
 	}

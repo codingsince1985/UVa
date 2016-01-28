@@ -16,9 +16,9 @@ func prepare() {
 	f[1].SetInt64(1)
 
 	var s string
-	for i := 2;; i++ {
+	for i := 2; ; i++ {
 		var tmp big.Int
-		tmp.Add(&f[i - 2], &f[i - 1])
+		tmp.Add(&f[i-2], &f[i-1])
 		s = fmt.Sprintf("%v", &tmp)
 		if len(s) > 1000 {
 			break

@@ -19,7 +19,8 @@ func bfs(links map[string][]string, n1, n2 string) [][2]string {
 	queue = append(queue, node{n1, nil})
 
 	for len(queue) > 0 {
-		curr := queue[0]; queue = queue[1:]
+		curr := queue[0]
+		queue = queue[1:]
 		if curr.n == n2 {
 			return curr.path
 		}

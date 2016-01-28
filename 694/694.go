@@ -13,14 +13,14 @@ func solve(a, l int) int {
 		if a > l {
 			break
 		}
-		count ++
+		count++
 		if a == 1 {
 			break
 		}
-		if a % 2 == 0 {
+		if a%2 == 0 {
 			a /= 2
 		} else {
-			a = 3 * a + 1
+			a = 3*a + 1
 		}
 	}
 	return count
@@ -37,7 +37,7 @@ func main() {
 		if fmt.Fscanf(in, "%d%d", &a, &l); a < 0 {
 			break
 		}
-		kase ++
+		kase++
 		fmt.Fprintf(out, "Case %d: A = %d, limit = %d, number of terms = %d\n", kase, a, l, solve(a, l))
 	}
 }

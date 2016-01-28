@@ -17,7 +17,7 @@ func find(n int, s [][]node) int {
 	l := len(s)
 	i := sort.Search(l, func(i int) bool {
 		nodes := s[i]
-		return nodes[len(nodes) - 1].num >= 2
+		return nodes[len(nodes)-1].num >= 2
 	})
 	return i
 }
@@ -28,8 +28,8 @@ func lis(h []int) [][]node {
 	s = append(s, t)
 	l := len(h)
 	for i := 1; i < l; i++ {
-		last := s[len(s) - 1]
-		if h[i] > last[len(last) - 1].num {
+		last := s[len(s)-1]
+		if h[i] > last[len(last)-1].num {
 			t = []node{{h[i], i}}
 			s = append(s, t)
 		} else {
@@ -47,7 +47,7 @@ func output(out *os.File, s [][]node, l int) {
 	var f []int
 	k := len(s)
 	fmt.Fprintf(out, "Max hits: %d\n", k)
-	for i := k - 1; i >= 0; i -- {
+	for i := k - 1; i >= 0; i-- {
 		nodes := s[i]
 		for j := len(nodes) - 1; j >= 0; j-- {
 			if nodes[j].idx < l {

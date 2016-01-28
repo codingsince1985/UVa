@@ -23,19 +23,19 @@ func max(a, b int) int {
 
 func lcs(a, b []string) string {
 	l1, l2 := len(a), len(b)
-	dp := make([][][]string, l1 + 1)
+	dp := make([][][]string, l1+1)
 	for i := range dp {
-		dp[i] = make([][]string, l2 + 1)
+		dp[i] = make([][]string, l2+1)
 	}
 	for i := 1; i <= l1; i++ {
 		for j := 1; j <= l2; j++ {
-			if a[i - 1] == b[j - 1] {
-				dp[i][j] = append(dp[i - 1][j - 1], a[i - 1])
+			if a[i-1] == b[j-1] {
+				dp[i][j] = append(dp[i-1][j-1], a[i-1])
 			} else {
-				if len(dp[i - 1][j]) > len(dp[i][j - 1]) {
-					dp[i][j] = dp[i - 1][j]
+				if len(dp[i-1][j]) > len(dp[i][j-1]) {
+					dp[i][j] = dp[i-1][j]
 				} else {
-					dp[i][j] = dp[i][j - 1]
+					dp[i][j] = dp[i][j-1]
 				}
 			}
 		}

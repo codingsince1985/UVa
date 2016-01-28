@@ -23,7 +23,7 @@ func dfs(links map[int][]int, visited []bool, n int) {
 }
 
 func topoSort(links map[int][]int, n int) {
-	visited := make([]bool, n + 1)
+	visited := make([]bool, n+1)
 	for i := 1; i <= n; i++ {
 		if !visited[i] {
 			dfs(links, visited, i)

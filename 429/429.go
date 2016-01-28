@@ -12,9 +12,9 @@ func sameLenAndOneCharDiff(w1, w2 string) bool {
 		return false
 	}
 	count := 0
-	for i := 0; i < len(w1); i++ {
+	for i := range w1 {
 		if w1[i] != w2[i] {
-			count ++
+			count++
 		}
 	}
 	return count == 1
@@ -45,7 +45,8 @@ func bfs(dict map[string][]string, fm, to string) int {
 	queue = append(queue, node{fm, 0})
 
 	for len(queue) != 0 {
-		curr := queue[0]; queue = queue[1:]
+		curr := queue[0]
+		queue = queue[1:]
 		adjs := dict[curr.w]
 		for _, v := range adjs {
 			if v == to {

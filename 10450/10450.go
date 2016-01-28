@@ -22,7 +22,7 @@ func f(b int) uint64 {
 	if c[b] != 0 {
 		return c[b]
 	}
-	c[b] = f(b - 1) + f(b - 2)
+	c[b] = f(b-1) + f(b-2)
 	return c[b]
 }
 
@@ -38,6 +38,6 @@ func main() {
 	var b int
 	for i := 0; i < n; i++ {
 		fmt.Fscanf(in, "%d", &b)
-		fmt.Fprintf(out, "Scenario #%d:\n%v\n\n", i + 1, f(b))
+		fmt.Fprintf(out, "Scenario #%d:\n%v\n\n", i+1, f(b))
 	}
 }

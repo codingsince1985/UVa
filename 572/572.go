@@ -14,7 +14,7 @@ type node struct {
 
 var (
 	m, n int
-	g [][]node
+	g    [][]node
 )
 
 func dfs(i, j, count int) {
@@ -24,9 +24,9 @@ func dfs(i, j, count int) {
 
 	g[i][j].idx = count
 	for dx := -1; dx <= 1; dx++ {
-		for dy := -1; dy <= 1; dy ++ {
+		for dy := -1; dy <= 1; dy++ {
 			if dx != 0 || dy != 0 {
-				dfs(i + dx, j + dy, count)
+				dfs(i+dx, j+dy, count)
 			}
 		}
 	}
@@ -37,7 +37,7 @@ func solve() int {
 	for i := range g {
 		for j := range g[i] {
 			if g[i][j].idx == 0 && g[i][j].oil {
-				count ++
+				count++
 				dfs(i, j, count)
 			}
 		}

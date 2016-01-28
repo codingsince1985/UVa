@@ -22,17 +22,17 @@ func max(a, b int) int {
 
 func lcs(c1, c2 []byte) int {
 	l1, l2 := len(c1), len(c2)
-	dp := make([][]int, l1 + 1)
+	dp := make([][]int, l1+1)
 	for i := range dp {
-		dp[i] = make([]int, l2 + 1)
+		dp[i] = make([]int, l2+1)
 	}
 
 	for i := 1; i <= l1; i++ {
 		for j := 1; j <= l2; j++ {
-			if c1[i - 1] == c2[j - 1] {
-				dp[i][j] = dp[i - 1][j - 1] + 1
+			if c1[i-1] == c2[j-1] {
+				dp[i][j] = dp[i-1][j-1] + 1
 			} else {
-				dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+				dp[i][j] = max(dp[i-1][j], dp[i][j-1])
 			}
 		}
 	}
@@ -59,7 +59,7 @@ func main() {
 		s2 = nextLine(s)
 		c1 = []byte(s1)
 		c2 = []byte(s2)
-		count ++
+		count++
 		fmt.Fprintf(out, "Case #%d: you can visit at most %d cities.\n", count, lcs(c1, c2))
 	}
 }

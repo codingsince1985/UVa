@@ -7,19 +7,19 @@ import (
 	"os"
 )
 
-func knapsack(b []int, t int) ([]int, []int) {
-	dp := make([]int, t + 1)
-	num := make([]int, t + 1)
+func knapsack(b []int, t int) (int, int) {
+	dp := make([]int, t+1)
+	num := make([]int, t+1)
 
-	for i := 0; i < len(b); i++ {
+	for i := range b {
 		for j := b[i]; j <= t; j++ {
-			if dp[j] < dp[j - b[i]] + b[i] {
-				dp[j] = dp[j - b[i]] + b[i]
-				num[j] = num[j - b[i]] + 1;
+			if dp[j] < dp[j-b[i]]+b[i] {
+				dp[j] = dp[j-b[i]] + b[i]
+				num[j] = num[j-b[i]] + 1
 			}
 		}
 	}
-	return dp, num
+	return dp[t], num[t]
 }
 
 func main() {
@@ -34,10 +34,10 @@ func main() {
 			break
 		}
 		dp, num := knapsack([]int{m, n}, t)
-		if dp[t] == t {
-			fmt.Fprintln(out, num[t])
+		if dp == t {
+			fmt.Fprintln(out, num)
 		} else {
-			fmt.Fprintln(out, num[t], t - dp[t])
+			fmt.Fprintln(out, num, t-dp)
 		}
 	}
 }

@@ -17,19 +17,18 @@ func main() {
 
 	var v int
 	var dp []int64
-	l := len(cs)
 	for {
 		if _, err := fmt.Fscanf(in, "%d", &v); err != nil {
 			break
 		}
 
-		dp = make([]int64, v + 1)
+		dp = make([]int64, v+1)
 		dp[0] = 1
 
-		for i := 0; i < l; i++ {
+		for i := range cs {
 			c := cs[i]
 			for j := c; j <= v; j++ {
-				dp[j] += dp[j - c]
+				dp[j] += dp[j-c]
 			}
 		}
 		fmt.Fprintf(out, "There are %v ways to produce %d cents change.\n", dp[v], v)

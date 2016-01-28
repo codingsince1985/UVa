@@ -20,7 +20,7 @@ func dfs(m [][]byte, cells [][]int, x, y, d, count int) {
 			if dx == 0 && dy == 0 {
 				continue
 			}
-			dfs(m, cells, x + dx, y + dy, d, count)
+			dfs(m, cells, x+dx, y+dy, d, count)
 		}
 	}
 }
@@ -35,7 +35,7 @@ func floodFill(m [][]byte) int {
 	for i := range cells {
 		for j := range cells[i] {
 			if m[i][j] == '1' && cells[i][j] == 0 {
-				count ++
+				count++
 				dfs(m, cells, i, j, d, count)
 			}
 		}
@@ -56,7 +56,7 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%d", &d); err != nil {
 			break
 		}
-		count ++
+		count++
 		m = make([][]byte, d)
 		for i := range m {
 			m[i] = make([]byte, d)

@@ -4,8 +4,8 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"math/big"
+	"os"
 )
 
 const MAX = 1001
@@ -15,9 +15,9 @@ var f [MAX]big.Int
 func prepare() {
 	f[0].SetInt64(1)
 	var tmp big.Int
-	for i := 1; i < MAX; i ++ {
+	for i := 1; i < MAX; i++ {
 		tmp.SetInt64(int64(i))
-		f[i].Mul(&f[i - 1], &tmp)
+		f[i].Mul(&f[i-1], &tmp)
 	}
 }
 

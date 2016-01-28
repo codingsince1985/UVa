@@ -18,17 +18,17 @@ func max(a, b int) int {
 
 func lcs(t1, t2 []string) int {
 	l1, l2 := len(t1), len(t2)
-	dp := make([][]int, l1 + 1)
+	dp := make([][]int, l1+1)
 	for i := range dp {
-		dp[i] = make([]int, l2 + 1)
+		dp[i] = make([]int, l2+1)
 	}
 
-	for i := 1; i <= l1; i ++ {
+	for i := 1; i <= l1; i++ {
 		for j := 1; j <= l2; j++ {
-			if t1[i - 1] == t2[j - 1] { // dp array is 1-based
-				dp[i][j] = dp[i - 1][j - 1] + 1
+			if t1[i-1] == t2[j-1] { // dp array is 1-based
+				dp[i][j] = dp[i-1][j-1] + 1
 			} else {
-				dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+				dp[i][j] = max(dp[i-1][j], dp[i][j-1])
 			}
 		}
 	}
@@ -75,7 +75,7 @@ func main() {
 		s1 = strings.TrimSpace(s1)
 		s2 = strings.TrimSpace(s2)
 
-		count ++
+		count++
 		fmt.Fprintf(out, "%2d. ", count)
 
 		if len(s1) == 0 || len(s2) == 0 {

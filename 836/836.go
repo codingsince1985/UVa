@@ -16,16 +16,16 @@ func min(a, b int) int {
 
 func solve(m [][]byte) int {
 	l := len(m)
-	dp := make([][]int, l + 1)
+	dp := make([][]int, l+1)
 	for i := range dp {
-		dp[i] = make([]int, l + 1)
+		dp[i] = make([]int, l+1)
 	}
 
 	max := 0
 	for i := 1; i <= l; i++ {
 		for j := 1; j <= l; j++ {
-			if m[i - 1][j - 1] == '1' {
-				dp[i][j] = min(min(dp[i - 1][j], dp[i][j - 1]), dp[i - 1][j - 1]) + 1
+			if m[i-1][j-1] == '1' {
+				dp[i][j] = min(min(dp[i-1][j], dp[i][j-1]), dp[i-1][j-1]) + 1
 				if dp[i][j] > max {
 					max = dp[i][j]
 				}

@@ -23,16 +23,16 @@ func buildTree(line string) node {
 			l = idx
 		}
 		if v == '(' {
-			count ++
+			count++
 		} else if v == ')' {
-			count --
+			count--
 		}
 		if r == 0 && l != 0 && count == 0 {
 			r = idx
 		}
 	}
-	left := buildTree(line[l + 1:r])
-	right := buildTree(line[r + 2:len(line) - 1])
+	left := buildTree(line[l+1 : r])
+	right := buildTree(line[r+2 : len(line)-1])
 	value, _ := strconv.Atoi(line[:l])
 	tree := node{value, &left, &right}
 	return tree
@@ -43,15 +43,15 @@ func dfs(sum int, node *node, ssf int) bool {
 		return false
 	}
 
-	if ssf + node.n > sum {
+	if ssf+node.n > sum {
 		return false
 	}
 
-	if ssf + node.n == sum && node.l == nil && node.r == nil {
+	if ssf+node.n == sum && node.l == nil && node.r == nil {
 		return true
 	}
 
-	if dfs(sum, node.l, ssf + node.n) || dfs(sum, node.r, ssf + node.n) {
+	if dfs(sum, node.l, ssf+node.n) || dfs(sum, node.r, ssf+node.n) {
 		return true
 	}
 	return false
@@ -78,15 +78,15 @@ func main() {
 			if c >= '0' && c <= '9' || c == '(' || c == ')' {
 				chars = append(chars, c)
 				if c == '(' {
-					count ++
+					count++
 				} else if c == ')' {
-					count --
+					count--
 				}
 			}
 		}
 		fmt.Fscanf(in, "\n", &c)
 		line := string(chars)
-		tree := buildTree(line[1:len(line) - 1])
+		tree := buildTree(line[1 : len(line)-1])
 		if dfs(sum, &tree, 0) {
 			fmt.Fprintln(out, "yes")
 		} else {

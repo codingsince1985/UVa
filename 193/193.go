@@ -10,8 +10,8 @@ import (
 )
 
 var (
-	links map[int][]int
-	black []bool // 1-based
+	links  map[int][]int
+	black  []bool   // 1-based
 	answer []string // 1-based
 	n, max int
 )
@@ -31,7 +31,7 @@ func dfs(curr int) {
 		count := 0
 		for i := 1; i <= n; i++ {
 			if black[i] {
-				count ++
+				count++
 			}
 		}
 		if count > max {
@@ -65,7 +65,7 @@ func main() {
 	fmt.Fscanf(in, "%d", &m)
 	for i := 0; i < m; i++ {
 		fmt.Fscanf(in, "%d%d", &n, &k)
-		black = make([]bool, n + 1)
+		black = make([]bool, n+1)
 		links = make(map[int][]int)
 		for j := 0; j < k; j++ {
 			fmt.Fscanf(in, "%d%d", &n1, &n2)

@@ -14,13 +14,13 @@ var stack [MAX]string
 var out *os.File
 
 func pop() {
-	count --
+	count--
 	fmt.Fprintf(out, "%s", stack[count])
 }
 
 func push(s string) {
 	stack[count] = s
-	count ++
+	count++
 }
 
 func main() {
@@ -39,19 +39,19 @@ func main() {
 				break
 			}
 			if s == "+" || s == "-" {
-				for count > 0 && stack[count - 1] != "(" {
+				for count > 0 && stack[count-1] != "(" {
 					pop()
 				}
 				push(s)
 			} else if s == "*" || s == "/" {
-				for count > 0 && stack[count - 1] != "(" && stack[count - 1] != "+" && stack[count - 1] != "-" {
+				for count > 0 && stack[count-1] != "(" && stack[count-1] != "+" && stack[count-1] != "-" {
 					pop()
 				}
 				push(s)
 			} else if s == "(" {
 				push(s)
 			} else if s == ")" {
-				for stack[count - 1] != "(" {
+				for stack[count-1] != "(" {
 					pop()
 				}
 				count--

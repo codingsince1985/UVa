@@ -24,7 +24,7 @@ func make2d(d1, d2 int) [][]int {
 
 func trace(op [][]int) []string {
 	var e []string
-	l1, l2 := len(op) - 1, len(op[0]) - 1
+	l1, l2 := len(op)-1, len(op[0])-1
 	for l1 != 0 && l2 != 0 {
 		cur := op[l1][l2]
 		switch cur {
@@ -58,8 +58,8 @@ func trace(op [][]int) []string {
 
 func edit(s1, s2 string) [][]int {
 	l1, l2 := len(s1), len(s2)
-	dp := make2d(l1 + 1, l2 + 1)
-	op := make2d(l1 + 1, l2 + 1)
+	dp := make2d(l1+1, l2+1)
+	op := make2d(l1+1, l2+1)
 
 	for i := 0; i <= l1; i++ {
 		dp[i][0] = i
@@ -71,19 +71,19 @@ func edit(s1, s2 string) [][]int {
 	var k int
 	for i := 1; i <= l1; i++ {
 		for j := 1; j <= l2; j++ {
-			if s1[i - 1] == s2[j - 1] {
+			if s1[i-1] == s2[j-1] {
 				k = 0
 			} else {
 				k = 1
 			}
-			dp[i][j] = min(dp[i - 1][j - 1] + k, min(dp[i - 1][j] + 1, dp[i][j - 1] + 1))
-			if dp[i][j] == dp[i - 1][j - 1] + k {
+			dp[i][j] = min(dp[i-1][j-1]+k, min(dp[i-1][j]+1, dp[i][j-1]+1))
+			if dp[i][j] == dp[i-1][j-1]+k {
 				if k == 0 {
 					op[i][j] = 0 // move
 				} else {
 					op[i][j] = 1 // change
 				}
-			} else if dp[i][j] == dp[i][j - 1] + 1 {
+			} else if dp[i][j] == dp[i][j-1]+1 {
 				op[i][j] = 2 // insert
 			} else {
 				op[i][j] = 3 // delete
@@ -97,7 +97,7 @@ func nonMove(e []string) int {
 	count := 0
 	for _, v := range e {
 		if v != "M" {
-			count ++
+			count++
 		}
 	}
 	return count
@@ -114,18 +114,18 @@ func output(out *os.File, e []string, s1, s2 string) {
 			p1++
 			p2++
 		case "C":
-			count ++
+			count++
 			fmt.Fprintf(out, "%d Replace %d,%c\n", count, p, s2[p2])
 			p++
 			p1++
 			p2++
 		case "I":
-			count ++
+			count++
 			fmt.Fprintf(out, "%d Insert %d,%c\n", count, p, s2[p2])
 			p++
 			p2++
 		case "D":
-			count ++
+			count++
 			fmt.Fprintf(out, "%d Delete %d\n", count, p)
 			p1++
 		}

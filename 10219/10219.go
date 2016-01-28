@@ -30,7 +30,7 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%d%d", &n, &k); err != nil {
 			break
 		}
-		result := digitsOfFactorial(n) - (digitsOfFactorial(k) + digitsOfFactorial(n - k))
-		fmt.Fprintln(out, int(result) + 1)
+		result := digitsOfFactorial(n) - (digitsOfFactorial(k) + digitsOfFactorial(n-k))
+		fmt.Fprintln(out, int(result)+1)
 	}
 }

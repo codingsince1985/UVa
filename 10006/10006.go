@@ -10,12 +10,12 @@ import (
 )
 
 func isPrime(n int) bool {
-	if n % 2 == 0 {
+	if n%2 == 0 {
 		return false
 	}
 	sq := int(math.Sqrt(float64(n)))
 	for i := 3; i <= sq; i += 2 {
-		if n % i == 0 {
+		if n%i == 0 {
 			return false
 		}
 	}
@@ -25,7 +25,7 @@ func isPrime(n int) bool {
 func isCarmichael(n int) bool {
 	var b, e, p big.Int
 	e.SetInt64(int64(n))
-	for a := 2; a < n; a ++ {
+	for a := 2; a < n; a++ {
 		b.SetInt64(int64(a))
 		p.Exp(&b, &e, &e)
 		p.Sub(&p, &b)

@@ -15,14 +15,14 @@ func dfs(grid [][]byte, visited [][]bool, x, y int) {
 		return
 	}
 
-	if grid[x - 1][y - 1] == 'W' && !visited[x - 1][y - 1] {
-		visited[x - 1][y - 1] = true
+	if grid[x-1][y-1] == 'W' && !visited[x-1][y-1] {
+		visited[x-1][y-1] = true
 		count++
 
 		for dx := -1; dx <= 1; dx++ {
 			for dy := -1; dy <= 1; dy++ {
 				if !(dx == 0 && dy == 0) {
-					dfs(grid, visited, x + dx, y + dy)
+					dfs(grid, visited, x+dx, y+dy)
 				}
 			}
 		}

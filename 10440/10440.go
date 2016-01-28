@@ -15,16 +15,16 @@ func max(a, b int) int {
 }
 
 func solve(n, t int, c []int) (int, int) {
-	time, trip := -2 * t, 0
+	time, trip := -2*t, 0
 	s := len(c)
 	mod := s % n
 	if mod != 0 {
-		time = c[mod - 1]
-		trip ++
+		time = c[mod-1]
+		trip++
 	}
 	for i := mod + n - 1; i < s; i += n {
-		time = max(time + 2 * t, c[i])
-		trip ++
+		time = max(time+2*t, c[i])
+		trip++
 	}
 	return time + t, trip
 }

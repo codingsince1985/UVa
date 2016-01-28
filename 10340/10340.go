@@ -24,7 +24,7 @@ func main() {
 			for p, j := range t[idx:] {
 				if i == j {
 					idx = idx + p + 1 // p changes every time, use idx+p
-					count ++
+					count++
 					found = true
 					break
 				}

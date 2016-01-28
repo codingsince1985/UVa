@@ -8,7 +8,6 @@ import (
 )
 
 var cs = []int{1, 5, 10, 25, 50}
-var l = len(cs)
 
 func main() {
 	in, _ := os.Open("674.in")
@@ -22,13 +21,13 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%d", &v); err != nil {
 			break
 		}
-		dp = make([]uint64, v + 1)
+		dp = make([]uint64, v+1)
 		dp[0] = 1
 
-		for i := 0; i < l; i++ {
+		for i := range cs {
 			c := cs[i]
 			for j := c; j <= v; j++ {
-				dp[j] += dp[j - c]
+				dp[j] += dp[j-c]
 			}
 		}
 		fmt.Fprintln(out, dp[v])

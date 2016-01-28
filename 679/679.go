@@ -18,9 +18,9 @@ func main() {
 	for i := 0; i < n; i++ {
 		fmt.Fscanf(in, "%d%d", &D, &I)
 		k := 1
-		for j := 0; j < D - 1; j++ {
-			if I % 2 == 0 {
-				k = 2 * k + 1
+		for j := 0; j < D-1; j++ {
+			if I%2 == 0 {
+				k = 2*k + 1
 				I = I / 2
 			} else {
 				k = 2 * k

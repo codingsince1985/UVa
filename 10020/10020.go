@@ -10,15 +10,15 @@ import (
 
 type lines [][2]int
 
-func (l lines)Len() int {
+func (l lines) Len() int {
 	return len(l)
 }
 
-func (l lines)Less(i, j int) bool {
+func (l lines) Less(i, j int) bool {
 	return l[i][0] < l[j][0]
 }
 
-func (l lines)Swap(i, j int) {
+func (l lines) Swap(i, j int) {
 	l[i], l[j] = l[j], l[i]
 }
 
@@ -43,7 +43,7 @@ func solve(l, r int, ls [][2]int) [][2]int {
 
 	ret = append(ret, ls[idx])
 	if maxRight < r {
-		tmp := solve(maxRight, r, ls[idx + 1:])
+		tmp := solve(maxRight, r, ls[idx+1:])
 		if len(tmp) == 0 {
 			return tmp
 		}

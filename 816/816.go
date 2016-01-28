@@ -88,7 +88,8 @@ func bfs(fm, to node) []node {
 	queue = append(queue, from)
 
 	for len(queue) != 0 {
-		curr := queue[0]; queue = queue[1:]
+		curr := queue[0]
+		queue = queue[1:]
 		adjs := maze[curr.node]
 		for _, v := range adjs {
 			if v.r == to.r && v.c == to.c {
@@ -109,11 +110,11 @@ func output(out *os.File, n string, p []node) {
 		fmt.Fprintln(out, "  No Solution Possible")
 	} else {
 		for idx, v := range p {
-			if idx % 10 == 0 {
+			if idx%10 == 0 {
 				fmt.Fprint(out, " ")
 			}
 			fmt.Fprintf(out, " (%d,%d)", v.r, v.c)
-			if idx != 0 && idx % 9 == 0 {
+			if idx != 0 && idx%9 == 0 {
 				fmt.Fprintln(out)
 			}
 		}

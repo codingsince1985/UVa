@@ -10,22 +10,22 @@ import (
 
 type dna []string
 
-func (d dna)Len() int {
+func (d dna) Len() int {
 	return len(d)
 }
 
-func (d dna)Less(i, j int) bool {
+func (d dna) Less(i, j int) bool {
 	return unsorted(d[i]) < unsorted(d[j])
 }
 
-func (d dna)Swap(i, j int) {
+func (d dna) Swap(i, j int) {
 	d[i], d[j] = d[j], d[i]
 }
 
 func unsorted(s string) int {
 	l := len(s)
 	count := 0
-	for i := 0; i < l - 1; i++ {
+	for i := 0; i < l-1; i++ {
 		for j := i + 1; j < l; j++ {
 			if s[i] > s[j] {
 				count++

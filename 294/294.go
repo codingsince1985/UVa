@@ -7,8 +7,8 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"math"
+	"os"
 )
 
 var p map[int]bool
@@ -22,8 +22,8 @@ func factorize(n int) map[int]int {
 	t := 2
 	done := false
 	for !done {
-		for n % t == 0 {
-			f[t] ++
+		for n%t == 0 {
+			f[t]++
 			if n /= t; n == 1 {
 				done = true
 				break
@@ -31,8 +31,8 @@ func factorize(n int) map[int]int {
 		}
 
 		if !done {
-			t ++
-			if t > int(math.Sqrt(float64(n)) + .5) {
+			t++
+			if t > int(math.Sqrt(float64(n))+.5) {
 				// remaining must be a prime
 				f[n] = 1
 				break
@@ -63,10 +63,10 @@ func main() {
 
 	var n, L, U int
 	fmt.Fscanf(in, "%d", &n)
-	for i := 0; i < n; i ++ {
+	for i := 0; i < n; i++ {
 		var num, max, new int
 		fmt.Fscanf(in, "%d%d", &L, &U)
-		for j := L; j <= U; j ++ {
+		for j := L; j <= U; j++ {
 			factors := factorize(j)
 			if new = numberOfDivisors(factors); new > max {
 				max = new

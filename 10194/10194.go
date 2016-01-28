@@ -5,10 +5,10 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"strconv"
-	"strings"
 	"os"
 	"sort"
+	"strconv"
+	"strings"
 )
 
 var s *bufio.Scanner
@@ -39,15 +39,15 @@ func cmp(t1, t2 team) bool {
 	}
 }
 
-func (t teams)Len() int {
+func (t teams) Len() int {
 	return len(t)
 }
 
-func (t teams)Less(i, j int) bool {
+func (t teams) Less(i, j int) bool {
 	return cmp(t[i], t[j])
 }
 
-func (t teams)Swap(i, j int) {
+func (t teams) Swap(i, j int) {
 	t[i], t[j] = t[j], t[i]
 }
 
@@ -75,18 +75,18 @@ func process(a, b string, s1, s2 int) {
 	t1.goalDiff = t1.goalScored - t1.goalAgainst
 	t2.goalDiff = t2.goalScored - t2.goalAgainst
 	if s1 > s2 {
-		t1.wins ++
+		t1.wins++
 		t1.points += 3
-		t2.losses ++
+		t2.losses++
 	} else if s2 > s1 {
-		t1.losses ++
-		t2.wins ++
+		t1.losses++
+		t2.wins++
 		t2.points += 3
 	} else {
-		t1.ties ++
-		t1.points ++
-		t2.ties ++
-		t2.points ++
+		t1.ties++
+		t1.points++
+		t2.ties++
+		t2.points++
 	}
 	teamMap[a], teamMap[b] = t1, t2
 }
@@ -94,7 +94,7 @@ func process(a, b string, s1, s2 int) {
 func output(out *os.File, t teams) {
 	for i, v := range t {
 		fmt.Fprintf(out, "%d) %s %dp, %dg (%d-%d-%d), %dgd (%d-%d)\n",
-			i + 1, v.name, v.points, v.games, v.wins, v.ties, v.losses, v.goalDiff, v.goalScored, v.goalAgainst)
+			i+1, v.name, v.points, v.games, v.wins, v.ties, v.losses, v.goalDiff, v.goalScored, v.goalAgainst)
 	}
 	fmt.Fprintln(out)
 }
@@ -116,7 +116,7 @@ func main() {
 		tm, _ := strconv.Atoi(nextLine())
 		for j := 0; j < tm; j++ {
 			tmp := nextLine()
-			teamMap[tmp] = team{name:tmp}
+			teamMap[tmp] = team{name: tmp}
 		}
 
 		gm, _ := strconv.Atoi(nextLine())

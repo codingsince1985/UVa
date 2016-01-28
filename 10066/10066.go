@@ -20,10 +20,10 @@ func lcs(r1, r2 []int) int {
 
 	for i := 1; i <= n; i++ {
 		for j := 1; j <= m; j++ {
-			if r1[i - 1] == r2[j - 1] { // dp array is 1-based
-				dp[i][j] = dp[i - 1][j - 1] + 1
+			if r1[i-1] == r2[j-1] { // dp array is 1-based
+				dp[i][j] = dp[i-1][j-1] + 1
 			} else {
-				dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+				dp[i][j] = max(dp[i-1][j], dp[i][j-1])
 			}
 		}
 	}
@@ -42,7 +42,7 @@ func main() {
 		if fmt.Fscanf(in, "%d%d", &n1, &n2); n1 == 0 && n2 == 0 {
 			break
 		}
-		count ++
+		count++
 		r1 = make([]int, n1)
 		r2 = make([]int, n2)
 		for i := range r1 {

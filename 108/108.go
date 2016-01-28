@@ -4,8 +4,8 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"math"
+	"os"
 )
 
 func max(a, b int) int {
@@ -24,9 +24,9 @@ func findMax(s [][]int) int {
 			for k := 0; k < l; k++ {
 				tmp := s[j][k]
 				if i > 0 {
-					tmp -= s[i - 1][k]
+					tmp -= s[i-1][k]
 				}
-				meh = max(meh + tmp, tmp)
+				meh = max(meh+tmp, tmp)
 				msf = max(msf, meh)
 			}
 		}
@@ -44,7 +44,7 @@ func prefixSum(r [][]int) [][]int {
 		for j := range s[i] {
 			s[i][j] = r[i][j]
 			if i > 0 {
-				s[i][j] += s[i - 1][j]
+				s[i][j] += s[i-1][j]
 			}
 		}
 	}

@@ -23,7 +23,7 @@ func maxsub(s []int) (int, int, int) {
 			if msf <= meh {
 				end = i + 1
 				msf = meh
-				if end - start > longestEnd - longestStart {
+				if end-start > longestEnd-longestStart {
 					longestStart = start
 					longestEnd = end
 				}
@@ -44,15 +44,15 @@ func main() {
 	fmt.Fscanf(in, "%d", &b)
 	for i := 0; i < b; i++ {
 		fmt.Fscanf(in, "%d", &r)
-		s = make([]int, r - 1)
+		s = make([]int, r-1)
 		for j := range s {
 			fmt.Fscanf(in, "%d", &s[j])
 		}
 		start, end, _ := maxsub(s)
 		if start == -1 {
-			fmt.Fprintf(out, "Route %d has no nice parts\n", i + 1)
+			fmt.Fprintf(out, "Route %d has no nice parts\n", i+1)
 		} else {
-			fmt.Fprintf(out, "The nicest part of route %d is between stops %d and %d\n", i + 1, start + 1, end + 1)
+			fmt.Fprintf(out, "The nicest part of route %d is between stops %d and %d\n", i+1, start+1, end+1)
 		}
 	}
 }

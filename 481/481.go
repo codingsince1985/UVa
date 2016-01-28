@@ -16,12 +16,12 @@ func binarySearch(n int, l [][]node, s, e int) int {
 	// for build-in binary search, see UVa 497
 	m := (s + e) / 2
 	mid := l[m]
-	if n == mid[len(mid) - 1].num {
+	if n == mid[len(mid)-1].num {
 		return m
 	} else if s == e {
 		return s
-	} else if n > mid[len(mid) - 1].num {
-		return binarySearch(n, l, m + 1, e)
+	} else if n > mid[len(mid)-1].num {
+		return binarySearch(n, l, m+1, e)
 	} else {
 		return binarySearch(n, l, s, m)
 	}
@@ -34,8 +34,8 @@ func lis(l []int) [][]node {
 	var s [][]node
 	s = append(s, t)
 	for i := 1; i < len(l); i++ {
-		last := s[len(s) - 1]
-		if l[i] > last[len(last) - 1].num {
+		last := s[len(s)-1]
+		if l[i] > last[len(last)-1].num {
 			t = []node{{l[i], i}}
 			s = append(s, t)
 		} else {
@@ -71,8 +71,8 @@ func main() {
 	}
 	s := lis(l)
 	idx := len(l)
-	var lst[]int
-	for i := len(s) - 1; i >= 0; i -- {
+	var lst []int
+	for i := len(s) - 1; i >= 0; i-- {
 		for j := len(s[i]) - 1; j >= 0; j-- {
 			if s[i][j].idx < idx {
 				lst = append(lst, s[i][j].num)

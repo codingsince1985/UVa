@@ -12,7 +12,8 @@ func bfs(adj map[int][]int, n, t int) int {
 	var queue [][2]int
 	queue = append(queue, [2]int{n, t})
 	for len(queue) != 0 {
-		curr := queue[0]; queue = queue[1:]
+		curr := queue[0]
+		queue = queue[1:]
 		visited[curr[0]] = true
 		adjs := adj[curr[0]]
 		if curr[1] > 0 {
@@ -53,8 +54,8 @@ func main() {
 				break
 			}
 			visited := bfs(adj, n, t)
-			count ++
-			fmt.Fprintf(out, "Case %d: %d nodes not reachable from node %d with TTL = %d.\n", count, len(adj) - visited, n, t)
+			count++
+			fmt.Fprintf(out, "Case %d: %d nodes not reachable from node %d with TTL = %d.\n", count, len(adj)-visited, n, t)
 		}
 	}
 }

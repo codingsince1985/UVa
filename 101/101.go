@@ -8,7 +8,7 @@ import (
 )
 
 var (
-	n int
+	n      int
 	blocks [][]int
 )
 
@@ -33,16 +33,16 @@ func find(n int) int {
 
 func reset(n int) {
 	stack := blocks[find(n)]
-	for stack[len(stack) - 1] != n {
-		blocks[stack[len(stack) - 1]] = append(blocks[stack[len(stack) - 1]], stack[len(stack) - 1])
-		stack = stack[:len(stack) - 1]
+	for stack[len(stack)-1] != n {
+		blocks[stack[len(stack)-1]] = append(blocks[stack[len(stack)-1]], stack[len(stack)-1])
+		stack = stack[:len(stack)-1]
 	}
 }
 
 func move(n1, n2 int) {
 	pos1 := find(n1)
 	pos2 := find(n2)
-	blocks[pos1] = blocks[pos1][:len(blocks[pos1]) - 1]
+	blocks[pos1] = blocks[pos1][:len(blocks[pos1])-1]
 	blocks[pos2] = append(blocks[pos2], n1)
 }
 

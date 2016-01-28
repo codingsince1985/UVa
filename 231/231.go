@@ -45,7 +45,7 @@ func main() {
 		if first {
 			h = nil
 			first = false
-			count ++
+			count++
 		}
 		if tmp == -1 {
 			fmt.Fprintf(out, "Test #%d:\n", count)

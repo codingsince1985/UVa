@@ -32,7 +32,7 @@ func (a nodes) Less(i, j int) bool {
 
 func lis(n []node) ([]int, int) {
 	l := len(n)
-	dp := make([]int, l + 1)
+	dp := make([]int, l+1)
 	for i := range dp {
 		dp[i] = 1
 	}
@@ -42,10 +42,10 @@ func lis(n []node) ([]int, int) {
 
 	for i := 1; i < l; i++ {
 		for j := i + 1; j <= l; j++ {
-			if n[j - 1].w > n[i - 1].w && n[j - 1].s < n[i - 1].s {
-				if dp[j] < dp[i] + 1 {
+			if n[j-1].w > n[i-1].w && n[j-1].s < n[i-1].s {
+				if dp[j] < dp[i]+1 {
 					dp[j] = dp[i] + 1
-					pre[j - 1] = i - 1
+					pre[j-1] = i - 1
 					if dp[j] > max {
 						max = dp[j]
 					}
@@ -59,8 +59,8 @@ func lis(n []node) ([]int, int) {
 func getResult(pre []int, max int, n []node) []node {
 	res := make([]node, max)
 	for i := len(pre) - 1; i >= 0; i-- {
-		if pre[i] == max - 1 {
-			max --
+		if pre[i] == max-1 {
+			max--
 			res[max] = n[i]
 		}
 	}
@@ -74,12 +74,11 @@ func clone(n []node) []node {
 }
 
 func output(out *os.File, res, orig []node) {
-	l := len(res)
-	fmt.Fprintln(out, l)
-	for i := 0; i < l; i++ {
-		for j := 0; j < len(orig); j++ {
+	fmt.Fprintln(out, len(res))
+	for i := range res {
+		for j := range orig {
 			if res[i] == orig[j] {
-				fmt.Fprintln(out, j + 1)
+				fmt.Fprintln(out, j+1)
 				break
 			}
 		}

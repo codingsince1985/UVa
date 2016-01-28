@@ -10,8 +10,7 @@ import (
 var m map[string][2]int
 
 func solve(out *os.File, s string) {
-	l := len(s)
-	if l == 1 {
+	if len(s) == 1 {
 		fmt.Fprintln(out, 0)
 		return
 	}
@@ -26,17 +25,17 @@ func solve(out *os.File, s string) {
 		if c == "(" {
 			p = append(p, c)
 		} else if c == ")" {
-			b = e[len(e) - 1]
-			a = e[len(e) - 2]
+			b = e[len(e)-1]
+			a = e[len(e)-2]
 			if a[1] != b[0] {
 				fmt.Fprintln(out, "error")
 				return
 			}
 			count += a[0] * a[1] * b[1]
 
-			e = e[:len(e) - 2]
+			e = e[:len(e)-2]
 			e = append(e, [2]int{a[0], b[1]})
-			p = p[:len(p) - 1]
+			p = p[:len(p)-1]
 		} else {
 			e = append(e, m[string(c)])
 		}

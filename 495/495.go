@@ -15,8 +15,8 @@ var f [MAX]big.Int
 func prepare() {
 	f[0].SetInt64(0)
 	f[1].SetInt64(1)
-	for i := 2; i < MAX; i ++ {
-		f[i].Add(&f[i - 1], &f[i - 2])
+	for i := 2; i < MAX; i++ {
+		f[i].Add(&f[i-1], &f[i-2])
 	}
 }
 

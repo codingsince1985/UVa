@@ -12,7 +12,7 @@ func toNum(digit rune) int {
 	if digit >= '0' && digit <= '9' {
 		return int(digit - '0')
 	} else if digit >= 'A' && digit <= 'Z' {
-		return int(digit - 'A') + 10
+		return int(digit-'A') + 10
 	}
 	return -1
 }
@@ -25,7 +25,7 @@ func base10(num string, base int) int {
 		if digit >= base {
 			return -1
 		}
-		total += digit * int(math.Pow(float64(base), float64(len - i - 1)))
+		total += digit * int(math.Pow(float64(base), float64(len-i-1)))
 	}
 	return total
 }

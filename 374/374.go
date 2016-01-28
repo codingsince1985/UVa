@@ -11,14 +11,13 @@ func mod(b, p, m int) int {
 	if p == 0 {
 		return 1
 	}
-	if p % 2 == 0 {
-		tmp := mod(b, p / 2, m)
+	if p%2 == 0 {
+		tmp := mod(b, p/2, m)
 		return tmp * tmp % m
 	} else {
-		return (b % m) * mod(b, p - 1, m) % m
+		return (b % m) * mod(b, p-1, m) % m
 	}
 }
-
 
 func main() {
 	in, _ := os.Open("374.in")

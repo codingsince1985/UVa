@@ -9,13 +9,14 @@ import (
 )
 
 const MAX = 1001
+
 var f [MAX]big.Int
 
 func prepare() {
 	f[0].SetInt64(1)
 	f[1].SetInt64(2)
-	for i := 2; i < MAX; i ++ {
-		f[i].Add(&f[i - 2], &f[i - 1])
+	for i := 2; i < MAX; i++ {
+		f[i].Add(&f[i-2], &f[i-1])
 	}
 }
 

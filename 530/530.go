@@ -4,8 +4,8 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"math/big"
+	"os"
 )
 
 func f(n int) big.Int {

@@ -20,7 +20,7 @@ func div(n, d int) (string, int) {
 	r = n % d
 	m[r] = count
 	for {
-		count ++
+		count++
 		r *= 10
 		if r < d {
 			ans += "0"
@@ -41,7 +41,7 @@ func div(n, d int) (string, int) {
 
 func output(out *os.File, n, d int, ans string, rep int) {
 	fmt.Fprintf(out, "%d/%d = ", n, d)
-	fmt.Fprint(out, ans[:len(ans) - rep], "(", ans[len(ans) - rep:], ")")
+	fmt.Fprint(out, ans[:len(ans)-rep], "(", ans[len(ans)-rep:], ")")
 	fmt.Fprintf(out, "\n   %d = number of digits in repeating cycle\n\n", rep)
 }
 

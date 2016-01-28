@@ -16,18 +16,18 @@ func max(a, b int) int {
 
 func knapsack(p, w []int, tw int) int {
 	l := len(p)
-	dp := make([][]int, l + 1)
+	dp := make([][]int, l+1)
 	for i := range dp {
-		dp[i] = make([]int, tw + 1)
+		dp[i] = make([]int, tw+1)
 	}
 
 	for i := 1; i <= l; i++ {
 		for j := 1; j <= tw; j++ {
 			// p and w are 0-based
-			if w[i - 1] > j {
-				dp[i][j] = dp[i - 1][j]
+			if w[i-1] > j {
+				dp[i][j] = dp[i-1][j]
 			} else {
-				dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - w[i - 1]] + p[i - 1])
+				dp[i][j] = max(dp[i-1][j], dp[i-1][j-w[i-1]]+p[i-1])
 			}
 		}
 	}

@@ -15,13 +15,13 @@ var catalan, fact [MAX]big.Int
 func prepare() {
 	catalan[0].SetInt64(1)
 	for i := 1; i < MAX; i++ {
-		catalan[i].Mul(&catalan[i - 1], big.NewInt(int64(2 * (2 * i - 1))))
-		catalan[i].Div(&catalan[i], big.NewInt(int64(i + 1)))
+		catalan[i].Mul(&catalan[i-1], big.NewInt(int64(2*(2*i-1))))
+		catalan[i].Div(&catalan[i], big.NewInt(int64(i+1)))
 	}
 
 	fact[1].SetInt64(1)
 	for i := 2; i < MAX; i++ {
-		fact[i].Mul(&fact[i - 1], big.NewInt(int64(i)))
+		fact[i].Mul(&fact[i-1], big.NewInt(int64(i)))
 	}
 }
 

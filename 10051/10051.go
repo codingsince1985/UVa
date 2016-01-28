@@ -65,7 +65,7 @@ func solve(c []sides) ([][6][2]int, int, [2]int) {
 			for k := 0; k < i; k++ {
 				for m := 0; m < 6; m++ {
 					if getUpperColor(j, c[i]) == getBottomColor(m, c[k]) {
-						if dp[k][m] + 1 > dp[i][j] {
+						if dp[k][m]+1 > dp[i][j] {
 							dp[i][j] = dp[k][m] + 1
 							pre[i][j] = [2]int{k, m}
 							if mx < dp[i][j] {
@@ -84,12 +84,12 @@ func solve(c []sides) ([][6][2]int, int, [2]int) {
 func output(out *os.File, pre [][6][2]int, mx int, st [2]int) {
 	var res [][2]int
 	res = append(res, st)
-	for i := 0; i < mx - 1; i++ {
+	for i := 0; i < mx-1; i++ {
 		res = append(res, pre[st[0]][st[1]])
 		st = pre[st[0]][st[1]]
 	}
 	for i := len(res) - 1; i >= 0; i-- {
-		fmt.Fprintln(out, res[i][0] + 1, side[res[i][1]])
+		fmt.Fprintln(out, res[i][0]+1, side[res[i][1]])
 	}
 	fmt.Fprintln(out)
 }
@@ -109,12 +109,12 @@ func main() {
 		}
 		c = make([]sides, n)
 		for i := range c {
-			fmt.Fscanf(in, "%d%d%d%d%d%d", &s1, &s2, &s3, &s4, &s5, &s6, )
+			fmt.Fscanf(in, "%d%d%d%d%d%d", &s1, &s2, &s3, &s4, &s5, &s6)
 			cube := sides{s1, s2, s3, s4, s5, s6}
 			c[i] = cube
 		}
 		pre, mx, st := solve(c)
-		count ++
+		count++
 		fmt.Fprintf(out, "Case #%d\n%d\n", count, mx)
 		output(out, pre, mx, st)
 	}

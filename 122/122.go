@@ -5,8 +5,8 @@ package main
 import (
 	"fmt"
 	"os"
-	"strings"
 	"strconv"
+	"strings"
 )
 
 type node struct {
@@ -47,7 +47,8 @@ func bfs(head *node) []string {
 	queue = append(queue, *head)
 
 	for len(queue) != 0 {
-		curr := queue[0]; queue = queue[1:]
+		curr := queue[0]
+		queue = queue[1:]
 		if curr.n == -1 {
 			return nil
 		}
@@ -88,7 +89,7 @@ func main() {
 			}
 			nodes = nil
 		} else {
-			token = token[1:len(token) - 1]
+			token = token[1 : len(token)-1]
 			tokens := strings.Split(token, ",")
 			nodes = append(nodes, [2]string{tokens[0], tokens[1]})
 		}

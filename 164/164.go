@@ -17,7 +17,7 @@ func min(a, b int) int {
 func trace(op [][]int) []string {
 	var ed []string
 	ed = append(ed, "E")
-	l1, l2 := len(op) - 1, len(op[0]) - 1
+	l1, l2 := len(op)-1, len(op[0])-1
 	for l1 != 0 && l2 != 0 {
 		cur := op[l1][l2]
 		switch cur {
@@ -49,17 +49,17 @@ func trace(op [][]int) []string {
 }
 
 func make2dint(d1, d2 int) [][]int {
-	s := make([][]int, d1 + 1)
+	s := make([][]int, d1+1)
 	for i := range s {
-		s[i] = make([]int, d2 + 1)
+		s[i] = make([]int, d2+1)
 	}
 	return s
 }
 
 func ed(s1, s2 string) []string {
 	l1, l2 := len(s1), len(s2)
-	dp := make2dint(l1 + 1, l2 + 1)
-	op := make2dint(l1 + 1, l2 + 1)
+	dp := make2dint(l1+1, l2+1)
+	op := make2dint(l1+1, l2+1)
 
 	for i := 1; i <= l1; i++ {
 		dp[i][0] = i
@@ -71,19 +71,19 @@ func ed(s1, s2 string) []string {
 	var k int
 	for i := 1; i <= l1; i++ {
 		for j := 1; j <= l2; j++ {
-			if s1[i - 1] == s2[j - 1] {
+			if s1[i-1] == s2[j-1] {
 				k = 0
 			} else {
 				k = 1
 			}
-			dp[i][j] = min(dp[i - 1][j - 1] + k, min(dp[i - 1][j] + 1, dp[i][j - 1] + 1))
-			if dp[i][j] == dp[i - 1][j - 1] + k {
+			dp[i][j] = min(dp[i-1][j-1]+k, min(dp[i-1][j]+1, dp[i][j-1]+1))
+			if dp[i][j] == dp[i-1][j-1]+k {
 				if k == 1 {
 					op[i][j] = 1 // change
 				} else {
 					op[i][j] = 0 // move
 				}
-			} else if dp[i][j] == dp[i - 1][j] + 1 {
+			} else if dp[i][j] == dp[i-1][j]+1 {
 				op[i][j] = 2 // delete
 			} else {
 				op[i][j] = 3 // insert
@@ -93,7 +93,7 @@ func ed(s1, s2 string) []string {
 	return trace(op)
 }
 
-func edit(ops[]string, s1, s2 string) []string {
+func edit(ops []string, s1, s2 string) []string {
 	var ed []string
 	p, p1, p2 := 1, 0, 0
 	var tmp string

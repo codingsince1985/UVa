@@ -34,7 +34,7 @@ func calc(n, m int64) {
 	var tmp [2][2]big.Int
 	x, y := I, A
 	for n != 0 {
-		if n & 1 == 1 {
+		if n&1 == 1 {
 			tmp = multiply(x, y, m)
 			x = tmp
 		}
@@ -42,7 +42,7 @@ func calc(n, m int64) {
 		y = tmp
 		n /= 2
 	}
-	fmt.Fprintln(out, &x[1][0]);
+	fmt.Fprintln(out, &x[1][0])
 }
 
 func setMatrix(i, j, k, l int64, m *[2][2]big.Int) {

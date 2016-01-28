@@ -18,9 +18,9 @@ func prepare() {
 	p[1].SetInt64(1)
 
 	var s string
-	for i := 2;; i ++ {
+	for i := 2; ; i++ {
 		var tmp big.Int
-		tmp.Add(&p[i - 2], &p[i - 1])
+		tmp.Add(&p[i-2], &p[i-1])
 		s = fmt.Sprintf("%v", tmp)
 		if len(s) > MAX {
 			break
@@ -47,7 +47,7 @@ func do() {
 		n2.SetString(b, 10)
 
 		c = 0
-		for i := 1; i < l; i ++ {
+		for i := 1; i < l; i++ {
 			if p[i].Cmp(&n1) >= 0 && p[i].Cmp(&n2) <= 0 {
 				c++
 			}

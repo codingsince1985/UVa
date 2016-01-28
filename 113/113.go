@@ -8,8 +8,8 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"math/big"
+	"os"
 )
 
 const MAX_K = 1000000000

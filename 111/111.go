@@ -16,17 +16,17 @@ func max(a, b int) int {
 
 func lcs(s1, s2 []int) int {
 	l := len(s1)
-	dp := make([][]int, l + 1)
+	dp := make([][]int, l+1)
 	for i := range dp {
-		dp[i] = make([]int, l + 1)
+		dp[i] = make([]int, l+1)
 	}
 
 	for i := 1; i <= l; i++ {
 		for j := 1; j <= l; j++ {
-			if s1[i - 1] == s2[j - 1] {
-				dp[i][j] = dp[i - 1][j - 1] + 1
+			if s1[i-1] == s2[j-1] {
+				dp[i][j] = dp[i-1][j-1] + 1
 			} else {
-				dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+				dp[i][j] = max(dp[i-1][j], dp[i][j-1])
 			}
 		}
 	}
@@ -45,7 +45,7 @@ func main() {
 	s1 := make([]int, n)
 	for i := 1; i <= n; i++ {
 		fmt.Fscanf(in, "%d", &tmp)
-		s1[tmp - 1] = i
+		s1[tmp-1] = i
 	}
 
 	done := false
@@ -56,7 +56,7 @@ func main() {
 				done = true
 				break
 			}
-			s2[tmp - 1] = i
+			s2[tmp-1] = i
 		}
 		if done {
 			break

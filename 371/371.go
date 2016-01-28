@@ -15,14 +15,14 @@ func calculate(i int) int {
 		return v
 	}
 
-	if i % 2 == 0 {
-		if i / 2 == 1 { // so that f(1)=3 as requested in problem
+	if i%2 == 0 {
+		if i/2 == 1 { // so that f(1)=3 as requested in problem
 			return 1
 		} else {
-			v = 1 + calculate(i / 2)
+			v = 1 + calculate(i/2)
 		}
 	} else {
-		v = 1 + calculate(3 * i + 1)
+		v = 1 + calculate(3*i+1)
 	}
 	cache[i] = v
 	return v

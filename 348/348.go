@@ -41,9 +41,9 @@ func dp(i, j int) int {
 	pos := 0
 	for k := i; k < j; k++ {
 		left := dp(i, k)
-		right := dp(k + 1, j)
+		right := dp(k+1, j)
 		cost := m[i][0] * m[k][1] * m[j][1]
-		if sum > left + right + cost {
+		if sum > left+right+cost {
 			sum = left + right + cost
 			pos = k
 		}
@@ -54,12 +54,12 @@ func dp(i, j int) int {
 
 func output(out *os.File, i, j int) {
 	if i == j {
-		fmt.Fprintf(out, "A%d", i + 1)
+		fmt.Fprintf(out, "A%d", i+1)
 	} else {
 		fmt.Fprintf(out, "(")
 		output(out, i, c[i][j][1])
 		fmt.Fprintf(out, " x ")
-		output(out, c[i][j][1] + 1, j)
+		output(out, c[i][j][1]+1, j)
 		fmt.Fprintf(out, ")")
 	}
 }
@@ -80,11 +80,11 @@ func main() {
 			fmt.Fscanf(in, "%d%d", &m[i][0], &m[i][1])
 		}
 		makeCache(n)
-		dp(0, n - 1)
+		dp(0, n-1)
 
 		cs++
 		fmt.Fprintf(out, "Case %d: ", cs)
-		output(out, 0, n - 1)
+		output(out, 0, n-1)
 		fmt.Fprintln(out)
 	}
 }
