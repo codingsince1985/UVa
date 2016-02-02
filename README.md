@@ -1,8 +1,9 @@
-UVa Online Judge solutions in Golang
+UVa Online Judge solutions in Go
 ==
 ```
 UVa 100 - The 3n + 1 problem
 UVa 101 - The Blocks Problem
+UVa 102 - Ecological Bin Packing
 UVa 108 - Maximum Sum
 UVa 111 - History Grading
 UVa 112 - Tree Summing
@@ -82,4 +83,4 @@ UVa 10579 - Fibonacci Numbers
 ```
 License
 ==
-The UVa Golang solutions are under the terms of the MIT license. See LICENSE for details.
+The UVa solutions in Go are under the terms of the MIT license. See LICENSE for details.
