@@ -13,6 +13,7 @@ UVa 147 - Dollars
 UVa 164 - String Computer
 UVa 193 - Graph Coloring
 UVa 202 - Repeating Decimals
+UVa 216 - Getting in Line
 UVa 231 - Testing the CATCHER
 UVa 294 - Divisors
 UVa 299 - Train Swapping
