@@ -61,6 +61,7 @@ UVa 10007 - Count the Trees
 UVa 10009 - All Roads Lead Where?
 UVa 10020 - Minimal coverage
 UVa 10051 - Tower of Cubes
+UVa 10055 - Hashmat the Brave Warrior
 UVa 10066 - The Twin Towers
 UVa 10100 - Longest Match
 UVa 10130 - SuperSale
