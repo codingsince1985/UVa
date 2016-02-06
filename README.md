@@ -63,6 +63,7 @@ UVa 10020 - Minimal coverage
 UVa 10051 - Tower of Cubes
 UVa 10055 - Hashmat the Brave Warrior
 UVa 10066 - The Twin Towers
+UVa 10071 - Back to High School Physics
 UVa 10100 - Longest Match
 UVa 10130 - SuperSale
 UVa 10131 - Is Bigger Smarter?
