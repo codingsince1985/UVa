@@ -15,6 +15,7 @@ UVa 193 - Graph Coloring
 UVa 202 - Repeating Decimals
 UVa 216 - Getting in Line
 UVa 231 - Testing the CATCHER
+UVa 272 - TEX Quotes
 UVa 294 - Divisors
 UVa 299 - Train Swapping
 UVa 336 - A Node Too Far
