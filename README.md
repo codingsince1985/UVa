@@ -31,6 +31,7 @@ UVa 383 - Shipping Routes
 UVa 389 - Basically Speaking
 UVa 429 - Word Transformation
 UVa 442 - Matrix Chain Multiplication
+UVa 458 - The Decoder
 UVa 466 - Mirror, Mirror
 UVa 469 - Wetlands of Florida
 UVa 481 - What Goes Up
