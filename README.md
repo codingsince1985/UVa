@@ -63,6 +63,7 @@ UVa 10006 - Carmichael Numbers
 UVa 10007 - Count the Trees
 UVa 10009 - All Roads Lead Where?
 UVa 10020 - Minimal coverage
+UVa 10035 - Primary Arithmetic
 UVa 10038 - Jolly Jumpers
 UVa 10051 - Tower of Cubes
 UVa 10055 - Hashmat the Brave Warrior
