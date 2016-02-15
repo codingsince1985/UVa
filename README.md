@@ -49,6 +49,7 @@ UVa 532 - Dungeon Master
 UVa 539 - The Settlers of Catan
 UVa 572 - Oil Deposits
 UVa 583 - Prime Factors
+UVa 591 - Box of Bricks
 UVa 612 - DNA Sorting
 UVa 639 - Don't Get Rooked
 UVa 674 - Coin Change
