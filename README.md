@@ -63,6 +63,7 @@ UVa 836 - Largest Submatrix
 UVa 10003 - Cutting Sticks
 UVa 10006 - Carmichael Numbers
 UVa 10007 - Count the Trees
+UVa 10008 - What's Cryptanalysis?
 UVa 10009 - All Roads Lead Where?
 UVa 10018 - Reverse and Add
 UVa 10020 - Minimal coverage
