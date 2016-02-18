@@ -48,6 +48,7 @@ UVa 531 - Compromise
 UVa 532 - Dungeon Master
 UVa 539 - The Settlers of Catan
 UVa 572 - Oil Deposits
+UVa 575 - Skew Binary
 UVa 583 - Prime Factors
 UVa 591 - Box of Bricks
 UVa 612 - DNA Sorting
