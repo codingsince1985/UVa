@@ -11,7 +11,8 @@ import (
 func toNum(digit rune) int {
 	if digit >= '0' && digit <= '9' {
 		return int(digit - '0')
-	} else if digit >= 'A' && digit <= 'Z' {
+	}
+	if digit >= 'A' && digit <= 'Z' {
 		return int(digit-'A') + 10
 	}
 	return -1
@@ -56,8 +57,10 @@ func main() {
 
 	var number string
 	var b1, b2 int
-	_, err := fmt.Fscanf(in, "%s%d%d", &number, &b1, &b2)
-	for err == nil {
+	for {
+		if _, err := fmt.Fscanf(in, "%s%d%d", &number, &b1, &b2); err != nil {
+			break
+		}
 		bt := base10(number, b1)
 		num := baseN(bt, b2)
 		if len(num) > 7 {
@@ -65,7 +68,5 @@ func main() {
 		} else {
 			fmt.Fprintf(out, "%7s\n", num)
 		}
-		_, err = fmt.Fscanf(in, "%s%d%d", &number, &b1, &b2)
 	}
-
 }

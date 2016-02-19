@@ -26,17 +26,20 @@ type teams []team
 func cmp(t1, t2 team) bool {
 	if t1.points != t2.points {
 		return t1.points > t2.points
-	} else if t1.wins != t2.wins {
-		return t1.wins > t2.wins
-	} else if t1.goalDiff != t2.goalDiff {
-		return t1.goalDiff > t2.goalDiff
-	} else if t1.goalScored != t2.goalScored {
-		return t1.goalScored > t2.goalScored
-	} else if t1.games != t2.games {
-		return t1.games < t2.games
-	} else {
-		return strings.Compare(t1.name, t2.name) == -1
 	}
+	if t1.wins != t2.wins {
+		return t1.wins > t2.wins
+	}
+	if t1.goalDiff != t2.goalDiff {
+		return t1.goalDiff > t2.goalDiff
+	}
+	if t1.goalScored != t2.goalScored {
+		return t1.goalScored > t2.goalScored
+	}
+	if t1.games != t2.games {
+		return t1.games < t2.games
+	}
+	return strings.Compare(t1.name, t2.name) == -1
 }
 
 func (t teams) Len() int {
@@ -74,15 +77,17 @@ func process(a, b string, s1, s2 int) {
 	t2.goalAgainst += s1
 	t1.goalDiff = t1.goalScored - t1.goalAgainst
 	t2.goalDiff = t2.goalScored - t2.goalAgainst
-	if s1 > s2 {
+
+	switch {
+	case s1 > s2:
 		t1.wins++
 		t1.points += 3
 		t2.losses++
-	} else if s2 > s1 {
+	case s2 > s1:
 		t1.losses++
 		t2.wins++
 		t2.points += 3
-	} else {
+	default:
 		t1.ties++
 		t1.points++
 		t2.ties++

@@ -16,13 +16,14 @@ func binarySearch(n int, l [][]node, s, e int) int {
 	// for build-in binary search, see UVa 497
 	m := (s + e) / 2
 	mid := l[m]
-	if n == mid[len(mid)-1].num {
+	switch {
+	case n == mid[len(mid)-1].num:
 		return m
-	} else if s == e {
+	case s == e:
 		return s
-	} else if n > mid[len(mid)-1].num {
+	case n > mid[len(mid)-1].num:
 		return binarySearch(n, l, m+1, e)
-	} else {
+	default:
 		return binarySearch(n, l, s, m)
 	}
 }

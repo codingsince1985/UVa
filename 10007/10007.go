@@ -25,7 +25,9 @@ func prepare() {
 	}
 }
 
-func do() {
+func main() {
+	prepare()
+
 	in, _ := os.Open("10007.in")
 	defer in.Close()
 	out, _ := os.Create("10007.out")
@@ -40,8 +42,4 @@ func do() {
 		tmp.Mul(&fact[n], &catalan[n])
 		fmt.Fprintf(out, "%v\n", &tmp)
 	}
-}
-func main() {
-	prepare()
-	do()
 }

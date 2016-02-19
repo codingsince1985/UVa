@@ -77,15 +77,16 @@ func ed(s1, s2 string) []string {
 				k = 1
 			}
 			dp[i][j] = min(dp[i-1][j-1]+k, min(dp[i-1][j]+1, dp[i][j-1]+1))
-			if dp[i][j] == dp[i-1][j-1]+k {
+			switch {
+			case dp[i][j] == dp[i-1][j-1]+k:
 				if k == 1 {
 					op[i][j] = 1 // change
 				} else {
 					op[i][j] = 0 // move
 				}
-			} else if dp[i][j] == dp[i-1][j]+1 {
+			case dp[i][j] == dp[i-1][j]+1:
 				op[i][j] = 2 // delete
-			} else {
+			default:
 				op[i][j] = 3 // insert
 			}
 		}

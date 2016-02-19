@@ -22,9 +22,10 @@ func buildTree(line string) node {
 		if l == 0 && v == '(' {
 			l = idx
 		}
-		if v == '(' {
+		switch v {
+		case '(':
 			count++
-		} else if v == ')' {
+		case ')':
 			count--
 		}
 		if r == 0 && l != 0 && count == 0 {
@@ -77,9 +78,10 @@ func main() {
 			fmt.Fscanf(in, "%c", &c)
 			if c >= '0' && c <= '9' || c == '(' || c == ')' {
 				chars = append(chars, c)
-				if c == '(' {
+				switch c {
+				case '(':
 					count++
-				} else if c == ')' {
+				case ')':
 					count--
 				}
 			}

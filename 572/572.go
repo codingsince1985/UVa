@@ -13,8 +13,9 @@ type node struct {
 }
 
 var (
-	m, n int
-	g    [][]node
+	m, n  int
+	g     [][]node
+	delta = []int{-1, 0, 1}
 )
 
 func dfs(i, j, count int) {
@@ -23,8 +24,8 @@ func dfs(i, j, count int) {
 	}
 
 	g[i][j].idx = count
-	for dx := -1; dx <= 1; dx++ {
-		for dy := -1; dy <= 1; dy++ {
+	for _, dx := range delta {
+		for _, dy := range delta {
 			if dx != 0 || dy != 0 {
 				dfs(i+dx, j+dy, count)
 			}

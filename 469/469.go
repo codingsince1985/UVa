@@ -8,7 +8,10 @@ import (
 	"strconv"
 )
 
-var count int
+var (
+	count int
+	delta = []int{-1, 0, 1}
+)
 
 func dfs(grid [][]byte, visited [][]bool, x, y int) {
 	if x < 1 || y < 1 || x > len(grid) || y > len((grid)[0]) {
@@ -19,8 +22,8 @@ func dfs(grid [][]byte, visited [][]bool, x, y int) {
 		visited[x-1][y-1] = true
 		count++
 
-		for dx := -1; dx <= 1; dx++ {
-			for dy := -1; dy <= 1; dy++ {
+		for _, dx := range delta {
+			for _, dy := range delta {
 				if !(dx == 0 && dy == 0) {
 					dfs(grid, visited, x+dx, y+dy)
 				}

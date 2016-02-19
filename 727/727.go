@@ -38,27 +38,27 @@ func main() {
 			if fmt.Fscanf(in, "%s\n", &s); len(s) == 0 {
 				break
 			}
-			if s == "+" || s == "-" {
+			switch s {
+			case "+", "-":
 				for count > 0 && stack[count-1] != "(" {
 					pop()
 				}
 				push(s)
-			} else if s == "*" || s == "/" {
+			case "*", "/":
 				for count > 0 && stack[count-1] != "(" && stack[count-1] != "+" && stack[count-1] != "-" {
 					pop()
 				}
 				push(s)
-			} else if s == "(" {
+			case "(":
 				push(s)
-			} else if s == ")" {
+			case ")":
 				for stack[count-1] != "(" {
 					pop()
 				}
 				count--
-			} else {
+			default:
 				fmt.Fprint(out, s)
 			}
-
 		}
 		for count != 0 {
 			pop()

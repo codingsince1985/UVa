@@ -22,9 +22,10 @@ func solve(out *os.File, s string) {
 
 	for _, v := range s {
 		c := string(v)
-		if c == "(" {
+		switch c {
+		case "(":
 			p = append(p, c)
-		} else if c == ")" {
+		case ")":
 			b = e[len(e)-1]
 			a = e[len(e)-2]
 			if a[1] != b[0] {
@@ -36,7 +37,7 @@ func solve(out *os.File, s string) {
 			e = e[:len(e)-2]
 			e = append(e, [2]int{a[0], b[1]})
 			p = p[:len(p)-1]
-		} else {
+		default:
 			e = append(e, m[string(c)])
 		}
 	}

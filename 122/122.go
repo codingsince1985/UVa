@@ -19,13 +19,14 @@ func buildTree(nodes [][2]string) *node {
 	for _, v := range nodes {
 		curr := &head
 		for _, p := range v[1] {
-			if p == 'L' {
+			switch p {
+			case 'L':
 				if curr.l == nil {
 					node := node{-1, nil, nil}
 					curr.l = &node
 				}
 				curr = curr.l
-			} else if p == 'R' {
+			case 'R':
 				if curr.r == nil {
 					node := node{-1, nil, nil}
 					curr.r = &node

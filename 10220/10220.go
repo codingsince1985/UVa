@@ -24,7 +24,7 @@ func prepare() {
 func sum(n big.Int) int {
 	var t int
 	s := fmt.Sprint(&n)
-	for i, _ := range s {
+	for i := range s {
 		t += int(s[i] - '0')
 	}
 	return t

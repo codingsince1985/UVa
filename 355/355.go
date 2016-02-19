@@ -18,14 +18,14 @@ var nums []Number
 func prepare() {
 	in, _ := os.Open("355.in")
 	defer in.Close()
-	nums = nil
 
 	var b1, b2 int
 	var num string
-	i, _ := fmt.Fscanf(in, "%d%d%s", &b1, &b2, &num)
-	for i > 0 {
+	for {
+		if _, err := fmt.Fscanf(in, "%d%d%s", &b1, &b2, &num); err != nil {
+			break
+		}
 		nums = append(nums, Number{b1, b2, num})
-		i, _ = fmt.Fscanf(in, "%d%d%s", &b1, &b2, &num)
 	}
 }
 
@@ -39,7 +39,8 @@ func toStr(d int) string {
 func toNum(digit rune) int {
 	if digit >= '0' && digit <= '9' {
 		return int(digit - '0')
-	} else if digit >= 'A' && digit <= 'Z' {
+	}
+	if digit >= 'A' && digit <= 'Z' {
 		return int(digit-'A') + 10
 	}
 	return -1
@@ -68,7 +69,9 @@ func baseN(num int, base int) string {
 	return number
 }
 
-func do() {
+func main() {
+	prepare()
+
 	out, _ := os.Create("355.out")
 	defer out.Close()
 
@@ -80,9 +83,4 @@ func do() {
 			fmt.Fprintf(out, "%s base %d = %s base %d\n", number.num, number.b1, baseN(bt, number.b2), number.b2)
 		}
 	}
-}
-
-func main() {
-	prepare()
-	do()
 }

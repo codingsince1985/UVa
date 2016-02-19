@@ -7,6 +7,8 @@ import (
 	"os"
 )
 
+var delta = []int{-1, 0, 1}
+
 func dfs(m [][]byte, cells [][]int, x, y, d, count int) {
 	if x < 0 || y < 0 || x >= d || y >= d {
 		return
@@ -15,8 +17,8 @@ func dfs(m [][]byte, cells [][]int, x, y, d, count int) {
 		return
 	}
 	cells[x][y] = count
-	for dx := -1; dx <= 1; dx++ {
-		for dy := -1; dy <= 1; dy++ {
+	for _, dx := range delta {
+		for _, dy := range delta {
 			if dx == 0 && dy == 0 {
 				continue
 			}

@@ -29,7 +29,9 @@ func prepare() {
 	}
 }
 
-func do() {
+func main() {
+	prepare()
+
 	in, _ := os.Open("10183.in")
 	defer in.Close()
 	out, _ := os.Create("10183.out")
@@ -57,9 +59,4 @@ func do() {
 		}
 		fmt.Fprintln(out, c)
 	}
-}
-
-func main() {
-	prepare()
-	do()
 }
