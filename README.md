@@ -47,6 +47,7 @@ UVa 530 - Binomial Showdown
 UVa 531 - Compromise
 UVa 532 - Dungeon Master
 UVa 539 - The Settlers of Catan
+UVa 567 - Risk
 UVa 572 - Oil Deposits
 UVa 575 - Skew Binary
 UVa 583 - Prime Factors
