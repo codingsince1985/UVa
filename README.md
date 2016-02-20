@@ -85,6 +85,7 @@ UVa 10194 - Football (aka Soccer)
 UVa 10219 - Find the ways !
 UVa 10220 - I Love Big Numbers !
 UVa 10229 - Modular Fibonacci
+UVa 10282 - Babelfish
 UVa 10300 - Ecological Premium
 UVa 10303 - How Many Trees?
 UVa 10305 - Ordering Tasks
