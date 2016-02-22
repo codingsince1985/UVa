@@ -11,6 +11,7 @@ UVa 113 - Power of Cryptography
 UVa 122 - Trees on the level
 UVa 136 - Ugly Numbers
 UVa 147 - Dollars
+UVa 151 - Power Crisis
 UVa 164 - String Computer
 UVa 193 - Graph Coloring
 UVa 202 - Repeating Decimals
