@@ -95,6 +95,7 @@ UVa 10305 - Ordering Tasks
 UVa 10327 - Flip Sort
 UVa 10334 - Ray Through Glasses
 UVa 10340 - All in All
+UVa 10370 - Above Average
 UVa 10405 - Longest Common Subsequence
 UVa 10440 - Ferry Loading II
 UVa 10450 - World Cup Noise
