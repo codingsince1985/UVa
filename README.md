@@ -83,6 +83,7 @@ UVa 10100 - Longest Match
 UVa 10130 - SuperSale
 UVa 10131 - Is Bigger Smarter?
 UVa 10183 - How Many Fibs?
+UVa 10189 - Minesweeper
 UVa 10192 - Vacation
 UVa 10194 - Football (aka Soccer)
 UVa 10219 - Find the ways !
