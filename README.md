@@ -53,6 +53,7 @@ UVa 539 - The Settlers of Catan
 UVa 567 - Risk
 UVa 572 - Oil Deposits
 UVa 575 - Skew Binary
+UVa 579 - Clock Hands
 UVa 583 - Prime Factors
 UVa 591 - Box of Bricks
 UVa 612 - DNA Sorting
