@@ -101,6 +101,7 @@ UVa 10340 - All in All
 UVa 10370 - Above Average
 UVa 10405 - Longest Common Subsequence
 UVa 10440 - Ferry Loading II
+UVa 10443 - Rock
 UVa 10450 - World Cup Noise
 UVa 10465 - Homer Simpson
 UVa 10519 - !! Really Strange !!
