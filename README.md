@@ -95,9 +95,11 @@ UVa 10295 - Hay Points
 UVa 10300 - Ecological Premium
 UVa 10303 - How Many Trees?
 UVa 10305 - Ordering Tasks
+UVa 10324 - Zeros and Ones
 UVa 10327 - Flip Sort
 UVa 10334 - Ray Through Glasses
 UVa 10340 - All in All
+UVa 10360 - Rat Attack
 UVa 10370 - Above Average
 UVa 10405 - Longest Common Subsequence
 UVa 10440 - Ferry Loading II
