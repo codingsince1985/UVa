@@ -106,8 +106,10 @@ UVa 10440 - Ferry Loading II
 UVa 10443 - Rock
 UVa 10450 - World Cup Noise
 UVa 10465 - Homer Simpson
+UVa 10474 - Where is the Marble?
 UVa 10519 - !! Really Strange !!
 UVa 10579 - Fibonacci Numbers
+UVa 12347 - Binary Search Tree
 ```
 License
 ==

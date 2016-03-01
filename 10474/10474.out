@@ -1,0 +1,14 @@
+CASE# 1:
+0 not found
+1 found at 1
+2 found at 2
+3 found at 3
+4 not found
+5 found at 4
+6 not found
+CASE# 2:
+0 not found
+1 found at 1
+2 not found
+3 found at 3
+4 not found
