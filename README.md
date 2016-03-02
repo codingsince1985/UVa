@@ -18,6 +18,7 @@ UVa 193 - Graph Coloring
 UVa 202 - Repeating Decimals
 UVa 216 - Getting in Line
 UVa 231 - Testing the CATCHER
+UVa 264 - Count on Cantor
 UVa 272 - TEX Quotes
 UVa 294 - Divisors
 UVa 299 - Train Swapping
@@ -33,6 +34,7 @@ UVa 374 - Big Mod
 UVa 382 - Perfection
 UVa 383 - Shipping Routes
 UVa 389 - Basically Speaking
+UVa 424 - Integer Inquiry
 UVa 429 - Word Transformation
 UVa 442 - Matrix Chain Multiplication
 UVa 458 - The Decoder
