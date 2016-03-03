@@ -42,9 +42,11 @@ UVa 466 - Mirror, Mirror
 UVa 469 - Wetlands of Florida
 UVa 481 - What Goes Up
 UVa 485 - Pascal's Triangle of Death
+UVa 488 - Triangle Wave
 UVa 494 - Kindergarten Counting Game
 UVa 495 - Fibonacci Freeze
 UVa 497 - Strategic Defense Initiative
+UVa 499 - What's The Frequency, Kenneth?
 UVa 507 - Jill Rides Again
 UVa 524 - Prime Ring Problem
 UVa 526 - String Distance and Transform Process
