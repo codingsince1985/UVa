@@ -113,6 +113,8 @@ UVa 10465 - Homer Simpson
 UVa 10474 - Where is the Marble?
 UVa 10519 - !! Really Strange !!
 UVa 10579 - Fibonacci Numbers
+UVa 10783 - Odd Sum
+UVa 11172 - Relational Operator
 UVa 12347 - Binary Search Tree
 ```
 License
