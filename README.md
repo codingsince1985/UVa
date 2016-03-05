@@ -4,6 +4,7 @@ UVa Online Judge solutions in Go
 UVa 100 - The 3n + 1 problem
 UVa 101 - The Blocks Problem
 UVa 102 - Ecological Bin Packing
+UVa 105 - The Skyline Problem
 UVa 108 - Maximum Sum
 UVa 111 - History Grading
 UVa 112 - Tree Summing
@@ -85,6 +86,7 @@ UVa 10066 - The Twin Towers
 UVa 10071 - Back to High School Physics
 UVa 10082 - WERTYU
 UVa 10100 - Longest Match
+UVa 10110 - Light, more light
 UVa 10130 - SuperSale
 UVa 10131 - Is Bigger Smarter?
 UVa 10183 - How Many Fibs?
