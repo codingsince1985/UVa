@@ -42,6 +42,7 @@ UVa 458 - The Decoder
 UVa 466 - Mirror, Mirror
 UVa 469 - Wetlands of Florida
 UVa 481 - What Goes Up
+UVa 483 - Word Scramble
 UVa 485 - Pascal's Triangle of Death
 UVa 488 - Triangle Wave
 UVa 494 - Kindergarten Counting Game
@@ -72,6 +73,7 @@ UVa 762 - We Ship Cheap
 UVa 816 - Abbott's Revenge
 UVa 836 - Largest Submatrix
 UVa 10003 - Cutting Sticks
+UVa 10004 - Bicoloring
 UVa 10006 - Carmichael Numbers
 UVa 10007 - Count the Trees
 UVa 10008 - What's Cryptanalysis?
