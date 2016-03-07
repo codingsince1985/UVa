@@ -82,6 +82,7 @@ UVa 10018 - Reverse and Add
 UVa 10020 - Minimal coverage
 UVa 10035 - Primary Arithmetic
 UVa 10038 - Jolly Jumpers
+UVa 10041 - Vito's Family
 UVa 10051 - Tower of Cubes
 UVa 10055 - Hashmat the Brave Warrior
 UVa 10066 - The Twin Towers
@@ -117,6 +118,7 @@ UVa 10465 - Homer Simpson
 UVa 10474 - Where is the Marble?
 UVa 10519 - !! Really Strange !!
 UVa 10579 - Fibonacci Numbers
+UVa 10696 - f91
 UVa 10783 - Odd Sum
 UVa 11172 - Relational Operator
 UVa 12347 - Binary Search Tree
