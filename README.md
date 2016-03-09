@@ -35,6 +35,7 @@ UVa 374 - Big Mod
 UVa 382 - Perfection
 UVa 383 - Shipping Routes
 UVa 389 - Basically Speaking
+UVa 401 - Palindromes
 UVa 424 - Integer Inquiry
 UVa 429 - Word Transformation
 UVa 442 - Matrix Chain Multiplication
@@ -66,6 +67,7 @@ UVa 583 - Prime Factors
 UVa 591 - Box of Bricks
 UVa 612 - DNA Sorting
 UVa 639 - Don't Get Rooked
+UVa 673 - Parentheses Balance
 UVa 674 - Coin Change
 UVa 679 - Dropping Balls
 UVa 694 - The Collatz Sequence
