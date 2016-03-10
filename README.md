@@ -70,6 +70,7 @@ UVa 639 - Don't Get Rooked
 UVa 673 - Parentheses Balance
 UVa 674 - Coin Change
 UVa 679 - Dropping Balls
+Uva 686 - Goldbach's Conjecture (II)
 UVa 694 - The Collatz Sequence
 UVa 725 - Division
 UVa 727 - Equation
@@ -93,6 +94,7 @@ UVa 10066 - The Twin Towers
 UVa 10071 - Back to High School Physics
 UVa 10082 - WERTYU
 UVa 10100 - Longest Match
+UVa 10107 - What is the Median?
 UVa 10110 - Light, more light
 UVa 10130 - SuperSale
 UVa 10131 - Is Bigger Smarter?
