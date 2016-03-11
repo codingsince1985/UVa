@@ -72,6 +72,7 @@ UVa 674 - Coin Change
 UVa 679 - Dropping Balls
 Uva 686 - Goldbach's Conjecture (II)
 UVa 694 - The Collatz Sequence
+UVa 706 - LC-Display
 UVa 725 - Division
 UVa 727 - Equation
 UVa 762 - We Ship Cheap
@@ -92,6 +93,7 @@ UVa 10051 - Tower of Cubes
 UVa 10055 - Hashmat the Brave Warrior
 UVa 10066 - The Twin Towers
 UVa 10071 - Back to High School Physics
+Uva 10079 - Pizza Cutting
 UVa 10082 - WERTYU
 UVa 10100 - Longest Match
 UVa 10107 - What is the Median?
