@@ -19,6 +19,7 @@ UVa 193 - Graph Coloring
 UVa 202 - Repeating Decimals
 UVa 216 - Getting in Line
 UVa 231 - Testing the CATCHER
+UVa 256 - Quirksome Squares
 UVa 264 - Count on Cantor
 UVa 272 - TEX Quotes
 UVa 294 - Divisors
@@ -85,6 +86,7 @@ UVa 10007 - Count the Trees
 UVa 10008 - What's Cryptanalysis?
 UVa 10009 - All Roads Lead Where?
 UVa 10018 - Reverse and Add
+UVa 10019 - Funny Encryption Method
 UVa 10020 - Minimal coverage
 UVa 10035 - Primary Arithmetic
 UVa 10038 - Jolly Jumpers
