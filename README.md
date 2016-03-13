@@ -11,6 +11,7 @@ UVa 112 - Tree Summing
 UVa 113 - Power of Cryptography
 UVa 122 - Trees on the level
 UVa 136 - Ugly Numbers
+UVa 138 - Street Numbers
 UVa 147 - Dollars
 UVa 151 - Power Crisis
 UVa 160 - Factors and Factorials
@@ -43,6 +44,7 @@ UVa 442 - Matrix Chain Multiplication
 UVa 458 - The Decoder
 UVa 466 - Mirror, Mirror
 UVa 469 - Wetlands of Florida
+UVa 476 - Points in Figures: Rectangles
 UVa 481 - What Goes Up
 UVa 483 - Word Scramble
 UVa 485 - Pascal's Triangle of Death
