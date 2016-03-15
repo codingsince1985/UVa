@@ -10,6 +10,7 @@ UVa 108 - Maximum Sum
 UVa 111 - History Grading
 UVa 112 - Tree Summing
 UVa 113 - Power of Cryptography
+UVa 120 - Stacks of Flapjacks
 UVa 122 - Trees on the level
 UVa 136 - Ugly Numbers
 UVa 138 - Street Numbers
@@ -28,6 +29,7 @@ UVa 294 - Divisors
 UVa 299 - Train Swapping
 UVa 336 - A Node Too Far
 UVa 343 - What Base Is This?
+UVa 344 - Roman Digititis
 UVa 348 - Optimal Array Multiplication Sequence
 UVa 352 - The Seasonal War
 UVa 355 - The Bases Are Loaded
