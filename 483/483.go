@@ -28,14 +28,10 @@ func main() {
 	scanner.Split(bufio.ScanLines)
 	for scanner.Scan() {
 		line := scanner.Text()
-		lineReader := strings.NewReader(line)
 		newLine := make([]string, 0)
-		var word string
-		for {
-			if _, err := fmt.Fscanf(lineReader, "%s", &word); err != nil {
-				break
-			}
-			newLine = append(newLine, reverse(word))
+		words := strings.Split(line, " ")
+		for _, v := range words {
+			newLine = append(newLine, reverse(v))
 		}
 		fmt.Fprintln(out, strings.Join(newLine, " "))
 	}

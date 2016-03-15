@@ -10,9 +10,8 @@ import (
 
 const MAX = 301
 
-var catalan, fact [MAX]big.Int
-
-func prepare() {
+var catalan, fact = func() ([MAX]big.Int, [MAX]big.Int) {
+	var catalan, fact [MAX]big.Int
 	catalan[0].SetInt64(1)
 	for i := 1; i < MAX; i++ {
 		catalan[i].Mul(&catalan[i-1], big.NewInt(int64(2*(2*i-1))))
@@ -23,11 +22,10 @@ func prepare() {
 	for i := 2; i < MAX; i++ {
 		fact[i].Mul(&fact[i-1], big.NewInt(int64(i)))
 	}
-}
+	return catalan, fact
+}()
 
 func main() {
-	prepare()
-
 	in, _ := os.Open("10007.in")
 	defer in.Close()
 	out, _ := os.Create("10007.out")

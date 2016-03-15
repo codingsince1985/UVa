@@ -8,10 +8,8 @@ import (
 	"os"
 )
 
-var f []big.Int
-
-func prepare() {
-	f = make([]big.Int, 2)
+var f = func() []big.Int {
+	f := make([]big.Int, 2)
 	f[0].SetInt64(0)
 	f[1].SetInt64(1)
 
@@ -25,11 +23,10 @@ func prepare() {
 		}
 		f = append(f, tmp)
 	}
-}
+	return f
+}()
 
 func main() {
-	prepare()
-
 	in, _ := os.Open("10579.in")
 	defer in.Close()
 	out, _ := os.Create("10579.out")

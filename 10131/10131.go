@@ -14,13 +14,9 @@ type node struct {
 
 type nodes []node
 
-func (a nodes) Len() int {
-	return len(a)
-}
+func (a nodes) Len() int { return len(a) }
 
-func (a nodes) Swap(i, j int) {
-	a[i], a[j] = a[j], a[i]
-}
+func (a nodes) Swap(i, j int) { a[i], a[j] = a[j], a[i] }
 
 func (a nodes) Less(i, j int) bool {
 	if a[i].w != a[j].w {

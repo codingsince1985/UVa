@@ -8,13 +8,6 @@ import (
 	"os"
 )
 
-func nextLine(s *bufio.Scanner) (string, bool) {
-	if ok := s.Scan(); ok {
-		return s.Text(), true
-	}
-	return "", false
-}
-
 func max(a, b int) int {
 	if a > b {
 		return a
@@ -50,14 +43,11 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var s1, s2 string
 	var c1, c2 []byte
-	var ok bool
-	for {
-		if s1, ok = nextLine(s); !ok {
-			break
-		}
-		s2, _ = nextLine(s)
+	for s.Scan() {
+		s1 := s.Text()
+		s.Scan()
+		s2 := s.Text()
 		c1 = []byte(s1)
 		c2 = []byte(s2)
 		fmt.Fprintln(out, lcs(c1, c2))

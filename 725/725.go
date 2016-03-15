@@ -66,8 +66,8 @@ func main() {
 		if len(ans) == 0 {
 			fmt.Fprintf(out, "There are no solutions for %d.\n", n)
 		} else {
-			for i := range ans {
-				fmt.Fprintf(out, "%d / %05d = %d\n", ans[i][0], ans[i][1], n)
+			for _, v := range ans {
+				fmt.Fprintf(out, "%d / %05d = %d\n", v[0], v[1], n)
 			}
 		}
 		fmt.Fprintln(out)

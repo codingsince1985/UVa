@@ -10,19 +10,17 @@ import (
 
 const MAX = 5001
 
-var f [MAX]big.Int
-
-func prepare() {
+var f = func() [MAX]big.Int {
+	var f [MAX]big.Int
 	f[0].SetInt64(0)
 	f[1].SetInt64(1)
 	for i := 2; i < MAX; i++ {
 		f[i].Add(&f[i-1], &f[i-2])
 	}
-}
+	return f
+}()
 
 func main() {
-	prepare()
-
 	in, _ := os.Open("495.in")
 	defer in.Close()
 	out, _ := os.Create("495.out")

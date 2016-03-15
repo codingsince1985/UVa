@@ -8,9 +8,8 @@ import (
 )
 
 var (
-	m, n int
-	dx   = []int{-1, 0, 1}
-	dy   = []int{-1, 0, 1}
+	m, n  int
+	delta = []int{-1, 0, 1}
 )
 
 func solve(field [][]byte) [][]byte {
@@ -20,30 +19,25 @@ func solve(field [][]byte) [][]byte {
 		for j := range field[i] {
 			if field[i][j] == '*' {
 				res[i][j] = '*'
-				continue
-			}
-			var cnt byte = 0
-			for _, k := range dx {
-				for _, l := range dy {
-					newX := i + k
-					newY := j + l
-					if (k == 0 && l == 0) || newX < 0 || newY < 0 || newX >= m || newY >= n {
-						continue
-					}
-					if field[newX][newY] == '*' {
-						cnt++
+			} else {
+				res[i][j] = '0'
+				for _, dx := range delta {
+					for _, dy := range delta {
+						x, y := i+dx, j+dy
+						if !(dx == 0 && dy == 0) && x >= 0 && y >= 0 && x < m && y < n && field[x][y] == '*' {
+							res[i][j]++
+						}
 					}
 				}
 			}
-			res[i][j] = '0' + cnt
 		}
 	}
 	return res
 }
 
 func output(out *os.File, field [][]byte) {
-	for i := range field {
-		fmt.Fprintln(out, string(field[i]))
+	for _, v := range field {
+		fmt.Fprintln(out, string(v))
 	}
 	fmt.Fprintln(out)
 }
@@ -55,7 +49,6 @@ func main() {
 	defer out.Close()
 
 	var kase int
-	var field [][]byte
 	var line string
 	for {
 		if fmt.Fscanf(in, "%d%d", &m, &n); m == 0 {
@@ -63,7 +56,7 @@ func main() {
 		}
 		kase++
 		fmt.Fprintf(out, "Field #%d:\n", kase)
-		field = make([][]byte, m)
+		field := make([][]byte, m)
 		for i := range field {
 			fmt.Fscanf(in, "%s", &line)
 			field[i] = []byte(line)

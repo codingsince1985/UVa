@@ -15,20 +15,6 @@ type Number struct {
 
 var nums []Number
 
-func prepare() {
-	in, _ := os.Open("355.in")
-	defer in.Close()
-
-	var b1, b2 int
-	var num string
-	for {
-		if _, err := fmt.Fscanf(in, "%d%d%s", &b1, &b2, &num); err != nil {
-			break
-		}
-		nums = append(nums, Number{b1, b2, num})
-	}
-}
-
 func toStr(d int) string {
 	if d <= 9 {
 		return string('0' + d)
@@ -70,10 +56,19 @@ func baseN(num int, base int) string {
 }
 
 func main() {
-	prepare()
-
+	in, _ := os.Open("355.in")
+	defer in.Close()
 	out, _ := os.Create("355.out")
 	defer out.Close()
+
+	var b1, b2 int
+	var num string
+	for {
+		if _, err := fmt.Fscanf(in, "%d%d%s", &b1, &b2, &num); err != nil {
+			break
+		}
+		nums = append(nums, Number{b1, b2, num})
+	}
 
 	for _, number := range nums {
 		bt := base10(number.num, number.b1)

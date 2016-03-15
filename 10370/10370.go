@@ -25,8 +25,8 @@ func main() {
 		}
 		avg := float64(total) / float64(n)
 		cnt := 0
-		for j := range lst {
-			if float64(lst[j]) > avg {
+		for _, v := range lst {
+			if float64(v) > avg {
 				cnt++
 			}
 		}

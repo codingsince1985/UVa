@@ -26,9 +26,9 @@ func main() {
 			t += stacks[i]
 		}
 		cnt, avg = 0, t/n
-		for i := range stacks {
-			if stacks[i] > avg {
-				cnt += stacks[i] - avg
+		for _, v := range stacks {
+			if v > avg {
+				cnt += v - avg
 			}
 		}
 		kase++

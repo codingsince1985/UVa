@@ -36,8 +36,8 @@ func main() {
 			total += bin[i][B] + bin[i][G] + bin[i][C]
 		}
 		minMove = math.MaxInt32
-		for i := range binColor {
-			if move := total - bin[0][binColor[i][0]] - bin[1][binColor[i][1]] - bin[2][binColor[i][2]]; move < minMove {
+		for i, v := range binColor {
+			if move := total - bin[0][v[0]] - bin[1][v[1]] - bin[2][v[2]]; move < minMove {
 				minMove = move
 				idx = i
 			}

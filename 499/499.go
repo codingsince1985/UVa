@@ -9,13 +9,6 @@ import (
 	"sort"
 )
 
-func nextLine(s *bufio.Scanner) (string, bool) {
-	if ok := s.Scan(); ok {
-		return s.Text(), true
-	}
-	return "", false
-}
-
 func output(out *os.File, dict map[byte]int, max int) {
 	var cs []int
 	for k, v := range dict {
@@ -39,13 +32,9 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var line string
-	var ok bool
 	var dict map[byte]int
-	for {
-		if line, ok = nextLine(s); !ok {
-			break
-		}
+	for s.Scan() {
+		line := s.Text()
 		dict = make(map[byte]int)
 		max, cnt := 0, 0
 		for _, c := range []byte(line) {

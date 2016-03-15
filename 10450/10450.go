@@ -11,12 +11,12 @@ import (
 	"os"
 )
 
-var c [51]uint64
-
-func prepare() {
+var c = func() [51]uint64 {
+	var c [51]uint64
 	c[0] = 1
 	c[1] = 2
-}
+	return c
+}()
 
 func f(b int) uint64 {
 	if c[b] != 0 {
@@ -27,7 +27,6 @@ func f(b int) uint64 {
 }
 
 func main() {
-	prepare()
 	in, _ := os.Open("10450.in")
 	defer in.Close()
 	out, _ := os.Create("10450.out")

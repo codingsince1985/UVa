@@ -42,17 +42,11 @@ func cmp(t1, t2 team) bool {
 	return strings.Compare(t1.name, t2.name) == -1
 }
 
-func (t teams) Len() int {
-	return len(t)
-}
+func (t teams) Len() int { return len(t) }
 
-func (t teams) Less(i, j int) bool {
-	return cmp(t[i], t[j])
-}
+func (t teams) Less(i, j int) bool { return cmp(t[i], t[j]) }
 
-func (t teams) Swap(i, j int) {
-	t[i], t[j] = t[j], t[i]
-}
+func (t teams) Swap(i, j int) { t[i], t[j] = t[j], t[i] }
 
 func nextLine() string {
 	s.Scan()

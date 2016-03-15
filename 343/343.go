@@ -10,19 +10,6 @@ import (
 
 var numbers [][2]string
 
-func prepare() {
-	in, _ := os.Open("343.in")
-	defer in.Close()
-
-	var a, b string
-	for {
-		if _, err := fmt.Fscanf(in, "%s%s", &a, &b); err != nil {
-			break
-		}
-		numbers = append(numbers, [2]string{a, b})
-	}
-}
-
 func getNumber(digit rune) int {
 	if digit >= '0' && digit <= '9' {
 		return int(digit - '0')
@@ -54,10 +41,18 @@ func base10(number string, base int) int {
 }
 
 func main() {
-	prepare()
-
+	in, _ := os.Open("343.in")
+	defer in.Close()
 	out, _ := os.Create("343.out")
 	defer out.Close()
+
+	var a, b string
+	for {
+		if _, err := fmt.Fscanf(in, "%s%s", &a, &b); err != nil {
+			break
+		}
+		numbers = append(numbers, [2]string{a, b})
+	}
 
 	for _, nums := range numbers {
 		a1, a2 := nums[0], nums[1]

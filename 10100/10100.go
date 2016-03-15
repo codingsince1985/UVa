@@ -45,13 +45,6 @@ func convertNonLetter(s string) string {
 	return string(r)
 }
 
-func nextLine(s *bufio.Scanner) (string, bool) {
-	if ok := s.Scan(); ok {
-		return s.Text(), true
-	}
-	return "", false
-}
-
 func main() {
 	in, _ := os.Open("10100.in")
 	defer in.Close()
@@ -63,13 +56,13 @@ func main() {
 
 	var s1, s2 string
 	var t1, t2 []string
-	var ok bool
 	var count int
-	for {
-		if s1, ok = nextLine(s); !ok {
-			break
-		}
-		s2, _ = nextLine(s)
+	for s.Scan() {
+		s1 = s.Text()
+
+		s.Scan()
+		s2 = s.Text()
+
 		s1 = convertNonLetter(s1)
 		s2 = convertNonLetter(s2)
 		s1 = strings.TrimSpace(s1)

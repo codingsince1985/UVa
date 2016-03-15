@@ -11,11 +11,11 @@ func knapsack(b []int, t int) (int, int) {
 	dp := make([]int, t+1)
 	num := make([]int, t+1)
 
-	for i := range b {
-		for j := b[i]; j <= t; j++ {
-			if dp[j] < dp[j-b[i]]+b[i] {
-				dp[j] = dp[j-b[i]] + b[i]
-				num[j] = num[j-b[i]] + 1
+	for _, v := range b {
+		for j := v; j <= t; j++ {
+			if dp[j] < dp[j-v]+v {
+				dp[j] = dp[j-v] + v
+				num[j] = num[j-v] + 1
 			}
 		}
 	}

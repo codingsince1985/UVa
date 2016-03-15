@@ -14,9 +14,8 @@ import (
 
 const MAX = 1001
 
-var t [MAX]big.Int
-
-func prepare() {
+var t = func() [MAX]big.Int {
+	var t [MAX]big.Int
 	t[1].SetInt64(1)
 	var tmp big.Int
 	for i := 2; i < MAX; i++ {
@@ -25,11 +24,10 @@ func prepare() {
 		t[i].Mul(&t[i], &t[i-1])
 		t[i].Div(&t[i], &tmp)
 	}
-}
+	return t
+}()
 
 func main() {
-	prepare()
-
 	in, _ := os.Open("10303.in")
 	defer in.Close()
 	out, _ := os.Create("10303.out")

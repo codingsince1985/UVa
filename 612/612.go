@@ -10,17 +10,11 @@ import (
 
 type dna []string
 
-func (d dna) Len() int {
-	return len(d)
-}
+func (d dna) Len() int { return len(d) }
 
-func (d dna) Less(i, j int) bool {
-	return unsorted(d[i]) < unsorted(d[j])
-}
+func (d dna) Less(i, j int) bool { return unsorted(d[i]) < unsorted(d[j]) }
 
-func (d dna) Swap(i, j int) {
-	d[i], d[j] = d[j], d[i]
-}
+func (d dna) Swap(i, j int) { d[i], d[j] = d[j], d[i] }
 
 func unsorted(s string) int {
 	l := len(s)

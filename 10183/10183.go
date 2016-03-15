@@ -10,10 +10,8 @@ import (
 
 const MAX = 101
 
-var p []big.Int
-
-func prepare() {
-	p = make([]big.Int, 2)
+var p = func() []big.Int {
+	p := make([]big.Int, 2)
 	p[0].SetInt64(1)
 	p[1].SetInt64(1)
 
@@ -27,18 +25,16 @@ func prepare() {
 		}
 		p = append(p, tmp)
 	}
-}
+	return p
+}()
 
 func main() {
-	prepare()
-
 	in, _ := os.Open("10183.in")
 	defer in.Close()
 	out, _ := os.Create("10183.out")
 	defer out.Close()
 
 	var a, b string
-	var c int
 	var n1, n2 big.Int
 	l := len(p)
 	for {
@@ -48,7 +44,7 @@ func main() {
 		n1.SetString(a, 10)
 		n2.SetString(b, 10)
 
-		c = 0
+		c := 0
 		for i := 1; i < l; i++ {
 			if p[i].Cmp(&n1) >= 0 && p[i].Cmp(&n2) <= 0 {
 				c++

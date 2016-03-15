@@ -101,12 +101,12 @@ func output(out *os.File, path []int, kase int) {
 	case path[0] == -1:
 		fmt.Fprintln(out, "improperly transformed.")
 	default:
-		for i := range path {
+		for i, v := range path {
 			if i != 0 {
 				fmt.Fprintf(out, " and ")
 			}
-			if path[i] < 4 {
-				fmt.Fprintf(out, "rotated %d degrees", path[i]*90)
+			if v < 4 {
+				fmt.Fprintf(out, "rotated %d degrees", v*90)
 			} else {
 				fmt.Fprintf(out, "reflected vertically")
 			}

@@ -10,17 +10,11 @@ import (
 
 type lines [][2]int
 
-func (l lines) Len() int {
-	return len(l)
-}
+func (l lines) Len() int { return len(l) }
 
-func (l lines) Less(i, j int) bool {
-	return l[i][0] < l[j][0]
-}
+func (l lines) Less(i, j int) bool { return l[i][0] < l[j][0] }
 
-func (l lines) Swap(i, j int) {
-	l[i], l[j] = l[j], l[i]
-}
+func (l lines) Swap(i, j int) { l[i], l[j] = l[j], l[i] }
 
 func solve(l, r int, ls [][2]int) [][2]int {
 	maxRight := l
