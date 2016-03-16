@@ -105,6 +105,7 @@ UVa 10082 - WERTYU
 UVa 10100 - Longest Match
 UVa 10107 - What is the Median?
 UVa 10110 - Light, more light
+UVa 10127 - Ones
 UVa 10130 - SuperSale
 UVa 10131 - Is Bigger Smarter?
 UVa 10183 - How Many Fibs?
@@ -131,6 +132,7 @@ UVa 10440 - Ferry Loading II
 UVa 10443 - Rock
 UVa 10450 - World Cup Noise
 UVa 10465 - Homer Simpson
+UVa 10469 - To Carry or not to Carry
 UVa 10474 - Where is the Marble?
 UVa 10519 - !! Really Strange !!
 UVa 10579 - Fibonacci Numbers
