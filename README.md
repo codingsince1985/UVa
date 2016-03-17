@@ -44,6 +44,7 @@ UVa 401 - Palindromes
 UVa 424 - Integer Inquiry
 UVa 429 - Word Transformation
 UVa 442 - Matrix Chain Multiplication
+UVa 445 - Marvelous Mazes
 UVa 458 - The Decoder
 UVa 466 - Mirror, Mirror
 UVa 469 - Wetlands of Florida
@@ -108,6 +109,7 @@ UVa 10110 - Light, more light
 UVa 10127 - Ones
 UVa 10130 - SuperSale
 UVa 10131 - Is Bigger Smarter?
+UVa 10137 - The Trip
 UVa 10183 - How Many Fibs?
 UVa 10189 - Minesweeper
 UVa 10192 - Vacation
