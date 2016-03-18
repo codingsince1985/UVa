@@ -43,6 +43,7 @@ UVa 389 - Basically Speaking
 UVa 401 - Palindromes
 UVa 424 - Integer Inquiry
 UVa 429 - Word Transformation
+UVa 438 - The Circumference of the Circle
 UVa 442 - Matrix Chain Multiplication
 UVa 445 - Marvelous Mazes
 UVa 458 - The Decoder
@@ -53,6 +54,7 @@ UVa 481 - What Goes Up
 UVa 483 - Word Scramble
 UVa 485 - Pascal's Triangle of Death
 UVa 488 - Triangle Wave
+UVa 492 - Pig-Latin
 UVa 494 - Kindergarten Counting Game
 UVa 495 - Fibonacci Freeze
 UVa 497 - Strategic Defense Initiative
