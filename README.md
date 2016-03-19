@@ -27,6 +27,7 @@ UVa 264 - Count on Cantor
 UVa 272 - TEX Quotes
 UVa 294 - Divisors
 UVa 299 - Train Swapping
+Uva 324 - Factorial Frequencies
 UVa 336 - A Node Too Far
 UVa 343 - What Base Is This?
 UVa 344 - Roman Digititis
@@ -99,6 +100,7 @@ UVa 10020 - Minimal coverage
 UVa 10035 - Primary Arithmetic
 UVa 10038 - Jolly Jumpers
 UVa 10041 - Vito's Family
+UVa 10050 - Hartals
 UVa 10051 - Tower of Cubes
 UVa 10055 - Hashmat the Brave Warrior
 UVa 10066 - The Twin Towers
