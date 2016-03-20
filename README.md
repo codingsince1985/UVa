@@ -14,6 +14,7 @@ UVa 120 - Stacks of Flapjacks
 UVa 122 - Trees on the level
 UVa 136 - Ugly Numbers
 UVa 138 - Street Numbers
+UVa 146 - ID Codes
 UVa 147 - Dollars
 UVa 151 - Power Crisis
 UVa 160 - Factors and Factorials
@@ -32,6 +33,7 @@ UVa 336 - A Node Too Far
 UVa 343 - What Base Is This?
 UVa 344 - Roman Digititis
 UVa 348 - Optimal Array Multiplication Sequence
+UVa 350 - Pseudo-Random Numbers
 UVa 352 - The Seasonal War
 UVa 355 - The Bases Are Loaded
 UVa 357 - Let Me Count The Ways
