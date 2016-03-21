@@ -110,6 +110,7 @@ UVa 10071 - Back to High School Physics
 Uva 10079 - Pizza Cutting
 UVa 10082 - WERTYU
 UVa 10100 - Longest Match
+UVa 10106 - Product
 UVa 10107 - What is the Median?
 UVa 10110 - Light, more light
 UVa 10127 - Ones
@@ -122,6 +123,7 @@ UVa 10192 - Vacation
 UVa 10194 - Football (aka Soccer)
 UVa 10219 - Find the ways !
 UVa 10220 - I Love Big Numbers !
+UVa 10222 - Decode the Mad man
 UVa 10229 - Modular Fibonacci
 UVa 10282 - Babelfish
 UVa 10295 - Hay Points
