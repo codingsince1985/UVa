@@ -47,6 +47,7 @@ UVa 401 - Palindromes
 UVa 424 - Integer Inquiry
 UVa 429 - Word Transformation
 UVa 438 - The Circumference of the Circle
+UVa 440 - Eeny Meeny Moo
 UVa 442 - Matrix Chain Multiplication
 UVa 445 - Marvelous Mazes
 UVa 458 - The Decoder
@@ -72,6 +73,7 @@ UVa 539 - The Settlers of Catan
 UVa 541 - Error Correction
 UVa 543 - Goldbach's Conjecture
 UVa 567 - Risk
+UVa 568 - Just the Facts
 UVa 572 - Oil Deposits
 UVa 575 - Skew Binary
 UVa 579 - Clock Hands
