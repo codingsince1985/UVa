@@ -28,6 +28,7 @@ UVa 264 - Count on Cantor
 UVa 272 - TEX Quotes
 UVa 294 - Divisors
 UVa 299 - Train Swapping
+UVa 305 - Joseph
 Uva 324 - Factorial Frequencies
 UVa 336 - A Node Too Far
 UVa 343 - What Base Is This?
@@ -56,6 +57,7 @@ UVa 469 - Wetlands of Florida
 UVa 476 - Points in Figures: Rectangles
 UVa 481 - What Goes Up
 UVa 483 - Word Scramble
+UVa 484 - The Department of Redundancy Department
 UVa 485 - Pascal's Triangle of Death
 UVa 488 - Triangle Wave
 UVa 492 - Pig-Latin
