@@ -55,6 +55,7 @@ UVa 458 - The Decoder
 UVa 466 - Mirror, Mirror
 UVa 469 - Wetlands of Florida
 UVa 476 - Points in Figures: Rectangles
+UVa 477 - Points in Figures: Rectangles and Circles
 UVa 481 - What Goes Up
 UVa 483 - Word Scramble
 UVa 484 - The Department of Redundancy Department
@@ -132,6 +133,7 @@ UVa 10229 - Modular Fibonacci
 UVa 10282 - Babelfish
 UVa 10295 - Hay Points
 UVa 10300 - Ecological Premium
+UVa 10302 - Summation of Polynomials
 UVa 10303 - How Many Trees?
 UVa 10305 - Ordering Tasks
 UVa 10324 - Zeros and Ones
