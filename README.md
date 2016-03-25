@@ -45,12 +45,14 @@ UVa 382 - Perfection
 UVa 383 - Shipping Routes
 UVa 389 - Basically Speaking
 UVa 401 - Palindromes
+UVa 412 - Pi
 UVa 424 - Integer Inquiry
 UVa 429 - Word Transformation
 UVa 438 - The Circumference of the Circle
 UVa 440 - Eeny Meeny Moo
 UVa 442 - Matrix Chain Multiplication
 UVa 445 - Marvelous Mazes
+UVa 446 - Kibbles "n" Bits "n" Bits "n" Bits
 UVa 458 - The Decoder
 UVa 466 - Mirror, Mirror
 UVa 469 - Wetlands of Florida
