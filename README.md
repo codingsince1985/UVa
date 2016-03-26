@@ -45,6 +45,7 @@ UVa 382 - Perfection
 UVa 383 - Shipping Routes
 UVa 389 - Basically Speaking
 UVa 401 - Palindromes
+UVa 406 - Prime Cuts
 UVa 412 - Pi
 UVa 424 - Integer Inquiry
 UVa 429 - Word Transformation
@@ -132,6 +133,7 @@ UVa 10219 - Find the ways !
 UVa 10220 - I Love Big Numbers !
 UVa 10222 - Decode the Mad man
 UVa 10229 - Modular Fibonacci
+UVa 10260 - Soundex
 UVa 10282 - Babelfish
 UVa 10295 - Hay Points
 UVa 10300 - Ecological Premium
