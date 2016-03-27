@@ -10,6 +10,7 @@ UVa 108 - Maximum Sum
 UVa 111 - History Grading
 UVa 112 - Tree Summing
 UVa 113 - Power of Cryptography
+UVa 118 - Mutant Flatworld Explorers
 UVa 120 - Stacks of Flapjacks
 UVa 122 - Trees on the level
 UVa 136 - Ugly Numbers
@@ -87,6 +88,7 @@ UVa 583 - Prime Factors
 UVa 591 - Box of Bricks
 UVa 612 - DNA Sorting
 UVa 639 - Don't Get Rooked
+UVa 640 - Self Numbers
 UVa 673 - Parentheses Balance
 UVa 674 - Coin Change
 UVa 679 - Dropping Balls
