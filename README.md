@@ -6,6 +6,7 @@ UVa 101 - The Blocks Problem
 UVa 102 - Ecological Bin Packing
 UVa 103 - Stacking Boxes
 UVa 105 - The Skyline Problem
+UVa 107 - The Cat in the Hat
 UVa 108 - Maximum Sum
 UVa 111 - History Grading
 UVa 112 - Tree Summing
@@ -106,6 +107,7 @@ UVa 10006 - Carmichael Numbers
 UVa 10007 - Count the Trees
 UVa 10008 - What's Cryptanalysis?
 UVa 10009 - All Roads Lead Where?
+UVa 10013 - Super long sums
 UVa 10018 - Reverse and Add
 UVa 10019 - Funny Encryption Method
 UVa 10020 - Minimal coverage
