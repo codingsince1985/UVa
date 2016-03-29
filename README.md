@@ -52,8 +52,10 @@ UVa 412 - Pi
 UVa 424 - Integer Inquiry
 UVa 429 - Word Transformation
 UVa 438 - The Circumference of the Circle
+UVa 439 - Knight Moves
 UVa 440 - Eeny Meeny Moo
 UVa 442 - Matrix Chain Multiplication
+UVa 443 - Humble Numbers
 UVa 445 - Marvelous Mazes
 UVa 446 - Kibbles "n" Bits "n" Bits "n" Bits
 UVa 458 - The Decoder
