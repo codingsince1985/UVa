@@ -98,6 +98,7 @@ UVa 679 - Dropping Balls
 Uva 686 - Goldbach's Conjecture (II)
 UVa 694 - The Collatz Sequence
 UVa 706 - LC-Display
+UVa 713 - Adding Reversed Numbers
 UVa 725 - Division
 UVa 727 - Equation
 UVa 762 - We Ship Cheap
