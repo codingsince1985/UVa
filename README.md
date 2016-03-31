@@ -165,6 +165,7 @@ UVa 10519 - !! Really Strange !!
 UVa 10579 - Fibonacci Numbers
 UVa 10696 - f91
 UVa 10783 - Odd Sum
+UVa 10812 - Beat the Spread!
 UVa 11172 - Relational Operator
 UVa 12347 - Binary Search Tree
 ```
