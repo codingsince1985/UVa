@@ -68,6 +68,7 @@ UVa 483 - Word Scramble
 UVa 484 - The Department of Redundancy Department
 UVa 485 - Pascal's Triangle of Death
 UVa 488 - Triangle Wave
+UVa 490 - Rotating Sentences
 UVa 492 - Pig-Latin
 UVa 494 - Kindergarten Counting Game
 UVa 495 - Fibonacci Freeze
