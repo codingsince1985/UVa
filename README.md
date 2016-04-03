@@ -105,6 +105,7 @@ UVa 725 - Division
 UVa 727 - Equation
 UVa 762 - We Ship Cheap
 UVa 816 - Abbott's Revenge
+UVa 834 - Continued Fractions
 UVa 836 - Largest Submatrix
 UVa 10003 - Cutting Sticks
 UVa 10004 - Bicoloring
