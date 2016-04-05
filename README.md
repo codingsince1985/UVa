@@ -46,6 +46,7 @@ UVa 371 - Ackermann Functions
 UVa 374 - Big Mod
 UVa 382 - Perfection
 UVa 383 - Shipping Routes
+UVa 386 - Perfect Cubes
 UVa 389 - Basically Speaking
 UVa 401 - Palindromes
 UVa 406 - Prime Cuts
