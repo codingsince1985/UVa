@@ -126,6 +126,7 @@ UVa 10041 - Vito's Family
 UVa 10050 - Hartals
 UVa 10051 - Tower of Cubes
 UVa 10055 - Hashmat the Brave Warrior
+UVa 10062 - Tell me the frequencies!
 UVa 10066 - The Twin Towers
 UVa 10071 - Back to High School Physics
 Uva 10079 - Pizza Cutting
