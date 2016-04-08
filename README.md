@@ -11,6 +11,7 @@ UVa 108 - Maximum Sum
 UVa 111 - History Grading
 UVa 112 - Tree Summing
 UVa 113 - Power of Cryptography
+UVa 116 - Unidirectional TSP
 UVa 118 - Mutant Flatworld Explorers
 UVa 119 - Greedy Gift Givers
 UVa 120 - Stacks of Flapjacks
