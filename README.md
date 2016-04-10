@@ -61,6 +61,7 @@ UVa 439 - Knight Moves
 UVa 440 - Eeny Meeny Moo
 UVa 442 - Matrix Chain Multiplication
 UVa 443 - Humble Numbers
+UVa 444 - Encoder and Decoder
 UVa 445 - Marvelous Mazes
 UVa 446 - Kibbles "n" Bits "n" Bits "n" Bits
 UVa 458 - The Decoder
