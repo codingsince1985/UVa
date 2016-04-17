@@ -37,7 +37,7 @@ func factors(n int, ps []int) map[int]int {
 	for i := n; i != 1; {
 		for _, p := range ps {
 			if i%p == 0 {
-				fs[p] = fs[p] + 1
+				fs[p]++
 				i /= p
 			}
 		}
@@ -80,7 +80,7 @@ func main() {
 		for i := 2; i <= n; i++ {
 			tmp := factors(i, ps)
 			for k, v := range tmp {
-				fs[k] = fs[k] + v
+				fs[k] += v
 			}
 		}
 		output(out, n, fs, ps)
