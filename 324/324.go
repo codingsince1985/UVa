@@ -1,4 +1,4 @@
-// Uva 324 - Factorial Frequencies
+// UVa 324 - Factorial Frequencies
 
 package main
 

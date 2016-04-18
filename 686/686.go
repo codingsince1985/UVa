@@ -1,4 +1,4 @@
-// Uva 686 - Goldbach's Conjecture (II)
+// UVa 686 - Goldbach's Conjecture (II)
 
 package main
 

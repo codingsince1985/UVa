@@ -1,4 +1,4 @@
-// Uva 10079 - Pizza Cutting
+// UVa 10079 - Pizza Cutting
 
 package main
 

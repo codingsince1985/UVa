@@ -1,4 +1,4 @@
-// Uva 10929 - You can say 11
+// UVa 10929 - You can say 11
 
 package main
 

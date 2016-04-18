@@ -37,7 +37,7 @@ UVa 291 - The House Of Santa Claus
 UVa 294 - Divisors
 UVa 299 - Train Swapping
 UVa 305 - Joseph
-Uva 324 - Factorial Frequencies
+UVa 324 - Factorial Frequencies
 UVa 336 - A Node Too Far
 UVa 343 - What Base Is This?
 UVa 344 - Roman Digititis
@@ -107,7 +107,7 @@ UVa 640 - Self Numbers
 UVa 673 - Parentheses Balance
 UVa 674 - Coin Change
 UVa 679 - Dropping Balls
-Uva 686 - Goldbach's Conjecture (II)
+UVa 686 - Goldbach's Conjecture (II)
 UVa 694 - The Collatz Sequence
 UVa 706 - LC-Display
 UVa 713 - Adding Reversed Numbers
@@ -136,7 +136,7 @@ UVa 10055 - Hashmat the Brave Warrior
 UVa 10062 - Tell me the frequencies!
 UVa 10066 - The Twin Towers
 UVa 10071 - Back to High School Physics
-Uva 10079 - Pizza Cutting
+UVa 10079 - Pizza Cutting
 UVa 10082 - WERTYU
 UVa 10100 - Longest Match
 UVa 10106 - Product
@@ -182,7 +182,8 @@ UVa 10579 - Fibonacci Numbers
 UVa 10696 - f91
 UVa 10783 - Odd Sum
 UVa 10812 - Beat the Spread!
-Uva 10929 - You can say 11
+UVa 10929 - You can say 11
+UVa 10970 - Big Chocolate
 UVa 11172 - Relational Operator
 UVa 12347 - Binary Search Tree
 ```
