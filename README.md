@@ -135,6 +135,7 @@ UVa 10051 - Tower of Cubes
 UVa 10055 - Hashmat the Brave Warrior
 UVa 10062 - Tell me the frequencies!
 UVa 10066 - The Twin Towers
+UVa 10070 - Leap Year or Not Leap Year and ...
 UVa 10071 - Back to High School Physics
 UVa 10079 - Pizza Cutting
 UVa 10082 - WERTYU
