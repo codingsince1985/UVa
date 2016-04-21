@@ -123,6 +123,7 @@ UVa 10006 - Carmichael Numbers
 UVa 10007 - Count the Trees
 UVa 10008 - What's Cryptanalysis?
 UVa 10009 - All Roads Lead Where?
+UVa 10010 - Where's Waldorf?
 UVa 10013 - Super long sums
 UVa 10018 - Reverse and Add
 UVa 10019 - Funny Encryption Method
