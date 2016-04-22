@@ -185,6 +185,7 @@ UVa 10579 - Fibonacci Numbers
 UVa 10696 - f91
 UVa 10783 - Odd Sum
 UVa 10812 - Beat the Spread!
+UVa 10924 - Prime Words
 UVa 10929 - You can say 11
 UVa 10970 - Big Chocolate
 UVa 11172 - Relational Operator
