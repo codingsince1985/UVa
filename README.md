@@ -128,6 +128,7 @@ UVa 10013 - Super long sums
 UVa 10018 - Reverse and Add
 UVa 10019 - Funny Encryption Method
 UVa 10020 - Minimal coverage
+UVa 10034 - Freckles
 UVa 10035 - Primary Arithmetic
 UVa 10038 - Jolly Jumpers
 UVa 10041 - Vito's Family
