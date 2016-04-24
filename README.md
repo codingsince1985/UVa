@@ -57,6 +57,7 @@ UVa 392 - Polynomial Showdown
 UVa 401 - Palindromes
 UVa 406 - Prime Cuts
 UVa 412 - Pi
+UVa 414 - Machined Surfaces
 UVa 424 - Integer Inquiry
 UVa 429 - Word Transformation
 UVa 438 - The Circumference of the Circle
