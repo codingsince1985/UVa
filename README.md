@@ -16,6 +16,7 @@ UVa 118 - Mutant Flatworld Explorers
 UVa 119 - Greedy Gift Givers
 UVa 120 - Stacks of Flapjacks
 UVa 122 - Trees on the level
+UVa 128 - Software CRC
 UVa 136 - Ugly Numbers
 UVa 138 - Street Numbers
 UVa 146 - ID Codes
