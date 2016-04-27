@@ -120,6 +120,7 @@ UVa 762 - We Ship Cheap
 UVa 816 - Abbott's Revenge
 UVa 834 - Continued Fractions
 UVa 836 - Largest Submatrix
+UVa 10000 - Longest Paths
 UVa 10003 - Cutting Sticks
 UVa 10004 - Bicoloring
 UVa 10006 - Carmichael Numbers
