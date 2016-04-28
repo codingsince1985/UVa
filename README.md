@@ -58,6 +58,7 @@ UVa 389 - Basically Speaking
 UVa 392 - Polynomial Showdown
 UVa 401 - Palindromes
 UVa 406 - Prime Cuts
+UVa 408 - Uniform Generator
 UVa 412 - Pi
 UVa 414 - Machined Surfaces
 UVa 424 - Integer Inquiry
