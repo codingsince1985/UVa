@@ -66,6 +66,7 @@ UVa 429 - Word Transformation
 UVa 438 - The Circumference of the Circle
 UVa 439 - Knight Moves
 UVa 440 - Eeny Meeny Moo
+UVa 441 - Lotto
 UVa 442 - Matrix Chain Multiplication
 UVa 443 - Humble Numbers
 UVa 444 - Encoder and Decoder
