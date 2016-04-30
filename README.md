@@ -101,6 +101,7 @@ UVa 543 - Goldbach's Conjecture
 UVa 567 - Risk
 UVa 568 - Just the Facts
 UVa 572 - Oil Deposits
+UVa 573 - The Snail
 UVa 575 - Skew Binary
 UVa 579 - Clock Hands
 UVa 583 - Prime Factors
