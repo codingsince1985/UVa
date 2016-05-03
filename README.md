@@ -166,6 +166,7 @@ UVa 10219 - Find the ways !
 UVa 10220 - I Love Big Numbers !
 UVa 10222 - Decode the Mad man
 UVa 10229 - Modular Fibonacci
+UVa 10235 - Simply Emirp
 UVa 10252 - Common Permutation
 UVa 10260 - Soundex
 UVa 10282 - Babelfish
