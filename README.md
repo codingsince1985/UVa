@@ -30,6 +30,7 @@ UVa 167 - The Sultan's Successors
 UVa 190 - Circle Through Three Points
 UVa 193 - Graph Coloring
 UVa 195 - Anagram
+UVa 200 - Rare Order
 UVa 202 - Repeating Decimals
 UVa 216 - Getting in Line
 UVa 231 - Testing the CATCHER
