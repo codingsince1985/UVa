@@ -97,6 +97,7 @@ UVa 526 - String Distance and Transform Process
 UVa 530 - Binomial Showdown
 UVa 531 - Compromise
 UVa 532 - Dungeon Master
+UVa 536 - Tree Recovery
 UVa 539 - The Settlers of Catan
 UVa 541 - Error Correction
 UVa 543 - Goldbach's Conjecture
