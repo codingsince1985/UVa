@@ -5,6 +5,7 @@ UVa 100 - The 3n + 1 problem
 UVa 101 - The Blocks Problem
 UVa 102 - Ecological Bin Packing
 UVa 103 - Stacking Boxes
+UVa 104 - Arbitrage
 UVa 105 - The Skyline Problem
 UVa 106 - Fermat vs. Pythagoras
 UVa 107 - The Cat in the Hat
