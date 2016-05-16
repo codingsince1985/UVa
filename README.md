@@ -205,6 +205,7 @@ UVa 10474 - Where is the Marble?
 UVa 10519 - !! Really Strange !!
 UVa 10579 - Fibonacci Numbers
 UVa 10696 - f91
+UVa 10699 - Count the factors
 UVa 10783 - Odd Sum
 UVa 10812 - Beat the Spread!
 UVa 10921 - Find the Telephone
