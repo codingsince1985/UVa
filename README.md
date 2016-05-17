@@ -64,6 +64,7 @@ UVa 406 - Prime Cuts
 UVa 408 - Uniform Generator
 UVa 412 - Pi
 UVa 414 - Machined Surfaces
+UVa 417 - Word Index
 UVa 424 - Integer Inquiry
 UVa 429 - Word Transformation
 UVa 438 - The Circumference of the Circle
