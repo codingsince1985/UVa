@@ -204,6 +204,7 @@ UVa 10469 - To Carry or not to Carry
 UVa 10473 - Simple Base Conversion
 UVa 10474 - Where is the Marble?
 UVa 10519 - !! Really Strange !!
+UVa 11547 - Automatic Answer
 UVa 10579 - Fibonacci Numbers
 UVa 10696 - f91
 UVa 10699 - Count the factors
