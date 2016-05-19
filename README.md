@@ -25,6 +25,7 @@ UVa 138 - Street Numbers
 UVa 146 - ID Codes
 UVa 147 - Dollars
 UVa 151 - Power Crisis
+UVa 156 - Ananagrams
 UVa 160 - Factors and Factorials
 UVa 164 - String Computer
 UVa 167 - The Sultan's Successors
