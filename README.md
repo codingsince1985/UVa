@@ -195,6 +195,7 @@ UVa 10346 - Peter's Smokes
 UVa 10360 - Rat Attack
 UVa 10370 - Above Average
 UVa 10405 - Longest Common Subsequence
+UVa 10409 - Die Game
 UVa 10420 - List of Conquests
 UVa 10424 - Love Calculator
 UVa 10432 - Polygon Inside A Circle
