@@ -1,4 +1,4 @@
-// UVa 477 - Points in Figures: Rectangles and Circles
+// UVa 478 - Points in Figures: Rectangles, Circles, Triangles
 
 package main
 
@@ -18,6 +18,8 @@ type circle struct {
 	radius float64
 }
 
+type triangle struct{ p1, p2, p3 point }
+
 type shape interface {
 	contains(p point) bool
 }
@@ -28,6 +30,22 @@ func (r rectangle) contains(p point) bool {
 
 func (c circle) contains(p point) bool {
 	return (p.x-c.p.x)*(p.x-c.p.x)+(p.y-c.p.y)*(p.y-c.p.y) < c.radius*c.radius
+}
+
+func area(p1, p2, p3 point) float64 {
+	a := 0.5 * ((p3.y-p1.y)*(p2.x-p1.x) - (p2.y-p1.y)*(p3.x-p1.x))
+	if a < 0 {
+		return -a
+	}
+	return a
+}
+
+func (t triangle) contains(p point) bool {
+	diff := area(p, t.p1, t.p2) + area(p, t.p1, t.p3) + area(p, t.p2, t.p3) - area(t.p1, t.p2, t.p3)
+	if diff < 0 {
+		diff *= -1
+	}
+	return diff <= 0.00001
 }
 
 func testIn(count int, p point, shapes []shape) {
@@ -44,13 +62,13 @@ func testIn(count int, p point, shapes []shape) {
 }
 
 func main() {
-	in, _ := os.Open("477.in")
+	in, _ := os.Open("478.in")
 	defer in.Close()
-	out, _ = os.Create("477.out")
+	out, _ = os.Create("478.out")
 	defer out.Close()
 
 	var shapes []shape
-	var a, b, c, d float64
+	var a, b, c, d, e, f float64
 	var str string
 	for {
 		if fmt.Fscanf(in, "%s", &str); str == "*" {
@@ -63,6 +81,9 @@ func main() {
 		case "c":
 			fmt.Fscanf(in, "%f%f%f", &a, &b, &c)
 			shapes = append(shapes, circle{point{a, b}, c})
+		case "t":
+			fmt.Fscanf(in, "%f%f%f%f%f%f", &a, &b, &c, &d, &e, &f)
+			shapes = append(shapes, triangle{point{a, b}, point{c, d}, point{e, f}})
 		}
 	}
 

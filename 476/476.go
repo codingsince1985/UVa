@@ -7,14 +7,16 @@ import (
 	"os"
 )
 
-type rectangle struct {
-	x1, y1, x2, y2 float64
-}
+var out *os.File
 
-func testIn(out *os.File, count int, x, y float64, rectangles []rectangle) {
-	var inAny bool
+type point struct{ x, y float64 }
+
+type rectangle struct{ p1, p2 point }
+
+func testIn(count int, p point, rectangles []rectangle) {
+	inAny := false
 	for i, v := range rectangles {
-		if x > v.x1 && x < v.x2 && y < v.y1 && y > v.y2 {
+		if p.x > v.p1.x && p.x < v.p2.x && p.y < v.p1.y && p.y > v.p2.y {
 			fmt.Fprintf(out, "Point %d is contained in figure %d\n", count, i+1)
 			inAny = true
 		}
@@ -27,7 +29,7 @@ func testIn(out *os.File, count int, x, y float64, rectangles []rectangle) {
 func main() {
 	in, _ := os.Open("476.in")
 	defer in.Close()
-	out, _ := os.Create("476.out")
+	out, _ = os.Create("476.out")
 	defer out.Close()
 
 	var rectangles []rectangle
@@ -38,7 +40,7 @@ func main() {
 			break
 		}
 		fmt.Fscanf(in, "%f%f%f%f", &a, &b, &c, &d)
-		rectangles = append(rectangles, rectangle{a, b, c, d})
+		rectangles = append(rectangles, rectangle{point{a, b}, point{c, d}})
 	}
 
 	count := 0
@@ -47,6 +49,6 @@ func main() {
 			break
 		}
 		count++
-		testIn(out, count, a, b, rectangles)
+		testIn(count, point{a, b}, rectangles)
 	}
 }
