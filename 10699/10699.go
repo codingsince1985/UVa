@@ -4,12 +4,17 @@ package main
 
 import (
 	"fmt"
-	"math"
 	"os"
 )
 
 func isPrime(n int) bool {
-	for i := 2; i <= int(math.Sqrt(float64(n))); i++ {
+	if n == 2 {
+		return true
+	}
+	if n%2 == 0 {
+		return false
+	}
+	for i := 3; i*i <= n; i += 2 {
 		if n%i == 0 {
 			return false
 		}

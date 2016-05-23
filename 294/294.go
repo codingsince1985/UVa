@@ -7,7 +7,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 	"os"
 )
 
@@ -32,7 +31,7 @@ func factorize(n int) map[int]int {
 
 		if !done {
 			t++
-			if t > int(math.Sqrt(float64(n))+.5) {
+			if t*t > n {
 				// remaining must be a prime
 				f[n] = 1
 				break

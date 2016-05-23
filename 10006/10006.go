@@ -4,7 +4,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 	"math/big"
 	"os"
 )
@@ -13,8 +12,7 @@ func isPrime(n int) bool {
 	if n%2 == 0 {
 		return false
 	}
-	sq := int(math.Sqrt(float64(n)))
-	for i := 3; i <= sq; i += 2 {
+	for i := 3; i*i <= n; i += 2 {
 		if n%i == 0 {
 			return false
 		}

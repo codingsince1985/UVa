@@ -4,7 +4,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 	"os"
 )
 
@@ -32,8 +31,8 @@ func main() {
 		}
 		cache := make(map[int]bool)
 		cnt := 0
-		for i := 1; i <= int(math.Sqrt(float64(n))); i++ {
-			for j := i + 1; j <= int(math.Sqrt(float64(n))); j += 2 {
+		for i := 1; i*i <= n; i++ {
+			for j := i + 1; j*j <= n; j += 2 {
 				if gcd(i, j) != 1 {
 					continue
 				}

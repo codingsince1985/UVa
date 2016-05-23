@@ -4,7 +4,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 	"os"
 	"strconv"
 	"strings"
@@ -31,7 +30,7 @@ func factorize(n int) []string {
 
 		if !done {
 			t++
-			if t > int(math.Sqrt(float64(n))+.5) {
+			if t*t > n {
 				p = append(p, strconv.Itoa(n))
 				break
 			}
