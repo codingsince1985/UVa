@@ -222,6 +222,7 @@ UVa 10924 - Prime Words
 UVa 10929 - You can say 11
 UVa 10970 - Big Chocolate
 UVa 11172 - Relational Operator
+UVa 11185 - Ternary
 UVa 12347 - Binary Search Tree
 ```
 License
