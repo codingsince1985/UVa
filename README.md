@@ -133,6 +133,7 @@ UVa 762 - We Ship Cheap
 UVa 816 - Abbott's Revenge
 UVa 834 - Continued Fractions
 UVa 836 - Largest Submatrix
+UVa 846 - Steps
 UVa 847 - A Multiplication Game
 UVa 913 - Joana and the Odd Numbers
 UVa 10000 - Longest Paths
