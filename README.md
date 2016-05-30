@@ -117,6 +117,7 @@ UVa 579 - Clock Hands
 UVa 583 - Prime Factors
 UVa 591 - Box of Bricks
 UVa 612 - DNA Sorting
+UVa 621 - Secret Research
 UVa 623 - 500!
 UVa 639 - Don't Get Rooked
 UVa 640 - Self Numbers
