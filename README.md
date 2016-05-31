@@ -176,6 +176,7 @@ UVa 10183 - How Many Fibs?
 UVa 10189 - Minesweeper
 UVa 10192 - Vacation
 UVa 10194 - Football (aka Soccer)
+UVa 10195 - The Knights Of The Round Table
 UVa 10209 - Is This Integration ?
 UVa 10219 - Find the ways !
 UVa 10220 - I Love Big Numbers !
