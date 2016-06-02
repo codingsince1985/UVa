@@ -19,6 +19,7 @@ UVa 119 - Greedy Gift Givers
 UVa 120 - Stacks of Flapjacks
 UVa 122 - Trees on the level
 UVa 128 - Software CRC
+UVa 130 - Roman Roulette
 UVa 133 - The Dole Queue
 UVa 136 - Ugly Numbers
 UVa 138 - Street Numbers
