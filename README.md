@@ -61,6 +61,7 @@ UVa 383 - Shipping Routes
 UVa 386 - Perfect Cubes
 UVa 389 - Basically Speaking
 UVa 392 - Polynomial Showdown
+UVa 400 - Unix ls
 UVa 401 - Palindromes
 UVa 406 - Prime Cuts
 UVa 408 - Uniform Generator
