@@ -165,6 +165,7 @@ UVa 10071 - Back to High School Physics
 UVa 10079 - Pizza Cutting
 UVa 10082 - WERTYU
 UVa 10098 - Generating Fast
+UVa 10099 - The Tourist Guide
 UVa 10100 - Longest Match
 UVa 10106 - Product
 UVa 10107 - What is the Median?
