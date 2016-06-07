@@ -227,6 +227,7 @@ UVa 10812 - Beat the Spread!
 UVa 10921 - Find the Telephone
 UVa 10924 - Prime Words
 UVa 10929 - You can say 11
+UVa 10931 - Parity
 UVa 10970 - Big Chocolate
 UVa 11172 - Relational Operator
 UVa 11185 - Ternary
