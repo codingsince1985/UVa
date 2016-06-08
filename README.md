@@ -216,6 +216,7 @@ UVa 10465 - Homer Simpson
 UVa 10469 - To Carry or not to Carry
 UVa 10473 - Simple Base Conversion
 UVa 10474 - Where is the Marble?
+UVa 10499 - The Land of Justice
 UVa 10515 - Powers Et Al.
 UVa 10519 - !! Really Strange !!
 UVa 10530 - Guessing Game
