@@ -153,6 +153,7 @@ UVa 10013 - Super long sums
 UVa 10018 - Reverse and Add
 UVa 10019 - Funny Encryption Method
 UVa 10020 - Minimal coverage
+UVa 10033 - Interpreter
 UVa 10034 - Freckles
 UVa 10035 - Primary Arithmetic
 UVa 10038 - Jolly Jumpers
