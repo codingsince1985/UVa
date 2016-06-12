@@ -222,6 +222,7 @@ UVa 10499 - The Land of Justice
 UVa 10515 - Powers Et Al.
 UVa 10519 - !! Really Strange !!
 UVa 10530 - Guessing Game
+UVa 10550 - Combination Lock
 UVa 10579 - Fibonacci Numbers
 UVa 10591 - Happy Number
 UVa 10696 - f91
