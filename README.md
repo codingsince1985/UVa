@@ -33,6 +33,7 @@ UVa 160 - Factors and Factorials
 UVa 164 - String Computer
 UVa 167 - The Sultan's Successors
 UVa 190 - Circle Through Three Points
+UVa 191 - Intersection
 UVa 193 - Graph Coloring
 UVa 195 - Anagram
 UVa 200 - Rare Order
