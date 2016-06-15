@@ -22,17 +22,17 @@ func min(a, b int) int {
 
 func max(a, b int) int { return a + b - min(a, b) }
 
-func area(p1, p2, p3 point) int { return (p3.y-p1.y)*(p2.x-p1.x) - (p2.y-p1.y)*(p3.x-p1.x) }
+func area(p point, l line) int { return (l.p1.y-p.y)*(l.p2.x-p.x) - (l.p2.y-p.y)*(l.p1.x-p.x) }
 
 func cross(p point, l line) bool {
 	return (p.x-l.p1.x)*(p.x-l.p2.x) <= 0 && (p.y-l.p1.y)*(p.y-l.p2.y) <= 0
 }
 
 func intersect(l1, l2 line) bool {
-	a1 := area(l1.p1, l2.p1, l1.p2)
-	a2 := area(l1.p1, l2.p2, l1.p2)
-	a3 := area(l2.p1, l1.p1, l2.p2)
-	a4 := area(l2.p1, l1.p2, l2.p2)
+	a1 := area(l2.p1, l1)
+	a2 := area(l2.p2, l1)
+	a3 := area(l1.p1, l2)
+	a4 := area(l1.p2, l2)
 
 	switch {
 	case a1*a2 < 0 && a3*a4 < 0:
