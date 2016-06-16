@@ -13,7 +13,7 @@ func solve(n int) (uint64, uint64) {
 	for i := 0; i < n; i++ {
 		m, f = f+m, m+1
 	}
-	return m, f + m
+	return m, f
 }
 
 func main() {
@@ -27,7 +27,7 @@ func main() {
 		if fmt.Fscanf(in, "%d", &n); n == -1 {
 			break
 		}
-		m, t := solve(n)
-		fmt.Fprintf(out, "%d %d\n", m, t)
+		m, f := solve(n)
+		fmt.Fprintf(out, "%d %d\n", m, m+f)
 	}
 }
