@@ -69,7 +69,7 @@ func main() {
 				fmt.Fscanf(in, "%c", &c)
 				grid[i][j] = c
 			}
-			fmt.Fscanf(in, "\n")
+			fmt.Fscanln(in)
 		}
 		max = 0
 		dfs(0, 0, 0)

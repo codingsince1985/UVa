@@ -201,6 +201,7 @@ UVa 10300 - Ecological Premium
 UVa 10302 - Summation of Polynomials
 UVa 10303 - How Many Trees?
 UVa 10305 - Ordering Tasks
+UVa 10310 - Dog and Gopher
 UVa 10323 - Factorial! You Must be Kidding!!!
 UVa 10324 - Zeros and Ones
 UVa 10327 - Flip Sort

@@ -44,7 +44,7 @@ func main() {
 	var visited [][]bool
 	fmt.Fscanf(in, "%d", &n)
 	for i := 0; i < n; i++ {
-		fmt.Fscanf(in, "\n")
+		fmt.Fscanln(in)
 		grid = nil
 		for {
 			if fmt.Fscanf(in, "%s", &line); line[0] != 'L' && line[0] != 'W' {

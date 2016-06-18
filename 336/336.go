@@ -50,7 +50,7 @@ func main() {
 		var n, t int
 		for {
 			if fmt.Fscanf(in, "%d%d", &n, &t); n == 0 && t == 0 {
-				fmt.Fscanf(in, "\n")
+				fmt.Fscanln(in)
 				break
 			}
 			visited := bfs(adj, n, t)

@@ -28,7 +28,7 @@ func main() {
 					num++
 				}
 			}
-			fmt.Fscanf(in, "\n")
+			fmt.Fscanln(in)
 			if num > max {
 				max = num
 			}

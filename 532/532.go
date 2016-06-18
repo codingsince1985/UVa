@@ -100,7 +100,7 @@ func main() {
 					cubes[i][j][k] = chars[k]
 				}
 			}
-			fmt.Fscanf(in, "\n")
+			fmt.Fscanln(in)
 		}
 		minute := bfs(s, e)
 		if minute == -1 {
