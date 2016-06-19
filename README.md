@@ -185,6 +185,7 @@ UVa 10161 - Ant on a Chessboard
 UVa 10183 - How Many Fibs?
 UVa 10189 - Minesweeper
 UVa 10192 - Vacation
+UVa 10193 - All You Need Is Love
 UVa 10194 - Football (aka Soccer)
 UVa 10195 - The Knights Of The Round Table
 UVa 10209 - Is This Integration ?

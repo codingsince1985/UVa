@@ -8,14 +8,10 @@ import (
 )
 
 func gcd(x, y int) int {
-	for {
-		m := x % y
-		if m == 0 {
-			break
-		}
-		x, y = y, m
+	if y == 0 {
+		return x
 	}
-	return y
+	return gcd(y, x%y)
 }
 
 func main() {
