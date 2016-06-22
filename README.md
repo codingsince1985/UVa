@@ -103,6 +103,7 @@ UVa 496 - Simply Subsets
 UVa 497 - Strategic Defense Initiative
 UVa 499 - What's The Frequency, Kenneth?
 UVa 507 - Jill Rides Again
+UVa 514 - Rails
 UVa 524 - Prime Ring Problem
 UVa 526 - String Distance and Transform Process
 UVa 530 - Binomial Showdown
