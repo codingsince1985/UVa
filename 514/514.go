@@ -51,6 +51,5 @@ func main() {
 				fmt.Fprintln(out, "No")
 			}
 		}
-
 	}
 }

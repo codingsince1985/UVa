@@ -244,6 +244,7 @@ UVa 10929 - You can say 11
 UVa 10931 - Parity
 UVa 10970 - Big Chocolate
 UVa 11000 - Bee
+UVa 11044 - Searching for Nessy
 UVa 11150 - Cola
 UVa 11172 - Relational Operator
 UVa 11185 - Ternary
