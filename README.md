@@ -48,6 +48,7 @@ UVa 272 - TEX Quotes
 UVa 291 - The House Of Santa Claus
 UVa 294 - Divisors
 UVa 299 - Train Swapping
+UVa 300 - Maya Calendar
 UVa 305 - Joseph
 UVa 324 - Factorial Frequencies
 UVa 336 - A Node Too Far
