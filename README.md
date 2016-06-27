@@ -86,6 +86,7 @@ UVa 444 - Encoder and Decoder
 UVa 445 - Marvelous Mazes
 UVa 446 - Kibbles "n" Bits "n" Bits "n" Bits
 UVa 458 - The Decoder
+UVa 459 - Graph Connectivity
 UVa 466 - Mirror, Mirror
 UVa 469 - Wetlands of Florida
 UVa 476 - Points in Figures: Rectangles
