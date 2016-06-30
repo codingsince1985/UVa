@@ -105,6 +105,7 @@ UVa 494 - Kindergarten Counting Game
 UVa 495 - Fibonacci Freeze
 UVa 496 - Simply Subsets
 UVa 497 - Strategic Defense Initiative
+UVa 498 - Polly the Polynomial
 UVa 499 - What's The Frequency, Kenneth?
 UVa 507 - Jill Rides Again
 UVa 514 - Rails
