@@ -50,11 +50,7 @@ func main() {
 			fa, fb := find(int(a), f), find(int(b), f)
 			if fa != fb {
 				num--
-				if fb < fa {
-					f[fa] = fb
-				} else {
-					f[fb] = fa
-				}
+				f[fa] = fb
 			}
 		}
 		if first {
