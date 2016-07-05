@@ -199,6 +199,7 @@ UVa 10192 - Vacation
 UVa 10193 - All You Need Is Love
 UVa 10194 - Football (aka Soccer)
 UVa 10195 - The Knights Of The Round Table
+UVa 10196 - Check The Check
 UVa 10200 - Prime Time
 UVa 10209 - Is This Integration ?
 UVa 10219 - Find the ways !
