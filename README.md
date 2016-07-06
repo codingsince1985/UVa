@@ -130,6 +130,7 @@ UVa 576 - Haiku Review
 UVa 579 - Clock Hands
 UVa 583 - Prime Factors
 UVa 591 - Box of Bricks
+UVa 594 - One Little, Two Little, Three Little Endians
 UVa 612 - DNA Sorting
 UVa 621 - Secret Research
 UVa 623 - 500!
