@@ -254,6 +254,7 @@ UVa 10921 - Find the Telephone
 UVa 10924 - Prime Words
 UVa 10929 - You can say 11
 UVa 10931 - Parity
+UVa 10954 - Add All
 UVa 10970 - Big Chocolate
 UVa 11000 - Bee
 UVa 11044 - Searching for Nessy
