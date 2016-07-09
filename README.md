@@ -162,6 +162,7 @@ UVa 10008 - What's Cryptanalysis?
 UVa 10009 - All Roads Lead Where?
 UVa 10010 - Where's Waldorf?
 UVa 10013 - Super long sums
+UVa 10015 - Joseph's Cousin
 UVa 10018 - Reverse and Add
 UVa 10019 - Funny Encryption Method
 UVa 10020 - Minimal coverage

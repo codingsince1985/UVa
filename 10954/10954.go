@@ -8,42 +8,22 @@ import (
 	"os"
 )
 
-type Item struct {
-	value int
-	index int
-}
+type item struct{ value int }
 
-type PriorityQueue []*Item
+type priorityQueue []*item
 
-func (pq PriorityQueue) Len() int { return len(pq) }
+func (pq priorityQueue) Len() int { return len(pq) }
 
-func (pq PriorityQueue) Less(i, j int) bool { return pq[i].value < pq[j].value }
+func (pq priorityQueue) Less(i, j int) bool { return pq[i].value < pq[j].value }
 
-func (pq PriorityQueue) Swap(i, j int) {
-	pq[i], pq[j] = pq[j], pq[i]
-	pq[i].index = i
-	pq[j].index = j
-}
+func (pq priorityQueue) Swap(i, j int) { pq[i], pq[j] = pq[j], pq[i] }
 
-func (pq *PriorityQueue) Push(x interface{}) {
-	n := len(*pq)
-	item := x.(*Item)
-	item.index = n
-	*pq = append(*pq, item)
-}
+func (pq *priorityQueue) Push(x interface{}) { *pq = append(*pq, x.(*item)) }
 
-func (pq *PriorityQueue) Pop() interface{} {
-	old := *pq
-	n := len(old)
-	item := old[n-1]
-	item.index = -1
-	*pq = old[0 : n-1]
+func (pq *priorityQueue) Pop() interface{} {
+	item := (*pq)[(*pq).Len()-1]
+	*pq = (*pq)[0 : (*pq).Len()-1]
 	return item
-}
-
-func (pq *PriorityQueue) update(item *Item, value int) {
-	item.value = value
-	heap.Fix(pq, item.index)
 }
 
 func main() {
@@ -57,18 +37,18 @@ func main() {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		pq := make(PriorityQueue, n)
+		pq := make(priorityQueue, n)
 		for i := range pq {
 			fmt.Fscanf(in, "%d", &num)
-			pq[i] = &Item{num, i}
+			pq[i] = &item{num}
 		}
 		heap.Init(&pq)
 		total := 0
 		for pq.Len() > 1 {
-			n1 := heap.Pop(&pq).(*Item)
-			n2 := heap.Pop(&pq).(*Item)
+			n1 := heap.Pop(&pq).(*item)
+			n2 := heap.Pop(&pq).(*item)
 			total += n1.value + n2.value
-			heap.Push(&pq, &Item{n1.value + n2.value, pq.Len()})
+			heap.Push(&pq, &item{n1.value + n2.value})
 		}
 		fmt.Fprintln(out, total)
 	}
