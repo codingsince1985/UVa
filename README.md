@@ -194,6 +194,7 @@ UVa 10127 - Ones
 UVa 10130 - SuperSale
 UVa 10131 - Is Bigger Smarter?
 UVa 10137 - The Trip
+UVa 10139 - Factovisors
 UVa 10161 - Ant on a Chessboard
 UVa 10183 - How Many Fibs?
 UVa 10189 - Minesweeper
