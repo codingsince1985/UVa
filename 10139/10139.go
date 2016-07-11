@@ -34,12 +34,9 @@ func factorize(n int) map[int]int {
 		for !isPrime(i) {
 			i++
 		}
-		for n%i == 0 {
+		for n != 1 && n%i == 0 {
 			f[i]++
 			n /= i
-			if n == 1 {
-				break
-			}
 		}
 	}
 	return f

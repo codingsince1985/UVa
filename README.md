@@ -251,6 +251,7 @@ UVa 10608 - Friends
 UVa 10696 - f91
 UVa 10699 - Count the factors
 UVa 10783 - Odd Sum
+UVa 10789 - Prime Frequency
 UVa 10812 - Beat the Spread!
 UVa 10921 - Find the Telephone
 UVa 10924 - Prime Words
