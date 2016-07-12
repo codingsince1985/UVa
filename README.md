@@ -212,6 +212,7 @@ UVa 10229 - Modular Fibonacci
 UVa 10235 - Simply Emirp
 UVa 10252 - Common Permutation
 UVa 10260 - Soundex
+UVa 10267 - Graphical Editor
 UVa 10282 - Babelfish
 UVa 10295 - Hay Points
 UVa 10300 - Ecological Premium
