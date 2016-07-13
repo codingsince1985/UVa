@@ -196,6 +196,7 @@ UVa 10131 - Is Bigger Smarter?
 UVa 10137 - The Trip
 UVa 10139 - Factovisors
 UVa 10161 - Ant on a Chessboard
+UVa 10168 - Summation of Four Primes
 UVa 10183 - How Many Fibs?
 UVa 10189 - Minesweeper
 UVa 10192 - Vacation
