@@ -95,6 +95,7 @@ UVa 476 - Points in Figures: Rectangles
 UVa 477 - Points in Figures: Rectangles and Circles
 UVa 478 - Points in Figures: Rectangles, Circles, Triangles
 UVa 481 - What Goes Up
+UVa 482 - Permutation Arrays
 UVa 483 - Word Scramble
 UVa 484 - The Department of Redundancy Department
 UVa 485 - Pascal's Triangle of Death
