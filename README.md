@@ -52,6 +52,7 @@ UVa 300 - Maya Calendar
 UVa 305 - Joseph
 UVa 324 - Factorial Frequencies
 UVa 336 - A Node Too Far
+UVa 340 - Master-Mind Hints
 UVa 343 - What Base Is This?
 UVa 344 - Roman Digititis
 UVa 348 - Optimal Array Multiplication Sequence
