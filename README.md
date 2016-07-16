@@ -25,6 +25,7 @@ UVa 130 - Roman Roulette
 UVa 133 - The Dole Queue
 UVa 136 - Ugly Numbers
 UVa 138 - Street Numbers
+UVa 144 - Student Grants
 UVa 146 - ID Codes
 UVa 147 - Dollars
 UVa 151 - Power Crisis
