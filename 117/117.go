@@ -90,7 +90,7 @@ func main() {
 			} else {
 				fmt.Fprintln(out, sum+floydWarshall(odds, matrix))
 			}
-			edges = make([]edge, 0)
+			edges = nil
 		}
 	}
 }
