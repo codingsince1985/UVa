@@ -260,6 +260,7 @@ UVa 10699 - Count the factors
 UVa 10783 - Odd Sum
 UVa 10789 - Prime Frequency
 UVa 10812 - Beat the Spread!
+UVa 10815 - Andy's First Dictionary
 UVa 10921 - Find the Telephone
 UVa 10924 - Prime Words
 UVa 10929 - You can say 11
