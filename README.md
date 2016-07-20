@@ -234,6 +234,7 @@ UVa 10338 - Mischievous Children
 UVa 10340 - All in All
 UVa 10346 - Peter's Smokes
 UVa 10360 - Rat Attack
+UVa 10361 - Automatic Poetry
 UVa 10370 - Above Average
 UVa 10405 - Longest Common Subsequence
 UVa 10409 - Die Game
