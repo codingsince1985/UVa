@@ -65,6 +65,7 @@ UVa 357 - Let Me Count The Ways
 UVa 369 - Combinations
 UVa 371 - Ackermann Functions
 UVa 374 - Big Mod
+UVa 378 - Intersecting Lines
 UVa 382 - Perfection
 UVa 383 - Shipping Routes
 UVa 386 - Perfect Cubes
