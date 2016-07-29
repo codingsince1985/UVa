@@ -122,6 +122,7 @@ UVa 531 - Compromise
 UVa 532 - Dungeon Master
 UVa 534 - Frogger
 UVa 536 - Tree Recovery
+UVa 537 - Artificial Intelligence?
 UVa 539 - The Settlers of Catan
 UVa 541 - Error Correction
 UVa 543 - Goldbach's Conjecture
