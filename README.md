@@ -144,6 +144,7 @@ UVa 623 - 500!
 UVa 624 - CD
 UVa 639 - Don't Get Rooked
 UVa 640 - Self Numbers
+UVa 661 - Blowing Fuses
 UVa 673 - Parentheses Balance
 UVa 674 - Coin Change
 UVa 679 - Dropping Balls
