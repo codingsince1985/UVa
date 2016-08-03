@@ -23,13 +23,12 @@ func main() {
 		if fmt.Fscanf(in, "%d%d%d", &n, &m, &c); n == 0 && m == 0 && c == 0 {
 			break
 		}
-		kase++
-		fmt.Fprintf(out, "Sequence %d\n", kase)
 		devices := make([]device, n)
 		for i := range devices {
 			fmt.Fscanf(in, "%d", &tmp)
 			devices[i] = device{false, tmp}
 		}
+
 		var total, max int
 		var blown bool
 		for i := 0; i < m; i++ {
@@ -48,6 +47,9 @@ func main() {
 			}
 			devices[tmp-1].on = !devices[tmp-1].on
 		}
+
+		kase++
+		fmt.Fprintf(out, "Sequence %d\n", kase)
 		if blown {
 			fmt.Fprintln(out, "Fuse was blown.\n")
 		} else {

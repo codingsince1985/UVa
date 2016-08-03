@@ -154,6 +154,7 @@ UVa 706 - LC-Display
 UVa 713 - Adding Reversed Numbers
 UVa 725 - Division
 UVa 727 - Equation
+UVa 729 - The Hamming Distance Problem
 UVa 740 - Baudot Data Communication Code
 UVa 762 - We Ship Cheap
 UVa 816 - Abbott's Revenge
