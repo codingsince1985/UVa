@@ -280,6 +280,7 @@ UVa 10929 - You can say 11
 UVa 10931 - Parity
 UVa 10954 - Add All
 UVa 10970 - Big Chocolate
+UVa 10922 - 2 the 9s
 UVa 11000 - Bee
 UVa 11044 - Searching for Nessy
 UVa 11150 - Cola
