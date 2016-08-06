@@ -203,6 +203,7 @@ UVa 10105 - Polynomial Coefficients
 UVa 10106 - Product
 UVa 10107 - What is the Median?
 UVa 10110 - Light, more light
+UVa 10116 - Robot Motion
 UVa 10127 - Ones
 UVa 10130 - SuperSale
 UVa 10131 - Is Bigger Smarter?
