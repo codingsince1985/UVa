@@ -47,6 +47,7 @@ UVa 256 - Quirksome Squares
 UVa 264 - Count on Cantor
 UVa 271 - Simply Syntax
 UVa 272 - TEX Quotes
+UVa 278 - Chess
 UVa 291 - The House Of Santa Claus
 UVa 294 - Divisors
 UVa 299 - Train Swapping
