@@ -244,6 +244,7 @@ UVa 10323 - Factorial! You Must be Kidding!!!
 UVa 10324 - Zeros and Ones
 UVa 10327 - Flip Sort
 UVa 10334 - Ray Through Glasses
+UVa 10336 - Rank the Languages
 UVa 10338 - Mischievous Children
 UVa 10340 - All in All
 UVa 10346 - Peter's Smokes
