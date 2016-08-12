@@ -1,0 +1,12 @@
+score
+******
+refund
+******
+part
+tarp
+trap
+******
+NOT A VALID WORD
+******
+course
+******
