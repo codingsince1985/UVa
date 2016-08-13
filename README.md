@@ -217,6 +217,7 @@ UVa 10161 - Ant on a Chessboard
 UVa 10168 - Summation of Four Primes
 UVa 10183 - How Many Fibs?
 UVa 10189 - Minesweeper
+UVa 10191 - Longest Nap
 UVa 10192 - Vacation
 UVa 10193 - All You Need Is Love
 UVa 10194 - Football (aka Soccer)
