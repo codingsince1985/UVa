@@ -235,6 +235,7 @@ UVa 10252 - Common Permutation
 UVa 10258 - Contest Scoreboard
 UVa 10260 - Soundex
 UVa 10267 - Graphical Editor
+UVa 10276 - Hanoi Tower Troubles Again!
 UVa 10282 - Babelfish
 UVa 10286 - Trouble with a Pentagon
 UVa 10295 - Hay Points
