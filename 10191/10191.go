@@ -65,13 +65,9 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var kase, n, h1, m1, h2, m2 int
-	var err error
-	for {
-		s.Scan()
-		if n, err = strconv.Atoi(s.Text()); err != nil {
-			break
-		}
+	var kase, h1, m1, h2, m2 int
+	for s.Scan() {
+		n, _ := strconv.Atoi(s.Text())
 		var js jobs
 		for n > 0 {
 			s.Scan()

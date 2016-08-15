@@ -18,16 +18,14 @@ func main() {
 
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
-	var line string
 	for s.Scan() {
-		if line = s.Text(); line == "#" {
-			break
+		if line := s.Text(); line != "#" {
+			num := 0
+			for i := range line {
+				num = (num<<8 + int(line[i])) % g
+			}
+			num = (g - (num << 16 % g)) % g
+			fmt.Fprintf(out, "%02X %02X\n", num>>8, num%256)
 		}
-		num := 0
-		for i := range line {
-			num = (num<<8 + int(line[i])) % g
-		}
-		num = (g - (num << 16 % g)) % g
-		fmt.Fprintf(out, "%02X %02X\n", num>>8, num%256)
 	}
 }
