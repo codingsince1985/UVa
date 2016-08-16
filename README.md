@@ -304,6 +304,7 @@ UVa 11479 - Is this the easiest problem?
 UVa 11530 - SMS Typing
 UVa 11547 - Automatic Answer
 UVa 11636 - Hello World!
+UVa 11854 - Egypt
 UVa 12347 - Binary Search Tree
 ```
 License
