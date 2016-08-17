@@ -26,9 +26,7 @@ func main() {
 	for kase > 0 {
 		fmt.Fscanf(in, "%c%d%d", &p, &m, &n)
 		switch p {
-		case 'r':
-			fallthrough
-		case 'Q':
+		case 'r', 'Q':
 			fmt.Fprintln(out, min(m, n))
 		case 'k':
 			fmt.Fprintln(out, (m*n+1)/2)
