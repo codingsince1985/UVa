@@ -97,6 +97,7 @@ UVa 459 - Graph Connectivity
 UVa 465 - Overflow
 UVa 466 - Mirror, Mirror
 UVa 469 - Wetlands of Florida
+UVa 474 - Heads / Tails Probability
 UVa 476 - Points in Figures: Rectangles
 UVa 477 - Points in Figures: Rectangles and Circles
 UVa 478 - Points in Figures: Rectangles, Circles, Triangles
