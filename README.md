@@ -193,6 +193,7 @@ UVa 10035 - Primary Arithmetic
 UVa 10038 - Jolly Jumpers
 UVa 10041 - Vito's Family
 UVa 10042 - Smith Numbers
+UVa 10048 - Audiophobia
 UVa 10050 - Hartals
 UVa 10051 - Tower of Cubes
 UVa 10055 - Hashmat the Brave Warrior

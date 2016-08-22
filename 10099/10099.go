@@ -16,20 +16,14 @@ func max(a, b int) int {
 
 func min(a, b int) int { return a + b - max(a, b) }
 
-func floydWarshall(n int, matrix [][]int) [][]int {
-	dp := make([][]int, n+1)
-	for i := range dp {
-		dp[i] = make([]int, n+1)
-	}
-	copy(dp, matrix)
+func floydWarshall(n int, matrix [][]int) {
 	for k := 1; k <= n; k++ {
 		for i := 1; i <= n; i++ {
 			for j := 1; j <= n; j++ {
-				dp[i][j] = max(dp[i][j], min(dp[i][k], dp[k][j]))
+				matrix[i][j] = max(matrix[i][j], min(matrix[i][k], matrix[k][j]))
 			}
 		}
 	}
-	return dp
 }
 
 func main() {
@@ -53,8 +47,8 @@ func main() {
 			r--
 		}
 		fmt.Fscanf(in, "%d%d%d", &s, &d, &t)
-		dp := floydWarshall(n, matrix)
-		trips := t / (dp[s][d] - 1)
+		floydWarshall(n, matrix)
+		trips := t / (matrix[s][d] - 1)
 		if t%trips != 0 {
 			trips++
 		}
