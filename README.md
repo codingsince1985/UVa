@@ -208,6 +208,7 @@ UVa 10082 - WERTYU
 UVa 10098 - Generating Fast
 UVa 10099 - The Tourist Guide
 UVa 10100 - Longest Match
+UVa 10101 - Bangla Numbers
 UVa 10104 - Euclid Problem
 UVa 10105 - Polynomial Coefficients
 UVa 10106 - Product
