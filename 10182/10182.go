@@ -8,28 +8,28 @@ import (
 )
 
 var (
-	cells      []int
+	rings      []int
 	directions = [][2]int{{-1, 1}, {-1, 0}, {0, -1}, {1, -1}, {1, 0}, {0, 1}}
 )
 
-func rings() {
-	cells = append(cells, 0)
+func initialize() {
+	rings = append(rings, 0)
 	i, step := 1, 6
 	for i < 100000 {
-		cells = append(cells, i)
+		rings = append(rings, i)
 		i += step
 		step += 6
 	}
 }
 
 func binarySearch(n int) int {
-	l, r := 0, len(cells)-1
+	l, r := 0, len(rings)-1
 	for l < r {
 		mid := (l + r) / 2
 		switch {
-		case n == cells[mid]:
+		case n == rings[mid]:
 			return mid
-		case n > cells[mid]:
+		case n > rings[mid]:
 			l = mid + 1
 		default:
 			r = mid
@@ -61,14 +61,14 @@ func main() {
 	out, _ := os.Create("10182.out")
 	defer out.Close()
 
-	rings()
+	initialize()
 	var n int
 	for {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
 		}
 		ring := binarySearch(n)
-		x, y := reMap(ring, n-cells[ring-1]-1)
+		x, y := reMap(ring, n-rings[ring-1]-1)
 		fmt.Fprintln(out, x, y)
 	}
 }
