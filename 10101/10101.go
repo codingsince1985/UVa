@@ -84,5 +84,4 @@ func main() {
 		}
 		fmt.Fprintf(out, "% 4d: %s\n", kase, strings.Join(tokens, " "))
 	}
-
 }
