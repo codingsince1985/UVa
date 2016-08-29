@@ -8,19 +8,19 @@ import (
 )
 
 var (
-	rings      []int
 	directions = [][2]int{{-1, 1}, {-1, 0}, {0, -1}, {1, -1}, {1, 0}, {0, 1}}
+	rings      = func() []int {
+		var rings []int
+		rings = append(rings, 0)
+		i, step := 1, 6
+		for i < 100000 {
+			rings = append(rings, i)
+			i += step
+			step += 6
+		}
+		return rings
+	}()
 )
-
-func initialize() {
-	rings = append(rings, 0)
-	i, step := 1, 6
-	for i < 100000 {
-		rings = append(rings, i)
-		i += step
-		step += 6
-	}
-}
 
 func binarySearch(n int) int {
 	l, r := 0, len(rings)-1
@@ -61,7 +61,6 @@ func main() {
 	out, _ := os.Create("10182.out")
 	defer out.Close()
 
-	initialize()
 	var n int
 	for {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
