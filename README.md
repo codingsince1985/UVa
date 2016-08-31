@@ -229,6 +229,7 @@ UVa 10168 - Summation of Four Primes
 UVa 10182 - Bee Maja
 UVa 10183 - How Many Fibs?
 UVa 10189 - Minesweeper
+UVa 10190 - Divide, But Not Quite Conquer!
 UVa 10191 - Longest Nap
 UVa 10192 - Vacation
 UVa 10193 - All You Need Is Love
