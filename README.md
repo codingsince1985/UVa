@@ -166,6 +166,7 @@ UVa 727 - Equation
 UVa 729 - The Hamming Distance Problem
 UVa 740 - Baudot Data Communication Code
 UVa 750 - 8 Queens Chess Problem
+UVa 755 - 487--3279
 UVa 762 - We Ship Cheap
 UVa 816 - Abbott's Revenge
 UVa 834 - Continued Fractions
