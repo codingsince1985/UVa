@@ -20,6 +20,7 @@ UVa 119 - Greedy Gift Givers
 UVa 120 - Stacks of Flapjacks
 UVa 121 - Pipe Fitters
 UVa 122 - Trees on the level
+UVa 123 - Searching Quickly
 UVa 128 - Software CRC
 UVa 130 - Roman Roulette
 UVa 133 - The Dole Queue
