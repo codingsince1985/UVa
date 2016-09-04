@@ -257,6 +257,7 @@ UVa 10276 - Hanoi Tower Troubles Again!
 UVa 10282 - Babelfish
 UVa 10286 - Trouble with a Pentagon
 UVa 10295 - Hay Points
+UVa 10297 - Beavergnaw
 UVa 10300 - Ecological Premium
 UVa 10302 - Summation of Polynomials
 UVa 10303 - How Many Trees?
