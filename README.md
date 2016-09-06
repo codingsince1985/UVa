@@ -299,6 +299,7 @@ UVa 10591 - Happy Number
 UVa 10608 - Friends
 UVa 10696 - f91
 UVa 10699 - Count the factors
+UVa 10700 - Camel trading
 UVa 10783 - Odd Sum
 UVa 10789 - Prime Frequency
 UVa 10812 - Beat the Spread!
