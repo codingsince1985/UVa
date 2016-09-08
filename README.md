@@ -30,6 +30,7 @@ UVa 144 - Student Grants
 UVa 146 - ID Codes
 UVa 147 - Dollars
 UVa 151 - Power Crisis
+UVa 153 - Permalex
 UVa 154 - Recycling
 UVa 155 - All Squares
 UVa 156 - Ananagrams
