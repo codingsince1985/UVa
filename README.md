@@ -153,6 +153,7 @@ UVa 621 - Secret Research
 UVa 623 - 500!
 UVa 624 - CD
 UVa 636 - Squares (III)
+UVa 637 - Booklet Printing
 UVa 639 - Don't Get Rooked
 UVa 640 - Self Numbers
 UVa 642 - Word Amalgamation

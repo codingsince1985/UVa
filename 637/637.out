@@ -1,0 +1,14 @@
+Printing order for 1 pages:
+Sheet 1, front: Blank, 1
+Printing order for 14 pages:
+Sheet 1, front: Blank, 1
+Sheet 1, back : 2, Blank
+Sheet 2, front: 14, 3
+Sheet 2, back : 4, 13
+Sheet 3, front: 12, 5
+Sheet 3, back : 6, 11
+Sheet 4, front: 10, 7
+Sheet 4, back : 8, 9
+Printing order for 4 pages:
+Sheet 1, front: 4, 1
+Sheet 1, back : 2, 3
