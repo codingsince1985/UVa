@@ -322,6 +322,7 @@ UVa 11044 - Searching for Nessy
 UVa 11150 - Cola
 UVa 11172 - Relational Operator
 UVa 11185 - Ternary
+UVa 11192 - Group Reverse
 UVa 11332 - Summing Digits
 UVa 11417 - GCD
 UVa 11461 - Square Numbers
