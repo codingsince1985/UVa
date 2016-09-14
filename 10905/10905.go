@@ -15,16 +15,14 @@ here:
 	for found := true; found; {
 		found = false
 		for i := 0; i < len(nums)-1; i++ {
-			for j := 1; j < len(nums); j++ {
-				oldNum.SetString(strings.Join(nums, ""), 10)
-				nums[i], nums[j] = nums[j], nums[i]
-				newNum.SetString(strings.Join(nums, ""), 10)
-				if newNum.Cmp(&oldNum) > 0 {
-					found = true
-					continue here
-				}
-				nums[i], nums[j] = nums[j], nums[i]
+			oldNum.SetString(strings.Join(nums, ""), 10)
+			nums[i], nums[i+1] = nums[i+1], nums[i]
+			newNum.SetString(strings.Join(nums, ""), 10)
+			if newNum.Cmp(&oldNum) > 0 {
+				found = true
+				continue here
 			}
+			nums[i], nums[i+1] = nums[i+1], nums[i]
 		}
 	}
 	return strings.Join(nums, "")
