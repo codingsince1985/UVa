@@ -310,6 +310,7 @@ UVa 10789 - Prime Frequency
 UVa 10812 - Beat the Spread!
 UVa 10815 - Andy's First Dictionary
 UVa 10878 - Decode the tape
+UVa 10905 - Children's Game
 UVa 10921 - Find the Telephone
 UVa 10924 - Prime Words
 UVa 10929 - You can say 11
