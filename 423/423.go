@@ -11,18 +11,13 @@ import (
 
 var n int
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func floydWarshall(matrix [][]int) {
 	for k := 0; k < n; k++ {
 		for i := 0; i < n; i++ {
 			for j := 0; j < n; j++ {
-				matrix[i][j] = min(matrix[i][j], matrix[i][k]+matrix[k][j])
+				if matrix[i][k]+matrix[k][j] < matrix[i][j] {
+					matrix[i][j] = matrix[i][k] + matrix[k][j]
+				}
 			}
 		}
 	}
