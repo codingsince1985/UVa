@@ -197,6 +197,7 @@ UVa 10019 - Funny Encryption Method
 UVa 10020 - Minimal coverage
 UVa 10023 - Square root
 UVa 10026 - Shoemaker's Problem
+UVa 10032 - Tug of War
 UVa 10033 - Interpreter
 UVa 10034 - Freckles
 UVa 10035 - Primary Arithmetic
