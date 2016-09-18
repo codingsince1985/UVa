@@ -113,6 +113,7 @@ UVa 482 - Permutation Arrays
 UVa 483 - Word Scramble
 UVa 484 - The Department of Redundancy Department
 UVa 485 - Pascal's Triangle of Death
+UVa 486 - English-Number Translator
 UVa 488 - Triangle Wave
 UVa 489 - Hangman Judge
 UVa 490 - Rotating Sentences
