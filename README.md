@@ -307,6 +307,7 @@ UVa 10550 - Combination Lock
 UVa 10579 - Fibonacci Numbers
 UVa 10591 - Happy Number
 UVa 10608 - Friends
+UVa 10611 - The Playboy Chimp
 UVa 10696 - f91
 UVa 10699 - Count the factors
 UVa 10700 - Camel trading
