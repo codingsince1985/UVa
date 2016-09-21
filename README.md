@@ -46,6 +46,7 @@ UVa 200 - Rare Order
 UVa 202 - Repeating Decimals
 UVa 216 - Getting in Line
 UVa 231 - Testing the CATCHER
+UVa 253 - Cube painting
 UVa 256 - Quirksome Squares
 UVa 264 - Count on Cantor
 UVa 271 - Simply Syntax
