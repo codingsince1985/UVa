@@ -155,6 +155,7 @@ UVa 587 - There's treasure everywhere!
 UVa 591 - Box of Bricks
 UVa 594 - One Little, Two Little, Three Little Endians
 UVa 612 - DNA Sorting
+UVa 615 - Is It A Tree?
 UVa 621 - Secret Research
 UVa 623 - 500!
 UVa 624 - CD
