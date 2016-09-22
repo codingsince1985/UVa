@@ -7,9 +7,9 @@ import (
 	"os"
 )
 
-func find(x int, f []int) int {
+func unionFind(x int, f []int) int {
 	if f[x] != x {
-		f[x] = find(f[x], f)
+		f[x] = unionFind(f[x], f)
 	}
 	return f[x]
 }
@@ -18,7 +18,7 @@ func max(f []int) int {
 	var m int
 	rootMap := make(map[int]int)
 	for i := range f {
-		root := find(i, f)
+		root := unionFind(i, f)
 		rootMap[root]++
 		if rootMap[root] > m {
 			m = rootMap[root]
@@ -45,7 +45,7 @@ func main() {
 		for m > 0 {
 			m--
 			fmt.Fscanf(in, "%d%d", &m1, &m2)
-			f1, f2 := find(m1, f), find(m2, f)
+			f1, f2 := unionFind(m1, f), unionFind(m2, f)
 			if f1 != f2 {
 				f[f1] = f2
 			}

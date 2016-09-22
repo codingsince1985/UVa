@@ -9,9 +9,9 @@ import (
 	"strconv"
 )
 
-func find(x int, f []int) int {
+func unionFind(x int, f []int) int {
 	if f[x] != x {
-		f[x] = find(f[x], f)
+		f[x] = unionFind(f[x], f)
 	}
 	return f[x]
 }
@@ -47,7 +47,7 @@ func main() {
 				break
 			}
 			a, b := line[0]-'A', line[1]-'A'
-			fa, fb := find(int(a), f), find(int(b), f)
+			fa, fb := unionFind(int(a), f), unionFind(int(b), f)
 			if fa != fb {
 				num--
 				f[fa] = fb
