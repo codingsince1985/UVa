@@ -63,10 +63,7 @@ func isTree(edges []edge) bool {
 			return false
 		}
 	}
-	if len(nodeMap) != len(pointingTo)+1 {
-		return false
-	}
-	return true
+	return len(nodeMap) == len(pointingTo)+1
 }
 
 func main() {
@@ -88,7 +85,8 @@ here:
 			line := s.Text()
 			if line == "" {
 				continue
-			} else if line[0] == '-' {
+			}
+			if line[0] == '-' {
 				break here
 			}
 			r := strings.NewReader(line)
