@@ -140,6 +140,7 @@ UVa 539 - The Settlers of Catan
 UVa 541 - Error Correction
 UVa 543 - Goldbach's Conjecture
 UVa 544 - Heavy Cargo
+UVa 555 - Bridge Hands
 UVa 558 - Wormholes
 UVa 562 - Dividing coins
 UVa 567 - Risk
