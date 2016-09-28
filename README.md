@@ -334,6 +334,7 @@ UVa 10970 - Big Chocolate
 UVa 10922 - 2 the 9s
 UVa 11000 - Bee
 UVa 11044 - Searching for Nessy
+UVa 11059 - Maximum Product
 UVa 11150 - Cola
 UVa 11172 - Relational Operator
 UVa 11185 - Ternary
