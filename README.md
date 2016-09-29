@@ -171,6 +171,7 @@ UVa 674 - Coin Change
 UVa 679 - Dropping Balls
 UVa 686 - Goldbach's Conjecture (II)
 UVa 694 - The Collatz Sequence
+UVa 701 - The Archeologists' Dilemma
 UVa 706 - LC-Display
 UVa 713 - Adding Reversed Numbers
 UVa 725 - Division
