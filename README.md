@@ -223,6 +223,7 @@ UVa 10067 - Playing with Wheels
 UVa 10070 - Leap Year or Not Leap Year and ...
 UVa 10071 - Back to High School Physics
 UVa 10074 - Take the Land
+UVa 10077 - The Stern-Brocot Number System
 UVa 10079 - Pizza Cutting
 UVa 10082 - WERTYU
 UVa 10098 - Generating Fast
