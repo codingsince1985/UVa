@@ -209,6 +209,7 @@ UVa 10032 - Tug of War
 UVa 10033 - Interpreter
 UVa 10034 - Freckles
 UVa 10035 - Primary Arithmetic
+UVa 10037 - Bridge
 UVa 10038 - Jolly Jumpers
 UVa 10041 - Vito's Family
 UVa 10042 - Smith Numbers
