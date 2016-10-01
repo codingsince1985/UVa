@@ -5,6 +5,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 var codeMap = map[byte]string{
@@ -33,8 +34,8 @@ func encode(name string) string {
 			break
 		}
 	}
-	for len(soundex) < 4 {
-		soundex += "0"
+	if len(soundex) < 4 {
+		soundex += strings.Repeat("0", 4-len(soundex))
 	}
 	return soundex
 }
@@ -53,8 +54,8 @@ func main() {
 			break
 		}
 		encoded := encode(name)
-		for len(name) < 25 {
-			name += " "
+		if len(name) < 25 {
+			name += strings.Repeat(" ", 25-len(name))
 		}
 		fmt.Fprintf(out, "         %s%s\n", name, encoded)
 	}
