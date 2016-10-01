@@ -16,18 +16,19 @@ func (n1 node) equals(n2 node) bool { return n1.m == n2.m && n1.n == n2.n }
 func binarySearch(n node) string {
 	var path []byte
 	l, r := node{0, 1}, node{1, 0}
-	m := node{l.m + r.m, l.n + r.n}
-	for !m.equals(n) {
-		if n.lessThan(m) {
+	for {
+		m := node{l.m + r.m, l.n + r.n}
+		switch {
+		case m.equals(n):
+			return string(path)
+		case n.lessThan(m):
 			path = append(path, 'L')
 			r = m
-		} else {
+		default:
 			path = append(path, 'R')
 			l = m
 		}
-		m = node{l.m + r.m, l.n + r.n}
 	}
-	return string(path)
 }
 
 func main() {
