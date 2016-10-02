@@ -57,6 +57,7 @@ UVa 294 - Divisors
 UVa 299 - Train Swapping
 UVa 300 - Maya Calendar
 UVa 305 - Joseph
+UVa 311 - Packets
 UVa 315 - Network
 UVa 320 - Border
 UVa 324 - Factorial Frequencies
