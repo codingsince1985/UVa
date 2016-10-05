@@ -60,7 +60,7 @@ func main() {
 	for s.Scan() {
 		line := s.Text()
 		number := calculate1M(strings.Replace(line, "negative", " ", 1))
-		if strings.Index(line, "negative") == 0 {
+		if strings.HasPrefix(line, "negative") {
 			number *= -1
 		}
 		fmt.Fprintln(out, number)

@@ -20,7 +20,7 @@ func main() {
 		if fmt.Fscanf(in, "%s", &num); num[0] == '-' {
 			break
 		}
-		if strings.Index(num, "0x") == 0 {
+		if strings.HasPrefix(num, "0x") {
 			dec, _ := strconv.ParseInt(num[2:], 16, 32)
 			fmt.Fprintln(out, dec)
 		} else {

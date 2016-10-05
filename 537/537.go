@@ -74,7 +74,7 @@ func main() {
 		var tokens [2]string
 		for {
 			fmt.Fscanf(r, "%s", &token)
-			if strings.Index(token, "=") != -1 {
+			if strings.Contains(token, "=") {
 				tokens[cnt] = token
 				cnt++
 				if cnt == 2 {
