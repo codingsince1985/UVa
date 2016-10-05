@@ -184,6 +184,7 @@ UVa 748 - Exponentiation
 UVa 750 - 8 Queens Chess Problem
 UVa 755 - 487--3279
 UVa 762 - We Ship Cheap
+UVa 793 - Network Connections
 UVa 816 - Abbott's Revenge
 UVa 834 - Continued Fractions
 UVa 836 - Largest Submatrix
