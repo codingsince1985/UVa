@@ -10,12 +10,13 @@ import (
 	"strings"
 )
 
-type contestant struct {
-	num, penalty, solved int
-	problem              map[int]bool
-}
-
-type contestants []contestant
+type (
+	contestant struct {
+		num, penalty, solved int
+		problem              map[int]bool
+	}
+	contestants []contestant
+)
 
 func (c contestants) Len() int { return len(c) }
 

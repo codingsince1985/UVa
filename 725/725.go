@@ -57,10 +57,14 @@ func main() {
 	out, _ := os.Create("725.out")
 	defer out.Close()
 
-	var n int
+	var n, kase int
 	for {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
+		}
+		kase++
+		if kase > 1 {
+			fmt.Fprintln(out)
 		}
 		ans := solve(n)
 		if len(ans) == 0 {
@@ -70,6 +74,5 @@ func main() {
 				fmt.Fprintf(out, "%d / %05d = %d\n", v[0], v[1], n)
 			}
 		}
-		fmt.Fprintln(out)
 	}
 }

@@ -8,6 +8,8 @@ import (
 	"sort"
 )
 
+var out *os.File
+
 type lines [][2]int
 
 func (l lines) Len() int { return len(l) }
@@ -46,23 +48,22 @@ func solve(l, r int, ls [][2]int) [][2]int {
 	return ret
 }
 
-func output(out *os.File, r [][2]int) {
+func output(r [][2]int) {
 	fmt.Fprintln(out, len(r))
 	for _, v := range r {
 		fmt.Fprintln(out, v[0], v[1])
 	}
-	fmt.Fprintln(out)
 }
 
 func main() {
 	in, _ := os.Open("10020.in")
 	defer in.Close()
-	out, _ := os.Create("10020.out")
+	out, _ = os.Create("10020.out")
 	defer out.Close()
 
-	var n int
-	fmt.Fscanf(in, "%d\n", &n)
-	for i := 0; i < n; i++ {
+	var kase int
+	fmt.Fscanf(in, "%d\n", &kase)
+	for kase > 0 {
 		var m int
 		fmt.Fscanf(in, "\n%d", &m)
 		var ls lines
@@ -74,6 +75,10 @@ func main() {
 			ls = append(ls, l)
 		}
 		sort.Sort(ls)
-		output(out, solve(0, m, ls))
+		output(solve(0, m, ls))
+		kase--
+		if kase > 0 {
+			fmt.Fprintln(out)
+		}
 	}
 }

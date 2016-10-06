@@ -38,12 +38,12 @@ func main() {
 	out, _ := os.Create("469.out")
 	defer out.Close()
 
-	var n, x, y int
+	var kase, x, y int
 	var line string
 	var grid [][]byte
 	var visited [][]bool
-	fmt.Fscanf(in, "%d", &n)
-	for i := 0; i < n; i++ {
+	fmt.Fscanf(in, "%d", &kase)
+	for kase > 0 {
 		fmt.Fscanln(in)
 		grid = nil
 		for {
@@ -66,6 +66,9 @@ func main() {
 				break
 			}
 		}
-		fmt.Fprintln(out)
+		kase--
+		if kase > 0 {
+			fmt.Fprintln(out)
+		}
 	}
 }

@@ -35,10 +35,10 @@ func main() {
 	out, _ := os.Create("612.out")
 	defer out.Close()
 
-	var N, n, m int
+	var kase, n, m int
 	var s dna
-	fmt.Fscanf(in, "%d", &N)
-	for i := 0; i < N; i++ {
+	fmt.Fscanf(in, "%d", &kase)
+	for kase > 0 {
 		fmt.Fscanf(in, "\n%d%d", &n, &m)
 		s = make([]string, m)
 		for j := range s {
@@ -48,6 +48,9 @@ func main() {
 		for _, v := range s {
 			fmt.Fprintln(out, v)
 		}
-		fmt.Fprintln(out)
+		kase--
+		if kase > 0 {
+			fmt.Fprintln(out)
+		}
 	}
 }

@@ -7,6 +7,8 @@ import (
 	"os"
 )
 
+var out *os.File
+
 func min(a, b int) int {
 	if a < b {
 		return a
@@ -104,7 +106,7 @@ func nonMove(e []string) int {
 	return count
 }
 
-func output(out *os.File, e []string, s1, s2 string) {
+func output(e []string, s1, s2 string) {
 	fmt.Fprintln(out, nonMove(e))
 	count := 0
 	p, p1, p2 := 1, 0, 0
@@ -131,22 +133,27 @@ func output(out *os.File, e []string, s1, s2 string) {
 			p1++
 		}
 	}
-	fmt.Fprintln(out)
 }
 
 func main() {
 	in, _ := os.Open("526.in")
 	defer in.Close()
-	out, _ := os.Create("526.out")
+	out, _ = os.Create("526.out")
 	defer out.Close()
 
 	var s1, s2 string
+	first := true
 	for {
 		if _, err := fmt.Fscanf(in, "%s", &s1); err != nil {
 			break
 		}
 		fmt.Fscanf(in, "%s", &s2)
 		e := trace(edit(s1, s2))
-		output(out, e, s1, s2)
+		if first {
+			first = false
+		} else {
+			fmt.Fprintln(out)
+		}
+		output(e, s1, s2)
 	}
 }

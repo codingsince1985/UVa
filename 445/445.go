@@ -10,6 +10,8 @@ import (
 	"strings"
 )
 
+var out *os.File
+
 func nextLine(s *bufio.Scanner) (string, bool) {
 	if ok := s.Scan(); ok {
 		return s.Text(), true
@@ -17,7 +19,7 @@ func nextLine(s *bufio.Scanner) (string, bool) {
 	return "", false
 }
 
-func outputLine(out *os.File, line string) {
+func outputLine(line string) {
 	cnt := 0
 	for _, v := range []byte(line) {
 		if v == 'b' {
@@ -37,20 +39,19 @@ func outputLine(out *os.File, line string) {
 	fmt.Fprintln(out)
 }
 
-func solve(out *os.File, maze string) {
+func solve(maze string) {
 	if maze[len(maze)-1] == '!' {
 		maze = maze[:len(maze)-1]
 	}
 	for _, v := range strings.Split(maze, "!") {
-		outputLine(out, v)
+		outputLine(v)
 	}
-	fmt.Fprintln(out)
 }
 
 func main() {
 	in, _ := os.Open("445.in")
 	defer in.Close()
-	out, _ := os.Create("445.out")
+	out, _ = os.Create("445.out")
 	defer out.Close()
 
 	s := bufio.NewScanner(in)
@@ -58,12 +59,18 @@ func main() {
 
 	var line, maze string
 	var ok bool
+	first := true
 	for {
 		if line, ok = nextLine(s); !ok {
 			line = ""
 		}
 		if line == "" {
-			solve(out, maze)
+			if first {
+				first = false
+			} else {
+				fmt.Fprintln(out)
+			}
+			solve(maze)
 			if !ok {
 				break
 			}

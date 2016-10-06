@@ -57,5 +57,4 @@ func main() {
 		}
 		fmt.Fprintln(out)
 	}
-
 }

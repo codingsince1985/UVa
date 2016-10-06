@@ -11,7 +11,10 @@ type sides struct {
 	front, back, left, right, top, bottom int
 }
 
-var side = []string{"front", "back", "left", "right", "top", "bottom"}
+var (
+	side = []string{"front", "back", "left", "right", "top", "bottom"}
+	out  *os.File
+)
 
 func getBottomColor(t int, c sides) int {
 	switch t {
@@ -81,7 +84,7 @@ func solve(c []sides) ([][6][2]int, int, [2]int) {
 	return pre, mx, st
 }
 
-func output(out *os.File, pre [][6][2]int, mx int, st [2]int) {
+func output(pre [][6][2]int, mx int, st [2]int) {
 	var res [][2]int
 	res = append(res, st)
 	for i := 0; i < mx-1; i++ {
@@ -91,16 +94,15 @@ func output(out *os.File, pre [][6][2]int, mx int, st [2]int) {
 	for i := len(res) - 1; i >= 0; i-- {
 		fmt.Fprintln(out, res[i][0]+1, side[res[i][1]])
 	}
-	fmt.Fprintln(out)
 }
 
 func main() {
 	in, _ := os.Open("10051.in")
 	defer in.Close()
-	out, _ := os.Create("10051.out")
+	out, _ = os.Create("10051.out")
 	defer out.Close()
 
-	var n, s1, s2, s3, s4, s5, s6 int
+	var n, s1, s2, s3, s4, s5, s6, kase int
 	var c []sides
 	count := 0
 	for {
@@ -114,8 +116,12 @@ func main() {
 			c[i] = cube
 		}
 		pre, mx, st := solve(c)
+		kase++
+		if kase > 1 {
+			fmt.Fprintln(out)
+		}
 		count++
 		fmt.Fprintf(out, "Case #%d\n%d\n", count, mx)
-		output(out, pre, mx, st)
+		output(pre, mx, st)
 	}
 }
