@@ -85,6 +85,7 @@ UVa 406 - Prime Cuts
 UVa 408 - Uniform Generator
 UVa 409 - Excuses, Excuses!
 UVa 412 - Pi
+UVa 413 - Up and Down Sequences
 UVa 414 - Machined Surfaces
 UVa 417 - Word Index
 UVa 422 - Word-Search Wonder
