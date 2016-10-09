@@ -317,6 +317,7 @@ UVa 10519 - !! Really Strange !!
 UVa 10530 - Guessing Game
 UVa 10533 - Digit Primes
 UVa 10550 - Combination Lock
+UVa 10573 - Geometry Paradox
 UVa 10579 - Fibonacci Numbers
 UVa 10591 - Happy Number
 UVa 10608 - Friends
