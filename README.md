@@ -300,6 +300,7 @@ UVa 10361 - Automatic Poetry
 UVa 10370 - Above Average
 UVa 10394 - Twin Primes
 UVa 10405 - Longest Common Subsequence
+UVa 10407 - Simple division
 UVa 10409 - Die Game
 UVa 10420 - List of Conquests
 UVa 10424 - Love Calculator
