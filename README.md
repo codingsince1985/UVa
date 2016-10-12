@@ -264,6 +264,7 @@ UVa 10195 - The Knights Of The Round Table
 UVa 10196 - Check The Check
 UVa 10198 - Counting
 UVa 10200 - Prime Time
+UVa 10205 - Stack 'em Up
 UVa 10209 - Is This Integration ?
 UVa 10219 - Find the ways !
 UVa 10220 - I Love Big Numbers !
