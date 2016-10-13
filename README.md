@@ -252,6 +252,7 @@ UVa 10142 - Australian Voting
 UVa 10152 - ShellSort
 UVa 10161 - Ant on a Chessboard
 UVa 10168 - Summation of Four Primes
+UVa 10170 - The Hotel with Infinite Rooms
 UVa 10182 - Bee Maja
 UVa 10183 - How Many Fibs?
 UVa 10189 - Minesweeper
