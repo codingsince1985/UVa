@@ -13,6 +13,7 @@ UVa 108 - Maximum Sum
 UVa 111 - History Grading
 UVa 112 - Tree Summing
 UVa 113 - Power of Cryptography
+UVa 114 - Simulation Wizardry
 UVa 116 - Unidirectional TSP
 UVa 117 - The Postal Worker Rings Once
 UVa 118 - Mutant Flatworld Explorers
