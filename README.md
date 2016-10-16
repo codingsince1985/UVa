@@ -320,6 +320,7 @@ UVa 10499 - The Land of Justice
 UVa 10509 - R U Kidding Mr. Feynman?
 UVa 10515 - Powers Et Al.
 UVa 10519 - !! Really Strange !!
+UVa 10523 - Very Easy !!!
 UVa 10530 - Guessing Game
 UVa 10533 - Digit Primes
 UVa 10550 - Combination Lock
