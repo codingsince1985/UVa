@@ -276,6 +276,7 @@ UVa 10222 - Decode the Mad man
 UVa 10223 - How many nodes ?
 UVa 10229 - Modular Fibonacci
 UVa 10235 - Simply Emirp
+UVa 10242 - Fourth Point !!
 UVa 10245 - The Closest Pair Problem
 UVa 10252 - Common Permutation
 UVa 10258 - Contest Scoreboard
