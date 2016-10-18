@@ -45,6 +45,7 @@ UVa 191 - Intersection
 UVa 193 - Graph Coloring
 UVa 195 - Anagram
 UVa 200 - Rare Order
+UVa 201 - Squares
 UVa 202 - Repeating Decimals
 UVa 216 - Getting in Line
 UVa 231 - Testing the CATCHER
