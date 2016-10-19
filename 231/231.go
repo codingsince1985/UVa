@@ -48,8 +48,11 @@ func main() {
 			count++
 		}
 		if tmp == -1 {
+			if count > 1 {
+				fmt.Fprintln(out)
+			}
 			fmt.Fprintf(out, "Test #%d:\n", count)
-			fmt.Fprintf(out, "  maximum possible interceptions: %d\n\n", lds(h))
+			fmt.Fprintf(out, "  maximum possible interceptions: %d\n", lds(h))
 			first = true
 		}
 		h = append(h, tmp)
