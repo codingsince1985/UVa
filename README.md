@@ -300,6 +300,7 @@ UVa 10334 - Ray Through Glasses
 UVa 10336 - Rank the Languages
 UVa 10338 - Mischievous Children
 UVa 10340 - All in All
+UVa 10341 - Solve It
 UVa 10346 - Peter's Smokes
 UVa 10360 - Rat Attack
 UVa 10361 - Automatic Poetry
