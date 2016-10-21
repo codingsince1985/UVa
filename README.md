@@ -74,6 +74,7 @@ UVa 348 - Optimal Array Multiplication Sequence
 UVa 350 - Pseudo-Random Numbers
 UVa 352 - The Seasonal War
 UVa 355 - The Bases Are Loaded
+UVa 356 - Square Pegs And Round Holes
 UVa 357 - Let Me Count The Ways
 UVa 369 - Combinations
 UVa 371 - Ackermann Functions
