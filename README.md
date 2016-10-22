@@ -65,6 +65,7 @@ UVa 311 - Packets
 UVa 315 - Network
 UVa 320 - Border
 UVa 324 - Factorial Frequencies
+UVa 326 - Extrapolation Using a Difference Table
 UVa 333 - Recognizing Good ISBNs
 UVa 336 - A Node Too Far
 UVa 340 - Master-Mind Hints
