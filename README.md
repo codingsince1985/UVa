@@ -353,6 +353,7 @@ UVa 10921 - Find the Telephone
 UVa 10924 - Prime Words
 UVa 10929 - You can say 11
 UVa 10931 - Parity
+UVa 10935 - Throwing cards away I
 UVa 10945 - Mother bear
 UVa 10954 - Add All
 UVa 10970 - Big Chocolate
