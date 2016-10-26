@@ -62,5 +62,4 @@ func main() {
 			cards = nil
 		}
 	}
-
 }
