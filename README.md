@@ -310,6 +310,7 @@ UVa 10338 - [Mischievous Children](https://uva.onlinejudge.org/external/103/1033
 UVa 10340 - [All in All](https://uva.onlinejudge.org/external/103/10340.pdf)  
 UVa 10341 - [Solve It](https://uva.onlinejudge.org/external/103/10341.pdf)  
 UVa 10346 - [Peter's Smokes](https://uva.onlinejudge.org/external/103/10346.pdf)  
+UVa 10347 - [Medians](https://uva.onlinejudge.org/external/103/10347.pdf)  
 UVa 10360 - [Rat Attack](https://uva.onlinejudge.org/external/103/10360.pdf)  
 UVa 10361 - [Automatic Poetry](https://uva.onlinejudge.org/external/103/10361.pdf)  
 UVa 10370 - [Above Average](https://uva.onlinejudge.org/external/103/10370.pdf)  
