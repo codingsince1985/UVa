@@ -1,0 +1,79 @@
+// UVa 820 - Internet Bandwidth
+
+package main
+
+import (
+	"fmt"
+	"math"
+	"os"
+)
+
+var n int
+
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
+}
+
+func edmondsKarp(s, t int, matrix [][]int) (bw int) {
+	parent := make([]int, n+1)
+	flow := make([][]int, n+1)
+	for i := range flow {
+		flow[i] = make([]int, n+1)
+	}
+	for {
+		capacity := make([]int, n+1)
+		var queue []int
+		queue = append(queue, s)
+		capacity[s] = math.MaxInt32
+		for len(queue) > 0 && capacity[t] == 0 {
+			curr := queue[0]
+			queue = queue[1:]
+			for i := 1; i <= n; i++ {
+				if capacity[i] == 0 && matrix[curr][i] > flow[curr][i] {
+					queue = append(queue, i)
+					parent[i] = curr
+					capacity[i] = min(capacity[curr], matrix[curr][i]-flow[curr][i])
+				}
+			}
+		}
+		if capacity[t] == 0 {
+			break
+		}
+		for curr := t; curr != s; curr = parent[curr] {
+			flow[parent[curr]][curr] += capacity[t]
+			flow[curr][parent[curr]] -= capacity[t]
+		}
+		bw += capacity[t]
+	}
+	return bw
+}
+
+func main() {
+	in, _ := os.Open("820.in")
+	defer in.Close()
+	out, _ := os.Create("820.out")
+	defer out.Close()
+
+	var s, t, c, n1, n2, bw, kase int
+	for {
+		if fmt.Fscanf(in, "%d", &n); n == 0 {
+			break
+		}
+		fmt.Fscanf(in, "%d%d%d", &s, &t, &c)
+		matrix := make([][]int, n+1)
+		for i := range matrix {
+			matrix[i] = make([]int, n+1)
+		}
+		for i := 0; i < c; i++ {
+			fmt.Fscanf(in, "%d%d%d", &n1, &n2, &bw)
+			matrix[n1][n2] += bw
+			matrix[n2][n1] = matrix[n1][n2]
+		}
+		kase++
+		fmt.Fprintf(out, "Network %d\n", kase)
+		fmt.Fprintf(out, "The bandwidth is %d.\n\n", edmondsKarp(s, t, matrix))
+	}
+}

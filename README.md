@@ -1,4 +1,4 @@
-UVa Online Judge solutions in Google Go
+UVa Online Judge solutions in Golang
 ==
 
 UVa 100 - [The 3n + 1 problem](https://uva.onlinejudge.org/external/1/100.pdf)  
@@ -197,6 +197,7 @@ UVa 755 - [487--3279](https://uva.onlinejudge.org/external/7/755.pdf)
 UVa 762 - [We Ship Cheap](https://uva.onlinejudge.org/external/7/762.pdf)  
 UVa 793 - [Network Connections](https://uva.onlinejudge.org/external/7/793.pdf)  
 UVa 816 - [Abbott's Revenge](https://uva.onlinejudge.org/external/8/816.pdf)  
+UVa 820 - [Internet Bandwidth](https://uva.onlinejudge.org/external/8/820.pdf)  
 UVa 834 - [Continued Fractions](https://uva.onlinejudge.org/external/8/834.pdf)  
 UVa 836 - [Largest Submatrix](https://uva.onlinejudge.org/external/8/836.pdf)  
 UVa 846 - [Steps](https://uva.onlinejudge.org/external/8/846.pdf)  
