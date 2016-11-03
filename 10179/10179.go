@@ -10,14 +10,19 @@ import (
 const MAX = 31622
 
 var primes = func() []int {
-	var ps []int
 	p := make([]bool, MAX+1)
+	p[0], p[1] = true, true
 	for i := 2; i*i <= MAX; i++ {
 		if !p[i] {
-			ps = append(ps, i)
 			for j := 2 * i; j <= MAX; j += i {
 				p[j] = true
 			}
+		}
+	}
+	var ps []int
+	for i, vi := range p {
+		if !vi {
+			ps = append(ps, i)
 		}
 	}
 	return ps
