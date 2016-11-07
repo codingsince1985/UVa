@@ -10,7 +10,7 @@ import (
 func solve(nums []int64) int64 {
 	var max int64
 	for i := range nums {
-		var product int64 = 1
+		product := int64(1)
 		for j := i; j < len(nums); j++ {
 			product *= nums[j]
 			if product > max {

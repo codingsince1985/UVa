@@ -11,7 +11,7 @@ import (
 )
 
 func multiply(toMul []string) int64 {
-	var product int64 = 1
+	product := int64(1)
 	for _, v := range toMul {
 		token, _ := strconv.ParseInt(v, 10, 64)
 		product *= token
