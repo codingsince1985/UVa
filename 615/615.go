@@ -37,7 +37,7 @@ func isTree(edges []edge) bool {
 	}
 
 	f := make([]int, maxNode+1)
-	for k, _ := range nodeMap {
+	for k := range nodeMap {
 		f[k] = k
 	}
 	for _, edge := range edges {
@@ -47,7 +47,7 @@ func isTree(edges []edge) bool {
 		}
 	}
 	count := 0
-	for k, _ := range nodeMap {
+	for k := range nodeMap {
 		if f[k] == k {
 			count++
 			if count > 1 {

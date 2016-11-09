@@ -18,7 +18,7 @@ func solve(city []map[byte]byte) int {
 		diff = 0
 		for j, vj := range city {
 			if i != j {
-				for k, _ := range vi {
+				for k := range vi {
 					if vi[k] != vj[k] {
 						diff++
 					}

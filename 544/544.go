@@ -17,9 +17,9 @@ func min(a, b int) int {
 func max(a, b int) int { return a + b - min(a, b) }
 
 func floydWarshall(matrix map[string]map[string]int, c1, c2 string) int {
-	for k, _ := range matrix {
-		for i, _ := range matrix {
-			for j, _ := range matrix {
+	for k := range matrix {
+		for i := range matrix {
+			for j := range matrix {
 				matrix[i][j] = max(matrix[i][j], min(matrix[i][k], matrix[k][j]))
 			}
 		}
