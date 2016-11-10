@@ -302,6 +302,7 @@ UVa 10285 - [Longest Run on a Snowboard](https://uva.onlinejudge.org/external/10
 UVa 10286 - [Trouble with a Pentagon](https://uva.onlinejudge.org/external/102/10286.pdf)  
 UVa 10295 - [Hay Points](https://uva.onlinejudge.org/external/102/10295.pdf)  
 UVa 10297 - [Beavergnaw](https://uva.onlinejudge.org/external/102/10297.pdf)  
+UVa 10298 - [Power Strings](https://uva.onlinejudge.org/external/102/10298.pdf)  
 UVa 10300 - [Ecological Premium](https://uva.onlinejudge.org/external/103/10300.pdf)  
 UVa 10302 - [Summation of Polynomials](https://uva.onlinejudge.org/external/103/10302.pdf)  
 UVa 10303 - [How Many Trees?](https://uva.onlinejudge.org/external/103/10303.pdf)  
