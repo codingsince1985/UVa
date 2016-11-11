@@ -237,6 +237,7 @@ UVa 10049 - [Self-describing Sequence](https://uva.onlinejudge.org/external/100/
 UVa 10050 - [Hartals](https://uva.onlinejudge.org/external/100/10050.pdf)  
 UVa 10051 - [Tower of Cubes](https://uva.onlinejudge.org/external/100/10051.pdf)  
 UVa 10055 - [Hashmat the Brave Warrior](https://uva.onlinejudge.org/external/100/10055.pdf)  
+UVa 10056 - [What is the Probability ?](https://uva.onlinejudge.org/external/100/10056.pdf)  
 UVa 10062 - [Tell me the frequencies!](https://uva.onlinejudge.org/external/100/10062.pdf)  
 UVa 10066 - [The Twin Towers](https://uva.onlinejudge.org/external/100/10066.pdf)  
 UVa 10067 - [Playing with Wheels](https://uva.onlinejudge.org/external/100/10067.pdf)  
