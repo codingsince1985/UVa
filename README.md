@@ -273,6 +273,7 @@ UVa 10170 - [The Hotel with Infinite Rooms](https://uva.onlinejudge.org/external
 UVa 10179 - [Irreducable Basic Fractions](https://uva.onlinejudge.org/external/101/10179.pdf)  
 UVa 10182 - [Bee Maja](https://uva.onlinejudge.org/external/101/10182.pdf)  
 UVa 10183 - [How Many Fibs?](https://uva.onlinejudge.org/external/101/10183.pdf)  
+UVa 10188 - [Automated Judge Script](https://uva.onlinejudge.org/external/101/10188.pdf)  
 UVa 10189 - [Minesweeper](https://uva.onlinejudge.org/external/101/10189.pdf)  
 UVa 10190 - [Divide, But Not Quite Conquer!](https://uva.onlinejudge.org/external/101/10190.pdf)  
 UVa 10191 - [Longest Nap](https://uva.onlinejudge.org/external/101/10191.pdf)  
