@@ -292,6 +292,7 @@ UVa 10220 - [I Love Big Numbers !](https://uva.onlinejudge.org/external/102/1022
 UVa 10221 - [Satellites](https://uva.onlinejudge.org/external/102/10221.pdf)  
 UVa 10222 - [Decode the Mad man](https://uva.onlinejudge.org/external/102/10222.pdf)  
 UVa 10223 - [How many nodes ?](https://uva.onlinejudge.org/external/102/10223.pdf)  
+UVa 10226 - [Hardwood Species](https://uva.onlinejudge.org/external/102/10226.pdf)  
 UVa 10229 - [Modular Fibonacci](https://uva.onlinejudge.org/external/102/10229.pdf)  
 UVa 10235 - [Simply Emirp](https://uva.onlinejudge.org/external/102/10235.pdf)  
 UVa 10242 - [Fourth Point !!](https://uva.onlinejudge.org/external/102/10242.pdf)  
