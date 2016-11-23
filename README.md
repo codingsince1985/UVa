@@ -332,6 +332,7 @@ UVa 10407 - [Simple division](https://uva.onlinejudge.org/external/104/10407.pdf
 UVa 10409 - [Die Game](https://uva.onlinejudge.org/external/104/10409.pdf)  
 UVa 10420 - [List of Conquests](https://uva.onlinejudge.org/external/104/10420.pdf)  
 UVa 10424 - [Love Calculator](https://uva.onlinejudge.org/external/104/10424.pdf)  
+UVa 10427 - [Naughty Sleepy Boys](https://uva.onlinejudge.org/external/104/10427.pdf)  
 UVa 10432 - [Polygon Inside A Circle](https://uva.onlinejudge.org/external/104/10432.pdf)  
 UVa 10440 - [Ferry Loading II](https://uva.onlinejudge.org/external/104/10440.pdf)  
 UVa 10443 - [Rock](https://uva.onlinejudge.org/external/104/10443.pdf)  
