@@ -30,8 +30,10 @@ func change(total int) int {
 
 func solve(level, sum, pay int) {
 	if level == 6 {
-		if sum > value {
-			pay += change(sum - value)
+		if sum >= value {
+			if sum > value {
+				pay += change(sum - value)
+			}
 			if pay < min {
 				min = pay
 			}
