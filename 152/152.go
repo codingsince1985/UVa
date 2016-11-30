@@ -26,7 +26,9 @@ func solve(points []point) [10]int {
 				}
 			}
 		}
-		dist[int(closest)]++
+		if closest < 10 {
+			dist[int(closest)]++
+		}
 	}
 	return dist
 }
