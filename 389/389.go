@@ -62,8 +62,7 @@ func main() {
 			break
 		}
 		bt := base10(number, b1)
-		num := baseN(bt, b2)
-		if len(num) > 7 {
+		if num := baseN(bt, b2); len(num) > 7 {
 			fmt.Fprintln(out, "  ERROR")
 		} else {
 			fmt.Fprintf(out, "%7s\n", num)

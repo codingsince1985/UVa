@@ -56,8 +56,7 @@ func main() {
 			cycles = append(cycles, cycle)
 		}
 		if cycle == 0 {
-			seconds := solve(cycles)
-			if seconds == 0 {
+			if seconds := solve(cycles); seconds == 0 {
 				fmt.Fprintln(out, "Signals fail to synchronise in 5 hours")
 			} else {
 				hours := seconds / 3600

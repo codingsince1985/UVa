@@ -33,8 +33,7 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%d%d%d", &m, &n, &t); err != nil {
 			break
 		}
-		dp, num := knapsack([]int{m, n}, t)
-		if dp == t {
+		if dp, num := knapsack([]int{m, n}, t); dp == t {
 			fmt.Fprintln(out, num)
 		} else {
 			fmt.Fprintln(out, num, t-dp)

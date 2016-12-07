@@ -18,8 +18,7 @@ func main() {
 		if fmt.Fscanf(in, "%d", &nm); nm == 0 {
 			break
 		}
-		n := (nm * 10) / 9
-		if nm%9 == 0 {
+		if n := (nm * 10) / 9; nm%9 == 0 {
 			fmt.Fprintln(out, n-1, n)
 		} else {
 			fmt.Fprintln(out, n)

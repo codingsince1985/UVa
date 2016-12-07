@@ -22,8 +22,7 @@ func main() {
 			continue
 		}
 		a := (s + d) / 2
-		b := s - a
-		if b >= 0 {
+		if b := s - a; b >= 0 {
 			fmt.Fprintln(out, a, b)
 		} else {
 			fmt.Fprintln(out, "impossible")

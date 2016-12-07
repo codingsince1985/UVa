@@ -102,8 +102,7 @@ func main() {
 			}
 			fmt.Fscanln(in)
 		}
-		minute := bfs(s, e)
-		if minute == -1 {
+		if minute := bfs(s, e); minute == -1 {
 			fmt.Fprintln(out, "Trapped!")
 		} else {
 			fmt.Fprintf(out, "Escaped in %d minute(s).\n", minute)

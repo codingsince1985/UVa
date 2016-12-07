@@ -40,8 +40,7 @@ func main() {
 		if fmt.Fscanf(in, "%s", &line); line == "0" {
 			break
 		}
-		degree := nineDegree(digitSum(line))
-		if degree == 0 {
+		if degree := nineDegree(digitSum(line)); degree == 0 {
 			fmt.Fprintf(out, "%s is not a multiple of 9.\n", line)
 		} else {
 			fmt.Fprintf(out, "%s is a multiple of 9 and has 9-degree %d.\n", line, degree)

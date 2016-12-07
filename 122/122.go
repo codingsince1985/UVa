@@ -77,8 +77,7 @@ func main() {
 			break
 		}
 		if len(token) == 2 {
-			head := buildTree(nodes)
-			if head == nil {
+			if head := buildTree(nodes); head == nil {
 				fmt.Fprintln(out, "not complete")
 			} else {
 				ans := bfs(head)

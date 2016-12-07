@@ -46,8 +46,7 @@ func main() {
 			fmt.Fscanf(in, "%s", &line)
 			grid[i] = []byte(line)
 		}
-		loop, cnt := move(grid, 0, p-1)
-		if loop == 0 {
+		if loop, cnt := move(grid, 0, p-1); loop == 0 {
 			fmt.Fprintf(out, "%d step(s) to exit\n", cnt)
 		} else {
 			fmt.Fprintf(out, "%d step(s) before a loop of %d step(s)\n", loop, cnt-loop)

@@ -71,8 +71,7 @@ func main() {
 	}
 
 	for _, number := range nums {
-		bt := base10(number.num, number.b1)
-		if bt == -1 {
+		if bt := base10(number.num, number.b1); bt == -1 {
 			fmt.Fprintf(out, "%s is an illegal base %d number\n", number.num, number.b1)
 		} else {
 			fmt.Fprintf(out, "%s base %d = %s base %d\n", number.num, number.b1, baseN(bt, number.b2), number.b2)

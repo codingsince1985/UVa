@@ -48,8 +48,7 @@ func main() {
 		for j := range s {
 			fmt.Fscanf(in, "%d", &s[j])
 		}
-		start, end, _ := maxsub(s)
-		if start == -1 {
+		if start, end, _ := maxsub(s); start == -1 {
 			fmt.Fprintf(out, "Route %d has no nice parts\n", i+1)
 		} else {
 			fmt.Fprintf(out, "The nicest part of route %d is between stops %d and %d\n", i+1, start+1, end+1)

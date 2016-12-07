@@ -36,8 +36,7 @@ func main() {
 		for i := range bets {
 			fmt.Fscanf(in, "%d", &bets[i])
 		}
-		max := maxSubArray(bets)
-		if max > 0 {
+		if max := maxSubArray(bets); max > 0 {
 			fmt.Fprintf(out, "The maximum winning streak is %d.\n", max)
 		} else {
 			fmt.Fprintln(out, "Losing streak.")

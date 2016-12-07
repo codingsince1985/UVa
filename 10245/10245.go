@@ -78,8 +78,7 @@ func main() {
 			p[i] = point{x, y}
 		}
 		sort.Sort(p)
-		dist := divide(p)
-		if dist >= 10000 {
+		if dist := divide(p); dist >= 10000 {
 			fmt.Fprintln(out, "INFINITY")
 		} else {
 			fmt.Fprintf(out, "%.4f\n", dist)

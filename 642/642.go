@@ -53,8 +53,7 @@ func main() {
 		if fmt.Fscanf(in, "%s", &word); word == "XXXXXX" {
 			break
 		}
-		matched := find(word, dict)
-		if len(matched) == 0 {
+		if matched := find(word, dict); len(matched) == 0 {
 			fmt.Fprintln(out, "NOT A VALID WORD")
 		} else {
 			fmt.Fprintln(out, strings.Join(matched, "\n"))

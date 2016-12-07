@@ -44,8 +44,7 @@ func main() {
 	scanner.Split(bufio.ScanLines)
 	for n > 0 {
 		scanner.Scan()
-		line = scanner.Text()
-		if valid(line) {
+		if line = scanner.Text(); valid(line) {
 			fmt.Fprintln(out, "Yes")
 		} else {
 			fmt.Fprintln(out, "No")

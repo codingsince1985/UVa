@@ -66,8 +66,7 @@ func main() {
 		if kase > 1 {
 			fmt.Fprintln(out)
 		}
-		ans := solve(n)
-		if len(ans) == 0 {
+		if ans := solve(n); len(ans) == 0 {
 			fmt.Fprintf(out, "There are no solutions for %d.\n", n)
 		} else {
 			for _, v := range ans {

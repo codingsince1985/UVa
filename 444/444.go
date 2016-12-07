@@ -43,8 +43,7 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 	for s.Scan() {
-		line := s.Text()
-		if line[0] >= '0' && line[0] <= '9' {
+		if line := s.Text(); line[0] >= '0' && line[0] <= '9' {
 			fmt.Fprintln(out, decode(line))
 		} else {
 			fmt.Fprintln(out, encode(line))

@@ -40,9 +40,7 @@ func main() {
 		if line = s.Text(); line == "." {
 			break
 		}
-		p := kmp(line)
-		l := len(line)
-		if l%(l-p-1) != 0 {
+		if p, l := kmp(line), len(line); l%(l-p-1) != 0 {
 			fmt.Fprintln(out, "1")
 		} else {
 			fmt.Fprintln(out, l/(l-p-1))
