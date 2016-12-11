@@ -47,8 +47,7 @@ func main() {
 	fmt.Fscanf(in, "%d", &kase)
 
 	fmt.Fprintf(out, "SHIPPING ROUTES OUTPUT\n")
-
-	for i := 0; i < kase; i++ {
+	for i := 1; i <= kase; i++ {
 		fmt.Fscanf(in, "%d%d%d", &m, &n, &p)
 		wh = make([]string, m)
 		for j := range wh {
@@ -61,7 +60,7 @@ func main() {
 			legs[wh1] = append(legs[wh1], wh2)
 			legs[wh2] = append(legs[wh2], wh1)
 		}
-		fmt.Fprintf(out, "\nDATA SET  %d\n\n", i+1)
+		fmt.Fprintf(out, "\nDATA SET  %d\n\n", i)
 
 		var size int
 		var src, dest string

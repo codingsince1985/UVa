@@ -9,9 +9,7 @@ import (
 
 const N = 20
 
-type node struct {
-	n, step int
-}
+type node struct{ n, step int }
 
 var matrix [][]bool
 
@@ -44,7 +42,6 @@ func main() {
 
 	var cnt, tmp, set, kase, n1, n2 int
 	for {
-		set++
 		matrix = make([][]bool, N+1)
 		for i := range matrix {
 			matrix[i] = make([]bool, N+1)
@@ -59,6 +56,7 @@ func main() {
 				matrix[tmp][i] = true
 			}
 		}
+		set++
 		fmt.Fprintf(out, "Test Set #%d\n", set)
 		fmt.Fscanf(in, "%d", &kase)
 		for i := 0; i < kase; i++ {

@@ -8,10 +8,7 @@ import (
 )
 
 type (
-	node struct {
-		r, c, f int
-	}
-
+	node  struct{ r, c, f int }
 	qnode struct {
 		node
 		p []node
@@ -79,14 +76,13 @@ func buildMaze(r, c int, dir []string) {
 
 func bfs(fm, to node) []node {
 	visited := make(map[node]bool)
-	var queue []qnode
-
 	visited[fm] = true
 	rfm := realFrom(fm)
 	visited[rfm] = true
 	from := qnode{rfm, []node{fm, rfm}}
-	queue = append(queue, from)
 
+	var queue []qnode
+	queue = append(queue, from)
 	for len(queue) != 0 {
 		curr := queue[0]
 		queue = queue[1:]
@@ -129,7 +125,6 @@ func main() {
 	defer out.Close()
 
 	var n, f, token string
-	var dir []string
 	var r1, c1, r2, c2 int
 	var fm, to node
 	for {
@@ -144,7 +139,7 @@ func main() {
 			if _, err := fmt.Fscanf(in, "%d%d", &r1, &c1); err != nil {
 				break
 			}
-			dir = nil
+			var dir []string
 			for {
 				if fmt.Fscanf(in, "%s", &token); token == "*" {
 					break

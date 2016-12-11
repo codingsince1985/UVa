@@ -12,19 +12,24 @@ import (
 )
 
 var (
-	s       *bufio.Scanner
 	teamMap map[string]team
 	out     *os.File
 )
 
-type team struct {
-	name                              string
-	points                            int
-	games, wins, ties, losses         int
-	goalDiff, goalScored, goalAgainst int
-}
+type (
+	team struct {
+		name                              string
+		points                            int
+		games, wins, ties, losses         int
+		goalDiff, goalScored, goalAgainst int
+	}
+	teams []team
+)
 
-type teams []team
+func nextLine(s *bufio.Scanner) string {
+	s.Scan()
+	return s.Text()
+}
 
 func cmp(t1, t2 team) bool {
 	if t1.points != t2.points {
@@ -50,11 +55,6 @@ func (t teams) Len() int { return len(t) }
 func (t teams) Less(i, j int) bool { return cmp(t[i], t[j]) }
 
 func (t teams) Swap(i, j int) { t[i], t[j] = t[j], t[i] }
-
-func nextLine() string {
-	s.Scan()
-	return s.Text()
-}
 
 func values(m map[string]team) teams {
 	var v []team
@@ -106,23 +106,23 @@ func main() {
 	out, _ = os.Create("10194.out")
 	defer out.Close()
 
-	s = bufio.NewScanner(in)
+	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	kase, _ := strconv.Atoi(nextLine())
+	kase, _ := strconv.Atoi(nextLine(s))
 	for kase > 0 {
 		teamMap = make(map[string]team)
-		fmt.Fprintln(out, nextLine())
+		fmt.Fprintln(out, nextLine(s))
 
-		tm, _ := strconv.Atoi(nextLine())
+		tm, _ := strconv.Atoi(nextLine(s))
 		for j := 0; j < tm; j++ {
-			tmp := nextLine()
+			tmp := nextLine(s)
 			teamMap[tmp] = team{name: tmp}
 		}
 
-		gm, _ := strconv.Atoi(nextLine())
+		gm, _ := strconv.Atoi(nextLine(s))
 		for j := 0; j < gm; j++ {
-			tokens := strings.Split(nextLine(), "#")
+			tokens := strings.Split(nextLine(s), "#")
 			scores := strings.Split(tokens[1], "@")
 			s1, _ := strconv.Atoi(scores[0])
 			s2, _ := strconv.Atoi(scores[1])
@@ -131,7 +131,6 @@ func main() {
 
 		v := values(teamMap)
 		sort.Sort(v)
-
 		output(v)
 		kase--
 		if kase > 0 {

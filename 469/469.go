@@ -40,12 +40,11 @@ func main() {
 
 	var kase, x, y int
 	var line string
-	var grid [][]byte
 	var visited [][]bool
 	fmt.Fscanf(in, "%d", &kase)
 	for kase > 0 {
 		fmt.Fscanln(in)
-		grid = nil
+		var grid [][]byte
 		for {
 			if fmt.Fscanf(in, "%s", &line); line[0] != 'L' && line[0] != 'W' {
 				break

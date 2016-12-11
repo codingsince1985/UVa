@@ -7,9 +7,7 @@ import (
 	"os"
 )
 
-type node struct {
-	num, idx int
-}
+type node struct{ num, idx int }
 
 func binarySearch(n int, l [][]node, s, e int) int {
 	// find the 1st index that is not less than n
@@ -30,8 +28,7 @@ func binarySearch(n int, l [][]node, s, e int) int {
 
 func lis(l []int) [][]node {
 	var t []node
-	t = make([]node, 1)
-	t[0] = node{l[0], 0}
+	t = append(t, node{l[0], 0})
 	var s [][]node
 	s = append(s, t)
 	for i := 1; i < len(l); i++ {
@@ -70,8 +67,7 @@ func main() {
 		}
 		l = append(l, tmp)
 	}
-	s := lis(l)
-	idx := len(l)
+	s, idx := lis(l), len(l)
 	var lst []int
 	for i := len(s) - 1; i >= 0; i-- {
 		for j := len(s[i]) - 1; j >= 0; j-- {

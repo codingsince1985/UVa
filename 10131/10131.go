@@ -8,11 +8,10 @@ import (
 	"sort"
 )
 
-type node struct {
-	w, s int
-}
-
-type nodes []node
+type (
+	node  struct{ w, s int }
+	nodes []node
+)
 
 func (a nodes) Len() int { return len(a) }
 
@@ -21,21 +20,19 @@ func (a nodes) Swap(i, j int) { a[i], a[j] = a[j], a[i] }
 func (a nodes) Less(i, j int) bool {
 	if a[i].w != a[j].w {
 		return a[i].w < a[j].w
-	} else {
-		return a[i].s > a[j].s
 	}
+	return a[i].s > a[j].s
 }
 
-func lis(n []node) ([]int, int) {
+func lis(n nodes) ([]int, int) {
+	sort.Sort(n)
 	l := len(n)
 	dp := make([]int, l+1)
 	for i := range dp {
 		dp[i] = 1
 	}
 
-	pre := make([]int, l)
-	max := 0
-
+	pre, max := make([]int, l), 0
 	for i := 1; i < l; i++ {
 		for j := i + 1; j <= l; j++ {
 			if n[j-1].w > n[i-1].w && n[j-1].s < n[i-1].s {
@@ -61,12 +58,6 @@ func getResult(pre []int, max int, n []node) []node {
 		}
 	}
 	return res
-}
-
-func clone(n []node) []node {
-	m := make([]node, len(n))
-	copy(m, n)
-	return m
 }
 
 func output(out *os.File, res, orig []node) {
@@ -95,9 +86,8 @@ func main() {
 		}
 		n = append(n, node{t1, t2})
 	}
-	orig := clone(n)
-	sort.Sort(n)
+	orig := make([]node, len(n))
+	copy(orig, n)
 	pre, max := lis(n)
-	res := getResult(pre, max, n)
-	output(out, res, orig)
+	output(out, getResult(pre, max, n), orig)
 }

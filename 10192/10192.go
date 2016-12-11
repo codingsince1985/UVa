@@ -8,11 +8,6 @@ import (
 	"os"
 )
 
-func nextLine(s *bufio.Scanner) string {
-	s.Scan()
-	return s.Text()
-}
-
 func max(a, b int) int {
 	if a > b {
 		return a
@@ -51,12 +46,13 @@ func main() {
 	var s1, s2 string
 	var c1, c2 []byte
 	var count int
-	for {
-		s1 = nextLine(s)
+	for s.Scan() {
+		s1 = s.Text()
 		if s1 == "#" {
 			break
 		}
-		s2 = nextLine(s)
+		s.Scan()
+		s2 = s.Text()
 		c1 = []byte(s1)
 		c2 = []byte(s2)
 		count++

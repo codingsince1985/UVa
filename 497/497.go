@@ -8,29 +8,23 @@ import (
 	"sort"
 )
 
-type node struct {
-	num, idx int
-}
+type node struct{ num, idx int }
 
 func find(n int, s [][]node) int {
 	// for home-made binary search, see UVa 481
-	l := len(s)
-	i := sort.Search(l, func(i int) bool {
+	return sort.Search(len(s), func(i int) bool {
 		nodes := s[i]
 		return nodes[len(nodes)-1].num >= 2
 	})
-	return i
 }
 
 func lis(h []int) [][]node {
 	var s [][]node
-	t := []node{{h[0], 0}}
-	s = append(s, t)
-	l := len(h)
-	for i := 1; i < l; i++ {
+	s = append(s, []node{{h[0], 0}})
+	for i := 1; i < len(h); i++ {
 		last := s[len(s)-1]
 		if h[i] > last[len(last)-1].num {
-			t = []node{{h[i], i}}
+			t := []node{{h[i], i}}
 			s = append(s, t)
 		} else {
 			idx := find(h[i], s)
@@ -57,7 +51,6 @@ func output(out *os.File, s [][]node, l int) {
 			}
 		}
 	}
-
 	for i := len(f) - 1; i >= 0; i-- {
 		fmt.Fprintln(out, f[i])
 	}
@@ -71,10 +64,8 @@ func main() {
 
 	var n, tmp int
 	fmt.Fscanf(in, "%d\n\n", &n)
-
-	var h []int
-	for i := 0; i < n; i++ {
-		h = nil
+	for n > 0 {
+		var h []int
 		for {
 			if _, err := fmt.Fscanf(in, "%d", &tmp); err != nil {
 				break
@@ -82,5 +73,6 @@ func main() {
 			h = append(h, tmp)
 		}
 		output(out, lis(h), len(h))
+		n--
 	}
 }

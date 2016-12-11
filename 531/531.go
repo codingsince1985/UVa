@@ -9,18 +9,6 @@ import (
 	"strings"
 )
 
-func nextLine(s *bufio.Scanner) string {
-	s.Scan()
-	return s.Text()
-}
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func lcs(a, b []string) string {
 	l1, l2 := len(a), len(b)
 	dp := make([][][]string, l1+1)
@@ -55,16 +43,15 @@ func main() {
 	var a, b []string
 	var l string
 	first := true
-	for {
-		if l = nextLine(s); l == "" {
+	for s.Scan() {
+		if l = s.Text(); l == "" {
 			break
 		}
 		if l == "#" {
 			first = !first
 			if first {
 				fmt.Fprintln(out, lcs(a, b))
-				a = nil
-				b = nil
+				a, b = nil, nil
 			}
 			continue
 		}

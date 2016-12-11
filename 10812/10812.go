@@ -15,7 +15,8 @@ func main() {
 
 	var kase, s, d int
 	fmt.Fscanf(in, "%d", &kase)
-	for i := 0; i < kase; i++ {
+	for kase > 0 {
+		kase--
 		fmt.Fscanf(in, "%d%d", &s, &d)
 		if s+d < 0 || (s+d)%2 != 0 {
 			fmt.Fprintln(out, "impossible")
