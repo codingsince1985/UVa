@@ -55,8 +55,7 @@ func main() {
 			freckles[i] = point{x, y}
 		}
 		fmt.Fprintf(out, "%.2f\n", prim(freckles))
-		kase--
-		if kase != 0 {
+		if kase--; kase != 0 {
 			fmt.Fprintln(out)
 		}
 	}

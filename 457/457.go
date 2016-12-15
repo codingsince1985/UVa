@@ -47,8 +47,7 @@ func main() {
 			fmt.Fscanf(in, "%d", &dna[i])
 		}
 		solve(dna)
-		kase--
-		if kase > 0 {
+		if kase--; kase > 0 {
 			fmt.Fprintln(out)
 		}
 	}

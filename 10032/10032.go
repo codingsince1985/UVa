@@ -56,8 +56,7 @@ func main() {
 		mid := solve(total, weights)
 		team1, team2 := sort(mid, total-mid)
 		fmt.Fprintln(out, team1, team2)
-		kase--
-		if kase != 0 {
+		if kase--; kase != 0 {
 			fmt.Fprintln(out)
 		}
 	}

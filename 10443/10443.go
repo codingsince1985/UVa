@@ -71,8 +71,7 @@ func main() {
 		}
 		solve(grid, r, c, n)
 		output(grid)
-		kase--
-		if kase > 0 {
+		if kase--; kase > 0 {
 			fmt.Fprintln(out)
 		}
 	}

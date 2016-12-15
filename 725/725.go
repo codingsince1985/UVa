@@ -62,8 +62,7 @@ func main() {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		kase++
-		if kase > 1 {
+		if kase++; kase > 1 {
 			fmt.Fprintln(out)
 		}
 		if ans := solve(n); len(ans) == 0 {

@@ -71,8 +71,7 @@ func main() {
 				fmt.Fprintf(out, "%s-%s %d\n", dup[:3], dup[3:], numbers[dup])
 			}
 		}
-		kase--
-		if kase > 0 {
+		if kase--; kase > 0 {
 			fmt.Fprintln(out)
 		}
 	}

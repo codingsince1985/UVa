@@ -60,8 +60,7 @@ func main() {
 			}
 		}
 		fmt.Fprintf(out, "%d,%d\n", ok, ko)
-		kase--
-		if kase > 0 {
+		if kase--; kase > 0 {
 			fmt.Fprintln(out)
 		}
 	}

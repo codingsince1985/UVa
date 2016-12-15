@@ -48,8 +48,7 @@ func main() {
 		for _, v := range names(treeMap) {
 			fmt.Fprintf(out, "%s %.4f\n", v, float64(treeMap[v]*100.0)/count)
 		}
-		kase--
-		if kase > 0 {
+		if kase--; kase > 0 {
 			fmt.Fprintln(out)
 		}
 	}

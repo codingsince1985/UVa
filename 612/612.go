@@ -48,8 +48,7 @@ func main() {
 		for _, v := range s {
 			fmt.Fprintln(out, v)
 		}
-		kase--
-		if kase > 0 {
+		if kase--; kase > 0 {
 			fmt.Fprintln(out)
 		}
 	}

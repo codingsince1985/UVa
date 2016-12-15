@@ -76,8 +76,7 @@ func main() {
 		}
 		sort.Sort(ls)
 		output(solve(0, m, ls))
-		kase--
-		if kase > 0 {
+		if kase--; kase > 0 {
 			fmt.Fprintln(out)
 		}
 	}

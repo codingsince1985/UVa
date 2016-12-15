@@ -116,8 +116,7 @@ func main() {
 			c[i] = cube
 		}
 		pre, mx, st := solve(c)
-		kase++
-		if kase > 1 {
+		if kase++; kase > 1 {
 			fmt.Fprintln(out)
 		}
 		count++

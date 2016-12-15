@@ -14,13 +14,12 @@ func main() {
 	out, _ := os.Create("10195.out")
 	defer out.Close()
 
-	var a, b, c, s, r float64
+	var a, b, c, r float64
 	for {
 		if _, err := fmt.Fscanf(in, "%f%f%f", &a, &b, &c); err != nil {
 			break
 		}
-		s = (a + b + c) / 2
-		if s == 0 {
+		if s := (a + b + c) / 2; s == 0 {
 			r = 0
 		} else {
 			r = math.Sqrt(s*(s-a)*(s-b)*(s-c)) / s

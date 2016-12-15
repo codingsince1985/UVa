@@ -54,8 +54,7 @@ func main() {
 		if fmt.Fscanf(in, "%d%d", &m, &n); m == 0 {
 			break
 		}
-		kase++
-		if kase > 1 {
+		if kase++; kase > 1 {
 			fmt.Fprintln(out)
 		}
 		fmt.Fprintf(out, "Field #%d:\n", kase)

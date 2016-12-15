@@ -51,8 +51,7 @@ func main() {
 		time, steps := solve(p)
 		fmt.Fprintln(out, time)
 		fmt.Fprintln(out, strings.Join(steps, "\n"))
-		kase--
-		if kase > 0 {
+		if kase--; kase > 0 {
 			fmt.Fprintln(out)
 		}
 	}

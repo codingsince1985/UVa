@@ -40,8 +40,7 @@ func main() {
 			fmt.Fscanf(in, "%f", &c[i])
 		}
 		fmt.Fprintf(out, "%.2f\n", solve(c))
-		kase--
-		if kase > 0 {
+		if kase--; kase > 0 {
 			fmt.Fprintln(out)
 		}
 	}

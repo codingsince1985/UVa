@@ -31,8 +31,7 @@ func main() {
 		fmt.Fscanln(in)
 		fmt.Fscanf(in, "%d", &k)
 		fmt.Fprintln(out, solve(k))
-		kase--
-		if kase > 0 {
+		if kase--; kase > 0 {
 			fmt.Fprintln(out)
 		}
 	}

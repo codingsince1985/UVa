@@ -74,8 +74,7 @@ func main() {
 			lines = append(lines, line)
 		}
 		fmt.Fprintln(out, strings.Join(decode(lines), "\n"))
-		kase--
-		if kase > 0 {
+		if kase--; kase > 0 {
 			fmt.Fprintln(out)
 		}
 	}

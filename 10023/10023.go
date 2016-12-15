@@ -37,15 +37,14 @@ func main() {
 	out, _ := os.Create("10023.out")
 	defer out.Close()
 
-	var n int
+	var kase int
 	var line string
-	fmt.Fscanf(in, "%d", &n)
-	for n > 0 {
-		n--
+	fmt.Fscanf(in, "%d", &kase)
+	for kase > 0 {
 		fmt.Fscanln(in)
 		fmt.Fscanf(in, "%s", &line)
 		fmt.Fprintf(out, "%v\n", sqrt(line))
-		if n > 0 {
+		if kase--; kase > 0 {
 			fmt.Fprintln(out)
 		}
 	}

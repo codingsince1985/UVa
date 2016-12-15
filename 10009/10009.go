@@ -67,8 +67,7 @@ func main() {
 			}
 			fmt.Fprintln(out)
 		}
-		kase--
-		if kase > 0 {
+		if kase--; kase > 0 {
 			fmt.Fprintln(out)
 		}
 	}

@@ -48,14 +48,14 @@ func main() {
 	out, _ := os.Create("10258.out")
 	defer out.Close()
 
-	var n, c, p, t int
+	var kase, c, p, t int
 	var l, line string
 
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	fmt.Fscanf(in, "%d", &n)
-	for n > 0 {
+	fmt.Fscanf(in, "%d", &kase)
+	for kase > 0 {
 		fmt.Fscanln(in)
 		contest := make(map[int]*contestant)
 		for s.Scan() {
@@ -81,8 +81,7 @@ func main() {
 		for _, v := range ranking(contest) {
 			fmt.Fprintln(out, v.num, v.solved, v.penalty)
 		}
-		n--
-		if n != 0 {
+		if kase--; kase != 0 {
 			fmt.Fprintln(out)
 		}
 	}

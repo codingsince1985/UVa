@@ -37,8 +37,7 @@ func main() {
 		fmt.Fscanln(in)
 		fmt.Fscanf(in, "%d%d", &n, &h)
 		dfs(0, 0, make([]string, 0))
-		kase--
-		if kase != 0 {
+		if kase--; kase != 0 {
 			fmt.Fprintln(out)
 		}
 	}

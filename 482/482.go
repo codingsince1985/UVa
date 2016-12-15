@@ -41,13 +41,13 @@ func main() {
 	out, _ := os.Create("482.out")
 	defer out.Close()
 
-	var n int
-	fmt.Fscanf(in, "%d", &n)
+	var kase int
+	fmt.Fscanf(in, "%d", &kase)
 
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	for n > 0 {
+	for kase > 0 {
 		s.Scan()
 		s.Text()
 
@@ -59,9 +59,7 @@ func main() {
 		for i := 0; i < len(idx); i++ {
 			fmt.Fprintln(out, num[idx[i]])
 		}
-
-		n--
-		if n != 0 {
+		if kase--; kase != 0 {
 			fmt.Fprintln(out)
 		}
 	}

@@ -73,8 +73,7 @@ func main() {
 			forbidden[t] = true
 		}
 		fmt.Fprintln(out, bfs(initial))
-		kase--
-		if kase > 0 {
+		if kase--; kase > 0 {
 			fmt.Fscanln(in)
 		}
 	}

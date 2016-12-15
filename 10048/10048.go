@@ -51,8 +51,7 @@ func main() {
 			matrix[c1-1][c2-1], matrix[c2-1][c1-1] = d, d
 		}
 		floydWarshall(matrix)
-		kase++
-		if kase > 1 {
+		if kase++; kase > 1 {
 			fmt.Fprintln(out)
 		}
 		fmt.Fprintf(out, "Case #%d\n", kase)

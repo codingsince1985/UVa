@@ -70,8 +70,7 @@ func main() {
 			m--
 		}
 		squareMap := solve(grid)
-		kase++
-		if kase > 1 {
+		if kase++; kase > 1 {
 			fmt.Fprintf(out, "\n**********************************\n\n")
 		}
 		fmt.Fprintf(out, "Problem #%d\n\n", kase)

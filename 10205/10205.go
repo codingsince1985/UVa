@@ -77,8 +77,7 @@ func main() {
 		for _, vi := range do(shuffles, order) {
 			fmt.Fprintf(out, "%s of %s\n", values[vi%13], suits[vi/13])
 		}
-		kase--
-		if kase > 0 {
+		if kase--; kase > 0 {
 			fmt.Fprintln(out)
 		}
 	}
