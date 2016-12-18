@@ -29,13 +29,12 @@ var primes = func() []int {
 }()
 
 func solve(n int) int {
-	var isFactor bool
 	result := n
 	for _, prime := range primes {
 		if n < prime {
 			break
 		}
-		isFactor = false
+		isFactor := false
 		for n%prime == 0 {
 			n /= prime
 			isFactor = true
