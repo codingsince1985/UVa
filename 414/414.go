@@ -21,7 +21,7 @@ func main() {
 		}
 		nums := make([]int, n)
 		max := 0
-		for n > 0 {
+		for ; n > 0; n-- {
 			num := 0
 			for i := 1; i <= 25; i++ {
 				if fmt.Fscanf(in, "%c", &ch); ch == 'X' {
@@ -33,7 +33,6 @@ func main() {
 				max = num
 			}
 			nums[n-1] = num
-			n--
 		}
 		total := 0
 		for _, v := range nums {

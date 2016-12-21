@@ -39,10 +39,9 @@ func main() {
 		}
 		fmt.Fscanf(in, "%d%d", &x, &y)
 		division := point{x, y}
-		for k > 0 {
+		for ; k > 0; k-- {
 			fmt.Fscanf(in, "%d%d", &x, &y)
 			fmt.Fprintln(out, country(division, point{x, y}))
-			k--
 		}
 	}
 }

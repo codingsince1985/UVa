@@ -21,8 +21,7 @@ func main() {
 	defer out.Close()
 
 	var n, m int
-	fmt.Fscanf(in, "%d", &n)
-	for n > 0 {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		sum := 0
 		fmt.Fscanf(in, "%d", &m)
 		coins := make([]int, m)
@@ -38,6 +37,5 @@ func main() {
 			}
 		}
 		fmt.Fprintln(out, sum-2*dp[avg])
-		n--
 	}
 }

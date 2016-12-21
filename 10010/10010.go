@@ -69,20 +69,16 @@ func main() {
 
 	var kase, words int
 	var line, word string
-	fmt.Fscanf(in, "%d\n", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d\n", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "\n%d%d", &m, &n)
 		grid := make([][]byte, m)
 		for i := range grid {
 			fmt.Fscanf(in, "%s", &line)
 			grid[i] = toLower([]byte(line))
 		}
-		fmt.Fscanf(in, "%d", &words)
-		for words > 0 {
+		for fmt.Fscanf(in, "%d", &words); words > 0; words-- {
 			fmt.Fscanf(in, "%s", &word)
 			find(grid, toLower([]byte(word)))
-			words--
 		}
-		kase--
 	}
 }

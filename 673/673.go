@@ -42,13 +42,12 @@ func main() {
 
 	scanner := bufio.NewScanner(in)
 	scanner.Split(bufio.ScanLines)
-	for n > 0 {
+	for ; n > 0; n-- {
 		scanner.Scan()
 		if line = scanner.Text(); valid(line) {
 			fmt.Fprintln(out, "Yes")
 		} else {
 			fmt.Fprintln(out, "No")
 		}
-		n--
 	}
 }

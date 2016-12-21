@@ -51,11 +51,9 @@ func main() {
 	var p, n1, n2, n3, n4, total int
 	fmt.Fscanf(in, "%d%d", &m, &n)
 	fmt.Fscanf(in, "%d", &costWall)
-	fmt.Fscanf(in, "%d", &p)
-	for p > 0 {
+	for fmt.Fscanf(in, "%d", &p); p > 0; p-- {
 		fmt.Fscanf(in, "%d%d%d%d", &n1, &n2, &n3, &n4)
 		bumperMap[point{n1, n2}] = bumper{n3, n4}
-		p--
 	}
 	for {
 		if _, err := fmt.Fscanf(in, "%d%d%d%d", &n1, &n2, &n3, &n4); err != nil {

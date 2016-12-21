@@ -53,8 +53,7 @@ func main() {
 
 	var kase int
 	var left, right, result string
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		var weighings [3]weighing
 		for i := range weighings {
 			fmt.Fscanf(in, "%s%s%s", &left, &right, &result)
@@ -62,6 +61,5 @@ func main() {
 		}
 		c, diff := solve(weighings)
 		fmt.Fprintf(out, "%s is the counterfeit coin and it is %s.\n", c, weightMap[diff])
-		kase--
 	}
 }

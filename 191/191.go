@@ -59,9 +59,7 @@ func main() {
 	defer out.Close()
 
 	var n, x1, y1, x2, y2 int
-	fmt.Fscanf(in, "%d", &n)
-	for n > 0 {
-		n--
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%d%d%d%d", &x1, &y1, &x2, &y2)
 		l := line{point{x1, y1}, point{x2, y2}}
 		fmt.Fscanf(in, "%d%d%d%d", &x1, &y1, &x2, &y2)

@@ -27,10 +27,8 @@ func main() {
 
 	var s, n, k int
 	var p float64
-	fmt.Fscanf(in, "%d", &s)
-	for s > 0 {
+	for fmt.Fscanf(in, "%d", &s); s > 0; s-- {
 		fmt.Fscanf(in, "%d%f%d", &n, &p, &k)
 		fmt.Fprintf(out, "%.4f\n", calc(n, k, p))
-		s--
 	}
 }

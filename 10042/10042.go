@@ -49,8 +49,7 @@ func main() {
 	defer out.Close()
 
 	var n, num int
-	fmt.Fscanf(in, "%d", &n)
-	for n > 0 {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%d", &num)
 		for {
 			sum1 := digitSum(num)
@@ -64,6 +63,5 @@ func main() {
 			}
 			num++
 		}
-		n--
 	}
 }

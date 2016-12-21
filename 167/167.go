@@ -131,8 +131,7 @@ func main() {
 	defer out.Close()
 
 	var k int
-	fmt.Fscanf(in, "%d", &k)
-	for k > 0 {
+	for fmt.Fscanf(in, "%d", &k); k > 0; k-- {
 		board := make([][]int, 8)
 		for i := range board {
 			board[i] = make([]int, 8)
@@ -147,6 +146,5 @@ func main() {
 		max = 0
 		backtracking(board, visited, 0)
 		fmt.Fprintln(out, max)
-		k--
 	}
 }

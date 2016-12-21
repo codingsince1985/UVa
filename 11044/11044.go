@@ -14,9 +14,7 @@ func main() {
 	defer out.Close()
 
 	var t, n, m int
-	fmt.Fscanf(in, "%d", &t)
-	for t > 0 {
-		t--
+	for fmt.Fscanf(in, "%d", &t); t > 0; t-- {
 		fmt.Fscanf(in, "%d%d", &n, &m)
 		fmt.Fprintln(out, int(n/3)*int(m/3))
 	}

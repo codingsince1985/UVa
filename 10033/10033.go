@@ -58,8 +58,7 @@ func main() {
 	var kase int
 	var line string
 	first := true
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		if first {
 			fmt.Fscanln(in)
 			first = false
@@ -74,6 +73,5 @@ func main() {
 			lines = append(lines, line)
 		}
 		fmt.Fprintln(out, solve(lines))
-		kase--
 	}
 }

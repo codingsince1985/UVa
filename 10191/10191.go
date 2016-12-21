@@ -67,15 +67,13 @@ func main() {
 
 	var kase, h1, m1, h2, m2 int
 	for s.Scan() {
-		n, _ := strconv.Atoi(s.Text())
 		var js jobs
-		for n > 0 {
+		for n, _ := strconv.Atoi(s.Text()); n > 0; n-- {
 			s.Scan()
 			line := s.Text()
 			r := strings.NewReader(line)
 			fmt.Fscanf(r, "%d:%d %d:%d", &h1, &m1, &h2, &m2)
 			js = append(js, buildJob(h1, m1, h2, m2))
-			n--
 		}
 		sort.Sort(js)
 		max, start := find(js)

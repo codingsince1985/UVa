@@ -31,17 +31,13 @@ func main() {
 	defer out.Close()
 
 	var n, r, tmp int
-	fmt.Fscanf(in, "%d", &n)
-	for n > 0 {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		var address []int
-		fmt.Fscanf(in, "%d", &r)
-		for r > 0 {
+		for fmt.Fscanf(in, "%d", &r); r > 0; r-- {
 			fmt.Fscanf(in, "%d", &tmp)
 			address = append(address, tmp)
-			r--
 		}
 		sort.Ints(address)
 		fmt.Fprintln(out, solve(address))
-		n--
 	}
 }

@@ -64,11 +64,9 @@ func main() {
 		for i := range matrix {
 			matrix[i] = make([]bool, n)
 		}
-		fmt.Fscanf(in, "%d", &l)
-		for l > 0 {
+		for fmt.Fscanf(in, "%d", &l); l > 0; l-- {
 			fmt.Fscanf(in, "%d%d", &n1, &n2)
 			matrix[n1][n2], matrix[n2][n1] = true, true
-			l--
 		}
 		nodes := make([]int, n)
 		nodes[0] = 1

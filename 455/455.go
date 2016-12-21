@@ -38,9 +38,7 @@ func main() {
 	var n int
 	var line string
 	first := true
-	fmt.Fscanf(in, "%d", &n)
-	for n > 0 {
-		n--
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		if first {
 			first = false
 		} else {

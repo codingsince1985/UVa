@@ -39,9 +39,7 @@ func main() {
 
 	p := sieve()
 	var n, t1, t2 int
-	fmt.Fscanf(in, "%d", &n)
-	for n > 0 {
-		n--
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%d%d", &t1, &t2)
 		cnt := 0
 		for i := t1; i <= t2; i++ {

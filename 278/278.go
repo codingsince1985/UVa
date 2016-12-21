@@ -22,8 +22,7 @@ func main() {
 
 	var kase, m, n int
 	var p byte
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "%c%d%d", &p, &m, &n)
 		switch p {
 		case 'r', 'Q':
@@ -33,6 +32,5 @@ func main() {
 		case 'K':
 			fmt.Fprintln(out, (m+1)/2*((n+1)/2))
 		}
-		kase--
 	}
 }

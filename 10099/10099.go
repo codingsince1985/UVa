@@ -41,10 +41,9 @@ func main() {
 		for i := range matrix {
 			matrix[i] = make([]int, n+1)
 		}
-		for r > 0 {
+		for ; r > 0; r-- {
 			fmt.Fscanf(in, "%d%d%d", &c1, &c2, &p)
 			matrix[c1][c2], matrix[c2][c1] = p, p
-			r--
 		}
 		fmt.Fscanf(in, "%d%d%d", &s, &d, &t)
 		floydWarshall(n, matrix)

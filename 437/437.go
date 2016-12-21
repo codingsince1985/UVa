@@ -53,7 +53,7 @@ func main() {
 			break
 		}
 		var b blocks
-		for n > 0 {
+		for ; n > 0; n-- {
 			fmt.Fscanf(in, "%d%d%d", &x, &y, &z)
 			b = append(b, block{x, y, z})
 			b = append(b, block{x, z, y})
@@ -61,7 +61,6 @@ func main() {
 			b = append(b, block{y, z, x})
 			b = append(b, block{z, x, y})
 			b = append(b, block{z, y, x})
-			n--
 		}
 		kase++
 		fmt.Fprintf(out, "Case %d: maximum height = %d\n", kase, lis(b))

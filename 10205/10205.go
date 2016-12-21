@@ -47,9 +47,8 @@ func main() {
 	var tmp int
 	var line string
 	for kase > 0 && s.Scan() {
-		n, _ := strconv.Atoi(s.Text())
 		var shuffles [][]int
-		for n > 0 {
+		for n, _ := strconv.Atoi(s.Text()); n > 0; n-- {
 			var shuffle []int
 			for s.Scan() {
 				r := strings.NewReader(s.Text())
@@ -64,7 +63,6 @@ func main() {
 				}
 			}
 			shuffles = append(shuffles, shuffle)
-			n--
 		}
 		var order []int
 		for s.Scan() {

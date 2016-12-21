@@ -48,8 +48,7 @@ func main() {
 
 	var kase, n int
 	first := true
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "\n%d", &n)
 		jbs := make(jobs, n)
 		for i := range jbs {
@@ -63,6 +62,5 @@ func main() {
 			fmt.Fprintln(out)
 		}
 		output(jbs)
-		kase--
 	}
 }

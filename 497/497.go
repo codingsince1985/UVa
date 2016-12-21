@@ -63,8 +63,7 @@ func main() {
 	defer out.Close()
 
 	var n, tmp int
-	fmt.Fscanf(in, "%d\n\n", &n)
-	for n > 0 {
+	for fmt.Fscanf(in, "%d\n\n", &n); n > 0; n-- {
 		var h []int
 		for {
 			if _, err := fmt.Fscanf(in, "%d", &tmp); err != nil {
@@ -73,6 +72,5 @@ func main() {
 			h = append(h, tmp)
 		}
 		output(out, lis(h), len(h))
-		n--
 	}
 }

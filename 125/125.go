@@ -85,11 +85,10 @@ func main() {
 		}
 		var street [][2]int
 		m = 0
-		for n > 0 {
+		for ; n > 0; n-- {
 			fmt.Fscanf(in, "%d%d", &n1, &n2)
 			street = append(street, [2]int{n1, n2})
 			m = max(m, max(n1, n2))
-			n--
 		}
 		fmt.Fprintf(out, "matrix for city %d\n", kase)
 		kase++

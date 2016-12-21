@@ -34,16 +34,13 @@ func main() {
 	defer out.Close()
 
 	var kase, n, m, m1, m2 int
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
-		kase--
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "%d%d", &n, &m)
 		f := make([]int, n+1)
 		for i := range f {
 			f[i] = i
 		}
-		for m > 0 {
-			m--
+		for ; m > 0; m-- {
 			fmt.Fscanf(in, "%d%d", &m1, &m2)
 			f1, f2 := unionFind(m1, f), unionFind(m2, f)
 			if f1 != f2 {

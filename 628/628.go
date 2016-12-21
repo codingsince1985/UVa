@@ -46,12 +46,10 @@ func main() {
 		for i := range dict {
 			fmt.Fscanf(in, "%s", &dict[i])
 		}
-		fmt.Fscanf(in, "%d", &nr)
 		fmt.Fprintln(out, "--")
-		for nr > 0 {
+		for fmt.Fscanf(in, "%d", &nr); nr > 0; nr-- {
 			fmt.Fscanf(in, "%s", &rule)
 			dfs(0, nil)
-			nr--
 		}
 	}
 }

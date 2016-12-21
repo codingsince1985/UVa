@@ -22,8 +22,7 @@ func main() {
 
 	var n, a, f int
 	first := true
-	fmt.Fscanf(in, "%d\n", &n)
-	for n > 0 {
+	for fmt.Fscanf(in, "%d\n", &n); n > 0; n-- {
 		if _, err := fmt.Fscanf(in, "\n%d\n%d", &a, &f); err != nil {
 			break
 		}
@@ -35,15 +34,13 @@ func main() {
 			}
 			s += "\n"
 		}
-		for f > 0 {
+		for ; f > 0; f-- {
 			if !first {
 				fmt.Fprintln(out)
 			} else {
 				first = false
 			}
 			fmt.Fprint(out, s)
-			f--
 		}
-		n--
 	}
 }

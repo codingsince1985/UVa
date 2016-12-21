@@ -40,8 +40,7 @@ func main() {
 
 	var n int
 	var str string
-	fmt.Fscanf(in, "%d", &n)
-	for n > 0 {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%s", &str)
 		strs := make([]string, len(str))
 		for i := range str {
@@ -53,6 +52,5 @@ func main() {
 		res = make(map[string]bool)
 		dfs(strs, visited, ans)
 		fmt.Fprintln(out)
-		n--
 	}
 }

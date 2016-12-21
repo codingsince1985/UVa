@@ -36,6 +36,9 @@ func main() {
 			fmt.Fprint(out, v)
 		}
 		fmt.Fprintln(out)
-		kase--
+		if kase--; kase > 0 {
+			fmt.Fprintln(out)
+		}
+
 	}
 }

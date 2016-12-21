@@ -40,8 +40,7 @@ func main() {
 	defer out.Close()
 
 	var c, m, s1, s2, t int
-	fmt.Fscanf(in, "%d", &c)
-	for c > 0 {
+	for fmt.Fscanf(in, "%d", &c); c > 0; c-- {
 		fmt.Fscanf(in, "%d%d", &n, &m)
 		edges := make([]edge, m)
 		for i := 0; i < m; i++ {
@@ -53,6 +52,5 @@ func main() {
 		} else {
 			fmt.Fprintln(out, "not possible")
 		}
-		c--
 	}
 }

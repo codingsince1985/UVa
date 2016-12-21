@@ -32,10 +32,8 @@ func main() {
 
 	var c, n int
 	var preOrder, inOrder string
-	fmt.Fscanf(in, "%d", &c)
-	for c > 0 {
+	for fmt.Fscanf(in, "%d", &c); c > 0; c-- {
 		fmt.Fscanf(in, "%d%s%s", &n, &preOrder, &inOrder)
 		fmt.Fprintln(out, string(postOrder([]byte(preOrder), []byte(inOrder))))
-		c--
 	}
 }

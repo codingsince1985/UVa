@@ -48,13 +48,11 @@ func main() {
 		for i := range num {
 			fmt.Fscanf(in, "%d", &num[i])
 		}
-		fmt.Fscanf(in, "%d", &m)
 		kase++
 		fmt.Fprintf(out, "Case %d:\n", kase)
-		for m > 0 {
+		for fmt.Fscanf(in, "%d", &m); m > 0; m-- {
 			fmt.Fscanf(in, "%d", &s)
 			fmt.Fprintf(out, "Closest sum to %d is %d.\n", s, closestSum(num, s))
-			m--
 		}
 	}
 }

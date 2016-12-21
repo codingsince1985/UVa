@@ -42,9 +42,8 @@ func main() {
 
 	var n int
 	var x, y float64
-	fmt.Fscanf(in, "%d", &n)
 	fmt.Fprintln(out, "INTERSECTING LINES OUTPUT")
-	for n > 0 {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%f%f", &x, &y)
 		p1 := point{x, y}
 		fmt.Fscanf(in, "%f%f", &x, &y)
@@ -56,7 +55,6 @@ func main() {
 		p2 = point{x, y}
 		l2 := line{p1, p2}
 		solve(l1, l2)
-		n--
 	}
 	fmt.Fprintln(out, "END OF OUTPUT")
 }

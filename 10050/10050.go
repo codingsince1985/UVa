@@ -29,14 +29,12 @@ func main() {
 	defer out.Close()
 
 	var kase, days, n int
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "%d\n%d", &days, &n)
 		parties := make([]int, n)
 		for i := range parties {
 			fmt.Fscanf(in, "%d", &parties[i])
 		}
 		fmt.Fprintln(out, solve(parties, days))
-		kase--
 	}
 }

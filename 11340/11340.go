@@ -22,27 +22,21 @@ func main() {
 	var t int
 	var c byte
 	s.Scan()
-	kase, _ := strconv.Atoi(s.Text())
-	for kase > 0 && s.Scan() {
-		k, _ := strconv.Atoi(s.Text())
+	for kase, _ := strconv.Atoi(s.Text()); kase > 0 && s.Scan(); kase-- {
 		paid := make(map[byte]int)
-		for k > 0 && s.Scan() {
+		for k, _ := strconv.Atoi(s.Text()); k > 0 && s.Scan(); k-- {
 			r := strings.NewReader(s.Text())
 			fmt.Fscanf(r, "%c %d", &c, &t)
 			paid[c] = t
-			k--
 		}
-		s.Scan()
-		l, _ := strconv.Atoi(s.Text())
 		total := 0.0
-		for l > 0 && s.Scan() {
+		s.Scan()
+		for l, _ := strconv.Atoi(s.Text()); l > 0 && s.Scan(); l-- {
 			line := s.Text()
 			for i := range line {
 				total += float64(paid[line[i]])
 			}
-			l--
 		}
 		fmt.Fprintf(out, "%.2f$\n", total/100)
-		kase--
 	}
 }

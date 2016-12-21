@@ -56,10 +56,8 @@ func main() {
 	s.Split(bufio.ScanLines)
 
 	s.Scan()
-	n, _ := strconv.Atoi(s.Text())
-	for s.Scan() && n > 0 {
+	for n, _ := strconv.Atoi(s.Text()); s.Scan() && n > 0; n-- {
 		line := s.Text()
 		fmt.Fprintf(out, "The maximum and minimum are %d and %d.\n", findMax(line), findMin(line))
-		n--
 	}
 }

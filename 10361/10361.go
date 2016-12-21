@@ -19,8 +19,7 @@ func main() {
 	s.Split(bufio.ScanLines)
 
 	var n int
-	fmt.Fscanf(in, "%d", &n)
-	for n > 0 {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		s.Scan()
 		line := s.Text()
 		idx21 := strings.Index(line, "<")
@@ -38,6 +37,5 @@ func main() {
 		line = s.Text()
 		idx := strings.Index(line, "...")
 		fmt.Fprintln(out, line[:idx]+s4+s3+s2+s5)
-		n--
 	}
 }

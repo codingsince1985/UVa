@@ -12,14 +12,13 @@ var out *os.File
 func output(ages [100]int) {
 	first := true
 	for i, v := range ages {
-		for v > 0 {
+		for ; v > 0; v-- {
 			if !first {
 				fmt.Fprint(out, " ")
 			} else {
 				first = false
 			}
 			fmt.Fprint(out, i)
-			v--
 		}
 	}
 	fmt.Fprintln(out)
@@ -37,10 +36,9 @@ func main() {
 			break
 		}
 		var ages [100]int
-		for n > 0 {
+		for ; n > 0; n-- {
 			fmt.Fscanf(in, "%d", &age)
 			ages[age]++
-			n--
 		}
 		output(ages)
 	}

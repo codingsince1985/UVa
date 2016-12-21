@@ -26,15 +26,12 @@ func main() {
 	s.Split(bufio.ScanLines)
 
 	s.Scan()
-	line := s.Text()
-	kase, _ := strconv.Atoi(line)
+	kase, _ := strconv.Atoi(s.Text())
 	s.Scan()
 	s.Text()
 	first := true
-	for kase > 0 {
-		kase--
-		s.Scan()
-		line = s.Text()
+	for ; kase > 0 && s.Scan(); kase-- {
+		line := s.Text()
 		num := line[0] - 'A' + 1
 		f := make([]int, num)
 		for i := range f {

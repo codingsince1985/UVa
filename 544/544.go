@@ -46,7 +46,7 @@ func main() {
 			fmt.Fprintln(out)
 		}
 		matrix := make(map[string]map[string]int)
-		for r > 0 {
+		for ; r > 0; r-- {
 			fmt.Fscanf(in, "%s%s%d", &c1, &c2, &l)
 			if _, ok := matrix[c1]; !ok {
 				matrix[c1] = make(map[string]int)
@@ -55,7 +55,6 @@ func main() {
 				matrix[c2] = make(map[string]int)
 			}
 			matrix[c1][c2], matrix[c2][c1] = l, l
-			r--
 		}
 		fmt.Fscanf(in, "%s%s", &c1, &c2)
 		kase++

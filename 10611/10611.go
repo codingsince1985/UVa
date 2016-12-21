@@ -55,8 +55,7 @@ func main() {
 	for i := range ladies {
 		fmt.Fscanf(in, "%d", &ladies[i])
 	}
-	fmt.Fscanf(in, "%d", &q)
-	for q > 0 {
+	for fmt.Fscanf(in, "%d", &q); q > 0; q-- {
 		fmt.Fscanf(in, "%d", &height)
 		low, high := binarySearchLow(ladies, height), binarySearchHigh(ladies, height)
 		if low != -1 {
@@ -69,6 +68,5 @@ func main() {
 		} else {
 			fmt.Fprintln(out, " X")
 		}
-		q--
 	}
 }

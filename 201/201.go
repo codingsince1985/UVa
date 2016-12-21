@@ -58,8 +58,7 @@ func main() {
 		for i := range grid {
 			grid[i] = make([]point, n)
 		}
-		fmt.Fscanf(in, "%d", &m)
-		for m > 0 {
+		for fmt.Fscanf(in, "%d", &m); m > 0; m-- {
 			fmt.Fscanf(in, "%c%d%d", &direction, &n1, &n2)
 			switch direction {
 			case 'H':
@@ -67,7 +66,6 @@ func main() {
 			case 'V':
 				grid[n2-1][n1-1].v = true
 			}
-			m--
 		}
 		squareMap := solve(grid)
 		if kase++; kase > 1 {

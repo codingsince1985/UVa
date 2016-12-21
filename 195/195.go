@@ -62,14 +62,12 @@ func main() {
 
 	var n int
 	var line string
-	fmt.Fscanf(in, "%d", &n)
-	for n > 0 {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%s", &line)
 		chars = bytes(line)
 		sort.Sort(chars)
 		word := make(bytes, len(chars))
 		visited := make([]bool, len(chars))
 		dfs(0, word, visited)
-		n--
 	}
 }

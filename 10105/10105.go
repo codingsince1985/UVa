@@ -9,9 +9,8 @@ import (
 
 func factorial(n int) int {
 	fact := 1
-	for n > 0 {
+	for ; n > 0; n-- {
 		fact *= n
-		n--
 	}
 	return fact
 }
@@ -29,8 +28,7 @@ func main() {
 		}
 		// n! / (n1! * n2! * ... * nk!)
 		coefficient := factorial(n)
-		for k > 0 {
-			k--
+		for ; k > 0; k-- {
 			fmt.Fscanf(in, "%d", &nk)
 			coefficient /= factorial(nk)
 		}

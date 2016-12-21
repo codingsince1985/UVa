@@ -35,14 +35,13 @@ func main() {
 
 		found := false
 		var p point
-		for n > 0 {
+		for ; n > 0; n-- {
 			fmt.Fscanf(in, "%f%f", &x, &y)
 			p = point{x, y}
 			if distance(p, gopher)*2 <= distance(p, dog) {
 				found = true
 				break
 			}
-			n--
 		}
 		if !found {
 			fmt.Fprintln(out, "The gopher cannot escape.")

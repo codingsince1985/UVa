@@ -44,7 +44,7 @@ func main() {
 		}
 		left, idx := n, -1
 		killed := make([]bool, n)
-		for left > 1 {
+		for ; left > 1; left-- {
 			cnt := p[n-left]
 			if cnt > left {
 				cnt = cnt % left
@@ -59,7 +59,6 @@ func main() {
 				}
 			}
 			killed[idx] = true
-			left--
 		}
 		for i, v := range killed {
 			if !v {

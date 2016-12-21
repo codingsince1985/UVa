@@ -30,10 +30,8 @@ func main() {
 
 	var n int
 	var str string
-	fmt.Fscanf(in, "%d", &n)
-	for n > 0 {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%s", &str)
 		fmt.Fprintln(out, solve(str))
-		n--
 	}
 }

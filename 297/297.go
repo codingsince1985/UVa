@@ -53,11 +53,9 @@ func main() {
 
 	var kase int
 	var tree1, tree2 string
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "%s", &tree1)
 		fmt.Fscanf(in, "%s", &tree2)
 		fmt.Fprintf(out, "There are %d black pixels.\n", add(tree1, tree2))
-		kase--
 	}
 }

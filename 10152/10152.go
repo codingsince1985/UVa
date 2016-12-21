@@ -36,8 +36,7 @@ func main() {
 	s.Split(bufio.ScanLines)
 
 	s.Scan()
-	k, _ := strconv.Atoi(s.Text())
-	for k > 0 {
+	for k, _ := strconv.Atoi(s.Text()); k > 0; k-- {
 		s.Scan()
 		n, _ = strconv.Atoi(s.Text())
 		src := make([]string, n)
@@ -51,6 +50,5 @@ func main() {
 			dest[i] = s.Text()
 		}
 		fmt.Fprintln(out, strings.Join(transform(src, dest), "\n")+"\n")
-		k--
 	}
 }

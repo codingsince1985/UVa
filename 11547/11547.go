@@ -14,8 +14,7 @@ func main() {
 	defer out.Close()
 
 	var t, n int
-	fmt.Fscanf(in, "%d", &t)
-	for t > 0 {
+	for fmt.Fscanf(in, "%d", &t); t > 0; t-- {
 		fmt.Fscanf(in, "%d", &n)
 		n = (n*63+7492)*235/47 - 498
 		if n < 0 {
@@ -23,6 +22,5 @@ func main() {
 		}
 		n = n / 10 % 10
 		fmt.Fprintln(out, n)
-		t--
 	}
 }

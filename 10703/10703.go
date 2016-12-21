@@ -48,10 +48,9 @@ func main() {
 		for i := range board {
 			board[i] = make([]bool, h)
 		}
-		for n > 0 {
+		for ; n > 0; n-- {
 			fmt.Fscanf(in, "%d%d%d%d", &x1, &y1, &x2, &y2)
 			cover(board, x1, y1, x2, y2)
-			n--
 		}
 		fmt.Fscanln(in)
 		count := uncovered(board)

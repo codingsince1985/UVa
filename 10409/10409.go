@@ -35,10 +35,9 @@ func main() {
 			break
 		}
 		t, n, w = 1, 2, 3
-		for steps > 0 {
+		for ; steps > 0; steps-- {
 			fmt.Fscanf(in, "%s", &dir)
 			rotate(dir)
-			steps--
 		}
 		fmt.Fprintln(out, t)
 	}

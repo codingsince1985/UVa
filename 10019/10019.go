@@ -36,10 +36,8 @@ func main() {
 	defer out.Close()
 
 	var n, dec int
-	fmt.Fscanf(in, "%d", &n)
-	for n > 0 {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%d", &dec)
 		fmt.Fprintln(out, binary(dec), binary(hexaDec(dec)))
-		n--
 	}
 }

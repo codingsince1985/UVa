@@ -14,23 +14,17 @@ func main() {
 	defer out.Close()
 
 	var t, n, b, k, num int
-	fmt.Fscanf(in, "%d", &t)
-	for t > 0 {
-		fmt.Fscanf(in, "%d%d", &n, &b)
+	for fmt.Fscanf(in, "%d", &t); t > 0; t-- {
 		total := 0
-		for b > 0 {
-			fmt.Fscanf(in, "%d", &k)
+		for fmt.Fscanf(in, "%d%d", &n, &b); b > 0; b-- {
 			// (a1 * a2 * ... * ak) % m = (((a1 % m) * a2) % m) * a3) ... ) % m
 			remaining := 1
-			for k > 0 {
+			for fmt.Fscanf(in, "%d", &k); k > 0; k-- {
 				fmt.Fscanf(in, "%d", &num)
 				remaining = (remaining * num) % n
-				k--
 			}
 			total = (total + remaining) % n
-			b--
 		}
 		fmt.Fprintln(out, total)
-		t--
 	}
 }

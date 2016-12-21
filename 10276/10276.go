@@ -36,10 +36,8 @@ func main() {
 	defer out.Close()
 
 	var t, n int
-	fmt.Fscanf(in, "%d", &t)
-	for t > 0 {
+	for fmt.Fscanf(in, "%d", &t); t > 0; t-- {
 		fmt.Fscanf(in, "%d", &n)
 		fmt.Fprintln(out, hanoi(n))
-		t--
 	}
 }

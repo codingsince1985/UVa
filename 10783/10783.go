@@ -14,8 +14,7 @@ func main() {
 	defer out.Close()
 
 	var kase, n, l, h int
-	fmt.Fscanf(in, "%d", &n)
-	for n > 0 {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%d\n%d", &l, &h)
 		total := 0
 		for i := l; i <= h; i++ {
@@ -25,6 +24,5 @@ func main() {
 		}
 		kase++
 		fmt.Fprintf(out, "Case %d: %d\n", kase, total)
-		n--
 	}
 }

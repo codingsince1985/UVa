@@ -49,9 +49,8 @@ func main() {
 		var i byte
 		for i = 'a'; i <= 'z'; i++ {
 			if v, ok := cm[i]; ok {
-				for v > 0 {
+				for ; v > 0; v-- {
 					fmt.Fprintf(out, "%c", i)
-					v--
 				}
 			}
 		}

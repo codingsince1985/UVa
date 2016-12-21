@@ -40,8 +40,7 @@ func main() {
 	defer out.Close()
 
 	var kase, tmp int
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "%d%d", &n, &k)
 		num := make([]int, n)
 		for i := range num {
@@ -53,6 +52,5 @@ func main() {
 		} else {
 			fmt.Fprintln(out, "Not divisible")
 		}
-		kase--
 	}
 }

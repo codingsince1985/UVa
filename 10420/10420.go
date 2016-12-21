@@ -20,15 +20,12 @@ func main() {
 	s.Split(bufio.ScanLines)
 
 	var n int
-	fmt.Fscanf(in, "%d", &n)
-
 	dict := make(map[string]int)
-	for n > 0 {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		s.Scan()
 		line := s.Text()
 		tokens := strings.Split(line, " ")
 		dict[tokens[0]]++
-		n--
 	}
 	var countries []string
 	for k := range dict {

@@ -22,10 +22,8 @@ func main() {
 	defer out.Close()
 
 	var n, d, l int
-	fmt.Fscanf(in, "%d", &n)
-	for n > 0 {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%d%d", &d, &l)
 		fmt.Fprintf(out, "%.3f\n", area(d, l))
-		n--
 	}
 }

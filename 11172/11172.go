@@ -14,8 +14,7 @@ func main() {
 	defer out.Close()
 
 	var n, n1, n2 int
-	fmt.Fscanf(in, "%d", &n)
-	for n > 0 {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%d%d", &n1, &n2)
 		switch {
 		case n1 > n2:
@@ -25,6 +24,5 @@ func main() {
 		default:
 			fmt.Fprintln(out, "=")
 		}
-		n--
 	}
 }

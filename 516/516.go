@@ -25,9 +25,8 @@ func sieve() []bool {
 
 func pow(b, e int) int {
 	num := 1
-	for e > 0 {
+	for ; e > 0; e-- {
 		num *= b
-		e--
 	}
 	return num
 }

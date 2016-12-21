@@ -43,8 +43,7 @@ func main() {
 	defer out.Close()
 
 	var kase, d, n, x, y, population int
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		var rats [MAX][MAX]int
 		fmt.Fscanf(in, "%d\n%d", &d, &n)
 		for j := 0; j < n; j++ {
@@ -52,6 +51,5 @@ func main() {
 			process(d, x, y, population, &rats)
 		}
 		output(out, &rats)
-		kase--
 	}
 }

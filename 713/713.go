@@ -24,16 +24,14 @@ func main() {
 	defer out.Close()
 
 	var n int
-	fmt.Fscanf(in, "%d", &n)
 	var s1, s2 string
 	var n1, n2 big.Int
-	for n > 0 {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%s%s", &s1, &s2)
 		n1.SetString(reverse(s1), 10)
 		n2.SetString(reverse(s2), 10)
 		n1.Add(&n1, &n2)
 		n1.SetString(reverse(n1.String()), 10)
 		fmt.Fprintln(out, &n1)
-		n--
 	}
 }

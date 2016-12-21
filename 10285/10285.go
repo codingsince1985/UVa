@@ -54,8 +54,7 @@ func main() {
 
 	var n int
 	var name string
-	fmt.Fscanf(in, "%d", &n)
-	for n > 0 {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%s%d%d", &name, &r, &c)
 		grid = make([][]int, r)
 		for i := range grid {
@@ -65,6 +64,5 @@ func main() {
 			}
 		}
 		fmt.Fprintf(out, "%s: %d\n", name, longestRun())
-		n--
 	}
 }

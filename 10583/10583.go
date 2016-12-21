@@ -29,13 +29,12 @@ func main() {
 		for i := range f {
 			f[i] = i
 		}
-		for m > 0 {
+		for ; m > 0; m-- {
 			fmt.Fscanf(in, "%d%d", &s1, &s2)
 			f1, f2 := unionFind(s1-1, f), unionFind(s2-1, f)
 			if f1 != f2 {
 				f[f1] = f2
 			}
-			m--
 		}
 		count := 0
 		for k := range f {

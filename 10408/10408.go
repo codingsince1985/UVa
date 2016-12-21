@@ -9,10 +9,9 @@ import (
 
 func farey(n, k int) (int, int) {
 	a0, b0, a1, b1 := 0, 1, 1, n
-	for k > 1 {
+	for ; k > 1; k-- {
 		r := (n + b0) / b1
 		a0, b0, a1, b1 = a1, b1, r*a1-a0, r*b1-b0
-		k--
 	}
 	return a1, b1
 }

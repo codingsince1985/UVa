@@ -29,10 +29,8 @@ func main() {
 	defer out.Close()
 
 	var n, a, b int
-	fmt.Fscanf(in, "%d", &n)
-	for n > 0 {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%d%d", &a, &b)
 		fmt.Fprintln(out, solve(b-a))
-		n--
 	}
 }

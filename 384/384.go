@@ -64,15 +64,13 @@ func main() {
 
 	var kase int
 	var line string
-	fmt.Fscanf(in, "%d", &kase)
 	fmt.Fprintln(out, "SLURPYS OUTPUT")
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		if fmt.Fscanf(in, "%s", &line); isSlurpy(line) {
 			fmt.Fprintln(out, "YES")
 		} else {
 			fmt.Fprintln(out, "NO")
 		}
-		kase--
 	}
 	fmt.Fprintln(out, "END OF OUTPUT")
 }
