@@ -365,6 +365,7 @@ UVa 10473 - [Simple Base Conversion](https://uva.onlinejudge.org/external/104/10
 UVa 10474 - [Where is the Marble?](https://uva.onlinejudge.org/external/104/10474.pdf)  
 UVa 10487 - [Closest Sums](https://uva.onlinejudge.org/external/104/10487.pdf)  
 UVa 10489 - [Boxes of Chocolates](https://uva.onlinejudge.org/external/104/10489.pdf)  
+UVa 10491 - [Cows and Cars](https://uva.onlinejudge.org/external/104/10491.pdf)  
 UVa 10494 - [If We Were a Child Again](https://uva.onlinejudge.org/external/104/10494.pdf)  
 UVa 10499 - [The Land of Justice](https://uva.onlinejudge.org/external/104/10499.pdf)  
 UVa 10502 - [Counting Rectangles](https://uva.onlinejudge.org/external/105/10502.pdf)  
