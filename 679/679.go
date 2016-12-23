@@ -27,6 +27,6 @@ func main() {
 				I = (I + 1) / 2
 			}
 		}
-		fmt.Println(k)
+		fmt.Fprintln(out, k)
 	}
 }
