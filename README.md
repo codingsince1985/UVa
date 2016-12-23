@@ -259,6 +259,7 @@ UVa 10056 - [What is the Probability ?](https://uva.onlinejudge.org/external/100
 UVa 10062 - [Tell me the frequencies!](https://uva.onlinejudge.org/external/100/10062.pdf)  
 UVa 10066 - [The Twin Towers](https://uva.onlinejudge.org/external/100/10066.pdf)  
 UVa 10067 - [Playing with Wheels](https://uva.onlinejudge.org/external/100/10067.pdf)  
+UVa 10069 - [Distinct Subsequences](https://uva.onlinejudge.org/external/100/10069.pdf)  
 UVa 10070 - [Leap Year or Not Leap Year and ...](https://uva.onlinejudge.org/external/100/10070.pdf)  
 UVa 10071 - [Back to High School Physics](https://uva.onlinejudge.org/external/100/10071.pdf)  
 UVa 10074 - [Take the Land](https://uva.onlinejudge.org/external/100/10074.pdf)  
