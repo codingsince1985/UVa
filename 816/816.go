@@ -148,7 +148,6 @@ func main() {
 			}
 			buildMaze(r1, c1, dir)
 		}
-		p := bfs(fm, to)
-		output(out, n, p)
+		output(out, n, bfs(fm, to))
 	}
 }

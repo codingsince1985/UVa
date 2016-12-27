@@ -8,9 +8,7 @@ import (
 	"os"
 )
 
-type stone struct {
-	x, y float64
-}
+type stone struct{ x, y float64 }
 
 func min(a, b float64) float64 {
 	if a < b {
@@ -46,8 +44,8 @@ func main() {
 	out, _ := os.Create("534.out")
 	defer out.Close()
 
-	var n, kase int
-	for {
+	var n int
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
@@ -56,7 +54,6 @@ func main() {
 			fmt.Fscanf(in, "%f%f", &stones[i].x, &stones[i].y)
 		}
 		fmt.Fscanln(in)
-		kase++
 		fmt.Fprintf(out, "Scenario #%d\n", kase)
 		fmt.Fprintf(out, "Frog Distance = %.3f\n\n", floydWarshall(stones))
 	}

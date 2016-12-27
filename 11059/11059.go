@@ -27,8 +27,8 @@ func main() {
 	out, _ := os.Create("11059.out")
 	defer out.Close()
 
-	var n, kase int
-	for {
+	var n int
+	for kase := 1; ; kase++ {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
 		}
@@ -36,7 +36,6 @@ func main() {
 		for i := range nums {
 			fmt.Fscanf(in, "%d", &nums[i])
 		}
-		kase++
 		max := solve(nums)
 		if max < 0 {
 			max = 0

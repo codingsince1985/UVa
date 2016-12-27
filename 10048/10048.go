@@ -34,8 +34,8 @@ func main() {
 	out, _ := os.Create("10048.out")
 	defer out.Close()
 
-	var kase, c, s, q, c1, c2, d int
-	for {
+	var c, s, q, c1, c2, d int
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d%d%d", &c, &s, &q); c == 0 && s == 0 && q == 0 {
 			break
 		}
@@ -51,7 +51,7 @@ func main() {
 			matrix[c1-1][c2-1], matrix[c2-1][c1-1] = d, d
 		}
 		floydWarshall(matrix)
-		if kase++; kase > 1 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 		fmt.Fprintf(out, "Case #%d\n", kase)

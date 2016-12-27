@@ -37,8 +37,7 @@ func main() {
 
 	var kase, n, m int
 	var s dna
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "\n%d%d", &n, &m)
 		s = make([]string, m)
 		for j := range s {
@@ -48,7 +47,7 @@ func main() {
 		for _, v := range s {
 			fmt.Fprintln(out, v)
 		}
-		if kase--; kase > 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

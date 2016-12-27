@@ -57,12 +57,12 @@ func main() {
 	out, _ := os.Create("725.out")
 	defer out.Close()
 
-	var n, kase int
-	for {
+	var n int
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		if kase++; kase > 1 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 		if ans := solve(n); len(ans) == 0 {

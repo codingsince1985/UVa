@@ -47,7 +47,7 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	for kase > 0 {
+	for ; kase > 0; kase-- {
 		s.Scan()
 		s.Text()
 
@@ -59,7 +59,7 @@ func main() {
 		for i := 0; i < len(idx); i++ {
 			fmt.Fprintln(out, num[idx[i]])
 		}
-		if kase--; kase != 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

@@ -75,11 +75,10 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var n1, n2, kase int
+	var n1, n2 int
 here:
-	for {
+	for kase := 1; ; kase++ {
 		done := false
-		kase++
 		var edges []edge
 		for s.Scan() {
 			line := s.Text()

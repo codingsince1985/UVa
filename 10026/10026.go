@@ -10,11 +10,10 @@ import (
 
 var out *os.File
 
-type job struct {
-	no, time, fine int
-}
-
-type jobs []job
+type (
+	job  struct{ no, time, fine int }
+	jobs []job
+)
 
 func (jbs jobs) Len() int { return len(jbs) }
 

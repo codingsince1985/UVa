@@ -9,8 +9,7 @@ import (
 
 func factCache() map[int]uint64 {
 	cache := make(map[int]uint64)
-	var t, i uint64 = 1, 1
-	for ; i <= 20; i++ {
+	for t, i := uint64(1), uint64(1); i <= 20; i++ {
 		t *= i
 		cache[int(i)] = t
 	}

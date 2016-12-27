@@ -57,8 +57,8 @@ func main() {
 	out, _ := os.Create("820.out")
 	defer out.Close()
 
-	var s, t, c, n1, n2, bw, kase int
-	for {
+	var s, t, c, n1, n2, bw int
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
@@ -72,7 +72,6 @@ func main() {
 			matrix[n1][n2] += bw
 			matrix[n2][n1] = matrix[n1][n2]
 		}
-		kase++
 		fmt.Fprintf(out, "Network %d\n", kase)
 		fmt.Fprintf(out, "The bandwidth is %d.\n\n", edmondsKarp(s, t, matrix))
 	}

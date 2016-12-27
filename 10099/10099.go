@@ -32,16 +32,16 @@ func main() {
 	out, _ := os.Create("10099.out")
 	defer out.Close()
 
-	var n, r, c1, c2, p, s, d, t, kase int
-	for {
-		if fmt.Fscanf(in, "%d%d", &n, &r); n == 0 {
+	var n, r, c1, c2, p, s, d, t int
+	for kase := 1; ; kase++ {
+		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
 		matrix := make([][]int, n+1)
 		for i := range matrix {
 			matrix[i] = make([]int, n+1)
 		}
-		for ; r > 0; r-- {
+		for fmt.Fscanf(in, "%d", &r); r > 0; r-- {
 			fmt.Fscanf(in, "%d%d%d", &c1, &c2, &p)
 			matrix[c1][c2], matrix[c2][c1] = p, p
 		}
@@ -51,7 +51,6 @@ func main() {
 		if t%trips != 0 {
 			trips++
 		}
-		kase++
 		fmt.Fprintf(out, "Scenario #%d\n", kase)
 		fmt.Fprintf(out, "Minimum Number of Trips = %d\n", trips)
 	}

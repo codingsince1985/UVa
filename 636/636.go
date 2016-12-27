@@ -19,8 +19,7 @@ func isValid(n, i int) bool {
 
 func calc(n, base int) int {
 	var num int
-	b := 1
-	for ; n > 0; n /= 10 {
+	for b := 1; n > 0; n /= 10 {
 		num += (n % 10) * b
 		b *= base
 	}

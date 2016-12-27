@@ -39,15 +39,14 @@ func main() {
 	defer out.Close()
 
 	var kase int
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanln(in)
 		dna := make([]int, 10)
 		for i := range dna {
 			fmt.Fscanf(in, "%d", &dna[i])
 		}
 		solve(dna)
-		if kase--; kase > 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

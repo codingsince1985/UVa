@@ -12,10 +12,11 @@ var beards [10]int
 func ordered() bool {
 	diff := beards[1] - beards[0]
 	for i := 2; i < 10; i++ {
-		if (beards[i]-beards[i-1])*diff < 0 {
+		newDiff := beards[i] - beards[i-1]
+		if newDiff*diff < 0 {
 			return false
 		}
-		diff = beards[i] - beards[i-1]
+		diff = newDiff
 	}
 	return true
 }

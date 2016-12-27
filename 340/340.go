@@ -39,12 +39,11 @@ func main() {
 	out, _ := os.Create("340.out")
 	defer out.Close()
 
-	var n, kase int
-	for {
+	var n int
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		kase++
 		fmt.Fprintf(out, "Game %d:\n", kase)
 		s, g := make([]int, n), make([]int, n)
 		for i := range s {

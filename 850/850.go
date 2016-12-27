@@ -65,7 +65,7 @@ func main() {
 	s.Scan()
 	s.Text()
 	var line string
-	for kase > 0 {
+	for ; kase > 0; kase-- {
 		var lines []string
 		for s.Scan() {
 			if line = s.Text(); line == "" {
@@ -74,7 +74,7 @@ func main() {
 			lines = append(lines, line)
 		}
 		fmt.Fprintln(out, strings.Join(decode(lines), "\n"))
-		if kase--; kase > 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

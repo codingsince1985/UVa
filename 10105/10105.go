@@ -23,12 +23,12 @@ func main() {
 
 	var n, k, nk int
 	for {
-		if _, err := fmt.Fscanf(in, "%d%d", &n, &k); err != nil {
+		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
 		}
 		// n! / (n1! * n2! * ... * nk!)
 		coefficient := factorial(n)
-		for ; k > 0; k-- {
+		for fmt.Fscanf(in, "%d", &k); k > 0; k-- {
 			fmt.Fscanf(in, "%d", &nk)
 			coefficient /= factorial(nk)
 		}

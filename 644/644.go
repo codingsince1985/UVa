@@ -25,10 +25,9 @@ func main() {
 	out, _ := os.Create("644.out")
 	defer out.Close()
 
-	var kase int
 	var line string
 here:
-	for {
+	for kase := 1; ; kase++ {
 		var code []string
 		for {
 			if _, err := fmt.Fscanf(in, "%s", &line); err != nil || line == "9" {
@@ -39,7 +38,6 @@ here:
 			}
 			code = append(code, line)
 		}
-		kase++
 		if decodable(code) {
 			fmt.Fprintf(out, "Set %d is immediately decodable\n", kase)
 		} else {

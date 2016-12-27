@@ -13,9 +13,9 @@ func main() {
 	out, _ := os.Create("591.out")
 	defer out.Close()
 
-	var n, t, avg, cnt, kase int
+	var n, t, avg, cnt int
 	var stacks []int
-	for {
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
@@ -31,7 +31,6 @@ func main() {
 				cnt += v - avg
 			}
 		}
-		kase++
 		fmt.Fprintf(out, "Set #%d\n", kase)
 		fmt.Fprintf(out, "The minimum number of moves is %d.\n", cnt)
 	}

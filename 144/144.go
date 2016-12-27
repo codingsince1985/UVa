@@ -9,9 +9,7 @@ import (
 
 var out *os.File
 
-type student struct {
-	id, amount int
-}
+type student struct{ id, amount int }
 
 func atm(queue []student, k int) {
 	for len(queue) > 0 {

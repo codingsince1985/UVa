@@ -46,8 +46,7 @@ func main() {
 	defer out.Close()
 
 	var kase, n int
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanln(in)
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
@@ -71,7 +70,7 @@ func main() {
 				fmt.Fprintf(out, "%s-%s %d\n", dup[:3], dup[3:], numbers[dup])
 			}
 		}
-		if kase--; kase > 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

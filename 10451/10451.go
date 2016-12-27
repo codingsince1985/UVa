@@ -20,13 +20,11 @@ func main() {
 	out, _ := os.Create("10451.out")
 	defer out.Close()
 
-	var kase int
 	var n, a float64
-	for {
+	for kase := 1; ; kase++ {
 		if _, err := fmt.Fscanf(in, "%f%f", &n, &a); n < 3 || err != nil {
 			break
 		}
-		kase++
 		s, o := calc(n, a)
 		fmt.Fprintf(out, "Case %d: %.5f %.5f\n", kase, s, o)
 	}

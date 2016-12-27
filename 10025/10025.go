@@ -26,12 +26,11 @@ func main() {
 	defer out.Close()
 
 	var kase, k int
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanln(in)
 		fmt.Fscanf(in, "%d", &k)
 		fmt.Fprintln(out, solve(k))
-		if kase--; kase > 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

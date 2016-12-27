@@ -54,8 +54,7 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanln(in)
 		contest := make(map[int]*contestant)
 		for s.Scan() {
@@ -81,7 +80,7 @@ func main() {
 		for _, v := range ranking(contest) {
 			fmt.Fprintln(out, v.num, v.solved, v.penalty)
 		}
-		if kase--; kase != 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

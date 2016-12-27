@@ -31,12 +31,11 @@ func main() {
 	out, _ := os.Create("10784.out")
 	defer out.Close()
 
-	var n, kase uint64
-	for {
+	var n uint64
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		kase++
 		fmt.Fprintf(out, "Case %d: %d\n", kase, binarySearch(n))
 	}
 }

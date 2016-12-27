@@ -8,9 +8,7 @@ import (
 	"os"
 )
 
-type point struct {
-	x, y float64
-}
+type point struct{ x, y float64 }
 
 func distance(p1, p2 point) float64 {
 	return math.Sqrt((p1.x-p2.x)*(p1.x-p2.x) + (p1.y-p2.y)*(p1.y-p2.y))
@@ -46,8 +44,7 @@ func main() {
 
 	var kase, num int
 	var x, y float64
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "\n%d", &num)
 		freckles := make([]point, num)
 		for i := range freckles {
@@ -55,7 +52,7 @@ func main() {
 			freckles[i] = point{x, y}
 		}
 		fmt.Fprintf(out, "%.2f\n", prim(freckles))
-		if kase--; kase != 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

@@ -8,9 +8,7 @@ import (
 	"os"
 )
 
-type point struct {
-	x, y float64
-}
+type point struct{ x, y float64 }
 
 func distance(p1, p2 point) float64 {
 	return math.Sqrt((p1.x-p2.x)*(p1.x-p2.x) + (p1.y-p2.y)*(p1.y-p2.y))

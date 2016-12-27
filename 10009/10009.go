@@ -50,8 +50,7 @@ func main() {
 
 	var kase, m, n int
 	var fm, to string
-	fmt.Fscanf(in, "%d\n", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d\n", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "\n%d%d", &m, &n)
 		links = make(map[string][]string)
 		for i := 0; i < m; i++ {
@@ -67,7 +66,7 @@ func main() {
 			}
 			fmt.Fprintln(out)
 		}
-		if kase--; kase > 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

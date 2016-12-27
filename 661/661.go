@@ -18,8 +18,8 @@ func main() {
 	out, _ := os.Create("661.out")
 	defer out.Close()
 
-	var n, m, c, tmp, kase int
-	for {
+	var n, m, c, tmp int
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d%d%d", &n, &m, &c); n == 0 && m == 0 && c == 0 {
 			break
 		}
@@ -48,7 +48,6 @@ func main() {
 			devices[tmp-1].on = !devices[tmp-1].on
 		}
 
-		kase++
 		fmt.Fprintf(out, "Sequence %d\n", kase)
 		if blown {
 			fmt.Fprintln(out, "Fuse was blown.\n")

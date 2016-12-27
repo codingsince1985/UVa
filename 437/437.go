@@ -47,8 +47,8 @@ func main() {
 	out, _ := os.Create("437.out")
 	defer out.Close()
 
-	var n, x, y, z, kase int
-	for {
+	var n, x, y, z int
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
@@ -62,7 +62,6 @@ func main() {
 			b = append(b, block{z, x, y})
 			b = append(b, block{z, y, x})
 		}
-		kase++
 		fmt.Fprintf(out, "Case %d: maximum height = %d\n", kase, lis(b))
 	}
 }

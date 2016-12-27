@@ -42,9 +42,8 @@ func main() {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		left, idx := n, -1
 		killed := make([]bool, n)
-		for ; left > 1; left-- {
+		for idx, left := -1, n; left > 1; left-- {
 			cnt := p[n-left]
 			if cnt > left {
 				cnt = cnt % left

@@ -39,12 +39,11 @@ func main() {
 
 	var kase int
 	var line string
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanln(in)
 		fmt.Fscanf(in, "%s", &line)
 		fmt.Fprintf(out, "%v\n", sqrt(line))
-		if kase--; kase > 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

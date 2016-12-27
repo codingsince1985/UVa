@@ -50,15 +50,14 @@ func main() {
 	out, _ := os.Create("402.out")
 	defer out.Close()
 
-	var kase, n, x int
-	for {
+	var n, x int
+	for kase := 1; ; kase++ {
 		if _, err := fmt.Fscanf(in, "%d%d", &n, &x); err != nil {
 			break
 		}
 		for i := range cards {
 			fmt.Fscanf(in, "%d", &cards[i])
 		}
-		kase++
 		fmt.Fprintf(out, "Selection #%d\n", kase)
 		fmt.Fprintf(out, "%s\n\n", strings.Join(count(n, x), " "))
 	}

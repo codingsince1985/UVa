@@ -24,12 +24,11 @@ func main() {
 	out, _ := os.Create("350.out")
 	defer out.Close()
 
-	var z, i, m, l, kase int
-	for {
+	var z, i, m, l int
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d%d%d%d", &z, &i, &m, &l); m == 0 {
 			break
 		}
-		kase++
 		fmt.Fprintf(out, "Case %d: %d\n", kase, findCycle(z, i, m, l))
 	}
 }

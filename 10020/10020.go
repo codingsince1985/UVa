@@ -62,8 +62,7 @@ func main() {
 	defer out.Close()
 
 	var kase int
-	fmt.Fscanf(in, "%d\n", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d\n", &kase); kase > 0; kase-- {
 		var m int
 		fmt.Fscanf(in, "\n%d", &m)
 		var ls lines
@@ -76,7 +75,7 @@ func main() {
 		}
 		sort.Sort(ls)
 		output(solve(0, m, ls))
-		if kase--; kase > 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

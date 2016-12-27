@@ -32,14 +32,13 @@ func main() {
 	first := true
 	for ; kase > 0 && s.Scan(); kase-- {
 		line := s.Text()
-		num := line[0] - 'A' + 1
+		num := int(line[0] - 'A' + 1)
 		f := make([]int, num)
 		for i := range f {
 			f[i] = i
 		}
 
-		for {
-			s.Scan()
+		for s.Scan() {
 			if line = s.Text(); len(line) == 0 {
 				break
 			}

@@ -123,8 +123,7 @@ func main() {
 	defer out.Close()
 
 	var s1, s2 string
-	var kase int
-	for {
+	for kase := 1; ; kase++ {
 		if _, err := fmt.Fscanf(in, "%d", &d); err != nil {
 			break
 		}
@@ -133,7 +132,6 @@ func main() {
 			fmt.Fscanf(in, "%s%s", &s1, &s2)
 			set(s1, s2, i)
 		}
-		kase++
 		output(out, bfs(), kase)
 	}
 }

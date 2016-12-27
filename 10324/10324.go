@@ -30,13 +30,12 @@ func main() {
 	defer out.Close()
 
 	var line string
-	var l, r, n, kase int
-	for {
+	var l, r, n int
+	for kase := 1; ; kase++ {
 		if _, err := fmt.Fscanf(in, "%s", &line); err != nil {
 			break
 		}
 		dict := buildDict(line)
-		kase++
 		fmt.Fprintf(out, "Case %d:\n", kase)
 		fmt.Fscanf(in, "%d", &n)
 		for i := 0; i < n; i++ {

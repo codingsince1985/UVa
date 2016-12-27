@@ -109,8 +109,7 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	kase, _ := strconv.Atoi(nextLine(s))
-	for kase > 0 {
+	for kase, _ := strconv.Atoi(nextLine(s)); kase > 0; kase-- {
 		teamMap = make(map[string]team)
 		fmt.Fprintln(out, nextLine(s))
 
@@ -132,7 +131,7 @@ func main() {
 		v := values(teamMap)
 		sort.Sort(v)
 		output(v)
-		if kase--; kase > 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

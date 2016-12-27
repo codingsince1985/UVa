@@ -58,8 +58,7 @@ func main() {
 	var kase, r, c, n int
 	var grid [][]byte
 	var line string
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "%d%d%d", &r, &c, &n)
 		grid = make([][]byte, r)
 		for j := range grid {
@@ -71,7 +70,7 @@ func main() {
 		}
 		solve(grid, r, c, n)
 		output(grid)
-		if kase--; kase > 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

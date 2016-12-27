@@ -8,12 +8,13 @@ import (
 	"sort"
 )
 
-type char struct {
-	ch   byte
-	freq int
-}
-
-type chars []char
+type (
+	char struct {
+		ch   byte
+		freq int
+	}
+	chars []char
+)
 
 func (a chars) Len() int { return len(a) }
 

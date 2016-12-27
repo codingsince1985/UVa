@@ -78,8 +78,8 @@ func main() {
 	out, _ := os.Create("125.out")
 	defer out.Close()
 
-	var n, n1, n2, kase int
-	for {
+	var n, n1, n2 int
+	for kase := 0; ; kase++ {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
 		}
@@ -91,7 +91,6 @@ func main() {
 			m = max(m, max(n1, n2))
 		}
 		fmt.Fprintf(out, "matrix for city %d\n", kase)
-		kase++
 		for _, vi := range solve(street) {
 			fmt.Fprintln(out, strings.Join(vi, " "))
 		}

@@ -48,13 +48,12 @@ func main() {
 	out, _ = os.Create("10189.out")
 	defer out.Close()
 
-	var kase int
 	var line string
-	for {
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d%d", &m, &n); m == 0 {
 			break
 		}
-		if kase++; kase > 1 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 		fmt.Fprintf(out, "Field #%d:\n", kase)

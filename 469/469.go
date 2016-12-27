@@ -41,8 +41,7 @@ func main() {
 	var kase, x, y int
 	var line string
 	var visited [][]bool
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanln(in)
 		var grid [][]byte
 		for {
@@ -65,7 +64,7 @@ func main() {
 				break
 			}
 		}
-		if kase--; kase > 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

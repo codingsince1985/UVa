@@ -22,8 +22,7 @@ func main() {
 		dict[w] = d
 	}
 
-	var s uint64
-	for i := 0; i < n; i++ {
+	for s, i := uint64(0), 0; i < n; i++ {
 		s = 0
 		for {
 			if fmt.Fscanf(in, "%s", &w); w == "." {

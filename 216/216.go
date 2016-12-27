@@ -60,8 +60,8 @@ func main() {
 	out, _ := os.Create("216.out")
 	defer out.Close()
 
-	var kase, n, x, y int
-	for {
+	var n, x, y int
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
@@ -78,8 +78,6 @@ func main() {
 		seg = make([]float64, n-1)
 		min = math.MaxFloat64
 		backtracking(0, 0)
-
-		kase++
 		output(out, kase)
 	}
 }

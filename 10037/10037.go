@@ -39,8 +39,7 @@ func main() {
 	defer out.Close()
 
 	var kase, n int
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanln(in)
 		fmt.Fscanf(in, "%d", &n)
 		p := make([]int, n)
@@ -51,7 +50,7 @@ func main() {
 		time, steps := solve(p)
 		fmt.Fprintln(out, time)
 		fmt.Fprintln(out, strings.Join(steps, "\n"))
-		if kase--; kase > 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

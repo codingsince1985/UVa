@@ -9,9 +9,7 @@ import (
 
 var out *os.File
 
-type point struct {
-	x, y int
-}
+type point struct{ x, y int }
 
 func find(piece byte, board [8][8]byte) point {
 	for i, vi := range board {
@@ -118,8 +116,7 @@ func main() {
 
 	var line string
 	var board [8][8]byte
-	kase := 0
-	for {
+	for kase := 1; ; kase++ {
 		done := true
 		for i := range board {
 			fmt.Fscanf(in, "%s", &line)
@@ -134,7 +131,6 @@ func main() {
 			break
 		}
 		fmt.Fscanln(in)
-		kase++
 		check(kase, board)
 	}
 }

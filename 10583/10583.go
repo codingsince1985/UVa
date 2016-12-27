@@ -20,8 +20,8 @@ func main() {
 	out, _ := os.Create("10583.out")
 	defer out.Close()
 
-	var n, m, s1, s2, kase int
-	for {
+	var n, m, s1, s2 int
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d%d", &n, &m); n == 0 && m == 0 {
 			break
 		}
@@ -42,7 +42,6 @@ func main() {
 				count++
 			}
 		}
-		kase++
 		fmt.Fprintf(out, "Case %d: %d\n", kase, count)
 	}
 }

@@ -38,8 +38,8 @@ func main() {
 	out, _ := os.Create("10000.out")
 	defer out.Close()
 
-	var n, s, n1, n2, kase int
-	for {
+	var n, s, n1, n2 int
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
@@ -58,7 +58,6 @@ func main() {
 		longest = 0
 		lowest = math.MaxInt32
 		dfs(s)
-		kase++
 		fmt.Fprintf(out, "Case %d: The longest path from %d has length %d, finishing at %d\n\n", kase, s, longest, lowest)
 	}
 }

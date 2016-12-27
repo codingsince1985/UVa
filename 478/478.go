@@ -9,20 +9,18 @@ import (
 
 var out *os.File
 
-type point struct{ x, y float64 }
-
-type rectangle struct{ p1, p2 point }
-
-type circle struct {
-	p      point
-	radius float64
-}
-
-type triangle struct{ p1, p2, p3 point }
-
-type shape interface {
-	contains(p point) bool
-}
+type (
+	point     struct{ x, y float64 }
+	rectangle struct{ p1, p2 point }
+	circle    struct {
+		p      point
+		radius float64
+	}
+	triangle struct{ p1, p2, p3 point }
+	shape    interface {
+		contains(p point) bool
+	}
+)
 
 func (r rectangle) contains(p point) bool {
 	return p.x > r.p1.x && p.x < r.p2.x && p.y < r.p1.y && p.y > r.p2.y
@@ -87,12 +85,10 @@ func main() {
 		}
 	}
 
-	count := 0
-	for {
+	for count := 1; ; count++ {
 		if fmt.Fscanf(in, "%f%f", &a, &b); a == 9999.9 && b == 9999.9 {
 			break
 		}
-		count++
 		testIn(count, point{a, b}, shapes)
 	}
 }

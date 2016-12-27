@@ -32,12 +32,11 @@ func main() {
 	out, _ := os.Create("694.out")
 	defer out.Close()
 
-	var a, l, kase int
-	for {
+	var a, l int
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d%d", &a, &l); a < 0 {
 			break
 		}
-		kase++
 		fmt.Fprintf(out, "Case %d: A = %d, limit = %d, number of terms = %d\n", kase, a, l, solve(a, l))
 	}
 }

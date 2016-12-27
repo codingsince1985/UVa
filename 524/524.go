@@ -61,8 +61,7 @@ func main() {
 	out, _ = os.Create("524.out")
 	defer out.Close()
 
-	var kase int
-	for {
+	for kase := 1; ; kase++ {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
 		}
@@ -72,7 +71,6 @@ func main() {
 		visited[1] = true
 		list[1] = 1
 
-		kase++
 		fmt.Fprintf(out, "Case %d:\n", kase)
 		backtracking(2)
 		fmt.Fprintln(out)

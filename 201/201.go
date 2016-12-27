@@ -48,9 +48,9 @@ func main() {
 	out, _ := os.Create("201.out")
 	defer out.Close()
 
-	var kase, m, n1, n2 int
+	var m, n1, n2 int
 	var direction byte
-	for {
+	for kase := 1; ; kase++ {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
 		}
@@ -68,7 +68,7 @@ func main() {
 			}
 		}
 		squareMap := solve(grid)
-		if kase++; kase > 1 {
+		if kase > 1 {
 			fmt.Fprintf(out, "\n**********************************\n\n")
 		}
 		fmt.Fprintf(out, "Problem #%d\n\n", kase)

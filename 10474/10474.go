@@ -35,9 +35,9 @@ func main() {
 	out, _ := os.Create("10474.out")
 	defer out.Close()
 
-	var N, Q, q, kase int
+	var N, Q, q int
 	var a marbles
-	for {
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d%d", &N, &Q); N == 0 && Q == 0 {
 			break
 		}
@@ -47,7 +47,6 @@ func main() {
 		}
 		sort.Ints(a)
 
-		kase++
 		fmt.Fprintf(out, "CASE# %d:\n", kase)
 		for i := 0; i < Q; i++ {
 			fmt.Fscanf(in, "%d", &q)

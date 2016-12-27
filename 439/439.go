@@ -7,10 +7,7 @@ import (
 	"os"
 )
 
-type cell struct {
-	x, y  int
-	steps int
-}
+type cell struct{ x, y, steps int }
 
 var visited [][]bool
 

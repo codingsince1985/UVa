@@ -32,7 +32,7 @@ func main() {
 	kase, _ := strconv.Atoi(s.Text())
 	s.Scan()
 	s.Text()
-	for kase > 0 && s.Scan() {
+	for ; kase > 0 && s.Scan(); kase-- {
 		num, _ := strconv.Atoi(s.Text())
 		f := make([]int, num+1)
 		for i := range f {
@@ -60,7 +60,7 @@ func main() {
 			}
 		}
 		fmt.Fprintf(out, "%d,%d\n", ok, ko)
-		if kase--; kase > 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

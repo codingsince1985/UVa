@@ -58,12 +58,11 @@ func main() {
 	defer out.Close()
 
 	var m int
-	fmt.Fscanf(in, "%d", &m)
-	for m > 0 {
+	for fmt.Fscanf(in, "%d", &m); m > 0; m-- {
 		fmt.Fscanln(in)
 		fmt.Fscanf(in, "%d", &n)
 		write(n)
-		if m--; m > 0 {
+		if m > 1 {
 			fmt.Fprintln(out)
 		}
 	}

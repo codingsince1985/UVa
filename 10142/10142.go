@@ -92,8 +92,7 @@ func main() {
 	kase, _ := strconv.Atoi(s.Text())
 	s.Scan()
 	s.Text()
-	for kase > 0 {
-		s.Scan()
+	for ; s.Scan() && kase > 0; kase-- {
 		n, _ := strconv.Atoi(s.Text())
 		candidates := make([]string, n)
 		for i := range candidates {
@@ -115,7 +114,7 @@ func main() {
 			votes = append(votes, vote)
 		}
 		count(candidates, votes)
-		if kase--; kase != 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

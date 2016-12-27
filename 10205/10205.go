@@ -46,7 +46,7 @@ func main() {
 	s.Text()
 	var tmp int
 	var line string
-	for kase > 0 && s.Scan() {
+	for ; kase > 0 && s.Scan(); kase-- {
 		var shuffles [][]int
 		for n, _ := strconv.Atoi(s.Text()); n > 0; n-- {
 			var shuffle []int
@@ -75,7 +75,7 @@ func main() {
 		for _, vi := range do(shuffles, order) {
 			fmt.Fprintf(out, "%s of %s\n", values[vi%13], suits[vi/13])
 		}
-		if kase--; kase > 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

@@ -33,10 +33,10 @@ func main() {
 	out, _ := os.Create("544.out")
 	defer out.Close()
 
-	var kase, n, r, l int
+	var n, r, l int
 	var c1, c2 string
 	first := true
-	for {
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d%d", &n, &r); n == 0 && r == 0 {
 			break
 		}
@@ -57,7 +57,6 @@ func main() {
 			matrix[c1][c2], matrix[c2][c1] = l, l
 		}
 		fmt.Fscanf(in, "%s%s", &c1, &c2)
-		kase++
 		fmt.Fprintf(out, "Scenario #%d\n%d tons\n", kase, floydWarshall(matrix, c1, c2))
 	}
 }

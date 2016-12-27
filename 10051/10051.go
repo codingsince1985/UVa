@@ -7,9 +7,7 @@ import (
 	"os"
 )
 
-type sides struct {
-	front, back, left, right, top, bottom int
-}
+type sides struct{ front, back, left, right, top, bottom int }
 
 var (
 	side = []string{"front", "back", "left", "right", "top", "bottom"}
@@ -102,25 +100,22 @@ func main() {
 	out, _ = os.Create("10051.out")
 	defer out.Close()
 
-	var n, s1, s2, s3, s4, s5, s6, kase int
-	var c []sides
-	count := 0
-	for {
+	var n, s1, s2, s3, s4, s5, s6 int
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		c = make([]sides, n)
+		c := make([]sides, n)
 		for i := range c {
 			fmt.Fscanf(in, "%d%d%d%d%d%d", &s1, &s2, &s3, &s4, &s5, &s6)
 			cube := sides{s1, s2, s3, s4, s5, s6}
 			c[i] = cube
 		}
 		pre, mx, st := solve(c)
-		if kase++; kase > 1 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
-		count++
-		fmt.Fprintf(out, "Case #%d\n%d\n", count, mx)
+		fmt.Fprintf(out, "Case #%d\n%d\n", kase, mx)
 		output(pre, mx, st)
 	}
 }

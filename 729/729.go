@@ -32,12 +32,11 @@ func main() {
 	defer out.Close()
 
 	var kase int
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanln(in)
 		fmt.Fscanf(in, "%d%d", &n, &h)
 		dfs(0, 0, make([]string, 0))
-		if kase--; kase != 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

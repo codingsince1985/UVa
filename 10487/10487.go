@@ -39,8 +39,8 @@ func main() {
 	out, _ := os.Create("10487.out")
 	defer out.Close()
 
-	var n, m, s, kase int
-	for {
+	var n, m, s int
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
@@ -48,7 +48,6 @@ func main() {
 		for i := range num {
 			fmt.Fscanf(in, "%d", &num[i])
 		}
-		kase++
 		fmt.Fprintf(out, "Case %d:\n", kase)
 		for fmt.Fscanf(in, "%d", &m); m > 0; m-- {
 			fmt.Fscanf(in, "%d", &s)

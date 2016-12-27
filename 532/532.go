@@ -8,10 +8,8 @@ import (
 )
 
 type (
-	point struct {
-		l, r, c int
-	}
-	node struct {
+	point struct{ l, r, c int }
+	node  struct {
 		point
 		n int
 	}

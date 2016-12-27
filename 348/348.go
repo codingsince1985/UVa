@@ -70,8 +70,8 @@ func main() {
 	out, _ := os.Create("348.out")
 	defer out.Close()
 
-	var cs, n int
-	for {
+	var n int
+	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
@@ -82,8 +82,7 @@ func main() {
 		makeCache(n)
 		dp(0, n-1)
 
-		cs++
-		fmt.Fprintf(out, "Case %d: ", cs)
+		fmt.Fprintf(out, "Case %d: ", kase)
 		output(out, 0, n-1)
 		fmt.Fprintln(out)
 	}

@@ -44,8 +44,7 @@ here:
 		for i := 1; i < len(word); i++ {
 			total += cache[26][i]
 		}
-		var ch byte = 'a'
-		for i := 0; i < len(word); i++ {
+		for ch, i := byte('a'), 0; i < len(word); i++ {
 			for ; ch < word[i]; ch++ {
 				total += cache['z'-ch][len(word)-i-1]
 			}

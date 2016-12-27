@@ -60,8 +60,7 @@ func main() {
 
 	var kase, f int
 	var t [4]int
-	fmt.Fscanf(in, "%d", &kase)
-	for kase > 0 {
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "%d%d%d%d", &t[0], &t[1], &t[2], &t[3])
 		initial := config{t, 0}
 		fmt.Fscanf(in, "%d%d%d%d", &t[0], &t[1], &t[2], &t[3])
@@ -73,7 +72,7 @@ func main() {
 			forbidden[t] = true
 		}
 		fmt.Fprintln(out, bfs(initial))
-		if kase--; kase > 0 {
+		if kase > 1 {
 			fmt.Fscanln(in)
 		}
 	}

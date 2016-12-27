@@ -35,7 +35,7 @@ func main() {
 	s.Scan()
 	s.Text()
 	var tree string
-	for kase > 0 {
+	for ; kase > 0; kase-- {
 		var count float64
 		treeMap := make(map[string]int)
 		for s.Scan() {
@@ -48,7 +48,7 @@ func main() {
 		for _, v := range names(treeMap) {
 			fmt.Fprintf(out, "%s %.4f\n", v, float64(treeMap[v]*100.0)/count)
 		}
-		if kase--; kase > 0 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
 	}

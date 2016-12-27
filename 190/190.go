@@ -8,9 +8,7 @@ import (
 	"os"
 )
 
-type point struct {
-	x, y float64
-}
+type point struct{ x, y float64 }
 
 func abs(a float64) float64 {
 	if a >= 0 {

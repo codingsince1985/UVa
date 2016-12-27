@@ -63,13 +63,11 @@ func main() {
 	out, _ := os.Create("10101.out")
 	defer out.Close()
 
-	var kase int
 	var num string
-	for {
+	for kase := 1; ; kase++ {
 		if _, err := fmt.Fscanf(in, "%s", &num); err != nil {
 			break
 		}
-		kase++
 		if num == "0" {
 			fmt.Fprintf(out, "% 4d: 0\n", kase)
 			continue
