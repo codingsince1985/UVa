@@ -82,6 +82,7 @@ UVa 325 - [Identifying Legal Pascal Real Constants](https://uva.onlinejudge.org/
 UVa 326 - [Extrapolation Using a Difference Table](https://uva.onlinejudge.org/external/3/326.pdf)  
 UVa 333 - [Recognizing Good ISBNs](https://uva.onlinejudge.org/external/3/333.pdf)  
 UVa 336 - [A Node Too Far](https://uva.onlinejudge.org/external/3/336.pdf)  
+UVa 337 - [Interpreting Control Sequences](https://uva.onlinejudge.org/external/3/337.pdf)  
 UVa 340 - [Master-Mind Hints](https://uva.onlinejudge.org/external/3/340.pdf)  
 UVa 343 - [What Base Is This?](https://uva.onlinejudge.org/external/3/343.pdf)  
 UVa 344 - [Roman Digititis](https://uva.onlinejudge.org/external/3/344.pdf)  
