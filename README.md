@@ -95,6 +95,7 @@ UVa 357 - [Let Me Count The Ways](https://uva.onlinejudge.org/external/3/357.pdf
 UVa 369 - [Combinations](https://uva.onlinejudge.org/external/3/369.pdf)  
 UVa 371 - [Ackermann Functions](https://uva.onlinejudge.org/external/3/371.pdf)  
 UVa 374 - [Big Mod](https://uva.onlinejudge.org/external/3/374.pdf)  
+UVa 377 - [Cowculations](https://uva.onlinejudge.org/external/3/377.pdf)  
 UVa 378 - [Intersecting Lines](https://uva.onlinejudge.org/external/3/378.pdf)  
 UVa 382 - [Perfection](https://uva.onlinejudge.org/external/3/382.pdf)  
 UVa 383 - [Shipping Routes](https://uva.onlinejudge.org/external/3/383.pdf)  
