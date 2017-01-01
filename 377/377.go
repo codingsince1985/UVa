@@ -60,16 +60,16 @@ func shiftRight(num [8]int) [8]int {
 }
 
 func calc(n1, n2, op string) string {
-	num2 := convert(n2)
 	switch op {
 	case "A":
-		num2 = add(convert(n1), num2)
+		return toString(add(convert(n1), convert(n2)))
 	case "R":
-		num2 = shiftRight(num2)
+		return toString(shiftRight(convert(n2)))
 	case "L":
-		num2 = shiftLeft(num2)
+		return toString(shiftLeft(convert(n2)))
+	default:
+		return n2
 	}
-	return toString(num2)
 }
 
 func main() {
@@ -82,8 +82,7 @@ func main() {
 	var op, n1, n2, result string
 	fmt.Fprintln(out, "COWCULATIONS OUTPUT")
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
-		fmt.Fscanf(in, "%s", &n1)
-		fmt.Fscanf(in, "%s", &n2)
+		fmt.Fscanf(in, "%s\n%s", &n1, &n2)
 		for i := 0; i < 3; i++ {
 			fmt.Fscanf(in, "%s", &op)
 			n2 = calc(n1, n2, op)
