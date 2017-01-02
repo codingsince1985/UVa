@@ -297,6 +297,7 @@ UVa 10161 - [Ant on a Chessboard](https://uva.onlinejudge.org/external/101/10161
 UVa 10162 - [Last Digit](https://uva.onlinejudge.org/external/101/10162.pdf)  
 UVa 10168 - [Summation of Four Primes](https://uva.onlinejudge.org/external/101/10168.pdf)  
 UVa 10170 - [The Hotel with Infinite Rooms](https://uva.onlinejudge.org/external/101/10170.pdf)  
+UVa 10176 - [Ocean Deep! - Make it shallow!!](https://uva.onlinejudge.org/external/101/10176.pdf)  
 UVa 10179 - [Irreducable Basic Fractions](https://uva.onlinejudge.org/external/101/10179.pdf)  
 UVa 10182 - [Bee Maja](https://uva.onlinejudge.org/external/101/10182.pdf)  
 UVa 10183 - [How Many Fibs?](https://uva.onlinejudge.org/external/101/10183.pdf)  
