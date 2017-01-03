@@ -10,7 +10,7 @@ import (
 
 func mod(num string) int {
 	var n int
-	for i := len(num) - 1; i >= 0; i-- {
+	for i := range num {
 		n *= 2
 		if num[i] == '1' {
 			n++
