@@ -38,10 +38,10 @@ here:
 			}
 			code = append(code, line)
 		}
-		if decodable(code) {
-			fmt.Fprintf(out, "Set %d is immediately decodable\n", kase)
+		if fmt.Fprintf(out, "Set %d ", kase); decodable(code) {
+			fmt.Fprintln(out, "is immediately decodable")
 		} else {
-			fmt.Fprintf(out, "Set %d is not immediately decodable\n", kase)
+			fmt.Fprintln(out, "is not immediately decodable")
 		}
 	}
 }

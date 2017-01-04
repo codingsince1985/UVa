@@ -38,13 +38,14 @@ func main() {
 		fmt.Fscanf(in, "%s", &t1)
 		fmt.Fscanf(in, "%s", &t2)
 		years := compare(t1, t2)
+		fmt.Fprintf(out, "Case #%d: ", i)
 		switch {
 		case years < 0:
-			fmt.Fprintf(out, "Case #%d: Invalid birth date\n", i)
+			fmt.Fprintln(out, "Invalid birth date")
 		case years > 130:
-			fmt.Fprintf(out, "Case #%d: Check birth date\n", i)
+			fmt.Fprintln(out, "Check birth date")
 		default:
-			fmt.Fprintf(out, "Case #%d: %d\n", i, years)
+			fmt.Fprintf(out, "%d\n", years)
 		}
 	}
 }

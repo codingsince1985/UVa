@@ -42,15 +42,14 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
 		}
-		if isPrime(n) {
-			r := reverse(n)
-			if n != r && isPrime(r) {
-				fmt.Fprintf(out, "%d is emirp.\n", n)
+		if fmt.Fprintf(out, "%d ", n); isPrime(n) {
+			if r := reverse(n); n != r && isPrime(r) {
+				fmt.Fprintln(out, "is emirp.")
 			} else {
-				fmt.Fprintf(out, "%d is prime.\n", n)
+				fmt.Fprintln(out, "is prime.")
 			}
 		} else {
-			fmt.Fprintf(out, "%d is not prime.\n", n)
+			fmt.Fprintln(out, "is not prime.")
 		}
 	}
 }

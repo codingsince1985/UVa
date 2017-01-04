@@ -98,13 +98,14 @@ func checkBlack(board [8][8]byte) bool {
 }
 
 func check(kase int, board [8][8]byte) {
+	fmt.Fprintf(out, "Game #%d: ", kase)
 	switch {
 	case checkWhite(board):
-		fmt.Fprintf(out, "Game #%d: white king is in check.\n", kase)
+		fmt.Fprintln(out, "white king is in check.")
 	case checkBlack(board):
-		fmt.Fprintf(out, "Game #%d: black king is in check.\n", kase)
+		fmt.Fprintln(out, "black king is in check.")
 	default:
-		fmt.Fprintf(out, "Game #%d: no king is in check.\n", kase)
+		fmt.Fprintln(out, "no king is in check.")
 	}
 }
 

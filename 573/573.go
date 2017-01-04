@@ -18,22 +18,16 @@ func main() {
 		if fmt.Fscanf(in, "%f%f%f%f", &h, &u, &d, &f); h == 0 {
 			break
 		}
-		fatigue := u * f / 100
-		pos := 0.0
-		day := 0
-		for {
-			day++
+		for fatigue, pos, day := u*f/100, 0.0, 1; ; day++ {
 			up := u - fatigue*float64(day-1)
 			if up <= 0 {
 				up = 0
 			}
-			pos += up
-			if pos > h {
+			if pos += up; pos > h {
 				fmt.Fprintf(out, "success on day %d\n", day)
 				break
 			}
-			pos -= d
-			if pos < 0 {
+			if pos -= d; pos < 0 {
 				fmt.Fprintf(out, "failure on day %d\n", day)
 				break
 			}

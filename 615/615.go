@@ -102,10 +102,10 @@ here:
 				break
 			}
 		}
-		if isTree(edges) {
-			fmt.Fprintf(out, "Case %d is a tree.\n", kase)
+		if fmt.Fprintf(out, "Case %d ", kase); isTree(edges) {
+			fmt.Fprintln(out, "is a tree.")
 		} else {
-			fmt.Fprintf(out, "Case %d is not a tree.\n", kase)
+			fmt.Fprintln(out, "is not a tree.")
 		}
 	}
 }

@@ -57,10 +57,10 @@ func main() {
 			break
 		}
 		line = strings.TrimSpace(line)
-		if check(line) {
-			fmt.Fprintf(out, "%s is legal.\n", line)
+		if fmt.Fprintf(out, "%s ", line); check(line) {
+			fmt.Fprintln(out, "is legal.")
 		} else {
-			fmt.Fprintf(out, "%s is illegal.\n", line)
+			fmt.Fprintln(out, "is illegal.")
 		}
 	}
 }

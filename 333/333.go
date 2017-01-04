@@ -51,10 +51,10 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%s", &line); err != nil {
 			break
 		}
-		if isValid(line) {
-			fmt.Fprintf(out, "%s is correct.\n", line)
+		if fmt.Fprintf(out, "%s ", line); isValid(line) {
+			fmt.Fprintln(out, "is correct.")
 		} else {
-			fmt.Fprintf(out, "%s is incorrect.\n", line)
+			fmt.Fprintln(out, "is incorrect.")
 		}
 	}
 }

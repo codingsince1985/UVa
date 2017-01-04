@@ -29,10 +29,10 @@ func main() {
 		num1, _ := strconv.ParseInt(num, 2, 64)
 		fmt.Fscanf(in, "%s", &num)
 		num2, _ := strconv.ParseInt(num, 2, 64)
-		if gcd(num1, num2) == 1 {
-			fmt.Fprintf(out, "Pair #%d: Love is not all you need!\n", i)
+		if fmt.Fprintf(out, "Pair #%d: ", i); gcd(num1, num2) == 1 {
+			fmt.Fprintln(out, "Love is not all you need!")
 		} else {
-			fmt.Fprintf(out, "Pair #%d: All you need is love!\n", i)
+			fmt.Fprintln(out, "All you need is love!")
 		}
 	}
 }

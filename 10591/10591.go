@@ -37,8 +37,7 @@ func main() {
 	fmt.Fscanf(in, "%d", &n)
 	for i := 1; i <= n; i++ {
 		fmt.Fscanf(in, "%d", &num)
-		fmt.Fprintf(out, "Case #%d: %d is ", i, num)
-		if happy(num) {
+		if fmt.Fprintf(out, "Case #%d: %d is ", i, num); happy(num) {
 			fmt.Fprintln(out, "a Happy number.")
 		} else {
 			fmt.Fprintln(out, "an Unhappy number.")

@@ -28,10 +28,10 @@ func main() {
 			}
 			odd = !odd
 		}
-		if addsum%11 == 0 {
-			fmt.Fprintf(out, "%s is a multiple of 11.\n", n)
+		if fmt.Fprintf(out, "%s ", n); addsum%11 == 0 {
+			fmt.Fprintln(out, "is a multiple of 11.")
 		} else {
-			fmt.Fprintf(out, "%s is not a multiple of 11.\n", n)
+			fmt.Fprintln(out, "is not a multiple of 11.")
 		}
 	}
 }

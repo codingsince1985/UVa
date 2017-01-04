@@ -31,9 +31,9 @@ func main() {
 		}
 		fmt.Fprintf(out, "%10d%10d    ", step, mod)
 		if cnt == mod {
-			fmt.Fprintf(out, "Good Choice\n\n")
+			fmt.Fprintln(out, "Good Choice\n")
 		} else {
-			fmt.Fprintf(out, "Bad Choice\n\n")
+			fmt.Fprintln(out, "Bad Choice\n")
 		}
 	}
 }

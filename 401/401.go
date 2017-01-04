@@ -45,15 +45,16 @@ func main() {
 		}
 		p := testIf(line, isPalindromic)
 		m := testIf(line, isMirrored)
+		fmt.Fprintf(out, "%s -- ", line)
 		switch {
 		case !p && !m:
-			fmt.Fprintf(out, "%s -- is not a palindrome.\n\n", line)
+			fmt.Fprintln(out, "is not a palindrome.\n")
 		case p && !m:
-			fmt.Fprintf(out, "%s -- is a regular palindrome.\n\n", line)
+			fmt.Fprintln(out, "is a regular palindrome.\n")
 		case !p && m:
-			fmt.Fprintf(out, "%s -- is a mirrored string.\n\n", line)
+			fmt.Fprintln(out, "is a mirrored string.\n")
 		default:
-			fmt.Fprintf(out, "%s -- is a mirrored palindrome.\n\n", line)
+			fmt.Fprintln(out, "is a mirrored palindrome.\n")
 		}
 	}
 }

@@ -48,8 +48,7 @@ func main() {
 			devices[tmp-1].on = !devices[tmp-1].on
 		}
 
-		fmt.Fprintf(out, "Sequence %d\n", kase)
-		if blown {
+		if fmt.Fprintf(out, "Sequence %d\n", kase); blown {
 			fmt.Fprintln(out, "Fuse was blown.\n")
 		} else {
 			fmt.Fprintln(out, "Fuse was not blown.")

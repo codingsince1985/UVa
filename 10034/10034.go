@@ -23,8 +23,7 @@ func prim(freckles []point) float64 {
 			var minP int
 			minD := math.MaxFloat64
 			for j := range visited {
-				dis := distance(freckles[i], freckles[j])
-				if dis < minD {
+				if dis := distance(freckles[i], freckles[j]); dis < minD {
 					minP = i
 					minD = dis
 				}
