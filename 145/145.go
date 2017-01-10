@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strings"
 )
 
 var (
@@ -64,8 +63,7 @@ func main() {
 		if line = s.Text(); line == "#" {
 			break
 		}
-		r := strings.NewReader(line)
-		fmt.Fscanf(r, "%c%s%d%d%d%d", &step, &phone, &h1, &m1, &h2, &m2)
+		fmt.Sscanf(line, "%c%s%d%d%d%d", &step, &phone, &h1, &m1, &h2, &m2)
 		cross := crossDay(h1, m1, h2, m2)
 		if cross {
 			h1, m1, h2, m2 = h2, m2, h1, m1

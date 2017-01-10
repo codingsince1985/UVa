@@ -51,11 +51,10 @@ func main() {
 
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
-	var n1, n2 string
 	for s.Scan() {
-		n1 = s.Text()
+		n1 := s.Text()
 		s.Scan()
-		n2 = s.Text()
+		n2 := s.Text()
 		solve(out, n1, n2)
 	}
 }

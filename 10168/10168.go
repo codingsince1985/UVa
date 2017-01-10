@@ -37,11 +37,10 @@ func main() {
 			fmt.Fprintln(out, "Impossible.")
 			continue
 		}
-		switch {
-		case n%2 == 0:
+		if n%2 == 0 {
 			fmt.Fprint(out, "2 2 ")
 			n -= 4
-		default:
+		} else {
 			fmt.Fprint(out, "2 3 ")
 			n -= 5
 		}

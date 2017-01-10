@@ -19,11 +19,10 @@ func isSlump(s string) int {
 	if s[idx] == 'G' {
 		return idx + 1
 	}
-	if len1 := isSlump(s[idx:]); len1 == 0 {
-		return 0
-	} else {
+	if len1 := isSlump(s[idx:]); len1 != 0 {
 		return idx + len1
 	}
+	return 0
 }
 
 func isSlimp(s string) int {
@@ -45,15 +44,13 @@ func isSlimp(s string) int {
 }
 
 func isSlurpy(s string) bool {
-	if len1 := isSlimp(s); len1 == 0 {
-		return false
-	} else {
-		if len2 := isSlump(s[len1:]); len2 == 0 {
-			return false
-		} else {
+	if len1 := isSlimp(s); len1 != 0 {
+		if len2 := isSlump(s[len1:]); len2 != 0 {
 			return len1+len2 == len(s)
 		}
+		return false
 	}
+	return false
 }
 
 func main() {

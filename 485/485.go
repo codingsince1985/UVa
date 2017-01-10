@@ -10,15 +10,13 @@ import (
 
 const MAX = 60
 
-var p []big.Int
-var s string
-var done = false
-
 func main() {
 	out, _ := os.Create("485.out")
 	defer out.Close()
 
-	for !done {
+	var p []big.Int
+here:
+	for {
 		var one big.Int
 		one.SetInt64(1)
 		p = append(p, one)
@@ -29,14 +27,14 @@ func main() {
 			p[i].Add(&p[i], &p[i-1])
 			fmt.Fprintf(out, " %v", &p[i])
 
-			s = fmt.Sprint(&p[i])
+			s := fmt.Sprint(&p[i])
 			if len(s) > MAX {
-				done = true
-				break
+				fmt.Fprintln(out)
+				break here
 			}
 		}
 
-		if !done && l > 1 {
+		if l > 1 {
 			fmt.Fprintf(out, " %v", &p[0])
 		}
 		fmt.Fprintln(out)

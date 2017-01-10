@@ -19,9 +19,8 @@ func main() {
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "%s", &s)
 		for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
-			fmt.Fscanf(in, "%s", &t)
 			// may need Aho–Corasick algorithm, but ah well
-			if strings.Contains(s, t) {
+			if fmt.Fscanf(in, "%s", &t); strings.Contains(s, t) {
 				fmt.Fprintln(out, "y")
 			} else {
 				fmt.Fprintln(out, "n")

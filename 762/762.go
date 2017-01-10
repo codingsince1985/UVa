@@ -63,8 +63,7 @@ func main() {
 			links[n2] = append(links[n2], n1)
 		}
 		fmt.Fscanf(in, "%s%s\n\n", &src, &dest)
-		route := bfs(links, src, dest)
-		if route == nil {
+		if route := bfs(links, src, dest); route == nil {
 			fmt.Fprintln(out, "No route")
 		} else {
 			for _, v := range route {

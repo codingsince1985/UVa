@@ -57,42 +57,42 @@ func main() {
 		if line = s.Text(); line == "X" {
 			break
 		}
-		switch {
-		case line[0] == 'I':
+		switch line[0] {
+		case 'I':
 			fmt.Sscanf(line, "%s%d%d", &tmp, &m, &n)
 			picture = make([][]byte, n)
 			for i := range picture {
 				picture[i] = make([]byte, m)
 			}
 			fallthrough
-		case line[0] == 'C':
+		case 'C':
 			clear(picture)
-		case line[0] == 'L':
+		case 'L':
 			fmt.Sscanf(line, "%s%d%d%s", &tmp, &x1, &y1, &c)
 			picture[y1-1][x1-1] = c[0]
-		case line[0] == 'V':
+		case 'V':
 			fmt.Sscanf(line, "%s%d%d%d%s", &tmp, &x1, &y1, &y2, &c)
 			for y := min(y1, y2) - 1; y <= max(y1, y2)-1; y++ {
 				picture[y][x1-1] = c[0]
 			}
-		case line[0] == 'H':
+		case 'H':
 			fmt.Sscanf(line, "%s%d%d%d%s", &tmp, &x1, &x2, &y1, &c)
 			for x := min(x1, x2) - 1; x <= max(x1, x2)-1; x++ {
 				picture[y1-1][x] = c[0]
 			}
-		case line[0] == 'K':
+		case 'K':
 			fmt.Sscanf(line, "%s%d%d%d%d%s", &tmp, &x1, &y1, &x2, &y2, &c)
 			for x := x1 - 1; x <= x2-1; x++ {
 				for y := y1 - 1; y <= y2-1; y++ {
 					picture[y][x] = c[0]
 				}
 			}
-		case line[0] == 'F':
+		case 'F':
 			fmt.Sscanf(line, "%s%d%d%s", &tmp, &x1, &y1, &c)
 			if picture[y1-1][x1-1] != c[0] { // so don't need to record visited when doing dfs
 				fill(picture, x1-1, y1-1, c[0])
 			}
-		case line[0] == 'S':
+		case 'S':
 			fmt.Sscanf(line, "%s%s", &tmp, &c)
 			fmt.Fprintln(out, c)
 			for _, v := range picture {

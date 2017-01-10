@@ -26,8 +26,7 @@ func main() {
 		if !started {
 			if c > 'A' && c < 'Z' || c > 'a' && c < 'z' {
 				started = true
-				u := strings.ToUpper(string(c))
-				if !(u == "A" || u == "E" || u == "I" || u == "O" || u == "U") {
+				if u := strings.ToUpper(string(c)); !(u == "A" || u == "E" || u == "I" || u == "O" || u == "U") {
 					suffix = string(c)
 				} else {
 					buf.WriteByte(c)

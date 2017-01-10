@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strings"
 )
 
 func isAlphabetic(b byte) bool { return b >= 'A' && b <= 'Z' || b >= 'a' && b <= 'z' }
@@ -48,13 +47,11 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var kase, k, e int
-	for s.Scan() {
-		r := strings.NewReader(s.Text())
-		fmt.Fscanf(r, "%d%d", &k, &e)
+	var k, e int
+	for kase := 1; s.Scan(); kase++ {
+		fmt.Sscanf(s.Text(), "%d%d", &k, &e)
 		keywords := make(map[string]bool)
-		for i := 0; i < k; i++ {
-			s.Scan()
+		for i := 0; i < k && s.Scan(); i++ {
 			keywords[s.Text()] = true
 		}
 		excuses := make([]string, e)
@@ -72,7 +69,6 @@ func main() {
 				max = scores[i]
 			}
 		}
-		kase++
 		fmt.Fprintf(out, "Excuse Set #%d\n", kase)
 		for i, excuse := range excuses {
 			if scores[i] == max {

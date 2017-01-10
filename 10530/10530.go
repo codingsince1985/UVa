@@ -21,10 +21,10 @@ func main() {
 			break
 		}
 		fmt.Fscanf(in, "%s%s", &s1, &s2)
-		switch {
-		case s2 == "high":
+		switch s2 {
+		case "high":
 			h = n - 1
-		case s2 == "low":
+		case "low":
 			l = n + 1
 		default:
 			if cheating || n < l || n > h {

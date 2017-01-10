@@ -10,9 +10,8 @@ import (
 func solve(n int) int {
 	cnt, step := 0, 1
 	for n > 0 {
-		n -= step
 		cnt++
-		if n == 0 {
+		if n -= step; n == 0 {
 			break
 		}
 		if cnt%2 == 0 {

@@ -21,8 +21,7 @@ func div(n, d int) (string, int) {
 	m[r] = count
 	for {
 		count++
-		r *= 10
-		if r < d {
+		if r *= 10; r < d {
 			ans += "0"
 			if idx, ok = m[r]; ok {
 				break

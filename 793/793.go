@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"os"
 	"strconv"
-	"strings"
 )
 
 func unionFind(x int, f []int) int {
@@ -28,6 +27,7 @@ func main() {
 
 	var a, b int
 	var command byte
+	var line string
 	s.Scan()
 	kase, _ := strconv.Atoi(s.Text())
 	s.Scan()
@@ -40,12 +40,10 @@ func main() {
 		}
 		ok, ko := 0, 0
 		for s.Scan() {
-			line := s.Text()
-			if line == "" {
+			if line = s.Text(); line == "" {
 				break
 			}
-			r := strings.NewReader(line)
-			fmt.Fscanf(r, "%c%d%d", &command, &a, &b)
+			fmt.Sscanf(line, "%c%d%d", &command, &a, &b)
 			fa, fb := unionFind(a, f), unionFind(b, f)
 			if command == 'c' {
 				if fa != fb {

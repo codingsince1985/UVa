@@ -78,8 +78,8 @@ func main() {
 	var n1, n2 int
 here:
 	for kase := 1; ; kase++ {
-		done := false
 		var edges []edge
+	there:
 		for s.Scan() {
 			line := s.Text()
 			if line == "" {
@@ -92,14 +92,11 @@ here:
 			for {
 				if _, err := fmt.Fscanf(r, "%d%d", &n1, &n2); err != nil || n1 == 0 && n2 == 0 {
 					if n1 == 0 && n2 == 0 {
-						done = true
+						break there
 					}
 					break
 				}
 				edges = append(edges, edge{n1, n2})
-			}
-			if done {
-				break
 			}
 		}
 		if fmt.Fprintf(out, "Case %d ", kase); isTree(edges) {

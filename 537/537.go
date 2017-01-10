@@ -27,8 +27,7 @@ func parse(tokens [2]string) (float64, float64, float64) {
 	var unit byte
 	for _, token := range tokens {
 		idx := strings.Index(token, "=")
-		r := strings.NewReader(token[idx+1:])
-		fmt.Fscanf(r, "%f%c", &v, &unit)
+		fmt.Sscanf(token[idx+1:], "%f%c", &v, &unit)
 		v = convert(v, unit)
 		switch token[idx-1] {
 		case 'U':
@@ -66,9 +65,8 @@ func main() {
 	var token string
 	var n int
 	fmt.Fscanf(in, "%d", &n)
-	for i := 1; i <= n; i++ {
+	for i := 1; i <= n && s.Scan(); i++ {
 		fmt.Fprintf(out, "Problem #%d\n", i)
-		s.Scan()
 		r := strings.NewReader(s.Text())
 		cnt := 0
 		var tokens [2]string
@@ -76,8 +74,7 @@ func main() {
 			fmt.Fscanf(r, "%s", &token)
 			if strings.Contains(token, "=") {
 				tokens[cnt] = token
-				cnt++
-				if cnt == 2 {
+				if cnt++; cnt == 2 {
 					break
 				}
 			}

@@ -10,13 +10,12 @@ import (
 func cell(matrix [][]byte, i, j int, forRow bool) byte {
 	if forRow {
 		return matrix[i][j]
-	} else {
-		return matrix[j][i]
 	}
+	return matrix[j][i]
 }
 
 func invalid(matrix [][]byte, forRow bool) []int {
-	invalids := make([]int, 0)
+	var invalids []int
 	for i := range matrix {
 		isValid := true
 		for j := range matrix[i] {

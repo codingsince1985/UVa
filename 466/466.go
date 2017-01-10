@@ -70,7 +70,7 @@ func reflect(m [][]byte) [][]byte {
 
 func bfs() []int {
 	queue := make([]node, 1)
-	queue[0] = node{fm, make([]int, 0)}
+	queue[0] = node{fm, nil}
 
 	for len(queue) > 0 {
 		curr := queue[0]
@@ -110,7 +110,6 @@ func output(out *os.File, path []int, kase int) {
 			} else {
 				fmt.Fprintf(out, "reflected vertically")
 			}
-
 		}
 		fmt.Fprintln(out, ".")
 	}

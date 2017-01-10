@@ -27,9 +27,8 @@ func main() {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		s := findSquare(n)
 		var col, row int
-		if s%2 == 0 {
+		if s := findSquare(n); s%2 == 0 {
 			if n >= (s-1)*(s-1)+s {
 				col, row = s, s*s-n+1
 			} else {

@@ -11,22 +11,18 @@ import (
 
 func solve(cycles []int) int {
 	first := true
+here:
 	for i := 1; i <= 18000; i++ {
-		allGreen := true
 		for _, cycle := range cycles {
 			if i%(2*cycle) >= cycle-5 {
-				allGreen = false
-				break
+				if first {
+					first = false
+				}
+				continue here
 			}
 		}
-		if !allGreen {
-			if first {
-				first = false
-			}
-		} else {
-			if !first {
-				return i
-			}
+		if !first {
+			return i
 		}
 	}
 	return 0

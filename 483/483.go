@@ -24,12 +24,11 @@ func main() {
 	out, _ := os.Create("483.out")
 	defer out.Close()
 
-	scanner := bufio.NewScanner(in)
-	scanner.Split(bufio.ScanLines)
-	for scanner.Scan() {
-		line := scanner.Text()
-		newLine := make([]string, 0)
-		words := strings.Split(line, " ")
+	s := bufio.NewScanner(in)
+	s.Split(bufio.ScanLines)
+	for s.Scan() {
+		words := strings.Split(s.Text(), " ")
+		var newLine []string
 		for _, v := range words {
 			newLine = append(newLine, reverse(v))
 		}

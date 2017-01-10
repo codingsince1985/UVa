@@ -50,9 +50,8 @@ func main() {
 		if str == "e/o/i" {
 			break
 		}
-		lines := strings.Split(str, "/")
 		done := false
-		for i, v := range lines {
+		for i, v := range strings.Split(str, "/") {
 			if count(v) != syllables[i] {
 				fmt.Fprintln(out, i+1)
 				done = true

@@ -32,8 +32,7 @@ func lis(l []int) [][]node {
 	var s [][]node
 	s = append(s, t)
 	for i := 1; i < len(l); i++ {
-		last := s[len(s)-1]
-		if l[i] > last[len(last)-1].num {
+		if last := s[len(s)-1]; l[i] > last[len(last)-1].num {
 			t = []node{{l[i], i}}
 			s = append(s, t)
 		} else {

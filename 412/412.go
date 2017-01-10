@@ -32,11 +32,10 @@ func CalculatePi(out *os.File, nums []int) {
 			}
 		}
 	}
-	switch cnt {
-	case 0:
+	if cnt == 0 {
 		fmt.Fprintln(out, "No estimate for this data set.")
-	default:
-		fmt.Fprintln(out, math.Sqrt(float64(total)*6/float64(cnt)))
+	} else {
+		fmt.Fprintf(out, "%.6f\n", math.Sqrt(float64(total)*6/float64(cnt)))
 	}
 }
 

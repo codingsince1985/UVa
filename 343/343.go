@@ -58,14 +58,13 @@ func main() {
 		a1, a2 := nums[0], nums[1]
 		b1, b2 := minBase(a1), minBase(a2)
 		found := false
-		for i := b1; i <= 36 && !found; i++ {
-			num1 := base10(a1, i)
-			for j := b2; j <= 36; j++ {
-				num2 := base10(a2, j)
-				if num1 == num2 {
+	here:
+		for i := b1; i <= 36; i++ {
+			for j, num1 := b2, base10(a1, i); j <= 36; j++ {
+				if num1 == base10(a2, j) {
 					fmt.Fprintf(out, "%s (base %d) = %s (base %d)\n", a1, i, a2, j)
 					found = true
-					break
+					break here
 				}
 			}
 		}

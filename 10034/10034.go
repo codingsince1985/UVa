@@ -47,7 +47,7 @@ func main() {
 		fmt.Fscanf(in, "\n%d", &num)
 		freckles := make([]point, num)
 		for i := range freckles {
-			fmt.Fscanf(in, "%f %f", &x, &y)
+			fmt.Fscanf(in, "%f%f", &x, &y)
 			freckles[i] = point{x, y}
 		}
 		fmt.Fprintf(out, "%.2f\n", prim(freckles))

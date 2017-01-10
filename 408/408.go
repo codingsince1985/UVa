@@ -19,8 +19,8 @@ func main() {
 			break
 		}
 		appeared := make([]bool, mod)
-		seed, cnt := 0, 1
 		appeared[0] = true
+		seed, cnt := 0, 1
 		for {
 			seed = (seed + step) % mod
 			if appeared[seed] {
@@ -29,8 +29,7 @@ func main() {
 			cnt++
 			appeared[seed] = true
 		}
-		fmt.Fprintf(out, "%10d%10d    ", step, mod)
-		if cnt == mod {
+		if fmt.Fprintf(out, "%10d%10d    ", step, mod); cnt == mod {
 			fmt.Fprintln(out, "Good Choice\n")
 		} else {
 			fmt.Fprintln(out, "Bad Choice\n")

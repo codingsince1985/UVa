@@ -10,8 +10,7 @@ import (
 func binarySearch(n float64) int {
 	low, high := 1, 1000
 	for low+1 < high {
-		mid := (low + high) / 2
-		if float64(mid*mid*mid) > n {
+		if mid := (low + high) / 2; float64(mid*mid*mid) > n {
 			high = mid - 1
 		} else {
 			low = mid

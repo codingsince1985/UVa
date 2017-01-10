@@ -24,8 +24,7 @@ func output(out *os.File, str string) {
 		res[digit]++
 	}
 	for i, v := range res {
-		fmt.Fprintf(out, "   (%d)%5d", i, v)
-		if i != 4 && i != 9 {
+		if fmt.Fprintf(out, "   (%d)%5d", i, v); i != 4 && i != 9 {
 			fmt.Fprint(out, " ")
 		} else {
 			fmt.Fprintln(out)

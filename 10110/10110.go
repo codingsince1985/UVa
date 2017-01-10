@@ -14,13 +14,12 @@ func main() {
 	out, _ := os.Create("10110.out")
 	defer out.Close()
 
-	var n, sr uint64
+	var n uint64
 	for {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		sr = uint64(math.Sqrt(float64(n)))
-		if sr*sr == n {
+		if sr := uint64(math.Sqrt(float64(n))); sr*sr == n {
 			fmt.Fprintln(out, "yes")
 		} else {
 			fmt.Fprintln(out, "no")

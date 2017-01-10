@@ -25,10 +25,9 @@ func N(idx int) int {
 
 func X(idx int) int {
 	if x[idx] == 0 {
-		switch idx {
-		case 0:
+		if idx == 0 {
 			x[idx] = 1
-		default:
+		} else {
 			x[idx] = N(idx) + N(idx-1) + X(idx-1)
 		}
 	}

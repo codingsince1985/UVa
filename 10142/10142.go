@@ -101,8 +101,7 @@ func main() {
 		}
 		var votes [][]int
 		var line string
-		for {
-			s.Scan()
+		for s.Scan() {
 			if line = s.Text(); line == "" {
 				break
 			}

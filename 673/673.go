@@ -37,14 +37,12 @@ func main() {
 	defer out.Close()
 
 	var n int
-	var line string
 	fmt.Fscanf(in, "%d", &n)
 
-	scanner := bufio.NewScanner(in)
-	scanner.Split(bufio.ScanLines)
-	for ; n > 0; n-- {
-		scanner.Scan()
-		if line = scanner.Text(); valid(line) {
+	s := bufio.NewScanner(in)
+	s.Split(bufio.ScanLines)
+	for ; n > 0 && s.Scan(); n-- {
+		if valid(s.Text()) {
 			fmt.Fprintln(out, "Yes")
 		} else {
 			fmt.Fprintln(out, "No")

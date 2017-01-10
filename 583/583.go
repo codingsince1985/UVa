@@ -18,22 +18,18 @@ func factorize(n int) []string {
 	}
 
 	t := 2
-	done := false
-	for !done {
+here:
+	for {
 		for n%t == 0 {
 			p = append(p, strconv.Itoa(t))
 			if n /= t; n == 1 {
-				done = true
-				break
+				break here
 			}
 		}
 
-		if !done {
-			t++
-			if t*t > n {
-				p = append(p, strconv.Itoa(n))
-				break
-			}
+		if t++; t*t > n {
+			p = append(p, strconv.Itoa(n))
+			break
 		}
 	}
 	return p

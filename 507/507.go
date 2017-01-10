@@ -12,8 +12,7 @@ func maxsub(s []int) (int, int, int) {
 	longestStart, longestEnd := -1, -1
 	var meh, msf int
 	for i, v := range s {
-		meh += v
-		if meh < 0 {
+		if meh += v; meh < 0 {
 			meh = 0
 			start = -1
 		} else {

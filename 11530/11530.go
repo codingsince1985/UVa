@@ -32,8 +32,7 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	for i := 1; i <= t; i++ {
-		s.Scan()
+	for i := 1; i <= t && s.Scan(); i++ {
 		line := s.Text()
 		cnt := 0
 		for j := range line {

@@ -24,9 +24,8 @@ func divide(n, d int) (int, string) {
 	}
 	if n == 0 {
 		return 0, string(digits)
-	} else {
-		return len(digits) - pre, string(digits)
 	}
+	return len(digits) - pre, string(digits)
 }
 
 func min(a, b int) int {

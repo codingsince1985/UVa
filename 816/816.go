@@ -15,20 +15,10 @@ type (
 	}
 )
 
-var maze map[node][]node
-
-func toFace(f byte) int {
-	switch f {
-	case 'N':
-		return 0
-	case 'E':
-		return 1
-	case 'S':
-		return 2
-	default:
-		return 3
-	}
-}
+var (
+	maze    map[node][]node
+	faceMap = map[byte]int{'N': 0, 'E': 1, 'S': 2, 'W': 3}
+)
 
 func realFrom(fm node) node {
 	switch fm.f {
@@ -67,7 +57,7 @@ func buildMaze(r, c int, dir []string) {
 	var f byte
 	for _, v := range dir {
 		f = v[0]
-		fm := node{r, c, toFace(f)}
+		fm := node{r, c, faceMap[f]}
 		for i := 1; i < len(v); i++ {
 			maze[fm] = append(maze[fm], toNode(r, c, f, v[i]))
 		}
@@ -132,7 +122,7 @@ func main() {
 			break
 		}
 		fmt.Fscanf(in, "%d%d%s%d%d", &r1, &c1, &f, &r2, &c2)
-		fm = node{r1, c1, toFace(f[0])}
+		fm = node{r1, c1, faceMap[f[0]]}
 		to = node{r2, c2, -1}
 		maze = make(map[node][]node)
 		for {

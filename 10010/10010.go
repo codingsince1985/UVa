@@ -18,25 +18,21 @@ func found(x, y int, grid [][]byte, chars []byte) bool {
 		return false
 	}
 
+here:
 	for _, dir := range directions {
 		px, py := x, y
-		next := false
 		for j := 1; j < len(chars); j++ {
 			px += dir[0]
 			py += dir[1]
 			if px < 0 || px >= m || py < 0 || py >= n {
-				next = true
-				break
+				continue here
 			}
 			if grid[px][py] != chars[j] {
-				next = true
-				break
+				continue here
 			}
 
 		}
-		if !next {
-			return true
-		}
+		return true
 	}
 	return false
 }

@@ -29,8 +29,7 @@ func encode(name string) string {
 			skipped = true
 			continue
 		}
-		soundex += code
-		if len(soundex) == 4 {
+		if soundex += code; len(soundex) == 4 {
 			break
 		}
 	}

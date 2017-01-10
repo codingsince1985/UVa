@@ -54,14 +54,12 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var s1, s2 string
 	var t1, t2 []string
 	var count int
 	for s.Scan() {
-		s1 = s.Text()
-
+		s1 := s.Text()
 		s.Scan()
-		s2 = s.Text()
+		s2 := s.Text()
 
 		s1 = convertNonLetter(s1)
 		s2 = convertNonLetter(s2)

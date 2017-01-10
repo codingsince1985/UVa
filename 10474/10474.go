@@ -60,11 +60,9 @@ func main() {
 			//			}
 
 			// built-in binary search
-			pos := sort.Search(N, func(j int) bool { return a[j] >= q })
-			switch {
-			case pos < N && a[pos] == q:
+			if pos := sort.Search(N, func(j int) bool { return a[j] >= q }); pos < N && a[pos] == q {
 				fmt.Fprintf(out, "%d found at %d\n", q, pos+1)
-			default:
+			} else {
 				fmt.Fprintf(out, "%d not found\n", q)
 			}
 		}

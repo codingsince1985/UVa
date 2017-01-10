@@ -71,8 +71,7 @@ func main() {
 		if kase > 1 {
 			fmt.Fprintf(out, "\n**********************************\n\n")
 		}
-		fmt.Fprintf(out, "Problem #%d\n\n", kase)
-		if len(squareMap) == 0 {
+		if fmt.Fprintf(out, "Problem #%d\n\n", kase); len(squareMap) == 0 {
 			fmt.Fprintln(out, "No completed squares can be found.")
 		} else {
 			for i := 1; i < n; i++ {

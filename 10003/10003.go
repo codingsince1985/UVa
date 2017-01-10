@@ -59,7 +59,6 @@ func main() {
 				dp[i][j] = -1
 			}
 		}
-
 		fmt.Fprintf(out, "The minimum cutting is %d.\n", solve(c, 0, newl-1))
 	}
 }

@@ -47,10 +47,8 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	for ; kase > 0; kase-- {
-		s.Scan()
+	for ; kase > 0 && s.Scan(); kase-- {
 		s.Text()
-
 		s.Scan()
 		idx := index(s.Text())
 		s.Scan()

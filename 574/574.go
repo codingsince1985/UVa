@@ -58,8 +58,7 @@ func main() {
 		}
 		answers = nil
 		backtracking(0, 0, nil)
-		fmt.Fprintf(out, "Sums of %d:\n", t)
-		if len(answers) == 0 {
+		if fmt.Fprintf(out, "Sums of %d:\n", t); len(answers) == 0 {
 			fmt.Fprintln(out, "NONE")
 		} else {
 			for _, answer := range answers {

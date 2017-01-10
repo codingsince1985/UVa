@@ -42,12 +42,11 @@ func main() {
 	s.Split(bufio.ScanLines)
 
 	var x, y int
-	var line string
 	var maze [][]byte
 	s.Scan()
 	kase, _ := strconv.Atoi(s.Text())
 	for kase > 0 && s.Scan() {
-		if line = s.Text(); strings.HasPrefix(line, "_") {
+		if line := s.Text(); strings.HasPrefix(line, "_") {
 			dfs(x, y, maze)
 			output(maze, line)
 			maze = nil

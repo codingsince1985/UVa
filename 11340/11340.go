@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"os"
 	"strconv"
-	"strings"
 )
 
 func main() {
@@ -25,8 +24,7 @@ func main() {
 	for kase, _ := strconv.Atoi(s.Text()); kase > 0 && s.Scan(); kase-- {
 		paid := make(map[byte]int)
 		for k, _ := strconv.Atoi(s.Text()); k > 0 && s.Scan(); k-- {
-			r := strings.NewReader(s.Text())
-			fmt.Fscanf(r, "%c %d", &c, &t)
+			fmt.Sscanf(s.Text(), "%c%d", &c, &t)
 			paid[c] = t
 		}
 		total := 0.0

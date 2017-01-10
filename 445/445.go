@@ -25,11 +25,10 @@ func outputLine(line string) {
 		if v == 'b' {
 			v = ' '
 		}
-		switch {
-		case v >= '0' && v <= '9':
+		if v >= '0' && v <= '9' {
 			tmp, _ := strconv.Atoi(string(v))
 			cnt += tmp
-		default:
+		} else {
 			for i := 0; i < cnt; i++ {
 				fmt.Fprintf(out, "%c", v)
 			}

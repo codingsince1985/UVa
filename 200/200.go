@@ -92,17 +92,14 @@ func main() {
 	matrix := buildMatrix(chars, words)
 
 	first := 0
+here:
 	for first = range matrix {
-		found := true
 		for j := range matrix[first] {
 			if matrix[j][first] == true {
-				found = false
-				break
+				continue here
 			}
 		}
-		if found {
-			break
-		}
+		break
 	}
 
 	visited := make([]bool, len(chars))

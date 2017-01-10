@@ -34,20 +34,14 @@ func intersect(l1, l2 line) bool {
 	a3 := area(l1.p1, l2)
 	a4 := area(l1.p2, l2)
 
-	switch {
-	case a1*a2 < 0 && a3*a4 < 0:
-		fallthrough
-	case a1 == 0 && cross(l2.p1, l1):
-		fallthrough
-	case a2 == 0 && cross(l2.p2, l1):
-		fallthrough
-	case a3 == 0 && cross(l1.p1, l2):
-		fallthrough
-	case a4 == 0 && cross(l1.p2, l2):
+	if a1*a2 < 0 && a3*a4 < 0 ||
+		a1 == 0 && cross(l2.p1, l1) ||
+		a2 == 0 && cross(l2.p2, l1) ||
+		a3 == 0 && cross(l1.p1, l2) ||
+		a4 == 0 && cross(l1.p2, l2) {
 		return true
-	default:
-		return false
 	}
+	return false
 }
 
 func between(a, min, max int) bool { return a >= min && a <= max }
@@ -67,20 +61,11 @@ func main() {
 		y1, y2 := max(y1, y2), min(y1, y2)
 		r := rectangle{point{x1, y1}, point{x2, y1}, point{x2, y2}, point{x1, y2}}
 
-		var ok bool
-		switch {
-		case intersect(l, line{r.p1, r.p2}):
-			fallthrough
-		case intersect(l, line{r.p2, r.p3}):
-			fallthrough
-		case intersect(l, line{r.p3, r.p4}):
-			fallthrough
-		case intersect(l, line{r.p4, r.p1}):
-			fallthrough
-		case between(l.p1.x, x1, x2) && between(l.p2.x, x1, x2) && between(l.p1.y, y2, y1) && between(l.p2.y, y2, y1):
-			ok = true
-		}
-		if ok {
+		if intersect(l, line{r.p1, r.p2}) ||
+			intersect(l, line{r.p2, r.p3}) ||
+			intersect(l, line{r.p3, r.p4}) ||
+			intersect(l, line{r.p4, r.p1}) ||
+			between(l.p1.x, x1, x2) && between(l.p2.x, x1, x2) && between(l.p1.y, y2, y1) && between(l.p2.y, y2, y1) {
 			fmt.Fprintln(out, "T")
 		} else {
 			fmt.Fprintln(out, "F")

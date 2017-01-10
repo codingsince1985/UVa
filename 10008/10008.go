@@ -51,8 +51,7 @@ func main() {
 	fmt.Fscanf(in, "%d", &n)
 	for {
 		if fmt.Fscanf(in, "%c", &c); c == '\n' {
-			ln++
-			if ln == n {
+			if ln++; ln == n {
 				break
 			}
 		}

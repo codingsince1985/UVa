@@ -37,8 +37,7 @@ func main() {
 	var token string
 	for i := 1; i < n; i++ {
 		for j := 0; j < i; j++ {
-			fmt.Fscanf(in, "%s", &token)
-			if token == "x" {
+			if fmt.Fscanf(in, "%s", &token); token == "x" {
 				matrix[i][j] = math.MaxInt32
 			} else {
 				matrix[i][j], _ = strconv.Atoi(token)

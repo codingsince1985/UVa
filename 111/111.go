@@ -48,18 +48,14 @@ func main() {
 		s1[tmp-1] = i
 	}
 
-	done := false
 	s2 := make([]int, n)
+here:
 	for {
 		for i := 1; i <= n; i++ {
 			if _, err := fmt.Fscanf(in, "%d", &tmp); err != nil {
-				done = true
-				break
+				break here
 			}
 			s2[tmp-1] = i
-		}
-		if done {
-			break
 		}
 		fmt.Fprintln(out, lcs(s1, s2))
 	}

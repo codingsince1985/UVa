@@ -84,8 +84,7 @@ func main() {
 		if word != "deadend" {
 			edges = append(edges, edge{word[:1], word[len(word)-1:], len(word)})
 		} else {
-			odds, sum, matrix := toMatrix(edges)
-			if len(odds) == 0 {
+			if odds, sum, matrix := toMatrix(edges); len(odds) == 0 {
 				fmt.Fprintln(out, sum)
 			} else {
 				fmt.Fprintln(out, sum+floydWarshall(odds, matrix))

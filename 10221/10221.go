@@ -9,15 +9,13 @@ import (
 )
 
 func degree2Radian(degree float64, unit string) float64 {
-	switch unit {
-	case "deg":
+	if unit == "deg" {
 		if degree > 180 {
 			degree = 360 - degree
 		}
 		return degree * math.Pi / 180
-	default:
-		return degree * math.Pi / 60 / 180
 	}
+	return degree * math.Pi / 60 / 180
 }
 
 func main() {

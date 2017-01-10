@@ -19,19 +19,16 @@ func main() {
 			break
 		}
 		idx, count := 0, 0
+	here:
 		for _, i := range s {
-			found := false
 			for p, j := range t[idx:] {
 				if i == j {
 					idx = idx + p + 1 // p changes every time, use idx+p
 					count++
-					found = true
-					break
+					continue here
 				}
 			}
-			if !found {
-				break
-			}
+			break
 		}
 		if len(s) > count {
 			fmt.Fprintln(out, "No")

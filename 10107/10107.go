@@ -22,8 +22,7 @@ func main() {
 		}
 		lst = append(lst, n)
 		sort.Ints(lst)
-		size := len(lst)
-		if size%2 == 0 {
+		if size := len(lst); size%2 == 0 {
 			fmt.Fprintln(out, (lst[size/2-1]+lst[size/2])/2)
 		} else {
 			fmt.Fprintln(out, lst[size/2])

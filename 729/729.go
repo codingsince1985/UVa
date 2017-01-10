@@ -35,7 +35,7 @@ func main() {
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanln(in)
 		fmt.Fscanf(in, "%d%d", &n, &h)
-		dfs(0, 0, make([]string, 0))
+		dfs(0, 0, nil)
 		if kase > 1 {
 			fmt.Fprintln(out)
 		}

@@ -11,15 +11,14 @@ var cache map[int]int
 
 func calculate(i int) int {
 	v := cache[i]
-	switch {
-	case v != 0:
-		return v
-	case i%2 == 0:
-		v = 1 + calculate(i/2)
-	default:
-		v = 1 + calculate(i*3+1)
+	if v == 0 {
+		if i%2 == 0 {
+			v = 1 + calculate(i/2)
+		} else {
+			v = 1 + calculate(i*3+1)
+		}
+		cache[i] = v
 	}
-	cache[i] = v
 	return v
 }
 

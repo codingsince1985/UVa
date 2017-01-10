@@ -19,12 +19,11 @@ func dfs(level int, tokens []string) {
 		fmt.Fprintln(out, strings.Join(tokens, ""))
 		return
 	}
-	switch rule[level] {
-	case '#':
+	if rule[level] == '#' {
 		for i := range dict {
 			dfs(level+1, append(tokens, dict[i]))
 		}
-	default:
+	} else {
 		for i := '0'; i <= '9'; i++ {
 			dfs(level+1, append(tokens, string(i)))
 		}

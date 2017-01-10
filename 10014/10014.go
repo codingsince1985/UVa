@@ -18,8 +18,7 @@ func solve(c []float64) float64 {
 	for i, cv := range c {
 		sum += float64(n-i) * cv
 	}
-	a1 := (float64(n)*af + al - 2*sum) / float64(n+1)
-	return a1
+	return (float64(n)*af + al - 2*sum) / float64(n+1)
 }
 
 func main() {

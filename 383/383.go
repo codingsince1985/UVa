@@ -66,8 +66,7 @@ func main() {
 		var src, dest string
 		for j := 0; j < p; j++ {
 			fmt.Fscanf(in, "%d%s%s", &size, &src, &dest)
-			l := bfs(legs, src, dest)
-			if l == -1 {
+			if l := bfs(legs, src, dest); l == -1 {
 				fmt.Fprintf(out, "NO SHIPMENT POSSIBLE\n")
 			} else {
 				fmt.Fprintf(out, "$%d\n", l*100*size)

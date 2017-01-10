@@ -54,21 +54,16 @@ func main() {
 			case 'F':
 				tmpX, tmpY := x+dx[direction], y+dy[direction]
 				if tmpX < 0 || tmpX > maxX || tmpY < 0 || tmpY > maxY {
-					previouslyLost := false
 					for _, v := range scent {
 						if v == [2]int{x, y} {
-							previouslyLost = true
-							break
+							continue here
 						}
 					}
-					if !previouslyLost {
-						scent = append(scent, [2]int{x, y})
-						lost = true
-						break here
-					}
-				} else {
-					x, y = tmpX, tmpY
+					scent = append(scent, [2]int{x, y})
+					lost = true
+					break here
 				}
+				x, y = tmpX, tmpY
 			}
 		}
 		output(out, x, y, direction, lost)

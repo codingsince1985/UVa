@@ -21,8 +21,7 @@ func main() {
 
 	var n int
 	dict := make(map[string]int)
-	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
-		s.Scan()
+	for fmt.Fscanf(in, "%d", &n); n > 0 && s.Scan(); n-- {
 		line := s.Text()
 		tokens := strings.Split(line, " ")
 		dict[tokens[0]]++

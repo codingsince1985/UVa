@@ -19,23 +19,19 @@ func factorize(n int) map[int]int {
 	}
 
 	t := 2
-	done := false
-	for !done {
+here:
+	for {
 		for n%t == 0 {
 			f[t]++
 			if n /= t; n == 1 {
-				done = true
-				break
+				break here
 			}
 		}
 
-		if !done {
-			t++
-			if t*t > n {
-				// remaining must be a prime
-				f[n] = 1
-				break
-			}
+		if t++; t*t > n {
+			// remaining must be a prime
+			f[n] = 1
+			break
 		}
 	}
 	return f

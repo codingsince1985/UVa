@@ -21,15 +21,13 @@ func solve(l1, l2 line) {
 	d := a1*b2 - a2*b1
 	dx, dy := c1*b2-c2*b1, a1*c2-a2*c1
 
-	switch {
-	case d == 0:
-		switch {
-		case dx == 0 && dy == 0:
+	if d == 0 {
+		if dx == 0 && dy == 0 {
 			fmt.Fprintln(out, "LINE")
-		default:
+		} else {
 			fmt.Fprintln(out, "NONE")
 		}
-	default:
+	} else {
 		fmt.Fprintf(out, "POINT %.2f %.2f\n", dx/d, dy/d)
 	}
 }

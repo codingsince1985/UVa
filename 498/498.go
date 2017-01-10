@@ -28,17 +28,14 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var line string
 	for s.Scan() {
-		line = s.Text()
-		cs := strings.Split(line, " ")
+		cs := strings.Split(s.Text(), " ")
 		coefficients := make([]int, len(cs))
 		for i, v := range cs {
 			coefficients[i], _ = strconv.Atoi(v)
 		}
 		s.Scan()
-		line = s.Text()
-		xs := strings.Split(line, " ")
+		xs := strings.Split(s.Text(), " ")
 		for i, v := range xs {
 			x, _ := strconv.Atoi(v)
 			fmt.Fprint(out, calc(coefficients, x))

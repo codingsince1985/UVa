@@ -65,9 +65,7 @@ func main() {
 
 	for s.Scan() {
 		line := s.Text()
-		pancakes := strings.Split(line, " ")
-		steps := solve(pancakes)
 		fmt.Fprintln(out, line)
-		fmt.Fprintln(out, strings.Join(steps, " "))
+		fmt.Fprintln(out, strings.Join(solve(strings.Split(line, " ")), " "))
 	}
 }

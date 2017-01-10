@@ -32,15 +32,12 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var dict map[byte]int
 	for s.Scan() {
-		line := s.Text()
-		dict = make(map[byte]int)
+		dict := make(map[byte]int)
 		max, cnt := 0, 0
-		for _, c := range []byte(line) {
+		for _, c := range []byte(s.Text()) {
 			if c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z' {
-				cnt = dict[c] + 1
-				if cnt > max {
+				if cnt = dict[c] + 1; cnt > max {
 					max = cnt
 				}
 				dict[c] = cnt

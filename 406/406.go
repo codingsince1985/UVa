@@ -57,8 +57,7 @@ func main() {
 		}
 		fmt.Fprintf(out, "%d %d:", n, c)
 		var toPrint []int
-		size := 2*c - i%2
-		if size >= i {
+		if size := 2*c - i%2; size >= i {
 			toPrint = primes[0:i]
 		} else {
 			edge := (i - size) / 2

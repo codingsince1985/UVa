@@ -10,21 +10,18 @@ import (
 type computer struct{ y, a, b int }
 
 func solve(computers []computer) int {
+here:
 	for n := 0; ; n++ {
 		year := computers[0].y + n*(computers[0].b-computers[0].a)
 		if year > 10000 {
 			return -1
 		}
-		found := true
 		for _, computer := range computers[1:] {
 			if (year-computer.y)%(computer.b-computer.a) != 0 {
-				found = false
-				break
+				continue here
 			}
 		}
-		if found {
-			return year
-		}
+		return year
 	}
 }
 

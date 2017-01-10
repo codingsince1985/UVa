@@ -64,8 +64,7 @@ func main() {
 			break
 		}
 		s.Scan()
-		cs := strings.Split(line+" "+s.Text(), " ")
-		num, height := deal(cs)
+		num, height := deal(strings.Split(line+" "+s.Text(), " "))
 		fmt.Fprintf(out, "%d piles remaining: %s\n", num, strings.Join(height, " "))
 	}
 }

@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"os"
 	"sort"
-	"strings"
 )
 
 type (
@@ -48,12 +47,11 @@ func main() {
 	out, _ := os.Create("10258.out")
 	defer out.Close()
 
-	var kase, c, p, t int
-	var l, line string
-
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
+	var kase, c, p, t int
+	var l, line string
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanln(in)
 		contest := make(map[int]*contestant)
@@ -61,8 +59,7 @@ func main() {
 			if line = s.Text(); line == "" {
 				break
 			}
-			r := strings.NewReader(line)
-			if fmt.Fscanf(r, "%d%d%d%s", &c, &p, &t, &l); l != "C" && l != "I" {
+			if fmt.Sscanf(line, "%d%d%d%s", &c, &p, &t, &l); l != "C" && l != "I" {
 				continue
 			}
 			if _, ok := contest[c]; !ok {

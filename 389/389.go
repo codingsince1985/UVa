@@ -34,9 +34,8 @@ func base10(num string, base int) int {
 func toStr(d int) string {
 	if d <= 9 {
 		return string('0' + d)
-	} else {
-		return string('A' + d - 10)
 	}
+	return string('A' + d - 10)
 }
 
 func baseN(num int, base int) string {

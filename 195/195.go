@@ -43,12 +43,11 @@ func dfs(i int, word bytes, visited []bool) {
 			if !visited[j] {
 				if j > 0 && chars[j] == chars[j-1] && !visited[j-1] {
 					continue
-				} else {
-					visited[j] = true
-					word[i] = chars[j]
-					dfs(i+1, word, visited)
-					visited[j] = false
 				}
+				visited[j] = true
+				word[i] = chars[j]
+				dfs(i+1, word, visited)
+				visited[j] = false
 			}
 		}
 	}

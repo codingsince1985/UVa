@@ -31,7 +31,6 @@ func isCarmichael(n int) bool {
 			return false
 		}
 	}
-
 	return !isPrime(n)
 }
 

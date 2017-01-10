@@ -43,16 +43,15 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var s1, s2 string
 	var c1, c2 []byte
 	var count int
 	for s.Scan() {
-		s1 = s.Text()
+		s1 := s.Text()
 		if s1 == "#" {
 			break
 		}
 		s.Scan()
-		s2 = s.Text()
+		s2 := s.Text()
 		c1 = []byte(s1)
 		c2 = []byte(s2)
 		count++

@@ -9,10 +9,9 @@ import (
 )
 
 var (
-	lowest   int
-	longest  int
-	distance []int
-	adj      [][]bool
+	lowest, longest int
+	distance        []int
+	adj             [][]bool
 )
 
 func dfs(s int) {
@@ -55,8 +54,7 @@ func main() {
 			adj[n1][n2] = true
 		}
 		distance = make([]int, n+1)
-		longest = 0
-		lowest = math.MaxInt32
+		longest, lowest = 0, math.MaxInt32
 		dfs(s)
 		fmt.Fprintf(out, "Case %d: The longest path from %d has length %d, finishing at %d\n\n", kase, s, longest, lowest)
 	}

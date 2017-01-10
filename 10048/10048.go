@@ -57,8 +57,7 @@ func main() {
 		fmt.Fprintf(out, "Case #%d\n", kase)
 		for i := 0; i < q; i++ {
 			fmt.Fscanf(in, "%d%d", &c1, &c2)
-			min := matrix[c1-1][c2-1]
-			if min == math.MaxInt32 {
+			if matrix[c1-1][c2-1] == math.MaxInt32 {
 				fmt.Fprintln(out, "no path")
 			} else {
 				fmt.Fprintln(out, matrix[c1-1][c2-1])

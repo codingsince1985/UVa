@@ -12,8 +12,7 @@ func binarySearch(n uint64) uint64 {
 	var low, high uint64
 	low, high = 0, math.MaxInt64
 	for low+1 < high {
-		mid := (low + high) / 2
-		if mid*(mid-3)/2 >= n {
+		if mid := (low + high) / 2; mid*(mid-3)/2 >= n {
 			high = mid
 		} else {
 			low = mid + 1

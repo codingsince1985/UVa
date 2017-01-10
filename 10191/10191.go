@@ -8,7 +8,6 @@ import (
 	"os"
 	"sort"
 	"strconv"
-	"strings"
 )
 
 var out *os.File
@@ -30,15 +29,13 @@ func find(js jobs) (int, int) {
 	var start, period, max int
 	t := 10 * 60
 	for _, j := range js {
-		period = j.start - t
-		if period > max {
+		if period = j.start - t; period > max {
 			max = period
 			start = t
 		}
 		t = j.end
 	}
-	period = 18*60 - t
-	if period > max {
+	if period = 18*60 - t; period > max {
 		max = period
 		start = t
 	}
@@ -68,11 +65,8 @@ func main() {
 	var kase, h1, m1, h2, m2 int
 	for s.Scan() {
 		var js jobs
-		for n, _ := strconv.Atoi(s.Text()); n > 0; n-- {
-			s.Scan()
-			line := s.Text()
-			r := strings.NewReader(line)
-			fmt.Fscanf(r, "%d:%d %d:%d", &h1, &m1, &h2, &m2)
+		for n, _ := strconv.Atoi(s.Text()); n > 0 && s.Scan(); n-- {
+			fmt.Sscanf(s.Text(), "%d:%d%d:%d", &h1, &m1, &h2, &m2)
 			js = append(js, buildJob(h1, m1, h2, m2))
 		}
 		sort.Sort(js)

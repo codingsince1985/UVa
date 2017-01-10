@@ -43,13 +43,12 @@ func main() {
 
 	var c, n int
 	fmt.Fscanf(in, "%d\n\n", &c)
-	var l string
 	var m [][]byte
 	for i := 0; i < c; i++ {
 		first := true
 		count := 0
 		for {
-			l = ""
+			var l string
 			if fmt.Fscanf(in, "%s", &l); l == "" {
 				break
 			}

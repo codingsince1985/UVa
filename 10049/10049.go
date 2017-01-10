@@ -14,8 +14,7 @@ var dp []int
 func f(n int) int {
 	l, r := 0, len(dp)-1
 	for l <= r {
-		mid := (l + r) / 2
-		if dp[mid] < n {
+		if mid := (l + r) / 2; dp[mid] < n {
 			l = mid + 1
 		} else {
 			r = mid - 1
