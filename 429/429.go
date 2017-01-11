@@ -69,10 +69,8 @@ func main() {
 
 	var n int
 	var word, fm, to string
-	var dict map[string][]string
-	fmt.Fscanf(in, "%d\n\n", &n)
-	for i := 0; i < n; i++ {
-		dict = make(map[string][]string)
+	for fmt.Fscanf(in, "%d\n\n", &n); n > 0; n-- {
+		dict := make(map[string][]string)
 		for {
 			if fmt.Fscanf(in, "%s", &word); word == "*" {
 				break

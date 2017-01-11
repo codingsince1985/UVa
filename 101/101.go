@@ -40,15 +40,13 @@ func reset(n int) {
 }
 
 func move(n1, n2 int) {
-	pos1 := find(n1)
-	pos2 := find(n2)
+	pos1, pos2 := find(n1), find(n2)
 	blocks[pos1] = blocks[pos1][:len(blocks[pos1])-1]
 	blocks[pos2] = append(blocks[pos2], n1)
 }
 
 func pile(n1, n2 int) {
-	pos1 := find(n1)
-	pos2 := find(n2)
+	pos1, pos2 := find(n1), find(n2)
 	stack := blocks[pos1]
 	for i := range stack {
 		if stack[i] == n1 {

@@ -35,9 +35,8 @@ func main() {
 	out, _ := os.Create("10440.out")
 	defer out.Close()
 
-	var c, n, t, m int
-	fmt.Fscanf(in, "%d", &c)
-	for i := 0; i < c; i++ {
+	var kase, n, t, m int
+	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "%d%d%d", &n, &t, &m)
 		c := make([]int, m)
 		for j := range c {

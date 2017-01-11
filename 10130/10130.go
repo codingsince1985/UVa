@@ -41,17 +41,14 @@ func main() {
 	defer out.Close()
 
 	var t int
-	fmt.Fscanf(in, "%d", &t)
-	for i := 0; i < t; i++ {
+	for fmt.Fscanf(in, "%d", &t); t > 0; t-- {
 		var n, g, tw, total int
 		fmt.Fscanf(in, "%d", &n)
-		p := make([]int, n)
-		w := make([]int, n)
+		p, w := make([]int, n), make([]int, n)
 		for j := range p {
 			fmt.Fscanf(in, "%d%d", &p[j], &w[j])
 		}
-		fmt.Fscanf(in, "%d", &g)
-		for j := 0; j < g; j++ {
+		for fmt.Fscanf(in, "%d", &g); g > 0; g-- {
 			fmt.Fscanf(in, "%d", &tw)
 			total += knapsack(p, w, tw)
 		}

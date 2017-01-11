@@ -38,12 +38,11 @@ func main() {
 	defer out.Close()
 
 	var n, m, n1, n2 int
-	var links map[int][]int
 	for {
 		if fmt.Fscanf(in, "%d%d", &n, &m); n == 0 && m == 0 {
 			break
 		}
-		links = make(map[int][]int)
+		links := make(map[int][]int)
 		for i := 0; i < m; i++ {
 			fmt.Fscanf(in, "%d%d", &n1, &n2)
 			links[n1] = append(links[n1], n2)

@@ -62,12 +62,11 @@ func main() {
 	defer out.Close()
 
 	var m, k, n1, n2 int
-	fmt.Fscanf(in, "%d", &m)
-	for i := 0; i < m; i++ {
+	for fmt.Fscanf(in, "%d", &m); m > 0; m-- {
 		fmt.Fscanf(in, "%d%d", &n, &k)
 		black = make([]bool, n+1)
 		links = make(map[int][]int)
-		for j := 0; j < k; j++ {
+		for ; k > 0; k-- {
 			fmt.Fscanf(in, "%d%d", &n1, &n2)
 			links[n1] = append(links[n1], n2)
 			links[n2] = append(links[n2], n1)

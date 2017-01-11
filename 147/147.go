@@ -16,14 +16,12 @@ func main() {
 	defer out.Close()
 
 	var v float64
-	var vi int
-	var dp []int
 	for {
 		if fmt.Fscanf(in, "%f", &v); v == 0 {
 			break
 		}
-		vi = int(v * 100)
-		dp = make([]int, vi+1)
+		vi := int(v * 100)
+		dp := make([]int, vi+1)
 		dp[0] = 1
 
 		for i := range cs {

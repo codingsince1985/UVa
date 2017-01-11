@@ -27,11 +27,9 @@ func main() {
 	defer out.Close()
 
 	var n, m int
-	var t []int
-	fmt.Fscanf(in, "%d", &n)
-	for i := 0; i < n; i++ {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%d", &m)
-		t = make([]int, m)
+		t := make([]int, m)
 		for j := range t {
 			fmt.Fscanf(in, "%d", &t[j])
 		}

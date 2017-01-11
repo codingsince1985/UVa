@@ -13,8 +13,8 @@ import (
 
 func digitsOfFactorial(n int) float64 {
 	var t float64
-	for i := 1; i <= n; i++ {
-		t += math.Log10(float64(i))
+	for ; n >= 1; n-- {
+		t += math.Log10(float64(n))
 	}
 	return t
 }

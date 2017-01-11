@@ -8,22 +8,21 @@ import (
 	"os"
 )
 
-func f(n int) big.Int {
-	var r, t big.Int
-	r.SetInt64(1)
+func f(n int) *big.Int {
+	r := big.NewInt(1)
 	for i := 2; i <= n; i++ {
-		t.SetInt64(int64(i))
-		r.Mul(&r, &t)
+		t := big.NewInt(int64(i))
+		r.Mul(r, t)
 	}
 	return r
 }
 
-func c(n, m int) big.Int {
+func c(n, m int) *big.Int {
 	r := f(n)
 	s := f(n - m)
 	t := f(m)
-	r.Div(&r, &s)
-	r.Div(&r, &t)
+	r.Div(r, s)
+	r.Div(r, t)
 	return r
 }
 
@@ -38,7 +37,6 @@ func main() {
 		if fmt.Fscanf(in, "%d%d", &n, &m); n == 0 && m == 0 {
 			break
 		}
-		r := c(n, m)
-		fmt.Fprintf(out, "%d things taken %d at a time is %v exactly.\n", n, m, &r)
+		fmt.Fprintf(out, "%d things taken %d at a time is %v exactly.\n", n, m, c(n, m))
 	}
 }
