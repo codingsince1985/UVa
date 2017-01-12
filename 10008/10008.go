@@ -59,9 +59,7 @@ func main() {
 			c -= 32
 		}
 		if c >= 'A' && c <= 'Z' {
-			cnt := d[c]
-			cnt++
-			d[c] = cnt
+			d[c]++
 		}
 	}
 	output(out, d)

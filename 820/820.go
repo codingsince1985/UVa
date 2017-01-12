@@ -67,7 +67,7 @@ func main() {
 		for i := range matrix {
 			matrix[i] = make([]int, n+1)
 		}
-		for i := 0; i < c; i++ {
+		for ; c > 0; c-- {
 			fmt.Fscanf(in, "%d%d%d", &n1, &n2, &bw)
 			matrix[n1][n2] += bw
 			matrix[n2][n1] = matrix[n1][n2]

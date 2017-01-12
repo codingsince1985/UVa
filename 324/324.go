@@ -9,10 +9,9 @@ import (
 )
 
 func factorial(n int) string {
-	var res big.Int
-	res.SetInt64(1)
+	res := big.NewInt(1)
 	for i := 1; i <= n; i++ {
-		res.Mul(&res, big.NewInt(int64(i)))
+		res.Mul(res, big.NewInt(int64(i)))
 	}
 	return res.String()
 }

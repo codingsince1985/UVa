@@ -21,7 +21,7 @@ func getNumber(digit rune) int {
 }
 
 func minBase(num string) int {
-	var base = 1
+	base := 1
 	for _, d := range num {
 		tmp := getNumber(d)
 		if tmp > base {

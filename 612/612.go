@@ -36,10 +36,9 @@ func main() {
 	defer out.Close()
 
 	var kase, n, m int
-	var s dna
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "\n%d%d", &n, &m)
-		s = make([]string, m)
+		s := make(dna, m)
 		for j := range s {
 			fmt.Fscanf(in, "%s", &s[j])
 		}

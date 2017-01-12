@@ -18,7 +18,6 @@ type terminal struct {
 var (
 	term terminal
 	out  *os.File
-	kase int
 )
 
 func clear() {
@@ -96,8 +95,7 @@ func display(input string) {
 	}
 }
 
-func output() {
-	kase++
+func output(kase int) {
 	fmt.Fprintf(out, "Case %d\n+----------+\n", kase)
 	for _, row := range term.text {
 		fmt.Fprint(out, "|")
@@ -117,7 +115,7 @@ func main() {
 
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
-	for s.Scan() {
+	for kase := 1; s.Scan(); kase++ {
 		var input string
 		for n, _ := strconv.Atoi(s.Text()); n > 0 && s.Scan(); n-- {
 			input += s.Text()
@@ -126,6 +124,6 @@ func main() {
 			break
 		}
 		display(input)
-		output()
+		output(kase)
 	}
 }

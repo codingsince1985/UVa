@@ -32,11 +32,10 @@ func main() {
 	out, _ := os.Create("10450.out")
 	defer out.Close()
 
-	var n int
+	var n, b int
 	fmt.Fscanf(in, "%d", &n)
-	var b int
-	for i := 0; i < n; i++ {
+	for i := 1; i <= n; i++ {
 		fmt.Fscanf(in, "%d", &b)
-		fmt.Fprintf(out, "Scenario #%d:\n%v\n\n", i+1, f(b))
+		fmt.Fprintf(out, "Scenario #%d:\n%v\n\n", i, f(b))
 	}
 }

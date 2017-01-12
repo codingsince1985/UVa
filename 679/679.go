@@ -14,11 +14,10 @@ func main() {
 	defer out.Close()
 
 	var n, D, I int
-	fmt.Fscanf(in, "%d", &n)
-	for i := 0; i < n; i++ {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%d%d", &D, &I)
 		k := 1
-		for j := 0; j < D-1; j++ {
+		for i := 0; i < D-1; i++ {
 			if I%2 == 0 {
 				k = 2*k + 1
 				I = I / 2

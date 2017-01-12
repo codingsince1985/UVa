@@ -39,14 +39,13 @@ func main() {
 	defer out.Close()
 
 	var l, n int
-	var c []int
 	for {
 		if fmt.Fscanf(in, "%d", &l); l == 0 {
 			break
 		}
 		fmt.Fscanf(in, "%d", &n)
 		newl := n + 2
-		c = make([]int, newl)
+		c := make([]int, newl)
 		c[0], c[n+1] = 0, l
 		for i := 1; i <= n; i++ {
 			fmt.Fscanf(in, "%d", &c[i])

@@ -47,7 +47,7 @@ func main() {
 		for i := range matrix {
 			matrix[i] = make([]bool, n)
 		}
-		for i := 0; i < m; i++ {
+		for ; m > 0; m-- {
 			fmt.Fscanf(in, "%d%d", &n1, &n2)
 			matrix[n1][n2], matrix[n2][n1] = true, true
 		}

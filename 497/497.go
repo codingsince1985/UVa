@@ -10,7 +10,7 @@ import (
 
 type node struct{ num, idx int }
 
-func find(n int, s [][]node) int {
+func find(s [][]node) int {
 	// for home-made binary search, see UVa 481
 	return sort.Search(len(s), func(i int) bool {
 		nodes := s[i]
@@ -26,7 +26,7 @@ func lis(h []int) [][]node {
 			t := []node{{h[i], i}}
 			s = append(s, t)
 		} else {
-			idx := find(h[i], s)
+			idx := find(s)
 			nd := s[idx]
 			tn := node{h[i], i}
 			nd = append(nd, tn)

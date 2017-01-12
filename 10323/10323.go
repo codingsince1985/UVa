@@ -14,10 +14,9 @@ func main() {
 	defer out.Close()
 
 	fact := uint64(1)
-	n := 1
 	var min, max int
 	var facts []uint64
-	for {
+	for n := 1; ; n++ {
 		fact *= uint64(n)
 		if fact >= 10000 && min == 0 {
 			min = n
@@ -29,9 +28,9 @@ func main() {
 		if min != 0 {
 			facts = append(facts, fact)
 		}
-		n++
 	}
 
+	var n int
 	for {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break

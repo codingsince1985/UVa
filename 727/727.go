@@ -9,9 +9,11 @@ import (
 
 const MAX = 50
 
-var count int
-var stack [MAX]string
-var out *os.File
+var (
+	count int
+	stack [MAX]string
+	out   *os.File
+)
 
 func pop() {
 	count--
@@ -30,11 +32,9 @@ func main() {
 	defer out.Close()
 
 	var n int
-	fmt.Fscanf(in, "%d\n\n", &n)
-	var s string
-	for i := 0; i < n; i++ {
+	for fmt.Fscanf(in, "%d\n\n", &n); n > 0; n-- {
 		for {
-			s = ""
+			s := ""
 			if fmt.Fscanf(in, "%s\n", &s); len(s) == 0 {
 				break
 			}

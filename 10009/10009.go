@@ -51,17 +51,16 @@ func main() {
 	var kase, m, n int
 	var fm, to string
 	for fmt.Fscanf(in, "%d\n", &kase); kase > 0; kase-- {
-		fmt.Fscanf(in, "\n%d%d", &m, &n)
 		links = make(map[string][]string)
-		for i := 0; i < m; i++ {
+		fmt.Fscanf(in, "\n%d%d", &m, &n)
+		for ; m > 0; m-- {
 			fmt.Fscanf(in, "%s%s", &fm, &to)
 			links[fm] = append(links[fm], to)
 			links[to] = append(links[to], fm)
 		}
-		for i := 0; i < n; i++ {
+		for ; n > 0; n-- {
 			fmt.Fscanf(in, "%s%s", &fm, &to)
-			path := bfs(fm, to)
-			for _, v := range path {
+			for _, v := range bfs(fm, to) {
 				fmt.Fprintf(out, "%c", v)
 			}
 			fmt.Fprintln(out)

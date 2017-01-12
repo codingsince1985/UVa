@@ -16,9 +16,9 @@ func count(n, x int) []string {
 	for i := range members {
 		members[i] = i + 1
 	}
-	idx, eliminated := 0, 0
+	eliminated := 0
 here:
-	for {
+	for idx := 0; ; idx++ {
 		memberCount := 0
 		card := cards[idx]
 		for i, member := range members {
@@ -33,7 +33,6 @@ here:
 				}
 			}
 		}
-		idx++
 	}
 	var remaining []string
 	for _, member := range members {

@@ -34,14 +34,13 @@ func main() {
 	defer out.Close()
 
 	var nc, n1, n2, count int
-	var adj map[int][]int
 	for {
 		if fmt.Fscanf(in, "%d", &nc); nc == 0 {
 			break
 		}
 
-		adj = make(map[int][]int)
-		for i := 0; i < nc; i++ {
+		adj := make(map[int][]int)
+		for ; nc > 0; nc-- {
 			fmt.Fscanf(in, "%d%d", &n1, &n2)
 			adj[n1] = append(adj[n1], n2)
 			adj[n2] = append(adj[n2], n1)

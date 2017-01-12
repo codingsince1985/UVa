@@ -36,7 +36,7 @@ func ok(x, y int) bool {
 	return true
 }
 
-func dfs(x, y, num int) {
+func dfs(num int) {
 	if num > max {
 		max = num
 	}
@@ -44,7 +44,7 @@ func dfs(x, y, num int) {
 		for j := 0; j < n; j++ {
 			if grid[i][j] == '.' && ok(i, j) {
 				grid[i][j] = '0'
-				dfs(i, j, num+1)
+				dfs(num + 1)
 				grid[i][j] = '.'
 			}
 		}
@@ -72,7 +72,7 @@ func main() {
 			fmt.Fscanln(in)
 		}
 		max = 0
-		dfs(0, 0, 0)
+		dfs(0)
 		fmt.Fprintln(out, max)
 	}
 }

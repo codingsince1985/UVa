@@ -46,7 +46,7 @@ func main() {
 				matrix[i][j] = math.MaxInt32
 			}
 		}
-		for i := 0; i < s; i++ {
+		for ; s > 0; s-- {
 			fmt.Fscanf(in, "%d%d%d", &c1, &c2, &d)
 			matrix[c1-1][c2-1], matrix[c2-1][c1-1] = d, d
 		}
@@ -55,7 +55,7 @@ func main() {
 			fmt.Fprintln(out)
 		}
 		fmt.Fprintf(out, "Case #%d\n", kase)
-		for i := 0; i < q; i++ {
+		for ; q > 0; q-- {
 			fmt.Fscanf(in, "%d%d", &c1, &c2)
 			if matrix[c1-1][c2-1] == math.MaxInt32 {
 				fmt.Fprintln(out, "no path")

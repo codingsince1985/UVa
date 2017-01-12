@@ -42,12 +42,11 @@ func main() {
 	defer out.Close()
 
 	var c, n int
-	fmt.Fscanf(in, "%d\n\n", &c)
+
 	var m [][]byte
-	for i := 0; i < c; i++ {
+	for fmt.Fscanf(in, "%d\n\n", &c); c > 0; c-- {
 		first := true
-		count := 0
-		for {
+		for count := 0; ; count++ {
 			var l string
 			if fmt.Fscanf(in, "%s", &l); l == "" {
 				break
@@ -62,7 +61,6 @@ func main() {
 			}
 			tmp := []byte(l)
 			m[count] = tmp
-			count++
 		}
 		fmt.Fprintln(out, solve(m))
 	}

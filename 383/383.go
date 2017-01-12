@@ -41,20 +41,18 @@ func main() {
 	defer out.Close()
 
 	var kase, m, n, p int
-	var wh []string
-	var legs map[string][]string
 	var wh1, wh2 string
 	fmt.Fscanf(in, "%d", &kase)
 
-	fmt.Fprintf(out, "SHIPPING ROUTES OUTPUT\n")
+	fmt.Fprint(out, "SHIPPING ROUTES OUTPUT\n")
 	for i := 1; i <= kase; i++ {
 		fmt.Fscanf(in, "%d%d%d", &m, &n, &p)
-		wh = make([]string, m)
+		wh := make([]string, m)
 		for j := range wh {
 			fmt.Fscanf(in, "%s", &wh[j])
 		}
 
-		legs = make(map[string][]string)
+		legs := make(map[string][]string)
 		for j := 0; j < n; j++ {
 			fmt.Fscanf(in, "%s%s", &wh1, &wh2)
 			legs[wh1] = append(legs[wh1], wh2)
@@ -67,7 +65,7 @@ func main() {
 		for j := 0; j < p; j++ {
 			fmt.Fscanf(in, "%d%s%s", &size, &src, &dest)
 			if l := bfs(legs, src, dest); l == -1 {
-				fmt.Fprintf(out, "NO SHIPMENT POSSIBLE\n")
+				fmt.Fprint(out, "NO SHIPMENT POSSIBLE\n")
 			} else {
 				fmt.Fprintf(out, "$%d\n", l*100*size)
 			}

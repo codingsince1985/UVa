@@ -39,10 +39,8 @@ func main() {
 					break
 				}
 				cnt++
-				times := 1
-				for c*times <= n {
+				for times := 1; c*times <= n; times++ {
 					cache[a*times], cache[b*times], cache[c*times] = true, true, true
-					times++
 				}
 			}
 		}

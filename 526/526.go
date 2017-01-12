@@ -106,7 +106,7 @@ func nonMove(e []string) int {
 	return count
 }
 
-func output(e []string, s1, s2 string) {
+func output(e []string, s2 string) {
 	fmt.Fprintln(out, nonMove(e))
 	count := 0
 	p, p1, p2 := 1, 0, 0
@@ -154,6 +154,6 @@ func main() {
 		} else {
 			fmt.Fprintln(out)
 		}
-		output(e, s1, s2)
+		output(e, s2)
 	}
 }

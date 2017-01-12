@@ -28,7 +28,7 @@ func main() {
 	fmt.Fscanf(in, "%d", &n)
 	for i := 1; i <= n; i++ {
 		fmt.Fscanf(in, "%s", &word)
-		var charMap = make(map[rune]int)
+		charMap := make(map[rune]int)
 		for _, c := range word {
 			charMap[c]++
 		}

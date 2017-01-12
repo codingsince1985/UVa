@@ -15,7 +15,7 @@ func distance(p1, p2 point) float64 {
 }
 
 func prim(freckles []point) float64 {
-	var visited = make(map[int]bool)
+	visited := make(map[int]bool)
 	visited[0] = true
 	total := 0.0
 	for i := range freckles {

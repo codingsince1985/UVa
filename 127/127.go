@@ -27,7 +27,7 @@ func cleanPiles(piles [][]card, i int) [][]card {
 func deal(cs []string) (int, []string) {
 	piles := make([][]card, len(cs))
 	for i, c := range cs {
-		piles[i] = []card{card{c[0], c[1]}}
+		piles[i] = []card{{c[0], c[1]}}
 	}
 	for i := 0; i < len(piles); i++ {
 		if i-3 >= 0 && matched(piles[i-3][len(piles[i-3])-1], piles[i][len(piles[i])-1]) {

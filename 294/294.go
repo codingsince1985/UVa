@@ -10,14 +10,12 @@ import (
 	"os"
 )
 
-var p map[int]bool
-
 func factorize(n int) map[int]int {
-	f := make(map[int]int)
 	if n == 1 {
 		return nil
 	}
 
+	f := make(map[int]int)
 	t := 2
 here:
 	for {
@@ -48,17 +46,13 @@ func numberOfDivisors(f map[int]int) int {
 }
 
 func main() {
-	p = make(map[int]bool)
-	p[2] = true
-
 	in, _ := os.Open("294.in")
 	defer in.Close()
 	out, _ := os.Create("294.out")
 	defer out.Close()
 
 	var n, L, U int
-	fmt.Fscanf(in, "%d", &n)
-	for i := 0; i < n; i++ {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		var num, max, new int
 		fmt.Fscanf(in, "%d%d", &L, &U)
 		for j := L; j <= U; j++ {

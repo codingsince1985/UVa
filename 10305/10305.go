@@ -43,7 +43,7 @@ func main() {
 			break
 		}
 		links := make(map[int][]int)
-		for i := 0; i < m; i++ {
+		for ; m > 0; m-- {
 			fmt.Fscanf(in, "%d%d", &n1, &n2)
 			links[n1] = append(links[n1], n2)
 		}

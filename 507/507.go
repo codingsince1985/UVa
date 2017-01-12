@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-func maxsub(s []int) (int, int, int) {
+func maxsub(s []int) (int, int) {
 	start, end := -1, -1
 	longestStart, longestEnd := -1, -1
 	var meh, msf int
@@ -29,7 +29,7 @@ func maxsub(s []int) (int, int, int) {
 			}
 		}
 	}
-	return longestStart, longestEnd, msf
+	return longestStart, longestEnd
 }
 
 func main() {
@@ -39,18 +39,17 @@ func main() {
 	defer out.Close()
 
 	var b, r int
-	var s []int
 	fmt.Fscanf(in, "%d", &b)
-	for i := 0; i < b; i++ {
+	for i := 1; i <= b; i++ {
 		fmt.Fscanf(in, "%d", &r)
-		s = make([]int, r-1)
+		s := make([]int, r-1)
 		for j := range s {
 			fmt.Fscanf(in, "%d", &s[j])
 		}
-		if start, end, _ := maxsub(s); start == -1 {
-			fmt.Fprintf(out, "Route %d has no nice parts\n", i+1)
+		if start, end := maxsub(s); start == -1 {
+			fmt.Fprintf(out, "Route %d has no nice parts\n", i)
 		} else {
-			fmt.Fprintf(out, "The nicest part of route %d is between stops %d and %d\n", i+1, start+1, end+1)
+			fmt.Fprintf(out, "The nicest part of route %d is between stops %d and %d\n", i, start+1, end+1)
 		}
 	}
 }

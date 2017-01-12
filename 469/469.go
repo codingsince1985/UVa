@@ -40,7 +40,6 @@ func main() {
 
 	var kase, x, y int
 	var line string
-	var visited [][]bool
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanln(in)
 		var grid [][]byte
@@ -53,7 +52,7 @@ func main() {
 		x, _ = strconv.Atoi(line)
 		fmt.Fscanf(in, "%d", &y)
 		for {
-			visited = make([][]bool, len(grid))
+			visited := make([][]bool, len(grid))
 			for j := range visited {
 				visited[j] = make([]bool, len(grid[0]))
 			}

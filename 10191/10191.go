@@ -62,8 +62,8 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var kase, h1, m1, h2, m2 int
-	for s.Scan() {
+	var h1, m1, h2, m2 int
+	for kase := 1; s.Scan(); kase++ {
 		var js jobs
 		for n, _ := strconv.Atoi(s.Text()); n > 0 && s.Scan(); n-- {
 			fmt.Sscanf(s.Text(), "%d:%d%d:%d", &h1, &m1, &h2, &m2)
@@ -71,7 +71,6 @@ func main() {
 		}
 		sort.Sort(js)
 		max, start := find(js)
-		kase++
 		output(kase, max, start)
 	}
 }

@@ -14,14 +14,13 @@ func main() {
 	defer out.Close()
 
 	var c, n int
-	fmt.Fscanf(in, "%d", &c)
-	for i := 0; i < c; i++ {
+	for fmt.Fscanf(in, "%d", &c); c > 0; c-- {
 		fmt.Fscanf(in, "%d", &n)
 		lst := make([]int, n)
 		total := 0
-		for j := range lst {
-			fmt.Fscanf(in, "%d", &lst[j])
-			total += lst[j]
+		for i := range lst {
+			fmt.Fscanf(in, "%d", &lst[i])
+			total += lst[i]
 		}
 		avg := float64(total) / float64(n)
 		cnt := 0

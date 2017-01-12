@@ -12,12 +12,10 @@ import (
 )
 
 var (
-	nodes   []string
-	nodeNum int
-	nodeMap map[string]int
-	matrix  [][]bool
-	min     int
-	result  []string
+	nodes, result []string
+	nodeNum, min  int
+	nodeMap       map[string]int
+	matrix        [][]bool
 )
 
 func setNodes(tokens []string) {

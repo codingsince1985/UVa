@@ -7,21 +7,6 @@ import (
 	"os"
 )
 
-func add(a, b uint32) uint32 {
-	var total, base uint32
-	base = 1
-	for a != 0 || b != 0 {
-		a1, b1 := a%2, b%2
-		if a1 != b1 {
-			total += base
-		}
-		base *= 2
-		a /= 2
-		b /= 2
-	}
-	return total
-}
-
 func main() {
 	in, _ := os.Open("10469.in")
 	defer in.Close()

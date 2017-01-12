@@ -103,12 +103,12 @@ func output(out *os.File, path []int, kase int) {
 	default:
 		for i, v := range path {
 			if i != 0 {
-				fmt.Fprintf(out, " and ")
+				fmt.Fprint(out, " and ")
 			}
 			if v < 4 {
 				fmt.Fprintf(out, "rotated %d degrees", v*90)
 			} else {
-				fmt.Fprintf(out, "reflected vertically")
+				fmt.Fprint(out, "reflected vertically")
 			}
 		}
 		fmt.Fprintln(out, ".")

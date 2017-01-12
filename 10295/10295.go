@@ -17,13 +17,13 @@ func main() {
 	var w string
 	dict := make(map[string]int)
 	fmt.Fscanf(in, "%d%d", &m, &n)
-	for i := 0; i < m; i++ {
+	for ; m > 0; m-- {
 		fmt.Fscanf(in, "%s%d", &w, &d)
 		dict[w] = d
 	}
 
-	for s, i := uint64(0), 0; i < n; i++ {
-		s = 0
+	for ; n > 0; n-- {
+		var s uint64 = 0
 		for {
 			if fmt.Fscanf(in, "%s", &w); w == "." {
 				break

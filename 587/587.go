@@ -41,11 +41,9 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var kase int
-	for s.Scan() {
+	for kase := 1; s.Scan(); kase++ {
 		if line := s.Text(); line != "END" {
 			x, y := follow(strings.Split(line[:len(line)-1], ","))
-			kase++
 			fmt.Fprintf(out, "Map #%d\n", kase)
 			fmt.Fprintf(out, "The treasure is located at (%.3f,%.3f).\n", x, y)
 			fmt.Fprintf(out, "The distance to the treasure is %.3f.\n\n", math.Sqrt(x*x+y*y))

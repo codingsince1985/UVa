@@ -17,9 +17,7 @@ func main() {
 	var p []big.Int
 here:
 	for {
-		var one big.Int
-		one.SetInt64(1)
-		p = append(p, one)
+		p = append(p, *big.NewInt(1))
 		l := len(p)
 
 		fmt.Fprint(out, &p[l-1])

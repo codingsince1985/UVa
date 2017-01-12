@@ -35,7 +35,7 @@ func manhattanDistance(i, j int, grid [][]byte) int {
 	return minDistance
 }
 
-func solve(m int, grid [][]byte) int {
+func solve(grid [][]byte) int {
 	var mins []int
 	for x, vx := range grid {
 		for y, vy := range vx {
@@ -65,6 +65,6 @@ func main() {
 			fmt.Fscanf(in, "%s", &row)
 			grid[i] = []byte(row)
 		}
-		fmt.Fprintln(out, solve(m, grid))
+		fmt.Fprintln(out, solve(grid))
 	}
 }

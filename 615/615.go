@@ -49,8 +49,7 @@ func isTree(edges []edge) bool {
 	count := 0
 	for k := range nodeMap {
 		if f[k] == k {
-			count++
-			if count > 1 {
+			if count++; count > 1 {
 				return false
 			}
 		}

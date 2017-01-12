@@ -9,8 +9,8 @@ import (
 
 func merge(num []int, mid int) int {
 	tmp := make([]int, len(num))
-	l, r, idx, steps := 0, mid, 0, 0
-	for l < mid || r < len(num) {
+	l, r, steps := 0, mid, 0
+	for idx := 0; l < mid || r < len(num); idx++ {
 		if l < mid && r < len(num) {
 			if num[l] > num[r] {
 				tmp[idx], r = num[r], r+1
@@ -25,7 +25,6 @@ func merge(num []int, mid int) int {
 				tmp[idx], r = num[r], r+1
 			}
 		}
-		idx++
 	}
 	copy(num, tmp)
 	return steps

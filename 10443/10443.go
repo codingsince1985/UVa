@@ -56,11 +56,10 @@ func main() {
 	defer out.Close()
 
 	var kase, r, c, n int
-	var grid [][]byte
 	var line string
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "%d%d%d", &r, &c, &n)
-		grid = make([][]byte, r)
+		grid := make([][]byte, r)
 		for j := range grid {
 			grid[j] = make([]byte, c)
 			fmt.Fscanf(in, "%s", &line)

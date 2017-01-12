@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-var cache map[int]map[int]int
+var cache = make(map[int]map[int]int)
 
 func isPrime(n int) bool {
 	for i := 2; i*i <= n; i++ {
@@ -71,7 +71,6 @@ func main() {
 
 	ps := primes(100)
 	var n int
-	cache = make(map[int]map[int]int)
 	for {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break

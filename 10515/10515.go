@@ -24,9 +24,8 @@ func main() {
 		if start < 0 {
 			start++
 		}
-		n, _ := strconv.Atoi(ns[start:])
 		d := 1
-		for i := 1; i <= n; i++ {
+		for n, _ := strconv.Atoi(ns[start:]); n > 0; n-- {
 			d = (d * m) % 10
 		}
 		fmt.Fprintln(out, d)

@@ -66,13 +66,12 @@ func main() {
 
 	var sum, count int
 	var c byte
-	var chars []byte
 	for {
 		if _, err := fmt.Fscanf(in, "%d (", &sum); err != nil {
 			break
 		}
 		count++
-		chars = make([]byte, 1)
+		chars := make([]byte, 1)
 		chars[0] = '('
 		for count > 0 {
 			fmt.Fscanf(in, "%c", &c)
@@ -86,7 +85,7 @@ func main() {
 				}
 			}
 		}
-		fmt.Fscanf(in, "\n", &c)
+		fmt.Fscanln(in)
 		line := string(chars)
 		tree := buildTree(line[1 : len(line)-1])
 		if dfs(sum, &tree, 0) {

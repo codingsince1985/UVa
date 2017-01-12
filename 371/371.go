@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-var cache map[int]int
+var cache = make(map[int]int)
 
 func calculate(i int) int {
 	v := cache[i]
@@ -45,7 +45,6 @@ func main() {
 	defer out.Close()
 
 	var l, h int
-	cache = make(map[int]int)
 	for {
 		if fmt.Fscanf(in, "%d%d", &l, &h); l == 0 && h == 0 {
 			break

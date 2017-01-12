@@ -45,7 +45,6 @@ func main() {
 
 	var ln int
 	var n1, n2, src, dest string
-	var links map[string][]string
 	first := true
 	for {
 		if _, err := fmt.Fscanf(in, "%d", &ln); err != nil {
@@ -56,8 +55,8 @@ func main() {
 		} else {
 			fmt.Fprintln(out)
 		}
-		links = make(map[string][]string)
-		for i := 0; i < ln; i++ {
+		links := make(map[string][]string)
+		for ; ln > 0; ln-- {
 			fmt.Fscanf(in, "%s%s", &n1, &n2)
 			links[n1] = append(links[n1], n2)
 			links[n2] = append(links[n2], n1)

@@ -51,15 +51,13 @@ func main() {
 	out, _ := os.Create("352.out")
 	defer out.Close()
 
-	var d, count int
-	var m [][]byte
+	var d int
 	var line string
-	for {
+	for count := 1; ; count++ {
 		if _, err := fmt.Fscanf(in, "%d", &d); err != nil {
 			break
 		}
-		count++
-		m = make([][]byte, d)
+		m := make([][]byte, d)
 		for i := range m {
 			m[i] = make([]byte, d)
 			fmt.Fscanf(in, "%s", &line)

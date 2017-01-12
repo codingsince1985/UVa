@@ -31,7 +31,7 @@ func main() {
 
 		var total, max int
 		var blown bool
-		for i := 0; i < m; i++ {
+		for ; m > 0; m-- {
 			fmt.Fscanf(in, "%d", &tmp)
 			if !devices[tmp-1].on {
 				total += devices[tmp-1].consumption

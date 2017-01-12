@@ -72,7 +72,6 @@ func main() {
 
 	var s, e point
 	var line string
-	var chars []byte
 	for {
 		if fmt.Fscanf(in, "%d%d%d", &l, &r, &c); l == 0 {
 			break
@@ -87,7 +86,7 @@ func main() {
 				cubes[i][j] = make([]byte, c)
 				visited[i][j] = make([]bool, c)
 				fmt.Fscanf(in, "%s", &line)
-				chars = []byte(line)
+				chars := []byte(line)
 				for k := range cubes[i][j] {
 					switch chars[k] {
 					case 'S':

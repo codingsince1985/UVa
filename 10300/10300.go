@@ -14,12 +14,10 @@ func main() {
 	defer out.Close()
 
 	var n, f int
-	var s, a, e, t uint64
-	fmt.Fscanf(in, "%d", &n)
-	for i := 0; i < n; i++ {
-		t = 0
-		fmt.Fscanf(in, "%d", &f)
-		for j := 0; j < f; j++ {
+	var s, a, e uint64
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
+		var t uint64 = 0
+		for fmt.Fscanf(in, "%d", &f); f > 0; f-- {
 			fmt.Fscanf(in, "%d%d%d", &s, &a, &e)
 			t += s * e
 		}

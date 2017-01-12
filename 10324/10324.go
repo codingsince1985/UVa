@@ -37,8 +37,7 @@ func main() {
 		}
 		dict := buildDict(line)
 		fmt.Fprintf(out, "Case %d:\n", kase)
-		fmt.Fscanf(in, "%d", &n)
-		for i := 0; i < n; i++ {
+		for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 			if fmt.Fscanf(in, "%d%d", &l, &r); dict[l] == dict[r] {
 				fmt.Fprintln(out, "YES")
 			} else {

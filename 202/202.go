@@ -8,11 +8,9 @@ import (
 	"strconv"
 )
 
-var m map[int]int
-
 func div(n, d int) (string, int) {
 	var ans string
-	m = make(map[int]int)
+	m := make(map[int]int)
 	var w, r, count, idx int
 	var ok bool
 	w = n / d

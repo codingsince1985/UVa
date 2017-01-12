@@ -29,7 +29,7 @@ func deal(cards []card) [][]card {
 	piles := make([][]card, 13)
 	for i := len(cards) - 1; i >= 0; i-- {
 		idx := (len(cards) - 1 - i) % 13
-		piles[idx] = append([]card{card{cards[i].rank, cards[i].suite}}, piles[idx]...)
+		piles[idx] = append([]card{{cards[i].rank, cards[i].suite}}, piles[idx]...)
 	}
 	return piles
 }

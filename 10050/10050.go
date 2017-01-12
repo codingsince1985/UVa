@@ -10,13 +10,11 @@ import (
 func solve(parties []int, days int) int {
 	hartal := make(map[int]bool)
 	for _, v := range parties {
-		round := 1
-		for v*round <= days {
+		for round := 1; v*round <= days; round++ {
 			day := v * round
 			if !hartal[day] && day%7 != 6 && day%7 != 0 {
 				hartal[day] = true
 			}
-			round++
 		}
 	}
 	return len(hartal)

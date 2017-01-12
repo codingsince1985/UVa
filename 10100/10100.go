@@ -55,8 +55,7 @@ func main() {
 	s.Split(bufio.ScanLines)
 
 	var t1, t2 []string
-	var count int
-	for s.Scan() {
+	for count := 1; s.Scan(); count++ {
 		s1 := s.Text()
 		s.Scan()
 		s2 := s.Text()
@@ -66,9 +65,7 @@ func main() {
 		s1 = strings.TrimSpace(s1)
 		s2 = strings.TrimSpace(s2)
 
-		count++
 		fmt.Fprintf(out, "%2d. ", count)
-
 		if len(s1) == 0 || len(s2) == 0 {
 			fmt.Fprintln(out, "Blank!")
 			continue

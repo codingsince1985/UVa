@@ -21,11 +21,11 @@ func isPrime(n int) bool {
 }
 
 func isCarmichael(n int) bool {
-	var b, e, p big.Int
-	e.SetInt64(int64(n))
+	var b, p big.Int
+	e := big.NewInt(int64(n))
 	for a := 2; a < n; a++ {
 		b.SetInt64(int64(a))
-		p.Exp(&b, &e, &e)
+		p.Exp(&b, e, e)
 		p.Sub(&p, &b)
 		if p.Int64() != 0 {
 			return false

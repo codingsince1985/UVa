@@ -49,8 +49,8 @@ func main() {
 	s = bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var kase, n int
-	for s.Scan() {
+	var n int
+	for kase := 1; s.Scan(); kase++ {
 		if n, _ = strconv.Atoi(s.Text()); n == 0 {
 			break
 		}
@@ -58,7 +58,6 @@ func main() {
 		s.Scan()
 		n, _ := strconv.Atoi(s.Text())
 		output := getMultiLine(n)
-		kase++
 		fmt.Fprintf(out, "Run #%d: %s\n", kase, compare(solution, output))
 	}
 }

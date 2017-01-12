@@ -8,8 +8,6 @@ import (
 	"sort"
 )
 
-type marbles []int
-
 func binarySearch(a []int, q, l, r int) int {
 	if l+2 < r {
 		m := (l + r) / 2
@@ -36,19 +34,18 @@ func main() {
 	defer out.Close()
 
 	var N, Q, q int
-	var a marbles
 	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d%d", &N, &Q); N == 0 && Q == 0 {
 			break
 		}
-		a = make([]int, N)
+		a := make([]int, N)
 		for i := range a {
 			fmt.Fscanf(in, "%d", &a[i])
 		}
 		sort.Ints(a)
 
 		fmt.Fprintf(out, "CASE# %d:\n", kase)
-		for i := 0; i < Q; i++ {
+		for ; Q > 0; Q-- {
 			fmt.Fscanf(in, "%d", &q)
 			// manual binary search
 			//			pos := binarySearch(a, q, 0, N-1) + 1

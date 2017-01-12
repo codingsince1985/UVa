@@ -14,12 +14,11 @@ func main() {
 	defer out.Close()
 
 	var n, t, avg, cnt int
-	var stacks []int
 	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		stacks = make([]int, n)
+		stacks := make([]int, n)
 		t = 0
 		for i := range stacks {
 			fmt.Fscanf(in, "%d", &stacks[i])

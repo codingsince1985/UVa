@@ -56,11 +56,11 @@ func output(out *os.File, i, j int) {
 	if i == j {
 		fmt.Fprintf(out, "A%d", i+1)
 	} else {
-		fmt.Fprintf(out, "(")
+		fmt.Fprint(out, "(")
 		output(out, i, c[i][j][1])
-		fmt.Fprintf(out, " x ")
+		fmt.Fprint(out, " x ")
 		output(out, c[i][j][1]+1, j)
-		fmt.Fprintf(out, ")")
+		fmt.Fprint(out, ")")
 	}
 }
 

@@ -49,8 +49,7 @@ func main() {
 				cnt = cnt % left
 			}
 			for cnt > 0 {
-				idx++
-				if idx == n {
+				if idx++; idx == n {
 					idx = 0
 				}
 				if !killed[idx] {

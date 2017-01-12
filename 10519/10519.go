@@ -9,15 +9,14 @@ import (
 )
 
 func main() {
-	var s string
-	var n, two, tmp big.Int
-	two.SetInt64(2)
-
 	in, _ := os.Open("10519.in")
 	defer in.Close()
 	out, _ := os.Create("10519.out")
 	defer out.Close()
 
+	var s string
+	var n, tmp big.Int
+	two := big.NewInt(2)
 	for {
 		if _, err := fmt.Fscanf(in, "%s", &s); err != nil {
 			break
@@ -29,7 +28,7 @@ func main() {
 		n.SetString(s, 10)
 		tmp.Mul(&n, &n)
 		tmp.Sub(&tmp, &n)
-		tmp.Add(&tmp, &two)
+		tmp.Add(&tmp, two)
 		fmt.Fprintln(out, &tmp)
 	}
 }

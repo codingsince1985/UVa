@@ -19,10 +19,9 @@ func print(n int) {
 	}
 	blanks := sheet*4 - n
 	left := true
-	pageToPrint := 1
 	fmt.Fprintf(out, "Printing order for %d pages:\n", n)
 here:
-	for i := 1; i <= sheet; i++ {
+	for pageToPrint, i := 1, 1; i <= sheet; i++ {
 		for _, page := range pages {
 			fmt.Fprintf(out, "Sheet %d, %s: ", i, page)
 			if blanks > 0 {

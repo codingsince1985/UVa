@@ -11,12 +11,12 @@ import (
 var two = big.NewInt(2)
 
 func sqrt(num string) *big.Int {
-	var n, l, m, h, tmp big.Int
+	var n, m, h, tmp big.Int
+	l := big.NewInt(1)
 	n.SetString(num, 10)
-	l.SetInt64(1)
 	h.Set(&n)
 	for {
-		m.Add(&l, &h)
+		m.Add(l, &h)
 		m.Div(&m, two)
 		tmp.Mul(&m, &m)
 		cmp := tmp.Cmp(&n)

@@ -33,18 +33,15 @@ func main() {
 	out, _ := os.Create("10018.out")
 	defer out.Close()
 
-	var n int
+	var n, count int
 	var p uint32
-	fmt.Fscanf(in, "%d", &n)
-	for i := 0; i < n; i++ {
-		count := 0
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%d", &p)
-		for {
+		for count = 0; ; count++ {
 			if isPalindrome(p) {
 				break
 			}
 			p += reverse(p)
-			count++
 		}
 		fmt.Fprintln(out, count, p)
 	}

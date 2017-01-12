@@ -8,9 +8,8 @@ import (
 )
 
 func solve(n int) (uint64, uint64) {
-	var f, m uint64
-	f = 1
-	for i := 0; i < n; i++ {
+	var f, m uint64 = 1, 0
+	for ; n > 0; n-- {
 		m, f = f+m, m+1
 	}
 	return m, f

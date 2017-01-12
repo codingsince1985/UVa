@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-var m map[string][2]int
+var m = make(map[string][2]int)
 
 func solve(out *os.File, s string) {
 	if len(s) == 1 {
@@ -52,9 +52,7 @@ func main() {
 
 	var n, r, c int
 	var s string
-	fmt.Fscanf(in, "%d", &n)
-	m = make(map[string][2]int)
-	for i := 0; i < n; i++ {
+	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%s%d%d", &s, &r, &c)
 		m[s] = [2]int{r, c}
 	}

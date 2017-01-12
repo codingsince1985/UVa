@@ -24,7 +24,7 @@ func output135(out *os.File, n int, num string, idx int) {
 	for i := range num {
 		d := num[i] - '0'
 		fmt.Fprint(out, " ")
-		for i := 0; i < n; i++ {
+		for j := 0; j < n; j++ {
 			fmt.Fprintf(out, "%c", digits[d][idx])
 		}
 		fmt.Fprint(out, " ")

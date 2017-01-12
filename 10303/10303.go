@@ -17,12 +17,11 @@ const MAX = 1001
 var t = func() [MAX]big.Int {
 	var t [MAX]big.Int
 	t[1].SetInt64(1)
-	var tmp big.Int
 	for i := 2; i < MAX; i++ {
-		tmp.SetInt64(int64(i + 1))
+		tmp := big.NewInt(int64(i + 1))
 		t[i].SetInt64(int64(4*i - 2))
 		t[i].Mul(&t[i], &t[i-1])
-		t[i].Div(&t[i], &tmp)
+		t[i].Div(&t[i], tmp)
 	}
 	return t
 }()

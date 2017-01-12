@@ -18,7 +18,7 @@ func main() {
 	var s1, s2 string
 	var op byte
 	var i1, i2, i3 big.Int
-	var maxInt = big.NewInt(math.MaxInt32)
+	maxInt := big.NewInt(math.MaxInt32)
 	for {
 		if _, err := fmt.Fscanf(in, "%s %c %s", &s1, &op, &s2); err != nil {
 			break

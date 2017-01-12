@@ -69,7 +69,7 @@ func main() {
 		}
 		squareMap := solve(grid)
 		if kase > 1 {
-			fmt.Fprintf(out, "\n**********************************\n\n")
+			fmt.Fprint(out, "\n**********************************\n\n")
 		}
 		if fmt.Fprintf(out, "Problem #%d\n\n", kase); len(squareMap) == 0 {
 			fmt.Fprintln(out, "No completed squares can be found.")

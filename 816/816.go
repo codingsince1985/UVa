@@ -116,14 +116,13 @@ func main() {
 
 	var n, f, token string
 	var r1, c1, r2, c2 int
-	var fm, to node
 	for {
 		if fmt.Fscanf(in, "%s", &n); n == "END" {
 			break
 		}
 		fmt.Fscanf(in, "%d%d%s%d%d", &r1, &c1, &f, &r2, &c2)
-		fm = node{r1, c1, faceMap[f[0]]}
-		to = node{r2, c2, -1}
+		fm := node{r1, c1, faceMap[f[0]]}
+		to := node{r2, c2, -1}
 		maze = make(map[node][]node)
 		for {
 			if _, err := fmt.Fscanf(in, "%d%d", &r1, &c1); err != nil {

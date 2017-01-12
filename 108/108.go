@@ -65,9 +65,6 @@ func main() {
 		r := make([][]int, n)
 		for i := range r {
 			r[i] = make([]int, n)
-		}
-
-		for i := range r {
 			for j := range r[i] {
 				fmt.Fscanf(in, "%d", &r[i][j])
 			}

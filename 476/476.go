@@ -43,12 +43,10 @@ func main() {
 		rectangles = append(rectangles, rectangle{point{a, b}, point{c, d}})
 	}
 
-	count := 0
-	for {
+	for count := 1; ; count++ {
 		if fmt.Fscanf(in, "%f%f", &a, &b); a == 9999.9 && b == 9999.9 {
 			break
 		}
-		count++
 		testIn(count, point{a, b}, rectangles)
 	}
 }

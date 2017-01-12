@@ -35,12 +35,11 @@ func main() {
 	defer out.Close()
 
 	var n int
-	var lst []int
 	for {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
 		}
-		lst = make([]int, n)
+		lst := make([]int, n)
 		for i := range lst {
 			fmt.Fscanf(in, "%d", &lst[i])
 		}

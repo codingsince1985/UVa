@@ -21,7 +21,7 @@ func main() {
 			break
 		}
 		var sub []string
-		for i := 0; i < n; i++ {
+		for ; n > 0; n-- {
 			fmt.Fscanf(in, "%d", &tmp)
 			if tmp > 0 {
 				sub = append(sub, strconv.Itoa(tmp))

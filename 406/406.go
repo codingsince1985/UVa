@@ -35,7 +35,7 @@ func output(out *os.File, lst []int) {
 	for _, v := range lst {
 		fmt.Fprintf(out, " %d", v)
 	}
-	fmt.Fprintf(out, "\n\n")
+	fmt.Fprint(out, "\n\n")
 }
 
 func main() {

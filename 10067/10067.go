@@ -29,8 +29,8 @@ func rotate(n [4]int, i, step int) [4]int {
 
 func bfs(initial config) int {
 	visited := make(map[[4]int]bool)
-	var queue []config
 	visited[initial.n] = true
+	var queue []config
 	queue = append(queue, initial)
 	for len(queue) > 0 {
 		curr := queue[0]
@@ -65,8 +65,7 @@ func main() {
 		fmt.Fscanf(in, "%d%d%d%d", &t[0], &t[1], &t[2], &t[3])
 		target = config{t, -1}
 		forbidden = make(map[[4]int]bool)
-		fmt.Fscanf(in, "%d", &f)
-		for i := 0; i < f; i++ {
+		for fmt.Fscanf(in, "%d", &f); f > 0; f-- {
 			fmt.Fscanf(in, "%d%d%d%d", &t[0], &t[1], &t[2], &t[3])
 			forbidden[t] = true
 		}
