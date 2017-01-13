@@ -63,7 +63,6 @@ func main() {
 		} else {
 			fmt.Fprintln(out)
 		}
-		selected := make([]bool, k)
-		backtracking(nums, selected)
+		backtracking(nums, make([]bool, k))
 	}
 }

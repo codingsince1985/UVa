@@ -104,8 +104,6 @@ here:
 
 	visited := make([]bool, len(chars))
 	visited[first] = true
-	var route []int
-	route = append(route, first)
-	dfs(matrix, visited, route)
+	dfs(matrix, visited, []int{first})
 	output(out, chars)
 }

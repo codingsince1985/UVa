@@ -61,12 +61,11 @@ func main() {
 	out, _ = os.Create("10020.out")
 	defer out.Close()
 
-	var kase int
+	var kase, m int
+	var l [2]int
 	for fmt.Fscanf(in, "%d\n", &kase); kase > 0; kase-- {
-		var m int
 		fmt.Fscanf(in, "\n%d", &m)
 		var ls lines
-		var l [2]int
 		for {
 			if fmt.Fscanf(in, "%d%d", &l[0], &l[1]); l[0] == 0 && l[1] == 0 {
 				break

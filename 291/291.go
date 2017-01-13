@@ -49,6 +49,5 @@ func main() {
 	defer out.Close()
 
 	matrix = buildMatrix()
-	var steps []int
-	backtracking(append(steps, 1))
+	backtracking([]int{1})
 }

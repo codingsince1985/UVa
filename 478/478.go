@@ -41,7 +41,7 @@ func area(p1, p2, p3 point) float64 {
 func (t triangle) contains(p point) bool {
 	diff := area(p, t.p1, t.p2) + area(p, t.p1, t.p3) + area(p, t.p2, t.p3) - area(t.p1, t.p2, t.p3)
 	if diff < 0 {
-		diff *= -1
+		diff = -diff
 	}
 	return diff <= 0.00001
 }

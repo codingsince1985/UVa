@@ -26,16 +26,16 @@ func main() {
 	defer out.Close()
 
 	var bin [3][3]int
-	var total, minMove, idx int
+	var idx int
 	for {
-		total = 0
+		total := 0
 		for i := 0; i < 3; i++ {
 			if _, err := fmt.Fscanf(in, "%d%d%d", &bin[i][B], &bin[i][G], &bin[i][C]); err != nil {
 				return
 			}
 			total += bin[i][B] + bin[i][G] + bin[i][C]
 		}
-		minMove = math.MaxInt32
+		minMove := math.MaxInt32
 		for i, v := range binColor {
 			if move := total - bin[0][v[0]] - bin[1][v[1]] - bin[2][v[2]]; move < minMove {
 				minMove = move

@@ -40,14 +40,14 @@ func main() {
 	out, _ := os.Create("10130.out")
 	defer out.Close()
 
-	var t int
+	var t, n, g, tw int
 	for fmt.Fscanf(in, "%d", &t); t > 0; t-- {
-		var n, g, tw, total int
 		fmt.Fscanf(in, "%d", &n)
 		p, w := make([]int, n), make([]int, n)
 		for j := range p {
 			fmt.Fscanf(in, "%d%d", &p[j], &w[j])
 		}
+		var total int
 		for fmt.Fscanf(in, "%d", &g); g > 0; g-- {
 			fmt.Fscanf(in, "%d", &tw)
 			total += knapsack(p, w, tw)

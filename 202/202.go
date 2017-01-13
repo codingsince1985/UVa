@@ -9,13 +9,12 @@ import (
 )
 
 func div(n, d int) (string, int) {
-	var ans string
-	m := make(map[int]int)
-	var w, r, count, idx int
+	var count, idx int
 	var ok bool
-	w = n / d
-	ans += strconv.Itoa(w) + "."
-	r = n % d
+	w := n / d
+	ans := strconv.Itoa(w) + "."
+	r := n % d
+	m := make(map[int]int)
 	m[r] = count
 	for {
 		count++

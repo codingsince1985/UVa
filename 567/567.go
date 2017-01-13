@@ -40,8 +40,8 @@ func main() {
 	out, _ := os.Create("567.out")
 	defer out.Close()
 
-	var cnt, tmp, set, kase, n1, n2 int
-	for {
+	var cnt, tmp, kase, n1, n2 int
+	for set := 1; ; set++ {
 		matrix = make([][]bool, N+1)
 		for i := range matrix {
 			matrix[i] = make([]bool, N+1)
@@ -50,16 +50,14 @@ func main() {
 			if _, err := fmt.Fscanf(in, "%d", &cnt); err != nil {
 				return
 			}
-			for j := 0; j < cnt; j++ {
+			for ; cnt > 0; cnt-- {
 				fmt.Fscanf(in, "%d", &tmp)
 				matrix[i][tmp] = true
 				matrix[tmp][i] = true
 			}
 		}
-		set++
 		fmt.Fprintf(out, "Test Set #%d\n", set)
-		fmt.Fscanf(in, "%d", &kase)
-		for i := 0; i < kase; i++ {
+		for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 			fmt.Fscanf(in, "%d%d", &n1, &n2)
 			fmt.Fprintf(out, "%2d to %2d: %d\n", n1, n2, bfs(n1, n2))
 		}

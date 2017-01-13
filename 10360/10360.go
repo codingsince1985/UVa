@@ -45,8 +45,7 @@ func main() {
 	var kase, d, n, x, y, population int
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		var rats [MAX][MAX]int
-		fmt.Fscanf(in, "%d\n%d", &d, &n)
-		for j := 0; j < n; j++ {
+		for fmt.Fscanf(in, "%d\n%d", &d, &n); n > 0; n-- {
 			fmt.Fscanf(in, "%d%d%d", &x, &y, &population)
 			process(d, x, y, population, &rats)
 		}

@@ -113,14 +113,12 @@ func main() {
 		teamMap = make(map[string]team)
 		fmt.Fprintln(out, nextLine(s))
 
-		tm, _ := strconv.Atoi(nextLine(s))
-		for j := 0; j < tm; j++ {
+		for tm, _ := strconv.Atoi(nextLine(s)); tm > 0; tm-- {
 			tmp := nextLine(s)
 			teamMap[tmp] = team{name: tmp}
 		}
 
-		gm, _ := strconv.Atoi(nextLine(s))
-		for j := 0; j < gm; j++ {
+		for gm, _ := strconv.Atoi(nextLine(s)); gm > 0; gm-- {
 			tokens := strings.Split(nextLine(s), "#")
 			scores := strings.Split(tokens[1], "@")
 			s1, _ := strconv.Atoi(scores[0])

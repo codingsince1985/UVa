@@ -16,13 +16,6 @@ func f(x float64) float64 {
 	return p*math.Pow(math.E, -x) + q*math.Sin(x) + r*math.Cos(x) + s*math.Tan(x) + t*x*x + u
 }
 
-func abs(x float64) float64 {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-
 func binarySearch() string {
 	l, r := 0.0, 1.0
 	fl, fr := f(l), f(r)
@@ -31,7 +24,7 @@ func binarySearch() string {
 	}
 	for m := 0.5; ; m = (l + r) / 2 {
 		fm := f(m)
-		if abs(fm) <= zero {
+		if math.Abs(fm) <= zero {
 			return fmt.Sprintf("%.4f", m)
 		}
 		if fl*fm > 0 {

@@ -9,7 +9,7 @@ import (
 
 func solve(k int) int {
 	if k < 0 {
-		k *= -1
+		k = -k
 	}
 	i, sum := 0, 0
 	for sum < k || (sum-k)%2 != 0 {

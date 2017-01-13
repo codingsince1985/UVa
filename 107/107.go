@@ -16,13 +16,11 @@ func main() {
 	out, _ := os.Create("107.out")
 	defer out.Close()
 
-	var h, c float64
+	var h, c, n float64
 	for {
 		if fmt.Fscanf(in, "%f%f", &h, &c); h == 0 && c == 0 {
 			break
 		}
-
-		var n float64
 		for n = 0; math.Abs(math.Log(h)*math.Log(n)-math.Log(c)*math.Log(n+1)) > diff; n++ {
 		}
 		if n != 1 {

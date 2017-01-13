@@ -18,7 +18,7 @@ func main() {
 		fmt.Fscanf(in, "%d", &n)
 		n = (n*63+7492)*235/47 - 498
 		if n < 0 {
-			n *= -1
+			n = -n
 		}
 		n = n / 10 % 10
 		fmt.Fprintln(out, n)

@@ -39,8 +39,6 @@ func prefixSum(r [][]int) [][]int {
 	s := make([][]int, l)
 	for i := range s {
 		s[i] = make([]int, l)
-	}
-	for i := range s {
 		for j := range s[i] {
 			s[i][j] = r[i][j]
 			if i > 0 {

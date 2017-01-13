@@ -61,7 +61,7 @@ func main() {
 		line := s.Text()
 		number := calculate1M(strings.Replace(line, "negative", " ", 1))
 		if strings.HasPrefix(line, "negative") {
-			number *= -1
+			number = -number
 		}
 		fmt.Fprintln(out, number)
 	}

@@ -32,7 +32,11 @@ func insert(level int, order []string) {
 		} else {
 			fmt.Fprintln(out, "else")
 		}
-		insert(level+1, append(append(append([]string(nil), order[:i]...), vars[level]), order[i:]...))
+		newOrder := make([]string, len(order)+1)
+		copy(newOrder[:i], order[:i])
+		copy(newOrder[i+1:], order[i:])
+		newOrder[i] = vars[level]
+		insert(level+1, newOrder)
 	}
 }
 

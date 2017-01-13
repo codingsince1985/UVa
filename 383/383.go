@@ -53,7 +53,7 @@ func main() {
 		}
 
 		legs := make(map[string][]string)
-		for j := 0; j < n; j++ {
+		for ; n > 0; n-- {
 			fmt.Fscanf(in, "%s%s", &wh1, &wh2)
 			legs[wh1] = append(legs[wh1], wh2)
 			legs[wh2] = append(legs[wh2], wh1)
@@ -62,7 +62,7 @@ func main() {
 
 		var size int
 		var src, dest string
-		for j := 0; j < p; j++ {
+		for ; p > 0; p-- {
 			fmt.Fscanf(in, "%d%s%s", &size, &src, &dest)
 			if l := bfs(legs, src, dest); l == -1 {
 				fmt.Fprint(out, "NO SHIPMENT POSSIBLE\n")

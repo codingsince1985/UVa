@@ -14,7 +14,7 @@ func factorize(n int) []string {
 
 	if n < 0 {
 		p = append(p, "-1")
-		n *= -1
+		n = -n
 	}
 
 	t := 2

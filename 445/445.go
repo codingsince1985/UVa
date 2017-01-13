@@ -29,10 +29,9 @@ func outputLine(line string) {
 			tmp, _ := strconv.Atoi(string(v))
 			cnt += tmp
 		} else {
-			for i := 0; i < cnt; i++ {
+			for ; cnt > 0; cnt-- {
 				fmt.Fprintf(out, "%c", v)
 			}
-			cnt = 0
 		}
 	}
 	fmt.Fprintln(out)

@@ -10,13 +10,6 @@ import (
 
 type point struct{ x, y float64 }
 
-func abs(a float64) float64 {
-	if a >= 0 {
-		return a
-	}
-	return -a
-}
-
 func sign(condition bool) string {
 	if condition {
 		return "-"
@@ -36,10 +29,10 @@ func output(out *os.File, p []point) {
 	x0 := -d / 2
 	y0 := -e / 2
 	r := math.Sqrt((p[1].x-x0)*(p[1].x-x0) + (p[1].y-y0)*(p[1].y-y0))
-	fmt.Fprintf(out, "(x %s %.3f)^2 + (y %s %.3f)^2 = %.3f^2\n", sign(x0 > 0), abs(x0), sign(y0 > 0), abs(y0), r)
+	fmt.Fprintf(out, "(x %s %.3f)^2 + (y %s %.3f)^2 = %.3f^2\n", sign(x0 > 0), math.Abs(x0), sign(y0 > 0), math.Abs(y0), r)
 
 	f := -p[1].x*p[1].x - p[1].y*p[1].y - p[1].x*d - p[1].y*e
-	fmt.Fprintf(out, "x^2 + y^2 %s %.3fx %s %.3fy %s %.3f = 0\n", sign(d < 0), abs(d), sign(e < 0), abs(e), sign(f < 0), abs(f))
+	fmt.Fprintf(out, "x^2 + y^2 %s %.3fx %s %.3fy %s %.3f = 0\n", sign(d < 0), math.Abs(d), sign(e < 0), math.Abs(e), sign(f < 0), math.Abs(f))
 }
 
 func main() {

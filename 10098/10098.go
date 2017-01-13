@@ -48,9 +48,8 @@ func main() {
 		}
 		sort.Strings(strs)
 		visited := make([]bool, len(str))
-		var ans []string
 		res = make(map[string]bool)
-		dfs(strs, visited, ans)
+		dfs(strs, visited, nil)
 		fmt.Fprintln(out)
 	}
 }

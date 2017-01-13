@@ -10,7 +10,7 @@ import (
 
 var (
 	I, O, A [2][2]big.Int
-	two     *big.Int = big.NewInt(2)
+	two     = big.NewInt(2)
 	out     *os.File
 )
 
