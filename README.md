@@ -374,6 +374,7 @@ UVa 10440 - [Ferry Loading II](https://uva.onlinejudge.org/external/104/10440.pd
 UVa 10443 - [Rock](https://uva.onlinejudge.org/external/104/10443.pdf)  
 UVa 10450 - [World Cup Noise](https://uva.onlinejudge.org/external/104/10450.pdf)  
 UVa 10451 - [Ancient Village Sports](https://uva.onlinejudge.org/external/104/10451.pdf)  
+UVa 10452 - [Marcus](https://uva.onlinejudge.org/external/104/10452.pdf)  
 UVa 10465 - [Homer Simpson](https://uva.onlinejudge.org/external/104/10465.pdf)  
 UVa 10469 - [To Carry or not to Carry](https://uva.onlinejudge.org/external/104/10469.pdf)  
 UVa 10473 - [Simple Base Conversion](https://uva.onlinejudge.org/external/104/10473.pdf)  
