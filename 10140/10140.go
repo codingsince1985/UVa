@@ -28,6 +28,9 @@ func isPrime(n int) bool {
 		return !primes[n]
 	}
 	for i := range primes {
+		if i*i > n {
+			break
+		}
 		if !primes[i] && n%i == 0 {
 			return false
 		}
@@ -36,7 +39,8 @@ func isPrime(n int) bool {
 }
 
 func solve(l, u int) (c1, c2, d1, d2 int) {
-	for i, pre, min, max := l, -1, math.MaxInt32, math.MinInt32; i <= u; i++ {
+	pre, min, max := -1, math.MaxInt32, math.MinInt32
+	for i := l; i <= u; i++ {
 		if isPrime(i) {
 			if pre != -1 {
 				distance := i - pre
