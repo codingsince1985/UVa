@@ -362,6 +362,7 @@ UVa 10361 - [Automatic Poetry](https://uva.onlinejudge.org/external/103/10361.pd
 UVa 10365 - [Blocks](https://uva.onlinejudge.org/external/103/10365.pdf)  
 UVa 10370 - [Above Average](https://uva.onlinejudge.org/external/103/10370.pdf)  
 UVa 10394 - [Twin Primes](https://uva.onlinejudge.org/external/103/10394.pdf)  
+UVa 10404 - [Bachet's Game](https://uva.onlinejudge.org/external/104/10404.pdf)  
 UVa 10405 - [Longest Common Subsequence](https://uva.onlinejudge.org/external/104/10405.pdf)  
 UVa 10407 - [Simple division](https://uva.onlinejudge.org/external/104/10407.pdf)  
 UVa 10408 - [Farey sequences](https://uva.onlinejudge.org/external/104/10408.pdf)  
