@@ -13,18 +13,15 @@ func main() {
 	out, _ := os.Create("264.out")
 	defer out.Close()
 
-	var n int
+	var n, i, cnt, num int
 	for {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
 		}
-		i, cnt := 1, 0
-		for cnt+i < n {
+		for i, cnt = 1, 0; cnt+i < n; i++ {
 			cnt += i
-			i++
 		}
-		num := n - cnt
-		if i%2 != 0 {
+		if num = n - cnt; i%2 != 0 {
 			num = i + 1 - num
 		}
 		fmt.Fprintf(out, "TERM %d IS %d/%d\n", n, num, i+1-num)
