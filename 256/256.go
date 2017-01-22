@@ -4,7 +4,7 @@ package main
 
 import (
 	"fmt"
-	. "math"
+	"math"
 	"os"
 )
 
@@ -19,10 +19,10 @@ func squaresOf(n int) []int {
 func split(num, limit int) [2]int { return [2]int{num / limit, num % limit} }
 
 func quirksome(n int, out *os.File) {
-	limit := int(Pow10(n / 2))
+	limit := int(math.Pow10(n / 2))
 	squares := squaresOf(limit)
 	for _, v := range squares {
-		rt := int(Sqrt(float64(v)))
+		rt := int(math.Sqrt(float64(v)))
 		pairs := split(v, limit)
 		if pairs[0]+pairs[1] == rt {
 			format := fmt.Sprintf("%%0%dd\n", n)
