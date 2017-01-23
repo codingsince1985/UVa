@@ -8,11 +8,11 @@ import (
 )
 
 var (
-	n      int
+	out    *os.File
 	blocks [][]int
 )
 
-func initBlocks() {
+func initBlocks(n int) {
 	blocks = make([][]int, n)
 	for i := range blocks {
 		blocks[i] = make([]int, 1)
@@ -53,7 +53,7 @@ func pile(n1, n2 int) {
 			blocksToMove := stack[i:]
 			blocks[pos1] = stack[:i]
 			blocks[pos2] = append(blocks[pos2], blocksToMove...)
-			break
+			return
 		}
 	}
 }
@@ -66,15 +66,15 @@ func process(s1, s2 string, n1, n2 int) {
 		reset(n2)
 	}
 
-	switch {
-	case s1 == "move":
+	switch s1 {
+	case "move":
 		move(n1, n2)
-	case s1 == "pile":
+	case "pile":
 		pile(n1, n2)
 	}
 }
 
-func output(out *os.File) {
+func output() {
 	for i := range blocks {
 		fmt.Fprintf(out, "%d:", i)
 		for j := range blocks[i] {
@@ -87,13 +87,13 @@ func output(out *os.File) {
 func main() {
 	in, _ := os.Open("101.in")
 	defer in.Close()
-	out, _ := os.Create("101.out")
+	out, _ = os.Create("101.out")
 	defer out.Close()
 
-	var n1, n2 int
+	var n, n1, n2 int
 	var s1, s2 string
 	fmt.Fscanf(in, "%d", &n)
-	initBlocks()
+	initBlocks(n)
 	for {
 		if fmt.Fscanf(in, "%s", &s1); s1 == "quit" {
 			break
@@ -101,5 +101,5 @@ func main() {
 		fmt.Fscanf(in, "%d%s%d", &n1, &s2, &n2)
 		process(s1, s2, n1, n2)
 	}
-	output(out)
+	output()
 }

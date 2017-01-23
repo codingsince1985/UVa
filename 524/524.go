@@ -17,14 +17,10 @@ var (
 )
 
 func isPrime(n int) bool {
-	if n == 2 {
-		return true
+	if n%2 == 0 {
+		return n == 2
 	}
-
-	for i := 2; i < n; i++ {
-		if i*i > n {
-			return true
-		}
+	for i := 3; i*i <= n; i += 2 {
 		if n%i == 0 {
 			return false
 		}
