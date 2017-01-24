@@ -32,11 +32,13 @@ func find(n int) int {
 }
 
 func reset(n int) {
-	stack := blocks[find(n)]
+	idx := find(n)
+	stack := blocks[idx]
 	for stack[len(stack)-1] != n {
 		blocks[stack[len(stack)-1]] = append(blocks[stack[len(stack)-1]], stack[len(stack)-1])
 		stack = stack[:len(stack)-1]
 	}
+	blocks[idx] = stack
 }
 
 func move(n1, n2 int) {
@@ -59,10 +61,10 @@ func pile(n1, n2 int) {
 }
 
 func process(s1, s2 string, n1, n2 int) {
-	switch {
-	case s1 == "move":
+	if s1 == "move" {
 		reset(n1)
-	case s2 == "onto":
+	}
+	if s2 == "onto" {
 		reset(n2)
 	}
 
