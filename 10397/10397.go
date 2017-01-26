@@ -60,8 +60,7 @@ func main() {
 		}
 		buildings := make([]building, n)
 		for i := range buildings {
-			fmt.Fscanf(in, "%d%d", &x, &y)
-			buildings[i] = building{x, y}
+			fmt.Fscanf(in, "%d%d", &buildings[i].x, &buildings[i].y)
 		}
 		campus := make([][]float64, n)
 		for i := range campus {

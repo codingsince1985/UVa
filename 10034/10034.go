@@ -42,13 +42,11 @@ func main() {
 	defer out.Close()
 
 	var kase, num int
-	var x, y float64
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "\n%d", &num)
 		freckles := make([]point, num)
 		for i := range freckles {
-			fmt.Fscanf(in, "%f%f", &x, &y)
-			freckles[i] = point{x, y}
+			fmt.Fscanf(in, "%f%f", &freckles[i].x, &freckles[i].y)
 		}
 		fmt.Fprintf(out, "%.2f\n", prim(freckles))
 		if kase > 1 {

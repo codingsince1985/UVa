@@ -70,20 +70,17 @@ func main() {
 	out, _ := os.Create("10080.out")
 	defer out.Close()
 
-	var x, y float64
 	for {
 		if _, err := fmt.Fscanf(in, "%d%d%d%d", &n, &m, &s, &v); err != nil {
 			break
 		}
 		gophers = make([]point, n)
 		for i := range gophers {
-			fmt.Fscanf(in, "%f%f", &x, &y)
-			gophers[i] = point{x, y}
+			fmt.Fscanf(in, "%f%f", &gophers[i].x, &gophers[i].y)
 		}
 		holes = make([]point, m)
 		for i := range holes {
-			fmt.Fscanf(in, "%f%f", &x, &y)
-			holes[i] = point{x, y}
+			fmt.Fscanf(in, "%f%f", &holes[i].x, &holes[i].y)
 		}
 		fmt.Fprintln(out, n-solve())
 	}

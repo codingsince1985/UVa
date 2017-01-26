@@ -50,7 +50,7 @@ func main() {
 	out, _ := os.Create("10074.out")
 	defer out.Close()
 
-	var m, n, tree int
+	var m, n int
 	for {
 		if fmt.Fscanf(in, "%d%d", &m, &n); m == 0 && n == 0 {
 			break
@@ -59,8 +59,7 @@ func main() {
 		for i := range land {
 			land[i] = make([]cell, n)
 			for j := range land[i] {
-				fmt.Fscanf(in, "%d", &tree)
-				land[i][j] = cell{tree, 0}
+				fmt.Fscanf(in, "%d", &land[i][j].tree)
 			}
 		}
 		fmt.Fprintln(out, solve(land))

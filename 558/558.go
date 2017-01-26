@@ -39,13 +39,12 @@ func main() {
 	out, _ := os.Create("558.out")
 	defer out.Close()
 
-	var c, m, s1, s2, t int
+	var c, m int
 	for fmt.Fscanf(in, "%d", &c); c > 0; c-- {
 		fmt.Fscanf(in, "%d%d", &n, &m)
 		edges := make([]edge, m)
 		for i := 0; i < m; i++ {
-			fmt.Fscanf(in, "%d%d%d", &s1, &s2, &t)
-			edges[i] = edge{s1, s2, t}
+			fmt.Fscanf(in, "%d%d%d", &edges[i].from, &edges[i].to, &edges[i].time)
 		}
 		if bellmanFord(edges) {
 			fmt.Fprintln(out, "possible")

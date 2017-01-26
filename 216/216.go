@@ -60,15 +60,14 @@ func main() {
 	out, _ := os.Create("216.out")
 	defer out.Close()
 
-	var n, x, y int
+	var n int
 	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
 		c = make([][2]int, n)
 		for i := range c {
-			fmt.Fscanf(in, "%d%d", &x, &y)
-			c[i] = [2]int{x, y}
+			fmt.Fscanf(in, "%d%d", &c[i][0], &c[i][1])
 		}
 
 		v = make([]bool, n)

@@ -31,15 +31,14 @@ func main() {
 	out, _ := os.Create("700.out")
 	defer out.Close()
 
-	var n, y, a, b int
+	var n int
 	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
 		computers := make([]computer, n)
 		for i := range computers {
-			fmt.Fscanf(in, "%d%d%d", &y, &a, &b)
-			computers[i] = computer{y, a, b}
+			fmt.Fscanf(in, "%d%d%d", &computers[i].y, &computers[i].a, &computers[i].b)
 		}
 		fmt.Fprintf(out, "Case #%d:\n", kase)
 		if year := solve(computers); year == -1 {

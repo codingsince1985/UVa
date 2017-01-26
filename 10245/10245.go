@@ -67,15 +67,13 @@ func main() {
 	defer out.Close()
 
 	var n int
-	var x, y float64
 	for {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
 		p := make(points, n)
 		for i := range p {
-			fmt.Fscanf(in, "%f%f", &x, &y)
-			p[i] = point{x, y}
+			fmt.Fscanf(in, "%f%f", &p[i].x, &p[i].y)
 		}
 		sort.Sort(p)
 		if dist := divide(p); dist >= 10000 {
