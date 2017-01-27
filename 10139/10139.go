@@ -42,14 +42,12 @@ func factorize(n int) map[int]int {
 
 func primeFactorizeFactorial(n int) map[int]int {
 	var ok bool
-	var f map[int]int
 	facts := make(map[int]int)
 	for i := 2; i <= n; i++ {
-		if f, ok = cache[i]; !ok {
-			f = factorize(i)
-			cache[i] = f
+		if _, ok = cache[i]; !ok {
+			cache[i] = factorize(i)
 		}
-		for k, v := range f {
+		for k, v := range cache[i] {
 			facts[k] += v
 		}
 	}

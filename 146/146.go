@@ -21,10 +21,7 @@ func nextPermutation(p []string) bool {
 
 	mp := i
 	for j := i + 1; j < n; j++ {
-		if p[j] <= p[i-1] {
-			continue
-		}
-		if p[j] < p[mp] {
+		if p[j] > p[i-1] && p[j] < p[mp] {
 			mp = j
 		}
 	}
@@ -48,7 +45,7 @@ func main() {
 		for i := range line {
 			p[i] = string(line[i])
 		}
-		if ok := nextPermutation(p); ok {
+		if nextPermutation(p) {
 			fmt.Fprintln(out, strings.Join(p, ""))
 		} else {
 			fmt.Fprintln(out, "No Successor")

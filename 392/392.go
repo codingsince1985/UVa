@@ -32,10 +32,10 @@ func output(out *os.File, coefficients []int) {
 		} else if abs(coefficients[i]) != 1 {
 			fmt.Fprint(out, abs(coefficients[i]))
 		}
-		switch {
-		case i == 7:
+		switch i {
+		case 7:
 			fmt.Fprint(out, "x")
-		case i == 8:
+		case 8:
 			fmt.Fprint(out, abs(coefficients[i]))
 		default:
 			fmt.Fprint(out, "x^", 8-i)

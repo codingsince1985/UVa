@@ -30,20 +30,19 @@ func primes(n int) []int {
 }
 
 func factors(n int, ps []int) map[int]int {
-	if fs, ok := cache[n]; ok {
-		return fs
-	}
-	fs := make(map[int]int)
-	for i := n; i != 1; {
-		for _, p := range ps {
-			if i%p == 0 {
-				fs[p]++
-				i /= p
+	if _, ok := cache[n]; !ok {
+		fs := make(map[int]int)
+		for i := n; i != 1; {
+			for _, p := range ps {
+				if i%p == 0 {
+					fs[p]++
+					i /= p
+				}
 			}
 		}
+		cache[n] = fs
 	}
-	cache[n] = fs
-	return fs
+	return cache[n]
 }
 
 func output(out *os.File, n int, fs map[int]int, ps []int) {

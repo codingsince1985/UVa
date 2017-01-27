@@ -23,10 +23,7 @@ func distance(p1, p2 point) float64 {
 
 func dfs(gopher int, visited []bool) bool {
 	for i, near := range matrix[gopher] {
-		if !near {
-			continue
-		}
-		if !visited[i] {
+		if near && !visited[i] {
 			visited[i] = true
 			if matched[i] == -1 || dfs(matched[i], visited) {
 				matched[i] = gopher

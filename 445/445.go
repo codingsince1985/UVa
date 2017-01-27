@@ -13,7 +13,7 @@ import (
 var out *os.File
 
 func nextLine(s *bufio.Scanner) (string, bool) {
-	if ok := s.Scan(); ok {
+	if s.Scan() {
 		return s.Text(), true
 	}
 	return "", false

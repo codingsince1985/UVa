@@ -77,7 +77,7 @@ here:
 			fmt.Fprintln(out)
 		}
 		fmt.Fprintf(out, "Puzzle #%d:\n", kase)
-		if ok := move(puzzle, moves[:len(moves)-1]); ok {
+		if move(puzzle, moves[:len(moves)-1]) {
 			output(out, puzzle)
 		} else {
 			fmt.Fprintln(out, "This puzzle has no final configuration.")

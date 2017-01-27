@@ -39,7 +39,7 @@ func dfs(matrix [][]bool, nodes []int, curr, color int) bool {
 			}
 			if valid(matrix, nodes, i, nextColor) {
 				nodes[i] = nextColor
-				if ok := dfs(matrix, nodes, i, nextColor); ok {
+				if dfs(matrix, nodes, i, nextColor) {
 					return true
 				}
 				nodes[i] = 0

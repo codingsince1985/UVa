@@ -10,16 +10,14 @@ import (
 var cache = make(map[int]int)
 
 func calculate(i int) int {
-	v := cache[i]
-	if v == 0 {
+	if _, ok := cache[i]; !ok {
 		if i%2 == 0 {
-			v = 1 + calculate(i/2)
+			cache[i] = 1 + calculate(i/2)
 		} else {
-			v = 1 + calculate(i*3+1)
+			cache[i] = 1 + calculate(i*3+1)
 		}
-		cache[i] = v
 	}
-	return v
+	return cache[i]
 }
 
 func solve(i, j int) int {

@@ -61,10 +61,7 @@ func checkForPiece(king point, board [8][8]byte, piece byte, directions [][2]int
 	for _, direction := range directions {
 		x := king.x + direction[0]
 		y := king.y + direction[1]
-		if !inBoard(x, y) {
-			continue
-		}
-		if board[x][y] == piece {
+		if inBoard(x, y) && board[x][y] == piece {
 			return true
 		}
 	}

@@ -24,8 +24,7 @@ func solve(field [][]byte) [][]byte {
 				res[i][j] = '0'
 				for _, dx := range delta {
 					for _, dy := range delta {
-						x, y := i+dx, j+dy
-						if !(dx == 0 && dy == 0) && x >= 0 && y >= 0 && x < m && y < n && field[x][y] == '*' {
+						if x, y := i+dx, j+dy; !(dx == 0 && dy == 0) && x >= 0 && y >= 0 && x < m && y < n && field[x][y] == '*' {
 							res[i][j]++
 						}
 					}
@@ -62,7 +61,6 @@ func main() {
 			fmt.Fscanf(in, "%s", &line)
 			field[i] = []byte(line)
 		}
-		field = solve(field)
-		output(field)
+		output(solve(field))
 	}
 }

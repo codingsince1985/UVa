@@ -36,10 +36,7 @@ func postProcess(matrix [][]int) [][]int {
 		if matrix[k][k] > 0 {
 			for i := 0; i <= m; i++ {
 				for j := 0; j <= m; j++ {
-					if i == k && j == k {
-						continue
-					}
-					if matrix[i][k] > 0 && matrix[k][j] > 0 {
+					if (k != i || k != j) && matrix[i][k] > 0 && matrix[k][j] > 0 {
 						matrix[i][j] = -1
 					}
 				}

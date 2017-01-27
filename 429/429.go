@@ -23,10 +23,7 @@ func sameLenAndOneCharDiff(w1, w2 string) bool {
 func buildLink(dict map[string][]string, word string) {
 	dict[word] = nil
 	for k, v := range dict {
-		if k == word {
-			continue
-		}
-		if sameLenAndOneCharDiff(k, word) {
+		if k != word && sameLenAndOneCharDiff(k, word) {
 			dict[k] = append(v, word)
 			dict[word] = append(dict[word], k)
 		}

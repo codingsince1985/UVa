@@ -7,10 +7,7 @@ import (
 	"os"
 )
 
-var (
-	order []int
-	done  bool
-)
+var order []int
 
 func min(a, b int) int {
 	if a < b {
@@ -38,23 +35,22 @@ func buildMatrix(chars map[byte]int, words []string) [][]bool {
 	return matrix
 }
 
-func dfs(matrix [][]bool, visited []bool, route []int) {
+func dfs(matrix [][]bool, visited []bool, route []int) bool {
 	if len(route) == len(matrix) {
 		order = make([]int, len(route))
 		copy(order, route)
-		done = true
-		return
+		return true
 	}
 	for i := range matrix {
 		if !visited[i] && matrix[route[len(route)-1]][i] {
 			visited[i] = true
-			dfs(matrix, visited, append(route, i))
-			if done {
-				return
+			if dfs(matrix, visited, append(route, i)) {
+				return true
 			}
 			visited[i] = false
 		}
 	}
+	return false
 }
 
 func output(out *os.File, chars map[byte]int) {
