@@ -277,6 +277,7 @@ UVa 10070 - [Leap Year or Not Leap Year and ...](https://uva.onlinejudge.org/ext
 UVa 10071 - [Back to High School Physics](https://uva.onlinejudge.org/external/100/10071.pdf)  
 UVa 10074 - [Take the Land](https://uva.onlinejudge.org/external/100/10074.pdf)  
 UVa 10077 - [The Stern-Brocot Number System](https://uva.onlinejudge.org/external/100/10077.pdf)  
+UVa 10078 - [The Art Gallery](https://uva.onlinejudge.org/external/100/10078.pdf)  
 UVa 10079 - [Pizza Cutting](https://uva.onlinejudge.org/external/100/10079.pdf)  
 UVa 10080 - [Gopher II](https://uva.onlinejudge.org/external/100/10080.pdf)  
 UVa 10082 - [WERTYU](https://uva.onlinejudge.org/external/100/10082.pdf)  
