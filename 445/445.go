@@ -59,10 +59,7 @@ func main() {
 	var ok bool
 	first := true
 	for {
-		if line, ok = nextLine(s); !ok {
-			line = ""
-		}
-		if line == "" {
+		if line, ok = nextLine(s); !ok || line == "" {
 			if first {
 				first = false
 			} else {
