@@ -30,12 +30,13 @@ func deal(cs []string) (int, []string) {
 		piles[i] = []card{{c[0], c[1]}}
 	}
 	for i := 0; i < len(piles); i++ {
-		if i-3 >= 0 && matched(piles[i-3][len(piles[i-3])-1], piles[i][len(piles[i])-1]) {
+		switch {
+		case i-3 >= 0 && matched(piles[i-3][len(piles[i-3])-1], piles[i][len(piles[i])-1]):
 			piles[i-3] = append(piles[i-3], piles[i][len(piles[i])-1])
 			piles[i] = piles[i][:len(piles[i])-1]
 			piles = cleanPiles(piles, i)
 			i = 0
-		} else if i-1 >= 0 && matched(piles[i-1][len(piles[i-1])-1], piles[i][len(piles[i])-1]) {
+		case i-1 >= 0 && matched(piles[i-1][len(piles[i-1])-1], piles[i][len(piles[i])-1]):
 			piles[i-1] = append(piles[i-1], piles[i][len(piles[i])-1])
 			piles[i] = piles[i][:len(piles[i])-1]
 			piles = cleanPiles(piles, i)

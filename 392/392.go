@@ -27,9 +27,10 @@ func output(out *os.File, coefficients []int) {
 				fmt.Fprint(out, " - ")
 			}
 		}
-		if first && coefficients[i] < 0 {
+		switch {
+		case first && coefficients[i] < 0:
 			fmt.Fprint(out, coefficients[i])
-		} else if abs(coefficients[i]) != 1 {
+		case abs(coefficients[i]) != 1:
 			fmt.Fprint(out, abs(coefficients[i]))
 		}
 		switch i {

@@ -31,12 +31,14 @@ func play(b ball) int {
 		if p.x == 1 || p.y == 1 || p.x == m || p.y == n {
 			b.lifetime -= costWall
 			b.direction = (b.direction + 3) % 4
-		} else if bp, ok := bumperMap[p]; ok {
-			b.lifetime -= bp.cost
-			points += bp.value
-			b.direction = (b.direction + 3) % 4
 		} else {
-			b.point = p
+			if bp, ok := bumperMap[p]; ok {
+				b.lifetime -= bp.cost
+				points += bp.value
+				b.direction = (b.direction + 3) % 4
+			} else {
+				b.point = p
+			}
 		}
 	}
 	return points

@@ -19,10 +19,11 @@ func dfs(s int) {
 		if adj[s][i] {
 			if distance[s]+1 > distance[i] {
 				distance[i] = distance[s] + 1
-				if distance[i] > longest {
+				switch {
+				case distance[i] > longest:
 					longest = distance[i]
 					lowest = i
-				} else if distance[i] == longest && i < lowest {
+				case distance[i] == longest && i < lowest:
 					lowest = i
 				}
 			}

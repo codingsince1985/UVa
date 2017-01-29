@@ -10,15 +10,17 @@ import (
 func solve(coaches []int) bool {
 	var stack []int
 	n, idx, coach := len(coaches), 0, 1
+here:
 	for {
-		if coach <= n && (len(stack) == 0 || coaches[idx] != stack[len(stack)-1]) {
+		switch {
+		case coach <= n && (len(stack) == 0 || coaches[idx] != stack[len(stack)-1]):
 			stack = append(stack, coach)
 			coach++
-		} else if len(stack) > 0 && coaches[idx] == stack[len(stack)-1] {
+		case len(stack) > 0 && coaches[idx] == stack[len(stack)-1]:
 			stack = stack[:len(stack)-1]
 			idx++
-		} else {
-			break
+		default:
+			break here
 		}
 	}
 	return len(stack) == 0 && idx == n

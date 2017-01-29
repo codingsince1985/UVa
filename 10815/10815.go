@@ -32,13 +32,14 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%c", &b); err != nil {
 			break
 		}
-		if isAlphabet(b) {
+		switch {
+		case isAlphabet(b):
 			if !started {
 				word = nil
 				started = true
 			}
 			word = append(word, toLower(b))
-		} else if started {
+		case started:
 			wordMap[string(word)] = true
 			started = false
 		}

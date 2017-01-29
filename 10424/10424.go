@@ -11,9 +11,10 @@ import (
 func value(name string) int {
 	v := 0
 	for i := range name {
-		if name[i] >= 'a' && name[i] <= 'z' {
+		switch {
+		case name[i] >= 'a' && name[i] <= 'z':
 			v += int(name[i]-'a') + 1
-		} else if name[i] >= 'A' && name[i] <= 'Z' {
+		case name[i] >= 'A' && name[i] <= 'Z':
 			v += int(name[i]-'A') + 1
 		}
 	}

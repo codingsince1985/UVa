@@ -104,10 +104,12 @@ func main() {
 			fmt.Fprintf(out, "%s ", author)
 			if fm, ok := authorMap[author]; !ok {
 				fmt.Fprintln(out, "infinity")
-			} else if length := bfs(matrix, fm, to); length != -1 {
-				fmt.Fprintln(out, length)
 			} else {
-				fmt.Fprintln(out, "infinity")
+				if length := bfs(matrix, fm, to); length != -1 {
+					fmt.Fprintln(out, length)
+				} else {
+					fmt.Fprintln(out, "infinity")
+				}
 			}
 		}
 	}
