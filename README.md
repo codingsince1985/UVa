@@ -463,6 +463,7 @@ UVa 11489 - [Division of Nlogonia](https://uva.onlinejudge.org/external/114/1148
 UVa 11530 - [SMS Typing](https://uva.onlinejudge.org/external/115/11530.pdf)  
 UVa 11541 - [Decoding](https://uva.onlinejudge.org/external/115/11541.pdf)  
 UVa 11547 - [Automatic Answer](https://uva.onlinejudge.org/external/115/11547.pdf)  
+UVa 11559 - [Event Planning](https://uva.onlinejudge.org/external/115/11559.pdf)  
 UVa 11636 - [Hello World!](https://uva.onlinejudge.org/external/116/11636.pdf)  
 UVa 11677 - [Alarm Clock](https://uva.onlinejudge.org/external/116/11677.pdf)  
 UVa 11689 - [Soda Surpler](https://uva.onlinejudge.org/external/116/11689.pdf)  
