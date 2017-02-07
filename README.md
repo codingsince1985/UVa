@@ -297,6 +297,7 @@ UVa 10105 - [Polynomial Coefficients](https://uva.onlinejudge.org/external/101/1
 UVa 10106 - [Product](https://uva.onlinejudge.org/external/101/10106.pdf)  
 UVa 10107 - [What is the Median?](https://uva.onlinejudge.org/external/101/10107.pdf)  
 UVa 10110 - [Light, more light](https://uva.onlinejudge.org/external/101/10110.pdf)  
+UVa 10115 - [Automatic Editing](https://uva.onlinejudge.org/external/101/10115.pdf)  
 UVa 10116 - [Robot Motion](https://uva.onlinejudge.org/external/101/10116.pdf)  
 UVa 10125 - [Sumsets](https://uva.onlinejudge.org/external/101/10125.pdf)  
 UVa 10127 - [Ones](https://uva.onlinejudge.org/external/101/10127.pdf)  
