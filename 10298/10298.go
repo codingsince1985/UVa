@@ -13,8 +13,8 @@ func kmp(line string) int {
 	for i := range p {
 		p[i] = -1
 	}
-	var i, j int
-	for i, j = 1, -1; i < len(line); i++ {
+	j := -1
+	for i := 1; i < len(line); i++ {
 		for j >= 0 && line[j+1] != line[i] {
 			j = p[j]
 		}
