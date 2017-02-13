@@ -73,7 +73,8 @@ func buildCard(c string) card {
 	return card{int(c[0] - '0'), c[1]}
 }
 
-func score(c []card) int {
+func score(c cards) int {
+	sort.Sort(c)
 	// order matters
 	switch {
 	case straightFlush(c):
@@ -163,8 +164,6 @@ func compare(c []string) string {
 	for i := 0; i < 5; i++ {
 		blacks[i], whites[i] = buildCard(c[i]), buildCard(c[i+5])
 	}
-	sort.Sort(blacks)
-	sort.Sort(whites)
 	blackScore, whiteScore := score(blacks), score(whites)
 	if blackScore == whiteScore {
 		blackScore, whiteScore = compareSameScore(whiteScore, blacks, whites)
