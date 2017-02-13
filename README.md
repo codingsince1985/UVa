@@ -426,6 +426,7 @@ UVa 10622 - [Perfect P-th Powers](https://uva.onlinejudge.org/external/106/10622
 UVa 10633 - [Rare Easy Problem](https://uva.onlinejudge.org/external/106/10633.pdf)  
 UVa 10642 - [Can You Solve It?](https://uva.onlinejudge.org/external/106/10642.pdf)  
 UVa 10656 - [Maximum Sum (II)](https://uva.onlinejudge.org/external/106/10656.pdf)  
+UVa 10664 - [Luggage](https://uva.onlinejudge.org/external/106/10664.pdf)  
 UVa 10673 - [Play with Floor and Ceil](https://uva.onlinejudge.org/external/106/10673.pdf)  
 UVa 10678 - [The Grazing Cow](https://uva.onlinejudge.org/external/106/10678.pdf)  
 UVa 10679 - [I Love Strings!!](https://uva.onlinejudge.org/external/106/10679.pdf)  
