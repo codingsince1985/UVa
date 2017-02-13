@@ -361,6 +361,7 @@ UVa 10302 - [Summation of Polynomials](https://uva.onlinejudge.org/external/103/
 UVa 10303 - [How Many Trees?](https://uva.onlinejudge.org/external/103/10303.pdf)  
 UVa 10305 - [Ordering Tasks](https://uva.onlinejudge.org/external/103/10305.pdf)  
 UVa 10310 - [Dog and Gopher](https://uva.onlinejudge.org/external/103/10310.pdf)  
+UVa 10311 - [Goldbach and Euler](https://uva.onlinejudge.org/external/103/10311.pdf)  
 UVa 10315 - [Poker Hands](https://uva.onlinejudge.org/external/103/10315.pdf)  
 UVa 10323 - [Factorial! You Must be Kidding!!!](https://uva.onlinejudge.org/external/103/10323.pdf)  
 UVa 10324 - [Zeros and Ones](https://uva.onlinejudge.org/external/103/10324.pdf)  
