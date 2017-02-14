@@ -11,14 +11,14 @@ import (
 )
 
 func knapsack(luggage []int, sum int) bool {
-	dp := make([]int, sum+1)
-	dp[0] = 1
+	dp := make([]bool, sum+1)
+	dp[0] = true
 	for i := range luggage {
 		for j := sum; j >= luggage[i]; j-- {
 			dp[j] = dp[j-luggage[i]]
 		}
 	}
-	return dp[sum/2] == 1
+	return dp[sum/2]
 }
 
 func solve(token []string) bool {
