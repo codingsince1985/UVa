@@ -306,6 +306,7 @@ UVa 10115 - [Automatic Editing](https://uva.onlinejudge.org/external/101/10115.p
 UVa 10116 - [Robot Motion](https://uva.onlinejudge.org/external/101/10116.pdf)  
 UVa 10125 - [Sumsets](https://uva.onlinejudge.org/external/101/10125.pdf)  
 UVa 10127 - [Ones](https://uva.onlinejudge.org/external/101/10127.pdf)  
+UVa 10129 - [Play on Words](https://uva.onlinejudge.org/external/101/10129.pdf)  
 UVa 10130 - [SuperSale](https://uva.onlinejudge.org/external/101/10130.pdf)  
 UVa 10131 - [Is Bigger Smarter?](https://uva.onlinejudge.org/external/101/10131.pdf)  
 UVa 10137 - [The Trip](https://uva.onlinejudge.org/external/101/10137.pdf)  
