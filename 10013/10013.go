@@ -7,6 +7,20 @@ import (
 	"os"
 )
 
+func solve(n1, n2 []byte, n int) []byte {
+	result := make([]byte, n)
+	var carry bool
+	for i := n - 1; i >= 0; i-- {
+		sum := n1[i] + n2[i]
+		if carry {
+			sum++
+		}
+		carry = sum >= 10
+		result[i] = sum % 10
+	}
+	return result
+}
+
 func main() {
 	in, _ := os.Open("10013.in")
 	defer in.Close()
@@ -21,17 +35,7 @@ func main() {
 		for i := range n1 {
 			fmt.Fscanf(in, "%d%d", &n1[i], &n2[i])
 		}
-		res := make([]byte, n)
-		var carry bool
-		for i := n - 1; i >= 0; i-- {
-			sum := n1[i] + n2[i]
-			if carry {
-				sum++
-			}
-			carry = sum >= 10
-			res[i] = sum % 10
-		}
-		for _, v := range res {
+		for _, v := range solve(n1, n2, n) {
 			fmt.Fprint(out, v)
 		}
 		fmt.Fprintln(out)
