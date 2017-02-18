@@ -291,6 +291,7 @@ UVa 10077 - [The Stern-Brocot Number System](https://uva.onlinejudge.org/externa
 UVa 10078 - [The Art Gallery](https://uva.onlinejudge.org/external/100/10078.pdf)  
 UVa 10079 - [Pizza Cutting](https://uva.onlinejudge.org/external/100/10079.pdf)  
 UVa 10080 - [Gopher II](https://uva.onlinejudge.org/external/100/10080.pdf)  
+UVa 10081 - [Tight Words](https://uva.onlinejudge.org/external/100/10081.pdf)  
 UVa 10082 - [WERTYU](https://uva.onlinejudge.org/external/100/10082.pdf)  
 UVa 10093 - [An Easy Problem!](https://uva.onlinejudge.org/external/100/10093.pdf)  
 UVa 10098 - [Generating Fast](https://uva.onlinejudge.org/external/100/10098.pdf)  
