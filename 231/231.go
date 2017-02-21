@@ -43,7 +43,6 @@ func main() {
 			break
 		}
 		if first {
-			h = nil
 			first = false
 			count++
 		}
@@ -54,7 +53,9 @@ func main() {
 			fmt.Fprintf(out, "Test #%d:\n", count)
 			fmt.Fprintf(out, "  maximum possible interceptions: %d\n", lds(h))
 			first = true
+			h = nil
+		} else {
+			h = append(h, tmp)
 		}
-		h = append(h, tmp)
 	}
 }
