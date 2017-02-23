@@ -58,7 +58,7 @@ func solve(n int) (int, int) {
 func main() {
 	in, _ := os.Open("10311.in")
 	defer in.Close()
-	out, _ := os.Create("10331.out")
+	out, _ := os.Create("10311.out")
 	defer out.Close()
 
 	var n int
