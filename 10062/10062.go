@@ -16,17 +16,6 @@ type (
 	chars []char
 )
 
-func (a chars) Len() int { return len(a) }
-
-func (a chars) Swap(i, j int) { a[i], a[j] = a[j], a[i] }
-
-func (a chars) Less(i, j int) bool {
-	if a[i].freq == a[j].freq {
-		return a[i].ch > a[j].ch
-	}
-	return a[i].freq < a[j].freq
-}
-
 func main() {
 	in, _ := os.Open("10062.in")
 	defer in.Close()
@@ -54,7 +43,12 @@ func main() {
 		for k, v := range table {
 			lst = append(lst, char{k, v})
 		}
-		sort.Sort(lst)
+		sort.Slice(lst, func(i, j int) bool {
+			if lst[i].freq == lst[j].freq {
+				return lst[i].ch > lst[j].ch
+			}
+			return lst[i].freq < lst[j].freq
+		})
 		for _, v := range lst {
 			fmt.Fprintln(out, v.ch, v.freq)
 		}

@@ -13,19 +13,13 @@ type (
 	blocks []block
 )
 
-func (b blocks) Len() int { return len(b) }
-
-func (b blocks) Swap(i, j int) { b[i], b[j] = b[j], b[i] }
-
-func (b blocks) Less(i, j int) bool {
-	if b[i].x == b[j].x {
-		return b[i].y < b[j].y
-	}
-	return b[i].x < b[j].x
-}
-
 func lis(b blocks) int {
-	sort.Sort(b)
+	sort.Slice(b, func(i, j int) bool {
+		if b[i].x == b[j].x {
+			return b[i].y < b[j].y
+		}
+		return b[i].x < b[j].x
+	})
 	h, max := make([]int, len(b)), 0
 	for i, block := range b {
 		h[i] = block.z

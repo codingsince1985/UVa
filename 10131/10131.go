@@ -13,19 +13,13 @@ type (
 	nodes []node
 )
 
-func (a nodes) Len() int { return len(a) }
-
-func (a nodes) Swap(i, j int) { a[i], a[j] = a[j], a[i] }
-
-func (a nodes) Less(i, j int) bool {
-	if a[i].w != a[j].w {
-		return a[i].w < a[j].w
-	}
-	return a[i].s > a[j].s
-}
-
 func lis(n nodes) ([]int, int) {
-	sort.Sort(n)
+	sort.Slice(n, func(i, j int) bool {
+		if n[i].w != n[j].w {
+			return n[i].w < n[j].w
+		}
+		return n[i].s > n[j].s
+	})
 	l := len(n)
 	dp := make([]int, l+1)
 	for i := range dp {

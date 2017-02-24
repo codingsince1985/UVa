@@ -15,17 +15,6 @@ type di struct {
 
 type dict []di
 
-func (a dict) Len() int { return len(a) }
-
-func (a dict) Swap(i, j int) { a[i], a[j] = a[j], a[i] }
-
-func (a dict) Less(i, j int) bool {
-	if a[i].n == a[j].n {
-		return a[i].c < a[j].c
-	}
-	return a[i].n > a[j].n
-}
-
 func output(out *os.File, d map[byte]int) {
 	arr := make(dict, len(d))
 	i := 0
@@ -33,7 +22,12 @@ func output(out *os.File, d map[byte]int) {
 		arr[i] = di{k, v}
 		i++
 	}
-	sort.Sort(arr)
+	sort.Slice(arr, func(i, j int) bool {
+		if arr[i].n == arr[j].n {
+			return arr[i].c < arr[j].c
+		}
+		return arr[i].n > arr[j].n
+	})
 	for _, v := range arr {
 		fmt.Fprintf(out, "%c %d\n", v.c, v.n)
 	}

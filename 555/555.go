@@ -22,17 +22,6 @@ var (
 	numberMap    = map[byte]int{'2': 0, '3': 1, '4': 2, '5': 3, '6': 4, '7': 5, '8': 6, '9': 7, 'T': 8, 'J': 9, 'Q': 10, 'K': 11, 'A': 12}
 )
 
-func (c cards) Len() int { return len(c) }
-
-func (c cards) Swap(i, j int) { c[i], c[j] = c[j], c[i] }
-
-func (c cards) Less(i, j int) bool {
-	if suitMap[c[i].suit] == suitMap[c[j].suit] {
-		return numberMap[c[i].number] < numberMap[c[j].number]
-	}
-	return suitMap[c[i].suit] < suitMap[c[j].suit]
-}
-
 func place(line string) {
 	n := len(line) / 2
 	for i := 0; i < n; i++ {
@@ -62,7 +51,12 @@ func main() {
 		}
 		for i, order := range orders {
 			fmt.Fprintf(out, "%s:", order)
-			sort.Sort(hands[i])
+			sort.Slice(hands[i], func(j, k int) bool {
+				if suitMap[hands[i][j].suit] == suitMap[hands[i][k].suit] {
+					return numberMap[hands[i][j].number] < numberMap[hands[i][k].number]
+				}
+				return suitMap[hands[i][j].suit] < suitMap[hands[i][k].suit]
+			})
 			for _, c := range hands[i] {
 				fmt.Fprintf(out, " %c%c", c.suit, c.number)
 			}

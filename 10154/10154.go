@@ -14,14 +14,8 @@ type (
 	turtles []turtle
 )
 
-func (t turtles) Len() int { return len(t) }
-
-func (t turtles) Less(i, j int) bool { return t[i].strength < t[j].strength }
-
-func (t turtles) Swap(i, j int) { t[i], t[j] = t[j], t[i] }
-
 func lis(ts turtles) int {
-	sort.Sort(ts)
+	sort.Slice(ts, func(i, j int) bool { return ts[i].strength < ts[j].strength })
 	dp := make([]int, len(ts)+1)
 	for i := 1; i <= len(ts); i++ {
 		dp[i] = math.MaxInt32

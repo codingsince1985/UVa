@@ -17,12 +17,6 @@ type (
 	jobs []job
 )
 
-func (js jobs) Len() int { return len(js) }
-
-func (js jobs) Less(i, j int) bool { return js[i].start < js[j].start }
-
-func (js jobs) Swap(i, j int) { js[i], js[j] = js[j], js[i] }
-
 func buildJob(h1, m1, h2, m2 int) job { return job{h1*60 + m1, h2*60 + m2} }
 
 func find(js jobs) (int, int) {
@@ -69,7 +63,7 @@ func main() {
 			fmt.Sscanf(s.Text(), "%d:%d%d:%d", &h1, &m1, &h2, &m2)
 			js = append(js, buildJob(h1, m1, h2, m2))
 		}
-		sort.Sort(js)
+		sort.Slice(js, func(i, j int) bool { return js[i].start < js[j].start })
 		max, start := find(js)
 		output(kase, max, start)
 	}

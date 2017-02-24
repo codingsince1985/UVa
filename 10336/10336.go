@@ -51,23 +51,17 @@ type (
 	langs []lang
 )
 
-func (l langs) Len() int { return len(l) }
-
-func (l langs) Less(i, j int) bool {
-	if l[i].c != l[j].c {
-		return l[i].c > l[j].c
-	}
-	return l[i].l < l[j].l
-}
-
-func (l langs) Swap(i, j int) { l[i], l[j] = l[j], l[i] }
-
 func output(langMap map[byte]int) {
 	var lc langs
 	for k, v := range langMap {
 		lc = append(lc, lang{k, v})
 	}
-	sort.Sort(lc)
+	sort.Slice(lc, func(i, j int) bool {
+		if lc[i].c != lc[j].c {
+			return lc[i].c > lc[j].c
+		}
+		return lc[i].l < lc[j].l
+	})
 	for _, v := range lc {
 		fmt.Fprintf(out, "%c: %d\n", v.l, v.c)
 	}

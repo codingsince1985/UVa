@@ -15,17 +15,6 @@ type (
 	jobs []job
 )
 
-func (jbs jobs) Len() int { return len(jbs) }
-
-func (jbs jobs) Less(i, j int) bool {
-	if jbs[i].time*jbs[j].fine == jbs[j].time*jbs[i].fine {
-		return i < j
-	}
-	return jbs[i].time*jbs[j].fine < jbs[j].time*jbs[i].fine
-}
-
-func (jbs jobs) Swap(i, j int) { jbs[i], jbs[j] = jbs[j], jbs[i] }
-
 func output(jbs jobs) {
 	first := true
 	for _, j := range jbs {
@@ -54,7 +43,12 @@ func main() {
 			fmt.Fscanf(in, "%d%d", &jbs[i].time, &jbs[i].fine)
 			jbs[i].no = i + 1
 		}
-		sort.Sort(jbs)
+		sort.Slice(jbs, func(i, j int) bool {
+			if jbs[i].time*jbs[j].fine == jbs[j].time*jbs[i].fine {
+				return i < j
+			}
+			return jbs[i].time*jbs[j].fine < jbs[j].time*jbs[i].fine
+		})
 		if first {
 			first = false
 		} else {

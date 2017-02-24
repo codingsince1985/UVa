@@ -14,12 +14,6 @@ type (
 	nodes []node
 )
 
-func (n nodes) Len() int { return len(n) }
-
-func (n nodes) Less(i, j int) bool { return n[i].n < n[j].n }
-
-func (n nodes) Swap(i, j int) { n[i], n[j] = n[j], n[i] }
-
 func preCalculate(num []int, f func(int, int) int) nodes {
 	var pre nodes
 	for i, vi := range num {
@@ -29,7 +23,7 @@ func preCalculate(num []int, f func(int, int) int) nodes {
 			}
 		}
 	}
-	sort.Sort(pre)
+	sort.Slice(pre, func(i, j int) bool { return pre[i].n < pre[j].n })
 	return pre
 }
 

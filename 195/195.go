@@ -21,20 +21,6 @@ func isUpper(a byte) bool { return !isLower(a) }
 
 func toUpper(a byte) byte { return a - 'a' + 'A' }
 
-func (a bytes) Len() int { return len(a) }
-
-func (a bytes) Swap(i, j int) { a[i], a[j] = a[j], a[i] }
-
-func (a bytes) Less(i, j int) bool {
-	if isLower(a[i]) && isLower(a[j]) || isUpper(a[i]) && isUpper(a[j]) {
-		return a[i] <= a[j]
-	}
-	if isLower(a[i]) {
-		return toUpper(a[i]) <= a[j]
-	}
-	return a[i] <= toUpper(a[j])
-}
-
 func dfs(i int, word bytes, visited []bool) {
 	if i == len(chars) {
 		fmt.Fprintln(out, string(word))
@@ -64,7 +50,15 @@ func main() {
 	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%s", &line)
 		chars = bytes(line)
-		sort.Sort(chars)
+		sort.Slice(chars, func(i, j int) bool {
+			if isLower(chars[i]) && isLower(chars[j]) || isUpper(chars[i]) && isUpper(chars[j]) {
+				return chars[i] <= chars[j]
+			}
+			if isLower(chars[i]) {
+				return toUpper(chars[i]) <= chars[j]
+			}
+			return chars[i] <= toUpper(chars[j])
+		})
 		word := make(bytes, len(chars))
 		visited := make([]bool, len(chars))
 		dfs(0, word, visited)

@@ -17,27 +17,21 @@ type (
 	contestants []contestant
 )
 
-func (c contestants) Len() int { return len(c) }
-
-func (c contestants) Swap(i, j int) { c[i], c[j] = c[j], c[i] }
-
-func (c contestants) Less(i, j int) bool {
-	switch {
-	case c[i].solved != c[j].solved:
-		return c[i].solved > c[j].solved
-	case c[i].penalty != c[j].penalty:
-		return c[i].penalty < c[j].penalty
-	default:
-		return c[i].num < c[j].num
-	}
-}
-
 func ranking(contest map[int]*contestant) contestants {
 	var c contestants
 	for _, v := range contest {
 		c = append(c, *v)
 	}
-	sort.Sort(c)
+	sort.Slice(c, func(i, j int) bool {
+		switch {
+		case c[i].solved != c[j].solved:
+			return c[i].solved > c[j].solved
+		case c[i].penalty != c[j].penalty:
+			return c[i].penalty < c[j].penalty
+		default:
+			return c[i].num < c[j].num
+		}
+	})
 	return c
 }
 

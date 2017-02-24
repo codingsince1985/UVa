@@ -10,12 +10,6 @@ import (
 
 type dna []string
 
-func (d dna) Len() int { return len(d) }
-
-func (d dna) Less(i, j int) bool { return unsorted(d[i]) < unsorted(d[j]) }
-
-func (d dna) Swap(i, j int) { d[i], d[j] = d[j], d[i] }
-
 func unsorted(s string) int {
 	l := len(s)
 	count := 0
@@ -42,7 +36,7 @@ func main() {
 		for j := range s {
 			fmt.Fscanf(in, "%s", &s[j])
 		}
-		sort.Sort(s)
+		sort.Slice(s, func(i, j int) bool { return unsorted(s[i]) < unsorted(s[j]) })
 		for _, v := range s {
 			fmt.Fprintln(out, v)
 		}

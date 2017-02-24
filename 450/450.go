@@ -16,12 +16,6 @@ type (
 	faculties []faculty
 )
 
-func (f faculties) Len() int { return len(f) }
-
-func (f faculties) Swap(i, j int) { f[i], f[j] = f[j], f[i] }
-
-func (f faculties) Less(i, j int) bool { return f[i].lastName < f[j].lastName }
-
 func parse(line, department string) faculty {
 	token := strings.Split(line, ",")
 	return faculty{token[0], token[1], token[2], token[3], department, token[4], token[5], token[6]}
@@ -58,6 +52,6 @@ func main() {
 			fs = append(fs, parse(line, department))
 		}
 	}
-	sort.Sort(fs)
+	sort.Slice(fs, func(i, j int) bool { return fs[i].lastName < fs[j].lastName })
 	output(out, fs)
 }

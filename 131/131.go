@@ -28,11 +28,7 @@ var (
 	bestHand   string
 )
 
-func (c cards) Len() int { return len(c) }
-
-func (c cards) Swap(i, j int) { c[i], c[j] = c[j], c[i] }
-
-func (c cards) Less(i, j int) bool { return c[i].value > c[j].value }
+func doSort(c cards) { sort.Slice(c, func(i, j int) bool { return c[i].value > c[j].value }) }
 
 func straightFlush(c []card) bool { return straight(c) && flush(c) }
 
@@ -68,7 +64,7 @@ func aceAsOne(c []card) []card {
 			newC[i].value = 1
 		}
 	}
-	sort.Sort(newC)
+	doSort(newC)
 	return newC
 }
 
@@ -96,7 +92,7 @@ func buildCard(c string) card {
 }
 
 func score(c cards) (int, string) {
-	sort.Sort(c)
+	doSort(c)
 	// order matters
 	switch {
 	case straightFlush(c):

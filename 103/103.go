@@ -12,19 +12,6 @@ import (
 
 type boxes [][]int
 
-func (b boxes) Len() int { return len(b) }
-
-func (b boxes) Swap(i, j int) { b[i], b[j] = b[j], b[i] }
-
-func (b boxes) Less(i, j int) bool {
-	for idx := range b[i] {
-		if b[i][idx] != b[j][idx] {
-			return b[i][idx] < b[j][idx]
-		}
-	}
-	return false
-}
-
 func fit(a, b []int) bool {
 	for i := range a {
 		if a[i] >= b[i] {
@@ -35,7 +22,14 @@ func fit(a, b []int) bool {
 }
 
 func lis(box boxes) []int {
-	sort.Sort(box)
+	sort.Slice(box, func(i, j int) bool {
+		for idx := range box[i] {
+			if box[i][idx] != box[j][idx] {
+				return box[i][idx] < box[j][idx]
+			}
+		}
+		return false
+	})
 	size := len(box)
 	length := make([]int, size)
 	for i := range length {

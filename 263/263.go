@@ -11,18 +11,12 @@ import (
 
 type digits []byte
 
-func (a digits) Len() int { return len(a) }
-
-func (a digits) Swap(i, j int) { a[i], a[j] = a[j], a[i] }
-
-func (a digits) Less(i, j int) bool { return a[i] < a[j] }
-
 func sortInt(num string, descending bool) int {
 	d := digits(num)
 	if descending {
-		sort.Sort(sort.Reverse(d))
+		sort.Slice(d, func(i, j int) bool { return d[i] > d[j] })
 	} else {
-		sort.Sort(d)
+		sort.Slice(d, func(i, j int) bool { return d[i] < d[j] })
 	}
 	n, _ := strconv.Atoi(string(d))
 	return n

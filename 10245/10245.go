@@ -14,12 +14,6 @@ type (
 	points []point
 )
 
-func (p points) Len() int { return len(p) }
-
-func (p points) Less(i, j int) bool { return p[i].x < p[j].x }
-
-func (p points) Swap(i, j int) { p[i], p[j] = p[j], p[i] }
-
 func min(a, b float64) float64 {
 	if a < b {
 		return a
@@ -75,7 +69,7 @@ func main() {
 		for i := range p {
 			fmt.Fscanf(in, "%f%f", &p[i].x, &p[i].y)
 		}
-		sort.Sort(p)
+		sort.Slice(p, func(i, j int) bool { return p[i].x < p[j].x })
 		if dist := divide(p); dist >= 10000 {
 			fmt.Fprintln(out, "INFINITY")
 		} else {
