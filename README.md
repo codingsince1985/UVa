@@ -210,6 +210,7 @@ UVa 636 - [Squares (III)](https://uva.onlinejudge.org/external/6/636.pdf)
 UVa 637 - [Booklet Printing](https://uva.onlinejudge.org/external/6/637.pdf)  
 UVa 639 - [Don't Get Rooked](https://uva.onlinejudge.org/external/6/639.pdf)  
 UVa 640 - [Self Numbers](https://uva.onlinejudge.org/external/6/640.pdf)  
+UVa 641 - [Do the Untwist](https://uva.onlinejudge.org/external/6/641.pdf)  
 UVa 642 - [Word Amalgamation](https://uva.onlinejudge.org/external/6/642.pdf)  
 UVa 644 - [Immediate Decodability](https://uva.onlinejudge.org/external/6/644.pdf)  
 UVa 661 - [Blowing Fuses](https://uva.onlinejudge.org/external/6/661.pdf)  
@@ -501,4 +502,4 @@ UVa 12347 - [Binary Search Tree](https://uva.onlinejudge.org/external/123/12347.
 
 License
 ==
-The UVa solutions in Golang are under the terms of the MIT license. See LICENSE for details.
+UVa Online Judge solutions in Golang is under the terms of the MIT license. See LICENSE for details.
