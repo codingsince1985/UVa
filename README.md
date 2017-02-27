@@ -499,6 +499,7 @@ UVa 11854 - [Egypt](https://uva.onlinejudge.org/external/118/11854.pdf)
 UVa 11875 - [Brick Game](https://uva.onlinejudge.org/external/118/11875.pdf)  
 UVa 11877 - [The Coco-Cola Store](https://uva.onlinejudge.org/external/118/11877.pdf)  
 UVa 11942 - [Lumberjack Sequencing](https://uva.onlinejudge.org/external/119/11942.pdf)  
+UVa 12015 - [Binary Search Tree](https://uva.onlinejudge.org/external/120/12015.pdf)  
 UVa 12347 - [Binary Search Tree](https://uva.onlinejudge.org/external/123/12347.pdf)  
 
 License
