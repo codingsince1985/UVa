@@ -50,8 +50,7 @@ func main() {
 
 	var n, num int
 	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
-		fmt.Fscanf(in, "%d", &num)
-		for ; ; num++ {
+		for fmt.Fscanf(in, "%d", &num); ; num++ {
 			sum1 := digitSum(num)
 			sum2 := 0
 			for _, v := range primeFactorize(num) {

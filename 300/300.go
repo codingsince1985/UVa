@@ -62,8 +62,7 @@ func main() {
 	var n, d, y int
 	var m string
 	fmt.Fscanf(in, "%d", &n)
-	fmt.Fprintln(out, n)
-	for ; n > 0; n-- {
+	for fmt.Fprintln(out, n); n > 0; n-- {
 		fmt.Fscanf(in, "%d.%s%d", &d, &m, &y)
 		days := 365*y + haabMonths[m] + d + 1
 		year := days / (13 * 20)

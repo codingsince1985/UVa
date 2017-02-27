@@ -11,15 +11,12 @@ import (
 func match(a, b byte) bool { return a == ')' && b == '(' || a == ']' && b == '[' }
 
 func valid(line string) bool {
-	chars := []byte(line)
 	var stack []byte
-	for _, v := range chars {
-		if v != '(' && v != ')' && v != '[' && v != ']' {
-			continue
-		}
-		if v == '(' || v == '[' {
+	for _, v := range []byte(line) {
+		switch v {
+		case '(', '[':
 			stack = append(stack, v)
-		} else {
+		case ')', ']':
 			if len(stack) > 0 && match(v, stack[len(stack)-1]) {
 				stack = stack[:len(stack)-1]
 			} else {

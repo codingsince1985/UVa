@@ -13,8 +13,8 @@ import (
 var n int
 
 func transform(src, dest []string) []string {
-	idx1, idx2 := n-1, n-1
-	for ; idx1 >= 0; idx1-- {
+	idx2 := n - 1
+	for idx1 := n - 1; idx1 >= 0; idx1-- {
 		if src[idx1] == dest[idx2] {
 			idx2--
 		}
