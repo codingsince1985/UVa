@@ -10,9 +10,9 @@ import (
 type date struct{ y, m, d int }
 
 func convert(t string) date {
-	var y, m, d int
-	fmt.Sscanf(t, "%d/%d/%d", &d, &m, &y)
-	return date{y, m, d}
+	var d date
+	fmt.Sscanf(t, "%d/%d/%d", &d.d, &d.m, &d.y)
+	return d
 }
 
 func compare(t1, t2 string) int {

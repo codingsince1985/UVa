@@ -39,20 +39,15 @@ func main() {
 	defer out.Close()
 
 	var n int
-	var x, y float64
+	var p1, p2 point
 	fmt.Fprintln(out, "INTERSECTING LINES OUTPUT")
 	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
-		fmt.Fscanf(in, "%f%f", &x, &y)
-		p1 := point{x, y}
-		fmt.Fscanf(in, "%f%f", &x, &y)
-		p2 := point{x, y}
+		fmt.Fscanf(in, "%f%f", &p1.x, &p1.y)
+		fmt.Fscanf(in, "%f%f", &p2.x, &p2.y)
 		l1 := line{p1, p2}
-		fmt.Fscanf(in, "%f%f", &x, &y)
-		p1 = point{x, y}
-		fmt.Fscanf(in, "%f%f", &x, &y)
-		p2 = point{x, y}
-		l2 := line{p1, p2}
-		solve(l1, l2)
+		fmt.Fscanf(in, "%f%f", &p1.x, &p1.y)
+		fmt.Fscanf(in, "%f%f", &p2.x, &p2.y)
+		solve(l1, line{p1, p2})
 	}
 	fmt.Fprintln(out, "END OF OUTPUT")
 }

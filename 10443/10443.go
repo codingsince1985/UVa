@@ -7,10 +7,7 @@ import (
 	"os"
 )
 
-var (
-	delta = []int{-1, 0, 1}
-	out   *os.File
-)
+var delta = []int{-1, 0, 1}
 
 func solve(grid [][]byte, r, c, n int) {
 	tmp := make([][]byte, r)
@@ -40,19 +37,10 @@ func solve(grid [][]byte, r, c, n int) {
 	}
 }
 
-func output(grid [][]byte) {
-	for i := range grid {
-		for j := range grid[i] {
-			fmt.Fprintf(out, "%c", grid[i][j])
-		}
-		fmt.Fprintln(out)
-	}
-}
-
 func main() {
 	in, _ := os.Open("10443.in")
 	defer in.Close()
-	out, _ = os.Create("10443.out")
+	out, _ := os.Create("10443.out")
 	defer out.Close()
 
 	var kase, r, c, n int
@@ -68,7 +56,9 @@ func main() {
 			}
 		}
 		solve(grid, r, c, n)
-		output(grid)
+		for _, row := range grid {
+			fmt.Fprintln(out, string(row))
+		}
 		if kase > 1 {
 			fmt.Fprintln(out)
 		}

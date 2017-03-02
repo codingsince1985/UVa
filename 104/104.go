@@ -23,8 +23,6 @@ func output(s int, path []int) {
 }
 
 func floydWarshall(matrix [][][]node) {
-	found := false
-here:
 	for s := 1; s < len(matrix); s++ {
 		for k := range matrix {
 			for i := range matrix {
@@ -39,14 +37,11 @@ here:
 		for k := range matrix {
 			if matrix[k][k][s].v > 1.01 {
 				output(k, matrix[k][k][s].p)
-				found = true
-				break here
+				return
 			}
 		}
 	}
-	if !found {
-		fmt.Fprintln(out, "no arbitrage sequence exists")
-	}
+	fmt.Fprintln(out, "no arbitrage sequence exists")
 }
 
 func main() {

@@ -32,16 +32,16 @@ func main() {
 	out, _ := os.Create("11498.out")
 	defer out.Close()
 
-	var k, x, y int
+	var k int
+	var division, p point
 	for {
 		if fmt.Fscanf(in, "%d", &k); k == 0 {
 			break
 		}
-		fmt.Fscanf(in, "%d%d", &x, &y)
-		division := point{x, y}
+		fmt.Fscanf(in, "%d%d", &division.x, &division.y)
 		for ; k > 0; k-- {
-			fmt.Fscanf(in, "%d%d", &x, &y)
-			fmt.Fprintln(out, country(division, point{x, y}))
+			fmt.Fscanf(in, "%d%d", &p.x, &p.y)
+			fmt.Fprintln(out, country(division, p))
 		}
 	}
 }

@@ -46,13 +46,13 @@ func main() {
 	out, _ := os.Create("152.out")
 	defer out.Close()
 
-	var x, y, z int
+	var p point
 	var points []point
 	for {
-		if fmt.Fscanf(in, "%d%d%d", &x, &y, &z); x == 0 && y == 0 && z == 0 {
+		if fmt.Fscanf(in, "%d%d%d", &p.x, &p.y, &p.z); p.x == 0 && p.y == 0 && p.z == 0 {
 			break
 		}
-		points = append(points, point{x, y, z})
+		points = append(points, p)
 	}
 	output(out, solve(points))
 }

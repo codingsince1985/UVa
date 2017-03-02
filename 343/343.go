@@ -54,22 +54,18 @@ func main() {
 		numbers = append(numbers, [2]string{a, b})
 	}
 
+here:
 	for _, nums := range numbers {
 		a1, a2 := nums[0], nums[1]
 		b1, b2 := minBase(a1), minBase(a2)
-		found := false
-	here:
 		for i := b1; i <= 36; i++ {
 			for j, num1 := b2, base10(a1, i); j <= 36; j++ {
 				if num1 == base10(a2, j) {
 					fmt.Fprintf(out, "%s (base %d) = %s (base %d)\n", a1, i, a2, j)
-					found = true
-					break here
+					continue here
 				}
 			}
 		}
-		if !found {
-			fmt.Fprintf(out, "%s is not equal to %s in any base 2..36\n", a1, a2)
-		}
+		fmt.Fprintf(out, "%s is not equal to %s in any base 2..36\n", a1, a2)
 	}
 }

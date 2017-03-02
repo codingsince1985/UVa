@@ -73,12 +73,12 @@ func main() {
 	defer out.Close()
 
 	var n nodes
-	var t1, t2 int
+	var nd node
 	for {
-		if _, err := fmt.Fscanf(in, "%d%d", &t1, &t2); err != nil {
+		if _, err := fmt.Fscanf(in, "%d%d", &nd.w, &nd.s); err != nil {
 			break
 		}
-		n = append(n, node{t1, t2})
+		n = append(n, nd)
 	}
 	orig := make([]node, len(n))
 	copy(orig, n)

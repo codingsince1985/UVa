@@ -12,18 +12,17 @@ import (
 func solve(nums []string) string {
 	var oldNum, newNum big.Int
 here:
-	for found := true; found; {
-		found = false
+	for {
 		for i := 0; i < len(nums)-1; i++ {
 			oldNum.SetString(strings.Join(nums, ""), 10)
 			nums[i], nums[i+1] = nums[i+1], nums[i]
 			newNum.SetString(strings.Join(nums, ""), 10)
 			if newNum.Cmp(&oldNum) > 0 {
-				found = true
 				continue here
 			}
 			nums[i], nums[i+1] = nums[i+1], nums[i]
 		}
+		break
 	}
 	return strings.Join(nums, "")
 }

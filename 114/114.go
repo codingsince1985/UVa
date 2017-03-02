@@ -50,18 +50,21 @@ func main() {
 	out, _ := os.Create("114.out")
 	defer out.Close()
 
-	var p, n1, n2, n3, n4, total int
+	var p, total int
+	var pt point
+	var bp bumper
+	var b ball
 	fmt.Fscanf(in, "%d%d", &m, &n)
 	fmt.Fscanf(in, "%d", &costWall)
 	for fmt.Fscanf(in, "%d", &p); p > 0; p-- {
-		fmt.Fscanf(in, "%d%d%d%d", &n1, &n2, &n3, &n4)
-		bumperMap[point{n1, n2}] = bumper{n3, n4}
+		fmt.Fscanf(in, "%d%d%d%d", &pt.x, &pt.y, &bp.value, &bp.cost)
+		bumperMap[pt] = bp
 	}
 	for {
-		if _, err := fmt.Fscanf(in, "%d%d%d%d", &n1, &n2, &n3, &n4); err != nil {
+		if _, err := fmt.Fscanf(in, "%d%d%d%d", &b.point.x, &b.point.y, &b.direction, &b.lifetime); err != nil {
 			break
 		}
-		points := play(ball{point{n1, n2}, n3, n4})
+		points := play(b)
 		fmt.Fprintln(out, points)
 		total += points
 	}

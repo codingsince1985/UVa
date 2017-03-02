@@ -43,12 +43,12 @@ func main() {
 	defer out.Close()
 
 	var ts turtles
-	var w, s int
+	var t turtle
 	for {
-		if _, err := fmt.Fscanf(in, "%d%d", &w, &s); err != nil {
+		if _, err := fmt.Fscanf(in, "%d%d", &t.weight, &t.strength); err != nil {
 			break
 		}
-		ts = append(ts, turtle{w, s})
+		ts = append(ts, t)
 	}
 	fmt.Fprintln(out, lis(ts))
 }

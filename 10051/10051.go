@@ -100,16 +100,14 @@ func main() {
 	out, _ = os.Create("10051.out")
 	defer out.Close()
 
-	var n, s1, s2, s3, s4, s5, s6 int
+	var n int
 	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
 		c := make([]sides, n)
 		for i := range c {
-			fmt.Fscanf(in, "%d%d%d%d%d%d", &s1, &s2, &s3, &s4, &s5, &s6)
-			cube := sides{s1, s2, s3, s4, s5, s6}
-			c[i] = cube
+			fmt.Fscanf(in, "%d%d%d%d%d%d", &c[i].front, &c[i].back, &c[i].left, &c[i].right, &c[i].top, &c[i].bottom)
 		}
 		pre, mx, st := solve(c)
 		if kase > 1 {

@@ -74,7 +74,7 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var n1, n2 int
+	var e edge
 here:
 	for kase := 1; ; kase++ {
 		var edges []edge
@@ -89,13 +89,13 @@ here:
 			}
 			r := strings.NewReader(line)
 			for {
-				if _, err := fmt.Fscanf(r, "%d%d", &n1, &n2); err != nil || n1 == 0 && n2 == 0 {
-					if n1 == 0 && n2 == 0 {
+				if _, err := fmt.Fscanf(r, "%d%d", &e.n1, &e.n2); err != nil || e.n1 == 0 && e.n2 == 0 {
+					if e.n1 == 0 && e.n2 == 0 {
 						break there
 					}
 					break
 				}
-				edges = append(edges, edge{n1, n2})
+				edges = append(edges, e)
 			}
 		}
 		if fmt.Fprintf(out, "Case %d ", kase); isTree(edges) {

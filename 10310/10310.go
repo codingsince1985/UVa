@@ -21,21 +21,17 @@ func main() {
 	defer out.Close()
 
 	var n int
-	var x, y float64
+	var gopher, dog, p point
 	for {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
 		}
-		fmt.Fscanf(in, "%f%f", &x, &y)
-		gopher := point{x, y}
-		fmt.Fscanf(in, "%f%f", &x, &y)
-		dog := point{x, y}
+		fmt.Fscanf(in, "%f%f", &gopher.x, &gopher.y)
+		fmt.Fscanf(in, "%f%f", &dog.x, &dog.y)
 
 		found := false
-		var p point
 		for ; n > 0; n-- {
-			fmt.Fscanf(in, "%f%f", &x, &y)
-			p = point{x, y}
+			fmt.Fscanf(in, "%f%f", &p.x, &p.y)
 			if distance(p, gopher)*2 <= distance(p, dog) {
 				found = true
 				break

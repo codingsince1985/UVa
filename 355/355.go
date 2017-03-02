@@ -8,12 +8,12 @@ import (
 	"os"
 )
 
-type Number struct {
+type number struct {
 	b1, b2 int
 	num    string
 }
 
-var nums []Number
+var nums []number
 
 func toStr(d int) string {
 	if d <= 9 {
@@ -61,13 +61,12 @@ func main() {
 	out, _ := os.Create("355.out")
 	defer out.Close()
 
-	var b1, b2 int
-	var num string
+	var num number
 	for {
-		if _, err := fmt.Fscanf(in, "%d%d%s", &b1, &b2, &num); err != nil {
+		if _, err := fmt.Fscanf(in, "%d%d%s", &num.b1, &num.b2, &num.num); err != nil {
 			break
 		}
-		nums = append(nums, Number{b1, b2, num})
+		nums = append(nums, num)
 	}
 
 	for _, number := range nums {
