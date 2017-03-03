@@ -9,13 +9,10 @@ import (
 	"sort"
 )
 
-type (
-	node  struct{ n, n1, n2 int }
-	nodes []node
-)
+type node struct{ n, n1, n2 int }
 
-func preCalculate(num []int, f func(int, int) int) nodes {
-	var pre nodes
+func preCalculate(num []int, f func(int, int) int) []node {
+	var pre []node
 	for i, vi := range num {
 		for j, vj := range num {
 			if i != j {
@@ -27,7 +24,7 @@ func preCalculate(num []int, f func(int, int) int) nodes {
 	return pre
 }
 
-func binarySearch(n int, sub nodes) (int, bool) {
+func binarySearch(n int, sub []node) (int, bool) {
 	l, r := 0, len(sub)-1
 	for l+1 < r {
 		mid := (l + r) / 2

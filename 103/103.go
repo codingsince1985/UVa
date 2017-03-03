@@ -10,8 +10,6 @@ import (
 	"strings"
 )
 
-type boxes [][]int
-
 func fit(a, b []int) bool {
 	for i := range a {
 		if a[i] >= b[i] {
@@ -21,16 +19,16 @@ func fit(a, b []int) bool {
 	return true
 }
 
-func lis(box boxes) []int {
-	sort.Slice(box, func(i, j int) bool {
-		for idx := range box[i] {
-			if box[i][idx] != box[j][idx] {
-				return box[i][idx] < box[j][idx]
+func lis(boxes [][]int) []int {
+	sort.Slice(boxes, func(i, j int) bool {
+		for idx := range boxes[i] {
+			if boxes[i][idx] != boxes[j][idx] {
+				return boxes[i][idx] < boxes[j][idx]
 			}
 		}
 		return false
 	})
-	size := len(box)
+	size := len(boxes)
 	length := make([]int, size)
 	for i := range length {
 		length[i] = 1
@@ -42,7 +40,7 @@ func lis(box boxes) []int {
 	max, maxIdx := 0, 0
 	for i := 0; i < size-1; i++ {
 		for j := i + 1; j < size; j++ {
-			if fit(box[i], box[j]) {
+			if fit(boxes[i], boxes[j]) {
 				if length[i]+1 > length[j] {
 					length[j] = length[i] + 1
 					if length[j] > max {
@@ -73,7 +71,7 @@ func isSame(a, b []int) bool {
 	return true
 }
 
-func output(out *os.File, order []int, box, original boxes) {
+func output(out *os.File, order []int, box, original [][]int) {
 	var ret []string
 	for _, v := range order {
 		for j := range original {
@@ -98,16 +96,16 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%d%d", &n, &d); err != nil {
 			break
 		}
-		box := make(boxes, n)
+		boxes := make([][]int, n)
 		for i := 0; i < n; i++ {
-			box[i] = make([]int, d)
+			boxes[i] = make([]int, d)
 			for j := 0; j < d; j++ {
-				fmt.Fscanf(in, "%d", &box[i][j])
+				fmt.Fscanf(in, "%d", &boxes[i][j])
 			}
-			sort.Ints(box[i])
+			sort.Ints(boxes[i])
 		}
-		original := make(boxes, n)
-		copy(original, box)
-		output(out, lis(box), box, original)
+		original := make([][]int, n)
+		copy(original, boxes)
+		output(out, lis(boxes), boxes, original)
 	}
 }

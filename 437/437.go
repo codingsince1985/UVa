@@ -8,12 +8,9 @@ import (
 	"sort"
 )
 
-type (
-	block  struct{ x, y, z int }
-	blocks []block
-)
+type block struct{ x, y, z int }
 
-func lis(b blocks) int {
+func lis(b []block) int {
 	sort.Slice(b, func(i, j int) bool {
 		if b[i].x == b[j].x {
 			return b[i].y < b[j].y
@@ -46,7 +43,7 @@ func main() {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		var b blocks
+		var b []block
 		for ; n > 0; n-- {
 			fmt.Fscanf(in, "%d%d%d", &x, &y, &z)
 			b = append(b, block{x, y, z})

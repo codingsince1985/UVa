@@ -12,17 +12,14 @@ import (
 
 var out *os.File
 
-type (
-	job  struct{ start, end int }
-	jobs []job
-)
+type job struct{ start, end int }
 
 func buildJob(h1, m1, h2, m2 int) job { return job{h1*60 + m1, h2*60 + m2} }
 
-func find(js jobs) (int, int) {
+func find(jobs []job) (int, int) {
 	var start, period, max int
 	t := 10 * 60
-	for _, j := range js {
+	for _, j := range jobs {
 		if period = j.start - t; period > max {
 			max = period
 			start = t
@@ -58,7 +55,7 @@ func main() {
 
 	var h1, m1, h2, m2 int
 	for kase := 1; s.Scan(); kase++ {
-		var js jobs
+		var js []job
 		for n, _ := strconv.Atoi(s.Text()); n > 0 && s.Scan(); n-- {
 			fmt.Sscanf(s.Text(), "%d:%d%d:%d", &h1, &m1, &h2, &m2)
 			js = append(js, buildJob(h1, m1, h2, m2))

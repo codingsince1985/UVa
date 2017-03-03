@@ -12,23 +12,20 @@ import (
 
 const cardNumber = 5
 
-type (
-	card struct {
-		value int
-		suit  byte
-	}
-	cards []card
-)
+type card struct {
+	value int
+	suit  byte
+}
 
 var (
 	out        *os.File
 	valueMap   = map[byte]int{'T': 10, 'J': 11, 'Q': 12, 'K': 13, 'A': 14}
-	hand, deck cards
+	hand, deck []card
 	highest    int
 	bestHand   string
 )
 
-func doSort(c cards) { sort.Slice(c, func(i, j int) bool { return c[i].value > c[j].value }) }
+func doSort(c []card) { sort.Slice(c, func(i, j int) bool { return c[i].value > c[j].value }) }
 
 func straightFlush(c []card) bool { return straight(c) && flush(c) }
 
@@ -57,7 +54,7 @@ func testStraight(c []card) bool {
 func straight(c []card) bool { return testStraight(c) || testStraight(aceAsOne(c)) }
 
 func aceAsOne(c []card) []card {
-	newC := make(cards, len(c))
+	newC := make([]card, len(c))
 	copy(newC, c)
 	for i := range newC {
 		if newC[i].value == 14 {
@@ -91,7 +88,7 @@ func buildCard(c string) card {
 	return card{int(c[0] - '0'), c[1]}
 }
 
-func score(c cards) (int, string) {
+func score(c []card) (int, string) {
 	doSort(c)
 	// order matters
 	switch {
@@ -116,8 +113,8 @@ func score(c cards) (int, string) {
 	}
 }
 
-func buildCards(token []string) cards {
-	hand := make(cards, cardNumber)
+func buildCards(token []string) []card {
+	hand := make([]card, cardNumber)
 	for i := range hand {
 		hand[i] = buildCard(token[i])
 	}
@@ -126,7 +123,7 @@ func buildCards(token []string) cards {
 
 func dfs(level int, used []bool) {
 	if level == cardNumber {
-		var newHand cards
+		var newHand []card
 		for i := range used {
 			if used[i] {
 				newHand = append(newHand, hand[i])

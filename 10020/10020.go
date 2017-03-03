@@ -10,12 +10,10 @@ import (
 
 var out *os.File
 
-type lines [][2]int
-
-func solve(l, r int, ls [][2]int) [][2]int {
+func solve(l, r int, lines [][2]int) [][2]int {
 	maxRight := l
 	idx := -1
-	for i, v := range ls {
+	for i, v := range lines {
 		if v[0] <= l {
 			if v[1] > maxRight {
 				maxRight = v[1]
@@ -31,9 +29,9 @@ func solve(l, r int, ls [][2]int) [][2]int {
 		return ret
 	}
 
-	ret = append(ret, ls[idx])
+	ret = append(ret, lines[idx])
 	if maxRight < r {
-		tmp := solve(maxRight, r, ls[idx+1:])
+		tmp := solve(maxRight, r, lines[idx+1:])
 		if len(tmp) == 0 {
 			return tmp
 		}
@@ -56,18 +54,18 @@ func main() {
 	defer out.Close()
 
 	var kase, m int
-	var l [2]int
+	var line [2]int
 	for fmt.Fscanf(in, "%d\n", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "\n%d", &m)
-		var ls lines
+		var lines [][2]int
 		for {
-			if fmt.Fscanf(in, "%d%d", &l[0], &l[1]); l[0] == 0 && l[1] == 0 {
+			if fmt.Fscanf(in, "%d%d", &line[0], &line[1]); line[0] == 0 && line[1] == 0 {
 				break
 			}
-			ls = append(ls, l)
+			lines = append(lines, line)
 		}
-		sort.Slice(ls, func(i, j int) bool { return ls[i][0] < ls[j][0] })
-		output(solve(0, m, ls))
+		sort.Slice(lines, func(i, j int) bool { return lines[i][0] < lines[j][0] })
+		output(solve(0, m, lines))
 		if kase > 1 {
 			fmt.Fprintln(out)
 		}

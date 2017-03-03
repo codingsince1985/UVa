@@ -16,15 +16,12 @@ var (
 	out     *os.File
 )
 
-type (
-	team struct {
-		name                              string
-		points                            int
-		games, wins, ties, losses         int
-		goalDiff, goalScored, goalAgainst int
-	}
-	teams []team
-)
+type team struct {
+	name                              string
+	points                            int
+	games, wins, ties, losses         int
+	goalDiff, goalScored, goalAgainst int
+}
 
 func nextLine(s *bufio.Scanner) string {
 	s.Scan()
@@ -50,7 +47,7 @@ func cmp(t1, t2 team) bool {
 	return strings.Compare(t1.name, t2.name) == -1
 }
 
-func values(m map[string]team) teams {
+func values(m map[string]team) []team {
 	var v []team
 	for _, value := range m {
 		v = append(v, value)
@@ -87,7 +84,7 @@ func process(a, b string, s1, s2 int) {
 	teamMap[a], teamMap[b] = t1, t2
 }
 
-func output(t teams) {
+func output(t []team) {
 	for i, v := range t {
 		fmt.Fprintf(out, "%d) %s %dp, %dg (%d-%d-%d), %dgd (%d-%d)\n",
 			i+1, v.name, v.points, v.games, v.wins, v.ties, v.losses, v.goalDiff, v.goalScored, v.goalAgainst)

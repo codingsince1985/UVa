@@ -43,16 +43,13 @@ func solve(world [][]byte) {
 	}
 }
 
-type (
-	lang struct {
-		l byte
-		c int
-	}
-	langs []lang
-)
+type lang struct {
+	l byte
+	c int
+}
 
 func output(langMap map[byte]int) {
-	var lc langs
+	var lc []lang
 	for k, v := range langMap {
 		lc = append(lc, lang{k, v})
 	}

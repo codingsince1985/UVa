@@ -8,8 +8,6 @@ import (
 	"sort"
 )
 
-type dna []string
-
 func unsorted(s string) int {
 	l := len(s)
 	count := 0
@@ -32,7 +30,7 @@ func main() {
 	var kase, n, m int
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "\n%d%d", &n, &m)
-		s := make(dna, m)
+		s := make([]string, m)
 		for j := range s {
 			fmt.Fscanf(in, "%s", &s[j])
 		}

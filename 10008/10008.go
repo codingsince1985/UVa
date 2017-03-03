@@ -8,18 +8,16 @@ import (
 	"sort"
 )
 
-type di struct {
+type dict struct {
 	c byte
 	n int
 }
 
-type dict []di
-
 func output(out *os.File, d map[byte]int) {
-	arr := make(dict, len(d))
+	arr := make([]dict, len(d))
 	i := 0
 	for k, v := range d {
-		arr[i] = di{k, v}
+		arr[i] = dict{k, v}
 		i++
 	}
 	sort.Slice(arr, func(i, j int) bool {

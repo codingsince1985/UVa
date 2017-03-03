@@ -8,13 +8,10 @@ import (
 	"sort"
 )
 
-type (
-	char struct {
-		ch   byte
-		freq int
-	}
-	chars []char
-)
+type char struct {
+	ch   byte
+	freq int
+}
 
 func main() {
 	in, _ := os.Open("10062.in")
@@ -39,7 +36,7 @@ func main() {
 				table[line[i]]++
 			}
 		}
-		var lst chars
+		var lst []char
 		for k, v := range table {
 			lst = append(lst, char{k, v})
 		}

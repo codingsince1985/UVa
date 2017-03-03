@@ -11,18 +11,15 @@ import (
 	"strings"
 )
 
-type (
-	faculty   struct{ title, firstName, lastName, address, department, homePhone, workPhone, campusBox string }
-	faculties []faculty
-)
+type faculty struct{ title, firstName, lastName, address, department, homePhone, workPhone, campusBox string }
 
 func parse(line, department string) faculty {
 	token := strings.Split(line, ",")
 	return faculty{token[0], token[1], token[2], token[3], department, token[4], token[5], token[6]}
 }
 
-func output(out *os.File, fs faculties) {
-	for _, f := range fs {
+func output(out *os.File, faculties []faculty) {
+	for _, f := range faculties {
 		fmt.Fprintln(out, "----------------------------------------")
 		fmt.Fprintf(out, "%s %s %s\n%s\n", f.title, f.firstName, f.lastName, f.address)
 		fmt.Fprintf(out, "Department: %s\n", f.department)
@@ -42,16 +39,16 @@ func main() {
 	s.Split(bufio.ScanLines)
 
 	var line string
-	var fs faculties
+	var faculties []faculty
 	s.Scan()
 	for n, _ := strconv.Atoi(s.Text()); n > 0 && s.Scan(); n-- {
 		for department := s.Text(); s.Scan(); {
 			if line = s.Text(); line == "" {
 				break
 			}
-			fs = append(fs, parse(line, department))
+			faculties = append(faculties, parse(line, department))
 		}
 	}
-	sort.Slice(fs, func(i, j int) bool { return fs[i].lastName < fs[j].lastName })
-	output(out, fs)
+	sort.Slice(faculties, func(i, j int) bool { return faculties[i].lastName < faculties[j].lastName })
+	output(out, faculties)
 }

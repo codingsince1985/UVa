@@ -8,19 +8,16 @@ import (
 	"sort"
 )
 
-type (
-	node  struct{ w, s int }
-	nodes []node
-)
+type node struct{ w, s int }
 
-func lis(n nodes) ([]int, int) {
-	sort.Slice(n, func(i, j int) bool {
-		if n[i].w != n[j].w {
-			return n[i].w < n[j].w
+func lis(nodes []node) ([]int, int) {
+	sort.Slice(nodes, func(i, j int) bool {
+		if nodes[i].w != nodes[j].w {
+			return nodes[i].w < nodes[j].w
 		}
-		return n[i].s > n[j].s
+		return nodes[i].s > nodes[j].s
 	})
-	l := len(n)
+	l := len(nodes)
 	dp := make([]int, l+1)
 	for i := range dp {
 		dp[i] = 1
@@ -29,7 +26,7 @@ func lis(n nodes) ([]int, int) {
 	pre, max := make([]int, l), 0
 	for i := 1; i < l; i++ {
 		for j := i + 1; j <= l; j++ {
-			if n[j-1].w > n[i-1].w && n[j-1].s < n[i-1].s {
+			if nodes[j-1].w > nodes[i-1].w && nodes[j-1].s < nodes[i-1].s {
 				if dp[j] < dp[i]+1 {
 					dp[j] = dp[i] + 1
 					pre[j-1] = i - 1
@@ -43,12 +40,12 @@ func lis(n nodes) ([]int, int) {
 	return pre, max
 }
 
-func getResult(pre []int, max int, n []node) []node {
+func getResult(pre []int, max int, nodex []node) []node {
 	res := make([]node, max)
 	for i := len(pre) - 1; i >= 0; i-- {
 		if pre[i] == max-1 {
 			max--
-			res[max] = n[i]
+			res[max] = nodex[i]
 		}
 	}
 	return res
@@ -72,16 +69,16 @@ func main() {
 	out, _ := os.Create("10131.out")
 	defer out.Close()
 
-	var n nodes
-	var nd node
+	var nodes []node
+	var n node
 	for {
-		if _, err := fmt.Fscanf(in, "%d%d", &nd.w, &nd.s); err != nil {
+		if _, err := fmt.Fscanf(in, "%d%d", &n.w, &n.s); err != nil {
 			break
 		}
-		n = append(n, nd)
+		nodes = append(nodes, n)
 	}
-	orig := make([]node, len(n))
-	copy(orig, n)
-	pre, max := lis(n)
-	output(out, getResult(pre, max, n), orig)
+	orig := make([]node, len(nodes))
+	copy(orig, nodes)
+	pre, max := lis(nodes)
+	output(out, getResult(pre, max, nodes), orig)
 }

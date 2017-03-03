@@ -10,13 +10,10 @@ import (
 	"strings"
 )
 
-type (
-	card struct {
-		value int
-		suit  byte
-	}
-	cards []card
-)
+type card struct {
+	value int
+	suit  byte
+}
 
 var valueMap = map[byte]int{'T': 10, 'J': 11, 'Q': 12, 'K': 13, 'A': 14}
 
@@ -67,7 +64,7 @@ func buildCard(c string) card {
 	return card{int(c[0] - '0'), c[1]}
 }
 
-func score(c cards) int {
+func score(c []card) int {
 	sort.Slice(c, func(i, j int) bool { return c[i].value > c[j].value })
 	// order matters
 	switch {
@@ -154,7 +151,7 @@ func compareSameScore(score int, blacks, whites []card) (int, int) {
 }
 
 func compare(c []string) string {
-	blacks, whites := make(cards, 5), make(cards, 5)
+	blacks, whites := make([]card, 5), make([]card, 5)
 	for i := 0; i < 5; i++ {
 		blacks[i], whites[i] = buildCard(c[i]), buildCard(c[i+5])
 	}

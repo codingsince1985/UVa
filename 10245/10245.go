@@ -9,10 +9,7 @@ import (
 	"sort"
 )
 
-type (
-	point  struct{ x, y float64 }
-	points []point
-)
+type point struct{ x, y float64 }
 
 func min(a, b float64) float64 {
 	if a < b {
@@ -25,7 +22,7 @@ func distance(p1, p2 point) float64 {
 	return math.Sqrt((p1.x-p2.x)*(p1.x-p2.x) + (p1.y-p2.y)*(p1.y-p2.y))
 }
 
-func divide(p points) float64 {
+func divide(p []point) float64 {
 	if len(p) <= 1 {
 		return math.MaxFloat64
 	}
@@ -34,7 +31,7 @@ func divide(p points) float64 {
 	return conquer(p, min(left, right))
 }
 
-func conquer(p points, min float64) float64 {
+func conquer(p []point, min float64) float64 {
 	mid := len(p) / 2
 	midx := (p[mid-1].x + p[mid].x) / 2
 	var mids []point
@@ -65,7 +62,7 @@ func main() {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		p := make(points, n)
+		p := make([]point, n)
 		for i := range p {
 			fmt.Fscanf(in, "%f%f", &p[i].x, &p[i].y)
 		}

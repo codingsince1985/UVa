@@ -9,10 +9,8 @@ import (
 	"strconv"
 )
 
-type digits []byte
-
 func sortInt(num string, descending bool) int {
-	d := digits(num)
+	d := []byte(num)
 	if descending {
 		sort.Slice(d, func(i, j int) bool { return d[i] > d[j] })
 	} else {

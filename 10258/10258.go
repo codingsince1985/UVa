@@ -9,16 +9,13 @@ import (
 	"sort"
 )
 
-type (
-	contestant struct {
-		num, penalty, solved int
-		problem              map[int]bool
-	}
-	contestants []contestant
-)
+type contestant struct {
+	num, penalty, solved int
+	problem              map[int]bool
+}
 
-func ranking(contest map[int]*contestant) contestants {
-	var c contestants
+func ranking(contest map[int]*contestant) []contestant {
+	var c []contestant
 	for _, v := range contest {
 		c = append(c, *v)
 	}

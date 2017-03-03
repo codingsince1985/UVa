@@ -10,14 +10,11 @@ import (
 
 var out *os.File
 
-type (
-	job  struct{ no, time, fine int }
-	jobs []job
-)
+type job struct{ no, time, fine int }
 
-func output(jbs jobs) {
+func output(jobs []job) {
 	first := true
-	for _, j := range jbs {
+	for _, j := range jobs {
 		if first {
 			first = false
 		} else {
@@ -38,22 +35,22 @@ func main() {
 	first := true
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "\n%d", &n)
-		jbs := make(jobs, n)
-		for i := range jbs {
-			fmt.Fscanf(in, "%d%d", &jbs[i].time, &jbs[i].fine)
-			jbs[i].no = i + 1
+		jobs := make([]job, n)
+		for i := range jobs {
+			fmt.Fscanf(in, "%d%d", &jobs[i].time, &jobs[i].fine)
+			jobs[i].no = i + 1
 		}
-		sort.Slice(jbs, func(i, j int) bool {
-			if jbs[i].time*jbs[j].fine == jbs[j].time*jbs[i].fine {
+		sort.Slice(jobs, func(i, j int) bool {
+			if jobs[i].time*jobs[j].fine == jobs[j].time*jobs[i].fine {
 				return i < j
 			}
-			return jbs[i].time*jbs[j].fine < jbs[j].time*jbs[i].fine
+			return jobs[i].time*jobs[j].fine < jobs[j].time*jobs[i].fine
 		})
 		if first {
 			first = false
 		} else {
 			fmt.Fprintln(out)
 		}
-		output(jbs)
+		output(jobs)
 	}
 }

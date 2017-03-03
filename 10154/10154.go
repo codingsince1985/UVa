@@ -9,23 +9,20 @@ import (
 	"sort"
 )
 
-type (
-	turtle  struct{ weight, strength int }
-	turtles []turtle
-)
+type turtle struct{ weight, strength int }
 
-func lis(ts turtles) int {
-	sort.Slice(ts, func(i, j int) bool { return ts[i].strength < ts[j].strength })
-	dp := make([]int, len(ts)+1)
-	for i := 1; i <= len(ts); i++ {
+func lis(turtles []turtle) int {
+	sort.Slice(turtles, func(i, j int) bool { return turtles[i].strength < turtles[j].strength })
+	dp := make([]int, len(turtles)+1)
+	for i := 1; i <= len(turtles); i++ {
 		dp[i] = math.MaxInt32
 	}
 	maxLen := 0
-	for i := 1; i <= len(ts); i++ {
-		for j := len(ts); j >= 1; j-- {
-			if ts[i-1].strength-ts[i-1].weight >= dp[j-1] {
-				if dp[j]-dp[j-1] >= ts[i-1].weight {
-					dp[j] = dp[j-1] + ts[i-1].weight
+	for i := 1; i <= len(turtles); i++ {
+		for j := len(turtles); j >= 1; j-- {
+			if turtles[i-1].strength-turtles[i-1].weight >= dp[j-1] {
+				if dp[j]-dp[j-1] >= turtles[i-1].weight {
+					dp[j] = dp[j-1] + turtles[i-1].weight
 					if j > maxLen {
 						maxLen = j
 					}
@@ -42,13 +39,13 @@ func main() {
 	out, _ := os.Create("10154.out")
 	defer out.Close()
 
-	var ts turtles
+	var turtles []turtle
 	var t turtle
 	for {
 		if _, err := fmt.Fscanf(in, "%d%d", &t.weight, &t.strength); err != nil {
 			break
 		}
-		ts = append(ts, t)
+		turtles = append(turtles, t)
 	}
-	fmt.Fprintln(out, lis(ts))
+	fmt.Fprintln(out, lis(turtles))
 }

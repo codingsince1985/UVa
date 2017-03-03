@@ -8,14 +8,11 @@ import (
 	"sort"
 )
 
-type (
-	card  struct{ suit, number byte }
-	cards []card
-)
+type card struct{ suit, number byte }
 
 var (
 	ptr          int
-	hands        [4]cards
+	hands        [4][]card
 	directionMap = map[string]int{"S": 0, "W": 1, "N": 2, "E": 3}
 	orders       = []string{"S", "W", "N", "E"}
 	suitMap      = map[byte]int{'C': 0, 'D': 1, 'S': 2, 'H': 3}

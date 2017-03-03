@@ -8,10 +8,8 @@ import (
 	"sort"
 )
 
-type bytes []byte
-
 var (
-	chars bytes
+	chars []byte
 	out   *os.File
 )
 
@@ -21,7 +19,7 @@ func isUpper(a byte) bool { return !isLower(a) }
 
 func toUpper(a byte) byte { return a - 'a' + 'A' }
 
-func dfs(i int, word bytes, visited []bool) {
+func dfs(i int, word []byte, visited []bool) {
 	if i == len(chars) {
 		fmt.Fprintln(out, string(word))
 	} else {
@@ -49,7 +47,7 @@ func main() {
 	var line string
 	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%s", &line)
-		chars = bytes(line)
+		chars = []byte(line)
 		sort.Slice(chars, func(i, j int) bool {
 			if isLower(chars[i]) && isLower(chars[j]) || isUpper(chars[i]) && isUpper(chars[j]) {
 				return chars[i] <= chars[j]
@@ -59,7 +57,7 @@ func main() {
 			}
 			return chars[i] <= toUpper(chars[j])
 		})
-		word := make(bytes, len(chars))
+		word := make([]byte, len(chars))
 		visited := make([]bool, len(chars))
 		dfs(0, word, visited)
 	}
