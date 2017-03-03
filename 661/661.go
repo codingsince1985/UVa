@@ -25,8 +25,7 @@ func main() {
 		}
 		devices := make([]device, n)
 		for i := range devices {
-			fmt.Fscanf(in, "%d", &tmp)
-			devices[i] = device{false, tmp}
+			fmt.Fscanf(in, "%d", &devices[i].consumption)
 		}
 
 		var total, max int

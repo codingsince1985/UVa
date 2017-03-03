@@ -32,15 +32,16 @@ func main() {
 	out, _ := os.Create("10954.out")
 	defer out.Close()
 
-	var n, num int
+	var n int
 	for {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
 		pq := make(priorityQueue, n)
 		for i := range pq {
-			fmt.Fscanf(in, "%d", &num)
-			pq[i] = &item{num}
+			var itm item
+			fmt.Fscanf(in, "%d", &itm.value)
+			pq[i] = &itm
 		}
 		heap.Init(&pq)
 		total := 0

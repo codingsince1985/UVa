@@ -7,11 +7,11 @@ import (
 	"os"
 )
 
-type point struct{ x, y int }
-
-type line struct{ p1, p2 point }
-
-type rectangle struct{ p1, p2, p3, p4 point }
+type (
+	point     struct{ x, y int }
+	line      struct{ p1, p2 point }
+	rectangle struct{ p1, p2, p3, p4 point }
+)
 
 func min(a, b int) int {
 	if a < b {
@@ -54,11 +54,11 @@ func main() {
 
 	var n, x1, y1, x2, y2 int
 	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
+		var l line
+		fmt.Fscanf(in, "%d%d%d%d", &l.p1.x, &l.p1.y, &l.p2.x, &l.p2.y)
 		fmt.Fscanf(in, "%d%d%d%d", &x1, &y1, &x2, &y2)
-		l := line{point{x1, y1}, point{x2, y2}}
-		fmt.Fscanf(in, "%d%d%d%d", &x1, &y1, &x2, &y2)
-		x1, x2 := min(x1, x2), max(x1, x2)
-		y1, y2 := max(y1, y2), min(y1, y2)
+		x1, x2 = min(x1, x2), max(x1, x2)
+		y1, y2 = max(y1, y2), min(y1, y2)
 		r := rectangle{point{x1, y1}, point{x2, y1}, point{x2, y2}, point{x1, y2}}
 
 		if intersect(l, line{r.p1, r.p2}) ||

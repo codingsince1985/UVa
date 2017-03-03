@@ -33,20 +33,20 @@ func main() {
 	defer out.Close()
 
 	var rectangles []rectangle
-	var a, b, c, d float64
 	var str string
+	var p1, p2 point
 	for {
 		if fmt.Fscanf(in, "%s", &str); str == "*" {
 			break
 		}
-		fmt.Fscanf(in, "%f%f%f%f", &a, &b, &c, &d)
-		rectangles = append(rectangles, rectangle{point{a, b}, point{c, d}})
+		fmt.Fscanf(in, "%f%f%f%f", &p1.x, &p1.y, &p2.x, &p2.y)
+		rectangles = append(rectangles, rectangle{p1, p2})
 	}
 
 	for count := 1; ; count++ {
-		if fmt.Fscanf(in, "%f%f", &a, &b); a == 9999.9 && b == 9999.9 {
+		if fmt.Fscanf(in, "%f%f", &p1.x, &p1.y); p1.x == 9999.9 && p1.y == 9999.9 {
 			break
 		}
-		testIn(count, point{a, b}, rectangles)
+		testIn(count, p1, rectangles)
 	}
 }

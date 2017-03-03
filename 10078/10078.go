@@ -9,7 +9,7 @@ import (
 
 type point struct{ x, y int }
 
-func cross(p1, p2, p3 point) int { return (p2.x-p1.x)*(p3.y-p1.y) - (p2.y-p1.y)*(p3.x-p1.x) }
+func cross(p, p1, p2 point) int { return (p1.x-p.x)*(p2.y-p.y) - (p1.y-p.y)*(p2.x-p.x) }
 
 func isConvex(points []point) bool {
 	points = append(points, points[:2]...)

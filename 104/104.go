@@ -51,7 +51,6 @@ func main() {
 	defer out.Close()
 
 	var n int
-	var tmp float64
 	for {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
@@ -64,8 +63,7 @@ func main() {
 				if i == j {
 					matrix[i][j][0] = node{1, []int{}}
 				} else {
-					fmt.Fscanf(in, "%f", &tmp)
-					matrix[i][j][0] = node{tmp, []int{}}
+					fmt.Fscanf(in, "%f", &matrix[i][j][0].v)
 				}
 			}
 		}

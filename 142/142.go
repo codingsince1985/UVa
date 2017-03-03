@@ -56,21 +56,21 @@ func main() {
 	out, _ := os.Create("142.out")
 	defer out.Close()
 
-	var x1, y1, x2, y2 int
 	var dataType byte
+	var p1, p2 point
 here:
 	for {
 		fmt.Fscanf(in, "%c", &dataType)
 		switch dataType {
 		case 'I':
-			fmt.Fscanf(in, "%d%d", &x1, &y1)
-			icons = append(icons, point{x1, y1})
+			fmt.Fscanf(in, "%d%d", &p1.x, &p1.y)
+			icons = append(icons, p1)
 		case 'R':
-			fmt.Fscanf(in, "%d%d%d%d", &x1, &y1, &x2, &y2)
-			regions = append(regions, region{point{x1, y1}, point{x2, y2}})
+			fmt.Fscanf(in, "%d%d%d%d", &p1.x, &p1.y, &p2.x, &p2.y)
+			regions = append(regions, region{p1, p2})
 		case 'M':
-			fmt.Fscanf(in, "%d%d", &x1, &y1)
-			fmt.Fprintln(out, solve(point{x1, y1}))
+			fmt.Fscanf(in, "%d%d", &p1.x, &p1.y)
+			fmt.Fprintln(out, solve(p1))
 		case '#':
 			break here
 		}

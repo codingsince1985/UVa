@@ -7,6 +7,8 @@ import (
 	"os"
 )
 
+var zero = point{0, 0}
+
 type (
 	point    struct{ x, y float64 }
 	triangle struct{ p1, p2, p3 point }
@@ -59,7 +61,6 @@ func main() {
 	defer out.Close()
 
 	var t triangle
-	zero := point{0, 0}
 	for {
 		if fmt.Fscanf(in, "%f%f%f%f%f%f", &t.p1.x, &t.p1.y, &t.p2.x, &t.p2.y, &t.p3.x, &t.p3.y); t.p1 == zero && t.p2 == zero && t.p3 == zero {
 			break

@@ -51,7 +51,7 @@ func setMatrix(i, j, k, l int64, m *[2][2]big.Int) {
 	(*m)[1][1].SetInt64(l)
 }
 
-func prepare() {
+func initialize() {
 	setMatrix(1, 0, 0, 1, &I)
 	setMatrix(0, 0, 0, 0, &O)
 	setMatrix(1, 1, 1, 0, &A)
@@ -63,7 +63,7 @@ func main() {
 	out, _ = os.Create("10229.out")
 	defer out.Close()
 
-	prepare()
+	initialize()
 	var n, m int64
 	for {
 		if _, err := fmt.Fscanf(in, "%d%d", &n, &m); err != nil {

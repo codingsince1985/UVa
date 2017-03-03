@@ -16,6 +16,7 @@ func abs(a int) int {
 }
 
 func solve(lst []int) int {
+	sort.Ints(lst)
 	total := 0
 	median := lst[len(lst)/2]
 	for _, v := range lst {
@@ -37,7 +38,6 @@ func main() {
 			fmt.Fscanf(in, "%d", &tmp)
 			address = append(address, tmp)
 		}
-		sort.Ints(address)
 		fmt.Fprintln(out, solve(address))
 	}
 }

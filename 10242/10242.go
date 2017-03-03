@@ -29,14 +29,12 @@ func main() {
 	out, _ := os.Create("10242.out")
 	defer out.Close()
 
-	var p1, p2 point
+	var l1, l2 line
 	for {
-		if _, err := fmt.Fscanf(in, "%f%f%f%f", &p1.x, &p1.y, &p2.x, &p2.y); err != nil {
+		if _, err := fmt.Fscanf(in, "%f%f%f%f", &l1.s.x, &l1.s.y, &l1.e.x, &l1.e.y); err != nil {
 			break
 		}
-		l1 := line{p1, p2}
-		fmt.Fscanf(in, "%f%f%f%f", &p1.x, &p1.y, &p2.x, &p2.y)
-		l2 := line{p1, p2}
+		fmt.Fscanf(in, "%f%f%f%f", &l2.s.x, &l2.s.y, &l2.e.x, &l2.e.y)
 		connect(&l1, &l2)
 		fmt.Fprintf(out, "%.3f %.3f\n", l2.e.x-(l1.e.x-l1.s.x), l2.e.y-(l1.e.y-l1.s.y))
 	}

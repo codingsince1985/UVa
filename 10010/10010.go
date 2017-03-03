@@ -24,13 +24,9 @@ here:
 		for j := 1; j < len(chars); j++ {
 			px += dir[0]
 			py += dir[1]
-			if px < 0 || px >= m || py < 0 || py >= n {
+			if px < 0 || px >= m || py < 0 || py >= n || grid[px][py] != chars[j] {
 				continue here
 			}
-			if grid[px][py] != chars[j] {
-				continue here
-			}
-
 		}
 		return true
 	}
