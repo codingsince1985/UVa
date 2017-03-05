@@ -7,14 +7,14 @@ import (
 	"os"
 )
 
-const MAX = 46340
+const max = 46340
 
 var primes = func() []int {
-	p := make([]bool, MAX+1)
+	p := make([]bool, max+1)
 	p[0], p[1] = true, true
-	for i := 2; i*i <= MAX; i++ {
+	for i := 2; i*i <= max; i++ {
 		if !p[i] {
-			for j := 2 * i; j <= MAX; j += i {
+			for j := 2 * i; j <= max; j += i {
 				p[j] = true
 			}
 		}

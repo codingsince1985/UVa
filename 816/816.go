@@ -94,18 +94,18 @@ func output(out *os.File, n string, p []node) {
 	fmt.Fprintln(out, n)
 	if p == nil {
 		fmt.Fprintln(out, "  No Solution Possible")
-	} else {
-		for idx, v := range p {
-			if idx%10 == 0 {
-				fmt.Fprint(out, " ")
-			}
-			fmt.Fprintf(out, " (%d,%d)", v.r, v.c)
-			if idx != 0 && idx%9 == 0 {
-				fmt.Fprintln(out)
-			}
-		}
-		fmt.Fprintln(out)
+		return
 	}
+	for idx, v := range p {
+		if idx%10 == 0 {
+			fmt.Fprint(out, " ")
+		}
+		fmt.Fprintf(out, " (%d,%d)", v.r, v.c)
+		if idx != 0 && idx%9 == 0 {
+			fmt.Fprintln(out)
+		}
+	}
+	fmt.Fprintln(out)
 }
 
 func main() {

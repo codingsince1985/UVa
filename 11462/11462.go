@@ -13,10 +13,10 @@ func output(ages [100]int) {
 	first := true
 	for i, v := range ages {
 		for ; v > 0; v-- {
-			if !first {
-				fmt.Fprint(out, " ")
-			} else {
+			if first {
 				first = false
+			} else {
+				fmt.Fprint(out, " ")
 			}
 			fmt.Fprint(out, i)
 		}

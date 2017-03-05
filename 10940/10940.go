@@ -7,12 +7,12 @@ import (
 	"os"
 )
 
-const MAX = 500000
+const max = 500000
 
 var cache = func() []int {
-	cache := make([]int, MAX+1)
+	cache := make([]int, max+1)
 	cache[0], cache[1] = 0, 1
-	for n, i := 1, 2; i <= MAX; i++ {
+	for n, i := 1, 2; i <= max; i++ {
 		cache[i] = n * 2
 		if n*2 == i {
 			n = 1

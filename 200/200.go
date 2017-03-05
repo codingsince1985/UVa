@@ -91,7 +91,7 @@ func main() {
 here:
 	for first = range matrix {
 		for j := range matrix[first] {
-			if matrix[j][first] == true {
+			if matrix[j][first] {
 				continue here
 			}
 		}

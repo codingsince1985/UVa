@@ -37,8 +37,9 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%d", &year); err != nil {
 			break
 		}
-
-		if !first {
+		if first {
+			first = false
+		} else {
 			fmt.Fprintln(out)
 		}
 
@@ -58,6 +59,5 @@ func main() {
 				fmt.Fprintln(out, "This is bulukulu festival year.")
 			}
 		}
-		first = false
 	}
 }

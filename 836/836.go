@@ -41,8 +41,7 @@ func main() {
 	out, _ := os.Create("836.out")
 	defer out.Close()
 
-	var c, n int
-
+	var c int
 	var m [][]byte
 	for fmt.Fscanf(in, "%d\n\n", &c); c > 0; c-- {
 		first := true
@@ -52,7 +51,7 @@ func main() {
 				break
 			}
 			if first {
-				n = len(l)
+				n := len(l)
 				m = make([][]byte, n)
 				for j := range m {
 					m[j] = make([]byte, n)

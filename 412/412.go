@@ -21,7 +21,7 @@ func noCommonFactor(a, b int) bool {
 	return len(factors) == 0
 }
 
-func CalculatePi(out *os.File, nums []int) {
+func calculatePi(out *os.File, nums []int) {
 	size := len(nums)
 	total := size * (size - 1) / 2
 	cnt := 0
@@ -54,6 +54,6 @@ func main() {
 		for i := range nums {
 			fmt.Fscanf(in, "%d", &nums[i])
 		}
-		CalculatePi(out, nums)
+		calculatePi(out, nums)
 	}
 }

@@ -40,11 +40,6 @@ func main() {
 		if fmt.Fscanf(in, "%d%d", &n, &r); n == 0 && r == 0 {
 			break
 		}
-		if first {
-			first = false
-		} else {
-			fmt.Fprintln(out)
-		}
 		matrix := make(map[string]map[string]int)
 		for ; r > 0; r-- {
 			fmt.Fscanf(in, "%s%s%d", &c1, &c2, &l)
@@ -57,6 +52,11 @@ func main() {
 			matrix[c1][c2], matrix[c2][c1] = l, l
 		}
 		fmt.Fscanf(in, "%s%s", &c1, &c2)
+		if first {
+			first = false
+		} else {
+			fmt.Fprintln(out)
+		}
 		fmt.Fprintf(out, "Scenario #%d\n%d tons\n", kase, floydWarshall(matrix, c1, c2))
 	}
 }

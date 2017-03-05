@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-const N = 20
+const n = 20
 
 type node struct{ n, step int }
 
@@ -15,14 +15,14 @@ var matrix [][]bool
 
 func bfs(n1, n2 int) int {
 	var queue []node
-	visited := make([]bool, N+1)
+	visited := make([]bool, n+1)
 	visited[n1] = true
 	queue = append(queue, node{n1, 0})
 
 	for len(queue) != 0 {
 		curr := queue[0]
 		queue = queue[1:]
-		for i := 1; i <= N; i++ {
+		for i := 1; i <= n; i++ {
 			if !visited[i] && matrix[curr.n][i] {
 				if i == n2 {
 					return curr.step + 1
@@ -42,11 +42,11 @@ func main() {
 
 	var cnt, tmp, kase, n1, n2 int
 	for set := 1; ; set++ {
-		matrix = make([][]bool, N+1)
+		matrix = make([][]bool, n+1)
 		for i := range matrix {
-			matrix[i] = make([]bool, N+1)
+			matrix[i] = make([]bool, n+1)
 		}
-		for i := 1; i < N; i++ {
+		for i := 1; i < n; i++ {
 			if _, err := fmt.Fscanf(in, "%d", &cnt); err != nil {
 				return
 			}

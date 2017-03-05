@@ -8,13 +8,13 @@ import (
 	"os"
 )
 
-const MAX = 5001
+const max = 5001
 
-var f = func() [MAX]big.Int {
-	var f [MAX]big.Int
+var f = func() [max]big.Int {
+	var f [max]big.Int
 	f[0].SetInt64(0)
 	f[1].SetInt64(1)
-	for i := 2; i < MAX; i++ {
+	for i := 2; i < max; i++ {
 		f[i].Add(&f[i-1], &f[i-2])
 	}
 	return f

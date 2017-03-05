@@ -36,10 +36,10 @@ func main() {
 			s += "\n"
 		}
 		for fmt.Fscanf(in, "%d", &f); f > 0; f-- {
-			if !first {
-				fmt.Fprintln(out)
-			} else {
+			if first {
 				first = false
+			} else {
+				fmt.Fprintln(out)
 			}
 			fmt.Fprint(out, s)
 		}

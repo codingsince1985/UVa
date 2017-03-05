@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-const TYPES = 5
+const types = 5
 
 func solve(city []map[byte]byte) int {
 	var idx, diff int
@@ -51,7 +51,7 @@ func main() {
 		} else {
 			bin := make(map[byte]byte)
 			r := strings.NewReader(line)
-			for i := 0; i < TYPES; i++ {
+			for i := 0; i < types; i++ {
 				fmt.Fscanf(r, "%c/%c%c", &c1, &c2, &tmp)
 				bin[c1] = c2
 			}

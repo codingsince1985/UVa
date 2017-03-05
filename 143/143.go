@@ -7,7 +7,9 @@ import (
 	"os"
 )
 
-var zero = point{0, 0}
+const zero = 0.00001
+
+var pzero = point{0, 0}
 
 type (
 	point    struct{ x, y float64 }
@@ -26,7 +28,7 @@ func area(p1, p2, p3 point) float64 {
 }
 
 func (t triangle) contains(p point) bool {
-	return abs(area(p, t.p1, t.p2)+area(p, t.p1, t.p3)+area(p, t.p2, t.p3)-area(t.p1, t.p2, t.p3)) <= 0.00001
+	return abs(area(p, t.p1, t.p2)+area(p, t.p1, t.p3)+area(p, t.p2, t.p3)-area(t.p1, t.p2, t.p3)) <= zero
 }
 
 func min(a, b float64) float64 {
@@ -62,7 +64,7 @@ func main() {
 
 	var t triangle
 	for {
-		if fmt.Fscanf(in, "%f%f%f%f%f%f", &t.p1.x, &t.p1.y, &t.p2.x, &t.p2.y, &t.p3.x, &t.p3.y); t.p1 == zero && t.p2 == zero && t.p3 == zero {
+		if fmt.Fscanf(in, "%f%f%f%f%f%f", &t.p1.x, &t.p1.y, &t.p2.x, &t.p2.y, &t.p3.x, &t.p3.y); t.p1 == pzero && t.p2 == pzero && t.p3 == pzero {
 			break
 		}
 		fmt.Fprintf(out, "%4d\n", solve(t))

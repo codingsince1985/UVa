@@ -33,14 +33,14 @@ func toNum(digit rune) int {
 }
 
 func base10(num string, base int) int {
-	len := len(num)
+	length := len(num)
 	total := 0
 	for i, d := range num {
 		digit := toNum(d)
 		if digit >= base {
 			return -1
 		}
-		total += digit * int(math.Pow(float64(base), float64(len-i-1)))
+		total += digit * int(math.Pow(float64(base), float64(length-i-1)))
 	}
 	return total
 }

@@ -14,13 +14,12 @@ func solve(l, r int, lines [][2]int) [][2]int {
 	maxRight := l
 	idx := -1
 	for i, v := range lines {
-		if v[0] <= l {
-			if v[1] > maxRight {
-				maxRight = v[1]
-				idx = i
-			}
-		} else {
+		if v[0] > l {
 			break
+		}
+		if v[1] > maxRight {
+			maxRight = v[1]
+			idx = i
 		}
 	}
 

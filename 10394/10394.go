@@ -7,13 +7,13 @@ import (
 	"os"
 )
 
-const MAX = 20000000
+const max = 20000000
 
 func sieve() []bool {
-	p := make([]bool, MAX+1)
-	for i := 2; i*i <= MAX; i++ {
+	p := make([]bool, max+1)
+	for i := 2; i*i <= max; i++ {
 		if !p[i] {
-			for j := i + i; j <= MAX; j += i {
+			for j := i + i; j <= max; j += i {
 				p[j] = true
 			}
 		}
@@ -29,7 +29,7 @@ func main() {
 
 	p := sieve()
 	var tp []int
-	for i := 3; i+2 <= MAX; i += 2 {
+	for i := 3; i+2 <= max; i += 2 {
 		if !p[i] && !p[i+2] {
 			tp = append(tp, i)
 		}

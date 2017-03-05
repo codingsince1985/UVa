@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-const MAX = 3500
+const max = 3500
 
 func isPrime(n int) bool {
 	for i := 3; i*i <= n; i += 2 {
@@ -19,9 +19,9 @@ func isPrime(n int) bool {
 }
 
 func primes() []int {
-	p := make([]int, MAX)
+	p := make([]int, max)
 	p[0] = 2
-	for i, idx := 3, 1; idx < MAX; i += 2 {
+	for i, idx := 3, 1; idx < max; i += 2 {
 		if isPrime(i) {
 			p[idx] = i
 			idx++

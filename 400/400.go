@@ -10,10 +10,10 @@ import (
 
 var out *os.File
 
-const MAX = 60
+const max = 60
 
 func output(files []string, cols, maxLen int) {
-	for i := 0; i < MAX; i++ {
+	for i := 0; i < max; i++ {
 		fmt.Fprint(out, "-")
 	}
 	fmt.Fprintln(out)
@@ -59,7 +59,7 @@ func main() {
 				maxLen = length
 			}
 		}
-		cols := (MAX + 2) / (maxLen + 2)
+		cols := (max + 2) / (maxLen + 2)
 		sort.Strings(files)
 		output(files, cols, maxLen)
 	}

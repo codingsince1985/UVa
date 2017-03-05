@@ -8,13 +8,13 @@ import (
 	"os"
 )
 
-const MAX = 250
+const max = 250
 
 var cache = func() []big.Int {
-	dp := make([]big.Int, MAX+1)
+	dp := make([]big.Int, max+1)
 	dp[0].SetInt64(1)
 	dp[1].SetInt64(1)
-	for i := 2; i <= MAX; i++ {
+	for i := 2; i <= max; i++ {
 		tmp := big.NewInt(2)
 		tmp.Mul(tmp, &dp[i-2])
 		tmp.Add(tmp, &dp[i-1])

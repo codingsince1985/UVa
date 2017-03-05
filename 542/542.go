@@ -7,19 +7,19 @@ import (
 	"os"
 )
 
-const TEAMS = 16
+const teams = 16
 
 func solve(matrix [][]float64) []float64 {
-	dp := make([][][]float64, TEAMS)
+	dp := make([][][]float64, teams)
 	for i := range dp {
-		dp[i] = make([][]float64, TEAMS)
+		dp[i] = make([][]float64, teams)
 		for j := range dp[i] {
-			dp[i][j] = make([]float64, TEAMS)
+			dp[i][j] = make([]float64, teams)
 		}
 		dp[i][i][i] = 1
 	}
 	for teamsPerGroup := 2; teamsPerGroup <= 16; teamsPerGroup = teamsPerGroup * 2 {
-		for left := 0; left <= TEAMS-teamsPerGroup; left += teamsPerGroup {
+		for left := 0; left <= teams-teamsPerGroup; left += teamsPerGroup {
 			right := left + teamsPerGroup - 1
 			mid := (left + right) / 2
 			for i := left; i <= mid; i++ {
@@ -30,9 +30,9 @@ func solve(matrix [][]float64) []float64 {
 			}
 		}
 	}
-	probabilities := make([]float64, TEAMS)
+	probabilities := make([]float64, teams)
 	for i := range probabilities {
-		probabilities[i] = dp[i][0][TEAMS-1] * 100
+		probabilities[i] = dp[i][0][teams-1] * 100
 	}
 	return probabilities
 }
@@ -43,13 +43,13 @@ func main() {
 	out, _ := os.Create("542.out")
 	defer out.Close()
 
-	countries := make([]string, TEAMS)
+	countries := make([]string, teams)
 	for i := range countries {
 		fmt.Fscanf(in, "%s", &countries[i])
 	}
-	matrix := make([][]float64, TEAMS)
+	matrix := make([][]float64, teams)
 	for i := range matrix {
-		matrix[i] = make([]float64, TEAMS)
+		matrix[i] = make([]float64, teams)
 		for j := range matrix[i] {
 			fmt.Fscanf(in, "%f", &matrix[i][j])
 			matrix[i][j] /= 100

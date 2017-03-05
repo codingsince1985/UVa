@@ -22,14 +22,12 @@ func buildTree(nodes [][2]string) *node {
 			switch p {
 			case 'L':
 				if curr.l == nil {
-					node := node{-1, nil, nil}
-					curr.l = &node
+					curr.l = &node{-1, nil, nil}
 				}
 				curr = curr.l
 			case 'R':
 				if curr.r == nil {
-					node := node{-1, nil, nil}
-					curr.r = &node
+					curr.r = &node{-1, nil, nil}
 				}
 				curr = curr.r
 			}

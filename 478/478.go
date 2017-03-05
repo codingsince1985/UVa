@@ -7,6 +7,8 @@ import (
 	"os"
 )
 
+const zero = 0.00001
+
 var out *os.File
 
 type (
@@ -43,7 +45,7 @@ func (t triangle) contains(p point) bool {
 	if diff < 0 {
 		diff = -diff
 	}
-	return diff <= 0.00001
+	return diff <= zero
 }
 
 func testIn(count int, p point, shapes []shape) {

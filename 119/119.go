@@ -25,12 +25,6 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
 		}
-		if !first {
-			fmt.Fprintln(out)
-		} else {
-			first = false
-		}
-
 		names := make([]string, n)
 		for i := range names {
 			fmt.Fscanf(in, "%s", &names[i])
@@ -53,6 +47,11 @@ func main() {
 			for _, to := range fm.toList {
 				table[to] += fm.amount / len(fm.toList)
 			}
+		}
+		if first {
+			first = false
+		} else {
+			fmt.Fprintln(out)
 		}
 		for _, v := range names {
 			fmt.Fprintln(out, v, table[v])

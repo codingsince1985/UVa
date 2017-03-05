@@ -33,9 +33,9 @@ func minBase(num string) int {
 
 func base10(number string, base int) int {
 	total := 0
-	len := len(number)
+	length := len(number)
 	for i, d := range number {
-		total += getNumber(d) * int(math.Pow(float64(base), float64(len-i-1)))
+		total += getNumber(d) * int(math.Pow(float64(base), float64(length-i-1)))
 	}
 	return total
 }

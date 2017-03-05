@@ -9,8 +9,7 @@ import (
 
 func swap(t []int) int {
 	c := 0
-	l := len(t)
-	for i, v := range t[:l-1] {
+	for i, v := range t[:len(t)-1] {
 		for _, w := range t[i+1:] {
 			if v > w {
 				c++

@@ -36,8 +36,7 @@ func main() {
 	var lines []string
 	for s.Scan() {
 		line := s.Text()
-		size := len(line)
-		if max < size {
+		if size := len(line); max < size {
 			max = size
 		}
 		lines = append(lines, line)

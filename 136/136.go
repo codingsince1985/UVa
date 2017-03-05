@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-const MAX = 1500
+const max = 1500
 
 func min(a, b int) int {
 	if a < b {
@@ -20,10 +20,10 @@ func main() {
 	out, _ := os.Create("136.out")
 	defer out.Close()
 
-	var lst [MAX + 1]int
+	var lst [max + 1]int
 	lst[1] = 1
 	current, p2, p3, p5 := 1, 1, 1, 1
-	for current < MAX {
+	for current < max {
 		for lst[p2]*2 <= lst[current] {
 			p2++
 		}

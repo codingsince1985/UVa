@@ -9,17 +9,17 @@ import (
 )
 
 const (
-	MAX = 102
-	MID = 52
+	max = 102
+	mid = 52
 )
 
 func solve(out *os.File, line string) {
-	graph := make([][]byte, MAX)
+	graph := make([][]byte, max)
 	for i := range graph {
-		graph[i] = []byte(strings.Repeat(" ", MID))
+		graph[i] = []byte(strings.Repeat(" ", mid))
 	}
-	currX, currY := 0, MID-1
-	minY, maxY := MID-1, MID-1
+	currX, currY := 0, mid-1
+	minY, maxY := mid-1, mid-1
 	for i := range line {
 		if currY < minY {
 			minY = currY

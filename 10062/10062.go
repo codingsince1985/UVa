@@ -25,11 +25,6 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%s", &line); err != nil {
 			break
 		}
-		if !first {
-			fmt.Fprintln(out)
-		} else {
-			first = false
-		}
 		table := make(map[byte]int)
 		for i := range line {
 			if line[i] >= 32 && line[i] < 128 {
@@ -46,6 +41,11 @@ func main() {
 			}
 			return lst[i].freq < lst[j].freq
 		})
+		if first {
+			first = false
+		} else {
+			fmt.Fprintln(out)
+		}
 		for _, v := range lst {
 			fmt.Fprintln(out, v.ch, v.freq)
 		}

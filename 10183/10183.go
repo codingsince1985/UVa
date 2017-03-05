@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-const MAX = 101
+const max = 101
 
 var p = func() []big.Int {
 	p := make([]big.Int, 2)
@@ -20,7 +20,7 @@ var p = func() []big.Int {
 		var tmp big.Int
 		tmp.Add(&p[i-2], &p[i-1])
 		s = fmt.Sprintf("%v", tmp)
-		if len(s) > MAX {
+		if len(s) > max {
 			break
 		}
 		p = append(p, tmp)
@@ -36,7 +36,6 @@ func main() {
 
 	var a, b string
 	var n1, n2 big.Int
-	l := len(p)
 	for {
 		if fmt.Fscanf(in, "%s%s", &a, &b); a == "0" && b == "0" {
 			break
@@ -45,7 +44,7 @@ func main() {
 		n2.SetString(b, 10)
 
 		c := 0
-		for i := 1; i < l; i++ {
+		for i := 1; i < len(p); i++ {
 			if p[i].Cmp(&n1) >= 0 && p[i].Cmp(&n2) <= 0 {
 				c++
 			}

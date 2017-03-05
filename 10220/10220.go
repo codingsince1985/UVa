@@ -8,12 +8,12 @@ import (
 	"os"
 )
 
-const MAX = 1001
+const max = 1001
 
-var f = func() [MAX]big.Int {
-	var f [MAX]big.Int
+var f = func() [max]big.Int {
+	var f [max]big.Int
 	f[0].SetInt64(1)
-	for i := 1; i < MAX; i++ {
+	for i := 1; i < max; i++ {
 		tmp := big.NewInt(int64(i))
 		f[i].Mul(&f[i-1], tmp)
 	}

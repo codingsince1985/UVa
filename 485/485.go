@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-const MAX = 60
+const max = 60
 
 func main() {
 	out, _ := os.Create("485.out")
@@ -19,14 +19,13 @@ here:
 	for {
 		p = append(p, *big.NewInt(1))
 		l := len(p)
-
 		fmt.Fprint(out, &p[l-1])
 		for i := l - 2; i > 0; i-- {
 			p[i].Add(&p[i], &p[i-1])
 			fmt.Fprintf(out, " %v", &p[i])
 
 			s := fmt.Sprint(&p[i])
-			if len(s) > MAX {
+			if len(s) > max {
 				fmt.Fprintln(out)
 				break here
 			}

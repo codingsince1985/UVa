@@ -7,13 +7,13 @@ import (
 	"os"
 )
 
-const MAX = 10000000
+const max = 10000000
 
 func sieve() []bool {
-	p := make([]bool, MAX+1)
-	for i := 2; i*i <= MAX; i++ {
+	p := make([]bool, max+1)
+	for i := 2; i*i <= max; i++ {
 		if !p[i] {
-			for j := 2 * i; j <= MAX; j += i {
+			for j := 2 * i; j <= max; j += i {
 				p[j] = true
 			}
 		}

@@ -67,11 +67,6 @@ func main() {
 
 	first := true
 	for s.Scan() {
-		if first {
-			first = false
-		} else {
-			fmt.Fprintln(out)
-		}
 		nodes = []byte(strings.Replace(s.Text(), " ", "", -1))
 		getNodeMap()
 		s.Scan()
@@ -79,6 +74,11 @@ func main() {
 		orders = nil
 		backtracking(nil)
 		sort.Strings(orders)
+		if first {
+			first = false
+		} else {
+			fmt.Fprintln(out)
+		}
 		fmt.Fprintln(out, strings.Join(orders, "\n"))
 	}
 }

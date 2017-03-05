@@ -50,16 +50,16 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%d", &ln); err != nil {
 			break
 		}
-		if first {
-			first = false
-		} else {
-			fmt.Fprintln(out)
-		}
 		links := make(map[string][]string)
 		for ; ln > 0; ln-- {
 			fmt.Fscanf(in, "%s%s", &n1, &n2)
 			links[n1] = append(links[n1], n2)
 			links[n2] = append(links[n2], n1)
+		}
+		if first {
+			first = false
+		} else {
+			fmt.Fprintln(out)
 		}
 		fmt.Fscanf(in, "%s%s\n\n", &src, &dest)
 		if route := bfs(links, src, dest); route == nil {

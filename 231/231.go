@@ -8,13 +8,12 @@ import (
 )
 
 func lds(h []int) int {
-	l := len(h)
-	m := make([]int, l)
+	m := make([]int, len(h))
 	for i := range m {
 		m[i] = 1
 	}
 	max := 1
-	for i := 1; i < l; i++ {
+	for i := 1; i < len(h); i++ {
 		for j := 0; j < i; j++ {
 			if h[i] < h[j] && m[i] <= m[j] {
 				m[i] = m[j] + 1

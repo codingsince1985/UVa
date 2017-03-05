@@ -7,11 +7,11 @@ import (
 	"os"
 )
 
-const MAX = 50
+const max = 50
 
 var (
 	count int
-	stack [MAX]string
+	stack [max]string
 	out   *os.File
 )
 

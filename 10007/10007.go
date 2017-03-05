@@ -8,18 +8,18 @@ import (
 	"os"
 )
 
-const MAX = 301
+const max = 301
 
-var catalan, fact = func() ([MAX]big.Int, [MAX]big.Int) {
-	var catalan, fact [MAX]big.Int
+var catalan, fact = func() ([max]big.Int, [max]big.Int) {
+	var catalan, fact [max]big.Int
 	catalan[0].SetInt64(1)
-	for i := 1; i < MAX; i++ {
+	for i := 1; i < max; i++ {
 		catalan[i].Mul(&catalan[i-1], big.NewInt(int64(2*(2*i-1))))
 		catalan[i].Div(&catalan[i], big.NewInt(int64(i+1)))
 	}
 
 	fact[1].SetInt64(1)
-	for i := 2; i < MAX; i++ {
+	for i := 2; i < max; i++ {
 		fact[i].Mul(&fact[i-1], big.NewInt(int64(i)))
 	}
 	return catalan, fact
