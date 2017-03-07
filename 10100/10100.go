@@ -54,7 +54,6 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var t1, t2 []string
 	for count := 1; s.Scan(); count++ {
 		s1 := s.Text()
 		s.Scan()
@@ -70,8 +69,6 @@ func main() {
 			fmt.Fprintln(out, "Blank!")
 			continue
 		}
-		t1 = strings.Split(s1, " ")
-		t2 = strings.Split(s2, " ")
-		fmt.Fprintf(out, "Length of longest match: %d\n", lcs(t1, t2))
+		fmt.Fprintf(out, "Length of longest match: %d\n", lcs(strings.Split(s1, " "), strings.Split(s2, " ")))
 	}
 }

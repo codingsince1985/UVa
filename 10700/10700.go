@@ -40,8 +40,7 @@ func add(toAdd []string) int64 {
 func findMax(line string) int64 {
 	toMul := strings.Split(line, "*")
 	for i, vi := range toMul {
-		toAdd := strings.Split(vi, "+")
-		toMul[i] = fmt.Sprintf("%d", add(toAdd))
+		toMul[i] = fmt.Sprintf("%d", add(strings.Split(vi, "+")))
 	}
 	return multiply(toMul)
 }

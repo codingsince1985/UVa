@@ -32,6 +32,17 @@ func output(maze [][]byte, line string) {
 	fmt.Fprintln(out, line)
 }
 
+func find(maze [][]byte) (int, int) {
+	for y, row := range maze {
+		for x, cell := range row {
+			if cell == '*' {
+				return x, y
+			}
+		}
+	}
+	return -1, -1
+}
+
 func main() {
 	in, _ := os.Open("784.in")
 	defer in.Close()
@@ -41,24 +52,18 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var x, y int
 	var maze [][]byte
 	s.Scan()
 	kase, _ := strconv.Atoi(s.Text())
 	for kase > 0 && s.Scan() {
 		if line := s.Text(); strings.HasPrefix(line, "_") {
+			x, y := find(maze)
 			dfs(x, y, maze)
 			output(maze, line)
 			maze = nil
 			kase--
 		} else {
 			maze = append(maze, []byte(line))
-			if x <= 0 {
-				x = strings.Index(line, "*")
-				if x <= 0 {
-					y++
-				}
-			}
 		}
 	}
 }

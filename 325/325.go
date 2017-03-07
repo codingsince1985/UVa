@@ -21,8 +21,7 @@ func checkLeft(s string, hasRight bool) bool {
 	if signNotOnLeft(s) {
 		return false
 	}
-	idx := strings.Index(s, ".")
-	if idx >= 0 {
+	if idx := strings.Index(s, "."); idx >= 0 {
 		return !(idx == len(s)-1 || !isInt(s[0:idx]) || !isInt(s[idx+1:]))
 	}
 	return hasRight

@@ -49,9 +49,9 @@ func newDate(y, m, d int) bool {
 	return y > 1752 || y == 1752 && m > 9 || y == 1752 && m == 9 && d >= 14
 }
 
-func solve(y, m, d int) (bool, string) {
+func solve(y, m, d int) string {
 	if m < 1 || m > 12 || d > daysInMonth(y, m) || y == 1752 && m == 9 && 3 <= d && d <= 13 {
-		return false, ""
+		return fmt.Sprintf("%d/%d/%d is an invalid date.", m, d, y)
 	}
 	count := 5
 	for i := 1; i < y; i++ {
@@ -67,7 +67,7 @@ func solve(y, m, d int) (bool, string) {
 	if newDate(y, m, d) {
 		count -= 11
 	}
-	return true, fmt.Sprintf("%s %d, %d is a %s", months[m-1], d, y, days[count%7])
+	return fmt.Sprintf("%s %d, %d is a %s", months[m-1], d, y, days[count%7])
 }
 
 func main() {
@@ -81,10 +81,6 @@ func main() {
 		if fmt.Fscanf(in, "%d%d%d", &m, &d, &y); m == 0 && d == 0 && y == 0 {
 			break
 		}
-		if ok, str := solve(y, m, d); ok {
-			fmt.Fprintln(out, str)
-		} else {
-			fmt.Fprintf(out, "%d/%d/%d is an invalid date.\n", m, d, y)
-		}
+		fmt.Fprintln(out, solve(y, m, d))
 	}
 }

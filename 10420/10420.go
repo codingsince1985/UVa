@@ -23,8 +23,7 @@ func main() {
 	dict := make(map[string]int)
 	for fmt.Fscanf(in, "%d", &n); n > 0 && s.Scan(); n-- {
 		line := s.Text()
-		tokens := strings.Split(line, " ")
-		dict[tokens[0]]++
+		dict[strings.Fields(line)[0]]++
 	}
 	var countries []string
 	for k := range dict {
