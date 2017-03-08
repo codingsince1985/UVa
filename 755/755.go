@@ -26,11 +26,9 @@ func solve(telephones []string) map[string]int {
 		var number string
 		for j := range telephone {
 			switch {
-			case telephone[j] == '-':
-				continue
 			case telephone[j] >= '0' && telephone[j] <= '9':
 				number += string(telephone[j])
-			default:
+			case telephone[j] >= 'A' && telephone[j] <= 'Z':
 				number += strconv.Itoa(charMap[telephone[j]])
 			}
 		}

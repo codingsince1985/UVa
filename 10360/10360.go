@@ -11,14 +11,12 @@ const max = 1025
 
 func process(d, x, y, population int, rats *[max][max]int) {
 	for i := x - d; i <= x+d; i++ {
-		if i < 0 || i >= max {
-			continue
-		}
-		for j := y - d; j <= y+d; j++ {
-			if j < 0 || j >= max {
-				continue
+		if i >= 0 && i < max {
+			for j := y - d; j <= y+d; j++ {
+				if j >= 0 || j < max {
+					rats[i][j] += population
+				}
 			}
-			rats[i][j] += population
 		}
 	}
 }

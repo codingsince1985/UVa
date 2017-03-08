@@ -50,19 +50,19 @@ func main() {
 			if line = s.Text(); line == "" {
 				break
 			}
-			if fmt.Sscanf(line, "%d%d%d%s", &c, &p, &t, &l); l != "C" && l != "I" {
-				continue
-			}
-			if _, ok := contest[c]; !ok {
-				contest[c] = &contestant{c, 0, 0, make(map[int]bool)}
-			}
-			switch {
-			case l == "I" && !contest[c].problem[p]:
-				contest[c].penalty += 20
-			case l == "C":
-				contest[c].penalty += t
-				contest[c].solved++
-				contest[c].problem[p] = true
+			fmt.Sscanf(line, "%d%d%d%s", &c, &p, &t, &l)
+			if l == "C" || l == "I" {
+				if _, ok := contest[c]; !ok {
+					contest[c] = &contestant{c, 0, 0, make(map[int]bool)}
+				}
+				switch {
+				case l == "I" && !contest[c].problem[p]:
+					contest[c].penalty += 20
+				case l == "C":
+					contest[c].penalty += t
+					contest[c].solved++
+					contest[c].problem[p] = true
+				}
 			}
 		}
 		for _, v := range ranking(contest) {

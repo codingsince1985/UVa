@@ -11,16 +11,14 @@ import (
 func solve(n int) int {
 	min := math.MaxInt32
 	for x := 1; x <= int(math.Sqrt(float64(n))); x++ {
-		if n%x != 0 {
-			continue
-		}
-		y := n / x
-		for z := 1; z <= int(math.Sqrt(float64(y))); z++ {
-			if y%z != 0 {
-				continue
-			}
-			if tmp := 2 * (x*z + y + x*y/z); tmp < min {
-				min = tmp
+		if n%x == 0 {
+			y := n / x
+			for z := 1; z <= int(math.Sqrt(float64(y))); z++ {
+				if y%z == 0 {
+					if tmp := 2 * (x*z + y + x*y/z); tmp < min {
+						min = tmp
+					}
+				}
 			}
 		}
 	}

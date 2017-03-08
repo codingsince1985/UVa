@@ -33,14 +33,13 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
 		}
-		if n < 8 {
+		switch {
+		case n < 8:
 			fmt.Fprintln(out, "Impossible.")
-			continue
-		}
-		if n%2 == 0 {
+		case n%2 == 0:
 			fmt.Fprint(out, "2 2 ")
 			n -= 4
-		} else {
+		default:
 			fmt.Fprint(out, "2 3 ")
 			n -= 5
 		}

@@ -21,12 +21,12 @@ func solve(x, z string) *big.Int {
 					cnt++
 				}
 				dp[i+1][j+1].SetInt64(cnt)
-				continue
-			}
-			if z[i] == x[j] {
-				dp[i+1][j+1].Add(&dp[i+1][j], &dp[i][j])
 			} else {
-				dp[i+1][j+1] = dp[i+1][j]
+				if z[i] == x[j] {
+					dp[i+1][j+1].Add(&dp[i+1][j], &dp[i][j])
+				} else {
+					dp[i+1][j+1] = dp[i+1][j]
+				}
 			}
 		}
 	}

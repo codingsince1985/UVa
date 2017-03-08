@@ -19,10 +19,9 @@ func dfs(m [][]byte, cells [][]int, x, y, d, count int) {
 	cells[x][y] = count
 	for _, dx := range delta {
 		for _, dy := range delta {
-			if dx == 0 && dy == 0 {
-				continue
+			if dx != 0 || dy != 0 {
+				dfs(m, cells, x+dx, y+dy, d, count)
 			}
-			dfs(m, cells, x+dx, y+dy, d, count)
 		}
 	}
 }

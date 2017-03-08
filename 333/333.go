@@ -28,9 +28,7 @@ func isValid(isbn string) bool {
 				return false
 			}
 			digits = append(digits, 10)
-		case isbn[i] == '-':
-			continue
-		default:
+		case isbn[i] != '-':
 			return false
 		}
 	}

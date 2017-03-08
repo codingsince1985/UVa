@@ -11,11 +11,10 @@ func dp() [27][6]int {
 	var cache [27][6]int
 	for i := range cache {
 		cache[i][0] = 1
-		if i == 0 {
-			continue
-		}
-		for j := 1; j < len(cache[i]); j++ {
-			cache[i][j] = cache[i-1][j-1] + cache[i-1][j]
+		if i != 0 {
+			for j := 1; j < len(cache[i]); j++ {
+				cache[i][j] = cache[i-1][j-1] + cache[i-1][j]
+			}
 		}
 	}
 	return cache

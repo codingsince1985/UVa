@@ -29,18 +29,17 @@ func main() {
 		cnt := 0
 		for i := 1; i*i <= n; i++ {
 			for j := i + 1; j*j <= n; j += 2 {
-				if gcd(i, j) != 1 {
-					continue
-				}
-				a := j*j - i*i
-				b := 2 * i * j
-				c := i*i + j*j
-				if c > n {
-					break
-				}
-				cnt++
-				for times := 1; c*times <= n; times++ {
-					cache[a*times], cache[b*times], cache[c*times] = true, true, true
+				if gcd(i, j) == 1 {
+					a := j*j - i*i
+					b := 2 * i * j
+					c := i*i + j*j
+					if c > n {
+						break
+					}
+					cnt++
+					for times := 1; c*times <= n; times++ {
+						cache[a*times], cache[b*times], cache[c*times] = true, true, true
+					}
 				}
 			}
 		}

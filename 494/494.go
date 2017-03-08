@@ -24,15 +24,15 @@ func main() {
 			fmt.Fprintln(out, count)
 			count = 0
 			word = false
-			continue
-		}
-		if c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z' {
-			if !word {
-				word = true
-				count++
-			}
 		} else {
-			word = false
+			if c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z' {
+				if !word {
+					word = true
+					count++
+				}
+			} else {
+				word = false
+			}
 		}
 	}
 }

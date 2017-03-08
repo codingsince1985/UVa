@@ -36,12 +36,11 @@ func solve(n int) [][2]int {
 	for i := 10234; i <= 98765; i++ {
 		if ok, m := unique(i); ok {
 			d := i / n
-			if d*n != i {
-				continue
-			}
-			if ok, _ := unique(d); ok {
-				if notIn(d, m) {
-					ans = append(ans, [2]int{i, d})
+			if d*n == i {
+				if ok, _ := unique(d); ok {
+					if notIn(d, m) {
+						ans = append(ans, [2]int{i, d})
+					}
 				}
 			}
 		}

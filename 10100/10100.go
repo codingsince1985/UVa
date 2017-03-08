@@ -16,7 +16,8 @@ func max(a, b int) int {
 	return b
 }
 
-func lcs(t1, t2 []string) int {
+func lcs(s1, s2 string) int {
+	t1, t2 := strings.Split(s1, " "), strings.Split(s2, " ")
 	l1, l2 := len(t1), len(t2)
 	dp := make([][]int, l1+1)
 	for i := range dp {
@@ -55,20 +56,15 @@ func main() {
 	s.Split(bufio.ScanLines)
 
 	for count := 1; s.Scan(); count++ {
-		s1 := s.Text()
+		s1 := strings.TrimSpace(convertNonLetter(s.Text()))
 		s.Scan()
-		s2 := s.Text()
-
-		s1 = convertNonLetter(s1)
-		s2 = convertNonLetter(s2)
-		s1 = strings.TrimSpace(s1)
-		s2 = strings.TrimSpace(s2)
+		s2 := strings.TrimSpace(convertNonLetter(s.Text()))
 
 		fmt.Fprintf(out, "%2d. ", count)
 		if len(s1) == 0 || len(s2) == 0 {
 			fmt.Fprintln(out, "Blank!")
-			continue
+		} else {
+			fmt.Fprintf(out, "Length of longest match: %d\n", lcs(s1, s2))
 		}
-		fmt.Fprintf(out, "Length of longest match: %d\n", lcs(strings.Split(s1, " "), strings.Split(s2, " ")))
 	}
 }

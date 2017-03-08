@@ -23,12 +23,12 @@ func main() {
 		}
 		if s == "0" {
 			fmt.Fprintln(out, 1)
-			continue
+		} else {
+			n.SetString(s, 10)
+			tmp.Mul(&n, &n)
+			tmp.Sub(&tmp, &n)
+			tmp.Add(&tmp, two)
+			fmt.Fprintln(out, &tmp)
 		}
-		n.SetString(s, 10)
-		tmp.Mul(&n, &n)
-		tmp.Sub(&tmp, &n)
-		tmp.Add(&tmp, two)
-		fmt.Fprintln(out, &tmp)
 	}
 }

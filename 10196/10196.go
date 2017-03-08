@@ -33,15 +33,14 @@ func checkForPieces(king point, board [8][8]byte, pieces []byte, directions [4][
 			if !inBoard(x, y) {
 				break
 			}
-			if board[x][y] == '.' {
-				continue
-			}
-			for _, piece := range pieces {
-				if board[x][y] == piece {
-					return true
+			if board[x][y] != '.' {
+				for _, piece := range pieces {
+					if board[x][y] == piece {
+						return true
+					}
 				}
+				break
 			}
-			break
 		}
 	}
 	return false

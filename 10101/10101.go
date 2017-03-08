@@ -70,16 +70,16 @@ func main() {
 		}
 		if num == "0" {
 			fmt.Fprintf(out, "% 4d: 0\n", kase)
-			continue
-		}
-		nums := split(num)
-		var tokens []string
-		for i, vi := range nums {
-			if i > 0 {
-				tokens[len(tokens)-1] = tokens[len(tokens)-1] + " kuti"
+		} else {
+			nums := split(num)
+			var tokens []string
+			for i, vi := range nums {
+				if i > 0 {
+					tokens[len(tokens)-1] = tokens[len(tokens)-1] + " kuti"
+				}
+				tokens = append(tokens, convert(vi)...)
 			}
-			tokens = append(tokens, convert(vi)...)
+			fmt.Fprintf(out, "% 4d: %s\n", kase, strings.Join(tokens, " "))
 		}
-		fmt.Fprintf(out, "% 4d: %s\n", kase, strings.Join(tokens, " "))
 	}
 }

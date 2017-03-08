@@ -18,13 +18,13 @@ func main() {
 		fmt.Fscanf(in, "%d%d", &s, &d)
 		if s+d < 0 || (s+d)%2 != 0 {
 			fmt.Fprintln(out, "impossible")
-			continue
-		}
-		a := (s + d) / 2
-		if b := s - a; b >= 0 {
-			fmt.Fprintln(out, a, b)
 		} else {
-			fmt.Fprintln(out, "impossible")
+			a := (s + d) / 2
+			if b := s - a; b >= 0 {
+				fmt.Fprintln(out, a, b)
+			} else {
+				fmt.Fprintln(out, "impossible")
+			}
 		}
 	}
 }

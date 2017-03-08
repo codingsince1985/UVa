@@ -44,7 +44,8 @@ func find(grid [][]byte, chars []byte) {
 	}
 }
 
-func toLower(chars []byte) []byte {
+func toLower(word string) []byte {
+	chars := []byte(word)
 	for i := range chars {
 		if chars[i] >= 'A' && chars[i] <= 'Z' {
 			chars[i] = 'a' + chars[i] - 'A'
@@ -66,11 +67,11 @@ func main() {
 		grid := make([][]byte, m)
 		for i := range grid {
 			fmt.Fscanf(in, "%s", &line)
-			grid[i] = toLower([]byte(line))
+			grid[i] = toLower(line)
 		}
 		for fmt.Fscanf(in, "%d", &words); words > 0; words-- {
 			fmt.Fscanf(in, "%s", &word)
-			find(grid, toLower([]byte(word)))
+			find(grid, toLower(word))
 		}
 	}
 }

@@ -53,13 +53,13 @@ func main() {
 				fmt.Fprintln(out, lcs(a, b))
 				a, b = nil, nil
 			}
-			continue
-		}
-		tokens := strings.Split(l, " ")
-		if first {
-			a = append(a, tokens...)
 		} else {
-			b = append(b, tokens...)
+			tokens := strings.Split(l, " ")
+			if first {
+				a = append(a, tokens...)
+			} else {
+				b = append(b, tokens...)
+			}
 		}
 	}
 }

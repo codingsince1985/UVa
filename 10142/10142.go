@@ -49,14 +49,13 @@ func count(candidates []string, votes [][]int) {
 	}
 	max, min := 0, math.MaxInt32
 	for i, v := range total {
-		if candidates[i] == "" {
-			continue
-		}
-		if v > max {
-			max = v
-		}
-		if v < min {
-			min = v
+		if candidates[i] != "" {
+			if v > max {
+				max = v
+			}
+			if v < min {
+				min = v
+			}
 		}
 	}
 	switch {

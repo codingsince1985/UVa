@@ -35,12 +35,12 @@ func main() {
 		if c == '\n' {
 			fmt.Fprintln(out, buf.String())
 			buf.Reset()
-			continue
-		}
-		if nc, ok := dict[c]; !ok {
-			buf.WriteByte(c)
 		} else {
-			buf.WriteByte(nc)
+			if nc, ok := dict[c]; !ok {
+				buf.WriteByte(c)
+			} else {
+				buf.WriteByte(nc)
+			}
 		}
 	}
 }
