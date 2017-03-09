@@ -16,16 +16,12 @@ func solve(out *os.File, s string) {
 	}
 
 	var e [][2]int
-	var p []string
-	count := 0
+	var count int
 	var a, b [2]int
-
-	for _, v := range s {
-		c := string(v)
-		switch c {
-		case "(":
-			p = append(p, c)
-		case ")":
+	for i := range s {
+		switch s[i] {
+		case '(':
+		case ')':
 			b = e[len(e)-1]
 			a = e[len(e)-2]
 			if a[1] != b[0] {
@@ -33,12 +29,10 @@ func solve(out *os.File, s string) {
 				return
 			}
 			count += a[0] * a[1] * b[1]
-
 			e = e[:len(e)-2]
 			e = append(e, [2]int{a[0], b[1]})
-			p = p[:len(p)-1]
 		default:
-			e = append(e, m[string(c)])
+			e = append(e, m[string(s[i])])
 		}
 	}
 	fmt.Fprintln(out, count)

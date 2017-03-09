@@ -10,8 +10,8 @@ import (
 )
 
 func sortWord(word string) string {
-	chars := []byte(strings.ToLower(word))
 	var chs []int
+	chars := []byte(strings.ToLower(word))
 	for _, v := range chars {
 		chs = append(chs, int(v))
 	}

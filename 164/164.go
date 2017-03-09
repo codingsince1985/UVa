@@ -97,10 +97,9 @@ func ed(s1, s2 string) []string {
 func edit(ops []string, s1, s2 string) []string {
 	var ed []string
 	p, p1, p2 := 1, 0, 0
-	var tmp string
 	for i := len(ops) - 1; i >= 0; i-- {
 		op := ops[i]
-		tmp = ""
+		var tmp string
 		switch op {
 		case "M":
 			p++

@@ -58,8 +58,7 @@ func main() {
 				}
 				first = false
 			}
-			tmp := []byte(l)
-			m[count] = tmp
+			m[count] = []byte(l)
 		}
 		fmt.Fprintln(out, solve(m))
 	}

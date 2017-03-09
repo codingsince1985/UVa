@@ -34,7 +34,7 @@ func main() {
 	var n int
 	for fmt.Fscanf(in, "%d\n\n", &n); n > 0; n-- {
 		for {
-			s := ""
+			var s string
 			if fmt.Fscanf(in, "%s\n", &s); len(s) == 0 {
 				break
 			}

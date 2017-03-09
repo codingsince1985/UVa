@@ -43,7 +43,6 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var c1, c2 []byte
 	var count int
 	for s.Scan() {
 		s1 := s.Text()
@@ -52,9 +51,7 @@ func main() {
 		}
 		s.Scan()
 		s2 := s.Text()
-		c1 = []byte(s1)
-		c2 = []byte(s2)
 		count++
-		fmt.Fprintf(out, "Case #%d: you can visit at most %d cities.\n", count, lcs(c1, c2))
+		fmt.Fprintf(out, "Case #%d: you can visit at most %d cities.\n", count, lcs([]byte(s1), []byte(s2)))
 	}
 }

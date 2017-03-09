@@ -49,7 +49,7 @@ func main() {
 	s.Split(bufio.ScanLines)
 
 	for step, rates := range rateMap {
-		total := 0.0
+		var total float64
 		for i, rate := range rates {
 			total += rate * float64(duration[i])
 		}

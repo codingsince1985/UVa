@@ -43,13 +43,10 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var c1, c2 []byte
 	for s.Scan() {
 		s1 := s.Text()
 		s.Scan()
 		s2 := s.Text()
-		c1 = []byte(s1)
-		c2 = []byte(s2)
-		fmt.Fprintln(out, lcs(c1, c2))
+		fmt.Fprintln(out, lcs([]byte(s1), []byte(s2)))
 	}
 }

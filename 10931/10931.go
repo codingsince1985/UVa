@@ -9,7 +9,8 @@ import (
 )
 
 func binary(n int) (string, int) {
-	str, cnt := "", 0
+	var str string
+	var cnt int
 	for n > 0 {
 		if n%2 == 1 {
 			cnt++

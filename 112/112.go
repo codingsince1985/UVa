@@ -86,8 +86,7 @@ func main() {
 			}
 		}
 		fmt.Fscanln(in)
-		line := string(chars)
-		tree := buildTree(line[1 : len(line)-1])
+		tree := buildTree(string(chars[1 : len(chars)-1]))
 		if dfs(sum, &tree, 0) {
 			fmt.Fprintln(out, "yes")
 		} else {

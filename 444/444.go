@@ -10,18 +10,18 @@ import (
 )
 
 func encode(line string) string {
-	mid := ""
+	var mid string
 	for i := range line {
 		mid += strconv.Itoa(int(line[i]))
 	}
-	ret := ""
+	var ret string
 	for i := range mid {
 		ret = string(mid[i]) + ret
 	}
 	return ret
 }
 func decode(line string) string {
-	ret := ""
+	var ret string
 	ascii, base := 0, 1
 	for i := range line {
 		ascii += int(line[i]-'0') * base

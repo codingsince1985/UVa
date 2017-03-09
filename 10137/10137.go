@@ -30,7 +30,7 @@ func main() {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		total := 0.0
+		var total float64
 		lst := make([]float64, n)
 		for i := range lst {
 			fmt.Fscanf(in, "%f", &lst[i])

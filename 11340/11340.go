@@ -27,7 +27,7 @@ func main() {
 			fmt.Sscanf(s.Text(), "%c%d", &c, &t)
 			paid[c] = t
 		}
-		total := 0.0
+		var total float64
 		s.Scan()
 		for l, _ := strconv.Atoi(s.Text()); l > 0 && s.Scan(); l-- {
 			line := s.Text()

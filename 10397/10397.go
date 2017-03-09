@@ -22,7 +22,7 @@ func min(a, b float64) float64 {
 }
 
 func prim(n int, campus [][]float64) float64 {
-	total := 0.0
+	var total float64
 	visited := make(map[int]bool)
 	low := make([]float64, n)
 	for i := range low {

@@ -73,14 +73,13 @@ func main() {
 				match = i
 			}
 		}
-		if match == 0 {
+		switch {
+		case match == 0:
 			fmt.Fprintln(out, "Draw")
-		} else {
-			if match%2 == 0 {
-				fmt.Fprintf(out, "Player 2 wins on move %d\n", match+1)
-			} else {
-				fmt.Fprintf(out, "Player 1 wins on move %d\n", match+1)
-			}
+		case match%2 == 0:
+			fmt.Fprintf(out, "Player 2 wins on move %d\n", match+1)
+		default:
+			fmt.Fprintf(out, "Player 1 wins on move %d\n", match+1)
 		}
 	}
 }
