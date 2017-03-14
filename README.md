@@ -366,6 +366,7 @@ UVa 10258 - [Contest Scoreboard](https://uva.onlinejudge.org/external/102/10258.
 UVa 10260 - [Soundex](https://uva.onlinejudge.org/external/102/10260.pdf)  
 UVa 10267 - [Graphical Editor](https://uva.onlinejudge.org/external/102/10267.pdf)  
 UVa 10276 - [Hanoi Tower Troubles Again!](https://uva.onlinejudge.org/external/102/10276.pdf)  
+UVa 10279 - [Mine Sweeper](https://uva.onlinejudge.org/external/102/10279.pdf)  
 UVa 10281 - [Average Speed](https://uva.onlinejudge.org/external/102/10281.pdf)  
 UVa 10282 - [Babelfish](https://uva.onlinejudge.org/external/102/10282.pdf)  
 UVa 10285 - [Longest Run on a Snowboard](https://uva.onlinejudge.org/external/102/10285.pdf)  
