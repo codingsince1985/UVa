@@ -9,7 +9,9 @@ import (
 
 const max = 31622
 
-var primes = func() []int {
+var primes = sieve()
+
+func sieve() []int {
 	p := make([]bool, max+1)
 	p[0], p[1] = true, true
 	for i := 2; i*i <= max; i++ {
@@ -26,7 +28,7 @@ var primes = func() []int {
 		}
 	}
 	return ps
-}()
+}
 
 func solve(n int) int {
 	if n == 1 {

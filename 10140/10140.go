@@ -10,7 +10,9 @@ import (
 
 const max = 46340 // √(2^31-1)
 
-var primes = func() []bool {
+var primes = sieve()
+
+func sieve() []bool {
 	p := make([]bool, max+1)
 	p[0], p[1] = true, true
 	for i := 2; i*i <= max; i++ {
@@ -21,7 +23,7 @@ var primes = func() []bool {
 		}
 	}
 	return p
-}()
+}
 
 func isPrime(n int) bool {
 	if n <= max {
