@@ -61,7 +61,7 @@ func bfs(matrix [][]bool, fm, to int) int {
 	var queue []node
 	visited[fm] = true
 	queue = append(queue, node{fm, 0})
-	for len(queue) != 0 {
+	for len(queue) > 0 {
 		curr := queue[0]
 		queue = queue[1:]
 		for i, isCoauthor := range matrix[curr.idx] {

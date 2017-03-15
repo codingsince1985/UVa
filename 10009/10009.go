@@ -19,8 +19,7 @@ func bfs(fm, to string) []byte {
 	visited[fm] = true
 	var queue []node
 	queue = append(queue, node{fm, []byte{fm[0]}})
-
-	for len(queue) != 0 {
+	for len(queue) > 0 {
 		curr := queue[0]
 		queue = queue[1:]
 		adjs := links[curr.n]

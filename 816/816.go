@@ -69,11 +69,9 @@ func bfs(fm, to node) []node {
 	visited[fm] = true
 	rfm := realFrom(fm)
 	visited[rfm] = true
-	from := qnode{rfm, []node{fm, rfm}}
-
 	var queue []qnode
-	queue = append(queue, from)
-	for len(queue) != 0 {
+	queue = append(queue, qnode{rfm, []node{fm, rfm}})
+	for len(queue) > 0 {
 		curr := queue[0]
 		queue = queue[1:]
 		adjs := maze[curr.node]

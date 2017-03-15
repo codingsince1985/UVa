@@ -11,7 +11,7 @@ func bfs(adj map[int][]int, n, t int) int {
 	visited := make(map[int]bool)
 	var queue [][2]int
 	queue = append(queue, [2]int{n, t})
-	for len(queue) != 0 {
+	for len(queue) > 0 {
 		curr := queue[0]
 		queue = queue[1:]
 		visited[curr[0]] = true

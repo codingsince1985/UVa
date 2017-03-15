@@ -44,8 +44,7 @@ func bfs(head *node) []string {
 	var ans []string
 	var queue []node
 	queue = append(queue, *head)
-
-	for len(queue) != 0 {
+	for len(queue) > 0 {
 		curr := queue[0]
 		queue = queue[1:]
 		if curr.n == -1 {

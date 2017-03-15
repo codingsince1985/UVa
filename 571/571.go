@@ -23,7 +23,7 @@ func bfs(a, b, n int) []string {
 	var queue []node
 	visited[status{0, 0}] = true
 	queue = append(queue, node{status{0, 0}, nil})
-	for len(queue) != 0 {
+	for len(queue) > 0 {
 		curr := queue[0]
 		queue = queue[1:]
 		if curr.a == n || curr.b == n {

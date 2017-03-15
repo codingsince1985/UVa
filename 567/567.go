@@ -18,8 +18,7 @@ func bfs(n1, n2 int) int {
 	visited := make([]bool, n+1)
 	visited[n1] = true
 	queue = append(queue, node{n1, 0})
-
-	for len(queue) != 0 {
+	for len(queue) > 0 {
 		curr := queue[0]
 		queue = queue[1:]
 		for i := 1; i <= n; i++ {

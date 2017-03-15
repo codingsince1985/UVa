@@ -40,8 +40,7 @@ func bfs(dict map[string][]string, fm, to string) int {
 	var queue []node
 	visited[fm] = true
 	queue = append(queue, node{fm, 0})
-
-	for len(queue) != 0 {
+	for len(queue) > 0 {
 		curr := queue[0]
 		queue = queue[1:]
 		adjs := dict[curr.w]

@@ -17,7 +17,7 @@ func bfs(legs map[string][]string, src, dest string) int {
 	var queue []node
 	visited[src] = true
 	queue = append(queue, node{src, 0})
-	for len(queue) != 0 {
+	for len(queue) > 0 {
 		curr := queue[0]
 		queue = queue[1:]
 		adjs := legs[curr.n]
