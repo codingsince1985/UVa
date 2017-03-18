@@ -10,8 +10,8 @@ import (
 
 func factorial(n int) string {
 	res := big.NewInt(1)
-	for i := 1; i <= n; i++ {
-		res.Mul(res, big.NewInt(int64(i)))
+	for ; n > 1; n-- {
+		res.Mul(res, big.NewInt(int64(n)))
 	}
 	return res.String()
 }

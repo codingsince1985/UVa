@@ -9,9 +9,8 @@ import (
 )
 
 func factorial(n int64) *big.Int {
-	fact := big.NewInt(n)
-	for n > 1 {
-		n--
+	fact := big.NewInt(1)
+	for ; n > 1; n-- {
 		fact.Mul(fact, big.NewInt(n))
 	}
 	return fact
