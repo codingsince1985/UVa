@@ -431,6 +431,7 @@ UVa 10489 - [Boxes of Chocolates](https://uva.onlinejudge.org/external/104/10489
 UVa 10490 - [Mr. Azad and his Son!!!!!](https://uva.onlinejudge.org/external/104/10490.pdf)  
 UVa 10491 - [Cows and Cars](https://uva.onlinejudge.org/external/104/10491.pdf)  
 UVa 10494 - [If We Were a Child Again](https://uva.onlinejudge.org/external/104/10494.pdf)  
+UVa 10496 - [Collecting Beepers](https://uva.onlinejudge.org/external/104/10496.pdf)  
 UVa 10499 - [The Land of Justice](https://uva.onlinejudge.org/external/104/10499.pdf)  
 UVa 10502 - [Counting Rectangles](https://uva.onlinejudge.org/external/105/10502.pdf)  
 UVa 10508 - [Word Morphing](https://uva.onlinejudge.org/external/105/10508.pdf)  
