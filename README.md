@@ -373,6 +373,7 @@ UVa 10276 - [Hanoi Tower Troubles Again!](https://uva.onlinejudge.org/external/1
 UVa 10279 - [Mine Sweeper](https://uva.onlinejudge.org/external/102/10279.pdf)  
 UVa 10281 - [Average Speed](https://uva.onlinejudge.org/external/102/10281.pdf)  
 UVa 10282 - [Babelfish](https://uva.onlinejudge.org/external/102/10282.pdf)  
+UVa 10283 - [The Kissing Circles](https://uva.onlinejudge.org/external/102/10283.pdf)  
 UVa 10285 - [Longest Run on a Snowboard](https://uva.onlinejudge.org/external/102/10285.pdf)  
 UVa 10286 - [Trouble with a Pentagon](https://uva.onlinejudge.org/external/102/10286.pdf)  
 UVa 10293 - [Word Length and Frequency](https://uva.onlinejudge.org/external/102/10293.pdf)  
