@@ -235,6 +235,7 @@ UVa 701 - [The Archeologists' Dilemma](https://uva.onlinejudge.org/external/7/70
 UVa 706 - [LC-Display](https://uva.onlinejudge.org/external/7/706.pdf)  
 UVa 712 - [S-Trees](https://uva.onlinejudge.org/external/7/712.pdf)  
 UVa 713 - [Adding Reversed Numbers](https://uva.onlinejudge.org/external/7/713.pdf)  
+UVa 714 - [Copying Books](https://uva.onlinejudge.org/external/7/714.pdf)  
 UVa 725 - [Division](https://uva.onlinejudge.org/external/7/725.pdf)  
 UVa 727 - [Equation](https://uva.onlinejudge.org/external/7/727.pdf)  
 UVa 729 - [The Hamming Distance Problem](https://uva.onlinejudge.org/external/7/729.pdf)  
