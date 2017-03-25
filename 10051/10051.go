@@ -83,8 +83,7 @@ func solve(c []sides) ([][6][2]int, int, [2]int) {
 }
 
 func output(pre [][6][2]int, mx int, st [2]int) {
-	var res [][2]int
-	res = append(res, st)
+	res := [][2]int{st}
 	for i := 0; i < mx-1; i++ {
 		res = append(res, pre[st[0]][st[1]])
 		st = pre[st[0]][st[1]]

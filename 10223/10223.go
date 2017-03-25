@@ -9,8 +9,7 @@ import (
 
 var catalan = func() []uint64 {
 	var i uint64
-	var c []uint64
-	c = append(c, 1)
+	c := []uint64{1}
 	for i = 0; ; i++ {
 		tmp := c[i] * (4*i + 2) / (i + 2)
 		if tmp > 4294967295 {

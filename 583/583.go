@@ -11,7 +11,6 @@ import (
 
 func factorize(n int) []string {
 	var p []string
-
 	if n < 0 {
 		p = append(p, "-1")
 		n = -n

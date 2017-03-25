@@ -19,8 +19,7 @@ func find(s [][]node) int {
 }
 
 func lis(h []int) [][]node {
-	var s [][]node
-	s = append(s, []node{{h[0], 0}})
+	s := [][]node{[]node{{h[0], 0}}}
 	for i := 1; i < len(h); i++ {
 		if last := s[len(s)-1]; h[i] > last[len(last)-1].num {
 			t := []node{{h[i], i}}

@@ -27,10 +27,8 @@ func binarySearch(n int, l [][]node, s, e int) int {
 }
 
 func lis(l []int) [][]node {
-	var t []node
-	t = append(t, node{l[0], 0})
-	var s [][]node
-	s = append(s, t)
+	t := []node{{l[0], 0}}
+	s := [][]node{t}
 	for i := 1; i < len(l); i++ {
 		if last := s[len(s)-1]; l[i] > last[len(last)-1].num {
 			t = []node{{l[i], i}}

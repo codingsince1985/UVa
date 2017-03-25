@@ -11,10 +11,7 @@ import (
 const max = 101
 
 var p = func() []big.Int {
-	p := make([]big.Int, 2)
-	p[0].SetInt64(1)
-	p[1].SetInt64(1)
-
+	p := []big.Int{*big.NewInt(1), *big.NewInt(1)}
 	var s string
 	for i := 2; ; i++ {
 		var tmp big.Int

@@ -19,8 +19,7 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%d%d", &a, &b); err != nil {
 			break
 		}
-		var lst []int
-		lst = append(lst, a/b)
+		lst := []int{a / b}
 		a %= b
 		for a != 1 {
 			lst = append(lst, b/a)

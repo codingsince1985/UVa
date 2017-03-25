@@ -20,8 +20,7 @@ func isPrime(n int) bool {
 }
 
 func primeList() []int {
-	var primes []int
-	primes = append(primes, 2)
+	primes := []int{2}
 	for i := 3; i < 100000; i += 2 {
 		if isPrime(i) {
 			primes = append(primes, i)

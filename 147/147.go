@@ -23,7 +23,6 @@ func main() {
 		vi := int(v * 100)
 		dp := make([]int, vi+1)
 		dp[0] = 1
-
 		for i := range cs {
 			c := cs[i]
 			for j := c; j <= vi; j++ {

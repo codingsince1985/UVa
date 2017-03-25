@@ -10,8 +10,7 @@ import (
 var (
 	directions = [][2]int{{-1, 1}, {-1, 0}, {0, -1}, {1, -1}, {1, 0}, {0, 1}}
 	rings      = func() []int {
-		var rings []int
-		rings = append(rings, 0)
+		rings := []int{0}
 		i, step := 1, 6
 		for i < 100000 {
 			rings = append(rings, i)

@@ -22,7 +22,6 @@ func main() {
 		}
 		dp := make([]uint64, v+1)
 		dp[0] = 1
-
 		for i := range cs {
 			c := cs[i]
 			for j := c; j <= v; j++ {

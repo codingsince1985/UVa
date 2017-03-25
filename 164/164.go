@@ -15,8 +15,7 @@ func min(a, b int) int {
 }
 
 func trace(op [][]int) []string {
-	var ed []string
-	ed = append(ed, "E")
+	ed := []string{"E"}
 	l1, l2 := len(op)-1, len(op[0])-1
 	for l1 != 0 && l2 != 0 {
 		cur := op[l1][l2]

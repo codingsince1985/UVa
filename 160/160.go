@@ -19,8 +19,7 @@ func isPrime(n int) bool {
 }
 
 func primes(n int) []int {
-	var ps []int
-	ps = append(ps, 2)
+	ps := []int{2}
 	for i := 3; i <= n; i += 2 {
 		if isPrime(i) {
 			ps = append(ps, i)

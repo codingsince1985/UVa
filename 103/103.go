@@ -53,8 +53,7 @@ func lis(boxes [][]int) []int {
 		}
 	}
 
-	var ret []int
-	ret = append(ret, maxIdx)
+	ret := []int{maxIdx}
 	for pre[maxIdx] != -1 {
 		maxIdx = pre[maxIdx]
 		ret = append([]int{maxIdx}, ret...)

@@ -9,10 +9,7 @@ import (
 )
 
 var f = func() []big.Int {
-	f := make([]big.Int, 2)
-	f[0].SetInt64(0)
-	f[1].SetInt64(1)
-
+	f := []big.Int{*big.NewInt(0), *big.NewInt(1)}
 	var s string
 	for i := 2; ; i++ {
 		var tmp big.Int
