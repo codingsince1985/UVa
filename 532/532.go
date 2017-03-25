@@ -37,9 +37,8 @@ func inRange(nl, nr, nc int) bool {
 }
 
 func bfs(s, e point) int {
-	var queue []node
+	queue := []node{{s, 0}}
 	visited[s.l][s.r][s.c] = true
-	queue = append(queue, node{s, 0})
 	for len(queue) > 0 {
 		curr := queue[0]
 		queue = queue[1:]

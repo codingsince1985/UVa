@@ -42,8 +42,7 @@ func buildTree(nodes [][2]string) *node {
 
 func bfs(head *node) []string {
 	var ans []string
-	var queue []node
-	queue = append(queue, *head)
+	queue := []node{*head}
 	for len(queue) > 0 {
 		curr := queue[0]
 		queue = queue[1:]

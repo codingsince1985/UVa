@@ -24,9 +24,8 @@ func bfs(from, to cell) int {
 		visited[i] = make([]bool, 9)
 	}
 
-	var queue []cell
+	queue := []cell{from}
 	visited[from.x][from.y] = true
-	queue = append(queue, from)
 	for len(queue) > 0 {
 		curr := queue[0]
 		if curr.x == to.x && curr.y == to.y {

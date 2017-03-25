@@ -13,10 +13,9 @@ type node struct {
 }
 
 func bfs(links map[string][]string, n1, n2 string) [][2]string {
-	var queue []node
+	queue := []node{{n1, nil}}
 	visited := make(map[string]bool)
 	visited[n1] = true
-	queue = append(queue, node{n1, nil})
 
 	for len(queue) > 0 {
 		curr := queue[0]

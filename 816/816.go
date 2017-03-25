@@ -69,8 +69,7 @@ func bfs(fm, to node) []node {
 	visited[fm] = true
 	rfm := realFrom(fm)
 	visited[rfm] = true
-	var queue []qnode
-	queue = append(queue, qnode{rfm, []node{fm, rfm}})
+	queue := []qnode{{rfm, []node{fm, rfm}}}
 	for len(queue) > 0 {
 		curr := queue[0]
 		queue = queue[1:]

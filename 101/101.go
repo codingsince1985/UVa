@@ -15,8 +15,7 @@ var (
 func initBlocks(n int) {
 	blocks = make([][]int, n)
 	for i := range blocks {
-		blocks[i] = make([]int, 1)
-		blocks[i][0] = i
+		blocks[i] = []int{i}
 	}
 }
 

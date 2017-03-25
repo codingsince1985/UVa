@@ -20,9 +20,7 @@ func isPrime(n int) bool {
 }
 
 func getPrimes() []int {
-	primes := make([]int, 2)
-	primes[0] = 1
-	primes[1] = 2
+	primes := []int{1, 2}
 	for i := 3; i < 1000; i += 2 {
 		if isPrime(i) {
 			primes = append(primes, i)

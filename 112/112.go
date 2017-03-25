@@ -71,8 +71,7 @@ func main() {
 			break
 		}
 		count++
-		chars := make([]byte, 1)
-		chars[0] = '('
+		chars := []byte{'('}
 		for count > 0 {
 			fmt.Fscanf(in, "%c", &c)
 			if c >= '0' && c <= '9' || c == '(' || c == ')' {
