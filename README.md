@@ -464,6 +464,7 @@ UVa 10673 - [Play with Floor and Ceil](https://uva.onlinejudge.org/external/106/
 UVa 10678 - [The Grazing Cow](https://uva.onlinejudge.org/external/106/10678.pdf)  
 UVa 10679 - [I Love Strings!!](https://uva.onlinejudge.org/external/106/10679.pdf)  
 UVa 10684 - [The jackpot](https://uva.onlinejudge.org/external/106/10684.pdf)  
+UVa 10693 - [Traffic Volume](https://uva.onlinejudge.org/external/106/10693.pdf)  
 UVa 10696 - [f91](https://uva.onlinejudge.org/external/106/10696.pdf)  
 UVa 10699 - [Count the factors](https://uva.onlinejudge.org/external/106/10699.pdf)  
 UVa 10700 - [Camel trading](https://uva.onlinejudge.org/external/107/10700.pdf)  
