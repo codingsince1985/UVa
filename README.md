@@ -481,6 +481,7 @@ UVa 10812 - [Beat the Spread!](https://uva.onlinejudge.org/external/108/10812.pd
 UVa 10815 - [Andy's First Dictionary](https://uva.onlinejudge.org/external/108/10815.pdf)  
 UVa 10852 - [Less Prime](https://uva.onlinejudge.org/external/108/10852.pdf)  
 UVa 10878 - [Decode the tape](https://uva.onlinejudge.org/external/108/10878.pdf)  
+UVa 10879 - [Code Refactoring](https://uva.onlinejudge.org/external/108/10879.pdf)  
 UVa 10903 - [Rock-Paper-Scissors Tournament](https://uva.onlinejudge.org/external/109/10903.pdf)  
 UVa 10905 - [Children's Game](https://uva.onlinejudge.org/external/109/10905.pdf)  
 UVa 10921 - [Find the Telephone](https://uva.onlinejudge.org/external/109/10921.pdf)  
