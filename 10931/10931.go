@@ -6,19 +6,12 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"strings"
 )
 
-func binary(n int) (string, int) {
-	var str string
-	var cnt int
-	for n > 0 {
-		if n%2 == 1 {
-			cnt++
-		}
-		str = strconv.Itoa(n%2) + str
-		n /= 2
-	}
-	return str, cnt
+func binary(n int64) (string, int) {
+	bin := strconv.FormatInt(n, 2)
+	return bin, strings.Count(bin, "1")
 }
 
 func main() {
@@ -27,7 +20,7 @@ func main() {
 	out, _ := os.Create("10931.out")
 	defer out.Close()
 
-	var n int
+	var n int64
 	for {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break

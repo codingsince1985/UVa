@@ -5,22 +5,15 @@ package main
 import (
 	"fmt"
 	"os"
+	"strconv"
+	"strings"
 )
 
-func binary(n int) int {
-	cnt := 0
-	for n > 0 {
-		if n%2 == 1 {
-			cnt++
-		}
-		n /= 2
-	}
-	return cnt
-}
+func onesInBinary(n int64) int { return strings.Count(strconv.FormatInt(n, 2), "1") }
 
-func hexaDec(n int) int {
-	base := 1
-	ret := 0
+func hexaDec(n int64) int64 {
+	var base int64 = 1
+	var ret int64 = 0
 	for n > 0 {
 		ret += (n % 10) * base
 		n /= 10
@@ -35,9 +28,9 @@ func main() {
 	out, _ := os.Create("10019.out")
 	defer out.Close()
 
-	var n, dec int
+	var n, dec int64
 	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%d", &dec)
-		fmt.Fprintln(out, binary(dec), binary(hexaDec(dec)))
+		fmt.Fprintln(out, onesInBinary(dec), onesInBinary(hexaDec(dec)))
 	}
 }
