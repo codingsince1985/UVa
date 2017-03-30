@@ -298,6 +298,7 @@ UVa 10055 - [Hashmat the Brave Warrior](https://uva.onlinejudge.org/external/100
 UVa 10056 - [What is the Probability ?](https://uva.onlinejudge.org/external/100/10056.pdf)  
 UVa 10057 - [A mid-summer night's dream.](https://uva.onlinejudge.org/external/100/10057.pdf)  
 UVa 10062 - [Tell me the frequencies!](https://uva.onlinejudge.org/external/100/10062.pdf)  
+UVa 10063 - [Knuth's Permutation](https://uva.onlinejudge.org/external/100/10063.pdf)  
 UVa 10066 - [The Twin Towers](https://uva.onlinejudge.org/external/100/10066.pdf)  
 UVa 10067 - [Playing with Wheels](https://uva.onlinejudge.org/external/100/10067.pdf)  
 UVa 10069 - [Distinct Subsequences](https://uva.onlinejudge.org/external/100/10069.pdf)  
