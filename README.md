@@ -335,6 +335,7 @@ UVa 10131 - [Is Bigger Smarter?](https://uva.onlinejudge.org/external/101/10131.
 UVa 10137 - [The Trip](https://uva.onlinejudge.org/external/101/10137.pdf)  
 UVa 10139 - [Factovisors](https://uva.onlinejudge.org/external/101/10139.pdf)  
 UVa 10140 - [Prime Distance](https://uva.onlinejudge.org/external/101/10140.pdf)  
+UVa 10141 - [Request for Proposal](https://uva.onlinejudge.org/external/101/10141.pdf)  
 UVa 10142 - [Australian Voting](https://uva.onlinejudge.org/external/101/10142.pdf)  
 UVa 10152 - [ShellSort](https://uva.onlinejudge.org/external/101/10152.pdf)  
 UVa 10154 - [Weights and Measures](https://uva.onlinejudge.org/external/101/10154.pdf)  

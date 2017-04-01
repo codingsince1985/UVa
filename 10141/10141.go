@@ -1,0 +1,54 @@
+// UVa 10141 - Request for Proposal
+
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"math"
+	"os"
+)
+
+func main() {
+	in, _ := os.Open("10141.in")
+	defer in.Close()
+	out, _ := os.Create("10141.out")
+	defer out.Close()
+
+	s := bufio.NewScanner(in)
+	s.Split(bufio.ScanLines)
+
+	var n, p, kase int
+	var line string
+	for s.Scan() {
+		line = s.Text()
+		if fmt.Sscanf(line, "%d%d", &n, &p); n == 0 && p == 0 {
+			break
+		}
+		for i := 0; i < n && s.Scan(); i++ {
+			line = s.Text()
+		}
+
+		lowest := math.MaxFloat64
+		var name, choice string
+		var max, met int
+		var price float64
+		for i := 0; i < p && s.Scan(); i++ {
+			name = s.Text()
+			s.Scan()
+			line = s.Text()
+			fmt.Sscanf(line, "%f%d", &price, &met)
+			for j := 0; j < met && s.Scan(); j++ {
+				line = s.Text()
+			}
+			if met > max || met == max && price < lowest {
+				choice, max, lowest = name, met, price
+			}
+		}
+		kase++
+		if kase > 1 {
+			fmt.Fprintln(out)
+		}
+		fmt.Fprintf(out, "RFP #%d\n%s\n", kase, choice)
+	}
+}
