@@ -1,0 +1,81 @@
+// UVa 213 - Message Decoding
+
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+var (
+	out *os.File
+	s   *bufio.Scanner
+)
+
+func binary(n int64) string { return strconv.FormatInt(n, 2) }
+
+func buildKey(header string) map[string]byte {
+	keyMap := make(map[string]byte)
+	var key int64
+	var digit uint = 1
+	for i := range header {
+		if key == (2<<(digit-1) - 1) {
+			key = 0
+			digit++
+		}
+		bin := binary(key)
+		bin = strings.Repeat("0", int(digit)-len(bin)) + bin
+		keyMap[bin] = header[i]
+		key++
+	}
+	return keyMap
+}
+
+func getLength(l string) int {
+	var n int
+	fmt.Sscanf(l, "%b", &n)
+	return n
+}
+
+func solve(header string) {
+	keyMap := buildKey(header)
+	var l int
+	var line, code string
+	s.Scan()
+	for line = s.Text(); line != "000"; {
+		l, line = getLength(line[:3]), line[3:]
+		for {
+			code, line = line[:l], line[l:]
+			if len(line) < l {
+				s.Scan()
+				line += s.Text()
+			}
+			if strings.Count(code, "1") == l {
+				break
+			}
+			fmt.Fprintf(out, "%c", keyMap[code])
+		}
+	}
+	fmt.Fprintln(out)
+}
+
+func main() {
+	in, _ := os.Open("213.in")
+	defer in.Close()
+	out, _ = os.Create("213.out")
+	defer out.Close()
+
+	s = bufio.NewScanner(in)
+	s.Split(bufio.ScanLines)
+
+	var line string
+	for s.Scan() {
+		if line = s.Text(); line == "" {
+			break
+		}
+		solve(line)
+	}
+}
