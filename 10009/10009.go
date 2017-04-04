@@ -58,10 +58,7 @@ func main() {
 		}
 		for ; n > 0; n-- {
 			fmt.Fscanf(in, "%s%s", &fm, &to)
-			for _, v := range bfs(fm, to) {
-				fmt.Fprintf(out, "%c", v)
-			}
-			fmt.Fprintln(out)
+			fmt.Fprintln(out, string(bfs(fm, to)))
 		}
 		if kase > 1 {
 			fmt.Fprintln(out)

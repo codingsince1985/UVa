@@ -15,8 +15,6 @@ var (
 	s   *bufio.Scanner
 )
 
-func binary(n int64) string { return strconv.FormatInt(n, 2) }
-
 func buildKey(header string) map[string]byte {
 	keyMap := make(map[string]byte)
 	var key int64
@@ -26,9 +24,9 @@ func buildKey(header string) map[string]byte {
 			key = 0
 			digit++
 		}
-		bin := binary(key)
-		bin = strings.Repeat("0", int(digit)-len(bin)) + bin
-		keyMap[bin] = header[i]
+		binary := strconv.FormatInt(key, 2)
+		binary = strings.Repeat("0", int(digit)-len(binary)) + binary
+		keyMap[binary] = header[i]
 		key++
 	}
 	return keyMap

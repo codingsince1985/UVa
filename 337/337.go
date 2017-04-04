@@ -99,10 +99,7 @@ func output(kase int) {
 	fmt.Fprintf(out, "Case %d\n+----------+\n", kase)
 	for _, row := range term.text {
 		fmt.Fprint(out, "|")
-		for _, c := range row {
-			fmt.Fprintf(out, "%c", c)
-		}
-		fmt.Fprintln(out, "|")
+		fmt.Fprintln(out, string(row[:])+"|")
 	}
 	fmt.Fprintln(out, "+----------+")
 }
