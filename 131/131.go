@@ -145,7 +145,7 @@ func dfs(level int, used []bool) {
 }
 
 func solve(line string) {
-	token := strings.Split(line, " ")
+	token := strings.Fields(line)
 	hand = buildCards(token[:cardNumber])
 	deck = buildCards(token[cardNumber:])
 	highest = 0

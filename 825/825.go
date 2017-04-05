@@ -48,7 +48,7 @@ func main() {
 		for i := range grid {
 			grid[i] = make([]bool, n)
 			s.Scan()
-			tokens := strings.Split(s.Text(), " ")
+			tokens := strings.Fields(s.Text())
 			for _, token := range tokens[1:] {
 				t, _ := strconv.Atoi(token)
 				grid[i][t-1] = true

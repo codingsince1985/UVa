@@ -28,7 +28,7 @@ func main() {
 	s.Split(bufio.ScanLines)
 	for s.Scan() {
 		var newLine []string
-		for _, v := range strings.Split(s.Text(), " ") {
+		for _, v := range strings.Fields(s.Text()) {
 			newLine = append(newLine, reverse(v))
 		}
 		fmt.Fprintln(out, strings.Join(newLine, " "))

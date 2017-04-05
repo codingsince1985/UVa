@@ -17,7 +17,7 @@ func max(a, b int) int {
 }
 
 func lcs(s1, s2 string) int {
-	t1, t2 := strings.Split(s1, " "), strings.Split(s2, " ")
+	t1, t2 := strings.Fields(s1), strings.Fields(s2)
 	l1, l2 := len(t1), len(t2)
 	dp := make([][]int, l1+1)
 	for i := range dp {

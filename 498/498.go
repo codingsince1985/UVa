@@ -29,13 +29,13 @@ func main() {
 	s.Split(bufio.ScanLines)
 
 	for s.Scan() {
-		cs := strings.Split(s.Text(), " ")
+		cs := strings.Fields(s.Text())
 		coefficients := make([]int, len(cs))
 		for i, v := range cs {
 			coefficients[i], _ = strconv.Atoi(v)
 		}
 		s.Scan()
-		xs := strings.Split(s.Text(), " ")
+		xs := strings.Fields(s.Text())
 		for i, v := range xs {
 			x, _ := strconv.Atoi(v)
 			fmt.Fprint(out, calc(coefficients, x))

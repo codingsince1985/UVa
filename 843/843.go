@@ -113,7 +113,7 @@ func backtracking(level int, m1, m2 map[byte]byte) map[byte]byte {
 
 func solve(line string) {
 	sortWords(dictionary)
-	words = strings.Split(line, " ")
+	words = strings.Fields(line)
 	sortWords(words)
 	m := backtracking(0, make(map[byte]byte), make(map[byte]byte))
 	for i := range line {

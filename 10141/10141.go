@@ -19,14 +19,12 @@ func main() {
 	s.Split(bufio.ScanLines)
 
 	var n, p, kase int
-	var line string
 	for s.Scan() {
-		line = s.Text()
-		if fmt.Sscanf(line, "%d%d", &n, &p); n == 0 && p == 0 {
+		if fmt.Sscanf(s.Text(), "%d%d", &n, &p); n == 0 && p == 0 {
 			break
 		}
 		for i := 0; i < n && s.Scan(); i++ {
-			line = s.Text()
+			s.Text()
 		}
 
 		lowest := math.MaxFloat64
@@ -36,10 +34,9 @@ func main() {
 		for i := 0; i < p && s.Scan(); i++ {
 			name = s.Text()
 			s.Scan()
-			line = s.Text()
-			fmt.Sscanf(line, "%f%d", &price, &met)
+			fmt.Sscanf(s.Text(), "%f%d", &price, &met)
 			for j := 0; j < met && s.Scan(); j++ {
-				line = s.Text()
+				s.Text()
 			}
 			if met > max || met == max && price < lowest {
 				choice, max, lowest = name, met, price

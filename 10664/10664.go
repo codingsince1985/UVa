@@ -42,7 +42,7 @@ func main() {
 
 	s.Scan()
 	for m, _ := strconv.Atoi(s.Text()); m > 0 && s.Scan(); m-- {
-		if solve(strings.Split(s.Text(), " ")) {
+		if solve(strings.Fields(s.Text())) {
 			fmt.Fprintln(out, "YES")
 		} else {
 			fmt.Fprintln(out, "NO")

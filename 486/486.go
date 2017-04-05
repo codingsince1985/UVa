@@ -18,7 +18,7 @@ var (
 )
 
 func calculate(line string) int {
-	tokens := strings.Split(strings.Trim(line, " "), " ")
+	tokens := strings.Fields(strings.Trim(line, " "))
 	var number int
 	for _, token := range tokens {
 		if token == "hundred" {

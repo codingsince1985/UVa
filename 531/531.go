@@ -54,7 +54,7 @@ func main() {
 				a, b = nil, nil
 			}
 		} else {
-			tokens := strings.Split(l, " ")
+			tokens := strings.Fields(l)
 			if first {
 				a = append(a, tokens...)
 			} else {

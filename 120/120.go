@@ -66,6 +66,6 @@ func main() {
 	for s.Scan() {
 		line := s.Text()
 		fmt.Fprintln(out, line)
-		fmt.Fprintln(out, strings.Join(solve(strings.Split(line, " ")), " "))
+		fmt.Fprintln(out, strings.Join(solve(strings.Fields(line)), " "))
 	}
 }
