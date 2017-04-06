@@ -15,19 +15,14 @@ func isInt(s string) bool {
 	return ok == nil
 }
 
-func signNotOnLeft(s string) bool { return strings.Index(s, "+") > 0 || strings.Index(s, "-") > 0 }
-
 func checkLeft(s string, hasRight bool) bool {
-	if signNotOnLeft(s) {
-		return false
-	}
 	if idx := strings.Index(s, "."); idx >= 0 {
 		return !(idx == len(s)-1 || !isInt(s[0:idx]) || !isInt(s[idx+1:]))
 	}
 	return hasRight
 }
 
-func checkRight(s string) bool { return !(strings.Contains(s, ".") || signNotOnLeft(s) || !isInt(s)) }
+func checkRight(s string) bool { return !(strings.Contains(s, ".") || !isInt(s)) }
 
 func check(line string) bool {
 	line = strings.ToUpper(line)

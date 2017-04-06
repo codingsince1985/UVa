@@ -57,7 +57,6 @@ func main() {
 		solution := getMultiLine(n)
 		s.Scan()
 		n, _ := strconv.Atoi(s.Text())
-		output := getMultiLine(n)
-		fmt.Fprintf(out, "Run #%d: %s\n", kase, compare(solution, output))
+		fmt.Fprintf(out, "Run #%d: %s\n", kase, compare(solution, getMultiLine(n)))
 	}
 }

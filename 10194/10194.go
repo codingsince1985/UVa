@@ -44,7 +44,7 @@ func cmp(t1, t2 team) bool {
 	if t1.games != t2.games {
 		return t1.games < t2.games
 	}
-	return strings.Compare(t1.name, t2.name) == -1
+	return t1.name < t2.name
 }
 
 func values(m map[string]team) []team {
