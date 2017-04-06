@@ -416,6 +416,7 @@ UVa 10361 - [Automatic Poetry](https://uva.onlinejudge.org/external/103/10361.pd
 UVa 10363 - [Tic Tac Toe](https://uva.onlinejudge.org/external/103/10363.pdf)  
 UVa 10365 - [Blocks](https://uva.onlinejudge.org/external/103/10365.pdf)  
 UVa 10370 - [Above Average](https://uva.onlinejudge.org/external/103/10370.pdf)  
+UVa 10377 - [Maze Traversal](https://uva.onlinejudge.org/external/103/10377.pdf)  
 UVa 10394 - [Twin Primes](https://uva.onlinejudge.org/external/103/10394.pdf)  
 UVa 10397 - [Connect the Campus](https://uva.onlinejudge.org/external/103/10397.pdf)  
 UVa 10400 - [Game Show Math](https://uva.onlinejudge.org/external/104/10400.pdf)  
