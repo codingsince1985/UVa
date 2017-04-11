@@ -480,6 +480,7 @@ UVa 10699 - [Count the factors](https://uva.onlinejudge.org/external/106/10699.p
 UVa 10700 - [Camel trading](https://uva.onlinejudge.org/external/107/10700.pdf)  
 UVa 10701 - [Pre, in and post](https://uva.onlinejudge.org/external/107/10701.pdf)  
 UVa 10703 - [Free spots](https://uva.onlinejudge.org/external/107/10703.pdf)  
+UVa 10706 - [Number Sequence](https://uva.onlinejudge.org/external/107/10706.pdf)  
 UVa 10714 - [Ants](https://uva.onlinejudge.org/external/107/10714.pdf)  
 UVa 10763 - [Foreign Exchange](https://uva.onlinejudge.org/external/107/10763.pdf)  
 UVa 10783 - [Odd Sum](https://uva.onlinejudge.org/external/107/10783.pdf)  
