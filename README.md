@@ -464,6 +464,7 @@ UVa 10573 - [Geometry Paradox](https://uva.onlinejudge.org/external/105/10573.pd
 UVa 10579 - [Fibonacci Numbers](https://uva.onlinejudge.org/external/105/10579.pdf)  
 UVa 10583 - [Ubiquitous Religions](https://uva.onlinejudge.org/external/105/10583.pdf)  
 UVa 10591 - [Happy Number](https://uva.onlinejudge.org/external/105/10591.pdf)  
+UVa 10600 - [ACM Contest and Blackout](https://uva.onlinejudge.org/external/106/10600.pdf)  
 UVa 10608 - [Friends](https://uva.onlinejudge.org/external/106/10608.pdf)  
 UVa 10611 - [The Playboy Chimp](https://uva.onlinejudge.org/external/106/10611.pdf)  
 UVa 10622 - [Perfect P-th Powers](https://uva.onlinejudge.org/external/106/10622.pdf)  
