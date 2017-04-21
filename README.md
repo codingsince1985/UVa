@@ -101,6 +101,7 @@ UVa 337 - [Interpreting Control Sequences](https://uva.onlinejudge.org/external/
 UVa 340 - [Master-Mind Hints](https://uva.onlinejudge.org/external/3/340.pdf)  
 UVa 343 - [What Base Is This?](https://uva.onlinejudge.org/external/3/343.pdf)  
 UVa 344 - [Roman Digititis](https://uva.onlinejudge.org/external/3/344.pdf)  
+UVa 347 - [Run](https://uva.onlinejudge.org/external/3/347.pdf)  
 UVa 348 - [Optimal Array Multiplication Sequence](https://uva.onlinejudge.org/external/3/348.pdf)  
 UVa 350 - [Pseudo-Random Numbers](https://uva.onlinejudge.org/external/3/350.pdf)  
 UVa 352 - [The Seasonal War](https://uva.onlinejudge.org/external/3/352.pdf)  
