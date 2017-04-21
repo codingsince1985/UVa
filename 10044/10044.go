@@ -57,9 +57,8 @@ func bfs(matrix [][]bool, fm, to int) int {
 	if fm == to {
 		return 0
 	}
-	visited := make(map[int]bool)
+	visited := map[int]bool{fm: true}
 	queue := []node{{fm, 0}}
-	visited[fm] = true
 	for len(queue) > 0 {
 		curr := queue[0]
 		queue = queue[1:]

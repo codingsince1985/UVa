@@ -14,8 +14,7 @@ func div(n, d int) (string, int) {
 	w := n / d
 	ans := strconv.Itoa(w) + "."
 	r := n % d
-	m := make(map[int]int)
-	m[r] = count
+	m := map[int]int{r: count}
 	for {
 		count++
 		if r *= 10; r < d {

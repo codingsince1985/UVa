@@ -17,8 +17,7 @@ func isPrime(n int) bool {
 }
 
 var primes = func() map[int]bool {
-	primes := make(map[int]bool)
-	primes[2] = true
+	primes := map[int]bool{2: true}
 	for i := 3; i < 32768; i += 2 {
 		if isPrime(i) {
 			primes[i] = true

@@ -23,12 +23,12 @@ func min(a, b float64) float64 {
 
 func prim(n int, campus [][]float64) float64 {
 	var total float64
-	visited := make(map[int]bool)
+	visited := map[int]bool{0: true}
 	low := make([]float64, n)
 	for i := range low {
 		low[i] = math.MaxFloat64
 	}
-	visited[0], low[0] = true, 0
+	low[0] = 0
 	for i := 0; i < n; i++ {
 		var minP int
 		minD := math.MaxFloat64

@@ -13,9 +13,8 @@ type node struct {
 }
 
 func bfs(legs map[string][]string, src, dest string) int {
-	visited := make(map[string]bool)
+	visited := map[string]bool{src: true}
 	queue := []node{{src, 0}}
-	visited[src] = true
 	for len(queue) > 0 {
 		curr := queue[0]
 		queue = queue[1:]

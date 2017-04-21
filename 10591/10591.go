@@ -8,8 +8,7 @@ import (
 )
 
 func happy(num int) bool {
-	visited := make(map[int]bool)
-	visited[num] = true
+	visited := map[int]bool{num: true}
 	for {
 		sum := 0
 		for num > 0 {

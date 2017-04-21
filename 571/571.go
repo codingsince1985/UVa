@@ -19,9 +19,8 @@ type (
 func buildStatus(a, b int) status { return status{a, b} }
 
 func bfs(a, b, n int) []string {
-	visited := make(map[status]bool)
+	visited := map[status]bool{status{0, 0}: true}
 	queue := []node{{status{0, 0}, nil}}
-	visited[status{0, 0}] = true
 	for len(queue) > 0 {
 		curr := queue[0]
 		queue = queue[1:]
