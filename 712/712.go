@@ -9,8 +9,9 @@ import (
 
 func solve(path string) int {
 	pointer := 0
-	for _, child := range []byte(path) {
-		if pointer *= 2; child == '1' {
+	for i := range path {
+		pointer *= 2
+		if path[i] == '1' {
 			pointer++
 		}
 	}

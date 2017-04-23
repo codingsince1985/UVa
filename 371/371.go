@@ -7,9 +7,8 @@ import (
 	"os"
 )
 
-var cache = make(map[int]int)
-
 func calculate(i int) int {
+	cache := make(map[int]int)
 	if _, ok := cache[i]; !ok {
 		if i%2 == 0 {
 			if i/2 == 1 { // so that f(1)=3 as requested in problem

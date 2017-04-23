@@ -16,7 +16,7 @@ const (
 
 var (
 	out        *os.File
-	accountMap = make(map[string]string)
+	accountMap map[string]string
 )
 
 type transaction struct {

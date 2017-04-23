@@ -12,12 +12,12 @@ func match(a, b byte) bool { return a == ')' && b == '(' || a == ']' && b == '['
 
 func valid(line string) bool {
 	var stack []byte
-	for _, v := range []byte(line) {
-		switch v {
+	for i := range line {
+		switch line[i] {
 		case '(', '[':
-			stack = append(stack, v)
+			stack = append(stack, line[i])
 		case ')', ']':
-			if len(stack) > 0 && match(v, stack[len(stack)-1]) {
+			if len(stack) > 0 && match(line[i], stack[len(stack)-1]) {
 				stack = stack[:len(stack)-1]
 			} else {
 				return false

@@ -11,11 +11,8 @@ var (
 	directions = [][2]int{{-1, 1}, {-1, 0}, {0, -1}, {1, -1}, {1, 0}, {0, 1}}
 	rings      = func() []int {
 		rings := []int{0}
-		i, step := 1, 6
-		for i < 100000 {
+		for i, step := 1, 6; i < 100000; i, step = i+step, step+6 {
 			rings = append(rings, i)
-			i += step
-			step += 6
 		}
 		return rings
 	}()
@@ -41,14 +38,21 @@ func reMap(ring, offset int) (int, int) {
 	if ring == 1 {
 		return 0, 0
 	}
-	x, y, side := ring-2, 1, ring-1
-	sides := []int{side - 1, side, side, side, side, side}
-	for i := 0; i < len(sides) && offset > 0; i++ {
-		direction := directions[i]
-		for j := 0; j < sides[i] && offset > 0; j++ {
-			x += direction[0]
-			y += direction[1]
-			offset--
+	x, y := ring-2, 1
+	if offset > 0 {
+	here:
+		for i, direction := range directions {
+			side := ring - 1
+			if i == 0 {
+				side--
+			}
+			for ; side > 0; side-- {
+				x += direction[0]
+				y += direction[1]
+				if offset--; offset == 0 {
+					break here
+				}
+			}
 		}
 	}
 	return x, y

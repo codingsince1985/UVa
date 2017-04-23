@@ -39,7 +39,6 @@ func dfs(level, curr, length int) bool {
 				return false
 			}
 		}
-
 	}
 	return false
 }

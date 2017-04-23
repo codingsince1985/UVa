@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 	"strings"
 )
 
@@ -21,13 +20,13 @@ func nextLine(s *bufio.Scanner) (string, bool) {
 
 func outputLine(line string) {
 	cnt := 0
-	for _, v := range []byte(line) {
+	for i := range line {
+		v := line[i]
 		if v == 'b' {
 			v = ' '
 		}
 		if v >= '0' && v <= '9' {
-			tmp, _ := strconv.Atoi(string(v))
-			cnt += tmp
+			cnt += int(v - '0')
 		} else {
 			for ; cnt > 0; cnt-- {
 				fmt.Fprintf(out, "%c", v)

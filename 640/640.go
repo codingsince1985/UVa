@@ -23,7 +23,6 @@ func main() {
 	defer out.Close()
 
 	notSelfNumbers := make(map[int]bool)
-
 	for i := 1; i <= max; i++ {
 		sum := digitadition(i)
 		if sum <= max && !notSelfNumbers[sum] {
