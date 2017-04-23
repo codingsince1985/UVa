@@ -20,7 +20,7 @@ var (
 		for idx, i := 0, 1; i < max; i++ {
 			idx += int(math.Log10(float64(i))) + 1
 			cache[i] = idx + cache[i-1]
-			str = append(str, []byte(strconv.Itoa(i))...)
+			str = append(str, strconv.Itoa(i)...)
 		}
 		return cache, str
 	}()
