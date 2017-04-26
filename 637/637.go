@@ -12,7 +12,7 @@ var (
 	pages = [2]string{"front", "back "}
 )
 
-func print(n int) {
+func solve(n int) {
 	sheet := n / 4
 	if n%4 != 0 {
 		sheet++
@@ -59,6 +59,6 @@ func main() {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		print(n)
+		solve(n)
 	}
 }

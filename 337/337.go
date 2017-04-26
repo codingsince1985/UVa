@@ -34,7 +34,7 @@ func initialise() {
 	clear()
 }
 
-func print(c byte) {
+func printByte(c byte) {
 	if !term.overwrite {
 		for i := 9; i > term.column; i-- {
 			term.text[term.row][i] = term.text[term.row][i-1]
@@ -50,7 +50,7 @@ func display(input string) {
 	initialise()
 	for i := 0; i < len(input); i++ {
 		if input[i] != '^' {
-			print(input[i])
+			printByte(input[i])
 			continue
 		}
 		i++
@@ -90,7 +90,7 @@ func display(input string) {
 				term.row--
 			}
 		case input[i] == '^':
-			print('^')
+			printByte('^')
 		}
 	}
 }
