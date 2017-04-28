@@ -467,6 +467,7 @@ UVa 10519 - [!! Really Strange !!](https://uva.onlinejudge.org/external/105/1051
 UVa 10523 - [Very Easy !!!](https://uva.onlinejudge.org/external/105/10523.pdf)  
 UVa 10530 - [Guessing Game](https://uva.onlinejudge.org/external/105/10530.pdf)  
 UVa 10533 - [Digit Primes](https://uva.onlinejudge.org/external/105/10533.pdf)  
+UVa 10534 - [Wavio Sequence](https://uva.onlinejudge.org/external/105/10534.pdf)  
 UVa 10539 - [Almost Prime Numbers](https://uva.onlinejudge.org/external/105/10539.pdf)  
 UVa 10550 - [Combination Lock](https://uva.onlinejudge.org/external/105/10550.pdf)  
 UVa 10551 - [Basic Remains](https://uva.onlinejudge.org/external/105/10551.pdf)  
