@@ -543,6 +543,7 @@ UVa 11219 - [How old are you?](https://uva.onlinejudge.org/external/112/11219.pd
 UVa 11332 - [Summing Digits](https://uva.onlinejudge.org/external/113/11332.pdf)  
 UVa 11340 - [Newspaper](https://uva.onlinejudge.org/external/113/11340.pdf)  
 UVa 11364 - [Parking](https://uva.onlinejudge.org/external/113/11364.pdf)  
+UVa 11369 - [Shopaholic](https://uva.onlinejudge.org/external/113/11369.pdf)  
 UVa 11388 - [GCD LCM](https://uva.onlinejudge.org/external/113/11388.pdf)  
 UVa 11417 - [GCD](https://uva.onlinejudge.org/external/114/11417.pdf)  
 UVa 11428 - [Cubes](https://uva.onlinejudge.org/external/114/11428.pdf)  
