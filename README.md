@@ -286,6 +286,7 @@ UVa 10007 - [Count the Trees](https://uva.onlinejudge.org/external/100/10007.pdf
 UVa 10008 - [What's Cryptanalysis?](https://uva.onlinejudge.org/external/100/10008.pdf)  
 UVa 10009 - [All Roads Lead Where?](https://uva.onlinejudge.org/external/100/10009.pdf)  
 UVa 10010 - [Where's Waldorf?](https://uva.onlinejudge.org/external/100/10010.pdf)  
+UVa 10012 - [How Big Is It?](https://uva.onlinejudge.org/external/100/10012.pdf)  
 UVa 10013 - [Super long sums](https://uva.onlinejudge.org/external/100/10013.pdf)  
 UVa 10014 - [Simple calculations](https://uva.onlinejudge.org/external/100/10014.pdf)  
 UVa 10015 - [Joseph's Cousin](https://uva.onlinejudge.org/external/100/10015.pdf)  
