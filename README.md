@@ -517,6 +517,7 @@ UVa 10878 - [Decode the tape](https://uva.onlinejudge.org/external/108/10878.pdf
 UVa 10879 - [Code Refactoring](https://uva.onlinejudge.org/external/108/10879.pdf)  
 UVa 10903 - [Rock-Paper-Scissors Tournament](https://uva.onlinejudge.org/external/109/10903.pdf)  
 UVa 10905 - [Children's Game](https://uva.onlinejudge.org/external/109/10905.pdf)  
+UVa 10918 - [Tri Tiling](https://uva.onlinejudge.org/external/109/10918.pdf)  
 UVa 10921 - [Find the Telephone](https://uva.onlinejudge.org/external/109/10921.pdf)  
 UVa 10922 - [2 the 9s](https://uva.onlinejudge.org/external/109/10922.pdf)  
 UVa 10924 - [Prime Words](https://uva.onlinejudge.org/external/109/10924.pdf)  
