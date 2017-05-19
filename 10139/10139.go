@@ -56,11 +56,7 @@ func primeFactorizeFactorial(n int) map[int]int {
 
 func contains(f1, f2 map[int]int) bool {
 	for k, v1 := range f1 {
-		if v2, ok := f2[k]; ok {
-			if v2 < v1 {
-				return false
-			}
-		} else {
+		if v2, ok := f2[k]; !ok || v2 < v1 {
 			return false
 		}
 	}
