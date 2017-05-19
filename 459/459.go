@@ -43,8 +43,7 @@ func main() {
 				break
 			}
 			a, b := line[0]-'A', line[1]-'A'
-			fa, fb := unionFind(int(a), f), unionFind(int(b), f)
-			if fa != fb {
+			if fa, fb := unionFind(int(a), f), unionFind(int(b), f); fa != fb {
 				num--
 				f[fa] = fb
 			}

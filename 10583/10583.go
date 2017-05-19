@@ -31,8 +31,7 @@ func main() {
 		}
 		for ; m > 0; m-- {
 			fmt.Fscanf(in, "%d%d", &s1, &s2)
-			f1, f2 := unionFind(s1-1, f), unionFind(s2-1, f)
-			if f1 != f2 {
+			if f1, f2 := unionFind(s1-1, f), unionFind(s2-1, f); f1 != f2 {
 				f[f1] = f2
 			}
 		}

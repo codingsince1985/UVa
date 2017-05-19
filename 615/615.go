@@ -41,8 +41,7 @@ func isTree(edges []edge) bool {
 		f[k] = k
 	}
 	for _, edge := range edges {
-		r1, r2 := unionFind(edge.n1, f), unionFind(edge.n2, f)
-		if r1 != r2 {
+		if r1, r2 := unionFind(edge.n1, f), unionFind(edge.n2, f); r1 != r2 {
 			f[r1] = r2
 		}
 	}

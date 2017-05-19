@@ -44,8 +44,7 @@ func main() {
 				break
 			}
 			fmt.Sscanf(line, "%c%d%d", &command, &a, &b)
-			fa, fb := unionFind(a, f), unionFind(b, f)
-			if command == 'c' {
+			if fa, fb := unionFind(a, f), unionFind(b, f); command == 'c' {
 				if fa != fb {
 					f[fa] = fb
 				}
