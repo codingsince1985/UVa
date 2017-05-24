@@ -557,6 +557,7 @@ UVa 11172 - [Relational Operator](https://uva.onlinejudge.org/external/111/11172
 UVa 11185 - [Ternary](https://uva.onlinejudge.org/external/111/11185.pdf)  
 UVa 11192 - [Group Reverse](https://uva.onlinejudge.org/external/111/11192.pdf)  
 UVa 11219 - [How old are you?](https://uva.onlinejudge.org/external/112/11219.pdf)  
+UVa 11292 - [Dragon of Loowater](https://uva.onlinejudge.org/external/112/11292.pdf)  
 UVa 11332 - [Summing Digits](https://uva.onlinejudge.org/external/113/11332.pdf)  
 UVa 11340 - [Newspaper](https://uva.onlinejudge.org/external/113/11340.pdf)  
 UVa 11364 - [Parking](https://uva.onlinejudge.org/external/113/11364.pdf)  
