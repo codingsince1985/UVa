@@ -44,7 +44,7 @@ func main() {
 		if w := solve(w1, w2); w == nil {
 			fmt.Fprintln(out, "No Overlap")
 		} else {
-			fmt.Fprintf(out, "%d %d %d %d\n", (*w).p1.x, (*w).p1.y, (*w).p2.x, (*w).p2.y)
+			fmt.Fprintf(out, "%d %d %d %d\n", w.p1.x, w.p1.y, w.p2.x, w.p2.y)
 		}
 		if kase > 1 {
 			fmt.Fprintln(out)

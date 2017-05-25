@@ -15,9 +15,9 @@ type (
 func connect(l1, l2 *line) {
 	switch {
 	case l1.s == l2.s:
-		(*l1).s, (*l1).e = (*l1).e, (*l1).s
+		l1.s, l1.e = l1.e, l1.s
 	case l1.e == l2.e:
-		(*l2).s, (*l2).e = (*l2).e, (*l2).s
+		l2.s, l2.e = l2.e, l2.s
 	case l1.s == l2.e:
 		*l1, *l2 = *l2, *l1
 	}

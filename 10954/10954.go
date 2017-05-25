@@ -21,8 +21,8 @@ func (pq priorityQueue) Swap(i, j int) { pq[i], pq[j] = pq[j], pq[i] }
 func (pq *priorityQueue) Push(x interface{}) { *pq = append(*pq, x.(*item)) }
 
 func (pq *priorityQueue) Pop() interface{} {
-	item := (*pq)[(*pq).Len()-1]
-	*pq = (*pq)[0 : (*pq).Len()-1]
+	item := (*pq)[pq.Len()-1]
+	*pq = (*pq)[0 : pq.Len()-1]
 	return item
 }
 

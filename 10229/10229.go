@@ -45,10 +45,10 @@ func calc(n, m int64) {
 }
 
 func setMatrix(i, j, k, l int64, m *[2][2]big.Int) {
-	(*m)[0][0].SetInt64(i)
-	(*m)[0][1].SetInt64(j)
-	(*m)[1][0].SetInt64(k)
-	(*m)[1][1].SetInt64(l)
+	m[0][0].SetInt64(i)
+	m[0][1].SetInt64(j)
+	m[1][0].SetInt64(k)
+	m[1][1].SetInt64(l)
 }
 
 func initialize() {

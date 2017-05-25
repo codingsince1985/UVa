@@ -52,7 +52,7 @@ func solve() {
 			fmt.Fscanf(in, "%d", &element)
 			enqueue(element)
 		case "DEQUEUE":
-			fmt.Fprintln(out, (*head).element)
+			fmt.Fprintln(out, head.element)
 			head = head.next
 		}
 	}
