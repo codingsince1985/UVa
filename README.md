@@ -602,6 +602,7 @@ UVa 11942 - [Lumberjack Sequencing](https://uva.onlinejudge.org/external/119/119
 UVa 12015 - [Google is Feeling Lucky](https://uva.onlinejudge.org/external/120/12015.pdf)  
 UVa 12289 - [One-Two-Three](https://uva.onlinejudge.org/external/122/12289.pdf)  
 UVa 12347 - [Binary Search Tree](https://uva.onlinejudge.org/external/123/12347.pdf)  
+UVa 12372 - [Packing for Holiday](https://uva.onlinejudge.org/external/123/12372.pdf)  
 
 License
 ==
