@@ -312,6 +312,7 @@ UVa 10020 - [Minimal coverage](https://uva.onlinejudge.org/external/100/10020.pd
 UVa 10023 - [Square root](https://uva.onlinejudge.org/external/100/10023.pdf)  
 UVa 10025 - [The ? 1 ? 2 ? ... ? n = k problem](https://uva.onlinejudge.org/external/100/10025.pdf)  
 UVa 10026 - [Shoemaker's Problem](https://uva.onlinejudge.org/external/100/10026.pdf)  
+UVa 10029 - [Edit Step Ladders](https://uva.onlinejudge.org/external/100/10029.pdf)  
 UVa 10032 - [Tug of War](https://uva.onlinejudge.org/external/100/10032.pdf)  
 UVa 10033 - [Interpreter](https://uva.onlinejudge.org/external/100/10033.pdf)  
 UVa 10034 - [Freckles](https://uva.onlinejudge.org/external/100/10034.pdf)  
