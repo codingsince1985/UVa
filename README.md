@@ -413,6 +413,7 @@ UVa 10229 - [Modular Fibonacci](https://uva.onlinejudge.org/external/102/10229.p
 UVa 10235 - [Simply Emirp](https://uva.onlinejudge.org/external/102/10235.pdf)  
 UVa 10242 - [Fourth Point !!](https://uva.onlinejudge.org/external/102/10242.pdf)  
 UVa 10245 - [The Closest Pair Problem](https://uva.onlinejudge.org/external/102/10245.pdf)  
+UVa 10249 - [The Grand Dinner](https://uva.onlinejudge.org/external/102/10249.pdf)  
 UVa 10252 - [Common Permutation](https://uva.onlinejudge.org/external/102/10252.pdf)  
 UVa 10258 - [Contest Scoreboard](https://uva.onlinejudge.org/external/102/10258.pdf)  
 UVa 10260 - [Soundex](https://uva.onlinejudge.org/external/102/10260.pdf)  
