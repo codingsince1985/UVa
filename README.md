@@ -472,6 +472,7 @@ UVa 10408 - [Farey sequences](https://uva.onlinejudge.org/external/104/10408.pdf
 UVa 10409 - [Die Game](https://uva.onlinejudge.org/external/104/10409.pdf)  
 UVa 10415 - [Eb Alto Saxophone Player](https://uva.onlinejudge.org/external/104/10415.pdf)  
 UVa 10420 - [List of Conquests](https://uva.onlinejudge.org/external/104/10420.pdf)  
+UVa 10422 - [Knights in FEN](https://uva.onlinejudge.org/external/104/10422.pdf)  
 UVa 10424 - [Love Calculator](https://uva.onlinejudge.org/external/104/10424.pdf)  
 UVa 10427 - [Naughty Sleepy Boys](https://uva.onlinejudge.org/external/104/10427.pdf)  
 UVa 10432 - [Polygon Inside A Circle](https://uva.onlinejudge.org/external/104/10432.pdf)  
