@@ -444,6 +444,7 @@ UVa 10311 - [Goldbach and Euler](https://uva.onlinejudge.org/external/103/10311.
 UVa 10315 - [Poker Hands](https://uva.onlinejudge.org/external/103/10315.pdf)  
 UVa 10323 - [Factorial! You Must be Kidding!!!](https://uva.onlinejudge.org/external/103/10323.pdf)  
 UVa 10324 - [Zeros and Ones](https://uva.onlinejudge.org/external/103/10324.pdf)  
+UVa 10326 - [The Polynomial Equation](https://uva.onlinejudge.org/external/103/10326.pdf)  
 UVa 10327 - [Flip Sort](https://uva.onlinejudge.org/external/103/10327.pdf)  
 UVa 10334 - [Ray Through Glasses](https://uva.onlinejudge.org/external/103/10334.pdf)  
 UVa 10336 - [Rank the Languages](https://uva.onlinejudge.org/external/103/10336.pdf)  
