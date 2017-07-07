@@ -579,6 +579,7 @@ UVa 10976 - [Fractions Again?!](https://uva.onlinejudge.org/external/109/10976.p
 UVa 10986 - [Sending email](https://uva.onlinejudge.org/external/109/10986.pdf)  
 UVa 10994 - [Simple Addition](https://uva.onlinejudge.org/external/109/10994.pdf)  
 UVa 11000 - [Bee](https://uva.onlinejudge.org/external/110/11000.pdf)  
+UVa 11005 - [Cheapest Base](https://uva.onlinejudge.org/external/110/11005.pdf)  
 UVa 11044 - [Searching for Nessy](https://uva.onlinejudge.org/external/110/11044.pdf)  
 UVa 11057 - [Exact Sum](https://uva.onlinejudge.org/external/110/11057.pdf)  
 UVa 11059 - [Maximum Product](https://uva.onlinejudge.org/external/110/11059.pdf)  
