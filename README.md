@@ -621,6 +621,7 @@ UVa 11547 - [Automatic Answer](https://uva.onlinejudge.org/external/115/11547.pd
 UVa 11559 - [Event Planning](https://uva.onlinejudge.org/external/115/11559.pdf)  
 UVa 11577 - [Letter Frequency](https://uva.onlinejudge.org/external/115/11577.pdf)  
 UVa 11608 - [No Problem](https://uva.onlinejudge.org/external/116/11608.pdf)  
+UVa 11614 - [Etruscan Warriors Never Play Chess](https://uva.onlinejudge.org/external/116/11614.pdf)  
 UVa 11631 - [Dark roads](https://uva.onlinejudge.org/external/116/11631.pdf)  
 UVa 11636 - [Hello World!](https://uva.onlinejudge.org/external/116/11636.pdf)  
 UVa 11650 - [Mirror Clock](https://uva.onlinejudge.org/external/116/11650.pdf)  
