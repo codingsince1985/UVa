@@ -561,6 +561,7 @@ UVa 10800 - [Not That Kind of Graph](https://uva.onlinejudge.org/external/108/10
 UVa 10803 - [Thunder Mountain](https://uva.onlinejudge.org/external/108/10803.pdf)  
 UVa 10810 - [Ultra-QuickSort](https://uva.onlinejudge.org/external/108/10810.pdf)  
 UVa 10812 - [Beat the Spread!](https://uva.onlinejudge.org/external/108/10812.pdf)  
+UVa 10813 - [Traditional BINGO](https://uva.onlinejudge.org/external/108/10813.pdf)  
 UVa 10815 - [Andy's First Dictionary](https://uva.onlinejudge.org/external/108/10815.pdf)  
 UVa 10852 - [Less Prime](https://uva.onlinejudge.org/external/108/10852.pdf)  
 UVa 10878 - [Decode the tape](https://uva.onlinejudge.org/external/108/10878.pdf)  
