@@ -578,6 +578,7 @@ UVa 10921 - [Find the Telephone](https://uva.onlinejudge.org/external/109/10921.
 UVa 10922 - [2 the 9s](https://uva.onlinejudge.org/external/109/10922.pdf)  
 UVa 10924 - [Prime Words](https://uva.onlinejudge.org/external/109/10924.pdf)  
 UVa 10929 - [You can say 11](https://uva.onlinejudge.org/external/109/10929.pdf)  
+UVa 10930 - [A-Sequence](https://uva.onlinejudge.org/external/109/10930.pdf)  
 UVa 10931 - [Parity](https://uva.onlinejudge.org/external/109/10931.pdf)  
 UVa 10935 - [Throwing cards away I](https://uva.onlinejudge.org/external/109/10935.pdf)  
 UVa 10940 - [Throwing cards away II](https://uva.onlinejudge.org/external/109/10940.pdf)  
