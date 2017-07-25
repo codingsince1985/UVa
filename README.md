@@ -535,6 +535,7 @@ UVa 10622 - [Perfect P-th Powers](https://uva.onlinejudge.org/external/106/10622
 UVa 10633 - [Rare Easy Problem](https://uva.onlinejudge.org/external/106/10633.pdf)  
 UVa 10642 - [Can You Solve It?](https://uva.onlinejudge.org/external/106/10642.pdf)  
 UVa 10651 - [Pebble Solitaire](https://uva.onlinejudge.org/external/106/10651.pdf)  
+UVa 10653 - [Bombs! NO they are Mines!!](https://uva.onlinejudge.org/external/106/10653.pdf)  
 UVa 10656 - [Maximum Sum (II)](https://uva.onlinejudge.org/external/106/10656.pdf)  
 UVa 10664 - [Luggage](https://uva.onlinejudge.org/external/106/10664.pdf)  
 UVa 10673 - [Play with Floor and Ceil](https://uva.onlinejudge.org/external/106/10673.pdf)  
