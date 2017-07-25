@@ -13,7 +13,7 @@ type (
 	point     struct{ x, y float64 }
 	rectangle struct{ p1, p2 point }
 	circle    struct {
-		p      point
+		point
 		radius float64
 	}
 	shape interface {
@@ -26,7 +26,7 @@ func (r rectangle) contains(p point) bool {
 }
 
 func (c circle) contains(p point) bool {
-	return (p.x-c.p.x)*(p.x-c.p.x)+(p.y-c.p.y)*(p.y-c.p.y) < c.radius*c.radius
+	return (p.x-c.x)*(p.x-c.x)+(p.y-c.y)*(p.y-c.y) < c.radius*c.radius
 }
 
 func testIn(count int, p point, shapes []shape) {

@@ -27,7 +27,7 @@ func play(b ball) int {
 	for b.lifetime > 1 {
 		b.lifetime--
 		direction := directionMap[b.direction]
-		p := point{b.point.x + direction[0], b.point.y + direction[1]}
+		p := point{b.x + direction[0], b.y + direction[1]}
 		if p.x == 1 || p.y == 1 || p.x == m || p.y == n {
 			b.lifetime -= costWall
 			b.direction = (b.direction + 3) % 4
@@ -61,7 +61,7 @@ func main() {
 		bumperMap[pt] = bp
 	}
 	for {
-		if _, err := fmt.Fscanf(in, "%d%d%d%d", &b.point.x, &b.point.y, &b.direction, &b.lifetime); err != nil {
+		if _, err := fmt.Fscanf(in, "%d%d%d%d", &b.x, &b.y, &b.direction, &b.lifetime); err != nil {
 			break
 		}
 		points := play(b)
