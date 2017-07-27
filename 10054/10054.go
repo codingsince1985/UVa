@@ -13,7 +13,7 @@ var (
 	degree [51]int
 )
 
-func initialise() {
+func initialize() {
 	for i := range matrix {
 		for j := range matrix[i] {
 			matrix[i][j] = 0
@@ -53,7 +53,7 @@ func main() {
 
 	var t, n, l, r, kase int
 	for fmt.Fscanf(in, "%d", &t); t > 0; t, kase = t-1, kase+1 {
-		initialise()
+		initialize()
 		for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 			fmt.Fscanf(in, "%d%d", &l, &r)
 			matrix[l][r]++

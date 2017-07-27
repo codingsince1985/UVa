@@ -28,7 +28,7 @@ func clear() {
 	}
 }
 
-func initialise() {
+func initialize() {
 	var text [10][10]byte
 	term = terminal{text, true, 0, 0}
 	clear()
@@ -47,7 +47,7 @@ func printByte(c byte) {
 }
 
 func display(input string) {
-	initialise()
+	initialize()
 	for i := 0; i < len(input); i++ {
 		if input[i] != '^' {
 			printByte(input[i])
