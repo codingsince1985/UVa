@@ -19,7 +19,7 @@ func solve(n, from, to int) {
 	}
 	tmp := 3 - from - to
 	if len(bin) >= n+1 && bin[len(bin)-n-1] == '1' {
-		pegs[from] -= (n + 1)
+		pegs[from] -= n + 1
 		pegs[tmp] += n
 		pegs[to]++
 		solve(n-1, tmp, to)

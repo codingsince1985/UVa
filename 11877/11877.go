@@ -12,7 +12,7 @@ func solve(empty int) int {
 	for empty >= 3 {
 		toChange := empty / 3
 		total += toChange
-		empty -= (toChange * 3)
+		empty -= toChange * 3
 		empty += toChange
 	}
 	if empty == 2 {

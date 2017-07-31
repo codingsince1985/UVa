@@ -20,7 +20,7 @@ func solve(total int, weights []int) int {
 	for i := range weights {
 		for j := total; j >= 0; j-- {
 			if dp[j] != 0 {
-				dp[j+weights[i]] |= (dp[j] << 1)
+				dp[j+weights[i]] |= dp[j] << 1
 			}
 		}
 	}

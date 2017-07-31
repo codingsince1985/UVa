@@ -39,7 +39,7 @@ func numberOfDivisors(f map[int]int) int {
 	p := 1
 	if f != nil {
 		for _, value := range f {
-			p *= (value + 1)
+			p *= value + 1
 		}
 	}
 	return p
@@ -53,12 +53,12 @@ func main() {
 
 	var n, L, U int
 	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
-		var num, max, new int
+		var num, max, divisors int
 		fmt.Fscanf(in, "%d%d", &L, &U)
 		for j := L; j <= U; j++ {
 			factors := factorize(j)
-			if new = numberOfDivisors(factors); new > max {
-				max = new
+			if divisors = numberOfDivisors(factors); divisors > max {
+				max = divisors
 				num = j
 			}
 		}

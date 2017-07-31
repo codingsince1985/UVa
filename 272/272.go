@@ -16,18 +16,18 @@ func main() {
 
 	var c byte
 	var buf bytes.Buffer
-	var close bool
+	var closed bool
 	for {
 		if _, err := fmt.Fscanf(in, "%c", &c); err != nil {
 			break
 		}
 		if c == '"' {
-			if close {
+			if closed {
 				buf.WriteString("''")
 			} else {
 				buf.WriteString("``")
 			}
-			close = !close
+			closed = !closed
 		} else {
 			buf.WriteByte(c)
 		}

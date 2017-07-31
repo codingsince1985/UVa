@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	I, O, A [2][2]big.Int
+	i, o, a [2][2]big.Int
 	two     = big.NewInt(2)
 	out     *os.File
 )
@@ -33,7 +33,7 @@ func multiply(a, b [2][2]big.Int, m int64) [2][2]big.Int {
 }
 
 func calc(n, m int64) {
-	x, y := I, A
+	x, y := i, a
 	for n != 0 {
 		if n&1 == 1 {
 			x = multiply(x, y, m)
@@ -52,9 +52,9 @@ func setMatrix(i, j, k, l int64, m *[2][2]big.Int) {
 }
 
 func initialize() {
-	setMatrix(1, 0, 0, 1, &I)
-	setMatrix(0, 0, 0, 0, &O)
-	setMatrix(1, 1, 1, 0, &A)
+	setMatrix(1, 0, 0, 1, &i)
+	setMatrix(0, 0, 0, 0, &o)
+	setMatrix(1, 1, 1, 0, &a)
 }
 
 func main() {

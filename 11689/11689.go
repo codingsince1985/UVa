@@ -11,10 +11,10 @@ func solve(e, f, c int) int {
 	var total int
 	bottles := e + f
 	for bottles >= c {
-		new := bottles / c
-		total += new
+		newBottles := bottles / c
+		total += newBottles
 		bottles %= c
-		bottles += new
+		bottles += newBottles
 	}
 	return total
 }

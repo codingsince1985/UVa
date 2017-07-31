@@ -17,7 +17,7 @@ func unionFind(x int, f []int) int {
 	return f[x]
 }
 
-func solve(roads []road, m, n int) int {
+func solve(roads []road, n int) int {
 	sort.Slice(roads, func(i, j int) bool { return roads[i].length < roads[j].length })
 	f := make([]int, n)
 	for i := range f {
@@ -50,6 +50,6 @@ func main() {
 			fmt.Fscanf(in, "%d%d%d", &roads[i].c1, &roads[i].c2, &roads[i].length)
 			total += roads[i].length
 		}
-		fmt.Fprintln(out, total-solve(roads, m, n))
+		fmt.Fprintln(out, total-solve(roads, n))
 	}
 }

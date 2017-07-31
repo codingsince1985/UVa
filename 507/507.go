@@ -35,7 +35,7 @@ func maxsub(s []int) (int, int) {
 func main() {
 	in, _ := os.Open("507.in")
 	defer in.Close()
-	out, _ := os.Create(("507.out"))
+	out, _ := os.Create("507.out")
 	defer out.Close()
 
 	var b, r int

@@ -13,7 +13,7 @@ func solve(s int, p, c []int) {
 	for i := range p {
 		if s >= c[i] {
 			fmt.Fprintln(out, "No problem! :D")
-			s += (p[i] - c[i])
+			s += p[i] - c[i]
 		} else {
 			fmt.Fprintln(out, "No problem. :(")
 			s += p[i]

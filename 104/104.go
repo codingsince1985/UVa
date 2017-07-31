@@ -27,9 +27,9 @@ func floydWarshall(matrix [][][]node) {
 		for k := range matrix {
 			for i := range matrix {
 				for j := range matrix {
-					new := matrix[i][k][s-1].v * matrix[k][j][0].v
-					if new > matrix[i][j][s].v {
-						matrix[i][j][s] = node{new, append(matrix[i][k][s-1].p, k)}
+					newV := matrix[i][k][s-1].v * matrix[k][j][0].v
+					if newV > matrix[i][j][s].v {
+						matrix[i][j][s] = node{newV, append(matrix[i][k][s-1].p, k)}
 					}
 				}
 			}

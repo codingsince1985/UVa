@@ -16,7 +16,7 @@ var cityMap = make(map[string]point)
 
 func solve(p1, p2 point) float64 {
 	dlat, dlong := p2.lat-p1.lat, p2.long-p1.long
-	a := math.Pow((math.Sin(dlat/2)), 2) + math.Cos(p1.lat)*math.Cos(p2.lat)*math.Pow(math.Sin(dlong/2), 2)
+	a := math.Pow(math.Sin(dlat/2), 2) + math.Cos(p1.lat)*math.Cos(p2.lat)*math.Pow(math.Sin(dlong/2), 2)
 	return radius * 2 * math.Atan2(math.Sqrt(a), math.Sqrt(1-a))
 }
 
