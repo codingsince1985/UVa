@@ -17,7 +17,8 @@ func min(a, b int) int {
 	return b
 }
 
-func edmondsKarp(s, t int, matrix [][]int) (bw int) {
+func edmondsKarp(s, t int, matrix [][]int) int {
+	var sum int
 	parent := make([]int, n+1)
 	flow := make([][]int, n+1)
 	for i := range flow {
@@ -45,9 +46,9 @@ func edmondsKarp(s, t int, matrix [][]int) (bw int) {
 			flow[parent[curr]][curr] += capacity[t]
 			flow[curr][parent[curr]] -= capacity[t]
 		}
-		bw += capacity[t]
+		sum += capacity[t]
 	}
-	return bw
+	return sum
 }
 
 func main() {
