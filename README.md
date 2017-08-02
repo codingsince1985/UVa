@@ -459,6 +459,7 @@ UVa 10323 - [Factorial! You Must be Kidding!!!](https://uva.onlinejudge.org/exte
 UVa 10324 - [Zeros and Ones](https://uva.onlinejudge.org/external/103/10324.pdf)  
 UVa 10326 - [The Polynomial Equation](https://uva.onlinejudge.org/external/103/10326.pdf)  
 UVa 10327 - [Flip Sort](https://uva.onlinejudge.org/external/103/10327.pdf)  
+UVa 10330 - [Power Transmission](https://uva.onlinejudge.org/external/103/10330.pdf)  
 UVa 10334 - [Ray Through Glasses](https://uva.onlinejudge.org/external/103/10334.pdf)  
 UVa 10336 - [Rank the Languages](https://uva.onlinejudge.org/external/103/10336.pdf)  
 UVa 10338 - [Mischievous Children](https://uva.onlinejudge.org/external/103/10338.pdf)  
