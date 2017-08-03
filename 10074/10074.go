@@ -15,22 +15,23 @@ func verticalSum(land [][]cell) {
 			if land[i][j].tree == 1 {
 				land[i][j].up = 0
 			} else {
-				land[i][j].up = 1
-				if i > 0 {
-					land[i][j].up += land[i-1][j].up
+				if i == 0 {
+					land[i][j].up = 1
+				} else {
+					land[i][j].up = land[i-1][j].up + 1
 				}
 			}
 		}
 	}
 }
 
-func solve(land [][]cell) int {
+func solve(n int, land [][]cell) int {
 	verticalSum(land)
 	var maxArea int
 	for i := range land {
 		for j := range land[i] {
 			sum := land[i][j].up
-			for k := j + 1; k < len(land[i]) && land[i][k].up >= land[i][j].up; k++ {
+			for k := j + 1; k < n && land[i][k].up >= land[i][j].up; k++ {
 				sum += land[i][j].up
 			}
 			for k := j - 1; k >= 0 && land[i][k].up >= land[i][j].up; k-- {
@@ -62,6 +63,6 @@ func main() {
 				fmt.Fscanf(in, "%d", &land[i][j].tree)
 			}
 		}
-		fmt.Fprintln(out, solve(land))
+		fmt.Fprintln(out, solve(n, land))
 	}
 }
