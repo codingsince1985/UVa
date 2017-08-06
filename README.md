@@ -544,6 +544,7 @@ UVa 10651 - [Pebble Solitaire](https://uva.onlinejudge.org/external/106/10651.pd
 UVa 10653 - [Bombs! NO they are Mines!!](https://uva.onlinejudge.org/external/106/10653.pdf)  
 UVa 10656 - [Maximum Sum (II)](https://uva.onlinejudge.org/external/106/10656.pdf)  
 UVa 10664 - [Luggage](https://uva.onlinejudge.org/external/106/10664.pdf)  
+UVa 10667 - [Largest Block](https://uva.onlinejudge.org/external/106/10667.pdf)  
 UVa 10673 - [Play with Floor and Ceil](https://uva.onlinejudge.org/external/106/10673.pdf)  
 UVa 10678 - [The Grazing Cow](https://uva.onlinejudge.org/external/106/10678.pdf)  
 UVa 10679 - [I Love Strings!!](https://uva.onlinejudge.org/external/106/10679.pdf)  
