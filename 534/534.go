@@ -19,8 +19,7 @@ func min(a, b float64) float64 {
 
 func max(a, b float64) float64 { return a + b - min(a, b) }
 
-func floydWarshall(stones []stone) float64 {
-	n := len(stones)
+func floydWarshall(n int, stones []stone) float64 {
 	minMax := make([][]float64, n)
 	for i := range minMax {
 		minMax[i] = make([]float64, n)
@@ -28,9 +27,9 @@ func floydWarshall(stones []stone) float64 {
 			minMax[i][j] = math.Sqrt((stones[i].x-stones[j].x)*(stones[i].x-stones[j].x) + (stones[i].y-stones[j].y)*(stones[i].y-stones[j].y))
 		}
 	}
-	for k := 0; k < n; k++ {
-		for i := 0; i < n; i++ {
-			for j := 0; j < n; j++ {
+	for k := range stones {
+		for i := range stones {
+			for j := range stones {
 				minMax[i][j] = min(minMax[i][j], max(minMax[i][k], minMax[k][j]))
 			}
 		}
@@ -55,6 +54,6 @@ func main() {
 		}
 		fmt.Fscanln(in)
 		fmt.Fprintf(out, "Scenario #%d\n", kase)
-		fmt.Fprintf(out, "Frog Distance = %.3f\n\n", floydWarshall(stones))
+		fmt.Fprintf(out, "Frog Distance = %.3f\n\n", floydWarshall(n, stones))
 	}
 }

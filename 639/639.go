@@ -40,8 +40,8 @@ func dfs(num int) {
 	if num > max {
 		max = num
 	}
-	for i := 0; i < n; i++ {
-		for j := 0; j < n; j++ {
+	for i := range grid {
+		for j := range grid[i] {
 			if grid[i][j] == '.' && ok(i, j) {
 				grid[i][j] = '0'
 				dfs(num + 1)

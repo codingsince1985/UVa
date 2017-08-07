@@ -54,10 +54,9 @@ func initialize(links [][2]int) [][]int {
 
 func floydWarshall(links [][2]int) float64 {
 	distance := initialize(links)
-	n := len(distance)
-	for k := 0; k < n; k++ {
-		for i := 0; i < n; i++ {
-			for j := 0; j < n; j++ {
+	for k := range distance {
+		for i := range distance {
+			for j := range distance {
 				if i != j && distance[i][k] != math.MaxInt32 && distance[k][j] != math.MaxInt32 &&
 					distance[i][j] > distance[i][k]+distance[k][j] {
 					distance[i][j] = distance[i][k] + distance[k][j]
@@ -66,6 +65,7 @@ func floydWarshall(links [][2]int) float64 {
 		}
 	}
 	total := sum(distance)
+	n := len(distance)
 	return total / float64(n*(n-1))
 }
 

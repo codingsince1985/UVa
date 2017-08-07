@@ -9,12 +9,10 @@ import (
 	"strconv"
 )
 
-var n int
-
 func floydWarshall(matrix [][]int) {
-	for k := 0; k < n; k++ {
-		for i := 0; i < n; i++ {
-			for j := 0; j < n; j++ {
+	for k := range matrix {
+		for i := range matrix {
+			for j := range matrix {
 				if matrix[i][k]+matrix[k][j] < matrix[i][j] {
 					matrix[i][j] = matrix[i][k] + matrix[k][j]
 				}
@@ -29,6 +27,7 @@ func main() {
 	out, _ := os.Create("423.out")
 	defer out.Close()
 
+	var n int
 	fmt.Fscanf(in, "%d", &n)
 	matrix := make([][]int, n)
 	for i := range matrix {

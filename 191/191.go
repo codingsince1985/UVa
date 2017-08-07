@@ -34,14 +34,11 @@ func intersect(l1, l2 line) bool {
 	a3 := area(l1.p1, l2)
 	a4 := area(l1.p2, l2)
 
-	if a1*a2 < 0 && a3*a4 < 0 ||
+	return a1*a2 < 0 && a3*a4 < 0 ||
 		a1 == 0 && cross(l2.p1, l1) ||
 		a2 == 0 && cross(l2.p2, l1) ||
 		a3 == 0 && cross(l1.p1, l2) ||
-		a4 == 0 && cross(l1.p2, l2) {
-		return true
-	}
-	return false
+		a4 == 0 && cross(l1.p2, l2)
 }
 
 func between(a, min, max int) bool { return a >= min && a <= max }

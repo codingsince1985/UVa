@@ -16,8 +16,8 @@ var (
 func solve() int {
 	var max int
 	for step := 2; step <= t; step++ {
-		for i := 0; i < c; i++ {
-			for j := 0; j < c; j++ {
+		for i := range matrix {
+			for j := range matrix[i] {
 				if newEarn := dp[step-1][i] + matrix[i][j]; newEarn > dp[step][j] {
 					dp[step][j] = newEarn
 					if targets[j] && newEarn > max {

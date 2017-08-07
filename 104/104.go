@@ -22,8 +22,8 @@ func output(s int, path []int) {
 	fmt.Fprintln(out, "", s+1)
 }
 
-func floydWarshall(matrix [][][]node) {
-	for s := 1; s < len(matrix); s++ {
+func floydWarshall(n int, matrix [][][]node) {
+	for s := 1; s < n; s++ {
 		for k := range matrix {
 			for i := range matrix {
 				for j := range matrix {
@@ -67,6 +67,6 @@ func main() {
 				}
 			}
 		}
-		floydWarshall(matrix)
+		floydWarshall(n, matrix)
 	}
 }

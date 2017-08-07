@@ -26,11 +26,11 @@ func convexHull(n int, points []point) []point {
 	})
 	m := 0
 	ch := make([]point, n+1)
-	for i := 0; i < n; i++ {
-		for m >= 2 && cross(ch[m-2], ch[m-1], points[i]) <= 0 {
+	for _, point := range points {
+		for m >= 2 && cross(ch[m-2], ch[m-1], point) <= 0 {
 			m--
 		}
-		ch[m] = points[i]
+		ch[m] = point
 		m++
 	}
 	for i, t := n-1, m+1; i >= 0; i-- {

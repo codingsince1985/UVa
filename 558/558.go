@@ -43,7 +43,7 @@ func main() {
 	for fmt.Fscanf(in, "%d", &c); c > 0; c-- {
 		fmt.Fscanf(in, "%d%d", &n, &m)
 		edges := make([]edge, m)
-		for i := 0; i < m; i++ {
+		for i := range edges {
 			fmt.Fscanf(in, "%d%d%d", &edges[i].from, &edges[i].to, &edges[i].time)
 		}
 		if bellmanFord(edges) {

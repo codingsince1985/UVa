@@ -19,9 +19,9 @@ func max(a, b int) int {
 }
 
 func floydWarshall(matrix [][]int) [][]int {
-	for k := 0; k <= m; k++ {
-		for i := 0; i <= m; i++ {
-			for j := 0; j <= m; j++ {
+	for k := range matrix {
+		for i := range matrix {
+			for j := range matrix {
 				if matrix[i][k] > 0 && matrix[k][j] > 0 {
 					matrix[i][j] += matrix[i][k] * matrix[k][j]
 				}
@@ -32,10 +32,10 @@ func floydWarshall(matrix [][]int) [][]int {
 }
 
 func postProcess(matrix [][]int) [][]int {
-	for k := 0; k <= m; k++ {
+	for k := range matrix {
 		if matrix[k][k] > 0 {
-			for i := 0; i <= m; i++ {
-				for j := 0; j <= m; j++ {
+			for i := range matrix {
+				for j := range matrix {
 					if (k != i || k != j) && matrix[i][k] > 0 && matrix[k][j] > 0 {
 						matrix[i][j] = -1
 					}

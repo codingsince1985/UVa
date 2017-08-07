@@ -30,7 +30,7 @@ func tsp(state, last, n int) int {
 		return dp[state][last]
 	}
 	min := math.MaxInt32
-	for i := 0; i < n; i++ {
+	for i := range matrix {
 		if (state & (1 << uint32(i))) != 0 {
 			if tmp := tsp(state-1<<uint32(i), i, n) + matrix[i][last]; tmp < min {
 				min = tmp

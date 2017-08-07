@@ -14,18 +14,18 @@ func max(a, b float64) float64 {
 	return b
 }
 
-func floydWarshall(n int, matrix [][]float64) {
-	for k := 0; k < n; k++ {
-		for i := 0; i < n; i++ {
-			for j := 0; j < n; j++ {
+func floydWarshall(matrix [][]float64) {
+	for k := range matrix {
+		for i := range matrix {
+			for j := range matrix {
 				matrix[i][j] = max(matrix[i][j], matrix[i][k]*matrix[k][j])
 			}
 		}
 	}
 }
 
-func solve(n int, matrix [][]float64) bool {
-	floydWarshall(n, matrix)
+func solve(matrix [][]float64) bool {
+	floydWarshall(matrix)
 	for i := range matrix {
 		if matrix[i][i] > 1 {
 			return true
@@ -60,7 +60,7 @@ func main() {
 			fmt.Fscanf(in, "%s%f%s", &c1, &r, &c2)
 			matrix[currencyMap[c1]][currencyMap[c2]] = r
 		}
-		if fmt.Fprintf(out, "Case %d: ", kase); solve(n, matrix) {
+		if fmt.Fprintf(out, "Case %d: ", kase); solve(matrix) {
 			fmt.Fprintln(out, "Yes")
 		} else {
 			fmt.Fprintln(out, "No")

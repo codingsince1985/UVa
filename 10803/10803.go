@@ -23,10 +23,10 @@ func min(a, b float64) float64 {
 
 func max(a, b float64) float64 { return a + b - min(a, b) }
 
-func floydWarshall(t int, matrix [][]float64) {
-	for k := 0; k < t; k++ {
-		for i := 0; i < t; i++ {
-			for j := 0; j < t; j++ {
+func floydWarshall(matrix [][]float64) {
+	for k := range matrix {
+		for i := range matrix {
+			for j := range matrix {
 				matrix[i][j] = min(matrix[i][j], matrix[i][k]+matrix[k][j])
 			}
 		}
@@ -61,7 +61,7 @@ func solve(t int, towns []town) float64 {
 			}
 		}
 	}
-	floydWarshall(t, matrix)
+	floydWarshall(matrix)
 	return findLongest(t, matrix)
 }
 

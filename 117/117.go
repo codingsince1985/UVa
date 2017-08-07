@@ -59,9 +59,9 @@ func min(a, b int) int {
 }
 
 func floydWarshall(odds []int, matrix [][]int) int {
-	for k := 0; k < len(matrix); k++ {
-		for i := 0; i < len(matrix); i++ {
-			for j := 0; j < len(matrix); j++ {
+	for k := range matrix {
+		for i := range matrix {
+			for j := range matrix {
 				matrix[i][j] = min(matrix[i][j], matrix[i][k]+matrix[k][j])
 			}
 		}

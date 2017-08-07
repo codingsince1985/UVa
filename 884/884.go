@@ -11,7 +11,7 @@ const max = 1000001
 
 var factors = func() []int {
 	factors := make([]int, max)
-	for i := 0; i < max; i++ {
+	for i := range factors {
 		factors[i] = 1
 	}
 	factors[1] = 0

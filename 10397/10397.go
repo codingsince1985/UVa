@@ -40,7 +40,7 @@ func prim(n int, campus [][]float64) float64 {
 		}
 		visited[minP] = true
 		total += low[minP]
-		for j := 0; j < n; j++ {
+		for j := range low {
 			low[j] = min(low[j], campus[minP][j])
 		}
 	}

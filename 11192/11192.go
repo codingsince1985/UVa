@@ -21,7 +21,7 @@ func reverse(tokens []string) []string {
 func split(line string, n int) []string {
 	length := len(line) / n
 	tokens := make([]string, n)
-	for i := 0; i < n; i++ {
+	for i := range tokens {
 		tokens[i] = line[i*length : (i+1)*length]
 	}
 	return tokens

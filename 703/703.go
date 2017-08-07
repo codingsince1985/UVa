@@ -9,12 +9,12 @@ import (
 	"strings"
 )
 
-func solve(out *os.File, n int, matrix [][]bool) {
+func solve(out *os.File, matrix [][]bool) {
 	var ties [][]string
 	var count int
-	for i := 0; i < n; i++ {
-		for j := 0; j < n; j++ {
-			for k := 0; k < n; k++ {
+	for i := range matrix {
+		for j := range matrix {
+			for k := range matrix {
 				if (i > j && j > k || i < j && j < k) && !matrix[i][j] && !matrix[j][k] && !matrix[k][i] ||
 					i < j && j < k && matrix[i][j] && matrix[j][k] && matrix[i][k] && matrix[j][i] && matrix[k][i] && matrix[k][j] {
 					count++
@@ -48,6 +48,6 @@ func main() {
 				matrix[i][j] = m == 0
 			}
 		}
-		solve(out, n, matrix)
+		solve(out, matrix)
 	}
 }

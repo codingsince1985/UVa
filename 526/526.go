@@ -63,10 +63,10 @@ func edit(s1, s2 string) [][]int {
 	dp := make2d(l1+1, l2+1)
 	op := make2d(l1+1, l2+1)
 
-	for i := 0; i <= l1; i++ {
+	for i := range dp {
 		dp[i][0] = i
 	}
-	for i := 0; i <= l2; i++ {
+	for i := range dp[0] {
 		dp[0][i] = i
 	}
 

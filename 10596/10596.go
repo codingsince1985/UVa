@@ -14,8 +14,8 @@ var (
 )
 
 func dfs(curr int) {
-	for i := 0; i < n; i++ {
-		if matrix[curr][i] && !visited[i] {
+	for i, v := range visited {
+		if matrix[curr][i] && !v {
 			visited[i] = true
 			dfs(i)
 		}

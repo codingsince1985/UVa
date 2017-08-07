@@ -52,10 +52,7 @@ func dfs(sum int, node *node, ssf int) bool {
 		return true
 	}
 
-	if dfs(sum, node.l, ssf+node.n) || dfs(sum, node.r, ssf+node.n) {
-		return true
-	}
-	return false
+	return dfs(sum, node.l, ssf+node.n) || dfs(sum, node.r, ssf+node.n)
 }
 
 func main() {

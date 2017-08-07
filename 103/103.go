@@ -19,7 +19,7 @@ func fit(a, b []int) bool {
 	return true
 }
 
-func lis(boxes [][]int) []int {
+func lis(n int, boxes [][]int) []int {
 	sort.Slice(boxes, func(i, j int) bool {
 		for idx := range boxes[i] {
 			if boxes[i][idx] != boxes[j][idx] {
@@ -28,22 +28,20 @@ func lis(boxes [][]int) []int {
 		}
 		return false
 	})
-	size := len(boxes)
-	length := make([]int, size)
+	length := make([]int, n)
 	for i := range length {
 		length[i] = 1
 	}
-	pre := make([]int, size)
+	pre := make([]int, n)
 	for i := range pre {
 		pre[i] = -1
 	}
 	max, maxIdx := 0, 0
-	for i := 0; i < size-1; i++ {
-		for j := i + 1; j < size; j++ {
+	for i := 0; i < n-1; i++ {
+		for j := i + 1; j < n; j++ {
 			if fit(boxes[i], boxes[j]) {
 				if length[i]+1 > length[j] {
-					length[j] = length[i] + 1
-					if length[j] > max {
+					if length[j] = length[i] + 1; length[j] > max {
 						max = length[j]
 						maxIdx = j
 					}
@@ -96,15 +94,15 @@ func main() {
 			break
 		}
 		boxes := make([][]int, n)
-		for i := 0; i < n; i++ {
+		for i := range boxes {
 			boxes[i] = make([]int, d)
-			for j := 0; j < d; j++ {
+			for j := range boxes[i] {
 				fmt.Fscanf(in, "%d", &boxes[i][j])
 			}
 			sort.Ints(boxes[i])
 		}
 		original := make([][]int, n)
 		copy(original, boxes)
-		output(out, lis(boxes), boxes, original)
+		output(out, lis(n, boxes), boxes, original)
 	}
 }

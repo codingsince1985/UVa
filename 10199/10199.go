@@ -10,8 +10,6 @@ import (
 )
 
 var (
-	locationMap          map[string]int
-	orderMap             map[int]string
 	matrix               [][]bool
 	n, t                 int
 	isCutVertex, visited []bool
@@ -49,21 +47,25 @@ func articulationPoint(curr, root int) {
 	}
 }
 
-func solve() []string {
-	visited = make([]bool, n)
+func getCutVertex() []bool {
 	isCutVertex = make([]bool, n)
+	visited = make([]bool, n)
 	disc = make([]int, n)
 	low = make([]int, n)
 	parent = make([]int, n)
 	t = 0
-	for i := 0; i < n; i++ {
-		if !visited[i] {
+	for i, v := range visited {
+		if !v {
 			articulationPoint(i, i)
 		}
 	}
+	return isCutVertex
+}
+
+func solve(orderMap map[int]string) []string {
 	var results []string
-	for i := 0; i < n; i++ {
-		if isCutVertex[i] {
+	for i, v := range getCutVertex() {
+		if v {
 			results = append(results, orderMap[i])
 		}
 	}
@@ -83,8 +85,8 @@ func main() {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		locationMap = make(map[string]int)
-		orderMap = make(map[int]string)
+		locationMap := make(map[string]int)
+		orderMap := make(map[int]string)
 		for i := 0; i < n; i++ {
 			fmt.Fscanf(in, "%s", &c1)
 			locationMap[c1] = i
@@ -102,7 +104,7 @@ func main() {
 		if kase > 1 {
 			fmt.Fprintln(out)
 		}
-		results := solve()
+		results := solve(orderMap)
 		fmt.Fprintf(out, "City map #%d: %d camera(s) found\n", kase, len(results))
 		fmt.Fprintln(out, strings.Join(results, "\n"))
 	}

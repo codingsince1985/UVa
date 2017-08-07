@@ -153,7 +153,7 @@ func compareSameScore(score int, blacks, whites []card) (int, int) {
 func compare(line string) string {
 	c := strings.Fields(line)
 	blacks, whites := make([]card, 5), make([]card, 5)
-	for i := 0; i < 5; i++ {
+	for i := range blacks {
 		blacks[i], whites[i] = buildCard(c[i]), buildCard(c[i+5])
 	}
 	blackScore, whiteScore := score(blacks), score(whites)

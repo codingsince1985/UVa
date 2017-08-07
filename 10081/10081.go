@@ -12,7 +12,7 @@ func solve(k, n int) float64 {
 	for i := range dp {
 		dp[i] = make([]float64, k+1)
 	}
-	for i := 0; i <= k; i++ {
+	for i := range dp[1] {
 		dp[1][i] = 100.0 / float64(k+1)
 	}
 	for i := 2; i <= n; i++ {

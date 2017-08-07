@@ -51,7 +51,7 @@ func tsp(out *os.File, matrix [][]int) {
 	}
 	least := math.MaxInt32
 	idx := 0
-	for i := 0; i < m; i++ {
+	for i := range dp {
 		if dp[i][0] < least {
 			least = dp[i][0]
 			idx = i
