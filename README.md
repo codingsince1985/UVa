@@ -520,6 +520,7 @@ UVa 10502 - [Counting Rectangles](https://uva.onlinejudge.org/external/105/10502
 UVa 10508 - [Word Morphing](https://uva.onlinejudge.org/external/105/10508.pdf)  
 UVa 10509 - [R U Kidding Mr. Feynman?](https://uva.onlinejudge.org/external/105/10509.pdf)  
 UVa 10515 - [Powers Et Al.](https://uva.onlinejudge.org/external/105/10515.pdf)  
+UVa 10518 - [How Many Calls?](https://uva.onlinejudge.org/external/105/10518.pdf)  
 UVa 10519 - [!! Really Strange !!](https://uva.onlinejudge.org/external/105/10519.pdf)  
 UVa 10523 - [Very Easy !!!](https://uva.onlinejudge.org/external/105/10523.pdf)  
 UVa 10530 - [Guessing Game](https://uva.onlinejudge.org/external/105/10530.pdf)  
