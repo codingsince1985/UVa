@@ -43,10 +43,10 @@ func isPrime(n int) bool {
 }
 
 func primeFactorize(n int64) {
-	for idx := 2; n > 1 && int64(idx)*int64(idx) <= n; idx++ {
-		if isPrime(idx) {
-			for n%int64(idx) == 0 {
-				n /= int64(idx)
+	for idx := int64(2); n > 1 && idx*idx <= n; idx++ {
+		if isPrime(int(idx)) {
+			for n%idx == 0 {
+				n /= idx
 				fmt.Fprintf(out, "    %d\n", idx)
 			}
 		}

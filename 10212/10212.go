@@ -8,9 +8,9 @@ import (
 )
 
 func solve(n, m uint64) uint64 {
-	var product uint64 = 1
+	product := uint64(1)
 	for i := n - m + 1; i <= n; i++ {
-		product *= uint64(i)
+		product *= i
 		for product%10 == 0 {
 			product /= 10
 		}

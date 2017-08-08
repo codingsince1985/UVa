@@ -37,11 +37,10 @@ func isPrime(n int64) bool {
 }
 
 func solve(low, high int64) int {
-	var i, almost int64
 	var cnt int
-	for i = 2; i*i <= high; i++ {
+	for i := int64(2); i*i <= high; i++ {
 		if i*i >= low && isPrime(i) {
-			for almost = i * i; almost <= high; almost = almost * i {
+			for almost := i * i; almost <= high; almost = almost * i {
 				cnt++
 			}
 		}

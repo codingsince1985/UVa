@@ -34,7 +34,7 @@ func main() {
 		} else {
 			var i1, i2 int64 = 0, max_k
 			for {
-				var i int64 = (i1 + i2 + 1) / 2
+				var i = (i1 + i2 + 1) / 2
 				k := big.NewInt(i)
 				tmp.Exp(k, n, nil)
 				if tmp.Cmp(&p) == 0 {

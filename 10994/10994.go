@@ -11,10 +11,10 @@ func f(n int64) int64 {
 	if n <= 0 {
 		return 0
 	}
-	var sum, i int64
+	var sum int64
 	for n != 0 {
 		sum += 45 * (n / 10)
-		for i = n/10*10 + 1; i <= n; i++ {
+		for i := n/10*10 + 1; i <= n; i++ {
 			sum += i % 10
 		}
 		n /= 10

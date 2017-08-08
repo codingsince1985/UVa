@@ -8,7 +8,7 @@ import (
 	"strconv"
 )
 
-const traditionalC float64 = 100 * 60 * 60 * 24
+const traditionalC = 100 * 60 * 60 * 24
 
 var weights = [...]int{1, 100, 60 * 100, 60 * 60 * 100}
 

@@ -23,7 +23,7 @@ func main() {
 	}
 
 	for ; n > 0; n-- {
-		var s uint64 = 0
+		var s uint64
 		for {
 			if fmt.Fscanf(in, "%s", &w); w == "." {
 				break

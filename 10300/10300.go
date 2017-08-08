@@ -16,7 +16,7 @@ func main() {
 	var n, f int
 	var s, a, e uint64
 	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
-		var t uint64 = 0
+		var t uint64
 		for fmt.Fscanf(in, "%d", &f); f > 0; f-- {
 			fmt.Fscanf(in, "%d%d%d", &s, &a, &e)
 			t += s * e

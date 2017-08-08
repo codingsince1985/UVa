@@ -9,14 +9,12 @@ import (
 )
 
 func solve(y uint) int {
-	bits := 1 << ((y-1960)/10 + 2)
+	var bits = 1 << ((y-1960)/10 + 2)
 	var i int
-	for sum := 0.0; sum < float64(bits); {
-		i++
-		sum += math.Log2(float64(i))
+	for sum := 0.0; sum < float64(bits); i++ {
+		sum += math.Log2(float64(i + 1))
 	}
-	i--
-	return i
+	return i - 1
 }
 
 func main() {

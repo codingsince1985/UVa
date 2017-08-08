@@ -9,12 +9,12 @@ import (
 )
 
 func h(n int64) int64 {
-	var i, result int64
+	var result int64
 	sqrt := int64(math.Sqrt(float64(n)))
-	for i = 1; i <= sqrt; i++ {
+	for i := int64(1); i <= sqrt; i++ {
 		result += i * (n/i - n/(i+1))
 	}
-	for i = n / (sqrt + 1); i > 0; i-- {
+	for i := n / (sqrt + 1); i > 0; i-- {
 		result += n / i
 	}
 	return result

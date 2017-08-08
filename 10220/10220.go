@@ -13,8 +13,8 @@ const max = 1001
 var f = func() [max]big.Int {
 	var f [max]big.Int
 	f[0].SetInt64(1)
-	for i := 1; i < max; i++ {
-		tmp := big.NewInt(int64(i))
+	for i := int64(1); i < max; i++ {
+		tmp := big.NewInt(i)
 		f[i].Mul(&f[i-1], tmp)
 	}
 	return f

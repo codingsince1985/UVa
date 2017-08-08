@@ -18,7 +18,7 @@ var (
 func buildKey(header string) map[string]byte {
 	keyMap := make(map[string]byte)
 	var key int64
-	var digit uint = 1
+	digit := uint(1)
 	for i := range header {
 		if key == (2<<(digit-1) - 1) {
 			key = 0

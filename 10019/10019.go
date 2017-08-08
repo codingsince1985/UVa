@@ -12,8 +12,7 @@ import (
 func onesInBinary(n int64) int { return strings.Count(strconv.FormatInt(n, 2), "1") }
 
 func hexaDec(n int64) int64 {
-	var base int64 = 1
-	var ret int64 = 0
+	base, ret := int64(1), int64(0)
 	for n > 0 {
 		ret += (n % 10) * base
 		n /= 10

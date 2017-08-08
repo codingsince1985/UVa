@@ -9,10 +9,9 @@ import (
 )
 
 func solve(n, a int64) *big.Int {
-	var i int64
 	var tmp big.Int
 	part, total, self := big.NewInt(1), big.NewInt(0), big.NewInt(a)
-	for i = 1; i <= n; i++ {
+	for i := int64(1); i <= n; i++ {
 		part.Mul(part, self)
 		tmp.Mul(part, big.NewInt(i))
 		total.Add(total, &tmp)
