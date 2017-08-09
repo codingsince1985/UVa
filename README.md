@@ -173,6 +173,7 @@ UVa 460 - [Overlapping Rectangles](https://uva.onlinejudge.org/external/4/460.pd
 UVa 465 - [Overflow](https://uva.onlinejudge.org/external/4/465.pdf)  
 UVa 466 - [Mirror, Mirror](https://uva.onlinejudge.org/external/4/466.pdf)  
 UVa 469 - [Wetlands of Florida](https://uva.onlinejudge.org/external/4/469.pdf)  
+UVa 471 - [Magic Numbers](https://uva.onlinejudge.org/external/4/471.pdf)  
 UVa 474 - [Heads / Tails Probability](https://uva.onlinejudge.org/external/4/474.pdf)  
 UVa 476 - [Points in Figures: Rectangles](https://uva.onlinejudge.org/external/4/476.pdf)  
 UVa 477 - [Points in Figures: Rectangles and Circles](https://uva.onlinejudge.org/external/4/477.pdf)  
