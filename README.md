@@ -585,6 +585,7 @@ UVa 10879 - [Code Refactoring](https://uva.onlinejudge.org/external/108/10879.pd
 UVa 10903 - [Rock-Paper-Scissors Tournament](https://uva.onlinejudge.org/external/109/10903.pdf)  
 UVa 10905 - [Children's Game](https://uva.onlinejudge.org/external/109/10905.pdf)  
 UVa 10908 - [Largest Square](https://uva.onlinejudge.org/external/109/10908.pdf)  
+UVa 10910 - [Marks Distribution](https://uva.onlinejudge.org/external/109/10910.pdf)  
 UVa 10916 - [Factstone Benchmark](https://uva.onlinejudge.org/external/109/10916.pdf)  
 UVa 10918 - [Tri Tiling](https://uva.onlinejudge.org/external/109/10918.pdf)  
 UVa 10919 - [Prerequisites?](https://uva.onlinejudge.org/external/109/10919.pdf)  
