@@ -34,8 +34,7 @@ func main() {
 	fmt.Fscanf(in, "%d", &kase)
 	var t1, t2 string
 	for i := 1; i <= kase; i++ {
-		fmt.Fscanln(in)
-		fmt.Fscanf(in, "%s", &t1)
+		fmt.Fscanf(in, "\n%s", &t1)
 		fmt.Fscanf(in, "%s", &t2)
 		years := compare(t1, t2)
 		fmt.Fprintf(out, "Case #%d: ", i)

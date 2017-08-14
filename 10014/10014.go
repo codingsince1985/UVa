@@ -29,8 +29,7 @@ func main() {
 
 	var kase int
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
-		fmt.Fscanln(in)
-		fmt.Fscanf(in, "%d", &n)
+		fmt.Fscanf(in, "\n%d", &n)
 		fmt.Fscanf(in, "%f", &af)
 		fmt.Fscanf(in, "%f", &al)
 		c := make([]float64, n)

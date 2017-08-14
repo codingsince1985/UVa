@@ -69,8 +69,7 @@ func main() {
 	var kase, n, s1, s2 int
 	first := true
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
-		fmt.Fscanln(in)
-		fmt.Fscanf(in, "%d", &n)
+		fmt.Fscanf(in, "\n%d", &n)
 		straws := make([]line, n)
 		for i := range straws {
 			fmt.Fscanf(in, "%d%d%d%d", &straws[i].p1.x, &straws[i].p1.y, &straws[i].p2.x, &straws[i].p2.y)

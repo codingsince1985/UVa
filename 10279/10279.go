@@ -65,8 +65,7 @@ func main() {
 	var kase int
 	var line string
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
-		fmt.Fscanln(in)
-		fmt.Fscanf(in, "%d", &n)
+		fmt.Fscanf(in, "\n%d", &n)
 		grid := make([][]byte, n)
 		for i := range grid {
 			fmt.Fscanf(in, "%s", &line)

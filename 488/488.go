@@ -23,8 +23,7 @@ func main() {
 	var n, a, f int
 	first := true
 	for fmt.Fscanf(in, "%d\n", &n); n > 0; n-- {
-		fmt.Fscanln(in)
-		if _, err := fmt.Fscanf(in, "%d", &a); err != nil {
+		if _, err := fmt.Fscanf(in, "\n%d", &a); err != nil {
 			break
 		}
 		var s string

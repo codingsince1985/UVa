@@ -38,8 +38,7 @@ func main() {
 	var kase int
 	var w1, w2 window
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
-		fmt.Fscanln(in)
-		fmt.Fscanf(in, "%d%d%d%d", &w1.p1.x, &w1.p1.y, &w1.p2.x, &w1.p2.y)
+		fmt.Fscanf(in, "\n%d%d%d%d", &w1.p1.x, &w1.p1.y, &w1.p2.x, &w1.p2.y)
 		fmt.Fscanf(in, "%d%d%d%d", &w2.p1.x, &w2.p1.y, &w2.p2.x, &w2.p2.y)
 		if w := solve(w1, w2); w == nil {
 			fmt.Fprintln(out, "No Overlap")

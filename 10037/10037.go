@@ -40,8 +40,7 @@ func main() {
 
 	var kase, n int
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
-		fmt.Fscanln(in)
-		fmt.Fscanf(in, "%d", &n)
+		fmt.Fscanf(in, "\n%d", &n)
 		p := make([]int, n)
 		for i := range p {
 			fmt.Fscanf(in, "%d", &p[i])

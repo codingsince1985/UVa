@@ -44,8 +44,7 @@ func main() {
 		} else {
 			fmt.Fprintln(out)
 		}
-		fmt.Fscanln(in)
-		fmt.Fscanf(in, "%s", &line)
+		fmt.Fscanf(in, "\n%s", &line)
 		ks := factors(len(line))
 		for _, k := range ks {
 			if periodic(line, k) {

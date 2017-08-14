@@ -45,8 +45,7 @@ func main() {
 
 	var kase, n int
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
-		fmt.Fscanln(in)
-		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
+		if _, err := fmt.Fscanf(in, "\n%d", &n); err != nil {
 			break
 		}
 		telephones := make([]string, n)

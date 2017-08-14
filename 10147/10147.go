@@ -68,8 +68,7 @@ func main() {
 	var kase, n, m, t1, t2 int
 	first := true
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
-		fmt.Fscanln(in)
-		fmt.Fscanf(in, "%d", &n)
+		fmt.Fscanf(in, "\n%d", &n)
 		towns := make([]town, n)
 		for i := range towns {
 			fmt.Fscanf(in, "%f%f", &towns[i].x, &towns[i].y)

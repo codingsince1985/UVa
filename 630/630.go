@@ -45,8 +45,7 @@ func main() {
 	var word string
 	first := true
 	for fmt.Fscanf(in, "%d", &t); t > 0; t-- {
-		fmt.Fscanln(in)
-		fmt.Fscanf(in, "%d", &n)
+		fmt.Fscanf(in, "\n%d", &n)
 		vocabulary = make([][2]string, n)
 		for i := range vocabulary {
 			fmt.Fscanf(in, "%s", &vocabulary[i][0])

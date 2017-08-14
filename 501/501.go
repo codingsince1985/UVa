@@ -38,8 +38,7 @@ func main() {
 	var kase, m, n int
 	first := true
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
-		fmt.Fscanln(in)
-		fmt.Fscanf(in, "%d%d", &m, &n)
+		fmt.Fscanf(in, "\n%d%d", &m, &n)
 		a := make([]int, m)
 		for i := range a {
 			fmt.Fscanf(in, "%d", &a[i])

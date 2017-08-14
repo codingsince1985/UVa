@@ -63,8 +63,7 @@ func main() {
 
 	var m int
 	for fmt.Fscanf(in, "%d", &m); m > 0; m-- {
-		fmt.Fscanln(in)
-		fmt.Fscanf(in, "%d", &n)
+		fmt.Fscanf(in, "\n%d", &n)
 		write(n)
 		if m > 1 {
 			fmt.Fprintln(out)
