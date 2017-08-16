@@ -13,11 +13,11 @@ var n int
 type node struct{ server, latency int }
 
 func spfa(matrix [][]node, s, t int) int {
-	visited := make([]bool, n)
 	distance := make([]int, n)
 	for i := range distance {
 		distance[i] = math.MaxInt32
 	}
+	visited := make([]bool, n)
 	distance[s], visited[s] = 0, true
 	queue := []int{s}
 	for len(queue) > 0 {

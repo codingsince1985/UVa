@@ -61,9 +61,6 @@ func main() {
 	var line string
 	fmt.Fscanf(in, "%d", &n)
 	for kase := 1; kase <= n; kase++ {
-		if kase > 1 {
-			fmt.Fscanln(in)
-		}
 		grid = make([][]byte, 3)
 		for i := range grid {
 			fmt.Fscanf(in, "%s", &line)
@@ -74,5 +71,6 @@ func main() {
 		} else {
 			fmt.Fprintln(out, "no")
 		}
+		fmt.Fscanln(in)
 	}
 }

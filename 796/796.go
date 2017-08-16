@@ -79,13 +79,7 @@ func main() {
 	defer out.Close()
 
 	var n, m, s, t int
-	first := true
 	for {
-		if first {
-			first = false
-		} else {
-			fmt.Fscanln(in)
-		}
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
 		}
@@ -99,7 +93,8 @@ func main() {
 				matrix[s][t], matrix[t][s] = true, true
 			}
 		}
-		fmt.Fscanln(in)
 		solve(n)
+		fmt.Fscanln(in)
+		fmt.Fscanln(in)
 	}
 }

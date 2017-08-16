@@ -14,8 +14,7 @@ func max(a, b int) int {
 	return b
 }
 
-func knapsack(p, w []int, tw int) int {
-	l := len(p)
+func knapsack(l, tw int, p, w []int) int {
 	dp := make([][]int, l+1)
 	for i := range dp {
 		dp[i] = make([]int, tw+1)
@@ -50,7 +49,7 @@ func main() {
 		var total int
 		for fmt.Fscanf(in, "%d", &g); g > 0; g-- {
 			fmt.Fscanf(in, "%d", &tw)
-			total += knapsack(p, w, tw)
+			total += knapsack(n, tw, p, w)
 		}
 		fmt.Fprintln(out, total)
 	}

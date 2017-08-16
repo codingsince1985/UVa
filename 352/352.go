@@ -26,9 +26,8 @@ func dfs(m [][]byte, cells [][]int, x, y, d, count int) {
 	}
 }
 
-func floodFill(m [][]byte) int {
+func floodFill(d int, m [][]byte) int {
 	count := 0
-	d := len(m)
 	cells := make([][]int, d)
 	for i := range cells {
 		cells[i] = make([]int, d)
@@ -64,6 +63,6 @@ func main() {
 				m[i][j] = line[j]
 			}
 		}
-		fmt.Fprintf(out, "Image number %d contains %d war eagles.\n", count, floodFill(m))
+		fmt.Fprintf(out, "Image number %d contains %d war eagles.\n", count, floodFill(d, m))
 	}
 }

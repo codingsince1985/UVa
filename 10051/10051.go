@@ -48,8 +48,7 @@ func getUpperColor(t int, c sides) int {
 	}
 }
 
-func solve(c []sides) ([][6][2]int, int, [2]int) {
-	l := len(c)
+func solve(l int, c []sides) ([][6][2]int, int, [2]int) {
 	dp := make([][6]int, l)
 	for i := range dp {
 		for j := range dp[i] {
@@ -108,7 +107,7 @@ func main() {
 		for i := range c {
 			fmt.Fscanf(in, "%d%d%d%d%d%d", &c[i].front, &c[i].back, &c[i].left, &c[i].right, &c[i].top, &c[i].bottom)
 		}
-		pre, mx, st := solve(c)
+		pre, mx, st := solve(n, c)
 		if kase > 1 {
 			fmt.Fprintln(out)
 		}

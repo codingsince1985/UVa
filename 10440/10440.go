@@ -14,9 +14,8 @@ func max(a, b int) int {
 	return b
 }
 
-func solve(n, t int, c []int) (int, int) {
+func solve(n, t, s int, c []int) (int, int) {
 	time, trip := -2*t, 0
-	s := len(c)
 	mod := s % n
 	if mod != 0 {
 		time = c[mod-1]
@@ -42,7 +41,7 @@ func main() {
 		for j := range c {
 			fmt.Fscanf(in, "%d", &c[j])
 		}
-		time, trip := solve(n, t, c)
+		time, trip := solve(n, t, m, c)
 		fmt.Fprintln(out, time, trip)
 	}
 }

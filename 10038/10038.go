@@ -14,8 +14,7 @@ func abs(n int) int {
 	return n
 }
 
-func isJolly(lst []int) bool {
-	length := len(lst)
+func isJolly(length int, lst []int) bool {
 	m := make([]bool, length)
 	m[0] = true
 	for i := 1; i < length; i++ {
@@ -43,7 +42,7 @@ func main() {
 		for i := range lst {
 			fmt.Fscanf(in, "%d", &lst[i])
 		}
-		if isJolly(lst) {
+		if isJolly(n, lst) {
 			fmt.Fprintln(out, "Jolly")
 		} else {
 			fmt.Fprintln(out, "Not jolly")

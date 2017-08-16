@@ -48,8 +48,7 @@ func main() {
 			break
 		}
 		if l == "#" {
-			first = !first
-			if first {
+			if first = !first; first {
 				fmt.Fprintln(out, lcs(a, b))
 				a, b = nil, nil
 			}

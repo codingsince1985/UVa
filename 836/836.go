@@ -51,12 +51,12 @@ func main() {
 				break
 			}
 			if first {
+				first = false
 				n := len(l)
 				m = make([][]byte, n)
-				for j := range m {
-					m[j] = make([]byte, n)
+				for i := range m {
+					m[i] = make([]byte, n)
 				}
-				first = false
 			}
 			m[count] = []byte(l)
 		}
