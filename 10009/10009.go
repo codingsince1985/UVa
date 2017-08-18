@@ -16,8 +16,7 @@ var links map[string][]string
 
 func bfs(fm, to string) []byte {
 	visited := map[string]bool{fm: true}
-	queue := []node{{fm, []byte{fm[0]}}}
-	for len(queue) > 0 {
+	for queue := []node{{fm, []byte{fm[0]}}}; len(queue) > 0; {
 		curr := queue[0]
 		queue = queue[1:]
 		adjs := links[curr.n]

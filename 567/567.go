@@ -14,10 +14,9 @@ type node struct{ n, step int }
 var matrix [][]bool
 
 func bfs(n1, n2 int) int {
-	queue := []node{{n1, 0}}
 	visited := make([]bool, n+1)
 	visited[n1] = true
-	for len(queue) > 0 {
+	for queue := []node{{n1, 0}}; len(queue) > 0; {
 		curr := queue[0]
 		queue = queue[1:]
 		for i := 1; i <= n; i++ {

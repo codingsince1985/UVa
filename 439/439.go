@@ -23,10 +23,8 @@ func bfs(from, to cell) int {
 	for i := range visited {
 		visited[i] = make([]bool, 9)
 	}
-
-	queue := []cell{from}
 	visited[from.x][from.y] = true
-	for len(queue) > 0 {
+	for queue := []cell{from}; len(queue) > 0; {
 		curr := queue[0]
 		if curr.x == to.x && curr.y == to.y {
 			return curr.steps

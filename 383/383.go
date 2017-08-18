@@ -14,8 +14,7 @@ type node struct {
 
 func bfs(legs map[string][]string, src, dest string) int {
 	visited := map[string]bool{src: true}
-	queue := []node{{src, 0}}
-	for len(queue) > 0 {
+	for queue := []node{{src, 0}}; len(queue) > 0; {
 		curr := queue[0]
 		queue = queue[1:]
 		adjs := legs[curr.n]

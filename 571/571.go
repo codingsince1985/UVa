@@ -20,8 +20,7 @@ func buildStatus(a, b int) status { return status{a, b} }
 
 func bfs(a, b, n int) []string {
 	visited := map[status]bool{status{0, 0}: true}
-	queue := []node{{status{0, 0}, nil}}
-	for len(queue) > 0 {
+	for queue := []node{{status{0, 0}, nil}}; len(queue) > 0; {
 		curr := queue[0]
 		queue = queue[1:]
 		if curr.a == n || curr.b == n {

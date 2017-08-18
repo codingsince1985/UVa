@@ -69,8 +69,7 @@ func reflect(m [][]byte) [][]byte {
 }
 
 func bfs() []int {
-	queue := []node{{fm, nil}}
-	for len(queue) > 0 {
+	for queue := []node{{fm, nil}}; len(queue) > 0; {
 		curr := queue[0]
 		queue = queue[1:]
 		if isSame(curr.matrix, to) {

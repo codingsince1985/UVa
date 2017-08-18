@@ -31,8 +31,7 @@ func rotate(n [4]int, i, step int) [4]int {
 
 func bfs(initial config) int {
 	visited := map[[4]int]bool{initial.n: true}
-	queue := []config{initial}
-	for len(queue) > 0 {
+	for queue := []config{initial}; len(queue) > 0; {
 		curr := queue[0]
 		queue = queue[1:]
 		if curr.n == target.n {

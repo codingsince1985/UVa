@@ -9,8 +9,7 @@ import (
 
 func bfs(adj map[int][]int, n, t int) int {
 	visited := make(map[int]bool)
-	queue := [][2]int{{n, t}}
-	for len(queue) > 0 {
+	for queue := [][2]int{{n, t}}; len(queue) > 0; {
 		curr := queue[0]
 		queue = queue[1:]
 		visited[curr[0]] = true

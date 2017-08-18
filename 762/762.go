@@ -13,9 +13,8 @@ type node struct {
 }
 
 func bfs(links map[string][]string, n1, n2 string) [][2]string {
-	queue := []node{{n1, nil}}
 	visited := map[string]bool{n1: true}
-	for len(queue) > 0 {
+	for queue := []node{{n1, nil}}; len(queue) > 0; {
 		curr := queue[0]
 		queue = queue[1:]
 		if curr.n == n2 {

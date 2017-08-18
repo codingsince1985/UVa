@@ -44,9 +44,8 @@ func buildGraph(words []string) {
 }
 
 func bfs(w1, w2 string) []string {
-	queue := [][]string{{w1}}
 	visited := map[string]bool{w1: true}
-	for len(queue) != 0 {
+	for queue := [][]string{{w1}}; len(queue) != 0; {
 		current := queue[0]
 		queue = queue[1:]
 		last := current[len(current)-1]
