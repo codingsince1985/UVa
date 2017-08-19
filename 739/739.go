@@ -21,16 +21,14 @@ func encode(name string) string {
 	skipped := false
 	soundex := name[0:1]
 	for i := 1; i < len(name); i++ {
-		code := codeMap[name[i]]
-		if code == "" || code == soundex[len(soundex)-1:] {
-			continue
-		}
-		if len(soundex) == 1 && code == codeMap[name[0]] && !skipped {
-			skipped = true
-			continue
-		}
-		if soundex += code; len(soundex) == 4 {
-			break
+		if code := codeMap[name[i]]; code != "" && code != soundex[len(soundex)-1:] {
+			if len(soundex) == 1 && code == codeMap[name[0]] && !skipped {
+				skipped = true
+				continue
+			}
+			if soundex += code; len(soundex) == 4 {
+				break
+			}
 		}
 	}
 	if len(soundex) < 4 {

@@ -19,15 +19,14 @@ func solve(sum int, values [6]int) bool {
 	}
 	for i := 2; i <= 6; i++ {
 		for j := sum / 2; j >= 0; j-- {
-			if dp[j] == 0 {
-				continue
-			}
-			for k := 0; k <= values[i-1]; k++ {
-				x := k*i + j
-				if x > sum/2 || dp[x] >= i {
-					break
+			if dp[j] != 0 {
+				for k := 0; k <= values[i-1]; k++ {
+					x := k*i + j
+					if x > sum/2 || dp[x] >= i {
+						break
+					}
+					dp[x] = i
 				}
-				dp[x] = i
 			}
 		}
 	}

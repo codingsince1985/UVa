@@ -24,10 +24,7 @@ func dfs(i int, word []byte, visited []bool) {
 		fmt.Fprintln(out, string(word))
 	} else {
 		for j := range chars {
-			if !visited[j] {
-				if j > 0 && chars[j] == chars[j-1] && !visited[j-1] {
-					continue
-				}
+			if !visited[j] && !(j > 0 && chars[j] == chars[j-1] && !visited[j-1]) {
 				visited[j] = true
 				word[i] = chars[j]
 				dfs(i+1, word, visited)

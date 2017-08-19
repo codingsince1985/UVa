@@ -38,19 +38,18 @@ func solve(fingers []int, words []string) []string {
 	var max int
 here:
 	for _, word := range words {
-		if len(word) < max {
-			continue
-		}
-		for i := range word {
-			if chars[word[i]] {
-				continue here
+		if len(word) >= max {
+			for i := range word {
+				if chars[word[i]] {
+					continue here
+				}
 			}
+			if len(word) > max {
+				max = len(word)
+				longest = nil
+			}
+			longest = append(longest, word)
 		}
-		if len(word) > max {
-			max = len(word)
-			longest = nil
-		}
-		longest = append(longest, word)
 	}
 	sort.Strings(longest)
 	return longest

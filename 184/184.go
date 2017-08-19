@@ -43,20 +43,19 @@ func solve(nodes []node) {
 	var lines [][]int
 	for i := 0; i < n-2; i++ {
 		for j := i + 1; j < n-1; j++ {
-			if visited[i][j] {
-				continue
-			}
-			line := []int{i, j}
-			for k := j + 1; k < n; k++ {
-				if sameLine(nodes[i], nodes[j], nodes[k]) {
-					line = append(line, k)
+			if !visited[i][j] {
+				line := []int{i, j}
+				for k := j + 1; k < n; k++ {
+					if sameLine(nodes[i], nodes[j], nodes[k]) {
+						line = append(line, k)
+					}
 				}
-			}
-			if len(line) >= 3 {
-				lines = append(lines, line)
-				for l := 0; l < len(line)-1; l++ {
-					for m := l + 1; m < len(line); m++ {
-						visited[line[l]][line[m]] = true
+				if len(line) >= 3 {
+					lines = append(lines, line)
+					for l := 0; l < len(line)-1; l++ {
+						for m := l + 1; m < len(line); m++ {
+							visited[line[l]][line[m]] = true
+						}
 					}
 				}
 			}
