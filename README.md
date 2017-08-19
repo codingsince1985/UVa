@@ -674,6 +674,7 @@ UVa 12250 - [Language Detection](https://uva.onlinejudge.org/external/122/12250.
 UVa 12289 - [One-Two-Three](https://uva.onlinejudge.org/external/122/12289.pdf)  
 UVa 12347 - [Binary Search Tree](https://uva.onlinejudge.org/external/123/12347.pdf)  
 UVa 12372 - [Packing for Holiday](https://uva.onlinejudge.org/external/123/12372.pdf)  
+UVa 12403 - [Save Setu](https://uva.onlinejudge.org/external/124/12403.pdf)  
 
 License
 ==
