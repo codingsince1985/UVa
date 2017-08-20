@@ -522,6 +522,7 @@ UVa 10496 - [Collecting Beepers](https://uva.onlinejudge.org/external/104/10496.
 UVa 10499 - [The Land of Justice](https://uva.onlinejudge.org/external/104/10499.pdf)  
 UVa 10500 - [Robot maps](https://uva.onlinejudge.org/external/105/10500.pdf)  
 UVa 10502 - [Counting Rectangles](https://uva.onlinejudge.org/external/105/10502.pdf)  
+UVa 10507 - [Waking up brain](https://uva.onlinejudge.org/external/105/10507.pdf)  
 UVa 10508 - [Word Morphing](https://uva.onlinejudge.org/external/105/10508.pdf)  
 UVa 10509 - [R U Kidding Mr. Feynman?](https://uva.onlinejudge.org/external/105/10509.pdf)  
 UVa 10515 - [Powers Et Al.](https://uva.onlinejudge.org/external/105/10515.pdf)  
