@@ -13,7 +13,7 @@ var (
 	bin  string
 )
 
-func solve(n, from, to int) {
+func hanoi(n, from, to int) {
 	if n < 0 {
 		return
 	}
@@ -22,9 +22,9 @@ func solve(n, from, to int) {
 		pegs[from] -= n + 1
 		pegs[tmp] += n
 		pegs[to]++
-		solve(n-1, tmp, to)
+		hanoi(n-1, tmp, to)
 	} else {
-		solve(n-1, from, tmp)
+		hanoi(n-1, from, tmp)
 	}
 }
 
@@ -45,9 +45,9 @@ func main() {
 		bin = fmt.Sprintf("%b", &m)
 		pegs = [3]int{n, 0, 0}
 		if n%2 == 0 {
-			solve(n-1, 0, 2)
+			hanoi(n-1, 0, 2)
 		} else {
-			solve(n-1, 0, 1)
+			hanoi(n-1, 0, 1)
 		}
 		for i, peg := range pegs {
 			if i > 0 {
