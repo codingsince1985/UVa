@@ -593,6 +593,7 @@ UVa 10849 - [Move the bishop](https://uva.onlinejudge.org/external/108/10849.pdf
 UVa 10852 - [Less Prime](https://uva.onlinejudge.org/external/108/10852.pdf)  
 UVa 10878 - [Decode the tape](https://uva.onlinejudge.org/external/108/10878.pdf)  
 UVa 10879 - [Code Refactoring](https://uva.onlinejudge.org/external/108/10879.pdf)  
+UVa 10880 - [Colin and Ryan](https://uva.onlinejudge.org/external/108/10880.pdf)  
 UVa 10903 - [Rock-Paper-Scissors Tournament](https://uva.onlinejudge.org/external/109/10903.pdf)  
 UVa 10905 - [Children's Game](https://uva.onlinejudge.org/external/109/10905.pdf)  
 UVa 10908 - [Largest Square](https://uva.onlinejudge.org/external/109/10908.pdf)  
