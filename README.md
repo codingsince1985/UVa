@@ -578,6 +578,7 @@ UVa 10730 - [Antiarithmetic?](https://uva.onlinejudge.org/external/107/10730.pdf
 UVa 10739 - [String to Palindrome](https://uva.onlinejudge.org/external/107/10739.pdf)  
 UVa 10763 - [Foreign Exchange](https://uva.onlinejudge.org/external/107/10763.pdf)  
 UVa 10773 - [Back to Intermediate Math](https://uva.onlinejudge.org/external/107/10773.pdf)  
+UVa 10780 - [Again Prime? No Time.](https://uva.onlinejudge.org/external/107/10780.pdf)  
 UVa 10783 - [Odd Sum](https://uva.onlinejudge.org/external/107/10783.pdf)  
 UVa 10784 - [Diagonal](https://uva.onlinejudge.org/external/107/10784.pdf)  
 UVa 10789 - [Prime Frequency](https://uva.onlinejudge.org/external/107/10789.pdf)  
