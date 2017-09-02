@@ -22,8 +22,7 @@ func slope(p1, p2 point) [2]float64 {
 
 func solve(points []point) int {
 	slopeMap := make(map[[2]float64]int)
-	l := len(points)
-	for i := 0; i < l-1; i++ {
+	for i, l := 0, len(points); i < l-1; i++ {
 		for j := i + 1; j < l; j++ {
 			slopeMap[slope(points[i], points[j])]++
 		}

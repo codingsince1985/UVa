@@ -9,9 +9,8 @@ import (
 )
 
 func unsorted(s string) int {
-	l := len(s)
 	count := 0
-	for i := 0; i < l-1; i++ {
+	for i, l := 0, len(s); i < l-1; i++ {
 		for j := i + 1; j < l; j++ {
 			if s[i] > s[j] {
 				count++

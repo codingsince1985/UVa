@@ -30,8 +30,7 @@ func main() {
 			break
 		}
 		var d1, d2, carry, count int
-		l1, l2 := len(s1), len(s2)
-		for l1 > 0 || l2 > 0 {
+		for l1, l2 := len(s1), len(s2); l1 > 0 || l2 > 0; {
 			if l1 > 0 {
 				d1 = int(s1[l1-1] - '0')
 				l1--

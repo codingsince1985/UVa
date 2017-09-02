@@ -16,9 +16,8 @@ func max(a, b int) int {
 }
 
 func findMax(s [][]int) int {
-	l := len(s)
 	msf := math.MinInt32
-	for i := 0; i < l; i++ {
+	for i, l := 0, len(s); i < l; i++ {
 		for j := i; j < l; j++ {
 			meh := 0
 			for k := 0; k < l; k++ {
