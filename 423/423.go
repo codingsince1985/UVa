@@ -13,8 +13,8 @@ func floydWarshall(matrix [][]int) {
 	for k := range matrix {
 		for i := range matrix {
 			for j := range matrix {
-				if matrix[i][k]+matrix[k][j] < matrix[i][j] {
-					matrix[i][j] = matrix[i][k] + matrix[k][j]
+				if v := matrix[i][k] + matrix[k][j]; v < matrix[i][j] {
+					matrix[i][j] = v
 				}
 			}
 		}

@@ -18,7 +18,7 @@ func max(a, b int) int {
 	return b
 }
 
-func floydWarshall(matrix [][]int) [][]int {
+func floydWarshall(matrix [][]int) {
 	for k := range matrix {
 		for i := range matrix {
 			for j := range matrix {
@@ -28,7 +28,6 @@ func floydWarshall(matrix [][]int) [][]int {
 			}
 		}
 	}
-	return matrix
 }
 
 func postProcess(matrix [][]int) [][]int {
@@ -66,7 +65,8 @@ func solve(street [][2]int) [][]string {
 	for _, vi := range street {
 		matrix[vi[0]][vi[1]] = 1
 	}
-	return convert(postProcess(floydWarshall(matrix)))
+	floydWarshall(matrix)
+	return convert(postProcess(matrix))
 }
 
 func main() {
