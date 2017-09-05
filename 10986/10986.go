@@ -8,17 +8,15 @@ import (
 	"os"
 )
 
-var n int
-
 type node struct{ server, latency int }
 
-func spfa(matrix [][]node, s, t int) int {
+func spfa(n, s, t int, matrix [][]node) int {
 	distance := make([]int, n)
 	for i := range distance {
 		distance[i] = math.MaxInt32
 	}
-	visited := make([]bool, n)
-	distance[s], visited[s] = 0, true
+	distance[s] = 0
+	visited := map[int]bool{s: true}
 	queue := []int{s}
 	for len(queue) > 0 {
 		curr := queue[0]
@@ -42,7 +40,7 @@ func main() {
 	out, _ := os.Create("10986.out")
 	defer out.Close()
 
-	var kase, m, s, t, s1, s2, l int
+	var kase, m, s, t, s1, s2, l, n int
 	fmt.Fscanf(in, "%d", &kase)
 	for i := 1; i <= kase; i++ {
 		fmt.Fscanf(in, "%d%d%d%d", &n, &m, &s, &t)
@@ -53,7 +51,7 @@ func main() {
 			matrix[s2] = append(matrix[s2], node{s1, l})
 		}
 		fmt.Fprintf(out, "Case #%d: ", i)
-		if distance := spfa(matrix, s, t); distance == math.MaxInt32 {
+		if distance := spfa(n, s, t, matrix); distance == math.MaxInt32 {
 			fmt.Fprintln(out, "unreachable")
 		} else {
 			fmt.Fprintln(out, distance)

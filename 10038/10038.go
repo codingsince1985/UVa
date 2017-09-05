@@ -15,8 +15,7 @@ func abs(n int) int {
 }
 
 func isJolly(length int, lst []int) bool {
-	m := make([]bool, length)
-	m[0] = true
+	m := map[int]bool{0: true}
 	for i := 1; i < length; i++ {
 		t := abs(lst[i] - lst[i-1])
 		if m[t] {

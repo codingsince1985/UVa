@@ -17,8 +17,7 @@ func spfa(n, start, end int, matrix [][]int) ([]string, int) {
 		distance[i] = math.MaxInt32
 	}
 	distance[start] = 0
-	visited := make([]bool, n)
-	visited[start] = true
+	visited := map[int]bool{start: true}
 	for queue := []int{start}; len(queue) > 0; {
 		curr := queue[0]
 		queue = queue[1:]

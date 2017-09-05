@@ -11,16 +11,12 @@ const n = 20
 
 type node struct{ n, step int }
 
-var matrix [][]bool
-
-func bfs(n1, n2 int) int {
-	visited := make([]bool, n+1)
-	visited[n1] = true
+func bfs(n1, n2 int, matrix [][]bool) int {
 	for queue := []node{{n1, 0}}; len(queue) > 0; {
 		curr := queue[0]
 		queue = queue[1:]
 		for i := 1; i <= n; i++ {
-			if !visited[i] && matrix[curr.n][i] {
+			if matrix[curr.n][i] {
 				if i == n2 {
 					return curr.step + 1
 				}
@@ -39,7 +35,7 @@ func main() {
 
 	var cnt, tmp, kase, n1, n2 int
 	for set := 1; ; set++ {
-		matrix = make([][]bool, n+1)
+		matrix := make([][]bool, n+1)
 		for i := range matrix {
 			matrix[i] = make([]bool, n+1)
 		}
@@ -56,7 +52,7 @@ func main() {
 		fmt.Fprintf(out, "Test Set #%d\n", set)
 		for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 			fmt.Fscanf(in, "%d%d", &n1, &n2)
-			fmt.Fprintf(out, "%2d to %2d: %d\n", n1, n2, bfs(n1, n2))
+			fmt.Fprintf(out, "%2d to %2d: %d\n", n1, n2, bfs(n1, n2, matrix))
 		}
 		fmt.Fprintln(out)
 	}

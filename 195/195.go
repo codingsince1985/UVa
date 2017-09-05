@@ -55,7 +55,6 @@ func main() {
 			return chars[i] <= toUpper(chars[j])
 		})
 		word := make([]byte, len(chars))
-		visited := make([]bool, len(chars))
-		dfs(0, word, visited)
+		dfs(0, word, make([]bool, len(chars)))
 	}
 }
