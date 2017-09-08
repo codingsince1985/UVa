@@ -11,7 +11,7 @@ const max = 46340
 
 var primes = sieve()
 
-func sieve() []int {
+func sieve() []bool {
 	p := make([]bool, max+1)
 	p[0], p[1] = true, true
 	for i := 2; i*i <= max; i++ {
@@ -21,13 +21,7 @@ func sieve() []int {
 			}
 		}
 	}
-	var ps []int
-	for i, vi := range p {
-		if !vi {
-			ps = append(ps, i)
-		}
-	}
-	return ps
+	return p
 }
 
 func gcd(a, b int) int {
@@ -38,19 +32,20 @@ func gcd(a, b int) int {
 }
 
 func primeFactor(n int) map[int]int {
-	pf := make(map[int]int)
+	factors := make(map[int]int)
 	for n > 1 {
-		for _, prime := range primes {
-			for n%prime == 0 {
-				pf[prime]++
-				n /= prime
-			}
-			if n == 1 {
-				break
+		for i, v := range primes {
+			if !v {
+				for ; n%i == 0; n /= i {
+					factors[i]++
+				}
+				if n == 1 {
+					break
+				}
 			}
 		}
 	}
-	return pf
+	return factors
 }
 
 func main() {
@@ -69,9 +64,8 @@ func main() {
 			negative = true
 			x = -x
 		}
-		pf := primeFactor(x)
-		g := 0
-		for _, v := range pf {
+		var g int
+		for _, v := range primeFactor(x) {
 			if g == 0 {
 				g = v
 			} else {
