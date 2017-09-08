@@ -34,6 +34,7 @@ UVa 131 - [The Psychic Poker Player](https://uva.onlinejudge.org/external/1/131.
 UVa 133 - [The Dole Queue](https://uva.onlinejudge.org/external/1/133.pdf)  
 UVa 136 - [Ugly Numbers](https://uva.onlinejudge.org/external/1/136.pdf)  
 UVa 138 - [Street Numbers](https://uva.onlinejudge.org/external/1/138.pdf)  
+UVa 139 - [Telephone Tangles](https://uva.onlinejudge.org/external/1/139.pdf)  
 UVa 140 - [Bandwidth](https://uva.onlinejudge.org/external/1/140.pdf)  
 UVa 141 - [The Spot Game](https://uva.onlinejudge.org/external/1/141.pdf)  
 UVa 142 - [Mouse Clicks](https://uva.onlinejudge.org/external/1/142.pdf)  
