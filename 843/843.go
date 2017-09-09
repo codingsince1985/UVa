@@ -10,10 +10,7 @@ import (
 	"strings"
 )
 
-var (
-	out               *os.File
-	dictionary, words []string
-)
+var dictionary, words []string
 
 func sortWords(words []string) []string {
 	sort.Slice(words, func(i, j int) bool {
@@ -111,7 +108,7 @@ func backtracking(level int, m1, m2 map[byte]byte) map[byte]byte {
 	return nil
 }
 
-func solve(line string) {
+func solve(out *os.File, line string) {
 	sortWords(dictionary)
 	words = strings.Fields(line)
 	sortWords(words)
@@ -133,7 +130,7 @@ func solve(line string) {
 func main() {
 	in, _ := os.Open("843.in")
 	defer in.Close()
-	out, _ = os.Create("843.out")
+	out, _ := os.Create("843.out")
 	defer out.Close()
 
 	var n int
@@ -146,6 +143,6 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 	for s.Scan() {
-		solve(s.Text())
+		solve(out, s.Text())
 	}
 }

@@ -7,9 +7,7 @@ import (
 	"os"
 )
 
-var out *os.File
-
-func solve(s int, p, c []int) {
+func solve(out *os.File, s int, p, c []int) {
 	for i := range p {
 		if s >= c[i] {
 			fmt.Fprintln(out, "No problem! :D")
@@ -24,7 +22,7 @@ func solve(s int, p, c []int) {
 func main() {
 	in, _ := os.Open("11608.in")
 	defer in.Close()
-	out, _ = os.Create("11608.out")
+	out, _ := os.Create("11608.out")
 	defer out.Close()
 
 	var s int
@@ -41,6 +39,6 @@ func main() {
 			fmt.Fscanf(in, "%d", &c[i])
 		}
 		fmt.Fprintf(out, "Case %d:\n", kase)
-		solve(s, p, c)
+		solve(out, s, p, c)
 	}
 }

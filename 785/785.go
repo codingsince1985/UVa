@@ -9,7 +9,6 @@ import (
 )
 
 var (
-	out        *os.File
 	grid       [][]byte
 	directions = [][2]int{{0, -1}, {1, 0}, {0, 1}, {-1, 0}}
 )
@@ -23,7 +22,7 @@ func dfs(x, y int, cell byte) {
 	}
 }
 
-func solve() {
+func solve(out *os.File) {
 	for y, row := range grid {
 		for x, cell := range row {
 			if cell != 'X' && cell != ' ' {
@@ -39,7 +38,7 @@ func solve() {
 func main() {
 	in, _ := os.Open("785.in")
 	defer in.Close()
-	out, _ = os.Create("785.out")
+	out, _ := os.Create("785.out")
 	defer out.Close()
 
 	s := bufio.NewScanner(in)
@@ -47,7 +46,7 @@ func main() {
 
 	for s.Scan() {
 		if line := s.Text(); line == "_____________________________" {
-			solve()
+			solve(out)
 			fmt.Fprintln(out, line)
 			grid = nil
 		} else {

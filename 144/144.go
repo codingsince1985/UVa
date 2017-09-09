@@ -7,11 +7,9 @@ import (
 	"os"
 )
 
-var out *os.File
-
 type student struct{ id, amount int }
 
-func atm(queue []student, k int) {
+func atm(out *os.File, queue []student, k int) {
 	for len(queue) > 0 {
 		for i := 1; len(queue) > 0 && i <= k; i++ {
 			amount := i
@@ -35,7 +33,7 @@ func atm(queue []student, k int) {
 func main() {
 	in, _ := os.Open("144.in")
 	defer in.Close()
-	out, _ = os.Create("144.out")
+	out, _ := os.Create("144.out")
 	defer out.Close()
 
 	var n, k int
@@ -47,6 +45,6 @@ func main() {
 		for i := range queue {
 			queue[i] = student{i + 1, 40}
 		}
-		atm(queue, k)
+		atm(out, queue, k)
 	}
 }

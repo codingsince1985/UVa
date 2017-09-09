@@ -10,9 +10,7 @@ import (
 	"strings"
 )
 
-var out *os.File
-
-func solve(k int, a1 []int) {
+func solve(out *os.File, k int, a1 []int) {
 	a2 := make([]int, len(a1)-1)
 	a2[0] = a1[0]
 	fmt.Fprintf(out, "q(x): %d", a2[0])
@@ -26,7 +24,7 @@ func solve(k int, a1 []int) {
 func main() {
 	in, _ := os.Open("10719.in")
 	defer in.Close()
-	out, _ = os.Create("10719.out")
+	out, _ := os.Create("10719.out")
 	defer out.Close()
 
 	s := bufio.NewScanner(in)
@@ -44,6 +42,6 @@ func main() {
 			}
 			a = append(a, tmp)
 		}
-		solve(k, a)
+		solve(out, k, a)
 	}
 }

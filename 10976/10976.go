@@ -7,11 +7,9 @@ import (
 	"os"
 )
 
-var out *os.File
-
 type solution struct{ x, y int }
 
-func solve(k int) {
+func solve(out *os.File, k int) {
 	var solutions []solution
 	for y := k + 1; y <= k*2; y++ {
 		if (y*k)%(y-k) == 0 {
@@ -27,7 +25,7 @@ func solve(k int) {
 func main() {
 	in, _ := os.Open("10976.in")
 	defer in.Close()
-	out, _ = os.Create("10976.out")
+	out, _ := os.Create("10976.out")
 	defer out.Close()
 
 	var k int
@@ -35,6 +33,6 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%d", &k); err != nil {
 			break
 		}
-		solve(k)
+		solve(out, k)
 	}
 }

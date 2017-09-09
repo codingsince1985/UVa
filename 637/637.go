@@ -7,12 +7,9 @@ import (
 	"os"
 )
 
-var (
-	out   *os.File
-	pages = [2]string{"front", "back "}
-)
+var pages = [2]string{"front", "back "}
 
-func solve(n int) {
+func solve(out *os.File, n int) {
 	sheet := n / 4
 	if n%4 != 0 {
 		sheet++
@@ -51,7 +48,7 @@ here:
 func main() {
 	in, _ := os.Open("637.in")
 	defer in.Close()
-	out, _ = os.Create("637.out")
+	out, _ := os.Create("637.out")
 	defer out.Close()
 
 	var n int
@@ -59,6 +56,6 @@ func main() {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		solve(n)
+		solve(out, n)
 	}
 }

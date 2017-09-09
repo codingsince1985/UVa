@@ -9,10 +9,7 @@ import (
 
 type sides struct{ front, back, left, right, top, bottom int }
 
-var (
-	side = []string{"front", "back", "left", "right", "top", "bottom"}
-	out  *os.File
-)
+var side = []string{"front", "back", "left", "right", "top", "bottom"}
 
 func getBottomColor(t int, c sides) int {
 	switch t {
@@ -81,7 +78,7 @@ func solve(l int, c []sides) ([][6][2]int, int, [2]int) {
 	return pre, mx, st
 }
 
-func output(pre [][6][2]int, mx int, st [2]int) {
+func output(out *os.File, pre [][6][2]int, mx int, st [2]int) {
 	res := [][2]int{st}
 	for i := 0; i < mx-1; i++ {
 		res = append(res, pre[st[0]][st[1]])
@@ -95,7 +92,7 @@ func output(pre [][6][2]int, mx int, st [2]int) {
 func main() {
 	in, _ := os.Open("10051.in")
 	defer in.Close()
-	out, _ = os.Create("10051.out")
+	out, _ := os.Create("10051.out")
 	defer out.Close()
 
 	var n int
@@ -112,6 +109,6 @@ func main() {
 			fmt.Fprintln(out)
 		}
 		fmt.Fprintf(out, "Case #%d\n%d\n", kase, mx)
-		output(pre, mx, st)
+		output(out, pre, mx, st)
 	}
 }

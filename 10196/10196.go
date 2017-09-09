@@ -7,8 +7,6 @@ import (
 	"os"
 )
 
-var out *os.File
-
 type point struct{ x, y int }
 
 func find(piece byte, board [8][8]byte) point {
@@ -93,7 +91,7 @@ func checkBlack(board [8][8]byte) bool {
 		checkKnight(king, board, 'N')
 }
 
-func check(kase int, board [8][8]byte) {
+func check(out *os.File, kase int, board [8][8]byte) {
 	fmt.Fprintf(out, "Game #%d: ", kase)
 	switch {
 	case checkWhite(board):
@@ -108,7 +106,7 @@ func check(kase int, board [8][8]byte) {
 func main() {
 	in, _ := os.Open("10196.in")
 	defer in.Close()
-	out, _ = os.Create("10196.out")
+	out, _ := os.Create("10196.out")
 	defer out.Close()
 
 	var line string
@@ -128,6 +126,6 @@ func main() {
 			break
 		}
 		fmt.Fscanln(in)
-		check(kase, board)
+		check(out, kase, board)
 	}
 }

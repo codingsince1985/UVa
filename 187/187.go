@@ -14,17 +14,14 @@ const (
 	outOfBalance = "999"
 )
 
-var (
-	out        *os.File
-	accountMap map[string]string
-)
+var accountMap map[string]string
 
 type transaction struct {
 	accountNumber string
 	amount        int
 }
 
-func solve(sequence string, transactions []transaction) {
+func solve(out *os.File, sequence string, transactions []transaction) {
 	var balance int
 	for _, txn := range transactions {
 		balance += txn.amount
@@ -43,7 +40,7 @@ func solve(sequence string, transactions []transaction) {
 func main() {
 	in, _ := os.Open("187.in")
 	defer in.Close()
-	out, _ = os.Create("187.out")
+	out, _ := os.Create("187.out")
 	defer out.Close()
 
 	s := bufio.NewScanner(in)
@@ -62,11 +59,11 @@ func main() {
 	var amount int
 	for s.Scan() {
 		if line = s.Text(); strings.HasPrefix(line, end) {
-			solve(sequence, transactions)
+			solve(out, sequence, transactions)
 			break
 		}
 		if sequence != "" && sequence != line[:3] {
-			solve(sequence, transactions)
+			solve(out, sequence, transactions)
 			transactions = nil
 		}
 		sequence = line[:3]

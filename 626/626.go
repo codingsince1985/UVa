@@ -7,9 +7,7 @@ import (
 	"os"
 )
 
-var out *os.File
-
-func solve(matrix [][]bool) {
+func solve(out *os.File, matrix [][]bool) {
 	var count int
 	for i := range matrix {
 		for j := range matrix {
@@ -27,7 +25,7 @@ func solve(matrix [][]bool) {
 func main() {
 	in, _ := os.Open("626.in")
 	defer in.Close()
-	out, _ = os.Create("626.out")
+	out, _ := os.Create("626.out")
 	defer out.Close()
 
 	var n, tmp int
@@ -43,6 +41,6 @@ func main() {
 				matrix[i][j] = tmp == 1
 			}
 		}
-		solve(matrix)
+		solve(out, matrix)
 	}
 }

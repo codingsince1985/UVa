@@ -10,14 +10,13 @@ import (
 
 var (
 	n, m, move      int
-	out             *os.File
 	directions      = [][2]int{{-1, 0}, {0, 1}, {1, 0}, {0, -1}}
 	store, robotMap [][]byte
 	visited         [][]bool
 	done            bool
 )
 
-func output() {
+func output(out *os.File) {
 	fmt.Fprintln(out)
 	for _, row := range robotMap {
 		fmt.Fprintln(out, strings.Repeat("|---", m)+"|")
@@ -60,13 +59,12 @@ func solve(x, y int) {
 	}
 	move, done = 0, false
 	dfs(x, y)
-	output()
 }
 
 func main() {
 	in, _ := os.Open("10500.in")
 	defer in.Close()
-	out, _ = os.Create("10500.out")
+	out, _ := os.Create("10500.out")
 	defer out.Close()
 
 	var x, y int
@@ -88,5 +86,6 @@ func main() {
 			fmt.Fscanln(in)
 		}
 		solve(x-1, y-1)
+		output(out)
 	}
 }

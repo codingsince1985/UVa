@@ -7,10 +7,7 @@ import (
 	"os"
 )
 
-var (
-	out    *os.File
-	blocks [][]int
-)
+var blocks [][]int
 
 func initBlocks(n int) {
 	blocks = make([][]int, n)
@@ -75,7 +72,7 @@ func process(s1, s2 string, n1, n2 int) {
 	}
 }
 
-func output() {
+func output(out *os.File) {
 	for i := range blocks {
 		fmt.Fprintf(out, "%d:", i)
 		for j := range blocks[i] {
@@ -88,7 +85,7 @@ func output() {
 func main() {
 	in, _ := os.Open("101.in")
 	defer in.Close()
-	out, _ = os.Create("101.out")
+	out, _ := os.Create("101.out")
 	defer out.Close()
 
 	var n, n1, n2 int
@@ -102,5 +99,5 @@ func main() {
 		fmt.Fscanf(in, "%d%s%d", &n1, &s2, &n2)
 		process(s1, s2, n1, n2)
 	}
-	output()
+	output(out)
 }

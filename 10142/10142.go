@@ -11,8 +11,6 @@ import (
 	"strings"
 )
 
-var out *os.File
-
 func findLowest(total []int, min int) map[int]bool {
 	lowest := make(map[int]bool)
 	for i, v := range total {
@@ -40,7 +38,7 @@ func eliminate(candidates []string, votes [][]int, eliminated map[int]bool) {
 	}
 }
 
-func count(candidates []string, votes [][]int) {
+func count(out *os.File, candidates []string, votes [][]int) {
 	total := make([]int, len(candidates))
 	for _, v := range votes {
 		if len(v) > 0 {
@@ -74,14 +72,14 @@ func count(candidates []string, votes [][]int) {
 	default:
 		lowest := findLowest(total, min)
 		eliminate(candidates, votes, lowest)
-		count(candidates, votes)
+		count(out, candidates, votes)
 	}
 }
 
 func main() {
 	in, _ := os.Open("10142.in")
 	defer in.Close()
-	out, _ = os.Create("10142.out")
+	out, _ := os.Create("10142.out")
 	defer out.Close()
 
 	s := bufio.NewScanner(in)
@@ -111,7 +109,7 @@ func main() {
 			}
 			votes = append(votes, vote)
 		}
-		count(candidates, votes)
+		count(out, candidates, votes)
 		if kase > 1 {
 			fmt.Fprintln(out)
 		}

@@ -8,13 +8,11 @@ import (
 	"sort"
 )
 
-var out *os.File
-
 type node struct{ x, y int }
 
 func sameLine(n1, n2, n3 node) bool { return (n2.x-n1.x)*(n3.y-n1.y) == (n2.y-n1.y)*(n3.x-n1.x) }
 
-func output(nodes []node, lines [][]int) {
+func output(out *os.File, nodes []node, lines [][]int) {
 	if len(lines) == 0 {
 		fmt.Fprintln(out, "No lines were found")
 		return
@@ -28,7 +26,7 @@ func output(nodes []node, lines [][]int) {
 	}
 }
 
-func solve(nodes []node) {
+func solve(nodes []node) [][]int {
 	sort.Slice(nodes, func(i, j int) bool {
 		if nodes[i].x != nodes[j].x {
 			return nodes[i].x < nodes[j].x
@@ -61,13 +59,13 @@ func solve(nodes []node) {
 			}
 		}
 	}
-	output(nodes, lines)
+	return lines
 }
 
 func main() {
 	in, _ := os.Open("184.in")
 	defer in.Close()
-	out, _ = os.Create("184.out")
+	out, _ := os.Create("184.out")
 	defer out.Close()
 
 	var x, y int
@@ -79,7 +77,8 @@ here:
 				if len(nodes) == 0 {
 					break here
 				}
-				solve(nodes)
+				lines := solve(nodes)
+				output(out, nodes, lines)
 				nodes = nil
 				continue
 			}

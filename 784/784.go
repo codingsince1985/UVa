@@ -10,10 +10,7 @@ import (
 	"strings"
 )
 
-var (
-	out        *os.File
-	directions = [][2]int{{0, -1}, {1, 0}, {0, 1}, {-1, 0}}
-)
+var directions = [][2]int{{0, -1}, {1, 0}, {0, 1}, {-1, 0}}
 
 func dfs(x, y int, maze [][]byte) {
 	maze[x][y] = '#'
@@ -25,7 +22,7 @@ func dfs(x, y int, maze [][]byte) {
 	}
 }
 
-func output(maze [][]byte, line string) {
+func output(out *os.File, maze [][]byte, line string) {
 	for _, vi := range maze {
 		fmt.Fprintln(out, string(vi))
 	}
@@ -46,7 +43,7 @@ func find(maze [][]byte) (int, int) {
 func main() {
 	in, _ := os.Open("784.in")
 	defer in.Close()
-	out, _ = os.Create("784.out")
+	out, _ := os.Create("784.out")
 	defer out.Close()
 
 	s := bufio.NewScanner(in)
@@ -59,7 +56,7 @@ func main() {
 		if line := s.Text(); strings.HasPrefix(line, "_") {
 			x, y := find(maze)
 			dfs(x, y, maze)
-			output(maze, line)
+			output(out, maze, line)
 			maze = nil
 			kase--
 		} else {

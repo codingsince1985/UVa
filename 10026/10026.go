@@ -8,11 +8,9 @@ import (
 	"sort"
 )
 
-var out *os.File
-
 type job struct{ no, time, fine int }
 
-func output(jobs []job) {
+func output(out *os.File, jobs []job) {
 	first := true
 	for _, j := range jobs {
 		if first {
@@ -28,7 +26,7 @@ func output(jobs []job) {
 func main() {
 	in, _ := os.Open("10026.in")
 	defer in.Close()
-	out, _ = os.Create("10026.out")
+	out, _ := os.Create("10026.out")
 	defer out.Close()
 
 	var kase, n int
@@ -51,6 +49,6 @@ func main() {
 		} else {
 			fmt.Fprintln(out)
 		}
-		output(jobs)
+		output(out, jobs)
 	}
 }

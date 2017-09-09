@@ -9,8 +9,6 @@ import (
 	"strings"
 )
 
-var out *os.File
-
 func solve(thesis string) (map[int]int, int) {
 	thesis = strings.Replace(thesis, "-", "", -1)
 	lengthMap := make(map[int]int)
@@ -37,7 +35,7 @@ func solve(thesis string) (map[int]int, int) {
 	return lengthMap, max
 }
 
-func output(lengthMap map[int]int, max int) {
+func output(out *os.File, lengthMap map[int]int, max int) {
 	for i := 1; i <= max; i++ {
 		if lengthMap[i] > 0 {
 			fmt.Fprintf(out, "%d %d\n", i, lengthMap[i])
@@ -49,7 +47,7 @@ func output(lengthMap map[int]int, max int) {
 func main() {
 	in, _ := os.Open("10293.in")
 	defer in.Close()
-	out, _ = os.Create("10293.out")
+	out, _ := os.Create("10293.out")
 	defer out.Close()
 
 	s := bufio.NewScanner(in)
@@ -68,6 +66,7 @@ func main() {
 			}
 			s.Scan()
 		}
-		output(solve(thesis))
+		lengthMap, max := solve(thesis)
+		output(out, lengthMap, max)
 	}
 }

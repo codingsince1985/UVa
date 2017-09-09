@@ -18,7 +18,6 @@ type card struct {
 }
 
 var (
-	out        *os.File
 	valueMap   = map[byte]int{'T': 10, 'J': 11, 'Q': 12, 'K': 13, 'A': 14}
 	hand, deck []card
 	highest    int
@@ -144,7 +143,7 @@ func dfs(level int, used []bool) {
 	dfs(level+1, used)
 }
 
-func solve(line string) {
+func solve(out *os.File, line string) {
 	token := strings.Fields(line)
 	hand = buildCards(token[:cardNumber])
 	deck = buildCards(token[cardNumber:])
@@ -156,13 +155,13 @@ func solve(line string) {
 func main() {
 	in, _ := os.Open("131.in")
 	defer in.Close()
-	out, _ = os.Create("131.out")
+	out, _ := os.Create("131.out")
 	defer out.Close()
 
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
 	for s.Scan() {
-		solve(s.Text())
+		solve(out, s.Text())
 	}
 }

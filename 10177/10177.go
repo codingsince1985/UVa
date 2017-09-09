@@ -7,9 +7,7 @@ import (
 	"os"
 )
 
-var out *os.File
-
-func solve(n int) {
+func solve(out *os.File, n int) {
 	s2 := n * (n + 1) * (2*n + 1) / 6
 	r2 := (n+1)*n/2*(n+1)*n/2 - s2
 	s3 := n * (n + 1) / 2 * n * (n + 1) / 2
@@ -25,7 +23,7 @@ func solve(n int) {
 func main() {
 	in, _ := os.Open("10177.in")
 	defer in.Close()
-	out, _ = os.Create("10177.out")
+	out, _ := os.Create("10177.out")
 	defer out.Close()
 
 	var n int
@@ -33,6 +31,6 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
 		}
-		solve(n)
+		solve(out, n)
 	}
 }

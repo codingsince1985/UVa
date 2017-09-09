@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	out        *os.File
+	paths      []string
 	m, n       int
 	stones     = "IEHOVA#"
 	directions = map[string][2]int{"forth": {0, -1}, "left": {-1, 0}, "right": {1, 0}}
@@ -25,14 +25,14 @@ func findStart() int {
 	return -1
 }
 
-func dfs(step, x, y int, paths []string) {
+func dfs(step, x, y int, path []string) {
 	if step == len(stones) {
-		fmt.Fprintln(out, strings.Join(paths, " "))
+		paths = append(paths, fmt.Sprint(strings.Join(path, " ")))
 		return
 	}
 	for k, v := range directions {
 		if nx, ny := x+v[0], y+v[1]; nx >= 0 && nx < n && ny >= 0 && ny < m && grid[ny][nx] == stones[step] {
-			dfs(step+1, nx, ny, append(paths, k))
+			dfs(step+1, nx, ny, append(path, k))
 		}
 	}
 }
@@ -40,7 +40,7 @@ func dfs(step, x, y int, paths []string) {
 func main() {
 	in, _ := os.Open("10452.in")
 	defer in.Close()
-	out, _ = os.Create("10452.out")
+	out, _ := os.Create("10452.out")
 	defer out.Close()
 
 	var line string
@@ -52,6 +52,8 @@ func main() {
 			fmt.Fscanf(in, "%s", &line)
 			grid[i] = []byte(line)
 		}
+		paths = nil
 		dfs(0, findStart(), m-1, nil)
+		fmt.Fprintln(out, strings.Join(paths, "\n"))
 	}
 }

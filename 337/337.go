@@ -15,10 +15,7 @@ type terminal struct {
 	row, column int
 }
 
-var (
-	term terminal
-	out  *os.File
-)
+var term terminal
 
 func clear() {
 	for i := range term.text {
@@ -95,7 +92,7 @@ func display(input string) {
 	}
 }
 
-func output(kase int) {
+func output(out *os.File, kase int) {
 	fmt.Fprintf(out, "Case %d\n+----------+\n", kase)
 	for _, row := range term.text {
 		fmt.Fprint(out, "|")
@@ -107,7 +104,7 @@ func output(kase int) {
 func main() {
 	in, _ := os.Open("337.in")
 	defer in.Close()
-	out, _ = os.Create("337.out")
+	out, _ := os.Create("337.out")
 	defer out.Close()
 
 	s := bufio.NewScanner(in)
@@ -121,6 +118,6 @@ func main() {
 			break
 		}
 		display(input)
-		output(kase)
+		output(out, kase)
 	}
 }

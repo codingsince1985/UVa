@@ -7,13 +7,11 @@ import (
 	"os"
 )
 
-var out *os.File
-
 type point struct{ x, y float64 }
 
 type rectangle struct{ p1, p2 point }
 
-func testIn(count int, p point, rectangles []rectangle) {
+func testIn(out *os.File, count int, p point, rectangles []rectangle) {
 	inAny := false
 	for i, v := range rectangles {
 		if p.x > v.p1.x && p.x < v.p2.x && p.y < v.p1.y && p.y > v.p2.y {
@@ -29,7 +27,7 @@ func testIn(count int, p point, rectangles []rectangle) {
 func main() {
 	in, _ := os.Open("476.in")
 	defer in.Close()
-	out, _ = os.Create("476.out")
+	out, _ := os.Create("476.out")
 	defer out.Close()
 
 	var rectangles []rectangle
@@ -47,6 +45,6 @@ func main() {
 		if fmt.Fscanf(in, "%f%f", &p1.x, &p1.y); p1.x == 9999.9 && p1.y == 9999.9 {
 			break
 		}
-		testIn(count, p1, rectangles)
+		testIn(out, count, p1, rectangles)
 	}
 }

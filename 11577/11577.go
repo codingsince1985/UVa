@@ -10,9 +10,7 @@ import (
 	"strings"
 )
 
-var out *os.File
-
-func solve(line string) {
+func solve(out *os.File, line string) {
 	charMap := make(map[byte]int)
 	var max int
 	for i := range line {
@@ -34,13 +32,13 @@ func solve(line string) {
 func main() {
 	in, _ := os.Open("11577.in")
 	defer in.Close()
-	out, _ = os.Create("11577.out")
+	out, _ := os.Create("11577.out")
 	defer out.Close()
 
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 	s.Scan()
 	for kase, _ := strconv.Atoi(s.Text()); kase > 0 && s.Scan(); kase-- {
-		solve(strings.ToLower(s.Text()))
+		solve(out, strings.ToLower(s.Text()))
 	}
 }

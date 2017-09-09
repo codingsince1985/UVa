@@ -9,12 +9,9 @@ import (
 	"strings"
 )
 
-var (
-	out        *os.File
-	vocabulary [][2]string
-)
+var vocabulary [][2]string
 
-func solve(word string) {
+func solve(out *os.File, word string) {
 	fmt.Fprintf(out, "Anagrams for: %s\n", word)
 	var count int
 	sw := sortWord(word)
@@ -38,7 +35,7 @@ func sortWord(word string) string {
 func main() {
 	in, _ := os.Open("630.in")
 	defer in.Close()
-	out, _ = os.Create("630.out")
+	out, _ := os.Create("630.out")
 	defer out.Close()
 
 	var t, n int
@@ -61,7 +58,7 @@ func main() {
 			if fmt.Fscanf(in, "%s", &word); word == "END" {
 				break
 			}
-			solve(word)
+			solve(out, word)
 		}
 	}
 }

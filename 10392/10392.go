@@ -9,10 +9,7 @@ import (
 
 const max = 10000000
 
-var (
-	out    *os.File
-	primes = sieve()
-)
+var primes = sieve()
 
 func sieve() []bool {
 	p := make([]bool, max+1)
@@ -42,7 +39,7 @@ func isPrime(n int) bool {
 	return true
 }
 
-func primeFactorize(n int64) {
+func primeFactorize(out *os.File, n int64) {
 	for idx := int64(2); n > 1 && idx*idx <= n; idx++ {
 		if isPrime(int(idx)) {
 			for n%idx == 0 {
@@ -60,7 +57,7 @@ func primeFactorize(n int64) {
 func main() {
 	in, _ := os.Open("10392.in")
 	defer in.Close()
-	out, _ = os.Create("10392.out")
+	out, _ := os.Create("10392.out")
 	defer out.Close()
 
 	var n int64
@@ -68,6 +65,6 @@ func main() {
 		if fmt.Fscanf(in, "%d", &n); n < 0 {
 			break
 		}
-		primeFactorize(n)
+		primeFactorize(out, n)
 	}
 }

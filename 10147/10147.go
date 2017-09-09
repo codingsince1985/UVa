@@ -17,10 +17,7 @@ type (
 	}
 )
 
-var (
-	out *os.File
-	f   []int
-)
+var f []int
 
 func unionFind(x int, f []int) int {
 	if f[x] != x {
@@ -33,7 +30,7 @@ func distance(t1, t2 town) float64 {
 	return math.Sqrt((t1.x-t2.x)*(t1.x-t2.x) + (t1.y-t2.y)*(t1.y-t2.y))
 }
 
-func solve(n int, towns []town) {
+func solve(out *os.File, n int, towns []town) {
 	highways := buildHighways(n, towns)
 	noNew := true
 	for _, h := range highways {
@@ -62,7 +59,7 @@ func buildHighways(n int, towns []town) []highway {
 func main() {
 	in, _ := os.Open("10147.in")
 	defer in.Close()
-	out, _ = os.Create("10147.out")
+	out, _ := os.Create("10147.out")
 	defer out.Close()
 
 	var kase, n, m, t1, t2 int
@@ -88,6 +85,6 @@ func main() {
 		} else {
 			fmt.Fprintln(out)
 		}
-		solve(n, towns)
+		solve(out, n, towns)
 	}
 }

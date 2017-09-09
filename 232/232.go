@@ -12,10 +12,7 @@ const (
 	down
 )
 
-var (
-	r, c int
-	out  *os.File
-)
+var r, c int
 
 type cell struct{ r, c, v int }
 
@@ -40,7 +37,7 @@ func order(board [][]byte) []cell {
 	return order
 }
 
-func outputAcross(board [][]byte, order []cell) {
+func outputAcross(out *os.File, board [][]byte, order []cell) {
 	fmt.Fprintln(out, "Across")
 	for i, curr := range order {
 		if curr.v&across != 0 {
@@ -53,7 +50,7 @@ func outputAcross(board [][]byte, order []cell) {
 	}
 }
 
-func outputDown(board [][]byte, order []cell) {
+func outputDown(out *os.File, board [][]byte, order []cell) {
 	fmt.Fprintln(out, "Down")
 	for i, curr := range order {
 		if curr.v&down != 0 {
@@ -69,7 +66,7 @@ func outputDown(board [][]byte, order []cell) {
 func main() {
 	in, _ := os.Open("232.in")
 	defer in.Close()
-	out, _ = os.Create("232.out")
+	out, _ := os.Create("232.out")
 	defer out.Close()
 
 	var line string
@@ -88,7 +85,7 @@ func main() {
 		}
 		fmt.Fprintf(out, "puzzle #%d:\n", kase)
 		mark := order(board)
-		outputAcross(board, mark)
-		outputDown(board, mark)
+		outputAcross(out, board, mark)
+		outputDown(out, board, mark)
 	}
 }

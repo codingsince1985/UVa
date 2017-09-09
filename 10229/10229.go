@@ -11,7 +11,6 @@ import (
 var (
 	i, o, a [2][2]big.Int
 	two     = big.NewInt(2)
-	out     *os.File
 )
 
 func multiply(a, b [2][2]big.Int, m int64) [2][2]big.Int {
@@ -32,7 +31,7 @@ func multiply(a, b [2][2]big.Int, m int64) [2][2]big.Int {
 	return tmp
 }
 
-func calc(n, m int64) {
+func calc(out *os.File, n, m int64) {
 	x, y := i, a
 	for n != 0 {
 		if n&1 == 1 {
@@ -60,7 +59,7 @@ func initialize() {
 func main() {
 	in, _ := os.Open("10229.in")
 	defer in.Close()
-	out, _ = os.Create("10229.out")
+	out, _ := os.Create("10229.out")
 	defer out.Close()
 
 	initialize()
@@ -69,6 +68,6 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%d%d", &n, &m); err != nil {
 			break
 		}
-		calc(n, m)
+		calc(out, n, m)
 	}
 }

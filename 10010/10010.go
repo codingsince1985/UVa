@@ -8,7 +8,6 @@ import (
 )
 
 var (
-	out        *os.File
 	m, n       int
 	directions = [][2]int{{-1, 0}, {-1, 1}, {0, 1}, {1, 1}, {1, 0}, {1, -1}, {0, -1}, {-1, -1}}
 )
@@ -33,7 +32,7 @@ here:
 	return false
 }
 
-func find(grid [][]byte, chars []byte) {
+func find(out *os.File, grid [][]byte, chars []byte) {
 	for x := range grid {
 		for y := range grid[x] {
 			if found(x, y, grid, chars) {
@@ -57,7 +56,7 @@ func toLower(word string) []byte {
 func main() {
 	in, _ := os.Open("10010.in")
 	defer in.Close()
-	out, _ = os.Create("10010.out")
+	out, _ := os.Create("10010.out")
 	defer out.Close()
 
 	var kase, words int
@@ -71,7 +70,7 @@ func main() {
 		}
 		for fmt.Fscanf(in, "%d", &words); words > 0; words-- {
 			fmt.Fscanf(in, "%s", &word)
-			find(grid, toLower(word))
+			find(out, grid, toLower(word))
 		}
 	}
 }

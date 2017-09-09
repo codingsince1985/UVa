@@ -7,9 +7,7 @@ import (
 	"os"
 )
 
-var out *os.File
-
-func output(coefficients []int64) {
+func output(out *os.File, coefficients []int64) {
 	var sign byte
 	for i := len(coefficients) - 1; i >= 0; i-- {
 		if coefficients[i] >= 0 {
@@ -40,7 +38,7 @@ func output(coefficients []int64) {
 	fmt.Fprintln(out, " = 0")
 }
 
-func solve(n int, roots []int64) {
+func solve(n int, roots []int64) []int64 {
 	coefficients := make([]int64, n+1)
 	coefficients[0] = 1
 	for i, root := range roots {
@@ -51,13 +49,13 @@ func solve(n int, roots []int64) {
 		}
 		copy(coefficients, dp)
 	}
-	output(coefficients)
+	return coefficients
 }
 
 func main() {
 	in, _ := os.Open("10326.in")
 	defer in.Close()
-	out, _ = os.Create("10326.out")
+	out, _ := os.Create("10326.out")
 	defer out.Close()
 
 	var n int
@@ -69,6 +67,6 @@ func main() {
 		for i := range roots {
 			fmt.Fscanf(in, "%d", &roots[i])
 		}
-		solve(n, roots)
+		output(out, solve(n, roots))
 	}
 }

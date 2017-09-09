@@ -8,8 +8,6 @@ import (
 	"sort"
 )
 
-var out *os.File
-
 func solve(l, r int, lines [][2]int) [][2]int {
 	maxRight := l
 	idx := -1
@@ -39,7 +37,7 @@ func solve(l, r int, lines [][2]int) [][2]int {
 	return ret
 }
 
-func output(r [][2]int) {
+func output(out *os.File, r [][2]int) {
 	fmt.Fprintln(out, len(r))
 	for _, v := range r {
 		fmt.Fprintln(out, v[0], v[1])
@@ -49,7 +47,7 @@ func output(r [][2]int) {
 func main() {
 	in, _ := os.Open("10020.in")
 	defer in.Close()
-	out, _ = os.Create("10020.out")
+	out, _ := os.Create("10020.out")
 	defer out.Close()
 
 	var kase, m int
@@ -64,7 +62,7 @@ func main() {
 			lines = append(lines, line)
 		}
 		sort.Slice(lines, func(i, j int) bool { return lines[i][0] < lines[j][0] })
-		output(solve(0, m, lines))
+		output(out, solve(0, m, lines))
 		if kase > 1 {
 			fmt.Fprintln(out)
 		}

@@ -9,7 +9,6 @@ import (
 )
 
 var (
-	out         *os.File
 	matrix, cut [][]bool
 	visited     []bool
 	depth, low  []int
@@ -45,7 +44,7 @@ func dfs(current, d, parent int) int {
 	return low[current]
 }
 
-func solve(n int) {
+func solve(out *os.File, n int) {
 	low = make([]int, n)
 	depth = make([]int, n)
 	cut = make([][]bool, n)
@@ -75,7 +74,7 @@ func solve(n int) {
 func main() {
 	in, _ := os.Open("796.in")
 	defer in.Close()
-	out, _ = os.Create("796.out")
+	out, _ := os.Create("796.out")
 	defer out.Close()
 
 	var n, m, s, t int
@@ -93,7 +92,7 @@ func main() {
 				matrix[s][t], matrix[t][s] = true, true
 			}
 		}
-		solve(n)
+		solve(out, n)
 		fmt.Fscanln(in)
 		fmt.Fscanln(in)
 	}

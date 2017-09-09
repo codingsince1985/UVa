@@ -11,17 +11,14 @@ import (
 	"strings"
 )
 
-var (
-	out        *os.File
-	keepLetter = func(r rune) rune {
-		if r >= rune('a') && r <= rune('z') || r >= rune('A') && r <= rune('Z') {
-			return r
-		}
-		return -1
+var keepLetter = func(r rune) rune {
+	if r >= rune('a') && r <= rune('z') || r >= rune('A') && r <= rune('Z') {
+		return r
 	}
-)
+	return -1
+}
 
-func solve(words []string) {
+func solve(out *os.File, words []string) {
 	wordMap := make(map[string]string)
 	for _, word := range words {
 		s := strings.Split(strings.Map(keepLetter, word), "")
@@ -42,7 +39,7 @@ func solve(words []string) {
 func main() {
 	in, _ := os.Open("454.in")
 	defer in.Close()
-	out, _ = os.Create("454.out")
+	out, _ := os.Create("454.out")
 	defer out.Close()
 
 	s := bufio.NewScanner(in)
@@ -67,7 +64,7 @@ func main() {
 		} else {
 			fmt.Fprintln(out)
 		}
-		solve(words)
+		solve(out, words)
 		words = nil
 	}
 }

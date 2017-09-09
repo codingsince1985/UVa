@@ -14,7 +14,6 @@ type node struct {
 
 var (
 	elementMap map[int]int
-	in, out    *os.File
 	head, tail *node
 )
 
@@ -40,7 +39,7 @@ func enqueue(element int) {
 	tail = tail.next
 }
 
-func solve() {
+func solve(in, out *os.File) {
 	var command string
 	var element int
 	for {
@@ -60,9 +59,9 @@ func solve() {
 }
 
 func main() {
-	in, _ = os.Open("540.in")
+	in, _ := os.Open("540.in")
 	defer in.Close()
-	out, _ = os.Create("540.out")
+	out, _ := os.Create("540.out")
 	defer out.Close()
 
 	var t, n, element int
@@ -78,6 +77,6 @@ func main() {
 			}
 		}
 		fmt.Fprintf(out, "Scenario #%d\n", kase)
-		solve()
+		solve(in, out)
 	}
 }

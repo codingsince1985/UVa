@@ -10,8 +10,6 @@ import (
 	"strconv"
 )
 
-var out *os.File
-
 type job struct{ start, end int }
 
 func buildJob(h1, m1, h2, m2 int) job { return job{h1*60 + m1, h2*60 + m2} }
@@ -33,7 +31,7 @@ func find(jobs []job) (int, int) {
 	return max, start
 }
 
-func output(kase, max, start int) {
+func output(out *os.File, kase, max, start int) {
 	var duration string
 	if max < 60 {
 		duration = strconv.Itoa(max) + " minutes"
@@ -47,7 +45,7 @@ func output(kase, max, start int) {
 func main() {
 	in, _ := os.Open("10191.in")
 	defer in.Close()
-	out, _ = os.Create("10191.out")
+	out, _ := os.Create("10191.out")
 	defer out.Close()
 
 	s := bufio.NewScanner(in)
@@ -62,6 +60,6 @@ func main() {
 		}
 		sort.Slice(js, func(i, j int) bool { return js[i].start < js[j].start })
 		max, start := find(js)
-		output(kase, max, start)
+		output(out, kase, max, start)
 	}
 }

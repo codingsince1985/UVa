@@ -8,11 +8,9 @@ import (
 	"sort"
 )
 
-var out *os.File
-
 const max = 60
 
-func output(files []string, cols, maxLen int) {
+func output(out *os.File, files []string, cols, maxLen int) {
 	for i := 0; i < max; i++ {
 		fmt.Fprint(out, "-")
 	}
@@ -42,7 +40,7 @@ func output(files []string, cols, maxLen int) {
 func main() {
 	in, _ := os.Open("400.in")
 	defer in.Close()
-	out, _ = os.Create("400.out")
+	out, _ := os.Create("400.out")
 	defer out.Close()
 
 	var n int
@@ -61,6 +59,6 @@ func main() {
 		}
 		cols := (max + 2) / (maxLen + 2)
 		sort.Strings(files)
-		output(files, cols, maxLen)
+		output(out, files, cols, maxLen)
 	}
 }

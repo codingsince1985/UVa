@@ -7,10 +7,7 @@ import (
 	"os"
 )
 
-var (
-	out       *os.File
-	sum, m, k int64
-)
+var sum, m, k int64
 
 func binarySearch(high int64, books []int64) int64 {
 	var low, mid, sum, groups, i int64
@@ -49,7 +46,7 @@ func solve(books []int64) [][]int64 {
 	return scribers
 }
 
-func output(scribers [][]int64) {
+func output(out *os.File, scribers [][]int64) {
 	for i, scriber := range scribers {
 		s := fmt.Sprint(scriber)
 		fmt.Fprint(out, s[1:len(s)-1])
@@ -63,7 +60,7 @@ func output(scribers [][]int64) {
 func main() {
 	in, _ := os.Open("714.in")
 	defer in.Close()
-	out, _ = os.Create("714.out")
+	out, _ := os.Create("714.out")
 	defer out.Close()
 
 	var kase int
@@ -75,6 +72,6 @@ func main() {
 			fmt.Fscanf(in, "%d", &books[i])
 			sum += books[i]
 		}
-		output(solve(books))
+		output(out, solve(books))
 	}
 }

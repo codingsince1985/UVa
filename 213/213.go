@@ -10,10 +10,7 @@ import (
 	"strings"
 )
 
-var (
-	out *os.File
-	s   *bufio.Scanner
-)
+var s *bufio.Scanner
 
 func buildKey(header string) map[string]byte {
 	keyMap := make(map[string]byte)
@@ -38,7 +35,7 @@ func getLength(l string) int {
 	return n
 }
 
-func solve(header string) {
+func solve(out *os.File, header string) {
 	keyMap := buildKey(header)
 	var l int
 	var line, code string
@@ -63,7 +60,7 @@ func solve(header string) {
 func main() {
 	in, _ := os.Open("213.in")
 	defer in.Close()
-	out, _ = os.Create("213.out")
+	out, _ := os.Create("213.out")
 	defer out.Close()
 
 	s = bufio.NewScanner(in)
@@ -74,6 +71,6 @@ func main() {
 		if line = s.Text(); line == "" {
 			break
 		}
-		solve(line)
+		solve(out, line)
 	}
 }

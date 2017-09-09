@@ -7,9 +7,7 @@ import (
 	"os"
 )
 
-var out *os.File
-
-func output(ages [100]int) {
+func output(out *os.File, ages [100]int) {
 	first := true
 	for i, v := range ages {
 		for ; v > 0; v-- {
@@ -27,7 +25,7 @@ func output(ages [100]int) {
 func main() {
 	in, _ := os.Open("11462.in")
 	defer in.Close()
-	out, _ = os.Create("11462.out")
+	out, _ := os.Create("11462.out")
 	defer out.Close()
 
 	var n, age int
@@ -40,6 +38,6 @@ func main() {
 			fmt.Fscanf(in, "%d", &age)
 			ages[age]++
 		}
-		output(ages)
+		output(out, ages)
 	}
 }

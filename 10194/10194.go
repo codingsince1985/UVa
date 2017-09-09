@@ -11,17 +11,14 @@ import (
 	"strings"
 )
 
-var (
-	teamMap map[string]team
-	out     *os.File
-)
-
 type team struct {
 	name                              string
 	points                            int
 	games, wins, ties, losses         int
 	goalDiff, goalScored, goalAgainst int
 }
+
+var teamMap map[string]team
 
 func nextLine(s *bufio.Scanner) string {
 	s.Scan()
@@ -84,7 +81,7 @@ func process(a, b string, s1, s2 int) {
 	teamMap[a], teamMap[b] = t1, t2
 }
 
-func output(t []team) {
+func output(out *os.File, t []team) {
 	for i, v := range t {
 		fmt.Fprintf(out, "%d) %s %dp, %dg (%d-%d-%d), %dgd (%d-%d)\n",
 			i+1, v.name, v.points, v.games, v.wins, v.ties, v.losses, v.goalDiff, v.goalScored, v.goalAgainst)
@@ -94,7 +91,7 @@ func output(t []team) {
 func main() {
 	in, _ := os.Open("10194.in")
 	defer in.Close()
-	out, _ = os.Create("10194.out")
+	out, _ := os.Create("10194.out")
 	defer out.Close()
 
 	s := bufio.NewScanner(in)
@@ -119,7 +116,7 @@ func main() {
 
 		v := values(teamMap)
 		sort.Slice(v, func(i, j int) bool { return cmp(v[i], v[j]) })
-		output(v)
+		output(out, v)
 		if kase > 1 {
 			fmt.Fprintln(out)
 		}

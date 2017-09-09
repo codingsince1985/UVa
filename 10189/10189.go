@@ -10,7 +10,6 @@ import (
 var (
 	m, n  int
 	delta = []int{-1, 0, 1}
-	out   *os.File
 )
 
 func solve(field [][]byte) [][]byte {
@@ -35,7 +34,7 @@ func solve(field [][]byte) [][]byte {
 	return res
 }
 
-func output(field [][]byte) {
+func output(out *os.File, field [][]byte) {
 	for _, v := range field {
 		fmt.Fprintln(out, string(v))
 	}
@@ -44,7 +43,7 @@ func output(field [][]byte) {
 func main() {
 	in, _ := os.Open("10189.in")
 	defer in.Close()
-	out, _ = os.Create("10189.out")
+	out, _ := os.Create("10189.out")
 	defer out.Close()
 
 	var line string
@@ -61,6 +60,6 @@ func main() {
 			fmt.Fscanf(in, "%s", &line)
 			field[i] = []byte(line)
 		}
-		output(solve(field))
+		output(out, solve(field))
 	}
 }

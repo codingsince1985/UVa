@@ -15,7 +15,6 @@ type opcode struct {
 }
 
 var (
-	out         *os.File
 	instruction = []opcode{
 		{"ADD", 2}, {"SUB", 2}, {"MUL", 2}, {"DIV", 2}, {"MOV", 2}, {"BREQ", 1}, {"BRLE", 1}, {"BRLS", 1},
 		{"BRGE", 1}, {"BRGR", 1}, {"BRNE", 1}, {"BR", 1}, {"AND", 3}, {"OR", 3}, {"XOR", 3}, {"NOT", 1},
@@ -23,7 +22,7 @@ var (
 	operandPrefix = []string{"R", "$", "PC+", ""}
 )
 
-func decode(code string) {
+func decode(out *os.File, code string) {
 	r := strings.NewReader(code)
 	var num1, num2 uint16
 	for {
@@ -45,7 +44,7 @@ func decode(code string) {
 func main() {
 	in, _ := os.Open("448.in")
 	defer in.Close()
-	out, _ = os.Create("448.out")
+	out, _ := os.Create("448.out")
 	defer out.Close()
 
 	s := bufio.NewScanner(in)
@@ -55,5 +54,5 @@ func main() {
 	for s.Scan() {
 		code += s.Text()
 	}
-	decode(code)
+	decode(out, code)
 }

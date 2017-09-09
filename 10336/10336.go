@@ -9,7 +9,6 @@ import (
 )
 
 var (
-	out        *os.File
 	h, w       int
 	langMap    map[byte]int
 	directions = [][2]int{{0, 1}, {-1, 0}, {0, -1}, {1, 0}}
@@ -48,7 +47,7 @@ type lang struct {
 	c int
 }
 
-func output(langMap map[byte]int) {
+func output(out *os.File, langMap map[byte]int) {
 	var lc []lang
 	for k, v := range langMap {
 		lc = append(lc, lang{k, v})
@@ -67,7 +66,7 @@ func output(langMap map[byte]int) {
 func main() {
 	in, _ := os.Open("10336.in")
 	defer in.Close()
-	out, _ = os.Create("10336.out")
+	out, _ := os.Create("10336.out")
 	defer out.Close()
 
 	var n int
@@ -82,6 +81,6 @@ func main() {
 		}
 		solve(world)
 		fmt.Fprintf(out, "World #%d\n", i)
-		output(langMap)
+		output(out, langMap)
 	}
 }
