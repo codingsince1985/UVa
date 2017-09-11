@@ -26,9 +26,8 @@ func edmondsKarp(s, t int, matrix [][]int) int {
 	}
 	for {
 		capacity := make([]int, n+1)
-		queue := []int{s}
 		capacity[s] = math.MaxInt32
-		for len(queue) > 0 && capacity[t] == 0 {
+		for queue := []int{s}; len(queue) > 0 && capacity[t] == 0; {
 			curr := queue[0]
 			queue = queue[1:]
 			for i := 1; i <= n; i++ {

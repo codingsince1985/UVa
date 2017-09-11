@@ -17,8 +17,7 @@ func spfa(n, s, t int, matrix [][]node) int {
 	}
 	distance[s] = 0
 	visited := map[int]bool{s: true}
-	queue := []int{s}
-	for len(queue) > 0 {
+	for queue := []int{s}; len(queue) > 0; {
 		curr := queue[0]
 		queue = queue[1:]
 		for _, to := range matrix[curr] {
