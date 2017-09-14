@@ -595,6 +595,7 @@ UVa 10789 - [Prime Frequency](https://uva.onlinejudge.org/external/107/10789.pdf
 UVa 10790 - [How Many Points of Intersection?](https://uva.onlinejudge.org/external/107/10790.pdf)  
 UVa 10791 - [Minimum Sum LCM](https://uva.onlinejudge.org/external/107/10791.pdf)  
 UVa 10800 - [Not That Kind of Graph](https://uva.onlinejudge.org/external/108/10800.pdf)  
+UVa 10801 - [Lift Hopping](https://uva.onlinejudge.org/external/108/10801.pdf)  
 UVa 10803 - [Thunder Mountain](https://uva.onlinejudge.org/external/108/10803.pdf)  
 UVa 10810 - [Ultra-QuickSort](https://uva.onlinejudge.org/external/108/10810.pdf)  
 UVa 10812 - [Beat the Spread!](https://uva.onlinejudge.org/external/108/10812.pdf)  
