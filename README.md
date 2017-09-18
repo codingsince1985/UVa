@@ -675,6 +675,7 @@ UVa 11479 - [Is this the easiest problem?](https://uva.onlinejudge.org/external/
 UVa 11489 - [Division of Nlogonia](https://uva.onlinejudge.org/external/114/11489.pdf)  
 UVa 11494 - [Queen](https://uva.onlinejudge.org/external/114/11494.pdf)  
 UVa 11503 - [Virtual Friends](https://uva.onlinejudge.org/external/115/11503.pdf)  
+UVa 11504 - [Dominos](https://uva.onlinejudge.org/external/115/11504.pdf)  
 UVa 11526 - [H(n)](https://uva.onlinejudge.org/external/115/11526.pdf)  
 UVa 11530 - [SMS Typing](https://uva.onlinejudge.org/external/115/11530.pdf)  
 UVa 11541 - [Decoding](https://uva.onlinejudge.org/external/115/11541.pdf)  
