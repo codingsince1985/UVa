@@ -221,6 +221,7 @@ UVa 543 - [Goldbach's Conjecture](https://uva.onlinejudge.org/external/5/543.pdf
 UVa 544 - [Heavy Cargo](https://uva.onlinejudge.org/external/5/544.pdf)  
 UVa 550 - [Multiplying by Rotation](https://uva.onlinejudge.org/external/5/550.pdf)  
 UVa 555 - [Bridge Hands](https://uva.onlinejudge.org/external/5/555.pdf)  
+UVa 556 - [Amazing](https://uva.onlinejudge.org/external/5/556.pdf)  
 UVa 558 - [Wormholes](https://uva.onlinejudge.org/external/5/558.pdf)  
 UVa 562 - [Dividing coins](https://uva.onlinejudge.org/external/5/562.pdf)  
 UVa 567 - [Risk](https://uva.onlinejudge.org/external/5/567.pdf)  
