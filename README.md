@@ -290,6 +290,7 @@ UVa 729 - [The Hamming Distance Problem](https://uva.onlinejudge.org/external/7/
 UVa 737 - [Gleaming the Cubes](https://uva.onlinejudge.org/external/7/737.pdf)  
 UVa 739 - [Soundex Indexing](https://uva.onlinejudge.org/external/7/739.pdf)  
 UVa 740 - [Baudot Data Communication Code](https://uva.onlinejudge.org/external/7/740.pdf)  
+UVa 741 - [Burrows Wheeler Decoder](https://uva.onlinejudge.org/external/7/741.pdf)  
 UVa 748 - [Exponentiation](https://uva.onlinejudge.org/external/7/748.pdf)  
 UVa 750 - [8 Queens Chess Problem](https://uva.onlinejudge.org/external/7/750.pdf)  
 UVa 755 - [487--3279](https://uva.onlinejudge.org/external/7/755.pdf)  
