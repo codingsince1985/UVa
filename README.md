@@ -111,6 +111,7 @@ UVa 332 - [Rational Numbers from Repeating Fractions](https://uva.onlinejudge.or
 UVa 333 - [Recognizing Good ISBNs](https://uva.onlinejudge.org/external/3/333.pdf)  
 UVa 336 - [A Node Too Far](https://uva.onlinejudge.org/external/3/336.pdf)  
 UVa 337 - [Interpreting Control Sequences](https://uva.onlinejudge.org/external/3/337.pdf)  
+UVa 338 - [Long Multiplication](https://uva.onlinejudge.org/external/3/338.pdf)  
 UVa 340 - [Master-Mind Hints](https://uva.onlinejudge.org/external/3/340.pdf)  
 UVa 341 - [Non-Stop Travel](https://uva.onlinejudge.org/external/3/341.pdf)  
 UVa 343 - [What Base Is This?](https://uva.onlinejudge.org/external/3/343.pdf)  
