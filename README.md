@@ -471,6 +471,7 @@ UVa 10300 - [Ecological Premium](https://uva.onlinejudge.org/external/103/10300.
 UVa 10301 - [Rings and Glue](https://uva.onlinejudge.org/external/103/10301.pdf)  
 UVa 10302 - [Summation of Polynomials](https://uva.onlinejudge.org/external/103/10302.pdf)  
 UVa 10303 - [How Many Trees?](https://uva.onlinejudge.org/external/103/10303.pdf)  
+UVa 10304 - [Optimal Binary Search Tree](https://uva.onlinejudge.org/external/103/10304.pdf)  
 UVa 10305 - [Ordering Tasks](https://uva.onlinejudge.org/external/103/10305.pdf)  
 UVa 10306 - [e-Coins](https://uva.onlinejudge.org/external/103/10306.pdf)  
 UVa 10310 - [Dog and Gopher](https://uva.onlinejudge.org/external/103/10310.pdf)  
