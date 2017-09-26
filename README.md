@@ -584,6 +584,7 @@ UVa 10679 - [I Love Strings!!](https://uva.onlinejudge.org/external/106/10679.pd
 UVa 10680 - [LCM](https://uva.onlinejudge.org/external/106/10680.pdf)  
 UVa 10683 - [The decadary watch](https://uva.onlinejudge.org/external/106/10683.pdf)  
 UVa 10684 - [The jackpot](https://uva.onlinejudge.org/external/106/10684.pdf)  
+UVa 10689 - [Yet another Number Sequence](https://uva.onlinejudge.org/external/106/10689.pdf)  
 UVa 10693 - [Traffic Volume](https://uva.onlinejudge.org/external/106/10693.pdf)  
 UVa 10696 - [f91](https://uva.onlinejudge.org/external/106/10696.pdf)  
 UVa 10699 - [Count the factors](https://uva.onlinejudge.org/external/106/10699.pdf)  
