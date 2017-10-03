@@ -398,6 +398,7 @@ UVa 10112 - [Myacm Triangles](https://uva.onlinejudge.org/external/101/10112.pdf
 UVa 10115 - [Automatic Editing](https://uva.onlinejudge.org/external/101/10115.pdf)  
 UVa 10116 - [Robot Motion](https://uva.onlinejudge.org/external/101/10116.pdf)  
 UVa 10125 - [Sumsets](https://uva.onlinejudge.org/external/101/10125.pdf)  
+UVa 10126 - [Zipf's Law](https://uva.onlinejudge.org/external/101/10126.pdf)  
 UVa 10127 - [Ones](https://uva.onlinejudge.org/external/101/10127.pdf)  
 UVa 10128 - [Queue](https://uva.onlinejudge.org/external/101/10128.pdf)  
 UVa 10129 - [Play on Words](https://uva.onlinejudge.org/external/101/10129.pdf)  
