@@ -12,9 +12,8 @@ const n = 20
 type node struct{ n, step int }
 
 func bfs(n1, n2 int, matrix [][]bool) int {
-	for queue := []node{{n1, 0}}; len(queue) > 0; {
+	for queue := []node{{n1, 0}}; len(queue) > 0; queue = queue[1:] {
 		curr := queue[0]
-		queue = queue[1:]
 		for i := 1; i <= n; i++ {
 			if matrix[curr.n][i] {
 				if i == n2 {

@@ -23,12 +23,11 @@ var (
 
 func bfs(s, d cell) int {
 	visited := map[[2]int]bool{[2]int{s.y, s.x}: true}
-	for queue := []node{{s, 0}}; len(queue) > 0; {
+	for queue := []node{{s, 0}}; len(queue) > 0; queue = queue[1:] {
 		curr := queue[0]
 		if curr.cell == d {
 			return curr.l
 		}
-		queue = queue[1:]
 		for _, direction := range directions {
 			if ny, nx := curr.y+direction[0], curr.x+direction[1]; ny >= 0 && ny < r && nx >= 0 && nx < c && !grid[ny][nx] && !visited[[2]int{ny, nx}] {
 				visited[[2]int{ny, nx}] = true

@@ -18,10 +18,9 @@ type node struct{ y, x int }
 func bfs(y, x int) (bool, int) {
 	var longest int
 	circle := true
-	for queue := []node{{y, x}}; len(queue) > 0; {
+	for queue := []node{{y, x}}; len(queue) > 0; queue = queue[1:] {
 		longest++
 		curr := queue[0]
-		queue = queue[1:]
 		for _, direction := range directions {
 			if ny, nx := curr.y+direction[0], curr.x+direction[1]; ny >= 0 && ny < 3*h && nx >= 0 && nx < 3*w && !maze[ny][nx] {
 				if ny == 0 || ny == 3*h-1 || nx == 0 || nx == 3*w-1 {

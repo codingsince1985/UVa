@@ -18,9 +18,8 @@ func spfa(n, start, end int, matrix [][]int) ([]string, int) {
 	}
 	distance[start] = 0
 	visited := map[int]bool{start: true}
-	for queue := []int{start}; len(queue) > 0; {
+	for queue := []int{start}; len(queue) > 0; queue = queue[1:] {
 		curr := queue[0]
-		queue = queue[1:]
 		for to, delay := range matrix[curr] {
 			if delay != 0 && distance[to] > distance[curr]+delay {
 				distance[to] = distance[curr] + delay

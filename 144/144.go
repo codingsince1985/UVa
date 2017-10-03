@@ -12,10 +12,8 @@ type student struct{ id, amount int }
 func atm(out *os.File, queue []student, k int) {
 	for len(queue) > 0 {
 		for i := 1; len(queue) > 0 && i <= k; i++ {
-			amount := i
-			for amount != 0 && len(queue) > 0 {
+			for amount := i; amount != 0 && len(queue) > 0; queue = queue[1:] {
 				current := queue[0]
-				queue = queue[1:]
 				if current.amount > amount {
 					current.amount -= amount
 					amount = 0

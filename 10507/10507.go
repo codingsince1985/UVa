@@ -12,9 +12,8 @@ type node struct{ area, year int }
 func bfs(n int, matrix [][]bool, queue []node) int {
 	var year int
 	visited := make(map[int]bool)
-	for len(queue) > 0 {
+	for ; len(queue) > 0; queue = queue[1:] {
 		curr := queue[0]
-		queue = queue[1:]
 		visited[curr.area] = true
 		year = curr.year
 		for i := range matrix {

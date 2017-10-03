@@ -28,9 +28,8 @@ func bfs(s, e cell) int {
 		visited[i] = make([][4][5]bool, n)
 	}
 	visited[s.y][s.x][0][0] = true
-	for queue := []node{{s, 0, 0, 0}}; len(queue) > 0; {
+	for queue := []node{{s, 0, 0, 0}}; len(queue) > 0; queue = queue[1:] {
 		curr := queue[0]
-		queue = queue[1:]
 		y, x, d, c, t := curr.y, curr.x, curr.direction, curr.colour, curr.time
 		if c == 0 && curr.cell == e {
 			return t

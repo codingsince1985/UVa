@@ -24,12 +24,11 @@ func bfs(from, to cell) int {
 		visited[i] = make([]bool, 9)
 	}
 	visited[from.x][from.y] = true
-	for queue := []cell{from}; len(queue) > 0; {
+	for queue := []cell{from}; len(queue) > 0; queue = queue[1:] {
 		curr := queue[0]
 		if curr.x == to.x && curr.y == to.y {
 			return curr.steps
 		}
-		queue = queue[1:]
 		for dx := -2; dx <= 2; dx++ {
 			for dy := -2; dy <= 2; dy++ {
 				newX, newY := curr.x+dx, curr.y+dy

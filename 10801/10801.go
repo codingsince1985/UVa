@@ -18,9 +18,8 @@ func spfa(n, s, t int, matrix [][]int) int {
 		distance[i] = math.MaxInt32
 	}
 	distance[s] = 0
-	for queue := []int{s}; len(queue) > 0; {
+	for queue := []int{s}; len(queue) > 0; queue = queue[1:] {
 		curr := queue[0]
-		queue = queue[1:]
 		for to, time := range matrix[curr] {
 			if newDistance := distance[curr] + time + 60; distance[to] > newDistance {
 				distance[to] = newDistance

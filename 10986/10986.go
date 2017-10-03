@@ -17,9 +17,8 @@ func spfa(n, s, t int, matrix [][]node) int {
 	}
 	distance[s] = 0
 	visited := map[int]bool{s: true}
-	for queue := []int{s}; len(queue) > 0; {
+	for queue := []int{s}; len(queue) > 0; queue = queue[1:] {
 		curr := queue[0]
-		queue = queue[1:]
 		for _, to := range matrix[curr] {
 			if distance[to.server] > distance[curr]+to.latency {
 				distance[to.server] = distance[curr] + to.latency

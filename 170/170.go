@@ -15,8 +15,8 @@ var rankMap = map[byte]int{'A': 0, '2': 1, '3': 2, '4': 3, '5': 4, '6': 5, '7': 
 
 func solve(piles [][]card) (int, card) {
 	var last card
-	idx, exposed := 12, 0
-	for len(piles[idx]) > 0 {
+	var exposed int
+	for idx := 12; len(piles[idx]) > 0; {
 		last = piles[idx][0]
 		piles[idx] = piles[idx][1:]
 		idx = rankMap[last.rank]
