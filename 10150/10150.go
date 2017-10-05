@@ -46,15 +46,15 @@ func buildGraph(words []string) {
 func bfs(w1, w2 string) []string {
 	visited := map[string]bool{w1: true}
 	for queue := [][]string{{w1}}; len(queue) != 0; queue = queue[1:] {
-		current := queue[0]
-		last := current[len(current)-1]
+		curr := queue[0]
+		last := curr[len(curr)-1]
 		if last == w2 {
-			return current
+			return curr
 		}
 		for i, isDoublet := range matrix[wordMap[last]] {
 			if next := words[i]; isDoublet && !visited[next] {
 				visited[next] = true
-				queue = append(queue, append(current, next))
+				queue = append(queue, append(curr, next))
 			}
 		}
 	}
