@@ -25,8 +25,7 @@ func main() {
 
 	var kase, w int
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
-		fmt.Fscanln(in)
-		fmt.Fscanf(in, "%d", &w)
+		fmt.Fscanf(in, "\n%d", &w)
 		gaps := make([][2]int, w)
 		for i := range gaps {
 			fmt.Fscanf(in, "%d%d", &gaps[i][0], &gaps[i][1])
