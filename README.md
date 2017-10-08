@@ -461,6 +461,7 @@ UVa 10249 - [The Grand Dinner](https://uva.onlinejudge.org/external/102/10249.pd
 UVa 10252 - [Common Permutation](https://uva.onlinejudge.org/external/102/10252.pdf)  
 UVa 10258 - [Contest Scoreboard](https://uva.onlinejudge.org/external/102/10258.pdf)  
 UVa 10260 - [Soundex](https://uva.onlinejudge.org/external/102/10260.pdf)  
+UVa 10261 - [Ferry Loading](https://uva.onlinejudge.org/external/102/10261.pdf)  
 UVa 10267 - [Graphical Editor](https://uva.onlinejudge.org/external/102/10267.pdf)  
 UVa 10268 - [498-bis](https://uva.onlinejudge.org/external/102/10268.pdf)  
 UVa 10271 - [Chopsticks](https://uva.onlinejudge.org/external/102/10271.pdf)  
