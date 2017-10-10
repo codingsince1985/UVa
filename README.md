@@ -656,6 +656,7 @@ UVa 10976 - [Fractions Again?!](https://uva.onlinejudge.org/external/109/10976.p
 UVa 10986 - [Sending email](https://uva.onlinejudge.org/external/109/10986.pdf)  
 UVa 10994 - [Simple Addition](https://uva.onlinejudge.org/external/109/10994.pdf)  
 UVa 11000 - [Bee](https://uva.onlinejudge.org/external/110/11000.pdf)  
+UVa 11001 - [Necklace](https://uva.onlinejudge.org/external/110/11001.pdf)  
 UVa 11005 - [Cheapest Base](https://uva.onlinejudge.org/external/110/11005.pdf)  
 UVa 11015 - [05-2 Rendezvous](https://uva.onlinejudge.org/external/110/11015.pdf)  
 UVa 11040 - [Add bricks in the wall](https://uva.onlinejudge.org/external/110/11040.pdf)  
