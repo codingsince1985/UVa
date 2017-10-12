@@ -28,13 +28,12 @@ func isPrime(n int) bool {
 
 func factorize(n int) map[int]int {
 	f := make(map[int]int)
-	i := 1
-	for n > 1 {
-		for i++; !isPrime(i); i++ {
-		}
-		for n != 1 && n%i == 0 {
-			f[i]++
-			n /= i
+	for i := 2; n > 1; i++ {
+		if isPrime(i) {
+			for n != 1 && n%i == 0 {
+				f[i]++
+				n /= i
+			}
 		}
 	}
 	return f

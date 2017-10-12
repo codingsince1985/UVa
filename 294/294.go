@@ -16,21 +16,17 @@ func factorize(n int) map[int]int {
 	}
 
 	f := make(map[int]int)
-	t := 2
 here:
-	for {
+	for t := 2; t*t <= n; t++ {
 		for n%t == 0 {
 			f[t]++
 			if n /= t; n == 1 {
 				break here
 			}
 		}
-
-		if t++; t*t > n {
-			// remaining must be a prime
-			f[n] = 1
-			break
-		}
+	}
+	if n != 1 {
+		f[n] = 1
 	}
 	return f
 }

@@ -16,20 +16,17 @@ func factorize(n int) []string {
 		n = -n
 	}
 
-	t := 2
 here:
-	for {
+	for t := 2; t*t <= n; t++ {
 		for n%t == 0 {
 			p = append(p, strconv.Itoa(t))
 			if n /= t; n == 1 {
 				break here
 			}
 		}
-
-		if t++; t*t > n {
-			p = append(p, strconv.Itoa(n))
-			break
-		}
+	}
+	if n != 1 {
+		p = append(p, strconv.Itoa(n))
 	}
 	return p
 }

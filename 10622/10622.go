@@ -31,17 +31,15 @@ func gcd(a, b int) int {
 	return gcd(b, a%b)
 }
 
-func primeFactor(n int) map[int]int {
+func primeFactorize(n int) map[int]int {
 	factors := make(map[int]int)
-	for n > 1 {
-		for i, v := range primes {
-			if !v {
-				for ; n%i == 0; n /= i {
-					factors[i]++
-				}
-				if n == 1 {
-					break
-				}
+	for i, v := range primes {
+		if !v {
+			for ; n%i == 0; n /= i {
+				factors[i]++
+			}
+			if n == 1 {
+				break
 			}
 		}
 	}
@@ -65,7 +63,7 @@ func main() {
 			x = -x
 		}
 		var g int
-		for _, v := range primeFactor(x) {
+		for _, v := range primeFactorize(x) {
 			if g == 0 {
 				g = v
 			} else {

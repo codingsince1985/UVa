@@ -24,17 +24,15 @@ func sieve() []bool {
 	return p
 }
 
-func primeFactor(n int) map[int]int {
+func primeFactorize(n int) map[int]int {
 	factors := make(map[int]int)
-	for n > 1 {
-		for i, v := range primes {
-			if !v {
-				for ; n%i == 0; n /= i {
-					factors[i]++
-				}
-				if n == 1 {
-					break
-				}
+	for i, v := range primes {
+		if !v {
+			for ; n%i == 0; n /= i {
+				factors[i]++
+			}
+			if n == 1 {
+				break
 			}
 		}
 	}
@@ -60,11 +58,11 @@ func subtract(f1, f2 map[int]int) map[int]int {
 func solve(n, d int) int {
 	factors := make(map[int]int)
 	for i := 2; i <= n; i++ {
-		for k, v := range primeFactor(i) {
+		for k, v := range primeFactorize(i) {
 			factors[k] += v
 		}
 	}
-	if len(subtract(factors, primeFactor(d))) > 0 {
+	if len(subtract(factors, primeFactorize(d))) > 0 {
 		return 0
 	}
 	count := 1
