@@ -40,9 +40,8 @@ func main() {
 
 	var tmp int
 	s.Scan()
-	for n, _ := strconv.Atoi(s.Text()); n > 0; n-- {
+	for n, _ := strconv.Atoi(s.Text()); n > 0 && s.Scan(); n-- {
 		var num []int
-		s.Scan()
 		for r := strings.NewReader(s.Text()); ; {
 			if _, err := fmt.Fscanf(r, "%d", &tmp); err != nil {
 				break

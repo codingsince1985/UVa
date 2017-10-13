@@ -57,9 +57,8 @@ func main() {
 	keywordMap := make(map[string]bool)
 	var titles [][]string
 	for s.Scan() {
-		r := strings.NewReader(s.Text())
 		var title []string
-		for {
+		for r := strings.NewReader(s.Text()); ; {
 			if _, err := fmt.Fscanf(r, "%s", &word); err != nil {
 				break
 			}

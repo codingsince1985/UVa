@@ -80,9 +80,8 @@ func main() {
 		if line = s.Text(); line == "0" {
 			break
 		}
-		r := strings.NewReader(line)
 		var num []int
-		for {
+		for r := strings.NewReader(line); ; {
 			if fmt.Fscanf(r, "%d", &tmp); tmp == 0 {
 				break
 			}

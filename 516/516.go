@@ -63,9 +63,8 @@ func main() {
 	var b, e int
 	for s.Scan() {
 		if line := s.Text(); line != "0" {
-			r := strings.NewReader(line)
 			num := 1
-			for {
+			for r := strings.NewReader(line); ; {
 				if _, err := fmt.Fscanf(r, "%d%d", &b, &e); err != nil {
 					break
 				}

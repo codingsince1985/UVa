@@ -28,9 +28,8 @@ func main() {
 
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
-	s.Scan()
-	s.Text()
 
+	s.Scan()
 	for s.Scan() {
 		if line := s.Text(); line != "___________" {
 			fmt.Fprintf(out, "%c", decode(line))

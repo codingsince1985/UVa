@@ -49,8 +49,7 @@ func main() {
 		if line = s.Text(); line == "#" {
 			break
 		}
-		r := strings.NewReader(line)
-		for {
+		for r := strings.NewReader(line); ; {
 			if _, err := fmt.Fscanf(r, "%s", &token); err != nil {
 				break
 			}

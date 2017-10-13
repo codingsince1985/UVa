@@ -12,8 +12,7 @@ import (
 func parse(line string) map[int]bool {
 	var n int
 	nm := make(map[int]bool)
-	r := strings.NewReader(line)
-	for {
+	for r := strings.NewReader(line); ; {
 		if _, err := fmt.Fscanf(r, "%d", &n); err != nil {
 			break
 		}

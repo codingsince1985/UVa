@@ -15,9 +15,8 @@ func solve(lines []string) []string {
 	var ch byte
 	var f float64
 	for _, line := range lines {
-		r := strings.NewReader(line)
 		var newLine string
-		for {
+		for r := strings.NewReader(line); ; {
 			if _, err := fmt.Fscanf(r, "%c", &ch); err != nil {
 				break
 			}

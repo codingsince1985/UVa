@@ -24,7 +24,6 @@ func main() {
 			break
 		}
 		for i := 0; i < n && s.Scan(); i++ {
-			s.Text()
 		}
 
 		lowest := math.MaxFloat64
@@ -36,7 +35,6 @@ func main() {
 			s.Scan()
 			fmt.Sscanf(s.Text(), "%f%d", &price, &met)
 			for j := 0; j < met && s.Scan(); j++ {
-				s.Text()
 			}
 			if met > max || met == max && price < lowest {
 				choice, max, lowest = name, met, price

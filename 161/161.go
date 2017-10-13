@@ -44,8 +44,7 @@ func main() {
 		if line = s.Text(); line == "0 0 0" {
 			break
 		}
-		r := strings.NewReader(line)
-		for {
+		for r := strings.NewReader(line); ; {
 			if _, err := fmt.Fscanf(r, "%d", &cycle); err != nil || cycle == 0 {
 				break
 			}

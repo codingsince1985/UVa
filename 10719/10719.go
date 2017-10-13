@@ -34,9 +34,8 @@ func main() {
 	for s.Scan() {
 		k, _ := strconv.Atoi(s.Text())
 		s.Scan()
-		r := strings.NewReader(s.Text())
 		var a []int
-		for {
+		for r := strings.NewReader(s.Text()); ; {
 			if _, err := fmt.Fscanf(r, "%d", &tmp); err != nil {
 				break
 			}

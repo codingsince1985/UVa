@@ -45,8 +45,7 @@ func main() {
 	for s.Scan() {
 		n, _ := strconv.Atoi(s.Text())
 		routes := make(map[int][]int)
-		for i := 0; i < n; i++ {
-			s.Scan()
+		for i := 0; i < n && s.Scan(); i++ {
 			tokens := strings.Split(s.Text(), "-")
 			id, _ := strconv.Atoi(tokens[0])
 			routes[id] = nil

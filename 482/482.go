@@ -24,9 +24,8 @@ func index(line string) map[int]int {
 
 func number(line string) []string {
 	var s string
-	r := strings.NewReader(line)
 	var num []string
-	for {
+	for r := strings.NewReader(line); ; {
 		if _, err := fmt.Fscanf(r, "%s", &s); err != nil {
 			break
 		}
@@ -48,7 +47,6 @@ func main() {
 	s.Split(bufio.ScanLines)
 
 	for ; kase > 0 && s.Scan(); kase-- {
-		s.Text()
 		s.Scan()
 		idx := index(s.Text())
 		s.Scan()

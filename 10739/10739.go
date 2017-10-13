@@ -57,8 +57,7 @@ func main() {
 
 	s.Scan()
 	t, _ := strconv.Atoi(s.Text())
-	for kase := 1; kase <= t; kase++ {
-		s.Scan()
+	for kase := 1; kase <= t && s.Scan(); kase++ {
 		word = s.Text()
 		fmt.Fprintf(out, "Case %d: %d\n", kase, solve())
 	}

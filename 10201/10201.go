@@ -70,7 +70,6 @@ func main() {
 	s.Scan()
 	kase, _ := strconv.Atoi(s.Text())
 	s.Scan()
-	s.Text()
 	for ; s.Scan() && kase > 0; kase-- {
 		distance, _ := strconv.Atoi(s.Text())
 		var stations []station

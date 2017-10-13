@@ -33,7 +33,6 @@ func main() {
 	s.Scan()
 	kase, _ := strconv.Atoi(s.Text())
 	s.Scan()
-	s.Text()
 	var tree string
 	for ; kase > 0; kase-- {
 		var count float64

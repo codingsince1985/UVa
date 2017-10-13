@@ -28,7 +28,6 @@ func main() {
 	s.Scan()
 	kase, _ := strconv.Atoi(s.Text())
 	s.Scan()
-	s.Text()
 	first := true
 	for ; kase > 0 && s.Scan(); kase-- {
 		line := s.Text()

@@ -63,7 +63,6 @@ func main() {
 	s.Scan()
 	kase, _ := strconv.Atoi(s.Text())
 	s.Scan()
-	s.Text()
 	var line string
 	for ; kase > 0; kase-- {
 		var lines []string

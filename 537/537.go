@@ -67,10 +67,9 @@ func main() {
 	fmt.Fscanf(in, "%d", &n)
 	for i := 1; i <= n && s.Scan(); i++ {
 		fmt.Fprintf(out, "Problem #%d\n", i)
-		r := strings.NewReader(s.Text())
 		cnt := 0
 		var tokens [2]string
-		for {
+		for r := strings.NewReader(s.Text()); ; {
 			fmt.Fscanf(r, "%s", &token)
 			if strings.Contains(token, "=") {
 				tokens[cnt] = token

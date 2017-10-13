@@ -86,8 +86,7 @@ here:
 			if line[0] == '-' {
 				break here
 			}
-			r := strings.NewReader(line)
-			for {
+			for r := strings.NewReader(line); ; {
 				if _, err := fmt.Fscanf(r, "%d%d", &e.n1, &e.n2); err != nil || e.n1 == 0 && e.n2 == 0 {
 					if e.n1 == 0 && e.n2 == 0 {
 						break there

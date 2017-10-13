@@ -55,7 +55,6 @@ func main() {
 
 	s.Scan()
 	for kase, _ := strconv.Atoi(s.Text()); s.Scan() && kase > 0; kase-- {
-		s.Text()
 		s.Scan()
 		line := s.Text()
 		s.Scan()

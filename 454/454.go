@@ -48,7 +48,6 @@ func main() {
 	s.Scan()
 	kase, _ := strconv.Atoi(s.Text())
 	s.Scan()
-	s.Text()
 	var words []string
 	var line string
 	first := true

@@ -31,7 +31,6 @@ func main() {
 	s.Scan()
 	kase, _ := strconv.Atoi(s.Text())
 	s.Scan()
-	s.Text()
 	for ; kase > 0 && s.Scan(); kase-- {
 		num, _ := strconv.Atoi(s.Text())
 		f := make([]int, num+1)

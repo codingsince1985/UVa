@@ -33,13 +33,10 @@ func main() {
 
 	s.Scan()
 	first := true
-	for kase, _ := strconv.Atoi(s.Text()); kase > 0; kase-- {
-		s.Scan()
-		s.Text()
+	for kase, _ := strconv.Atoi(s.Text()); kase > 0 && s.Scan(); kase-- {
 		candidateMap := make(map[string]string)
 		s.Scan()
-		for n, _ := strconv.Atoi(s.Text()); n > 0; n-- {
-			s.Scan()
+		for n, _ := strconv.Atoi(s.Text()); n > 0 && s.Scan(); n-- {
 			name := s.Text()
 			s.Scan()
 			candidateMap[name] = s.Text()
@@ -47,8 +44,7 @@ func main() {
 		voteMap := make(map[string]int)
 		var max int
 		s.Scan()
-		for n, _ := strconv.Atoi(s.Text()); n > 0; n-- {
-			s.Scan()
+		for n, _ := strconv.Atoi(s.Text()); n > 0 && s.Scan(); n-- {
 			if name := s.Text(); candidateMap[name] != "" {
 				voteMap[name]++
 				if voteMap[name] > max {

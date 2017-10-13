@@ -54,9 +54,7 @@ func main() {
 	var r, c int
 	var maze [][]byte
 	s.Scan()
-	for kase, _ := strconv.Atoi(s.Text()); kase > 0; kase-- {
-		s.Scan()
-		s.Text()
+	for kase, _ := strconv.Atoi(s.Text()); kase > 0 && s.Scan(); kase-- {
 		s.Scan()
 		fmt.Sscanf(s.Text(), "%d%d", &row, &column)
 		maze = make([][]byte, row)

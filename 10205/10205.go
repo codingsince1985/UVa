@@ -43,7 +43,6 @@ func main() {
 	s.Scan()
 	kase, _ := strconv.Atoi(s.Text())
 	s.Scan()
-	s.Text()
 	var tmp int
 	var line string
 	for ; kase > 0 && s.Scan(); kase-- {
@@ -51,8 +50,7 @@ func main() {
 		for n, _ := strconv.Atoi(s.Text()); n > 0; n-- {
 			var shuffle []int
 			for s.Scan() {
-				r := strings.NewReader(s.Text())
-				for {
+				for r := strings.NewReader(s.Text()); ; {
 					if _, err := fmt.Fscanf(r, "%d", &tmp); err != nil {
 						break
 					}

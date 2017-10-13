@@ -91,11 +91,10 @@ func main() {
 
 	s.Scan()
 	n, _ := strconv.Atoi(s.Text())
-	for kase := 1; kase <= n; kase++ {
+	for kase := 1; kase <= n && s.Scan(); kase++ {
 		if kase > 1 {
 			fmt.Fprintln(out)
 		}
-		s.Scan()
 		fmt.Fprintf(out, "Message #%d\n%s\n", kase, solve(s.Text()))
 	}
 }

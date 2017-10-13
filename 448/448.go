@@ -23,9 +23,8 @@ var (
 )
 
 func decode(out *os.File, code string) {
-	r := strings.NewReader(code)
 	var num1, num2 uint16
-	for {
+	for r := strings.NewReader(code); ; {
 		if _, err := fmt.Fscanf(r, "%1x", &num1); err != nil {
 			break
 		}

@@ -48,7 +48,6 @@ func main() {
 	s.Scan()
 	kase, _ := strconv.Atoi(s.Text())
 	s.Scan()
-	s.Text()
 	var x, y float64
 	var line string
 	for ; kase > 0; kase-- {
