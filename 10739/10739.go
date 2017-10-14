@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 )
 
 var (
@@ -55,8 +54,9 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
+	var t int
 	s.Scan()
-	t, _ := strconv.Atoi(s.Text())
+	fmt.Sscanf(s.Text(), "%d", &t)
 	for kase := 1; kase <= t && s.Scan(); kase++ {
 		word = s.Text()
 		fmt.Fprintf(out, "Case %d: %d\n", kase, solve())

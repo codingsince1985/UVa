@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"math"
 	"os"
-	"strconv"
 	"strings"
 )
 
@@ -85,10 +84,11 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
+	var kase, n int
 	s.Scan()
-	kase, _ := strconv.Atoi(s.Text())
+	fmt.Sscanf(s.Text(), "%d", &kase)
 	for s.Scan(); kase > 0 && s.Scan(); kase-- {
-		n, _ := strconv.Atoi(s.Text())
+		fmt.Sscanf(s.Text(), "%d", &n)
 		candidates := make([]string, n)
 		for i := range candidates {
 			s.Scan()

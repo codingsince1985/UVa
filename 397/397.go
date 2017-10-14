@@ -52,9 +52,9 @@ func operations(stack []string) (int, int) {
 func pass(times int, ops [2]string, stack []string) []string {
 	var num1, num2 int
 	for idx := 0; times > 0; idx++ {
-		num1, _ = strconv.Atoi(stack[idx])
+		fmt.Sscanf(stack[idx], "%d", &num1)
 		if idx++; stack[idx] == ops[0] || stack[idx] == ops[1] {
-			num2, _ = strconv.Atoi(stack[idx+1])
+			fmt.Sscanf(stack[idx+1], "%d", &num2)
 			switch stack[idx] {
 			case "*":
 				stack[idx-1] = strconv.Itoa(num1 * num2)

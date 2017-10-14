@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"os"
 	"sort"
-	"strconv"
 	"strings"
 )
 
@@ -38,10 +37,11 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
+	var n int
 	var line string
 	var faculties []faculty
 	s.Scan()
-	for n, _ := strconv.Atoi(s.Text()); n > 0 && s.Scan(); n-- {
+	for fmt.Sscanf(s.Text(), "%d", &n); n > 0 && s.Scan(); n-- {
 		for department := s.Text(); s.Scan(); {
 			if line = s.Text(); line == "" {
 				break

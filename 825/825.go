@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 	"strings"
 )
 
@@ -40,8 +39,9 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
+	var kase, t int
 	s.Scan()
-	for kase, _ := strconv.Atoi(s.Text()); kase > 0 && s.Scan(); kase-- {
+	for fmt.Sscanf(s.Text(), "%d", &kase); kase > 0 && s.Scan(); kase-- {
 		s.Scan()
 		fmt.Sscanf(s.Text(), "%d%d", &w, &n)
 		grid = make([][]bool, w)
@@ -49,7 +49,7 @@ func main() {
 			grid[i] = make([]bool, n)
 			s.Scan()
 			for _, token := range strings.Fields(s.Text())[1:] {
-				t, _ := strconv.Atoi(token)
+				fmt.Sscanf(token, "%d", &t)
 				grid[i][t-1] = true
 			}
 		}

@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 	"strings"
 )
 
@@ -53,7 +52,7 @@ func main() {
 	var n, c1, c2 int
 	var line string
 	for s.Scan() {
-		if n, _ = strconv.Atoi(s.Text()); n == 0 {
+		if fmt.Sscanf(s.Text(), "%d", &n); n == 0 {
 			break
 		}
 		matrix := make([][]bool, n)

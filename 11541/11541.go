@@ -5,7 +5,6 @@ package main
 import (
 	"fmt"
 	"os"
-	"strconv"
 	"strings"
 	"unicode"
 )
@@ -19,7 +18,7 @@ func decode(line string) []string {
 	numbers := strings.FieldsFunc(line, number)
 	num := make([]int, len(numbers))
 	for i, n := range numbers {
-		num[i], _ = strconv.Atoi(n)
+		fmt.Sscanf(n, "%d", &num[i])
 	}
 	token := make([]string, len(num))
 	for i, c := range strings.FieldsFunc(line, char) {

@@ -5,7 +5,6 @@ package main
 import (
 	"fmt"
 	"os"
-	"strconv"
 )
 
 var (
@@ -49,7 +48,7 @@ func main() {
 			}
 			grid = append(grid, []byte(line))
 		}
-		x, _ = strconv.Atoi(line)
+		fmt.Sscanf(line, "%d", &x)
 		fmt.Fscanf(in, "%d", &y)
 		for {
 			visited := make([][]bool, len(grid))

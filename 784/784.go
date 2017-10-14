@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 	"strings"
 )
 
@@ -49,9 +48,10 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
+	var kase int
 	var maze [][]byte
 	s.Scan()
-	for kase, _ := strconv.Atoi(s.Text()); kase > 0 && s.Scan(); {
+	for fmt.Sscanf(s.Text(), "%d", &kase); kase > 0 && s.Scan(); {
 		if line := s.Text(); strings.HasPrefix(line, "_") {
 			x, y := find(maze)
 			dfs(x, y, maze)

@@ -15,6 +15,7 @@ func main() {
 	out, _ := os.Create("10473.out")
 	defer out.Close()
 
+	var dec int
 	var num string
 	for {
 		if fmt.Fscanf(in, "%s", &num); num[0] == '-' {
@@ -24,7 +25,7 @@ func main() {
 			dec, _ := strconv.ParseInt(num[2:], 16, 32)
 			fmt.Fprintln(out, dec)
 		} else {
-			dec, _ := strconv.Atoi(num)
+			fmt.Sscanf(num, "%d", &dec)
 			fmt.Fprintf(out, "0x%X\n", dec)
 		}
 	}

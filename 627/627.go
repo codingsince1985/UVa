@@ -41,24 +41,24 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var r1, r2 int
+	var n, m, r1, r2, t, id int
 	for s.Scan() {
-		n, _ := strconv.Atoi(s.Text())
+		fmt.Sscanf(s.Text(), "%d", &n)
 		routes := make(map[int][]int)
 		for i := 0; i < n && s.Scan(); i++ {
 			tokens := strings.Split(s.Text(), "-")
-			id, _ := strconv.Atoi(tokens[0])
+			fmt.Sscanf(tokens[0], "%d", &id)
 			routes[id] = nil
 			if len(tokens[1]) > 0 {
-				for _, s := range strings.Split(tokens[1], ",") {
-					t, _ := strconv.Atoi(s)
+				for _, token := range strings.Split(tokens[1], ",") {
+					fmt.Sscanf(token, "%d", &t)
 					routes[id] = append(routes[id], t)
 				}
 			}
 		}
 		fmt.Fprintln(out, "-----")
 		s.Scan()
-		for m, _ := strconv.Atoi(s.Text()); m > 0 && s.Scan(); m-- {
+		for fmt.Sscanf(s.Text(), "%d", &m); m > 0 && s.Scan(); m-- {
 			fmt.Sscanf(s.Text(), "%d%d", &r1, &r2)
 			if path := bfs(r1, r2, routes); len(path) == 0 {
 				fmt.Fprintln(out, "connection impossible")

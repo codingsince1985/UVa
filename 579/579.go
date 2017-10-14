@@ -5,7 +5,6 @@ package main
 import (
 	"fmt"
 	"os"
-	"strconv"
 )
 
 func hrAngle(h, m int) float64 {
@@ -31,13 +30,14 @@ func main() {
 	out, _ := os.Create("579.out")
 	defer out.Close()
 
+	var h, m int
 	var line string
 	for {
 		if fmt.Fscanf(in, "%s", &line); line == "0:00" {
 			break
 		}
-		h, _ := strconv.Atoi(line[:len(line)-3])
-		m, _ := strconv.Atoi(line[len(line)-2:])
+		fmt.Sscanf(line[:len(line)-3], "%d", &h)
+		fmt.Sscanf(line[len(line)-2:], "%d", &m)
 		hour, minute := hrAngle(h, m), minAngle(m)
 		diff := max(hour, minute) - min(hour, minute)
 		fmt.Fprintf(out, "%.3f\n", min(diff, 360-diff))

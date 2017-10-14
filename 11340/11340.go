@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 )
 
 func main() {
@@ -18,18 +17,18 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var t int
+	var kase, t, k, l int
 	var c byte
 	s.Scan()
-	for kase, _ := strconv.Atoi(s.Text()); kase > 0 && s.Scan(); kase-- {
+	for fmt.Sscanf(s.Text(), "%d", &kase); kase > 0 && s.Scan(); kase-- {
 		paid := make(map[byte]int)
-		for k, _ := strconv.Atoi(s.Text()); k > 0 && s.Scan(); k-- {
+		for fmt.Sscanf(s.Text(), "%d", &k); k > 0 && s.Scan(); k-- {
 			fmt.Sscanf(s.Text(), "%c%d", &c, &t)
 			paid[c] = t
 		}
 		var total float64
 		s.Scan()
-		for l, _ := strconv.Atoi(s.Text()); l > 0 && s.Scan(); l-- {
+		for fmt.Sscanf(s.Text(), "%d", &l); l > 0 && s.Scan(); l-- {
 			line := s.Text()
 			for i := range line {
 				total += float64(paid[line[i]])

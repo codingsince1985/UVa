@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 	"strings"
 )
 
@@ -51,12 +50,12 @@ func main() {
 
 	var n int
 	for kase := 1; s.Scan(); kase++ {
-		if n, _ = strconv.Atoi(s.Text()); n == 0 {
+		if fmt.Sscanf(s.Text(), "%d", &n); n == 0 {
 			break
 		}
 		solution := getMultiLine(n)
 		s.Scan()
-		n, _ := strconv.Atoi(s.Text())
+		fmt.Sscanf(s.Text(), "%d", &n)
 		fmt.Fprintf(out, "Run #%d: %s\n", kase, compare(solution, getMultiLine(n)))
 	}
 }

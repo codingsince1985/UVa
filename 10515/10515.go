@@ -5,7 +5,6 @@ package main
 import (
 	"fmt"
 	"os"
-	"strconv"
 )
 
 func main() {
@@ -14,18 +13,19 @@ func main() {
 	out, _ := os.Create("10515.out")
 	defer out.Close()
 
+	var m, n int
 	var ms, ns string
 	for {
 		if fmt.Fscanf(in, "%s%s", &ms, &ns); ms == "0" {
 			break
 		}
-		m, _ := strconv.Atoi(ms[len(ms)-1:])
+		fmt.Sscanf(ms[len(ms)-1:], "%d", &m)
 		start := len(ns) - 2
 		if start < 0 {
 			start++
 		}
 		d := 1
-		for n, _ := strconv.Atoi(ns[start:]); n > 0; n-- {
+		for fmt.Sscanf(ns[start:], "%d", &n); n > 0; n-- {
 			d = (d * m) % 10
 		}
 		fmt.Fprintln(out, d)

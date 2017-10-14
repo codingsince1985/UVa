@@ -21,10 +21,10 @@ func split(line string) []int {
 	var nums []int
 	for len(line) > 0 {
 		if len(line) >= 7 {
-			num, _ = strconv.Atoi(line[len(line)-7:])
+			fmt.Sscanf(line[len(line)-7:], "%d", &num)
 			line = line[:len(line)-7]
 		} else {
-			num, _ = strconv.Atoi(line)
+			fmt.Sscanf(line, "%d", &num)
 			line = ""
 		}
 		nums = append([]int{num}, nums...)

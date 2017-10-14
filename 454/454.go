@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"os"
 	"sort"
-	"strconv"
 	"strings"
 )
 
@@ -45,11 +44,12 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
+	var kase int
 	var words []string
 	var line string
 	first := true
 	s.Scan()
-	kase, _ := strconv.Atoi(s.Text())
+	fmt.Sscanf(s.Text(), "%d", &kase)
 	for s.Scan(); kase > 0; kase-- {
 		for s.Scan() {
 			if line = s.Text(); line == "" {

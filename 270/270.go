@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"math"
 	"os"
-	"strconv"
 )
 
 type point struct{ x, y float64 }
@@ -45,10 +44,11 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
+	var kase int
 	var x, y float64
 	var line string
 	s.Scan()
-	kase, _ := strconv.Atoi(s.Text())
+	fmt.Sscanf(s.Text(), "%d", &kase)
 	for s.Scan(); kase > 0; kase-- {
 		var points []point
 		for s.Scan() {

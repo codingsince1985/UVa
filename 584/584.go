@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 	"strings"
 )
 
@@ -39,7 +38,7 @@ func calc(frames []frame) int {
 }
 
 func solve(line string) int {
-	var idx int
+	var idx, s int
 	frames := make([]frame, plays+2)
 	for _, score := range strings.Split(line, " ") {
 		switch score {
@@ -52,7 +51,7 @@ func solve(line string) int {
 			frames[idx].spare = true
 			idx++
 		default:
-			s, _ := strconv.Atoi(score)
+			fmt.Sscanf(score, "%d", &s)
 			if frames[idx].scores = append(frames[idx].scores, s); len(frames[idx].scores) == 2 {
 				idx++
 			}

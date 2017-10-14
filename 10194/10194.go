@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"os"
 	"sort"
-	"strconv"
 	"strings"
 )
 
@@ -97,20 +96,21 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	for kase, _ := strconv.Atoi(nextLine(s)); kase > 0; kase-- {
+	var kase, tm, gm, s1, s2 int
+	for fmt.Sscanf(nextLine(s), "%d", &kase); kase > 0; kase-- {
 		teamMap = make(map[string]team)
 		fmt.Fprintln(out, nextLine(s))
 
-		for tm, _ := strconv.Atoi(nextLine(s)); tm > 0; tm-- {
+		for fmt.Sscanf(nextLine(s), "%d", &tm); tm > 0; tm-- {
 			tmp := nextLine(s)
 			teamMap[tmp] = team{name: tmp}
 		}
 
-		for gm, _ := strconv.Atoi(nextLine(s)); gm > 0; gm-- {
+		for fmt.Sscanf(nextLine(s), "%d", &gm); gm > 0; gm-- {
 			tokens := strings.Split(nextLine(s), "#")
 			scores := strings.Split(tokens[1], "@")
-			s1, _ := strconv.Atoi(scores[0])
-			s2, _ := strconv.Atoi(scores[1])
+			fmt.Sscanf(scores[0], "%d", &s1)
+			fmt.Sscanf(scores[1], "%d", &s2)
 			process(tokens[0], tokens[2], s1, s2)
 		}
 

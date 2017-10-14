@@ -5,7 +5,6 @@ package main
 import (
 	"fmt"
 	"os"
-	"strconv"
 	"strings"
 )
 
@@ -35,14 +34,14 @@ func main() {
 
 	var code, token, number string
 	var costs []cost
-	var duration int
+	var duration, price int
 	for {
 		if fmt.Fscanf(in, "%s", &code); code == "000000" {
 			break
 		}
 		fmt.Fscanf(in, "%s", &token)
 		tokens := strings.Split(token, "$")
-		price, _ := strconv.Atoi(tokens[1])
+		fmt.Sscanf(tokens[1], "%d", &price)
 		costs = append(costs, cost{code, tokens[0], price})
 	}
 	for {

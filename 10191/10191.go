@@ -51,10 +51,10 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var h1, m1, h2, m2 int
+	var n, h1, m1, h2, m2 int
 	for kase := 1; s.Scan(); kase++ {
 		var js []job
-		for n, _ := strconv.Atoi(s.Text()); n > 0 && s.Scan(); n-- {
+		for fmt.Sscanf(s.Text(), "%d", &n); n > 0 && s.Scan(); n-- {
 			fmt.Sscanf(s.Text(), "%d:%d%d:%d", &h1, &m1, &h2, &m2)
 			js = append(js, buildJob(h1, m1, h2, m2))
 		}

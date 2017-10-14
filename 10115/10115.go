@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 	"strings"
 )
 
@@ -30,7 +29,7 @@ func main() {
 
 	var r int
 	for s.Scan() {
-		if r, _ = strconv.Atoi(s.Text()); r == 0 {
+		if fmt.Sscanf(s.Text(), "%d", &r); r == 0 {
 			break
 		}
 		rules := make([][2]string, r)

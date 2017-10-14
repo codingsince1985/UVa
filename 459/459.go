@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 )
 
 func unionFind(x int, f []int) int {
@@ -25,9 +24,10 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
+	var kase int
 	first := true
 	s.Scan()
-	kase, _ := strconv.Atoi(s.Text())
+	fmt.Sscanf(s.Text(), "%d", &kase)
 	for s.Scan(); kase > 0 && s.Scan(); kase-- {
 		line := s.Text()
 		num := int(line[0] - 'A' + 1)

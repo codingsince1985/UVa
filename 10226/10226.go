@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"os"
 	"sort"
-	"strconv"
 )
 
 func names(treeMap map[string]int) []string {
@@ -30,9 +29,10 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
+	var kase int
 	var tree string
 	s.Scan()
-	kase, _ := strconv.Atoi(s.Text())
+	fmt.Sscanf(s.Text(), "%d", &kase)
 	for s.Scan(); kase > 0; kase-- {
 		var count float64
 		treeMap := make(map[string]int)

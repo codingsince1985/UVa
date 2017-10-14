@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"math"
 	"os"
-	"strconv"
 )
 
 const (
@@ -66,11 +65,11 @@ func main() {
 	s.Split(bufio.ScanLines)
 
 	var line string
-	var d, p int
+	var kase, d, p, distance int
 	s.Scan()
-	kase, _ := strconv.Atoi(s.Text())
+	fmt.Sscanf(s.Text(), "%d", &kase)
 	for s.Scan(); kase > 0 && s.Scan(); kase-- {
-		distance, _ := strconv.Atoi(s.Text())
+		fmt.Sscanf(s.Text(), "%d", &distance)
 		var stations []station
 		for s.Scan() {
 			if line = s.Text(); line == "" {

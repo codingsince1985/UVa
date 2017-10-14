@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 )
 
 type terminal struct {
@@ -109,9 +108,11 @@ func main() {
 
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
+
+	var n int
 	for kase := 1; s.Scan(); kase++ {
 		var input string
-		for n, _ := strconv.Atoi(s.Text()); n > 0 && s.Scan(); n-- {
+		for fmt.Sscanf(s.Text(), "%d", &n); n > 0 && s.Scan(); n-- {
 			input += s.Text()
 		}
 		if input == "" {

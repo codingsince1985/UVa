@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 	"strings"
 )
 
@@ -41,13 +40,13 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var tmp int
+	var kase, tmp, n int
 	var line string
 	s.Scan()
-	kase, _ := strconv.Atoi(s.Text())
+	fmt.Sscanf(s.Text(), "%d", &kase)
 	for s.Scan(); kase > 0 && s.Scan(); kase-- {
 		var shuffles [][]int
-		for n, _ := strconv.Atoi(s.Text()); n > 0; n-- {
+		for fmt.Sscanf(s.Text(), "%d", &n); n > 0; n-- {
 			var shuffle []int
 			for s.Scan() {
 				for r := strings.NewReader(s.Text()); ; {
@@ -67,7 +66,7 @@ func main() {
 			if line = s.Text(); line == "" {
 				break
 			}
-			tmp, _ = strconv.Atoi(line)
+			fmt.Sscanf(line, "%d", &tmp)
 			order = append(order, tmp-1)
 		}
 		for _, vi := range do(shuffles, order) {

@@ -16,7 +16,8 @@ func sortInt(num string, descending bool) int {
 	} else {
 		sort.Slice(d, func(i, j int) bool { return d[i] < d[j] })
 	}
-	n, _ := strconv.Atoi(string(d))
+	var n int
+	fmt.Sscanf(string(d), "%d", &n)
 	return n
 }
 

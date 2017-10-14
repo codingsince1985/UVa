@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"os"
 	"sort"
-	"strconv"
 )
 
 type character struct {
@@ -53,8 +52,9 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
+	var kase int
 	s.Scan()
-	for kase, _ := strconv.Atoi(s.Text()); kase > 0 && s.Scan(); kase-- {
+	for fmt.Sscanf(s.Text(), "%d", &kase); kase > 0 && s.Scan(); kase-- {
 		s.Scan()
 		line := s.Text()
 		s.Scan()

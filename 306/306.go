@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 	"strings"
 )
 
@@ -46,7 +45,7 @@ func main() {
 	var n, k int
 	var line string
 	for s.Scan() {
-		if n, _ = strconv.Atoi(s.Text()); n == 0 {
+		if fmt.Sscanf(s.Text(), "%d", &n); n == 0 {
 			break
 		}
 		s.Scan()
@@ -62,7 +61,7 @@ func main() {
 				break
 			}
 			tokens := strings.SplitN(line, " ", 2)
-			k, _ = strconv.Atoi(tokens[0])
+			fmt.Sscanf(tokens[0], "%d", &k)
 			fmt.Fprintln(out, solve(m, n, k, tokens[1]))
 		}
 	}

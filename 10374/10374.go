@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 )
 
 func solve(max int, candidateMap map[string]string, voteMap map[string]int) string {
@@ -31,12 +30,13 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	s.Scan()
+	var kase, n int
 	first := true
-	for kase, _ := strconv.Atoi(s.Text()); kase > 0 && s.Scan(); kase-- {
+	s.Scan()
+	for fmt.Sscanf(s.Text(), "%d", &kase); kase > 0 && s.Scan(); kase-- {
 		candidateMap := make(map[string]string)
 		s.Scan()
-		for n, _ := strconv.Atoi(s.Text()); n > 0 && s.Scan(); n-- {
+		for fmt.Sscanf(s.Text(), "%d", &n); n > 0 && s.Scan(); n-- {
 			name := s.Text()
 			s.Scan()
 			candidateMap[name] = s.Text()
@@ -44,7 +44,7 @@ func main() {
 		voteMap := make(map[string]int)
 		var max int
 		s.Scan()
-		for n, _ := strconv.Atoi(s.Text()); n > 0 && s.Scan(); n-- {
+		for fmt.Sscanf(s.Text(), "%d", &n); n > 0 && s.Scan(); n-- {
 			if name := s.Text(); candidateMap[name] != "" {
 				voteMap[name]++
 				if voteMap[name] > max {

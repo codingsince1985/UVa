@@ -5,7 +5,6 @@ package main
 import (
 	"fmt"
 	"os"
-	"strconv"
 )
 
 const traditionalC = 100 * 60 * 60 * 24
@@ -13,7 +12,8 @@ const traditionalC = 100 * 60 * 60 * 24
 var weights = [...]int{1, 100, 60 * 100, 60 * 60 * 100}
 
 func solve(traditional string) int {
-	time, _ := strconv.Atoi(traditional)
+	var time int
+	fmt.Sscanf(traditional, "%d", &time)
 	var t int
 	for i := 0; time > 0; i++ {
 		t += time % 100 * weights[i]

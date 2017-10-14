@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"os"
 	"sort"
-	"strconv"
 	"strings"
 )
 
@@ -64,10 +63,11 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
+	var n int
 	var line string
 	first := true
 	for s.Scan() {
-		n, _ := strconv.Atoi(s.Text())
+		fmt.Sscanf(s.Text(), "%d", &n)
 		frequency := make(map[string]int)
 		for s.Scan() {
 			if line = s.Text(); line == "EndOfText" {

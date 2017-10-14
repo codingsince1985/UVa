@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 	"strings"
 )
 
@@ -25,7 +24,7 @@ func solve(token []string) bool {
 	var sum int
 	luggage := make([]int, len(token))
 	for i := range luggage {
-		luggage[i], _ = strconv.Atoi(token[i])
+		fmt.Sscanf(token[i], "%d", &luggage[i])
 		sum += luggage[i]
 	}
 	return sum%2 == 0 && knapsack(luggage, sum)
@@ -40,8 +39,9 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
+	var m int
 	s.Scan()
-	for m, _ := strconv.Atoi(s.Text()); m > 0 && s.Scan(); m-- {
+	for fmt.Sscanf(s.Text(), "%d", &m); m > 0 && s.Scan(); m-- {
 		if solve(strings.Fields(s.Text())) {
 			fmt.Fprintln(out, "YES")
 		} else {

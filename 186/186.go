@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"math"
 	"os"
-	"strconv"
 	"strings"
 )
 
@@ -79,7 +78,7 @@ func main() {
 	cityMap := make(map[string]int)
 	orderMap := make(map[int]string)
 	var line string
-	var idx int
+	var idx, l int
 	for s.Scan() {
 		if line = s.Text(); line == "" {
 			break
@@ -95,7 +94,7 @@ func main() {
 			orderMap[idx] = tokens[1]
 			idx++
 		}
-		l, _ := strconv.Atoi(tokens[3])
+		fmt.Sscanf(tokens[3], "%d", &l)
 		matrix[cityMap[tokens[0]]][cityMap[tokens[1]]] = append(matrix[cityMap[tokens[0]]][cityMap[tokens[1]]], path{tokens[2], l})
 		matrix[cityMap[tokens[1]]][cityMap[tokens[0]]] = append(matrix[cityMap[tokens[1]]][cityMap[tokens[0]]], path{tokens[2], l})
 	}

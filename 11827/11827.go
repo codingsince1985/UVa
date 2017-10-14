@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 	"strings"
 )
 
@@ -38,9 +37,9 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var tmp int
+	var n, tmp int
 	s.Scan()
-	for n, _ := strconv.Atoi(s.Text()); n > 0 && s.Scan(); n-- {
+	for fmt.Sscanf(s.Text(), "%d", &n); n > 0 && s.Scan(); n-- {
 		var num []int
 		for r := strings.NewReader(s.Text()); ; {
 			if _, err := fmt.Fscanf(r, "%d", &tmp); err != nil {

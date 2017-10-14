@@ -35,7 +35,7 @@ func buildTree(nodes [][2]string) *node {
 		if curr.n != -1 {
 			return nil
 		}
-		curr.n, _ = strconv.Atoi(v[0])
+		fmt.Sscanf(v[0], "%d", &curr.n)
 	}
 	return &head
 }

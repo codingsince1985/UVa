@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 	"strings"
 )
 
@@ -82,9 +81,9 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var p, n int
+	var k, p, n int
 	s.Scan()
-	k, _ := strconv.Atoi(s.Text())
+	fmt.Sscanf(s.Text(), "%d", &k)
 	for kase := 1; s.Scan() && kase <= k; kase++ {
 		fmt.Fprintf(out, "Scenario %d\n", kase)
 		fmt.Sscanf(s.Text(), "%d%d", &p, &n)

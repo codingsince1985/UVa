@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"math"
 	"os"
-	"strconv"
 )
 
 func floydWarshall(matrix [][]int) {
@@ -39,7 +38,7 @@ func main() {
 			if fmt.Fscanf(in, "%s", &token); token == "x" {
 				matrix[i][j] = math.MaxInt32
 			} else {
-				matrix[i][j], _ = strconv.Atoi(token)
+				fmt.Sscanf(token, "%d", &matrix[i][j])
 			}
 			matrix[j][i] = matrix[i][j]
 		}

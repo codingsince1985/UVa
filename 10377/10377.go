@@ -6,7 +6,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 	"strings"
 )
 
@@ -51,10 +50,10 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var r, c int
+	var kase, r, c int
 	var maze [][]byte
 	s.Scan()
-	for kase, _ := strconv.Atoi(s.Text()); kase > 0 && s.Scan(); kase-- {
+	for fmt.Sscanf(s.Text(), "%d", &kase); kase > 0 && s.Scan(); kase-- {
 		s.Scan()
 		fmt.Sscanf(s.Text(), "%d%d", &row, &column)
 		maze = make([][]byte, row)

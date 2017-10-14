@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"os"
 	"sort"
-	"strconv"
 )
 
 type byteSlice []byte
@@ -56,8 +55,10 @@ func main() {
 
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
+
+	var t int
 	s.Scan()
-	for t, _ := strconv.Atoi(s.Text()); t > 0 && s.Scan(); t-- {
+	for fmt.Sscanf(s.Text(), "%d", &t); t > 0 && s.Scan(); t-- {
 		fmt.Fprintln(out, solve(s.Text()))
 	}
 }

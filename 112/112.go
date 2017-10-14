@@ -5,7 +5,6 @@ package main
 import (
 	"fmt"
 	"os"
-	"strconv"
 )
 
 type node struct {
@@ -17,7 +16,7 @@ func buildTree(line string) node {
 	if len(line) == 0 {
 		return node{}
 	}
-	var l, r, count int
+	var l, r, count, value int
 	for idx, v := range line {
 		if l == 0 && v == '(' {
 			l = idx
@@ -34,7 +33,7 @@ func buildTree(line string) node {
 	}
 	left := buildTree(line[l+1 : r])
 	right := buildTree(line[r+2 : len(line)-1])
-	value, _ := strconv.Atoi(line[:l])
+	fmt.Sscanf(line[:l], "%d", &value)
 	tree := node{value, &left, &right}
 	return tree
 }

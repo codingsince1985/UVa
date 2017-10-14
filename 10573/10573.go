@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"math"
 	"os"
-	"strconv"
 )
 
 func main() {
@@ -19,9 +18,10 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
+	var kase int
 	var r1, r2 float64
 	s.Scan()
-	for kase, _ := strconv.Atoi(s.Text()); kase > 0 && s.Scan(); kase-- {
+	for fmt.Sscanf(s.Text(), "%d", &kase); kase > 0 && s.Scan(); kase-- {
 		if n, _ := fmt.Sscanf(s.Text(), "%f%f", &r1, &r2); n == 1 {
 			fmt.Fprintf(out, "%.4f\n", math.Pi*r1*r1/8)
 		} else {
