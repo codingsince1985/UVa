@@ -11,8 +11,8 @@ import (
 )
 
 func isInt(s string) bool {
-	_, ok := strconv.Atoi(s)
-	return ok == nil
+	_, err := strconv.Atoi(s)
+	return err == nil
 }
 
 func checkLeft(s string, hasRight bool) bool {
