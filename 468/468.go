@@ -54,7 +54,7 @@ func main() {
 	s.Split(bufio.ScanLines)
 
 	s.Scan()
-	for kase, _ := strconv.Atoi(s.Text()); s.Scan() && kase > 0; kase-- {
+	for kase, _ := strconv.Atoi(s.Text()); kase > 0 && s.Scan(); kase-- {
 		s.Scan()
 		line := s.Text()
 		s.Scan()

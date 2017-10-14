@@ -30,11 +30,10 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
+	var tree string
 	s.Scan()
 	kase, _ := strconv.Atoi(s.Text())
-	s.Scan()
-	var tree string
-	for ; kase > 0; kase-- {
+	for s.Scan(); kase > 0; kase-- {
 		var count float64
 		treeMap := make(map[string]int)
 		for s.Scan() {

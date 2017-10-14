@@ -30,8 +30,7 @@ func main() {
 	var line string
 	s.Scan()
 	kase, _ := strconv.Atoi(s.Text())
-	s.Scan()
-	for ; kase > 0 && s.Scan(); kase-- {
+	for s.Scan(); kase > 0 && s.Scan(); kase-- {
 		num, _ := strconv.Atoi(s.Text())
 		f := make([]int, num+1)
 		for i := range f {

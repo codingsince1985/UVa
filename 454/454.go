@@ -45,13 +45,12 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	s.Scan()
-	kase, _ := strconv.Atoi(s.Text())
-	s.Scan()
 	var words []string
 	var line string
 	first := true
-	for ; kase > 0; kase-- {
+	s.Scan()
+	kase, _ := strconv.Atoi(s.Text())
+	for s.Scan(); kase > 0; kase-- {
 		for s.Scan() {
 			if line = s.Text(); line == "" {
 				break

@@ -60,11 +60,10 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
+	var line string
 	s.Scan()
 	kase, _ := strconv.Atoi(s.Text())
-	s.Scan()
-	var line string
-	for ; kase > 0; kase-- {
+	for s.Scan(); kase > 0; kase-- {
 		var lines []string
 		for s.Scan() {
 			if line = s.Text(); line == "" {

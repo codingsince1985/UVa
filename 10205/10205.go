@@ -40,12 +40,12 @@ func main() {
 
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
-	s.Scan()
-	kase, _ := strconv.Atoi(s.Text())
-	s.Scan()
+
 	var tmp int
 	var line string
-	for ; kase > 0 && s.Scan(); kase-- {
+	s.Scan()
+	kase, _ := strconv.Atoi(s.Text())
+	for s.Scan(); kase > 0 && s.Scan(); kase-- {
 		var shuffles [][]int
 		for n, _ := strconv.Atoi(s.Text()); n > 0; n-- {
 			var shuffle []int

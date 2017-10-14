@@ -51,8 +51,7 @@ func main() {
 
 	var maze [][]byte
 	s.Scan()
-	kase, _ := strconv.Atoi(s.Text())
-	for kase > 0 && s.Scan() {
+	for kase, _ := strconv.Atoi(s.Text()); kase > 0 && s.Scan(); {
 		if line := s.Text(); strings.HasPrefix(line, "_") {
 			x, y := find(maze)
 			dfs(x, y, maze)

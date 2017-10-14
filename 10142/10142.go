@@ -87,8 +87,7 @@ func main() {
 
 	s.Scan()
 	kase, _ := strconv.Atoi(s.Text())
-	s.Scan()
-	for ; s.Scan() && kase > 0; kase-- {
+	for s.Scan(); kase > 0 && s.Scan(); kase-- {
 		n, _ := strconv.Atoi(s.Text())
 		candidates := make([]string, n)
 		for i := range candidates {
