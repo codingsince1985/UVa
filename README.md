@@ -467,6 +467,7 @@ UVa 10267 - [Graphical Editor](https://uva.onlinejudge.org/external/102/10267.pd
 UVa 10268 - [498-bis](https://uva.onlinejudge.org/external/102/10268.pdf)  
 UVa 10271 - [Chopsticks](https://uva.onlinejudge.org/external/102/10271.pdf)  
 UVa 10276 - [Hanoi Tower Troubles Again!](https://uva.onlinejudge.org/external/102/10276.pdf)  
+UVa 10278 - [Fire Station](https://uva.onlinejudge.org/external/102/10278.pdf)  
 UVa 10279 - [Mine Sweeper](https://uva.onlinejudge.org/external/102/10279.pdf)  
 UVa 10281 - [Average Speed](https://uva.onlinejudge.org/external/102/10281.pdf)  
 UVa 10282 - [Babelfish](https://uva.onlinejudge.org/external/102/10282.pdf)  
