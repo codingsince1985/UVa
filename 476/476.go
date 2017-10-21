@@ -7,9 +7,10 @@ import (
 	"os"
 )
 
-type point struct{ x, y float64 }
-
-type rectangle struct{ p1, p2 point }
+type (
+	point     struct{ x, y float64 }
+	rectangle struct{ p1, p2 point }
+)
 
 func testIn(out *os.File, count int, p point, rectangles []rectangle) {
 	inAny := false

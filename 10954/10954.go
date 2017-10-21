@@ -8,9 +8,10 @@ import (
 	"os"
 )
 
-type item struct{ value int }
-
-type priorityQueue []*item
+type (
+	item          struct{ value int }
+	priorityQueue []*item
+)
 
 func (pq priorityQueue) Len() int { return len(pq) }
 
