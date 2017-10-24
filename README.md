@@ -596,6 +596,7 @@ UVa Online Judge solutions in Golang
 [UVa 10656](https://github.com/codingsince1985/UVa/tree/master/10656) - [Maximum Sum (II)](https://uva.onlinejudge.org/external/106/10656.pdf)  
 [UVa 10664](https://github.com/codingsince1985/UVa/tree/master/10664) - [Luggage](https://uva.onlinejudge.org/external/106/10664.pdf)  
 [UVa 10667](https://github.com/codingsince1985/UVa/tree/master/10667) - [Largest Block](https://uva.onlinejudge.org/external/106/10667.pdf)  
+[UVa 10669](https://github.com/codingsince1985/UVa/tree/master/10669) - [Three powers](https://uva.onlinejudge.org/external/106/10669.pdf)  
 [UVa 10673](https://github.com/codingsince1985/UVa/tree/master/10673) - [Play with Floor and Ceil](https://uva.onlinejudge.org/external/106/10673.pdf)  
 [UVa 10678](https://github.com/codingsince1985/UVa/tree/master/10678) - [The Grazing Cow](https://uva.onlinejudge.org/external/106/10678.pdf)  
 [UVa 10679](https://github.com/codingsince1985/UVa/tree/master/10679) - [I Love Strings!!](https://uva.onlinejudge.org/external/106/10679.pdf)  
