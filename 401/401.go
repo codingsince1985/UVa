@@ -48,13 +48,14 @@ func main() {
 		fmt.Fprintf(out, "%s -- ", line)
 		switch {
 		case !p && !m:
-			fmt.Fprintln(out, "is not a palindrome.\n")
+			fmt.Fprintln(out, "is not a palindrome.")
 		case p && !m:
-			fmt.Fprintln(out, "is a regular palindrome.\n")
+			fmt.Fprintln(out, "is a regular palindrome.")
 		case !p && m:
-			fmt.Fprintln(out, "is a mirrored string.\n")
+			fmt.Fprintln(out, "is a mirrored string.")
 		default:
-			fmt.Fprintln(out, "is a mirrored palindrome.\n")
+			fmt.Fprintln(out, "is a mirrored palindrome.")
 		}
+		fmt.Fprintln(out)
 	}
 }

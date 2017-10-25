@@ -12,28 +12,30 @@ var (
 	out        *os.File
 )
 
+func in(x, y int) bool { return x >= 0 && x < 8 && y >= 0 && y < 8 }
+
 func valid(chess [8][8]bool, r, c int) bool {
 	for i := 0; i < 8; i++ {
 		if chess[i][c] {
 			return false
 		}
 	}
-	for x, y := r, c; x >= 0 && x < 8 && y >= 0 && y < 8; x, y = x+1, y-1 {
+	for x, y := r, c; in(x, y); x, y = x+1, y-1 {
 		if chess[x][y] {
 			return false
 		}
 	}
-	for x, y := r, c; x >= 0 && x < 8 && y >= 0 && y < 8; x, y = x-1, y+1 {
+	for x, y := r, c; in(x, y); x, y = x-1, y+1 {
 		if chess[x][y] {
 			return false
 		}
 	}
-	for x, y := r, c; x >= 0 && x < 8 && y >= 0 && y < 8; x, y = x-1, y-1 {
+	for x, y := r, c; in(x, y); x, y = x-1, y-1 {
 		if chess[x][y] {
 			return false
 		}
 	}
-	for x, y := r, c; x >= 0 && x < 8 && y >= 0 && y < 8; x, y = x+1, y+1 {
+	for x, y := r, c; in(x, y); x, y = x+1, y+1 {
 		if chess[x][y] {
 			return false
 		}
@@ -80,7 +82,8 @@ func main() {
 			break
 		}
 		fmt.Fprintln(out, "SOLN       COLUMN")
-		fmt.Fprintln(out, " #      1 2 3 4 5 6 7 8\n")
+		fmt.Fprintln(out, " #      1 2 3 4 5 6 7 8")
+		fmt.Fprintln(out)
 		var chess [8][8]bool
 		chess[row-1][c-1] = true
 		backtracking(0, 1, chess)

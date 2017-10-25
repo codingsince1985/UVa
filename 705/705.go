@@ -82,9 +82,10 @@ func main() {
 		}
 		fmt.Fprintf(out, "Maze #%d:\n", kase)
 		if circle, longest := solve(); circle > 0 {
-			fmt.Fprintf(out, "%d Cycles; the longest has length %d.\n\n", circle, longest)
+			fmt.Fprintf(out, "%d Cycles; the longest has length %d.\n", circle, longest)
 		} else {
-			fmt.Fprintln(out, "There are no cycles.\n")
+			fmt.Fprintln(out, "There are no cycles.")
 		}
+		fmt.Fprintln(out)
 	}
 }

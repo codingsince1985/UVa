@@ -9,6 +9,10 @@ import (
 	"strings"
 )
 
+const vowels = "AEIOU"
+
+func isAlphabetic(b byte) bool { return b >= 'A' && b <= 'Z' || b >= 'a' && b <= 'z' }
+
 func main() {
 	in, _ := os.Open("492.in")
 	defer in.Close()
@@ -24,10 +28,10 @@ func main() {
 			break
 		}
 		if !started {
-			if c > 'A' && c < 'Z' || c > 'a' && c < 'z' {
+			if isAlphabetic(c) {
 				started = true
-				if u := strings.ToUpper(string(c)); !(u == "A" || u == "E" || u == "I" || u == "O" || u == "U") {
-					suffix = string(c)
+				if sc := string(c); !strings.Contains(vowels, strings.ToUpper(sc)) {
+					suffix = sc
 				} else {
 					buf.WriteByte(c)
 				}
@@ -36,7 +40,7 @@ func main() {
 				buf.WriteByte(c)
 			}
 		} else {
-			if !(c > 'A' && c < 'Z' || c > 'a' && c < 'z') {
+			if !isAlphabetic(c) {
 				started = false
 				buf.WriteString(suffix)
 				suffix = ""

@@ -69,9 +69,10 @@ func main() {
 		}
 		fmt.Fprintf(out, "Scenario #%d\n", kase)
 		if cost := solve(n, k, flights); cost != math.MaxInt32 {
-			fmt.Fprintf(out, "The best flight costs %d.\n\n", cost)
+			fmt.Fprintf(out, "The best flight costs %d.\n", cost)
 		} else {
-			fmt.Fprintln(out, "No flight possible.\n")
+			fmt.Fprintln(out, "No flight possible.")
 		}
+		fmt.Fprintln(out)
 	}
 }

@@ -50,9 +50,10 @@ func main() {
 			break
 		}
 		if fmt.Fprintf(out, "Collection #%d:\n", kase); solve(sum, values) {
-			fmt.Fprintln(out, "Can be divided.\n")
+			fmt.Fprintln(out, "Can be divided.")
 		} else {
-			fmt.Fprintln(out, "Can't be divided.\n")
+			fmt.Fprintln(out, "Can't be divided.")
 		}
+		fmt.Fprintln(out)
 	}
 }

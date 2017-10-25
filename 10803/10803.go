@@ -81,9 +81,10 @@ func main() {
 		}
 		fmt.Fprintf(out, "Case #%d:\n", kase)
 		if dist := solve(t, towns); dist == inf {
-			fmt.Fprintln(out, "Send Kurdy\n")
+			fmt.Fprintln(out, "Send Kurdy")
 		} else {
-			fmt.Fprintf(out, "%.4f\n\n", dist)
+			fmt.Fprintf(out, "%.4f\n", dist)
 		}
+		fmt.Fprintln(out)
 	}
 }

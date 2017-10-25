@@ -40,6 +40,7 @@ func main() {
 			fmt.Fscanf(in, "%s", &x)
 			fmt.Fprintf(out, "%c", leaves[solve(x)])
 		}
-		fmt.Fprintln(out, "\n")
+		fmt.Fprintln(out)
+		fmt.Fprintln(out)
 	}
 }

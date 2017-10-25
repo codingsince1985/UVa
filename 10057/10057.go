@@ -17,18 +17,18 @@ func count(nums []int, f int) int {
 	return cnt
 }
 
-func solve(nums []int) (int, int, int) {
+func solve(n int, nums []int) (int, int, int) {
 	sort.Ints(nums)
 	var median, n1, n2 int
-	if size := len(nums); size%2 == 0 {
-		median = nums[size/2-1]
+	if n%2 == 0 {
+		median = nums[n/2-1]
 		n1 = count(nums, median)
-		if median != nums[size/2] {
-			n1 += count(nums, nums[size/2])
+		if median != nums[n/2] {
+			n1 += count(nums, nums[n/2])
 		}
-		n2 = nums[size/2] - median + 1
+		n2 = nums[n/2] - median + 1
 	} else {
-		median = nums[size/2]
+		median = nums[n/2]
 		n1 = count(nums, median)
 		n2 = 1
 	}
@@ -50,7 +50,7 @@ func main() {
 		for i := range nums {
 			fmt.Fscanf(in, "%d", &nums[i])
 		}
-		median, n1, n2 := solve(nums)
+		median, n1, n2 := solve(n, nums)
 		fmt.Fprintf(out, "%d %d %d\n", median, n1, n2)
 	}
 }

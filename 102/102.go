@@ -9,13 +9,13 @@ import (
 )
 
 const (
-	B = iota
-	C
-	G
+	b = iota
+	c
+	g
 )
 
 var (
-	binColor = [][3]int{{B, C, G}, {B, G, C}, {C, B, G}, {C, G, B}, {G, B, C}, {G, C, B}}
+	binColor = [][3]int{{b, c, g}, {b, g, c}, {c, b, g}, {c, g, b}, {g, b, c}, {g, c, b}}
 	binCode  = []byte{'B', 'C', 'G'}
 )
 
@@ -30,10 +30,10 @@ func main() {
 	for {
 		total := 0
 		for i := 0; i < 3; i++ {
-			if _, err := fmt.Fscanf(in, "%d%d%d", &bin[i][B], &bin[i][G], &bin[i][C]); err != nil {
+			if _, err := fmt.Fscanf(in, "%d%d%d", &bin[i][b], &bin[i][g], &bin[i][c]); err != nil {
 				return
 			}
-			total += bin[i][B] + bin[i][G] + bin[i][C]
+			total += bin[i][b] + bin[i][g] + bin[i][c]
 		}
 		minMove := math.MaxInt32
 		for i, v := range binColor {

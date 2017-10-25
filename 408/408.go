@@ -30,9 +30,10 @@ func main() {
 			appeared[seed] = true
 		}
 		if fmt.Fprintf(out, "%10d%10d    ", step, mod); cnt == mod {
-			fmt.Fprintln(out, "Good Choice\n")
+			fmt.Fprintln(out, "Good Choice")
 		} else {
-			fmt.Fprintln(out, "Bad Choice\n")
+			fmt.Fprintln(out, "Bad Choice")
 		}
+		fmt.Fprintln(out)
 	}
 }

@@ -48,10 +48,11 @@ func main() {
 		}
 
 		if fmt.Fprintf(out, "Sequence %d\n", kase); blown {
-			fmt.Fprintln(out, "Fuse was blown.\n")
+			fmt.Fprintln(out, "Fuse was blown.")
 		} else {
 			fmt.Fprintln(out, "Fuse was not blown.")
-			fmt.Fprintf(out, "Maximal power consumption was %d amperes.\n\n", max)
+			fmt.Fprintf(out, "Maximal power consumption was %d amperes.\n", max)
 		}
+		fmt.Fprintln(out)
 	}
 }

@@ -43,10 +43,11 @@ func output(out *os.File, length int, digits string) {
 		}
 	}
 	if length == 0 {
-		fmt.Fprintln(out, "This expansion terminates.\n")
+		fmt.Fprintln(out, "This expansion terminates.")
 	} else {
-		fmt.Fprintf(out, "The last %d digits repeat forever.\n\n", length)
+		fmt.Fprintf(out, "The last %d digits repeat forever.\n", length)
 	}
+	fmt.Fprintln(out)
 }
 
 func main() {
