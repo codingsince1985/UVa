@@ -10,11 +10,11 @@ import (
 func binarySearchHigh(ladies []int, height int) int {
 	l, r := 0, len(ladies)-1
 	for len(ladies) > 2 {
-		if mid := (l + r) / 2; ladies[mid] <= height {
+		mid := (l + r) / 2
+		if ladies[mid] <= height {
 			return binarySearchHigh(ladies[mid+1:], height)
-		} else {
-			return binarySearchHigh(ladies[:mid+1], height)
 		}
+		return binarySearchHigh(ladies[:mid+1], height)
 	}
 	if ladies[l] > height {
 		return ladies[l]
@@ -31,9 +31,8 @@ func binarySearchLow(ladies []int, height int) int {
 		mid := (l + r) / 2
 		if ladies[mid] >= height {
 			return binarySearchLow(ladies[:mid], height)
-		} else {
-			return binarySearchLow(ladies[mid:], height)
 		}
+		return binarySearchLow(ladies[mid:], height)
 	}
 	if ladies[r] < height {
 		return ladies[r]

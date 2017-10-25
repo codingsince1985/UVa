@@ -8,10 +8,10 @@ import (
 	"strings"
 )
 
-const total_weight = 1024
+const totalWeight = 1024
 
 func preOrder(tree string, weight int, image *string) string {
-	if weight == total_weight {
+	if weight == totalWeight {
 		if tree[0] == 'p' {
 			return preOrder(tree[1:], weight/4, image)
 		}
@@ -33,8 +33,8 @@ func preOrder(tree string, weight int, image *string) string {
 
 func add(tree1, tree2 string) int {
 	var image1, image2 string
-	preOrder(tree1, total_weight, &image1)
-	preOrder(tree2, total_weight, &image2)
+	preOrder(tree1, totalWeight, &image1)
+	preOrder(tree2, totalWeight, &image2)
 
 	total := 0
 	for i := range image1 {

@@ -30,17 +30,15 @@ func isSlimp(s string) int {
 		return 2
 	}
 	if strings.HasPrefix(s, "AB") {
-		if len1 := isSlimp(s[2:]); len1 == 0 || s[2+len1] != 'C' {
-			return 0
-		} else {
+		if len1 := isSlimp(s[2:]); len1 != 0 && s[2+len1] == 'C' {
 			return 3 + len1
 		}
-	}
-	if len1 := isSlump(s[1:]); len1 == 0 || s[1+len1] != 'C' {
 		return 0
-	} else {
+	}
+	if len1 := isSlump(s[1:]); len1 != 0 && s[1+len1] == 'C' {
 		return 2 + len1
 	}
+	return 0
 }
 
 func isSlurpy(s string) bool {

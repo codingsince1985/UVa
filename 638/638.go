@@ -12,7 +12,7 @@ type point struct {
 	x, y  int
 }
 
-func solve(n int, points []point) []string {
+func solve(points []point) []string {
 	xMap := make(map[int][]point)
 	for _, p := range points {
 		xMap[p.x] = append(xMap[p.x], p)
@@ -51,7 +51,7 @@ func main() {
 		for i := range points {
 			fmt.Fscanf(in, "%s%d%d", &points[i].label, &points[i].x, &points[i].y)
 		}
-		if rectangles := solve(n, points); len(rectangles) == 0 {
+		if rectangles := solve(points); len(rectangles) == 0 {
 			fmt.Fprintf(out, "Point set %d: No rectangles\n", kase)
 		} else {
 			fmt.Fprintf(out, "Point set %d:\n", kase)

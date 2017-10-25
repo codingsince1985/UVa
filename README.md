@@ -1,5 +1,6 @@
 UVa Online Judge solutions in Golang
 ==
+[![Go Report Card](https://goreportcard.com/badge/github.com/codingsince1985/UVa)](https://goreportcard.com/report/github.com/codingsince1985/UVa)
 
 [UVa 100](https://github.com/codingsince1985/UVa/tree/master/100) - [The 3n + 1 problem](https://uva.onlinejudge.org/external/1/100.pdf)  
 [UVa 101](https://github.com/codingsince1985/UVa/tree/master/101) - [The Blocks Problem](https://uva.onlinejudge.org/external/1/101.pdf)  

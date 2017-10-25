@@ -8,7 +8,7 @@ import (
 )
 
 var (
-	pl    = make(map[int]bool)
+	pl    = map[int]bool{2: true}
 	cache = make(map[int]map[int]int)
 )
 
@@ -40,10 +40,9 @@ func factorize(n int) map[int]int {
 }
 
 func primeFactorizeFactorial(n int) map[int]int {
-	var ok bool
 	facts := make(map[int]int)
 	for i := 2; i <= n; i++ {
-		if _, ok = cache[i]; !ok {
+		if _, ok := cache[i]; !ok {
 			cache[i] = factorize(i)
 		}
 		for k, v := range cache[i] {
@@ -68,7 +67,6 @@ func main() {
 	out, _ := os.Create("10139.out")
 	defer out.Close()
 
-	pl[2] = true
 	var n, m int
 	for {
 		if _, err := fmt.Fscanf(in, "%d%d", &n, &m); err != nil {

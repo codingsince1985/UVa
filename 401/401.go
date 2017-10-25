@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-var dict map[byte]byte = func() map[byte]byte {
+var dict = func() map[byte]byte {
 	srcBytes := []byte{'A', 'E', 'H', 'I', 'J', 'L', 'M', 'O', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '5', '8'}
 	dstBytes := []byte{'A', '3', 'H', 'I', 'L', 'J', 'M', 'O', '2', 'T', 'U', 'V', 'W', 'X', 'Y', '5', '1', 'S', 'E', 'Z', '8'}
 	dict := make(map[byte]byte)

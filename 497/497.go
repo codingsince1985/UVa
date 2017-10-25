@@ -44,7 +44,6 @@ func output(out *os.File, s [][]node, l int) {
 		for j := len(nodes) - 1; j >= 0; j-- {
 			if nodes[j].idx < l {
 				f = append(f, nodes[j].num)
-				k = nodes[j].idx
 				break
 			}
 		}

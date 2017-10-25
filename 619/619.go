@@ -10,8 +10,8 @@ import (
 )
 
 var (
-	BASE = big.NewInt(26)
-	ZERO = big.NewInt(0)
+	base = big.NewInt(26)
+	zero = big.NewInt(0)
 )
 
 func split(number string) string {
@@ -29,7 +29,7 @@ func split(number string) string {
 func toNumber(line string) string {
 	var num big.Int
 	for i := range line {
-		num.Mul(&num, BASE)
+		num.Mul(&num, base)
 		num.Add(&num, big.NewInt(int64(line[i]-'a'+1)))
 	}
 	return split(num.String())
@@ -39,8 +39,8 @@ func toString(line string) string {
 	var word string
 	var num, mod big.Int
 	num.SetString(line, 10)
-	for num.Cmp(ZERO) > 0 {
-		if num.DivMod(&num, BASE, &mod); mod.Int64() == 0 {
+	for num.Cmp(zero) > 0 {
+		if num.DivMod(&num, base, &mod); mod.Int64() == 0 {
 			word = "z" + word
 		} else {
 			word = string('a'+mod.Int64()-1) + word

@@ -18,9 +18,8 @@ func binarySearch(n float64) int {
 	}
 	if float64(high*high*high) > n {
 		return low
-	} else {
-		return high
 	}
+	return high
 }
 
 func main() {

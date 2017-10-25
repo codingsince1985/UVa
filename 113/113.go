@@ -12,7 +12,7 @@ import (
 	"os"
 )
 
-const max_k = 1000000000
+const max = 1000000000
 
 func main() {
 	in, _ := os.Open("113.in")
@@ -32,7 +32,7 @@ func main() {
 		if p.Cmp(n) == 0 {
 			fmt.Fprintln(out, 1)
 		} else {
-			var i1, i2 int64 = 0, max_k
+			var i1, i2 int64 = 0, max
 			for {
 				var i = (i1 + i2 + 1) / 2
 				k := big.NewInt(i)

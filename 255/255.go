@@ -61,15 +61,15 @@ func solve(king, queue, move int) string {
 	if king == queue {
 		return "Illegal state"
 	}
-	if v := legalAndAllowed(king, queue, move); v == 1 {
+	switch legalAndAllowed(king, queue, move) {
+	case 1:
 		if canContinue(king, move) {
 			return "Continue"
 		}
 		return "Stop"
-	} else {
-		if v == -1 {
-			return "Illegal move"
-		}
+	case -1:
+		return "Illegal move"
+	default:
 		return "Move not allowed"
 	}
 }

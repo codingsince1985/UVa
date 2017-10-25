@@ -8,12 +8,12 @@ import (
 	"os"
 )
 
-var log2_10 = math.Log2(10.0)
+var log10 = math.Log2(10.0)
 
 func solve(n float64) int {
 	for digits := int(math.Log10(n)) + 2; ; digits++ {
-		low := int(math.Log2(n) + float64(digits)*log2_10)
-		high := int(math.Log2(n+1) + float64(digits)*log2_10)
+		low := int(math.Log2(n) + float64(digits)*log10)
+		high := int(math.Log2(n+1) + float64(digits)*log10)
 		if low+1 == high {
 			return high
 		}

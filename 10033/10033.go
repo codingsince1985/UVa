@@ -41,9 +41,7 @@ func solve(lines []string) int {
 		}
 		registers[line[1]-'0'] %= 1000
 		cnt++
-		if jump {
-			jump = false
-		} else {
+		if !jump {
 			pointer++
 		}
 	}

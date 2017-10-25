@@ -23,10 +23,9 @@ func min(a, b int) int {
 }
 
 func commonPermutation(a, b string) map[byte]int {
-	ca := charMap(a)
 	cb := charMap(b)
 	cm := make(map[byte]int)
-	for k, va := range ca {
+	for k, va := range charMap(a) {
 		if vb, ok := cb[k]; ok {
 			cm[k] = min(va, vb)
 		}

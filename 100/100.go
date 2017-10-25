@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-var cache = make(map[int]int)
+var cache = map[int]int{1: 1}
 
 func calculate(i int) int {
 	if _, ok := cache[i]; !ok {
@@ -36,7 +36,6 @@ func main() {
 	out, _ := os.Create("100.out")
 	defer out.Close()
 
-	cache[1] = 1
 	var i, j int
 	for {
 		if _, err := fmt.Fscanf(in, "%d%d", &i, &j); err != nil {

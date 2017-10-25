@@ -78,8 +78,7 @@ func solve(line string) {
 	stack := parse(line)
 	fmt.Fprintf(out, "%s\n", strings.Join(stack, " "))
 	md, as := operations(stack)
-	stack = pass(md, [2]string{"*", "/"}, stack)
-	stack = pass(as, [2]string{"+", "-"}, stack)
+	pass(as, [2]string{"+", "-"}, pass(md, [2]string{"*", "/"}, stack))
 }
 
 func main() {
