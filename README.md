@@ -219,6 +219,7 @@ UVa Online Judge solutions in Golang
 [UVa 535](https://github.com/codingsince1985/UVa/tree/master/535) - [Globetrotter](https://uva.onlinejudge.org/external/5/535.pdf)  
 [UVa 536](https://github.com/codingsince1985/UVa/tree/master/536) - [Tree Recovery](https://uva.onlinejudge.org/external/5/536.pdf)  
 [UVa 537](https://github.com/codingsince1985/UVa/tree/master/537) - [Artificial Intelligence?](https://uva.onlinejudge.org/external/5/537.pdf)  
+[UVa 538](https://github.com/codingsince1985/UVa/tree/master/538) - [Balancing Bank Accounts](https://uva.onlinejudge.org/external/5/538.pdf)  
 [UVa 539](https://github.com/codingsince1985/UVa/tree/master/539) - [The Settlers of Catan](https://uva.onlinejudge.org/external/5/539.pdf)  
 [UVa 540](https://github.com/codingsince1985/UVa/tree/master/540) - [Team Queue](https://uva.onlinejudge.org/external/5/540.pdf)  
 [UVa 541](https://github.com/codingsince1985/UVa/tree/master/541) - [Error Correction](https://uva.onlinejudge.org/external/5/541.pdf)  
