@@ -9,7 +9,7 @@ import (
 
 var directions = [][2]int64{{-1, 0}, {0, -1}, {1, 0}, {0, 1}}
 
-func binarySearch(size, p int64) int64 {
+func findRing(size, p int64) int64 {
 	for i := int64(0); i < size; i++ {
 		if (i*2+1)*(i*2+1) >= p {
 			return i
@@ -19,7 +19,7 @@ func binarySearch(size, p int64) int64 {
 }
 
 func solve(size, p int64) (int64, int64) {
-	ring := binarySearch(size, p)
+	ring := findRing(size, p)
 	y := size/2 + 1 + ring
 	x := y
 	side := ring*2 + 1
