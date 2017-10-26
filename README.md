@@ -647,6 +647,7 @@ UVa Online Judge solutions in Golang
 [UVa 10916](https://github.com/codingsince1985/UVa/tree/master/10916) - [Factstone Benchmark](https://uva.onlinejudge.org/external/109/10916.pdf)  
 [UVa 10918](https://github.com/codingsince1985/UVa/tree/master/10918) - [Tri Tiling](https://uva.onlinejudge.org/external/109/10918.pdf)  
 [UVa 10919](https://github.com/codingsince1985/UVa/tree/master/10919) - [Prerequisites?](https://uva.onlinejudge.org/external/109/10919.pdf)  
+[UVa 10920](https://github.com/codingsince1985/UVa/tree/master/10920) - [Spiral Tap](https://uva.onlinejudge.org/external/109/10920.pdf)  
 [UVa 10921](https://github.com/codingsince1985/UVa/tree/master/10921) - [Find the Telephone](https://uva.onlinejudge.org/external/109/10921.pdf)  
 [UVa 10922](https://github.com/codingsince1985/UVa/tree/master/10922) - [2 the 9s](https://uva.onlinejudge.org/external/109/10922.pdf)  
 [UVa 10924](https://github.com/codingsince1985/UVa/tree/master/10924) - [Prime Words](https://uva.onlinejudge.org/external/109/10924.pdf)  
