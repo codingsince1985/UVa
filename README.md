@@ -744,6 +744,7 @@ UVa Online Judge solutions in Golang
 [UVa 12347](https://github.com/codingsince1985/UVa/tree/master/12347) - [Binary Search Tree](https://uva.onlinejudge.org/external/123/12347.pdf)  
 [UVa 12372](https://github.com/codingsince1985/UVa/tree/master/12372) - [Packing for Holiday](https://uva.onlinejudge.org/external/123/12372.pdf)  
 [UVa 12403](https://github.com/codingsince1985/UVa/tree/master/12403) - [Save Setu](https://uva.onlinejudge.org/external/124/12403.pdf)  
+[UVa 12468](https://github.com/codingsince1985/UVa/tree/master/12468) - [Zapping](https://uva.onlinejudge.org/external/124/12468.pdf)  
 
 License
 ==
