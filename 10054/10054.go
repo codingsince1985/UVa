@@ -51,8 +51,9 @@ func main() {
 	out, _ = os.Create("10054.out")
 	defer out.Close()
 
-	var t, n, l, r, kase int
-	for fmt.Fscanf(in, "%d", &t); t > 0; t, kase = t-1, kase+1 {
+	var t, n, l, r int
+	fmt.Fscanf(in, "%d", &t)
+	for kase := 1; kase <= t; kase++ {
 		initialize()
 		for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 			fmt.Fscanf(in, "%d%d", &l, &r)
@@ -61,10 +62,10 @@ func main() {
 			degree[l]++
 			degree[r]++
 		}
-		fmt.Fprintf(out, "Case #%d\n", kase+1)
-		solve(r)
-		if t > 1 {
+		if kase > 1 {
 			fmt.Fprintln(out)
 		}
+		fmt.Fprintf(out, "Case #%d\n", kase)
+		solve(r)
 	}
 }

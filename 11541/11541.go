@@ -33,10 +33,11 @@ func main() {
 	out, _ := os.Create("11541.out")
 	defer out.Close()
 
-	var t, kase int
 	var line string
-	for fmt.Fscanf(in, "%d", &t); t > 0; t, kase = t-1, kase+1 {
+	var t int
+	fmt.Fscanf(in, "%d", &t)
+	for kase := 1; kase <= t; kase++ {
 		fmt.Fscanf(in, "%s", &line)
-		fmt.Fprintf(out, "Case %d: %s\n", kase+1, strings.Join(decode(line), ""))
+		fmt.Fprintf(out, "Case %d: %s\n", kase, strings.Join(decode(line), ""))
 	}
 }
