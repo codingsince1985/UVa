@@ -593,6 +593,7 @@ UVa Online Judge solutions in Golang
 [UVa 10622](https://github.com/codingsince1985/UVa/tree/master/10622) - [Perfect P-th Powers](https://uva.onlinejudge.org/external/106/10622.pdf)  
 [UVa 10633](https://github.com/codingsince1985/UVa/tree/master/10633) - [Rare Easy Problem](https://uva.onlinejudge.org/external/106/10633.pdf)  
 [UVa 10642](https://github.com/codingsince1985/UVa/tree/master/10642) - [Can You Solve It?](https://uva.onlinejudge.org/external/106/10642.pdf)  
+[UVa 10650](https://github.com/codingsince1985/UVa/tree/master/10650) - [Determinate Prime](https://uva.onlinejudge.org/external/106/10650.pdf)  
 [UVa 10651](https://github.com/codingsince1985/UVa/tree/master/10651) - [Pebble Solitaire](https://uva.onlinejudge.org/external/106/10651.pdf)  
 [UVa 10653](https://github.com/codingsince1985/UVa/tree/master/10653) - [Bombs! NO they are Mines!!](https://uva.onlinejudge.org/external/106/10653.pdf)  
 [UVa 10656](https://github.com/codingsince1985/UVa/tree/master/10656) - [Maximum Sum (II)](https://uva.onlinejudge.org/external/106/10656.pdf)  
