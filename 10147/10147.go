@@ -17,8 +17,6 @@ type (
 	}
 )
 
-var f []int
-
 func unionFind(x int, f []int) int {
 	if f[x] != x {
 		f[x] = unionFind(f[x], f)
@@ -30,7 +28,7 @@ func distance(t1, t2 town) float64 {
 	return math.Sqrt((t1.x-t2.x)*(t1.x-t2.x) + (t1.y-t2.y)*(t1.y-t2.y))
 }
 
-func solve(out *os.File, n int, towns []town) {
+func solve(out *os.File, n int, towns []town, f []int) {
 	highways := buildHighways(n, towns)
 	noNew := true
 	for _, h := range highways {
@@ -70,7 +68,7 @@ func main() {
 		for i := range towns {
 			fmt.Fscanf(in, "%f%f", &towns[i].x, &towns[i].y)
 		}
-		f = make([]int, n)
+		f := make([]int, n)
 		for i := range f {
 			f[i] = i
 		}
@@ -85,6 +83,6 @@ func main() {
 		} else {
 			fmt.Fprintln(out)
 		}
-		solve(out, n, towns)
+		solve(out, n, towns, f)
 	}
 }
