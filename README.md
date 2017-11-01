@@ -425,6 +425,7 @@ UVa Online Judge solutions in Golang
 [UVa 10150](https://github.com/codingsince1985/UVa/tree/master/10150) - [Doublets](https://uva.onlinejudge.org/external/101/10150.pdf)  
 [UVa 10152](https://github.com/codingsince1985/UVa/tree/master/10152) - [ShellSort](https://uva.onlinejudge.org/external/101/10152.pdf)  
 [UVa 10154](https://github.com/codingsince1985/UVa/tree/master/10154) - [Weights and Measures](https://uva.onlinejudge.org/external/101/10154.pdf)  
+[UVa 10158](https://github.com/codingsince1985/UVa/tree/master/10158) - [War](https://uva.onlinejudge.org/external/101/10158.pdf)  
 [UVa 10161](https://github.com/codingsince1985/UVa/tree/master/10161) - [Ant on a Chessboard](https://uva.onlinejudge.org/external/101/10161.pdf)  
 [UVa 10162](https://github.com/codingsince1985/UVa/tree/master/10162) - [Last Digit](https://uva.onlinejudge.org/external/101/10162.pdf)  
 [UVa 10165](https://github.com/codingsince1985/UVa/tree/master/10165) - [Stone Game](https://uva.onlinejudge.org/external/101/10165.pdf)  
