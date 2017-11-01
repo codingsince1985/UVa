@@ -644,6 +644,7 @@ UVa Online Judge solutions in Golang
 [UVa 10878](https://github.com/codingsince1985/UVa/tree/master/10878) - [Decode the tape](https://uva.onlinejudge.org/external/108/10878.pdf)  
 [UVa 10879](https://github.com/codingsince1985/UVa/tree/master/10879) - [Code Refactoring](https://uva.onlinejudge.org/external/108/10879.pdf)  
 [UVa 10880](https://github.com/codingsince1985/UVa/tree/master/10880) - [Colin and Ryan](https://uva.onlinejudge.org/external/108/10880.pdf)  
+[UVa 10891](https://github.com/codingsince1985/UVa/tree/master/10891) - [Game of Sum](https://uva.onlinejudge.org/external/108/10891.pdf)  
 [UVa 10903](https://github.com/codingsince1985/UVa/tree/master/10903) - [Rock-Paper-Scissors Tournament](https://uva.onlinejudge.org/external/109/10903.pdf)  
 [UVa 10905](https://github.com/codingsince1985/UVa/tree/master/10905) - [Children's Game](https://uva.onlinejudge.org/external/109/10905.pdf)  
 [UVa 10908](https://github.com/codingsince1985/UVa/tree/master/10908) - [Largest Square](https://uva.onlinejudge.org/external/109/10908.pdf)  
