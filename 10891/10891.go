@@ -21,18 +21,17 @@ func min(a, b int) int {
 }
 
 func find(l, r int) int {
-	if visited[l][r] {
-		return dp[l][r]
+	if !visited[l][r] {
+		visited[l][r] = true
+		var b int
+		for k := l + 1; k <= r; k++ {
+			b = min(b, find(k, r))
+		}
+		for k := r - 1; k >= l; k-- {
+			b = min(b, find(l, k))
+		}
+		dp[l][r] = sum[r] - sum[l-1] - b
 	}
-	visited[l][r] = true
-	var b int
-	for k := l + 1; k <= r; k++ {
-		b = min(b, find(k, r))
-	}
-	for k := r - 1; k >= l; k-- {
-		b = min(b, find(l, k))
-	}
-	dp[l][r] = sum[r] - sum[l-1] - b
 	return dp[l][r]
 }
 
