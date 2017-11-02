@@ -496,6 +496,7 @@ UVa Online Judge solutions in Golang
 [UVa 10304](https://github.com/codingsince1985/UVa/tree/master/10304) - [Optimal Binary Search Tree](https://uva.onlinejudge.org/external/103/10304.pdf)  
 [UVa 10305](https://github.com/codingsince1985/UVa/tree/master/10305) - [Ordering Tasks](https://uva.onlinejudge.org/external/103/10305.pdf)  
 [UVa 10306](https://github.com/codingsince1985/UVa/tree/master/10306) - [e-Coins](https://uva.onlinejudge.org/external/103/10306.pdf)  
+[UVa 10309](https://github.com/codingsince1985/UVa/tree/master/10309) - [Turn the Lights Off](https://uva.onlinejudge.org/external/103/10309.pdf)  
 [UVa 10310](https://github.com/codingsince1985/UVa/tree/master/10310) - [Dog and Gopher](https://uva.onlinejudge.org/external/103/10310.pdf)  
 [UVa 10311](https://github.com/codingsince1985/UVa/tree/master/10311) - [Goldbach and Euler](https://uva.onlinejudge.org/external/103/10311.pdf)  
 [UVa 10315](https://github.com/codingsince1985/UVa/tree/master/10315) - [Poker Hands](https://uva.onlinejudge.org/external/103/10315.pdf)  
