@@ -245,6 +245,7 @@ UVa Online Judge solutions in Golang
 [UVa 583](https://github.com/codingsince1985/UVa/tree/master/583) - [Prime Factors](https://uva.onlinejudge.org/external/5/583.pdf)  
 [UVa 584](https://github.com/codingsince1985/UVa/tree/master/584) - [Bowling](https://uva.onlinejudge.org/external/5/584.pdf)  
 [UVa 585](https://github.com/codingsince1985/UVa/tree/master/585) - [Triangles](https://uva.onlinejudge.org/external/5/585.pdf)  
+[UVa 586](https://github.com/codingsince1985/UVa/tree/master/586) - [Instant Complexity](https://uva.onlinejudge.org/external/5/586.pdf)  
 [UVa 587](https://github.com/codingsince1985/UVa/tree/master/587) - [There's treasure everywhere!](https://uva.onlinejudge.org/external/5/587.pdf)  
 [UVa 590](https://github.com/codingsince1985/UVa/tree/master/590) - [Always on the run](https://uva.onlinejudge.org/external/5/590.pdf)  
 [UVa 591](https://github.com/codingsince1985/UVa/tree/master/591) - [Box of Bricks](https://uva.onlinejudge.org/external/5/591.pdf)  
