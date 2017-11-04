@@ -308,6 +308,7 @@ UVa Online Judge solutions in Golang
 [UVa 748](https://github.com/codingsince1985/UVa/tree/master/748) - [Exponentiation](https://uva.onlinejudge.org/external/7/748.pdf)  
 [UVa 750](https://github.com/codingsince1985/UVa/tree/master/750) - [8 Queens Chess Problem](https://uva.onlinejudge.org/external/7/750.pdf)  
 [UVa 755](https://github.com/codingsince1985/UVa/tree/master/755) - [487--3279](https://uva.onlinejudge.org/external/7/755.pdf)  
+[UVa 756](https://github.com/codingsince1985/UVa/tree/master/756) - [Biorhythms](https://uva.onlinejudge.org/external/7/756.pdf)  
 [UVa 762](https://github.com/codingsince1985/UVa/tree/master/762) - [We Ship Cheap](https://uva.onlinejudge.org/external/7/762.pdf)  
 [UVa 763](https://github.com/codingsince1985/UVa/tree/master/763) - [Fibinary Numbers](https://uva.onlinejudge.org/external/7/763.pdf)  
 [UVa 784](https://github.com/codingsince1985/UVa/tree/master/784) - [Maze Exploration](https://uva.onlinejudge.org/external/7/784.pdf)  
