@@ -716,6 +716,7 @@ UVa Online Judge solutions in Golang
 [UVa 11455](https://github.com/codingsince1985/UVa/tree/master/11455) - [Behold my quadrangle](https://uva.onlinejudge.org/external/114/11455.pdf)  
 [UVa 11461](https://github.com/codingsince1985/UVa/tree/master/11461) - [Square Numbers](https://uva.onlinejudge.org/external/114/11461.pdf)  
 [UVa 11462](https://github.com/codingsince1985/UVa/tree/master/11462) - [Age Sort](https://uva.onlinejudge.org/external/114/11462.pdf)  
+[UVa 11466](https://github.com/codingsince1985/UVa/tree/master/11466) - [Largest Prime Divisor](https://uva.onlinejudge.org/external/114/11466.pdf)  
 [UVa 11470](https://github.com/codingsince1985/UVa/tree/master/11470) - [Square Sums](https://uva.onlinejudge.org/external/114/11470.pdf)  
 [UVa 11479](https://github.com/codingsince1985/UVa/tree/master/11479) - [Is this the easiest problem?](https://uva.onlinejudge.org/external/114/11479.pdf)  
 [UVa 11489](https://github.com/codingsince1985/UVa/tree/master/11489) - [Division of Nlogonia](https://uva.onlinejudge.org/external/114/11489.pdf)  
