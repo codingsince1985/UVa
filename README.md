@@ -652,6 +652,7 @@ UVa Online Judge solutions in Golang
 [UVa 10905](https://github.com/codingsince1985/UVa/tree/master/10905) - [Children's Game](https://uva.onlinejudge.org/external/109/10905.pdf)  
 [UVa 10908](https://github.com/codingsince1985/UVa/tree/master/10908) - [Largest Square](https://uva.onlinejudge.org/external/109/10908.pdf)  
 [UVa 10910](https://github.com/codingsince1985/UVa/tree/master/10910) - [Marks Distribution](https://uva.onlinejudge.org/external/109/10910.pdf)  
+[UVa 10911](https://github.com/codingsince1985/UVa/tree/master/10911) - [Forming Quiz Teams](https://uva.onlinejudge.org/external/109/10911.pdf)  
 [UVa 10916](https://github.com/codingsince1985/UVa/tree/master/10916) - [Factstone Benchmark](https://uva.onlinejudge.org/external/109/10916.pdf)  
 [UVa 10918](https://github.com/codingsince1985/UVa/tree/master/10918) - [Tri Tiling](https://uva.onlinejudge.org/external/109/10918.pdf)  
 [UVa 10919](https://github.com/codingsince1985/UVa/tree/master/10919) - [Prerequisites?](https://uva.onlinejudge.org/external/109/10919.pdf)  
