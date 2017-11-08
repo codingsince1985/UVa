@@ -515,6 +515,7 @@ UVa Online Judge solutions in Golang
 [UVa 10344](https://github.com/codingsince1985/UVa/tree/master/10344) - [23 out of 5](https://uva.onlinejudge.org/external/103/10344.pdf)  
 [UVa 10346](https://github.com/codingsince1985/UVa/tree/master/10346) - [Peter's Smokes](https://uva.onlinejudge.org/external/103/10346.pdf)  
 [UVa 10347](https://github.com/codingsince1985/UVa/tree/master/10347) - [Medians](https://uva.onlinejudge.org/external/103/10347.pdf)  
+[UVa 10354](https://github.com/codingsince1985/UVa/tree/master/10354) - [Avoiding Your Boss](https://uva.onlinejudge.org/external/103/10354.pdf)  
 [UVa 10359](https://github.com/codingsince1985/UVa/tree/master/10359) - [Tiling](https://uva.onlinejudge.org/external/103/10359.pdf)  
 [UVa 10360](https://github.com/codingsince1985/UVa/tree/master/10360) - [Rat Attack](https://uva.onlinejudge.org/external/103/10360.pdf)  
 [UVa 10361](https://github.com/codingsince1985/UVa/tree/master/10361) - [Automatic Poetry](https://uva.onlinejudge.org/external/103/10361.pdf)  
