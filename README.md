@@ -298,6 +298,7 @@ UVa Online Judge solutions in Golang
 [UVa 712](https://github.com/codingsince1985/UVa/tree/master/712) - [S-Trees](https://uva.onlinejudge.org/external/7/712.pdf)  
 [UVa 713](https://github.com/codingsince1985/UVa/tree/master/713) - [Adding Reversed Numbers](https://uva.onlinejudge.org/external/7/713.pdf)  
 [UVa 714](https://github.com/codingsince1985/UVa/tree/master/714) - [Copying Books](https://uva.onlinejudge.org/external/7/714.pdf)  
+[UVa 719](https://github.com/codingsince1985/UVa/tree/master/719) - [Glass Beads](https://uva.onlinejudge.org/external/7/719.pdf)  
 [UVa 725](https://github.com/codingsince1985/UVa/tree/master/725) - [Division](https://uva.onlinejudge.org/external/7/725.pdf)  
 [UVa 727](https://github.com/codingsince1985/UVa/tree/master/727) - [Equation](https://uva.onlinejudge.org/external/7/727.pdf)  
 [UVa 729](https://github.com/codingsince1985/UVa/tree/master/729) - [The Hamming Distance Problem](https://uva.onlinejudge.org/external/7/729.pdf)  
