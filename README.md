@@ -59,6 +59,7 @@ UVa Online Judge solutions in Golang
 [UVa 165](https://github.com/codingsince1985/UVa/tree/master/165) - [Stamps](https://uva.onlinejudge.org/external/1/165.pdf)  
 [UVa 166](https://github.com/codingsince1985/UVa/tree/master/166) - [Making Change](https://uva.onlinejudge.org/external/1/166.pdf)  
 [UVa 167](https://github.com/codingsince1985/UVa/tree/master/167) - [The Sultan's Successors](https://uva.onlinejudge.org/external/1/167.pdf)  
+[UVa 168](https://github.com/codingsince1985/UVa/tree/master/168) - [Theseus and the Minotaur](https://uva.onlinejudge.org/external/1/168.pdf)  
 [UVa 170](https://github.com/codingsince1985/UVa/tree/master/170) - [Clock Patience](https://uva.onlinejudge.org/external/1/170.pdf)  
 [UVa 183](https://github.com/codingsince1985/UVa/tree/master/183) - [Bit Maps](https://uva.onlinejudge.org/external/1/183.pdf)  
 [UVa 184](https://github.com/codingsince1985/UVa/tree/master/184) - [Laser Lines](https://uva.onlinejudge.org/external/1/184.pdf)  
