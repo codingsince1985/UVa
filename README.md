@@ -152,6 +152,7 @@ UVa Online Judge solutions in Golang
 [UVa 406](https://github.com/codingsince1985/UVa/tree/master/406) - [Prime Cuts](https://uva.onlinejudge.org/external/4/406.pdf)  
 [UVa 408](https://github.com/codingsince1985/UVa/tree/master/408) - [Uniform Generator](https://uva.onlinejudge.org/external/4/408.pdf)  
 [UVa 409](https://github.com/codingsince1985/UVa/tree/master/409) - [Excuses, Excuses!](https://uva.onlinejudge.org/external/4/409.pdf)  
+[UVa 410](https://github.com/codingsince1985/UVa/tree/master/410) - [Station Balance](https://uva.onlinejudge.org/external/4/410.pdf)  
 [UVa 412](https://github.com/codingsince1985/UVa/tree/master/412) - [Pi](https://uva.onlinejudge.org/external/4/412.pdf)  
 [UVa 413](https://github.com/codingsince1985/UVa/tree/master/413) - [Up and Down Sequences](https://uva.onlinejudge.org/external/4/413.pdf)  
 [UVa 414](https://github.com/codingsince1985/UVa/tree/master/414) - [Machined Surfaces](https://uva.onlinejudge.org/external/4/414.pdf)  
