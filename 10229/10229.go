@@ -9,8 +9,8 @@ import (
 )
 
 var (
-	i, o, a [2][2]big.Int
-	two     = big.NewInt(2)
+	i, a [2][2]big.Int
+	two  = big.NewInt(2)
 )
 
 func multiply(a, b [2][2]big.Int, m int64) [2][2]big.Int {
@@ -33,12 +33,11 @@ func multiply(a, b [2][2]big.Int, m int64) [2][2]big.Int {
 
 func calc(out *os.File, n, m int64) {
 	x, y := i, a
-	for n != 0 {
+	for ; n != 0; n /= 2 {
 		if n&1 == 1 {
 			x = multiply(x, y, m)
 		}
 		y = multiply(y, y, m)
-		n /= 2
 	}
 	fmt.Fprintln(out, &x[1][0])
 }
@@ -50,19 +49,15 @@ func setMatrix(i, j, k, l int64, m *[2][2]big.Int) {
 	m[1][1].SetInt64(l)
 }
 
-func initialize() {
-	setMatrix(1, 0, 0, 1, &i)
-	setMatrix(0, 0, 0, 0, &o)
-	setMatrix(1, 1, 1, 0, &a)
-}
-
 func main() {
 	in, _ := os.Open("10229.in")
 	defer in.Close()
 	out, _ := os.Create("10229.out")
 	defer out.Close()
 
-	initialize()
+	setMatrix(1, 0, 0, 1, &i)
+	setMatrix(1, 1, 1, 0, &a)
+
 	var n, m int64
 	for {
 		if _, err := fmt.Fscanf(in, "%d%d", &n, &m); err != nil {

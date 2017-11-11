@@ -83,7 +83,6 @@ func main() {
 				break
 			}
 			links = append(links, [2]int{p1, p2})
-
 		}
 		if len(links) == 0 {
 			break

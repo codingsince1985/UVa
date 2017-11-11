@@ -7,22 +7,13 @@ import (
 	"os"
 )
 
+const max = 50
+
 var (
 	out    *os.File
-	matrix [51][51]int
-	degree [51]int
+	matrix [][]int
+	degree []int
 )
-
-func initialize() {
-	for i := range matrix {
-		for j := range matrix[i] {
-			matrix[i][j] = 0
-		}
-	}
-	for i := range degree {
-		degree[i] = 0
-	}
-}
 
 func euler(v int) {
 	for i := range matrix {
@@ -54,7 +45,11 @@ func main() {
 	var t, n, l, r int
 	fmt.Fscanf(in, "%d", &t)
 	for kase := 1; kase <= t; kase++ {
-		initialize()
+		matrix = make([][]int, max+1)
+		for i := range matrix {
+			matrix[i] = make([]int, max+1)
+		}
+		degree = make([]int, max+1)
 		for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 			fmt.Fscanf(in, "%d%d", &l, &r)
 			matrix[l][r]++
