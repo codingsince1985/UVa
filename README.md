@@ -358,6 +358,7 @@ UVa Online Judge solutions in Golang
 [UVa 10018](https://github.com/codingsince1985/UVa/tree/master/10018) - [Reverse and Add](https://uva.onlinejudge.org/external/100/10018.pdf)  
 [UVa 10019](https://github.com/codingsince1985/UVa/tree/master/10019) - [Funny Encryption Method](https://uva.onlinejudge.org/external/100/10019.pdf)  
 [UVa 10020](https://github.com/codingsince1985/UVa/tree/master/10020) - [Minimal coverage](https://uva.onlinejudge.org/external/100/10020.pdf)  
+[UVa 10022](https://github.com/codingsince1985/UVa/tree/master/10022) - [Delta-wave](https://uva.onlinejudge.org/external/100/10022.pdf)  
 [UVa 10023](https://github.com/codingsince1985/UVa/tree/master/10023) - [Square root](https://uva.onlinejudge.org/external/100/10023.pdf)  
 [UVa 10025](https://github.com/codingsince1985/UVa/tree/master/10025) - [The ? 1 ? 2 ? ... ? n = k problem](https://uva.onlinejudge.org/external/100/10025.pdf)  
 [UVa 10026](https://github.com/codingsince1985/UVa/tree/master/10026) - [Shoemaker's Problem](https://uva.onlinejudge.org/external/100/10026.pdf)  
