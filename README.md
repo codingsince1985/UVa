@@ -628,6 +628,7 @@ UVa Online Judge solutions in Golang
 [UVa 10706](https://github.com/codingsince1985/UVa/tree/master/10706) - [Number Sequence](https://uva.onlinejudge.org/external/107/10706.pdf)  
 [UVa 10714](https://github.com/codingsince1985/UVa/tree/master/10714) - [Ants](https://uva.onlinejudge.org/external/107/10714.pdf)  
 [UVa 10719](https://github.com/codingsince1985/UVa/tree/master/10719) - [Quotient Polynomial](https://uva.onlinejudge.org/external/107/10719.pdf)  
+[UVa 10721](https://github.com/codingsince1985/UVa/tree/master/10721) - [Bar Codes](https://uva.onlinejudge.org/external/107/10721.pdf)  
 [UVa 10730](https://github.com/codingsince1985/UVa/tree/master/10730) - [Antiarithmetic?](https://uva.onlinejudge.org/external/107/10730.pdf)  
 [UVa 10738](https://github.com/codingsince1985/UVa/tree/master/10738) - [Riemann vs Mertens](https://uva.onlinejudge.org/external/107/10738.pdf)  
 [UVa 10739](https://github.com/codingsince1985/UVa/tree/master/10739) - [String to Palindrome](https://uva.onlinejudge.org/external/107/10739.pdf)  
