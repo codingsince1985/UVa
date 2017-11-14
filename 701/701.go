@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-var log10 = math.Log2(10.0)
+var log10 = math.Log2(10)
 
 func solve(n float64) int {
 	for digits := int(math.Log10(n)) + 2; ; digits++ {
