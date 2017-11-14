@@ -228,6 +228,7 @@ UVa Online Judge solutions in Golang
 [UVa 542](https://github.com/codingsince1985/UVa/tree/master/542) - [France '98](https://uva.onlinejudge.org/external/5/542.pdf)  
 [UVa 543](https://github.com/codingsince1985/UVa/tree/master/543) - [Goldbach's Conjecture](https://uva.onlinejudge.org/external/5/543.pdf)  
 [UVa 544](https://github.com/codingsince1985/UVa/tree/master/544) - [Heavy Cargo](https://uva.onlinejudge.org/external/5/544.pdf)  
+[UVa 547](https://github.com/codingsince1985/UVa/tree/master/547) - [DDF](https://uva.onlinejudge.org/external/5/547.pdf)  
 [UVa 550](https://github.com/codingsince1985/UVa/tree/master/550) - [Multiplying by Rotation](https://uva.onlinejudge.org/external/5/550.pdf)  
 [UVa 551](https://github.com/codingsince1985/UVa/tree/master/551) - [Nesting a Bunch of Brackets](https://uva.onlinejudge.org/external/5/551.pdf)  
 [UVa 555](https://github.com/codingsince1985/UVa/tree/master/555) - [Bridge Hands](https://uva.onlinejudge.org/external/5/555.pdf)  
