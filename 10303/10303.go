@@ -18,10 +18,7 @@ var t = func() [max]big.Int {
 	var t [max]big.Int
 	t[1].SetInt64(1)
 	for i := int64(2); i < max; i++ {
-		tmp := big.NewInt(i + 1)
-		t[i].SetInt64(4*i - 2)
-		t[i].Mul(&t[i], &t[i-1])
-		t[i].Div(&t[i], tmp)
+		t[i].SetInt64(4*i-2).Mul(&t[i], &t[i-1]).Div(&t[i], big.NewInt(i+1))
 	}
 	return t
 }()

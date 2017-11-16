@@ -30,8 +30,7 @@ func main() {
 		fmt.Fscanf(in, "%s%s", &s1, &s2)
 		n1.SetString(reverse(s1), 10)
 		n2.SetString(reverse(s2), 10)
-		n1.Add(&n1, &n2)
-		n1.SetString(reverse(n1.String()), 10)
+		n1.Add(&n1, &n2).SetString(reverse(n1.String()), 10)
 		fmt.Fprintln(out, &n1)
 	}
 }

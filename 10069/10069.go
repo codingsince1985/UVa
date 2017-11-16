@@ -44,6 +44,6 @@ func main() {
 	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
 		fmt.Fscanf(in, "%s", &x)
 		fmt.Fscanf(in, "%s", &z)
-		fmt.Fprintf(out, "%v\n", solve(x, z))
+		fmt.Fprintln(out, solve(x, z))
 	}
 }

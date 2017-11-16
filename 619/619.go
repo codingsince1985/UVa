@@ -29,8 +29,7 @@ func split(number string) string {
 func toNumber(line string) string {
 	var num big.Int
 	for i := range line {
-		num.Mul(&num, base)
-		num.Add(&num, big.NewInt(int64(line[i]-'a'+1)))
+		num.Mul(&num, base).Add(&num, big.NewInt(int64(line[i]-'a'+1)))
 	}
 	return split(num.String())
 }

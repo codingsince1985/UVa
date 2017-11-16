@@ -8,11 +8,11 @@ import (
 	"os"
 )
 
-func isPrime(n int) bool {
+func isPrime(n int64) bool {
 	if n%2 == 0 {
 		return false
 	}
-	for i := 3; i*i <= n; i += 2 {
+	for i := int64(3); i*i <= n; i += 2 {
 		if n%i == 0 {
 			return false
 		}
@@ -20,14 +20,12 @@ func isPrime(n int) bool {
 	return true
 }
 
-func isCarmichael(n int) bool {
+func isCarmichael(n int64) bool {
 	var b, p big.Int
-	e := big.NewInt(int64(n))
-	for a := 2; a < n; a++ {
-		b.SetInt64(int64(a))
-		p.Exp(&b, e, e)
-		p.Sub(&p, &b)
-		if p.Int64() != 0 {
+	e := big.NewInt(n)
+	for a := int64(2); a < n; a++ {
+		b.SetInt64(a)
+		if p.Exp(&b, e, e).Sub(&p, &b); p.Int64() != 0 {
 			return false
 		}
 	}
@@ -40,7 +38,7 @@ func main() {
 	out, _ := os.Create("10006.out")
 	defer out.Close()
 
-	var n int
+	var n int64
 	for {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break

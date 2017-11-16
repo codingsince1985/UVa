@@ -25,8 +25,6 @@ func main() {
 		p2 := big.NewInt(n + 1)
 		p1.Mul(p1, p1)
 		p2.Mul(p2, p2)
-		p1.Mul(p1, p2)
-		p1.Div(p1, big.NewInt(4))
-		fmt.Fprintln(out, p1)
+		fmt.Fprintln(out, p1.Mul(p1, p2).Div(p1, big.NewInt(4)))
 	}
 }

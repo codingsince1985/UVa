@@ -14,8 +14,7 @@ var f = func() [max]big.Int {
 	var f [max]big.Int
 	f[0].SetInt64(1)
 	for i := int64(1); i < max; i++ {
-		tmp := big.NewInt(i)
-		f[i].Mul(&f[i-1], tmp)
+		f[i].Mul(&f[i-1], big.NewInt(i))
 	}
 	return f
 }()

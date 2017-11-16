@@ -8,17 +8,17 @@ import (
 	"os"
 )
 
+const max = 1000
+
 var (
-	big2 = big.NewInt(2)
-	dp   = func() []big.Int {
-		dp := make([]big.Int, 1001)
+	two = big.NewInt(2)
+	dp  = func() []big.Int {
+		dp := make([]big.Int, max+1)
 		dp[0].SetInt64(1)
 		dp[1].SetInt64(2)
 		dp[2].SetInt64(5)
-		for i := 3; i <= 1000; i++ {
-			dp[i].Mul(&dp[i-1], big2)
-			dp[i].Add(&dp[i], &dp[i-2])
-			dp[i].Add(&dp[i], &dp[i-3])
+		for i := 3; i <= max; i++ {
+			dp[i].Mul(&dp[i-1], two).Add(&dp[i], &dp[i-2]).Add(&dp[i], &dp[i-3])
 		}
 		return dp
 	}()

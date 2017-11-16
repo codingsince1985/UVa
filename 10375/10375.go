@@ -12,22 +12,15 @@ const max = 10000
 
 var f = func() []big.Float {
 	f := make([]big.Float, max)
-	p := big.NewFloat(1)
-	for i := 1; i < max; i++ {
-		p.Mul(p, big.NewFloat(float64(i)))
-		f[i].Set(p)
+	for i, p := 1, big.NewFloat(1); i < max; i++ {
+		f[i].Set(p.Mul(p, big.NewFloat(float64(i))))
 	}
 	return f
 }()
 
 func solve(p, q, r, s int) float64 {
 	var ans big.Float
-	ans.Mul(&f[p], &f[r-s])
-	ans.Mul(&ans, &f[s])
-	ans.Quo(&ans, &f[r])
-	ans.Quo(&ans, &f[p-q])
-	ans.Quo(&ans, &f[q])
-	v, _ := ans.Float64()
+	v, _ := ans.Mul(&f[p], &f[r-s]).Mul(&ans, &f[s]).Quo(&ans, &f[r]).Quo(&ans, &f[p-q]).Quo(&ans, &f[q]).Float64()
 	return v
 }
 

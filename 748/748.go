@@ -19,9 +19,9 @@ func pow(r string, n int) string {
 	base.SetString(r2, 10)
 	result := big.NewInt(1)
 	for i := 0; i < n; i++ {
-		result = result.Mul(result, &base)
+		result.Mul(result, &base)
 	}
-	r3 := fmt.Sprintf("%v", result)
+	r3 := fmt.Sprint(result)
 
 	if pos == 0 {
 		return r3

@@ -13,9 +13,7 @@ var f = func() []big.Int {
 	var s string
 	for i := 2; ; i++ {
 		var tmp big.Int
-		tmp.Add(&f[i-2], &f[i-1])
-		s = fmt.Sprintf("%v", &tmp)
-		if len(s) > 1000 {
+		if s = fmt.Sprint(tmp.Add(&f[i-2], &f[i-1])); len(s) > 1000 {
 			break
 		}
 		f = append(f, tmp)

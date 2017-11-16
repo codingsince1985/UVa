@@ -39,7 +39,7 @@ func main() {
 		fmt.Fscanf(in, "%d%d", &c, &r)
 		fmt.Fprintf(out, "Case #%d:", kase)
 		if q := solve(c, r); len(q) > 0 {
-			s := fmt.Sprintf("%v", q)
+			s := fmt.Sprint(q)
 			fmt.Fprintf(out, " %s", s[1:len(s)-1])
 		}
 		fmt.Fprintln(out)

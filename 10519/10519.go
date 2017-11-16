@@ -25,10 +25,7 @@ func main() {
 			fmt.Fprintln(out, 1)
 		} else {
 			n.SetString(s, 10)
-			tmp.Mul(&n, &n)
-			tmp.Sub(&tmp, &n)
-			tmp.Add(&tmp, two)
-			fmt.Fprintln(out, &tmp)
+			fmt.Fprintln(out, tmp.Mul(&n, &n).Sub(&tmp, &n).Add(&tmp, two))
 		}
 	}
 }

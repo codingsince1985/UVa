@@ -11,8 +11,7 @@ import (
 func f(n int) *big.Int {
 	r := big.NewInt(1)
 	for i := 2; i <= n; i++ {
-		t := big.NewInt(int64(i))
-		r.Mul(r, t)
+		r.Mul(r, big.NewInt(int64(i)))
 	}
 	return r
 }
@@ -21,9 +20,7 @@ func c(n, m int) *big.Int {
 	r := f(n)
 	s := f(n - m)
 	t := f(m)
-	r.Div(r, s)
-	r.Div(r, t)
-	return r
+	return r.Div(r, s).Div(r, t)
 }
 
 func main() {

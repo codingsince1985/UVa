@@ -18,8 +18,7 @@ func factorial(a int) *big.Int {
 
 func calc(a, b int) *big.Int {
 	f := factorial(a)
-	f.Div(f, factorial(b))
-	return f
+	return f.Div(f, factorial(b))
 }
 
 func solve(word string) *big.Int {

@@ -14,8 +14,7 @@ var catalan, fact = func() ([max]big.Int, [max]big.Int) {
 	var catalan, fact [max]big.Int
 	catalan[0].SetInt64(1)
 	for i := int64(1); i < max; i++ {
-		catalan[i].Mul(&catalan[i-1], big.NewInt(2*(2*i-1)))
-		catalan[i].Div(&catalan[i], big.NewInt(i+1))
+		catalan[i].Mul(&catalan[i-1], big.NewInt(2*(2*i-1))).Div(&catalan[i], big.NewInt(i+1))
 	}
 
 	fact[1].SetInt64(1)
@@ -37,7 +36,6 @@ func main() {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		tmp.Mul(&fact[n], &catalan[n])
-		fmt.Fprintf(out, "%v\n", &tmp)
+		fmt.Fprintln(out, tmp.Mul(&fact[n], &catalan[n]))
 	}
 }

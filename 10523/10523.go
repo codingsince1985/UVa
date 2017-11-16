@@ -12,9 +12,7 @@ func solve(n, a int64) *big.Int {
 	var tmp big.Int
 	part, total, self := big.NewInt(1), big.NewInt(0), big.NewInt(a)
 	for i := int64(1); i <= n; i++ {
-		part.Mul(part, self)
-		tmp.Mul(part, big.NewInt(i))
-		total.Add(total, &tmp)
+		total.Add(total, tmp.Mul(part.Mul(part, self), big.NewInt(i)))
 	}
 	return total
 }
@@ -30,6 +28,6 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%d%d", &n, &a); err != nil {
 			break
 		}
-		fmt.Fprintf(out, "%v\n", solve(n, a))
+		fmt.Fprintln(out, solve(n, a))
 	}
 }

@@ -22,7 +22,6 @@ func main() {
 		}
 		a.SetString(c, 10)
 		b.SetString(d, 10)
-		a.Mul(&a, &b)
-		fmt.Fprintf(out, "%v\n", &a)
+		fmt.Fprintln(out, a.Mul(&a, &b))
 	}
 }

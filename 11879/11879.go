@@ -18,8 +18,7 @@ func solve(n string) bool {
 	var num, last big.Int
 	num.SetString(n, 10)
 	num.DivMod(&num, ten, &last)
-	num.Sub(&num, last.Mul(&last, five))
-	num.DivMod(&num, seventeen, &last)
+	num.Sub(&num, last.Mul(&last, five)).DivMod(&num, seventeen, &last)
 	return last.Int64() == 0
 }
 

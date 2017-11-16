@@ -12,14 +12,12 @@ var two = big.NewInt(2)
 
 func sqrt(num string) *big.Int {
 	var n, m, h, tmp big.Int
-	l := big.NewInt(1)
 	n.SetString(num, 10)
 	h.Set(&n)
+	l := big.NewInt(1)
 	for {
-		m.Add(l, &h)
-		m.Div(&m, two)
-		tmp.Mul(&m, &m)
-		cmp := tmp.Cmp(&n)
+		m.Add(l, &h).Div(&m, two)
+		cmp := tmp.Mul(&m, &m).Cmp(&n)
 		switch {
 		case cmp == 0:
 			return &m
@@ -41,7 +39,7 @@ func main() {
 	var line string
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanf(in, "\n%s", &line)
-		fmt.Fprintf(out, "%v\n", sqrt(line))
+		fmt.Fprintln(out, sqrt(line))
 		if kase > 1 {
 			fmt.Fprintln(out)
 		}

@@ -16,9 +16,7 @@ var cache = func() []big.Int {
 	dp[1].SetInt64(1)
 	for i := 2; i <= max; i++ {
 		tmp := big.NewInt(2)
-		tmp.Mul(tmp, &dp[i-2])
-		tmp.Add(tmp, &dp[i-1])
-		dp[i] = *tmp
+		dp[i] = *tmp.Mul(tmp, &dp[i-2]).Add(tmp, &dp[i-1])
 	}
 	return dp
 }()

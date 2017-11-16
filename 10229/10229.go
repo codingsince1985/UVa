@@ -14,17 +14,13 @@ var (
 )
 
 func multiply(a, b [2][2]big.Int, m int64) [2][2]big.Int {
-	pow := big.NewInt(m)
-	var mod big.Int
-	mod.Exp(two, pow, nil)
+	var mod, t big.Int
+	mod.Exp(two, big.NewInt(m), nil)
 	var tmp [2][2]big.Int
 	for i := 0; i < 2; i++ {
 		for j := 0; j < 2; j++ {
 			for k := 0; k < 2; k++ {
-				var t big.Int
-				t.Mul(&a[i][k], &b[k][j])
-				tmp[i][j].Add(&tmp[i][j], &t)
-				tmp[i][j].Mod(&tmp[i][j], &mod)
+				tmp[i][j].Add(&tmp[i][j], t.Mul(&a[i][k], &b[k][j])).Mod(&tmp[i][j], &mod)
 			}
 		}
 	}

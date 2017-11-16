@@ -32,18 +32,14 @@ func combination(n, r int64) *big.Int {
 	r1 := factorial(r)
 	nr := factorial(n - r)
 	tmp := n1
-	tmp.Div(tmp, r1)
-	tmp.Div(tmp, nr)
-	return tmp
+	return tmp.Div(tmp, r1).Div(tmp, nr)
 }
 
 func solve(n int64) *big.Int {
 	c1 := combination(n, 4)
 	c2 := combination(n, 2)
 	tmp := big.NewInt(1)
-	tmp.Add(tmp, c1)
-	tmp.Add(tmp, c2)
-	return tmp
+	return tmp.Add(tmp, c1).Add(tmp, c2)
 }
 
 func main() {
