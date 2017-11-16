@@ -21,8 +21,7 @@ var f = func() [max]big.Int {
 
 func sum(n big.Int) int {
 	var t int
-	s := fmt.Sprint(&n)
-	for _, v := range s {
+	for _, v := range n.String() {
 		t += int(v - '0')
 	}
 	return t

@@ -18,7 +18,7 @@ func calc(n1, n2, op string) string {
 	case "%":
 		result.Mod(&bn1, &bn2)
 	}
-	return fmt.Sprint(&result)
+	return result.String()
 }
 
 func main() {

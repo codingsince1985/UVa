@@ -21,7 +21,7 @@ func power(n int) string {
 	for p.Set(one); n > 0; n-- {
 		p.Mul(&p, three)
 	}
-	return fmt.Sprintf(" %v", &p)
+	return " " + p.String()
 }
 
 func solve(line string) []string {

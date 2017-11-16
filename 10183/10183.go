@@ -15,7 +15,7 @@ var p = func() []big.Int {
 	var s string
 	for i := 2; ; i++ {
 		var tmp big.Int
-		if s = fmt.Sprint(tmp.Add(&p[i-2], &p[i-1])); len(s) > max {
+		if s = tmp.Add(&p[i-2], &p[i-1]).String(); len(s) > max {
 			break
 		}
 		p = append(p, tmp)

@@ -17,7 +17,7 @@ var (
 
 func dfs(curr, level int, path []string, visited []bool) {
 	if level == n {
-		paths = append(paths, fmt.Sprintf("(%s)", strings.Join(path, ",")))
+		paths = append(paths, "("+strings.Join(path, ",")+")")
 		return
 	}
 	for i, v := range matrix[curr] {

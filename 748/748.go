@@ -21,7 +21,7 @@ func pow(r string, n int) string {
 	for i := 0; i < n; i++ {
 		result.Mul(result, &base)
 	}
-	r3 := fmt.Sprint(result)
+	r3 := result.String()
 
 	if pos == 0 {
 		return r3

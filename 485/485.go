@@ -21,15 +21,15 @@ here:
 		l := len(p)
 		fmt.Fprint(out, &p[l-1])
 		for i := l - 2; i > 0; i-- {
-			fmt.Fprintf(out, " %v", p[i].Add(&p[i], &p[i-1]))
-			if s := fmt.Sprint(&p[i]); len(s) > max {
+			fmt.Fprint(out, " "+p[i].Add(&p[i], &p[i-1]).String())
+			if s := p[i].String(); len(s) > max {
 				fmt.Fprintln(out)
 				break here
 			}
 		}
 
 		if l > 1 {
-			fmt.Fprintf(out, " %v", &p[0])
+			fmt.Fprint(out, " "+p[0].String())
 		}
 		fmt.Fprintln(out)
 	}

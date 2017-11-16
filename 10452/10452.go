@@ -27,7 +27,7 @@ func findStart() int {
 
 func dfs(step, x, y int, path []string) {
 	if step == len(stones) {
-		paths = append(paths, fmt.Sprint(strings.Join(path, " ")))
+		paths = append(paths, strings.Join(path, " "))
 		return
 	}
 	for k, v := range directions {
