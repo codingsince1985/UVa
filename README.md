@@ -697,6 +697,7 @@ UVa Online Judge solutions in Golang
 [UVa 11063](https://github.com/codingsince1985/UVa/tree/master/11063) - [B2-Sequence](https://uva.onlinejudge.org/external/110/11063.pdf)  
 [UVa 11069](https://github.com/codingsince1985/UVa/tree/master/11069) - [A Graph Problem](https://uva.onlinejudge.org/external/110/11069.pdf)  
 [UVa 11074](https://github.com/codingsince1985/UVa/tree/master/11074) - [Draw Grid](https://uva.onlinejudge.org/external/110/11074.pdf)  
+[UVa 11110](https://github.com/codingsince1985/UVa/tree/master/11110) - [Equidivisions](https://uva.onlinejudge.org/external/111/11110.pdf)  
 [UVa 11121](https://github.com/codingsince1985/UVa/tree/master/11121) - [Base -2](https://uva.onlinejudge.org/external/111/11121.pdf)  
 [UVa 11137](https://github.com/codingsince1985/UVa/tree/master/11137) - [Ingenuous Cubrency](https://uva.onlinejudge.org/external/111/11137.pdf)  
 [UVa 11150](https://github.com/codingsince1985/UVa/tree/master/11150) - [Cola](https://uva.onlinejudge.org/external/111/11150.pdf)  
