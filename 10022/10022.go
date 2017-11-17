@@ -69,8 +69,7 @@ func main() {
 
 	var kase, m, n int
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
-		fmt.Fscanln(in)
-		fmt.Fscanf(in, "%d%d", &m, &n)
+		fmt.Fscanf(in, "\n%d%d", &m, &n)
 		fmt.Fprintln(out, solve(locate(m), locate(n)))
 		if kase > 1 {
 			fmt.Fprintln(out)
