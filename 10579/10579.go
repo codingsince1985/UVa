@@ -10,10 +10,9 @@ import (
 
 var f = func() []big.Int {
 	f := []big.Int{*big.NewInt(0), *big.NewInt(1)}
-	var s string
 	for i := 2; ; i++ {
 		var tmp big.Int
-		if s = tmp.Add(&f[i-2], &f[i-1]).String(); len(s) > 1000 {
+		if len(tmp.Add(&f[i-2], &f[i-1]).String()) > 1000 {
 			break
 		}
 		f = append(f, tmp)
