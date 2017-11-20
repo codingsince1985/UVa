@@ -516,6 +516,7 @@ UVa Online Judge solutions in Golang
 [UVa 10330](https://github.com/codingsince1985/UVa/tree/master/10330) - [Power Transmission](https://uva.onlinejudge.org/external/103/10330.pdf)  
 [UVa 10334](https://github.com/codingsince1985/UVa/tree/master/10334) - [Ray Through Glasses](https://uva.onlinejudge.org/external/103/10334.pdf)  
 [UVa 10336](https://github.com/codingsince1985/UVa/tree/master/10336) - [Rank the Languages](https://uva.onlinejudge.org/external/103/10336.pdf)  
+[UVa 10337](https://github.com/codingsince1985/UVa/tree/master/10337) - [Flight Planner](https://uva.onlinejudge.org/external/103/10337.pdf)  
 [UVa 10338](https://github.com/codingsince1985/UVa/tree/master/10338) - [Mischievous Children](https://uva.onlinejudge.org/external/103/10338.pdf)  
 [UVa 10340](https://github.com/codingsince1985/UVa/tree/master/10340) - [All in All](https://uva.onlinejudge.org/external/103/10340.pdf)  
 [UVa 10341](https://github.com/codingsince1985/UVa/tree/master/10341) - [Solve It](https://uva.onlinejudge.org/external/103/10341.pdf)  
