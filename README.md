@@ -70,6 +70,7 @@ UVa Online Judge solutions in Golang
 [UVa 191](https://github.com/codingsince1985/UVa/tree/master/191) - [Intersection](https://uva.onlinejudge.org/external/1/191.pdf)  
 [UVa 193](https://github.com/codingsince1985/UVa/tree/master/193) - [Graph Coloring](https://uva.onlinejudge.org/external/1/193.pdf)  
 [UVa 195](https://github.com/codingsince1985/UVa/tree/master/195) - [Anagram](https://uva.onlinejudge.org/external/1/195.pdf)  
+[UVa 196](https://github.com/codingsince1985/UVa/tree/master/196) - [Spreadsheet](https://uva.onlinejudge.org/external/1/196.pdf)  
 [UVa 200](https://github.com/codingsince1985/UVa/tree/master/200) - [Rare Order](https://uva.onlinejudge.org/external/2/200.pdf)  
 [UVa 201](https://github.com/codingsince1985/UVa/tree/master/201) - [Squares](https://uva.onlinejudge.org/external/2/201.pdf)  
 [UVa 202](https://github.com/codingsince1985/UVa/tree/master/202) - [Repeating Decimals](https://uva.onlinejudge.org/external/2/202.pdf)  
