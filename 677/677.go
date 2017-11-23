@@ -15,7 +15,7 @@ var (
 	matrix [][]bool
 )
 
-func dfs(curr, level int, path []string, visited []bool) {
+func dfs(curr, level int, path []string, visited map[int]bool) {
 	if level == n {
 		paths = append(paths, "("+strings.Join(path, ",")+")")
 		return
@@ -29,11 +29,9 @@ func dfs(curr, level int, path []string, visited []bool) {
 	}
 }
 
-func solve(m int) string {
+func solve() string {
 	paths = nil
-	visited := make([]bool, m)
-	visited[0] = true
-	dfs(0, 0, []string{"1"}, visited)
+	dfs(0, 0, []string{"1"}, map[int]bool{0: true})
 	return strings.Join(paths, "\n")
 }
 
@@ -66,6 +64,6 @@ func main() {
 		} else {
 			fmt.Fprintln(out)
 		}
-		fmt.Fprintln(out, solve(m))
+		fmt.Fprintln(out, solve())
 	}
 }

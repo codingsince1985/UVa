@@ -11,7 +11,7 @@ import (
 
 var answer []string
 
-func dfs(links map[int][]int, visited []bool, n int) {
+func dfs(links map[int][]int, visited map[int]bool, n int) {
 	adjs := links[n]
 	for _, v := range adjs {
 		if !visited[v] {
@@ -23,7 +23,7 @@ func dfs(links map[int][]int, visited []bool, n int) {
 }
 
 func topoSort(links map[int][]int, n int) {
-	visited := make([]bool, n+1)
+	visited := make(map[int]bool)
 	for i := 1; i <= n; i++ {
 		if !visited[i] {
 			dfs(links, visited, i)

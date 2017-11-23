@@ -15,8 +15,7 @@ type node struct {
 var links map[string][]string
 
 func bfs(fm, to string) []byte {
-	visited := map[string]bool{fm: true}
-	for queue := []node{{fm, []byte{fm[0]}}}; len(queue) > 0; queue = queue[1:] {
+	for visited, queue := map[string]bool{fm: true}, []node{{fm, []byte{fm[0]}}}; len(queue) > 0; queue = queue[1:] {
 		curr := queue[0]
 		adjs := links[curr.n]
 		for _, v := range adjs {

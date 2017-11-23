@@ -36,8 +36,7 @@ type node struct {
 }
 
 func bfs(dict map[string][]string, fm, to string) int {
-	visited := map[string]bool{fm: true}
-	for queue := []node{{fm, 0}}; len(queue) > 0; queue = queue[1:] {
+	for visited, queue := map[string]bool{fm: true}, []node{{fm, 0}}; len(queue) > 0; queue = queue[1:] {
 		curr := queue[0]
 		adjs := dict[curr.w]
 		for _, v := range adjs {

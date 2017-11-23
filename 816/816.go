@@ -66,8 +66,7 @@ func buildMaze(r, c int, dir []string) {
 
 func bfs(fm, to node) []node {
 	rfm := realFrom(fm)
-	visited := map[node]bool{fm: true, rfm: true}
-	for queue := []qnode{{rfm, []node{fm, rfm}}}; len(queue) > 0; queue = queue[1:] {
+	for visited, queue := map[node]bool{fm: true, rfm: true}, []qnode{{rfm, []node{fm, rfm}}}; len(queue) > 0; queue = queue[1:] {
 		curr := queue[0]
 		adjs := maze[curr.node]
 		for _, v := range adjs {

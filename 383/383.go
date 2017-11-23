@@ -13,8 +13,7 @@ type node struct {
 }
 
 func bfs(legs map[string][]string, src, dest string) int {
-	visited := map[string]bool{src: true}
-	for queue := []node{{src, 0}}; len(queue) > 0; queue = queue[1:] {
+	for visited, queue := map[string]bool{src: true}, []node{{src, 0}}; len(queue) > 0; queue = queue[1:] {
 		curr := queue[0]
 		adjs := legs[curr.n]
 		for _, adj := range adjs {

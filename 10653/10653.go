@@ -22,8 +22,7 @@ var (
 )
 
 func bfs(s, d cell) int {
-	visited := map[[2]int]bool{{s.y, s.x}: true}
-	for queue := []node{{s, 0}}; len(queue) > 0; queue = queue[1:] {
+	for visited, queue := map[[2]int]bool{{s.y, s.x}: true}, []node{{s, 0}}; len(queue) > 0; queue = queue[1:] {
 		curr := queue[0]
 		if curr.cell == d {
 			return curr.l

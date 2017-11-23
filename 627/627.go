@@ -16,8 +16,7 @@ type node struct {
 }
 
 func bfs(s, e int, routes map[int][]int) []string {
-	visited := map[int]bool{s: true}
-	for queue := []node{{s, []string{strconv.Itoa(s)}}}; len(queue) > 0; queue = queue[1:] {
+	for visited, queue := map[int]bool{s: true}, []node{{s, []string{strconv.Itoa(s)}}}; len(queue) > 0; queue = queue[1:] {
 		curr := queue[0]
 		if curr.id == e {
 			return curr.path

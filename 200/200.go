@@ -35,7 +35,7 @@ func buildMatrix(chars map[byte]int, words []string) [][]bool {
 	return matrix
 }
 
-func dfs(matrix [][]bool, visited []bool, route []int) bool {
+func dfs(matrix [][]bool, visited map[int]bool, route []int) bool {
 	if len(route) == len(matrix) {
 		order = make([]int, len(route))
 		copy(order, route)
@@ -97,9 +97,6 @@ here:
 		}
 		break
 	}
-
-	visited := make([]bool, len(chars))
-	visited[first] = true
-	dfs(matrix, visited, []int{first})
+	dfs(matrix, map[int]bool{first: true}, []int{first})
 	output(out, chars)
 }

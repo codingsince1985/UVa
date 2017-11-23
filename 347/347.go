@@ -39,7 +39,7 @@ func runaround(r int) bool {
 		return false
 	}
 	l := len(str)
-	for count, idx, visited := 0, 0, make([]bool, l); count < l; count++ {
+	for count, idx, visited := 0, 0, make(map[int]bool); count < l; count++ {
 		curr := int(str[idx] - '0')
 		if idx = (idx + curr) % l; visited[idx] {
 			return false
