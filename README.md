@@ -656,6 +656,7 @@ UVa Online Judge solutions in Golang
 [UVa 10849](https://github.com/codingsince1985/UVa/tree/master/10849) - [Move the bishop](https://uva.onlinejudge.org/external/108/10849.pdf)  
 [UVa 10852](https://github.com/codingsince1985/UVa/tree/master/10852) - [Less Prime](https://uva.onlinejudge.org/external/108/10852.pdf)  
 [UVa 10865](https://github.com/codingsince1985/UVa/tree/master/10865) - [Brownie Points](https://uva.onlinejudge.org/external/108/10865.pdf)  
+[UVa 10871](https://github.com/codingsince1985/UVa/tree/master/10871) - [Primed Subsequence](https://uva.onlinejudge.org/external/108/10871.pdf)  
 [UVa 10878](https://github.com/codingsince1985/UVa/tree/master/10878) - [Decode the tape](https://uva.onlinejudge.org/external/108/10878.pdf)  
 [UVa 10879](https://github.com/codingsince1985/UVa/tree/master/10879) - [Code Refactoring](https://uva.onlinejudge.org/external/108/10879.pdf)  
 [UVa 10880](https://github.com/codingsince1985/UVa/tree/master/10880) - [Colin and Ryan](https://uva.onlinejudge.org/external/108/10880.pdf)  
