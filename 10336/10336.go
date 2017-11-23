@@ -12,22 +12,23 @@ var (
 	h, w       int
 	langMap    map[byte]int
 	directions = [][2]int{{0, 1}, {-1, 0}, {0, -1}, {1, 0}}
+	visited    [][]bool
 )
 
-func dfs(world [][]byte, visited [][]bool, x, y int) {
+func dfs(world [][]byte, x, y int) {
 	if !visited[x][y] {
 		visited[x][y] = true
 		for _, direction := range directions {
 			nx, ny := x+direction[0], y+direction[1]
 			if nx >= 0 && nx < h && ny >= 0 && ny < w && world[nx][ny] == world[x][y] {
-				dfs(world, visited, nx, ny)
+				dfs(world, nx, ny)
 			}
 		}
 	}
 }
 
 func solve(world [][]byte) {
-	visited := make([][]bool, h)
+	visited = make([][]bool, h)
 	for i := range visited {
 		visited[i] = make([]bool, w)
 	}
@@ -36,7 +37,7 @@ func solve(world [][]byte) {
 		for j := range world[i] {
 			if !visited[i][j] {
 				langMap[world[i][j]]++
-				dfs(world, visited, i, j)
+				dfs(world, i, j)
 			}
 		}
 	}

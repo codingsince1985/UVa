@@ -7,7 +7,10 @@ import (
 	"os"
 )
 
-var max int
+var (
+	max     int
+	visited [][]bool
+)
 
 func valid(visited [][]bool) bool {
 	for i := range visited {
@@ -109,7 +112,7 @@ func sum(board [][]int, visited [][]bool) {
 	}
 }
 
-func backtracking(board [][]int, visited [][]bool, row int) {
+func backtracking(board [][]int, row int) {
 	if !valid(visited) {
 		return
 	}
@@ -119,7 +122,7 @@ func backtracking(board [][]int, visited [][]bool, row int) {
 	}
 	for i := range board[0] {
 		visited[row][i] = true
-		backtracking(board, visited, row+1)
+		backtracking(board, row+1)
 		visited[row][i] = false
 	}
 }
@@ -139,12 +142,12 @@ func main() {
 				fmt.Fscanf(in, "%d", &board[i][j])
 			}
 		}
-		visited := make([][]bool, 8)
+		visited = make([][]bool, 8)
 		for i := range visited {
 			visited[i] = make([]bool, 8)
 		}
 		max = 0
-		backtracking(board, visited, 0)
+		backtracking(board, 0)
 		fmt.Fprintln(out, max)
 	}
 }

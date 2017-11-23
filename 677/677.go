@@ -10,12 +10,13 @@ import (
 )
 
 var (
-	paths  []string
-	n      int
-	matrix [][]bool
+	paths   []string
+	n       int
+	matrix  [][]bool
+	visited map[int]bool
 )
 
-func dfs(curr, level int, path []string, visited map[int]bool) {
+func dfs(curr, level int, path []string) {
 	if level == n {
 		paths = append(paths, "("+strings.Join(path, ",")+")")
 		return
@@ -23,7 +24,7 @@ func dfs(curr, level int, path []string, visited map[int]bool) {
 	for i, v := range matrix[curr] {
 		if v && !visited[i] {
 			visited[i] = true
-			dfs(i, level+1, append(path, strconv.Itoa(i+1)), visited)
+			dfs(i, level+1, append(path, strconv.Itoa(i+1)))
 			visited[i] = false
 		}
 	}
@@ -31,7 +32,8 @@ func dfs(curr, level int, path []string, visited map[int]bool) {
 
 func solve() string {
 	paths = nil
-	dfs(0, 0, []string{"1"}, map[int]bool{0: true})
+	visited = map[int]bool{0: true}
+	dfs(0, 0, []string{"1"})
 	return strings.Join(paths, "\n")
 }
 

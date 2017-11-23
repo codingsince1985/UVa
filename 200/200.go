@@ -7,7 +7,10 @@ import (
 	"os"
 )
 
-var order []int
+var (
+	order   []int
+	visited map[int]bool
+)
 
 func min(a, b int) int {
 	if a < b {
@@ -35,7 +38,7 @@ func buildMatrix(chars map[byte]int, words []string) [][]bool {
 	return matrix
 }
 
-func dfs(matrix [][]bool, visited map[int]bool, route []int) bool {
+func dfs(matrix [][]bool, route []int) bool {
 	if len(route) == len(matrix) {
 		order = make([]int, len(route))
 		copy(order, route)
@@ -44,7 +47,7 @@ func dfs(matrix [][]bool, visited map[int]bool, route []int) bool {
 	for i := range matrix {
 		if !visited[i] && matrix[route[len(route)-1]][i] {
 			visited[i] = true
-			if dfs(matrix, visited, append(route, i)) {
+			if dfs(matrix, append(route, i)) {
 				return true
 			}
 			visited[i] = false
@@ -97,6 +100,7 @@ here:
 		}
 		break
 	}
-	dfs(matrix, map[int]bool{first: true}, []int{first})
+	visited = map[int]bool{first: true}
+	dfs(matrix, []int{first})
 	output(out, chars)
 }

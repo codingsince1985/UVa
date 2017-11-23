@@ -8,11 +8,13 @@ import (
 )
 
 var (
-	count int
-	delta = []int{-1, 0, 1}
+	count   int
+	delta   = []int{-1, 0, 1}
+	grid    [][]byte
+	visited [][]bool
 )
 
-func dfs(grid [][]byte, visited [][]bool, x, y int) {
+func dfs(x, y int) {
 	if x < 1 || y < 1 || x > len(grid) || y > len((grid)[0]) {
 		return
 	}
@@ -24,7 +26,7 @@ func dfs(grid [][]byte, visited [][]bool, x, y int) {
 		for _, dx := range delta {
 			for _, dy := range delta {
 				if !(dx == 0 && dy == 0) {
-					dfs(grid, visited, x+dx, y+dy)
+					dfs(x+dx, y+dy)
 				}
 			}
 		}
@@ -41,7 +43,7 @@ func main() {
 	var line string
 	for fmt.Fscanf(in, "%d", &kase); kase > 0; kase-- {
 		fmt.Fscanln(in)
-		var grid [][]byte
+		grid = nil
 		for {
 			if fmt.Fscanf(in, "%s", &line); line[0] != 'L' && line[0] != 'W' {
 				break
@@ -51,12 +53,12 @@ func main() {
 		fmt.Sscanf(line, "%d", &x)
 		fmt.Fscanf(in, "%d", &y)
 		for {
-			visited := make([][]bool, len(grid))
+			visited = make([][]bool, len(grid))
 			for j := range visited {
 				visited[j] = make([]bool, len(grid[0]))
 			}
 			count = 0
-			dfs(grid, visited, x, y)
+			dfs(x, y)
 			fmt.Fprintln(out, count)
 			if _, err := fmt.Fscanf(in, "%d%d", &x, &y); err != nil {
 				break

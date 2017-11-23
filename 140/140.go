@@ -16,6 +16,7 @@ var (
 	nodeNum, min  int
 	nodeMap       map[string]int
 	matrix        [][]bool
+	visited       map[int]bool
 )
 
 func setNodes(tokens []string) {
@@ -69,7 +70,7 @@ func bandwidth(ordering []string) int {
 	return bw
 }
 
-func dfs(ordering []string, visited []bool) {
+func dfs(ordering []string) {
 	if len(ordering) == nodeNum {
 		bw := bandwidth(ordering)
 		if bw < min {
@@ -81,7 +82,7 @@ func dfs(ordering []string, visited []bool) {
 	for i, node := range nodes {
 		if !visited[i] {
 			visited[i] = true
-			dfs(append(ordering, node), visited)
+			dfs(append(ordering, node))
 			visited[i] = false
 		}
 	}
@@ -107,7 +108,8 @@ func main() {
 
 		min = math.MaxInt32
 		result = make([]string, nodeNum)
-		dfs(nil, make([]bool, nodeNum))
+		visited = make(map[int]bool)
+		dfs(nil)
 		fmt.Fprintf(out, "%s -> %d\n", strings.Join(result, " "), min)
 	}
 }

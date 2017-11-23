@@ -13,6 +13,7 @@ var (
 	gophers, holes []point
 	matrix         [][]bool
 	matched        []int
+	visited        map[int]bool
 )
 
 type point struct{ x, y float64 }
@@ -21,11 +22,11 @@ func distance(p1, p2 point) float64 {
 	return math.Sqrt((p1.x-p2.x)*(p1.x-p2.x) + (p1.y-p2.y)*(p1.y-p2.y))
 }
 
-func dfs(gopher int, visited []bool) bool {
+func dfs(gopher int) bool {
 	for i, near := range matrix[gopher] {
 		if near && !visited[i] {
 			visited[i] = true
-			if matched[i] == -1 || dfs(matched[i], visited) {
+			if matched[i] == -1 || dfs(matched[i]) {
 				matched[i] = gopher
 				return true
 			}
@@ -41,7 +42,8 @@ func hungarian() int {
 	}
 	safe := 0
 	for i := range gophers {
-		if dfs(i, make([]bool, n)) {
+		visited = make(map[int]bool)
+		if dfs(i) {
 			safe++
 		}
 	}

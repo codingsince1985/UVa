@@ -9,13 +9,16 @@ import (
 	"strings"
 )
 
-var answer []string
+var (
+	answer  []string
+	visited map[int]bool
+)
 
-func dfs(links map[int][]int, visited map[int]bool, n int) {
+func dfs(links map[int][]int, n int) {
 	adjs := links[n]
 	for _, v := range adjs {
 		if !visited[v] {
-			dfs(links, visited, v)
+			dfs(links, v)
 		}
 	}
 	visited[n] = true
@@ -23,10 +26,10 @@ func dfs(links map[int][]int, visited map[int]bool, n int) {
 }
 
 func topoSort(links map[int][]int, n int) {
-	visited := make(map[int]bool)
+	visited = make(map[int]bool)
 	for i := 1; i <= n; i++ {
 		if !visited[i] {
-			dfs(links, visited, i)
+			dfs(links, i)
 		}
 	}
 }

@@ -9,8 +9,9 @@ import (
 )
 
 var (
-	chars []byte
-	out   *os.File
+	chars   []byte
+	out     *os.File
+	visited []bool
 )
 
 func isLower(a byte) bool { return a >= 'a' && a <= 'z' }
@@ -19,7 +20,7 @@ func isUpper(a byte) bool { return !isLower(a) }
 
 func toUpper(a byte) byte { return a - 'a' + 'A' }
 
-func dfs(i int, word []byte, visited []bool) {
+func dfs(i int, word []byte) {
 	if i == len(chars) {
 		fmt.Fprintln(out, string(word))
 	} else {
@@ -27,7 +28,7 @@ func dfs(i int, word []byte, visited []bool) {
 			if !visited[j] && !(j > 0 && chars[j] == chars[j-1] && !visited[j-1]) {
 				visited[j] = true
 				word[i] = chars[j]
-				dfs(i+1, word, visited)
+				dfs(i+1, word)
 				visited[j] = false
 			}
 		}
@@ -55,6 +56,7 @@ func main() {
 			return chars[i] <= toUpper(chars[j])
 		})
 		word := make([]byte, len(chars))
-		dfs(0, word, make([]bool, len(chars)))
+		visited = make([]bool, len(chars))
+		dfs(0, word)
 	}
 }

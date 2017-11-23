@@ -7,9 +7,12 @@ import (
 	"os"
 )
 
-var n [5]int
+var (
+	n       [5]int
+	visited []bool
+)
 
-func dfs(level, result int, visited []bool) bool {
+func dfs(level, result int) bool {
 	if level == 5 {
 		return result == 23
 	}
@@ -17,11 +20,11 @@ func dfs(level, result int, visited []bool) bool {
 		if !visited[i] {
 			visited[i] = true
 			if level == 0 {
-				if dfs(level+1, n[i], visited) {
+				if dfs(level+1, n[i]) {
 					return true
 				}
 			} else {
-				if dfs(level+1, result+n[i], visited) || dfs(level+1, result-n[i], visited) || dfs(level+1, result*n[i], visited) {
+				if dfs(level+1, result+n[i]) || dfs(level+1, result-n[i]) || dfs(level+1, result*n[i]) {
 					return true
 				}
 			}
@@ -41,7 +44,8 @@ func main() {
 		if fmt.Fscanf(in, "%d%d%d%d%d", &n[0], &n[1], &n[2], &n[3], &n[4]); n[0] == 0 && n[1] == 0 && n[2] == 0 && n[3] == 0 && n[4] == 0 {
 			break
 		}
-		if dfs(0, 0, make([]bool, 5)) {
+		visited = make([]bool, 5)
+		if dfs(0, 0) {
 			fmt.Fprintln(out, "Possible")
 		} else {
 			fmt.Fprintln(out, "Impossible")

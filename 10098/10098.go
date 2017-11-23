@@ -10,11 +10,12 @@ import (
 )
 
 var (
-	res map[string]bool
-	out *os.File
+	res     map[string]bool
+	out     *os.File
+	visited map[int]bool
 )
 
-func dfs(strs []string, visited []bool, ans []string) {
+func dfs(strs []string, ans []string) {
 	if len(ans) == len(strs) {
 		s := strings.Join(ans, "")
 		if _, ok := res[s]; !ok {
@@ -26,7 +27,7 @@ func dfs(strs []string, visited []bool, ans []string) {
 	for i := range strs {
 		if !visited[i] {
 			visited[i] = true
-			dfs(strs, visited, append(ans, strs[i]))
+			dfs(strs, append(ans, strs[i]))
 			visited[i] = false
 		}
 	}
@@ -48,7 +49,8 @@ func main() {
 		}
 		sort.Strings(strs)
 		res = make(map[string]bool)
-		dfs(strs, make([]bool, len(str)), nil)
+		visited = make(map[int]bool)
+		dfs(strs, nil)
 		fmt.Fprintln(out)
 	}
 }

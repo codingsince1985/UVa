@@ -7,11 +7,16 @@ import (
 	"os"
 )
 
-func dfs(matrix [][]bool, visited map[int]bool, node int) {
+var (
+	matrix  [][]bool
+	visited map[int]bool
+)
+
+func dfs(node int) {
 	for i, vi := range matrix[node] {
 		if vi && !visited[i] {
 			visited[i] = true
-			dfs(matrix, visited, i)
+			dfs(i)
 		}
 	}
 }
@@ -37,7 +42,7 @@ func main() {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		matrix := make([][]bool, n)
+		matrix = make([][]bool, n)
 		for i := range matrix {
 			matrix[i] = make([]bool, n)
 		}
@@ -54,8 +59,8 @@ func main() {
 		}
 		for fmt.Fscanf(in, "%d", &q); q > 0; q-- {
 			fmt.Fscanf(in, "%d", &qs)
-			visited := make(map[int]bool)
-			dfs(matrix, visited, qs-1)
+			visited = make(map[int]bool)
+			dfs(qs - 1)
 			output(out, n, visited)
 		}
 	}

@@ -9,16 +9,21 @@ import (
 	"strings"
 )
 
-func dfs(curr int, visited map[int]bool, matrix [][]bool) {
+var (
+	matrix  [][]bool
+	visited map[int]bool
+)
+
+func dfs(curr int) {
 	visited[curr] = true
 	for i := range matrix[curr] {
 		if matrix[curr][i] && !visited[i] {
-			dfs(i, visited, matrix)
+			dfs(i)
 		}
 	}
 }
 
-func solve(matrix [][]bool) int {
+func solve() int {
 	cnt := 0
 	for i := range matrix {
 		var turnOff []int
@@ -28,8 +33,8 @@ func solve(matrix [][]bool) int {
 				matrix[i][j], matrix[j][i] = false, false
 			}
 		}
-		visited := make(map[int]bool)
-		dfs((i+1)%len(matrix), visited, matrix)
+		visited = make(map[int]bool)
+		dfs((i + 1) % len(matrix))
 		if len(visited)+1 != len(matrix) {
 			cnt++
 		}
@@ -55,7 +60,7 @@ func main() {
 		if fmt.Sscanf(s.Text(), "%d", &n); n == 0 {
 			break
 		}
-		matrix := make([][]bool, n)
+		matrix = make([][]bool, n)
 		for i := range matrix {
 			matrix[i] = make([]bool, n)
 		}
@@ -72,6 +77,6 @@ func main() {
 				matrix[c1-1][c2-1], matrix[c2-1][c1-1] = true, true
 			}
 		}
-		fmt.Fprintln(out, solve(matrix))
+		fmt.Fprintln(out, solve())
 	}
 }
