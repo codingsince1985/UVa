@@ -562,6 +562,7 @@ UVa Online Judge solutions in Golang
 [UVa 10450](https://github.com/codingsince1985/UVa/tree/master/10450) - [World Cup Noise](https://uva.onlinejudge.org/external/104/10450.pdf)  
 [UVa 10451](https://github.com/codingsince1985/UVa/tree/master/10451) - [Ancient Village Sports](https://uva.onlinejudge.org/external/104/10451.pdf)  
 [UVa 10452](https://github.com/codingsince1985/UVa/tree/master/10452) - [Marcus](https://uva.onlinejudge.org/external/104/10452.pdf)  
+[UVa 10460](https://github.com/codingsince1985/UVa/tree/master/10460) - [Find the Permuted String](https://uva.onlinejudge.org/external/104/10460.pdf)  
 [UVa 10465](https://github.com/codingsince1985/UVa/tree/master/10465) - [Homer Simpson](https://uva.onlinejudge.org/external/104/10465.pdf)  
 [UVa 10469](https://github.com/codingsince1985/UVa/tree/master/10469) - [To Carry or not to Carry](https://uva.onlinejudge.org/external/104/10469.pdf)  
 [UVa 10473](https://github.com/codingsince1985/UVa/tree/master/10473) - [Simple Base Conversion](https://uva.onlinejudge.org/external/104/10473.pdf)  
