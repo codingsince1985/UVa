@@ -102,6 +102,7 @@ UVa Online Judge solutions in Golang
 [UVa 299](https://github.com/codingsince1985/UVa/tree/master/299) - [Train Swapping](https://uva.onlinejudge.org/external/2/299.pdf)  
 [UVa 300](https://github.com/codingsince1985/UVa/tree/master/300) - [Maya Calendar](https://uva.onlinejudge.org/external/3/300.pdf)  
 [UVa 301](https://github.com/codingsince1985/UVa/tree/master/301) - [Transportation](https://uva.onlinejudge.org/external/3/301.pdf)  
+[UVa 302](https://github.com/codingsince1985/UVa/tree/master/302) - [John's trip](https://uva.onlinejudge.org/external/3/302.pdf)  
 [UVa 305](https://github.com/codingsince1985/UVa/tree/master/305) - [Joseph](https://uva.onlinejudge.org/external/3/305.pdf)  
 [UVa 306](https://github.com/codingsince1985/UVa/tree/master/306) - [Cipher](https://uva.onlinejudge.org/external/3/306.pdf)  
 [UVa 307](https://github.com/codingsince1985/UVa/tree/master/307) - [Sticks](https://uva.onlinejudge.org/external/3/307.pdf)  
