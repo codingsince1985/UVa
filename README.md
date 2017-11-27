@@ -78,6 +78,7 @@ UVa Online Judge solutions in Golang
 [UVa 213](https://github.com/codingsince1985/UVa/tree/master/213) - [Message Decoding](https://uva.onlinejudge.org/external/2/213.pdf)  
 [UVa 216](https://github.com/codingsince1985/UVa/tree/master/216) - [Getting in Line](https://uva.onlinejudge.org/external/2/216.pdf)  
 [UVa 218](https://github.com/codingsince1985/UVa/tree/master/218) - [Moth Eradication](https://uva.onlinejudge.org/external/2/218.pdf)  
+[UVa 222](https://github.com/codingsince1985/UVa/tree/master/222) - [Budget Travel](https://uva.onlinejudge.org/external/2/222.pdf)  
 [UVa 227](https://github.com/codingsince1985/UVa/tree/master/227) - [Puzzle](https://uva.onlinejudge.org/external/2/227.pdf)  
 [UVa 231](https://github.com/codingsince1985/UVa/tree/master/231) - [Testing the CATCHER](https://uva.onlinejudge.org/external/2/231.pdf)  
 [UVa 232](https://github.com/codingsince1985/UVa/tree/master/232) - [Crossword Answers](https://uva.onlinejudge.org/external/2/232.pdf)  
