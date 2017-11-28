@@ -8,9 +8,7 @@ import (
 	"os"
 )
 
-func round(amt float64) float64 {
-	return math.Floor(amt*100+0.5) / 100
-}
+func round(amt float64) float64 { return math.Floor(amt*100+0.5) / 100 }
 
 func min(a, b float64) float64 {
 	if a < b {
