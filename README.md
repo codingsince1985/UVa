@@ -345,6 +345,7 @@ UVa Online Judge solutions in Golang
 [UVa 902](https://github.com/codingsince1985/UVa/tree/master/902) - [Password Search](https://uva.onlinejudge.org/external/9/902.pdf)  
 [UVa 913](https://github.com/codingsince1985/UVa/tree/master/913) - [Joana and the Odd Numbers](https://uva.onlinejudge.org/external/9/913.pdf)  
 [UVa 929](https://github.com/codingsince1985/UVa/tree/master/929) - [Number Maze](https://uva.onlinejudge.org/external/9/929.pdf)  
+[UVa 948](https://github.com/codingsince1985/UVa/tree/master/948) - [Fibonaccimal Base](https://uva.onlinejudge.org/external/9/948.pdf)  
 [UVa 993](https://github.com/codingsince1985/UVa/tree/master/993) - [Product of digits](https://uva.onlinejudge.org/external/9/993.pdf)  
 [UVa 10000](https://github.com/codingsince1985/UVa/tree/master/10000) - [Longest Paths](https://uva.onlinejudge.org/external/100/10000.pdf)  
 [UVa 10001](https://github.com/codingsince1985/UVa/tree/master/10001) - [Garden of Eden](https://uva.onlinejudge.org/external/100/10001.pdf)  
