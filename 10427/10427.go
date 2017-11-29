@@ -24,11 +24,11 @@ func find(n, total, idx int) byte {
 	from := 0
 	if idx > 0 {
 		from = int(math.Pow(10, float64(idx)))
-		from -= 1
+		from--
 	}
 	from += (n - total) / (idx + 1)
 	if (n-total)%(idx+1) > 0 {
-		from += 1
+		from++
 	}
 	return strconv.Itoa(from)[(n-total-1)%(idx+1)] - '0'
 }

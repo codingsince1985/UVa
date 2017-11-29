@@ -14,7 +14,7 @@ func decode(line string) byte {
 	for i := range line {
 		ascii *= 2
 		if line[i] == 'o' {
-			ascii += 1
+			ascii++
 		}
 	}
 	return ascii

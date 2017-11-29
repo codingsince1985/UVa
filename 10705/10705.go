@@ -15,9 +15,9 @@ func solve(n int64, np string) string {
 		n /= 2
 		switch {
 		case lastBit == 1 && np[i] == 'n' && n > 0:
-			n += 1
+			n++
 		case lastBit == 1 && np[i] == 'p' && n < 0:
-			n -= 1
+			n--
 		}
 	}
 	if n != 0 {

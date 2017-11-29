@@ -23,7 +23,7 @@ func main() {
 		if _, ok := dict[n]; !ok {
 			lst = append(lst, n)
 		}
-		dict[n] += 1
+		dict[n]++
 	}
 	for _, v := range lst {
 		fmt.Fprintln(out, v, dict[v])

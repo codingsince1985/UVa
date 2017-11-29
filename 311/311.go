@@ -23,7 +23,7 @@ func pack(p [7]int) int {
 		p[1] -= 6
 		parcels++
 	case 3:
-		p[2] -= 1
+		p[2]--
 		p[1] -= 5
 		parcels++
 	}
