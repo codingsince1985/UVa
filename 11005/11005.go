@@ -10,11 +10,10 @@ import (
 	"strings"
 )
 
-func convert(n, base int) []int {
+func toBase(n, base int) []int {
 	var digits []int
-	for n > 0 {
+	for ; n > 0; n /= base {
 		digits = append(digits, n%base)
-		n /= base
 	}
 	return digits
 }
@@ -25,7 +24,7 @@ func solve(costs []int, n int) []string {
 here:
 	for base := 2; base <= 36; base++ {
 		var total int
-		for _, digit := range convert(n, base) {
+		for _, digit := range toBase(n, base) {
 			if total += costs[digit]; total > lowest {
 				continue here
 			}

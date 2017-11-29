@@ -4,7 +4,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 	"os"
 )
 
@@ -14,28 +13,23 @@ func getNumber(digit rune) int {
 	if digit >= '0' && digit <= '9' {
 		return int(digit - '0')
 	}
-	if digit >= 'A' && digit <= 'Z' {
-		return int(digit-'A') + 10
-	}
-	return -1
+	return int(digit-'A') + 10
 }
 
 func minBase(num string) int {
 	base := 1
 	for _, d := range num {
-		tmp := getNumber(d)
-		if tmp > base {
+		if tmp := getNumber(d); tmp > base {
 			base = tmp
 		}
 	}
 	return base + 1
 }
 
-func base10(number string, base int) int {
-	total := 0
-	length := len(number)
-	for i, d := range number {
-		total += getNumber(d) * int(math.Pow(float64(base), float64(length-i-1)))
+func base10(num string, base int) int {
+	var total int
+	for _, d := range num {
+		total = total*base + getNumber(d)
 	}
 	return total
 }

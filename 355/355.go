@@ -4,7 +4,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 	"os"
 )
 
@@ -22,7 +21,7 @@ func toStr(d int) string {
 	return string('A' - 10 + d)
 }
 
-func toNum(digit rune) int {
+func getNumber(digit rune) int {
 	if digit >= '0' && digit <= '9' {
 		return int(digit - '0')
 	}
@@ -33,14 +32,13 @@ func toNum(digit rune) int {
 }
 
 func base10(num string, base int) int {
-	length := len(num)
-	total := 0
-	for i, d := range num {
-		digit := toNum(d)
+	var total int
+	for _, d := range num {
+		digit := getNumber(d)
 		if digit >= base {
 			return -1
 		}
-		total += digit * int(math.Pow(float64(base), float64(length-i-1)))
+		total = total*base + digit
 	}
 	return total
 }
