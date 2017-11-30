@@ -17,6 +17,23 @@ func min(a, b float64) float64 {
 	return b
 }
 
+func solve(n int, lst []float64) float64 {
+	var total float64
+	for i := range lst {
+		total += lst[i]
+	}
+	avg := total / float64(n)
+	var diffPos, diffNeg float64
+	for i := range lst {
+		if lst[i] > avg {
+			diffPos += round(lst[i] - avg)
+		} else {
+			diffNeg += round(avg - lst[i])
+		}
+	}
+	return min(diffPos, diffNeg)
+}
+
 func main() {
 	in, _ := os.Open("10137.in")
 	defer in.Close()
@@ -28,22 +45,10 @@ func main() {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		var total float64
 		lst := make([]float64, n)
 		for i := range lst {
 			fmt.Fscanf(in, "%f", &lst[i])
-			total += lst[i]
 		}
-		avg := total / float64(n)
-
-		var diffPos, diffNeg float64
-		for i := range lst {
-			if lst[i] > avg {
-				diffPos += round(lst[i] - avg)
-			} else {
-				diffNeg += round(avg - lst[i])
-			}
-		}
-		fmt.Fprintf(out, "$%.2f\n", min(diffPos, diffNeg))
+		fmt.Fprintf(out, "$%.2f\n", solve(n, lst))
 	}
 }
