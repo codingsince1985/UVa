@@ -97,6 +97,7 @@ UVa Online Judge solutions in Golang
 [UVa 275](https://github.com/codingsince1985/UVa/tree/master/275) - [Expanding Fractions](https://uva.onlinejudge.org/external/2/275.pdf)  
 [UVa 278](https://github.com/codingsince1985/UVa/tree/master/278) - [Chess](https://uva.onlinejudge.org/external/2/278.pdf)  
 [UVa 280](https://github.com/codingsince1985/UVa/tree/master/280) - [Vertex](https://uva.onlinejudge.org/external/2/280.pdf)  
+[UVa 290](https://github.com/codingsince1985/UVa/tree/master/290) - [Palindroms <---> smordnilaP](https://uva.onlinejudge.org/external/2/290.pdf)  
 [UVa 291](https://github.com/codingsince1985/UVa/tree/master/291) - [The House Of Santa Claus](https://uva.onlinejudge.org/external/2/291.pdf)  
 [UVa 294](https://github.com/codingsince1985/UVa/tree/master/294) - [Divisors](https://uva.onlinejudge.org/external/2/294.pdf)  
 [UVa 297](https://github.com/codingsince1985/UVa/tree/master/297) - [Quadtrees](https://uva.onlinejudge.org/external/2/297.pdf)  
