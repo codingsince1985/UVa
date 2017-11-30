@@ -19,16 +19,16 @@ func min(a, b float64) float64 {
 
 func solve(n int, lst []float64) float64 {
 	var total float64
-	for i := range lst {
-		total += lst[i]
+	for _, l := range lst {
+		total += l
 	}
 	avg := total / float64(n)
 	var diffPos, diffNeg float64
-	for i := range lst {
-		if lst[i] > avg {
-			diffPos += round(lst[i] - avg)
+	for _, l := range lst {
+		if l > avg {
+			diffPos += round(l - avg)
 		} else {
-			diffNeg += round(avg - lst[i])
+			diffNeg += round(avg - l)
 		}
 	}
 	return min(diffPos, diffNeg)
