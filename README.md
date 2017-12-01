@@ -770,6 +770,7 @@ UVa Online Judge solutions in Golang
 [UVa 11934](https://github.com/codingsince1985/UVa/tree/master/11934) - [Magic Formula](https://uva.onlinejudge.org/external/119/11934.pdf)  
 [UVa 11936](https://github.com/codingsince1985/UVa/tree/master/11936) - [The Lazy Lumberjacks](https://uva.onlinejudge.org/external/119/11936.pdf)  
 [UVa 11942](https://github.com/codingsince1985/UVa/tree/master/11942) - [Lumberjack Sequencing](https://uva.onlinejudge.org/external/119/11942.pdf)  
+[UVa 11995](https://github.com/codingsince1985/UVa/tree/master/11995) - [I Can Guess the Data Structure!](https://uva.onlinejudge.org/external/119/11995.pdf)  
 [UVa 12015](https://github.com/codingsince1985/UVa/tree/master/12015) - [Google is Feeling Lucky](https://uva.onlinejudge.org/external/120/12015.pdf)  
 [UVa 12149](https://github.com/codingsince1985/UVa/tree/master/12149) - [Feynman](https://uva.onlinejudge.org/external/121/12149.pdf)  
 [UVa 12250](https://github.com/codingsince1985/UVa/tree/master/12250) - [Language Detection](https://uva.onlinejudge.org/external/122/12250.pdf)  
