@@ -42,7 +42,7 @@ func dijkstra(n, m int, maze [][]int) int {
 	}
 	cost[0][0], visited[0][0] = maze[0][0], true
 	var pq priorityQueue
-	for pq.Push(&node{0, 0, cost[0][0]}); pq.Len() > 0; {
+	for heap.Push(&pq, &node{0, 0, cost[0][0]}); pq.Len() > 0; {
 		curr := heap.Pop(&pq).(*node)
 		for _, direction := range directions {
 			if newY, newX := curr.y+direction[0], curr.x+direction[1]; newY >= 0 && newY < n && newX >= 0 && newX < m && !visited[newY][newX] {
