@@ -422,6 +422,7 @@ UVa Online Judge solutions in Golang
 [UVa 10112](https://github.com/codingsince1985/UVa/tree/master/10112) - [Myacm Triangles](https://uva.onlinejudge.org/external/101/10112.pdf)  
 [UVa 10115](https://github.com/codingsince1985/UVa/tree/master/10115) - [Automatic Editing](https://uva.onlinejudge.org/external/101/10115.pdf)  
 [UVa 10116](https://github.com/codingsince1985/UVa/tree/master/10116) - [Robot Motion](https://uva.onlinejudge.org/external/101/10116.pdf)  
+[UVa 10120](https://github.com/codingsince1985/UVa/tree/master/10120) - [Gift?!](https://uva.onlinejudge.org/external/101/10120.pdf)  
 [UVa 10125](https://github.com/codingsince1985/UVa/tree/master/10125) - [Sumsets](https://uva.onlinejudge.org/external/101/10125.pdf)  
 [UVa 10126](https://github.com/codingsince1985/UVa/tree/master/10126) - [Zipf's Law](https://uva.onlinejudge.org/external/101/10126.pdf)  
 [UVa 10127](https://github.com/codingsince1985/UVa/tree/master/10127) - [Ones](https://uva.onlinejudge.org/external/101/10127.pdf)  
