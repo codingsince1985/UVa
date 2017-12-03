@@ -462,6 +462,7 @@ UVa Online Judge solutions in Golang
 [UVa 10194](https://github.com/codingsince1985/UVa/tree/master/10194) - [Football (aka Soccer)](https://uva.onlinejudge.org/external/101/10194.pdf)  
 [UVa 10195](https://github.com/codingsince1985/UVa/tree/master/10195) - [The Knights Of The Round Table](https://uva.onlinejudge.org/external/101/10195.pdf)  
 [UVa 10196](https://github.com/codingsince1985/UVa/tree/master/10196) - [Check The Check](https://uva.onlinejudge.org/external/101/10196.pdf)  
+[UVa 10197](https://github.com/codingsince1985/UVa/tree/master/10197) - [Learning Portuguese](https://uva.onlinejudge.org/external/101/10197.pdf)  
 [UVa 10198](https://github.com/codingsince1985/UVa/tree/master/10198) - [Counting](https://uva.onlinejudge.org/external/101/10198.pdf)  
 [UVa 10199](https://github.com/codingsince1985/UVa/tree/master/10199) - [Tourist Guide](https://uva.onlinejudge.org/external/101/10199.pdf)  
 [UVa 10200](https://github.com/codingsince1985/UVa/tree/master/10200) - [Prime Time](https://uva.onlinejudge.org/external/102/10200.pdf)  
