@@ -695,6 +695,7 @@ UVa Online Judge solutions in Golang
 [UVa 10946](https://github.com/codingsince1985/UVa/tree/master/10946) - [You want what filled?](https://uva.onlinejudge.org/external/109/10946.pdf)  
 [UVa 10948](https://github.com/codingsince1985/UVa/tree/master/10948) - [The primary problem](https://uva.onlinejudge.org/external/109/10948.pdf)  
 [UVa 10954](https://github.com/codingsince1985/UVa/tree/master/10954) - [Add All](https://uva.onlinejudge.org/external/109/10954.pdf)  
+[UVa 10959](https://github.com/codingsince1985/UVa/tree/master/10959) - [The Party, Part I](https://uva.onlinejudge.org/external/109/10959.pdf)  
 [UVa 10963](https://github.com/codingsince1985/UVa/tree/master/10963) - [The Swallowing Ground](https://uva.onlinejudge.org/external/109/10963.pdf)  
 [UVa 10970](https://github.com/codingsince1985/UVa/tree/master/10970) - [Big Chocolate](https://uva.onlinejudge.org/external/109/10970.pdf)  
 [UVa 10976](https://github.com/codingsince1985/UVa/tree/master/10976) - [Fractions Again?!](https://uva.onlinejudge.org/external/109/10976.pdf)  
