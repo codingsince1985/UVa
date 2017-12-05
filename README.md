@@ -660,6 +660,7 @@ UVa Online Judge solutions in Golang
 [UVa 10810](https://github.com/codingsince1985/UVa/tree/master/10810) - [Ultra-QuickSort](https://uva.onlinejudge.org/external/108/10810.pdf)  
 [UVa 10812](https://github.com/codingsince1985/UVa/tree/master/10812) - [Beat the Spread!](https://uva.onlinejudge.org/external/108/10812.pdf)  
 [UVa 10813](https://github.com/codingsince1985/UVa/tree/master/10813) - [Traditional BINGO](https://uva.onlinejudge.org/external/108/10813.pdf)  
+[UVa 10814](https://github.com/codingsince1985/UVa/tree/master/10814) - [Simplifying Fractions](https://uva.onlinejudge.org/external/108/10814.pdf)  
 [UVa 10815](https://github.com/codingsince1985/UVa/tree/master/10815) - [Andy's First Dictionary](https://uva.onlinejudge.org/external/108/10815.pdf)  
 [UVa 10820](https://github.com/codingsince1985/UVa/tree/master/10820) - [Send a Table](https://uva.onlinejudge.org/external/108/10820.pdf)  
 [UVa 10849](https://github.com/codingsince1985/UVa/tree/master/10849) - [Move the bishop](https://uva.onlinejudge.org/external/108/10849.pdf)  
