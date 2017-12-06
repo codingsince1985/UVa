@@ -331,6 +331,7 @@ UVa Online Judge solutions in Golang
 [UVa 820](https://github.com/codingsince1985/UVa/tree/master/820) - [Internet Bandwidth](https://uva.onlinejudge.org/external/8/820.pdf)  
 [UVa 821](https://github.com/codingsince1985/UVa/tree/master/821) - [Page Hopping](https://uva.onlinejudge.org/external/8/821.pdf)  
 [UVa 825](https://github.com/codingsince1985/UVa/tree/master/825) - [Walking on the Safe Side](https://uva.onlinejudge.org/external/8/825.pdf)  
+[UVa 833](https://github.com/codingsince1985/UVa/tree/master/833) - [Water Falls](https://uva.onlinejudge.org/external/8/833.pdf)  
 [UVa 834](https://github.com/codingsince1985/UVa/tree/master/834) - [Continued Fractions](https://uva.onlinejudge.org/external/8/834.pdf)  
 [UVa 836](https://github.com/codingsince1985/UVa/tree/master/836) - [Largest Submatrix](https://uva.onlinejudge.org/external/8/836.pdf)  
 [UVa 839](https://github.com/codingsince1985/UVa/tree/master/839) - [Not so Mobile](https://uva.onlinejudge.org/external/8/839.pdf)  
