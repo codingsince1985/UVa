@@ -587,6 +587,7 @@ UVa Online Judge solutions in Golang
 [UVa 10499](https://github.com/codingsince1985/UVa/tree/master/10499) - [The Land of Justice](https://uva.onlinejudge.org/external/104/10499.pdf)  
 [UVa 10500](https://github.com/codingsince1985/UVa/tree/master/10500) - [Robot maps](https://uva.onlinejudge.org/external/105/10500.pdf)  
 [UVa 10502](https://github.com/codingsince1985/UVa/tree/master/10502) - [Counting Rectangles](https://uva.onlinejudge.org/external/105/10502.pdf)  
+[UVa 10503](https://github.com/codingsince1985/UVa/tree/master/10503) - [The dominoes solitaire](https://uva.onlinejudge.org/external/105/10503.pdf)  
 [UVa 10507](https://github.com/codingsince1985/UVa/tree/master/10507) - [Waking up brain](https://uva.onlinejudge.org/external/105/10507.pdf)  
 [UVa 10508](https://github.com/codingsince1985/UVa/tree/master/10508) - [Word Morphing](https://uva.onlinejudge.org/external/105/10508.pdf)  
 [UVa 10509](https://github.com/codingsince1985/UVa/tree/master/10509) - [R U Kidding Mr. Feynman?](https://uva.onlinejudge.org/external/105/10509.pdf)  
