@@ -162,6 +162,7 @@ UVa Online Judge solutions in Golang
 [UVa 414](https://github.com/codingsince1985/UVa/tree/master/414) - [Machined Surfaces](https://uva.onlinejudge.org/external/4/414.pdf)  
 [UVa 416](https://github.com/codingsince1985/UVa/tree/master/416) - [LED Test](https://uva.onlinejudge.org/external/4/416.pdf)  
 [UVa 417](https://github.com/codingsince1985/UVa/tree/master/417) - [Word Index](https://uva.onlinejudge.org/external/4/417.pdf)  
+[UVa 418](https://github.com/codingsince1985/UVa/tree/master/418) - [Molecules](https://uva.onlinejudge.org/external/4/418.pdf)  
 [UVa 422](https://github.com/codingsince1985/UVa/tree/master/422) - [Word-Search Wonder](https://uva.onlinejudge.org/external/4/422.pdf)  
 [UVa 423](https://github.com/codingsince1985/UVa/tree/master/423) - [MPI Maelstrom](https://uva.onlinejudge.org/external/4/423.pdf)  
 [UVa 424](https://github.com/codingsince1985/UVa/tree/master/424) - [Integer Inquiry](https://uva.onlinejudge.org/external/4/424.pdf)  
