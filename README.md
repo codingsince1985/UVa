@@ -769,6 +769,7 @@ UVa Online Judge solutions in Golang
 [UVa 11689](https://github.com/codingsince1985/UVa/tree/master/11689) - [Soda Surpler](https://uva.onlinejudge.org/external/116/11689.pdf)  
 [UVa 11805](https://github.com/codingsince1985/UVa/tree/master/11805) - [Bafana Bafana](https://uva.onlinejudge.org/external/118/11805.pdf)  
 [UVa 11827](https://github.com/codingsince1985/UVa/tree/master/11827) - [Maximum GCD](https://uva.onlinejudge.org/external/118/11827.pdf)  
+[UVa 11849](https://github.com/codingsince1985/UVa/tree/master/11849) - [CD](https://uva.onlinejudge.org/external/118/11849.pdf)  
 [UVa 11854](https://github.com/codingsince1985/UVa/tree/master/11854) - [Egypt](https://uva.onlinejudge.org/external/118/11854.pdf)  
 [UVa 11875](https://github.com/codingsince1985/UVa/tree/master/11875) - [Brick Game](https://uva.onlinejudge.org/external/118/11875.pdf)  
 [UVa 11877](https://github.com/codingsince1985/UVa/tree/master/11877) - [The Coco-Cola Store](https://uva.onlinejudge.org/external/118/11877.pdf)  
