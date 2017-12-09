@@ -287,6 +287,7 @@ UVa Online Judge solutions in Golang
 [UVa 642](https://github.com/codingsince1985/UVa/tree/master/642) - [Word Amalgamation](https://uva.onlinejudge.org/external/6/642.pdf)  
 [UVa 644](https://github.com/codingsince1985/UVa/tree/master/644) - [Immediate Decodability](https://uva.onlinejudge.org/external/6/644.pdf)  
 [UVa 651](https://github.com/codingsince1985/UVa/tree/master/651) - [Deck](https://uva.onlinejudge.org/external/6/651.pdf)  
+[UVa 654](https://github.com/codingsince1985/UVa/tree/master/654) - [Ratio](https://uva.onlinejudge.org/external/6/654.pdf)  
 [UVa 657](https://github.com/codingsince1985/UVa/tree/master/657) - [The die is cast](https://uva.onlinejudge.org/external/6/657.pdf)  
 [UVa 661](https://github.com/codingsince1985/UVa/tree/master/661) - [Blowing Fuses](https://uva.onlinejudge.org/external/6/661.pdf)  
 [UVa 673](https://github.com/codingsince1985/UVa/tree/master/673) - [Parentheses Balance](https://uva.onlinejudge.org/external/6/673.pdf)  
