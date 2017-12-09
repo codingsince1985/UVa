@@ -76,15 +76,14 @@ func edit(s1, s2 string) [][]int {
 			} else {
 				k = 1
 			}
-			dp[i][j] = min(dp[i-1][j-1]+k, min(dp[i-1][j]+1, dp[i][j-1]+1))
-			switch {
-			case dp[i][j] == dp[i-1][j-1]+k:
+			switch dp[i][j] = min(dp[i-1][j-1]+k, min(dp[i-1][j]+1, dp[i][j-1]+1)); dp[i][j] {
+			case dp[i-1][j-1] + k:
 				if k == 0 {
 					op[i][j] = 0 // move
 				} else {
 					op[i][j] = 1 // change
 				}
-			case dp[i][j] == dp[i][j-1]+1:
+			case dp[i][j-1] + 1:
 				op[i][j] = 2 // insert
 			default:
 				op[i][j] = 3 // delete
