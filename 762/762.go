@@ -39,8 +39,7 @@ func main() {
 
 	var ln int
 	var n1, n2, src, dest string
-	first := true
-	for {
+	for first := true; ; {
 		if _, err := fmt.Fscanf(in, "%d", &ln); err != nil {
 			break
 		}

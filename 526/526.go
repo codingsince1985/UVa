@@ -140,18 +140,17 @@ func main() {
 	defer out.Close()
 
 	var s1, s2 string
-	first := true
-	for {
+	for first := true; ; {
 		if _, err := fmt.Fscanf(in, "%s", &s1); err != nil {
 			break
 		}
-		fmt.Fscanf(in, "%s", &s2)
-		e := trace(edit(s1, s2))
 		if first {
 			first = false
 		} else {
 			fmt.Fprintln(out)
 		}
+		fmt.Fscanf(in, "%s", &s2)
+		e := trace(edit(s1, s2))
 		output(out, e, s2)
 	}
 }

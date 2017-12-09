@@ -8,22 +8,19 @@ import (
 )
 
 func leapYear(year int) bool {
-	if year%4 != 0 {
+	switch {
+	case year%4 != 0:
 		return false
-	}
-	if year%400 == 0 {
+	case year%400 == 0:
 		return true
+	default:
+		return year%100 != 0
 	}
-	return year%100 != 0
 }
 
-func huluculuYear(year int) bool {
-	return year%15 == 0
-}
+func huluculuYear(year int) bool { return year%15 == 0 }
 
-func bulukuluYear(leapYear bool, year int) bool {
-	return leapYear && year%55 == 0
-}
+func bulukuluYear(year int) bool { return leapYear(year) && year%55 == 0 }
 
 func main() {
 	in, _ := os.Open("10070.in")
@@ -32,8 +29,7 @@ func main() {
 	defer out.Close()
 
 	var year int
-	first := true
-	for {
+	for first := true; ; {
 		if _, err := fmt.Fscanf(in, "%d", &year); err != nil {
 			break
 		}
@@ -42,11 +38,7 @@ func main() {
 		} else {
 			fmt.Fprintln(out)
 		}
-
-		leap := leapYear(year)
-		huluculu := huluculuYear(year)
-		bulukulu := bulukuluYear(leap, year)
-		if !leap && !huluculu && !bulukulu {
+		if leap, huluculu, bulukulu := leapYear(year), huluculuYear(year), bulukuluYear(year); !leap && !huluculu && !bulukulu {
 			fmt.Fprintln(out, "This is an ordinary year.")
 		} else {
 			if leap {

@@ -38,8 +38,7 @@ func main() {
 
 	var n, k, p1, p2 int
 	var c1, c2 string
-	first := true
-	for {
+	for first := true; ; {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}

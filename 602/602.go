@@ -17,13 +17,14 @@ var (
 )
 
 func newLeapYear(year int) bool {
-	if year%4 != 0 {
+	switch {
+	case year%4 != 0:
 		return false
-	}
-	if year%400 == 0 {
+	case year%400 == 0:
 		return true
+	default:
+		return year%100 != 0
 	}
-	return year%100 != 0
 }
 
 func oldLeapYear(year int) bool { return year%4 == 0 }

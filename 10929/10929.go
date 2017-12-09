@@ -7,6 +7,20 @@ import (
 	"os"
 )
 
+func add(n string) int {
+	var sum int
+	odd := true
+	for i := range n {
+		if odd {
+			sum += int(n[i] - '0')
+		} else {
+			sum -= int(n[i] - '0')
+		}
+		odd = !odd
+	}
+	return sum
+}
+
 func main() {
 	in, _ := os.Open("10929.in")
 	defer in.Close()
@@ -18,17 +32,7 @@ func main() {
 		if fmt.Fscanf(in, "%s", &n); n == "0" {
 			break
 		}
-		odd := true
-		addsum := 0
-		for i := range n {
-			if odd {
-				addsum += int(n[i] - '0')
-			} else {
-				addsum -= int(n[i] - '0')
-			}
-			odd = !odd
-		}
-		if fmt.Fprintf(out, "%s ", n); addsum%11 == 0 {
+		if fmt.Fprintf(out, "%s ", n); add(n)%11 == 0 {
 			fmt.Fprintln(out, "is a multiple of 11.")
 		} else {
 			fmt.Fprintln(out, "is not a multiple of 11.")

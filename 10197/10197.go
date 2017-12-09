@@ -46,8 +46,7 @@ func main() {
 	defer out.Close()
 
 	var v1, v2 string
-	first := true
-	for {
+	for first := true; ; {
 		if _, err := fmt.Fscanf(in, "%s%s", &v1, &v2); err != nil {
 			break
 		}

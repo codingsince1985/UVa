@@ -20,8 +20,7 @@ func main() {
 	defer out.Close()
 
 	var n, num int
-	first := true
-	for {
+	for first := true; ; {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
 		}

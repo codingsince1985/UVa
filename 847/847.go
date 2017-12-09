@@ -7,6 +7,23 @@ import (
 	"os"
 )
 
+func stanWins(n int64) bool {
+	win := true
+	for min, max := int64(1), int64(9); ; {
+		if n >= min && n <= max {
+			break
+		}
+		min = max + 1
+		if win {
+			max *= 2
+		} else {
+			max *= 9
+		}
+		win = !win
+	}
+	return win
+}
+
 func main() {
 	in, _ := os.Open("847.in")
 	defer in.Close()
@@ -14,26 +31,11 @@ func main() {
 	defer out.Close()
 
 	var n int64
-	var min, max int64
 	for {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
 		}
-		stanWin := true
-		min, max = 1, 9
-		for {
-			if n >= min && n <= max {
-				break
-			}
-			min = max + 1
-			if stanWin {
-				max *= 2
-			} else {
-				max *= 9
-			}
-			stanWin = !stanWin
-		}
-		if stanWin {
+		if stanWins(n) {
 			fmt.Fprintln(out, "Stan wins.")
 		} else {
 			fmt.Fprintln(out, "Ollie wins.")

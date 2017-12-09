@@ -56,8 +56,7 @@ func main() {
 
 	var line, maze string
 	var ok bool
-	first := true
-	for {
+	for first := true; ; {
 		if line, ok = nextLine(s); !ok || line == "" {
 			if first {
 				first = false

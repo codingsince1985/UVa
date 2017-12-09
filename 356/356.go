@@ -34,17 +34,16 @@ func main() {
 	defer out.Close()
 
 	var n int
-	first := true
-	for {
+	for first := true; ; {
 		if _, err := fmt.Fscanf(in, "%d", &n); err != nil {
 			break
 		}
-		whollyIn, halfIn := count(n)
 		if first {
 			first = false
 		} else {
 			fmt.Fprintln(out)
 		}
+		whollyIn, halfIn := count(n)
 		fmt.Fprintf(out, "In the case n = %d, %d cells contain segments of the circle.\n", n, halfIn*4)
 		fmt.Fprintf(out, "There are %d cells completely contained in the circle.\n", whollyIn*4)
 	}

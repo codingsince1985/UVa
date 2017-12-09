@@ -44,8 +44,7 @@ func main() {
 	defer out.Close()
 
 	var m, tmp int
-	first := true
-	for {
+	for first := true; ; {
 		if _, err := fmt.Fscanf(in, "%d%d", &m, &n); err != nil {
 			break
 		}

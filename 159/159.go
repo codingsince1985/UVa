@@ -71,8 +71,7 @@ func main() {
 	defer out.Close()
 
 	var h1, v1, h2, v2 string
-	first := true
-	for {
+	for first := true; ; {
 		if fmt.Fscanf(in, "%s", &h1); h1 == "#" {
 			break
 		}

@@ -64,8 +64,7 @@ func main() {
 	defer out.Close()
 
 	var n int
-	first := true
-	for kase := 1; ; kase++ {
+	for kase, first := 1, true; ; kase++ {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}

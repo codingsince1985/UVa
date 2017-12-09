@@ -13,6 +13,26 @@ type char struct {
 	freq int
 }
 
+func solve(line string) []char {
+	table := make(map[byte]int)
+	for i := range line {
+		if line[i] >= 32 && line[i] < 128 {
+			table[line[i]]++
+		}
+	}
+	var lst []char
+	for k, v := range table {
+		lst = append(lst, char{k, v})
+	}
+	sort.Slice(lst, func(i, j int) bool {
+		if lst[i].freq == lst[j].freq {
+			return lst[i].ch > lst[j].ch
+		}
+		return lst[i].freq < lst[j].freq
+	})
+	return lst
+}
+
 func main() {
 	in, _ := os.Open("10062.in")
 	defer in.Close()
@@ -20,33 +40,16 @@ func main() {
 	defer out.Close()
 
 	var line string
-	first := true
-	for {
+	for first := true; ; {
 		if _, err := fmt.Fscanf(in, "%s", &line); err != nil {
 			break
 		}
-		table := make(map[byte]int)
-		for i := range line {
-			if line[i] >= 32 && line[i] < 128 {
-				table[line[i]]++
-			}
-		}
-		var lst []char
-		for k, v := range table {
-			lst = append(lst, char{k, v})
-		}
-		sort.Slice(lst, func(i, j int) bool {
-			if lst[i].freq == lst[j].freq {
-				return lst[i].ch > lst[j].ch
-			}
-			return lst[i].freq < lst[j].freq
-		})
 		if first {
 			first = false
 		} else {
 			fmt.Fprintln(out)
 		}
-		for _, v := range lst {
+		for _, v := range solve(line) {
 			fmt.Fprintln(out, v.ch, v.freq)
 		}
 	}

@@ -73,8 +73,7 @@ func main() {
 	defer out.Close()
 
 	var n1, n2 string
-	first := true
-	for {
+	for first := true; ; {
 		if first {
 			first = false
 		} else {

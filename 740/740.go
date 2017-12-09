@@ -24,8 +24,7 @@ func main() {
 
 	for s.Scan() {
 		line := s.Text()
-		down := true
-		for i := 0; i+5 <= len(line); i += 5 {
+		for i, down := 0, true; i+5 <= len(line); i += 5 {
 			var idx byte
 			for j := 0; j < 5; j++ {
 				idx = idx*2 + line[i+j] - '0'

@@ -27,8 +27,7 @@ func main() {
 
 	var line string
 	var p int
-	first := true
-	for {
+	for first := true; ; {
 		if fmt.Fscanf(in, "%s\n%d", &line, &p); line == "END" && p == 0 {
 			break
 		}

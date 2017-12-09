@@ -28,8 +28,7 @@ func main() {
 	defer out.Close()
 
 	var chars string
-	first := true
-	for {
+	for first := true; ; {
 		if _, err := fmt.Fscanf(in, "%s", &chars); err != nil {
 			break
 		}

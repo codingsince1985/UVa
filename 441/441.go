@@ -49,19 +49,18 @@ func main() {
 	defer out.Close()
 
 	var k int
-	first := true
-	for {
+	for first := true; ; {
 		if fmt.Fscanf(in, "%d", &k); k == 0 {
 			break
-		}
-		nums := make([]int, k)
-		for i := range nums {
-			fmt.Fscanf(in, "%d", &nums[i])
 		}
 		if first {
 			first = false
 		} else {
 			fmt.Fprintln(out)
+		}
+		nums := make([]int, k)
+		for i := range nums {
+			fmt.Fscanf(in, "%d", &nums[i])
 		}
 		backtracking(nums, make([]bool, k))
 	}
