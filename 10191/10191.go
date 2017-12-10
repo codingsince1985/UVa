@@ -12,8 +12,6 @@ import (
 
 type job struct{ start, end int }
 
-func buildJob(h1, m1, h2, m2 int) job { return job{h1*60 + m1, h2*60 + m2} }
-
 func find(jobs []job) (int, int) {
 	var start, period, max int
 	t := 10 * 60
@@ -56,7 +54,7 @@ func main() {
 		var js []job
 		for fmt.Sscanf(s.Text(), "%d", &n); n > 0 && s.Scan(); n-- {
 			fmt.Sscanf(s.Text(), "%d:%d%d:%d", &h1, &m1, &h2, &m2)
-			js = append(js, buildJob(h1, m1, h2, m2))
+			js = append(js, job{h1*60 + m1, h2*60 + m2})
 		}
 		sort.Slice(js, func(i, j int) bool { return js[i].start < js[j].start })
 		max, start := find(js)
