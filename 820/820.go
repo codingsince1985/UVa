@@ -8,8 +8,6 @@ import (
 	"os"
 )
 
-var n int
-
 func min(a, b int) int {
 	if a < b {
 		return a
@@ -19,17 +17,18 @@ func min(a, b int) int {
 
 func edmondsKarp(s, t int, matrix [][]int) int {
 	var sum int
-	parent := make([]int, n+1)
-	flow := make([][]int, n+1)
+	n := len(matrix)
+	parent := make([]int, n)
+	flow := make([][]int, n)
 	for i := range flow {
-		flow[i] = make([]int, n+1)
+		flow[i] = make([]int, n)
 	}
 	for {
-		capacity := make([]int, n+1)
+		capacity := make([]int, n)
 		capacity[s] = math.MaxInt32
 		for queue := []int{s}; len(queue) > 0 && capacity[t] == 0; queue = queue[1:] {
 			curr := queue[0]
-			for i := 1; i <= n; i++ {
+			for i := 1; i < n; i++ {
 				if capacity[i] == 0 && matrix[curr][i] > flow[curr][i] {
 					queue = append(queue, i)
 					parent[i] = curr
@@ -55,7 +54,7 @@ func main() {
 	out, _ := os.Create("820.out")
 	defer out.Close()
 
-	var s, t, c, n1, n2, bw int
+	var n, s, t, c, n1, n2, bw int
 	for kase := 1; ; kase++ {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
