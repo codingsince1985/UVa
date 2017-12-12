@@ -746,6 +746,7 @@ UVa Online Judge solutions in Golang
 [UVa 11401](https://github.com/codingsince1985/UVa/tree/master/11401) - [Triangle Counting](https://uva.onlinejudge.org/external/114/11401.pdf)  
 [UVa 11417](https://github.com/codingsince1985/UVa/tree/master/11417) - [GCD](https://uva.onlinejudge.org/external/114/11417.pdf)  
 [UVa 11428](https://github.com/codingsince1985/UVa/tree/master/11428) - [Cubes](https://uva.onlinejudge.org/external/114/11428.pdf)  
+[UVa 11450](https://github.com/codingsince1985/UVa/tree/master/11450) - [Wedding shopping](https://uva.onlinejudge.org/external/114/11450.pdf)  
 [UVa 11455](https://github.com/codingsince1985/UVa/tree/master/11455) - [Behold my quadrangle](https://uva.onlinejudge.org/external/114/11455.pdf)  
 [UVa 11461](https://github.com/codingsince1985/UVa/tree/master/11461) - [Square Numbers](https://uva.onlinejudge.org/external/114/11461.pdf)  
 [UVa 11462](https://github.com/codingsince1985/UVa/tree/master/11462) - [Age Sort](https://uva.onlinejudge.org/external/114/11462.pdf)  
