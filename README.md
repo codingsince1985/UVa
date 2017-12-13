@@ -483,6 +483,7 @@ UVa Online Judge solutions in Golang
 [UVa 10222](https://github.com/codingsince1985/UVa/tree/master/10222) - [Decode the Mad man](https://uva.onlinejudge.org/external/102/10222.pdf)  
 [UVa 10223](https://github.com/codingsince1985/UVa/tree/master/10223) - [How many nodes ?](https://uva.onlinejudge.org/external/102/10223.pdf)  
 [UVa 10226](https://github.com/codingsince1985/UVa/tree/master/10226) - [Hardwood Species](https://uva.onlinejudge.org/external/102/10226.pdf)  
+[UVa 10227](https://github.com/codingsince1985/UVa/tree/master/10227) - [Forests](https://uva.onlinejudge.org/external/102/10227.pdf)  
 [UVa 10229](https://github.com/codingsince1985/UVa/tree/master/10229) - [Modular Fibonacci](https://uva.onlinejudge.org/external/102/10229.pdf)  
 [UVa 10233](https://github.com/codingsince1985/UVa/tree/master/10233) - [Dermuba Triangle](https://uva.onlinejudge.org/external/102/10233.pdf)  
 [UVa 10235](https://github.com/codingsince1985/UVa/tree/master/10235) - [Simply Emirp](https://uva.onlinejudge.org/external/102/10235.pdf)  
