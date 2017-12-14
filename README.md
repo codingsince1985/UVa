@@ -140,6 +140,7 @@ UVa Online Judge solutions in Golang
 [UVa 377](https://github.com/codingsince1985/UVa/tree/master/377) - [Cowculations](https://uva.onlinejudge.org/external/3/377.pdf)  
 [UVa 378](https://github.com/codingsince1985/UVa/tree/master/378) - [Intersecting Lines](https://uva.onlinejudge.org/external/3/378.pdf)  
 [UVa 379](https://github.com/codingsince1985/UVa/tree/master/379) - [Hi-Q](https://uva.onlinejudge.org/external/3/379.pdf)  
+[UVa 380](https://github.com/codingsince1985/UVa/tree/master/380) - [Call Forwarding](https://uva.onlinejudge.org/external/3/380.pdf)  
 [UVa 381](https://github.com/codingsince1985/UVa/tree/master/381) - [Making the Grade](https://uva.onlinejudge.org/external/3/381.pdf)  
 [UVa 382](https://github.com/codingsince1985/UVa/tree/master/382) - [Perfection](https://uva.onlinejudge.org/external/3/382.pdf)  
 [UVa 383](https://github.com/codingsince1985/UVa/tree/master/383) - [Shipping Routes](https://uva.onlinejudge.org/external/3/383.pdf)  
