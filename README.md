@@ -606,6 +606,7 @@ UVa Online Judge solutions in Golang
 [UVa 10533](https://github.com/codingsince1985/UVa/tree/master/10533) - [Digit Primes](https://uva.onlinejudge.org/external/105/10533.pdf)  
 [UVa 10534](https://github.com/codingsince1985/UVa/tree/master/10534) - [Wavio Sequence](https://uva.onlinejudge.org/external/105/10534.pdf)  
 [UVa 10539](https://github.com/codingsince1985/UVa/tree/master/10539) - [Almost Prime Numbers](https://uva.onlinejudge.org/external/105/10539.pdf)  
+[UVa 10541](https://github.com/codingsince1985/UVa/tree/master/10541) - [Stripe](https://uva.onlinejudge.org/external/105/10541.pdf)  
 [UVa 10550](https://github.com/codingsince1985/UVa/tree/master/10550) - [Combination Lock](https://uva.onlinejudge.org/external/105/10550.pdf)  
 [UVa 10551](https://github.com/codingsince1985/UVa/tree/master/10551) - [Basic Remains](https://uva.onlinejudge.org/external/105/10551.pdf)  
 [UVa 10566](https://github.com/codingsince1985/UVa/tree/master/10566) - [Crossed Ladders](https://uva.onlinejudge.org/external/105/10566.pdf)  
