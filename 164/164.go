@@ -18,8 +18,7 @@ func trace(op [][]int) []string {
 	ed := []string{"E"}
 	l1, l2 := len(op)-1, len(op[0])-1
 	for l1 != 0 && l2 != 0 {
-		cur := op[l1][l2]
-		switch cur {
+		switch cur := op[l1][l2]; cur {
 		case 0:
 			l1--
 			l2--
@@ -97,9 +96,8 @@ func edit(ops []string, s1, s2 string) []string {
 	var ed []string
 	p, p1, p2 := 1, 0, 0
 	for i := len(ops) - 1; i >= 0; i-- {
-		op := ops[i]
 		var tmp string
-		switch op {
+		switch op := ops[i]; op {
 		case "M":
 			p++
 			p1++

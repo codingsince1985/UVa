@@ -19,8 +19,7 @@ var (
 )
 
 func rotate(n [4]int, i, step int) [4]int {
-	n[i] += step
-	switch n[i] {
+	switch n[i] += step; n[i] {
 	case -1:
 		n[i] = 9
 	case 10:

@@ -68,8 +68,7 @@ func main() {
 		}
 		for ring := 0; ring < (n+1)/2; ring++ {
 			for fmt.Fscanf(in, "%d", &t); t > 0; t-- {
-				fmt.Fscanf(in, "%d", &c)
-				switch c {
+				switch fmt.Fscanf(in, "%d", &c); c {
 				case 1:
 					upsideDown(matrix, n, ring)
 				case 2:

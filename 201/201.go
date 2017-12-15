@@ -59,8 +59,7 @@ func main() {
 			grid[i] = make([]point, n)
 		}
 		for fmt.Fscanf(in, "%d", &m); m > 0; m-- {
-			fmt.Fscanf(in, "%c%d%d", &direction, &n1, &n2)
-			switch direction {
+			switch fmt.Fscanf(in, "%c%d%d", &direction, &n1, &n2); direction {
 			case 'H':
 				grid[n1-1][n2-1].h = true
 			case 'V':

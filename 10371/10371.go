@@ -88,8 +88,7 @@ func main() {
 	var n, hour, minute int
 	var time, tz1, tz2 string
 	for fmt.Fscanf(in, "%d", &n); n > 0; n-- {
-		fmt.Fscanf(in, "%s", &time)
-		switch time {
+		switch fmt.Fscanf(in, "%s", &time); time {
 		case "noon":
 			hour, minute = 12, 0
 		case "midnight":

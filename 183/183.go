@@ -81,8 +81,7 @@ func solveD(r, c int) [][]byte {
 	var bits [][]byte
 	if r > 0 && c > 0 {
 		var ch byte
-		fmt.Fscanf(in, "%c", &ch)
-		switch ch {
+		switch fmt.Fscanf(in, "%c", &ch); ch {
 		case 'D':
 			r1, r2, c1, c2 := split(r, c)
 			ul, ur, ll, lr := solveD(r1, c1), solveD(r1, c2), solveD(r2, c1), solveD(r2, c2)

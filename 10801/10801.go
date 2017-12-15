@@ -78,8 +78,7 @@ func main() {
 				elevators[i] = append(elevators[i], tmp)
 			}
 		}
-		distance := solve(k, speeds, elevators)
-		switch distance {
+		switch distance := solve(k, speeds, elevators); distance {
 		case math.MaxInt32:
 			fmt.Fprintln(out, "IMPOSSIBLE")
 		case 0:

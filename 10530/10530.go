@@ -20,8 +20,7 @@ func main() {
 		if fmt.Fscanf(in, "%d", &n); n == 0 {
 			break
 		}
-		fmt.Fscanf(in, "%s%s", &s1, &s2)
-		switch s2 {
+		switch fmt.Fscanf(in, "%s%s", &s1, &s2); s2 {
 		case "high":
 			h = n - 1
 		case "low":

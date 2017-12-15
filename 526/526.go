@@ -26,8 +26,7 @@ func trace(op [][]int) []string {
 	var e []string
 	l1, l2 := len(op)-1, len(op[0])-1
 	for l1 != 0 && l2 != 0 {
-		cur := op[l1][l2]
-		switch cur {
+		switch cur := op[l1][l2]; cur {
 		case 0:
 			l1--
 			l2--

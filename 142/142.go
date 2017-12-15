@@ -60,8 +60,7 @@ func main() {
 	var p1, p2 point
 here:
 	for {
-		fmt.Fscanf(in, "%c", &dataType)
-		switch dataType {
+		switch fmt.Fscanf(in, "%c", &dataType); dataType {
 		case 'I':
 			fmt.Fscanf(in, "%d%d", &p1.x, &p1.y)
 			icons = append(icons, p1)

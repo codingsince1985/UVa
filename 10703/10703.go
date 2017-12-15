@@ -53,8 +53,7 @@ func main() {
 			cover(board, x1, y1, x2, y2)
 		}
 		fmt.Fscanln(in)
-		count := uncovered(board)
-		switch count {
+		switch count := uncovered(board); count {
 		case 0:
 			fmt.Fprintln(out, "There is no empty spots.")
 		case 1:

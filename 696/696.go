@@ -17,8 +17,7 @@ func min(a, b int) int {
 func max(a, b int) int { return a + b - min(a, b) }
 
 func solve(m, n int) int {
-	m, n = min(m, n), max(m, n)
-	switch m {
+	switch m, n = min(m, n), max(m, n); m {
 	case 1:
 		return n
 	case 2:

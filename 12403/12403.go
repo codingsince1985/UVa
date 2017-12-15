@@ -16,8 +16,7 @@ func main() {
 	var t, amount, sum int
 	var operation string
 	for fmt.Fscanf(in, "%d", &t); t > 0; t-- {
-		fmt.Fscanf(in, "%s", &operation)
-		switch operation {
+		switch fmt.Fscanf(in, "%s", &operation); operation {
 		case "donate":
 			fmt.Fscanf(in, "%d", &amount)
 			sum += amount
