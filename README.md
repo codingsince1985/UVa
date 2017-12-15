@@ -715,6 +715,7 @@ UVa Online Judge solutions in Golang
 [UVa 11015](https://github.com/codingsince1985/UVa/tree/master/11015) - [05-2 Rendezvous](https://uva.onlinejudge.org/external/110/11015.pdf)  
 [UVa 11040](https://github.com/codingsince1985/UVa/tree/master/11040) - [Add bricks in the wall](https://uva.onlinejudge.org/external/110/11040.pdf)  
 [UVa 11044](https://github.com/codingsince1985/UVa/tree/master/11044) - [Searching for Nessy](https://uva.onlinejudge.org/external/110/11044.pdf)  
+[UVa 11045](https://github.com/codingsince1985/UVa/tree/master/11045) - [My T-shirt suits me](https://uva.onlinejudge.org/external/110/11045.pdf)  
 [UVa 11057](https://github.com/codingsince1985/UVa/tree/master/11057) - [Exact Sum](https://uva.onlinejudge.org/external/110/11057.pdf)  
 [UVa 11059](https://github.com/codingsince1985/UVa/tree/master/11059) - [Maximum Product](https://uva.onlinejudge.org/external/110/11059.pdf)  
 [UVa 11063](https://github.com/codingsince1985/UVa/tree/master/11063) - [B2-Sequence](https://uva.onlinejudge.org/external/110/11063.pdf)  
