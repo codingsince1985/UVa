@@ -23,15 +23,10 @@ func factorial(a int) *big.Int {
 
 func solve(n, k int) *big.Int {
 	switch {
-	case n == 0:
-		if k == 0 {
-			return one
-		}
-		return zero
-	case k > n:
-		return zero
 	case k == n:
 		return one
+	case k > n:
+		return zero
 	default:
 		fn, fk := factorial(n), factorial(k)
 		return fn.Div(fn, fk.Mul(fk, factorial(n-k)))
