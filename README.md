@@ -278,6 +278,7 @@ UVa Online Judge solutions in Golang
 [UVa 627](https://github.com/codingsince1985/UVa/tree/master/627) - [The Net](https://uva.onlinejudge.org/external/6/627.pdf)  
 [UVa 628](https://github.com/codingsince1985/UVa/tree/master/628) - [Passwords](https://uva.onlinejudge.org/external/6/628.pdf)  
 [UVa 630](https://github.com/codingsince1985/UVa/tree/master/630) - [Anagrams (II)](https://uva.onlinejudge.org/external/6/630.pdf)  
+[UVa 632](https://github.com/codingsince1985/UVa/tree/master/632) - [Compression (II)](https://uva.onlinejudge.org/external/6/632.pdf)  
 [UVa 634](https://github.com/codingsince1985/UVa/tree/master/634) - [Polygon](https://uva.onlinejudge.org/external/6/634.pdf)  
 [UVa 636](https://github.com/codingsince1985/UVa/tree/master/636) - [Squares (III)](https://uva.onlinejudge.org/external/6/636.pdf)  
 [UVa 637](https://github.com/codingsince1985/UVa/tree/master/637) - [Booklet Printing](https://uva.onlinejudge.org/external/6/637.pdf)  
