@@ -25,7 +25,7 @@ func solve(out *os.File, m, n int, a, u []int) {
 				return
 			}
 		}
-		blackBox = insert(blackBox, sort.Search(len(blackBox), func(j int) bool { return blackBox[j] >= ai }), ai)
+		blackBox = insert(blackBox, sort.Search(len(blackBox), func(i int) bool { return blackBox[i] >= ai }), ai)
 	}
 }
 

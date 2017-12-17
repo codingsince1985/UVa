@@ -31,7 +31,7 @@ func solve(n int, s string) (int, []string) {
 	for i := range lastBytes {
 		lastLines[i] = string(lastBytes[i])
 	}
-	return sort.Search(n, func(j int) bool { return ss[j] >= s1 }), lastLines
+	return sort.Search(n, func(i int) bool { return ss[i] >= s1 }), lastLines
 }
 
 func main() {

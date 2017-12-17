@@ -14,7 +14,7 @@ func solve(dragons, knights []int) int {
 	var total int
 	for _, dragon := range dragons {
 		l := len(knights)
-		if pos := sort.Search(l, func(j int) bool { return knights[j] >= dragon }); pos < l {
+		if pos := sort.Search(l, func(i int) bool { return knights[i] >= dragon }); pos < l {
 			total += knights[pos]
 			knights = knights[pos+1:]
 		} else {
