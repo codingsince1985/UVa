@@ -17,8 +17,7 @@ func abs(a int) int {
 }
 
 func solve(bishop, target cell) string {
-	dr, dc := abs(bishop.row-target.row), abs(bishop.column-target.column)
-	switch {
+	switch dr, dc := abs(bishop.row-target.row), abs(bishop.column-target.column); {
 	case dr == 0 && dc == 0:
 		return "0"
 	case dr == dc:

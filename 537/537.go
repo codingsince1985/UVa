@@ -42,8 +42,7 @@ func parse(tokens [2]string) (float64, float64, float64) {
 }
 
 func solve(tokens [2]string) string {
-	p, u, i := parse(tokens)
-	switch {
+	switch p, u, i := parse(tokens); {
 	case p == 0:
 		return fmt.Sprintf("P=%.2fW", u*i)
 	case u == 0:

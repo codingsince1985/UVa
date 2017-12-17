@@ -21,8 +21,7 @@ var (
 func binarySearch(n int) int {
 	l, r := 0, len(rings)-1
 	for l < r {
-		mid := (l + r) / 2
-		switch {
+		switch mid := (l + r) / 2; {
 		case n == rings[mid]:
 			return mid
 		case n > rings[mid]:

@@ -51,8 +51,7 @@ func dfs(root *node, sum int) {
 		return
 	}
 	if root.left == nil && root.right == nil {
-		newSum := sum + root.value
-		switch {
+		switch newSum := sum + root.value; {
 		case newSum < min:
 			min = sum + root.value
 			leaf = root.value

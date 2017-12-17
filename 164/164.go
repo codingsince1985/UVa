@@ -74,8 +74,7 @@ func ed(s1, s2 string) []string {
 			} else {
 				k = 1
 			}
-			dp[i][j] = min(dp[i-1][j-1]+k, min(dp[i-1][j]+1, dp[i][j-1]+1))
-			switch {
+			switch dp[i][j] = min(dp[i-1][j-1]+k, min(dp[i-1][j]+1, dp[i][j-1]+1)); {
 			case dp[i][j] == dp[i-1][j-1]+k:
 				if k == 1 {
 					op[i][j] = 1 // change

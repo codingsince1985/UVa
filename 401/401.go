@@ -43,10 +43,8 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%s", &line); err != nil {
 			break
 		}
-		p := testIf(line, isPalindromic)
-		m := testIf(line, isMirrored)
 		fmt.Fprintf(out, "%s -- ", line)
-		switch {
+		switch p, m := testIf(line, isPalindromic), testIf(line, isMirrored); {
 		case !p && !m:
 			fmt.Fprintln(out, "is not a palindrome.")
 		case p && !m:

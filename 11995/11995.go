@@ -82,8 +82,7 @@ func isPriorityQueue(operations []operation) bool {
 }
 
 func solve(operations []operation) string {
-	q, s, pq := isQueue(operations), isStack(operations), isPriorityQueue(operations)
-	switch {
+	switch q, s, pq := isQueue(operations), isStack(operations), isPriorityQueue(operations); {
 	case q && !s && !pq:
 		return "queue"
 	case !q && s && !pq:

@@ -15,8 +15,7 @@ func solve(n int, cherries []cherry) (bool, int, int) {
 			if a != 0 || b != 0 {
 				var lucy, lily int
 				for _, c := range cherries {
-					r := a*c.x + b*c.y
-					switch {
+					switch r := a*c.x + b*c.y; {
 					case r > 0:
 						lucy++
 					case r < 0:

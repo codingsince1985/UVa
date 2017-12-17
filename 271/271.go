@@ -12,8 +12,7 @@ func wellFormed(s string) bool {
 	ok := true
 here:
 	for i := len(s) - 1; i >= 0; i-- {
-		l := len(stack)
-		switch {
+		switch l := len(stack); {
 		case s[i] >= 'p' && s[i] <= 'z':
 			stack = append(stack, string(s[i]))
 		case s[i] == 'N':

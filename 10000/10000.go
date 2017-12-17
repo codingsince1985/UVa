@@ -18,8 +18,7 @@ func dfs(s int) {
 	for i := range adj[s] {
 		if adj[s][i] {
 			if distance[s]+1 > distance[i] {
-				distance[i] = distance[s] + 1
-				switch {
+				switch distance[i] = distance[s] + 1; {
 				case distance[i] > longest:
 					longest = distance[i]
 					lowest = i

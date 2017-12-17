@@ -48,8 +48,7 @@ func main() {
 				fmt.Fscanf(in, "%d", &matrix[i][j])
 			}
 		}
-		invalidRow, invalidColumn := invalid(matrix, true), invalid(matrix, false)
-		switch {
+		switch invalidRow, invalidColumn := invalid(matrix, true), invalid(matrix, false); {
 		case len(invalidRow) == 0 && len(invalidColumn) == 0:
 			fmt.Fprintln(out, "OK")
 		case len(invalidRow) == 1 && len(invalidColumn) == 1:

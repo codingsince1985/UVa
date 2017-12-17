@@ -14,8 +14,7 @@ func cmp(n1, n2, m int) bool {
 	if m1, m2 := n1%m, n2%m; m1 != m2 {
 		return m1 < m2
 	}
-	odd1, odd2 := isOdd(n1), isOdd(n2)
-	switch {
+	switch odd1, odd2 := isOdd(n1), isOdd(n2); {
 	case odd1 && odd2:
 		return n1 > n2
 	case !odd1 && !odd2:

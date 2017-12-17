@@ -56,8 +56,7 @@ func doBonus(students []student) {
 
 func doGrade(mean, sd float64, students []student) {
 	for i, v := range students {
-		diff := v.average - mean
-		switch {
+		switch diff := v.average - mean; {
 		case diff >= sd:
 			students[i].grade = 4
 		case diff >= 0:

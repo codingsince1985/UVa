@@ -36,9 +36,8 @@ func main() {
 	for i := 1; i <= kase; i++ {
 		fmt.Fscanf(in, "\n%s", &t1)
 		fmt.Fscanf(in, "%s", &t2)
-		years := compare(t1, t2)
 		fmt.Fprintf(out, "Case #%d: ", i)
-		switch {
+		switch years := compare(t1, t2); {
 		case years < 0:
 			fmt.Fprintln(out, "Invalid birth date")
 		case years > 130:

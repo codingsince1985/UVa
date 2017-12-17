@@ -13,8 +13,7 @@ func binarySearch(n int, l [][]node, s, e int) int {
 	// find the 1st index that is not less than n
 	// for build-in binary search, see UVa 497
 	m := (s + e) / 2
-	mid := l[m]
-	switch {
+	switch mid := l[m]; {
 	case n == mid[len(mid)-1].num:
 		return m
 	case s == e:

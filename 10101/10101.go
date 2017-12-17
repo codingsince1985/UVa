@@ -35,8 +35,7 @@ func split(line string) []int {
 func convert(n int) []string {
 	var tokens []string
 	for n > 0 {
-		l := len(strconv.Itoa(n))
-		switch {
+		switch l := len(strconv.Itoa(n)); {
 		case l > 7:
 			tokens = append(tokens, strconv.Itoa(n/kuti)+" kuti")
 			n %= kuti

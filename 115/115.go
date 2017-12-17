@@ -64,8 +64,7 @@ func findLow(a1, a2 map[string]int) int {
 
 func check(n1, n2 string) string {
 	a1, a2 := ancestor(n1, 0), ancestor(n2, 0)
-	l1, l2 := findLow(a1, a2), findLow(a2, a1)
-	switch {
+	switch l1, l2 := findLow(a1, a2), findLow(a2, a1); {
 	case l1 == math.MaxInt32:
 		return "no relation"
 	case l1 == 0 && l2 == 0:

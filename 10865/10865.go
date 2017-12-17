@@ -13,8 +13,7 @@ func solve(n int, brownies []brownie) (int, int) {
 	var stan, ollie int
 	center := brownies[(n-1)/2]
 	for _, b := range brownies {
-		pos := (b.x - center.x) * (b.y - center.y)
-		switch {
+		switch pos := (b.x - center.x) * (b.y - center.y); {
 		case pos > 0:
 			stan++
 		case pos < 0:

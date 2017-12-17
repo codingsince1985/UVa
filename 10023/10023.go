@@ -17,8 +17,7 @@ func sqrt(num string) *big.Int {
 	l := big.NewInt(1)
 	for {
 		m.Add(l, &h).Div(&m, two)
-		cmp := tmp.Mul(&m, &m).Cmp(&n)
-		switch {
+		switch cmp := tmp.Mul(&m, &m).Cmp(&n); {
 		case cmp == 0:
 			return &m
 		case cmp < 0:

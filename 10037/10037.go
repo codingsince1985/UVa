@@ -11,8 +11,7 @@ import (
 )
 
 func solve(p []int) (int, []string) {
-	num := len(p)
-	switch {
+	switch num := len(p); {
 	case num > 3:
 		t1 := p[0] + p[1]*2 + p[num-1]
 		t2 := p[0]*2 + p[num-2] + p[num-1]

@@ -37,8 +37,7 @@ func solve(p point) string {
 	var nums []string
 	closest := math.MaxFloat64
 	for i, icon := range icons {
-		dist := distance(p, icon)
-		switch {
+		switch dist := distance(p, icon); {
 		case dist < closest:
 			nums = nil
 			closest = dist

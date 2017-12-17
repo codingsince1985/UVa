@@ -27,8 +27,7 @@ func preCalculate(num []int, f func(int, int) int) []node {
 func binarySearch(n int, sub []node) (int, bool) {
 	l, r := 0, len(sub)-1
 	for l+1 < r {
-		mid := (l + r) / 2
-		switch {
+		switch mid := (l + r) / 2; {
 		case sub[mid].n == n:
 			return sub[mid].n1, true
 		case sub[mid].n > n:

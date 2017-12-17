@@ -37,9 +37,7 @@ func count(player byte) int {
 }
 
 func solve() bool {
-	xs, os := count('X'), count('O')
-	xwin, owin := win('X'), win('O')
-	switch {
+	switch xs, os, xwin, owin := count('X'), count('O'), win('X'), win('O'); {
 	case !xwin && !owin:
 		return xs == os || xs-1 == os
 	case xwin && !owin:
