@@ -456,6 +456,7 @@ UVa Online Judge solutions in Golang
 [UVa 10171](https://github.com/codingsince1985/UVa/tree/master/10171) - [Meeting Prof. Miguel...](https://uva.onlinejudge.org/external/101/10171.pdf)  
 [UVa 10176](https://github.com/codingsince1985/UVa/tree/master/10176) - [Ocean Deep! - Make it shallow!!](https://uva.onlinejudge.org/external/101/10176.pdf)  
 [UVa 10177](https://github.com/codingsince1985/UVa/tree/master/10177) - [(2/3/4)-D Sqr/Rects/Cubes/Boxes?](https://uva.onlinejudge.org/external/101/10177.pdf)  
+[UVa 10178](https://github.com/codingsince1985/UVa/tree/master/10178) - [Count the Faces.](https://uva.onlinejudge.org/external/101/10178.pdf)  
 [UVa 10179](https://github.com/codingsince1985/UVa/tree/master/10179) - [Irreducable Basic Fractions](https://uva.onlinejudge.org/external/101/10179.pdf)  
 [UVa 10182](https://github.com/codingsince1985/UVa/tree/master/10182) - [Bee Maja](https://uva.onlinejudge.org/external/101/10182.pdf)  
 [UVa 10183](https://github.com/codingsince1985/UVa/tree/master/10183) - [How Many Fibs?](https://uva.onlinejudge.org/external/101/10183.pdf)  
