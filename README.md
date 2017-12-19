@@ -775,6 +775,7 @@ UVa Online Judge solutions in Golang
 [UVa 11631](https://github.com/codingsince1985/UVa/tree/master/11631) - [Dark roads](https://uva.onlinejudge.org/external/116/11631.pdf)  
 [UVa 11636](https://github.com/codingsince1985/UVa/tree/master/11636) - [Hello World!](https://uva.onlinejudge.org/external/116/11636.pdf)  
 [UVa 11650](https://github.com/codingsince1985/UVa/tree/master/11650) - [Mirror Clock](https://uva.onlinejudge.org/external/116/11650.pdf)  
+[UVa 11661](https://github.com/codingsince1985/UVa/tree/master/11661) - [Burger Time?](https://uva.onlinejudge.org/external/116/11661.pdf)  
 [UVa 11677](https://github.com/codingsince1985/UVa/tree/master/11677) - [Alarm Clock](https://uva.onlinejudge.org/external/116/11677.pdf)  
 [UVa 11689](https://github.com/codingsince1985/UVa/tree/master/11689) - [Soda Surpler](https://uva.onlinejudge.org/external/116/11689.pdf)  
 [UVa 11805](https://github.com/codingsince1985/UVa/tree/master/11805) - [Bafana Bafana](https://uva.onlinejudge.org/external/118/11805.pdf)  
