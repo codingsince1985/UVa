@@ -509,6 +509,7 @@ UVa Online Judge solutions in Golang
 [UVa 10285](https://github.com/codingsince1985/UVa/tree/master/10285) - [Longest Run on a Snowboard](https://uva.onlinejudge.org/external/102/10285.pdf)  
 [UVa 10286](https://github.com/codingsince1985/UVa/tree/master/10286) - [Trouble with a Pentagon](https://uva.onlinejudge.org/external/102/10286.pdf)  
 [UVa 10287](https://github.com/codingsince1985/UVa/tree/master/10287) - [Gifts in a Hexagonal Box](https://uva.onlinejudge.org/external/102/10287.pdf)  
+[UVa 10290](https://github.com/codingsince1985/UVa/tree/master/10290) - [{Sum+=i++} to Reach N](https://uva.onlinejudge.org/external/102/10290.pdf)  
 [UVa 10293](https://github.com/codingsince1985/UVa/tree/master/10293) - [Word Length and Frequency](https://uva.onlinejudge.org/external/102/10293.pdf)  
 [UVa 10295](https://github.com/codingsince1985/UVa/tree/master/10295) - [Hay Points](https://uva.onlinejudge.org/external/102/10295.pdf)  
 [UVa 10297](https://github.com/codingsince1985/UVa/tree/master/10297) - [Beavergnaw](https://uva.onlinejudge.org/external/102/10297.pdf)  
