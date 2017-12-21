@@ -1,0 +1,4 @@
+3
+sator arepo tenet opera rotas
+this sentence is, quite clearly, not a magic square palindrome! but then again, you never know...
+muse sun, eve.s e(y)es even use sum.

@@ -737,6 +737,7 @@ UVa Online Judge solutions in Golang
 [UVa 11192](https://github.com/codingsince1985/UVa/tree/master/11192) - [Group Reverse](https://uva.onlinejudge.org/external/111/11192.pdf)  
 [UVa 11219](https://github.com/codingsince1985/UVa/tree/master/11219) - [How old are you?](https://uva.onlinejudge.org/external/112/11219.pdf)  
 [UVa 11220](https://github.com/codingsince1985/UVa/tree/master/11220) - [Decoding the message.](https://uva.onlinejudge.org/external/112/11220.pdf)  
+[UVa 11221](https://github.com/codingsince1985/UVa/tree/master/11221) - [Magic square palindromes.](https://uva.onlinejudge.org/external/112/11221.pdf)  
 [UVa 11223](https://github.com/codingsince1985/UVa/tree/master/11223) - [O: dah dah dah!](https://uva.onlinejudge.org/external/112/11223.pdf)  
 [UVa 11233](https://github.com/codingsince1985/UVa/tree/master/11233) - [Deli Deli](https://uva.onlinejudge.org/external/112/11233.pdf)  
 [UVa 11244](https://github.com/codingsince1985/UVa/tree/master/11244) - [Counting Stars](https://uva.onlinejudge.org/external/112/11244.pdf)  
