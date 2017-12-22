@@ -1,0 +1,14 @@
+Size 2
+Times, Herald-Tribune
+Times, Post
+Times, New Advocate
+Herald-Tribune, Post
+Herald-Tribune, New Advocate
+Post, New Advocate
+
+Size 3
+Times, Herald-Tribune, Post
+Times, Herald-Tribune, New Advocate
+Times, Post, New Advocate
+Herald-Tribune, Post, New Advocate
+

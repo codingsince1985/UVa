@@ -261,6 +261,7 @@ UVa Online Judge solutions in Golang
 [UVa 590](https://github.com/codingsince1985/UVa/tree/master/590) - [Always on the run](https://uva.onlinejudge.org/external/5/590.pdf)  
 [UVa 591](https://github.com/codingsince1985/UVa/tree/master/591) - [Box of Bricks](https://uva.onlinejudge.org/external/5/591.pdf)  
 [UVa 594](https://github.com/codingsince1985/UVa/tree/master/594) - [One Little, Two Little, Three Little Endians](https://uva.onlinejudge.org/external/5/594.pdf)  
+[UVa 598](https://github.com/codingsince1985/UVa/tree/master/598) - [Bundling Newspapers](https://uva.onlinejudge.org/external/5/598.pdf)  
 [UVa 601](https://github.com/codingsince1985/UVa/tree/master/601) - [The PATH](https://uva.onlinejudge.org/external/6/601.pdf)  
 [UVa 602](https://github.com/codingsince1985/UVa/tree/master/602) - [What Day Is It?](https://uva.onlinejudge.org/external/6/602.pdf)  
 [UVa 608](https://github.com/codingsince1985/UVa/tree/master/608) - [Counterfeit Dollar](https://uva.onlinejudge.org/external/6/608.pdf)  
