@@ -100,6 +100,7 @@ UVa Online Judge solutions in Golang
 [UVa 290](https://github.com/codingsince1985/UVa/tree/master/290) - [Palindroms <---> smordnilaP](https://uva.onlinejudge.org/external/2/290.pdf)  
 [UVa 291](https://github.com/codingsince1985/UVa/tree/master/291) - [The House Of Santa Claus](https://uva.onlinejudge.org/external/2/291.pdf)  
 [UVa 294](https://github.com/codingsince1985/UVa/tree/master/294) - [Divisors](https://uva.onlinejudge.org/external/2/294.pdf)  
+[UVa 296](https://github.com/codingsince1985/UVa/tree/master/296) - [Safebreaker](https://uva.onlinejudge.org/external/2/296.pdf)  
 [UVa 297](https://github.com/codingsince1985/UVa/tree/master/297) - [Quadtrees](https://uva.onlinejudge.org/external/2/297.pdf)  
 [UVa 299](https://github.com/codingsince1985/UVa/tree/master/299) - [Train Swapping](https://uva.onlinejudge.org/external/2/299.pdf)  
 [UVa 300](https://github.com/codingsince1985/UVa/tree/master/300) - [Maya Calendar](https://uva.onlinejudge.org/external/3/300.pdf)  
