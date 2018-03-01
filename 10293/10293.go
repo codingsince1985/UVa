@@ -58,15 +58,15 @@ func main() {
 		if line = s.Text(); line == "" {
 			break
 		}
-		var thesis string
+		var thesis strings.Builder
 		for ; line != "#"; line = s.Text() {
-			thesis += line
+			thesis.WriteString(line)
 			if !strings.HasSuffix(line, "-") {
-				thesis += " "
+				thesis.WriteString(" ")
 			}
 			s.Scan()
 		}
-		lengthMap, max := solve(thesis)
+		lengthMap, max := solve(thesis.String())
 		output(out, lengthMap, max)
 	}
 }

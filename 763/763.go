@@ -32,11 +32,11 @@ func add(n1, n2 string) []uint8 {
 }
 
 func reverse(sum []uint8) string {
-	var reversed string
+	var reversed strings.Builder
 	for i := len(sum) - 1; i >= 0; i-- {
-		reversed += string('0' + sum[i])
+		reversed.WriteByte('0' + sum[i])
 	}
-	return reversed
+	return reversed.String()
 }
 
 func solve(n1, n2 string) string {

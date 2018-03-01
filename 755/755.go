@@ -7,6 +7,7 @@ import (
 	"os"
 	"sort"
 	"strconv"
+	"strings"
 )
 
 var charMap = map[byte]int{
@@ -23,16 +24,16 @@ var charMap = map[byte]int{
 func solve(telephones []string) map[string]int {
 	numbers := make(map[string]int)
 	for _, telephone := range telephones {
-		var number string
+		var number strings.Builder
 		for j := range telephone {
 			switch {
 			case telephone[j] >= '0' && telephone[j] <= '9':
-				number += string(telephone[j])
+				number.WriteByte(telephone[j])
 			case telephone[j] >= 'A' && telephone[j] <= 'Z':
-				number += strconv.Itoa(charMap[telephone[j]])
+				number.WriteString(strconv.Itoa(charMap[telephone[j]]))
 			}
 		}
-		numbers[number]++
+		numbers[number.String()]++
 	}
 	return numbers
 }

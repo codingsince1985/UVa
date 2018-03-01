@@ -12,13 +12,15 @@ import (
 func rotate(lines []string, max int) []string {
 	rotated := make([]string, max)
 	for i := range rotated {
+		var sb strings.Builder
 		for j := len(lines) - 1; j >= 0; j-- {
 			if i < len(lines[j]) {
-				rotated[i] += string(lines[j][i])
+				sb.WriteByte(lines[j][i])
 			} else {
-				rotated[i] += " "
+				sb.WriteString(" ")
 			}
 		}
+		rotated[i] = sb.String()
 	}
 	return rotated
 }

@@ -12,17 +12,18 @@ import (
 func solve(lines []string) []string {
 	var words []string
 	for _, line := range lines {
-		var word, tmp string
+		var tmp string
+		var word strings.Builder
 		for idx, r := 0, strings.NewReader(line); ; {
 			if _, err := fmt.Fscanf(r, "%s", &tmp); err != nil {
 				break
 			}
 			if len(tmp) > idx {
-				word += string(tmp[idx])
+				word.WriteByte(tmp[idx])
 				idx++
 			}
 		}
-		words = append(words, word)
+		words = append(words, word.String())
 	}
 	return words
 }

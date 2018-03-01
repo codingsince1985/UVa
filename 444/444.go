@@ -7,14 +7,16 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"strings"
 )
 
 func encode(line string) string {
-	var mid string
+	var midBuilder strings.Builder
 	for i := range line {
-		mid += strconv.Itoa(int(line[i]))
+		midBuilder.WriteString(strconv.Itoa(int(line[i])))
 	}
 	var ret string
+	mid := midBuilder.String()
 	for i := range mid {
 		ret = string(mid[i]) + ret
 	}

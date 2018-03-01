@@ -5,6 +5,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 var dict = map[byte]byte{
@@ -47,14 +48,14 @@ func main() {
 		if _, err := fmt.Fscanf(in, "%s", &line); err != nil {
 			break
 		}
-		var phoneNumber string
+		var phoneNumber strings.Builder
 		for i := range line {
 			if digit, ok := dict[line[i]]; ok {
-				phoneNumber += string(digit)
+				phoneNumber.WriteByte(digit)
 			} else {
-				phoneNumber += string(line[i])
+				phoneNumber.WriteByte(line[i])
 			}
 		}
-		fmt.Fprintln(out, phoneNumber)
+		fmt.Fprintln(out, phoneNumber.String())
 	}
 }

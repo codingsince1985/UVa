@@ -22,11 +22,11 @@ func turn(board [][]byte) [][]byte {
 }
 
 func stringer(board [][]byte) string {
-	var str string
+	var str strings.Builder
 	for _, vi := range board {
-		str += string(vi)
+		str.Write(vi)
 	}
-	return str
+	return str.String()
 }
 
 func check(board [][]byte, cache map[string]bool) bool {

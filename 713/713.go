@@ -6,15 +6,16 @@ import (
 	"fmt"
 	"math/big"
 	"os"
+	"strings"
 )
 
 func reverse(s string) string {
 	size := len(s)
-	var ret string
+	var ret strings.Builder
 	for i := range s {
-		ret += string(s[size-1-i])
+		ret.WriteByte(s[size-1-i])
 	}
-	return ret
+	return ret.String()
 }
 
 func main() {

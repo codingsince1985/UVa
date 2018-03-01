@@ -6,6 +6,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strings"
 )
 
 var words []string
@@ -37,14 +38,15 @@ func uncompress(pos int) string {
 }
 
 func parse(line string) string {
-	var word, pos, uncompressed string
+	var uncompressed strings.Builder
+	var word, pos string
 	var idx int
 	for i := range line {
 		if isAlphabet(line[i]) {
 			word += string(line[i])
 		} else {
 			if len(word) > 0 {
-				uncompressed += word
+				uncompressed.WriteString(word)
 				push(word)
 				word = ""
 			}
@@ -53,22 +55,22 @@ func parse(line string) string {
 			} else {
 				if len(pos) > 0 {
 					fmt.Sscanf(pos, "%d", &idx)
-					uncompressed += uncompress(idx - 1)
+					uncompressed.WriteString(uncompress(idx - 1))
 					pos = ""
 				}
-				uncompressed += string(line[i])
+				uncompressed.WriteByte(line[i])
 			}
 		}
 	}
 	if len(word) > 0 {
-		uncompressed += word
+		uncompressed.WriteString(word)
 		push(word)
 	}
 	if len(pos) > 0 {
 		fmt.Sscanf(pos, "%d", &idx)
-		uncompressed += uncompress(idx - 1)
+		uncompressed.WriteString(uncompress(idx - 1))
 	}
-	return uncompressed
+	return uncompressed.String()
 }
 
 func main() {

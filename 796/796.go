@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"math"
 	"os"
+	"strings"
 )
 
 var (
@@ -59,16 +60,16 @@ func solve(out *os.File, n int) {
 		}
 	}
 	var count int
-	var output string
+	var output strings.Builder
 	for i := 0; i < n-1; i++ {
 		for j := i + 1; j < n; j++ {
 			if cut[i][j] {
 				count++
-				output += fmt.Sprintf("%d - %d\n", i, j)
+				output.WriteString(fmt.Sprintf("%d - %d\n", i, j))
 			}
 		}
 	}
-	fmt.Fprintf(out, "%d critical links\n%s\n", count, output)
+	fmt.Fprintf(out, "%d critical links\n%s\n", count, output.String())
 }
 
 func main() {

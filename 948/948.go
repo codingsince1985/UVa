@@ -20,16 +20,16 @@ var fibonacci = func() []int {
 }()
 
 func solve(dec int) string {
-	var fib string
+	var fib strings.Builder
 	for i := max; i > 1; i-- {
 		if dec >= fibonacci[i] {
 			dec -= fibonacci[i]
-			fib += "1"
+			fib.WriteString("1")
 		} else {
-			fib += "0"
+			fib.WriteString("0")
 		}
 	}
-	return strings.TrimLeft(fib, "0")
+	return strings.TrimLeft(fib.String(), "0")
 }
 
 func main() {

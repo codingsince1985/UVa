@@ -15,13 +15,13 @@ func solve(lines []string) []string {
 	var ch byte
 	var f float64
 	for _, line := range lines {
-		var newLine string
+		var newLine strings.Builder
 		for r := strings.NewReader(line); ; {
 			if _, err := fmt.Fscanf(r, "%c", &ch); err != nil {
 				break
 			}
 			if ch != '\\' {
-				newLine += string(ch)
+				newLine.WriteByte(ch)
 				continue
 			}
 			fmt.Fscanf(r, "%c", &ch)
@@ -38,17 +38,18 @@ func solve(lines []string) []string {
 				case '*':
 					markUp = false
 				default:
-					newLine += string(ch)
+					newLine.WriteByte(ch)
 				}
 			} else {
 				if ch == '*' {
 					markUp = true
 				} else {
-					newLine += "\\" + string(ch)
+					newLine.WriteString("\\")
+					newLine.WriteByte(ch)
 				}
 			}
 		}
-		newLines = append(newLines, newLine)
+		newLines = append(newLines, newLine.String())
 	}
 	return newLines
 }

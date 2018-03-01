@@ -6,6 +6,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strings"
 )
 
 type terminal struct {
@@ -111,10 +112,11 @@ func main() {
 
 	var n int
 	for kase := 1; s.Scan(); kase++ {
-		var input string
+		var inputBuilder strings.Builder
 		for fmt.Sscanf(s.Text(), "%d", &n); n > 0 && s.Scan(); n-- {
-			input += s.Text()
+			inputBuilder.WriteString(s.Text())
 		}
+		input := inputBuilder.String()
 		if input == "" {
 			break
 		}

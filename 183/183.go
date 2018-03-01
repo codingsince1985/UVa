@@ -94,10 +94,11 @@ func solveD(r, c int) [][]byte {
 }
 
 func output(bits [][]byte) {
-	var line string
+	var lineBuilder strings.Builder
 	for _, row := range bits {
-		line += string(row)
+		lineBuilder.Write(row)
 	}
+	line := lineBuilder.String()
 	for len(line) >= max {
 		fmt.Fprintln(out, line[:max])
 		line = line[max:]
@@ -130,7 +131,7 @@ func main() {
 			}
 			bits := make([][]byte, r)
 			for i := range bits {
-				bits[i] = []byte(m[i*c : (i+1)*c])
+				bits[i] = []byte(m[i*c: (i+1)*c])
 			}
 			fmt.Fprintln(out, solveB(bits))
 		case 'D':

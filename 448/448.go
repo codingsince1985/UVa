@@ -49,9 +49,9 @@ func main() {
 	s := bufio.NewScanner(in)
 	s.Split(bufio.ScanLines)
 
-	var code string
+	var code strings.Builder
 	for s.Scan() {
-		code += s.Text()
+		code.WriteString(s.Text())
 	}
-	decode(out, code)
+	decode(out, code.String())
 }

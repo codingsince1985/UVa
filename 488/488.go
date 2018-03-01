@@ -5,6 +5,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 func abs(a int) int {
@@ -26,13 +27,13 @@ func main() {
 		if _, err := fmt.Fscanf(in, "\n%d", &a); err != nil {
 			break
 		}
-		var s string
+		var s strings.Builder
 		for i := 0; i < 2*a-1; i++ {
 			toPrint := a - abs(a-i-1)
 			for j := 0; j < toPrint; j++ {
-				s += fmt.Sprint(toPrint)
+				s.WriteString(fmt.Sprint(toPrint))
 			}
-			s += "\n"
+			s.WriteString("\n")
 		}
 		for fmt.Fscanf(in, "%d", &f); f > 0; f-- {
 			if first {
@@ -40,7 +41,7 @@ func main() {
 			} else {
 				fmt.Fprintln(out)
 			}
-			fmt.Fprint(out, s)
+			fmt.Fprint(out, s.String())
 		}
 	}
 }

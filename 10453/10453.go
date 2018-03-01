@@ -5,28 +5,31 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 func output(l, count int, line string, dp [][]int) string {
-	var first, second string
+	var firstBuilder strings.Builder
 	for i, j := 0, l-1; i <= j; {
 		switch {
 		case line[i] == line[j]:
-			first += string(line[i])
+			firstBuilder.WriteByte(line[i])
 			i++
 			j--
 		case dp[i][j] == dp[i+1][j]+1:
-			first += string(line[i])
+			firstBuilder.WriteByte(line[i])
 			i++
 		default:
-			first += string(line[j])
+			firstBuilder.WriteByte(line[j])
 			j--
 		}
 	}
+	var secondBuilder strings.Builder
+	first := firstBuilder.String()
 	for i := len(first) - (l+count)%2 - 1; i >= 0; i-- {
-		second += string(first[i])
+		secondBuilder.WriteByte(first[i])
 	}
-	return first + second
+	return first + secondBuilder.String()
 }
 
 func solve(line string) (int, string) {

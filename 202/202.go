@@ -6,24 +6,26 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"strings"
 )
 
 func div(n, d int) (string, int) {
 	var count, idx int
 	var ok bool
 	w := n / d
-	ans := strconv.Itoa(w) + "."
+	var ans strings.Builder
+	ans.WriteString(strconv.Itoa(w) + ".")
 	r := n % d
 	m := map[int]int{r: count}
 	for {
 		count++
 		if r *= 10; r < d {
-			ans += "0"
+			ans.WriteString("0")
 			if idx, ok = m[r]; ok {
 				break
 			}
 		} else {
-			ans += strconv.Itoa(r / d)
+			ans.WriteString(strconv.Itoa(r / d))
 			r = r % d
 			if idx, ok = m[r]; ok {
 				break
@@ -31,7 +33,7 @@ func div(n, d int) (string, int) {
 			m[r] = count
 		}
 	}
-	return ans, count - idx
+	return ans.String(), count - idx
 }
 
 func output(out *os.File, n, d int, ans string, rep int) {
