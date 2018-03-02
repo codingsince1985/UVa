@@ -131,7 +131,7 @@ func main() {
 			}
 			bits := make([][]byte, r)
 			for i := range bits {
-				bits[i] = []byte(m[i*c: (i+1)*c])
+				bits[i] = []byte(m[i*c : (i+1)*c])
 			}
 			fmt.Fprintln(out, solveB(bits))
 		case 'D':

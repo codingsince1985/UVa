@@ -18,8 +18,7 @@ func solve(grid [][]byte, r, c, n int) {
 				tmp[x][y] = grid[x][y]
 				for _, dx := range delta {
 					for _, dy := range delta {
-						i, j := x+dx, y+dy
-						if !(dx != 0 && dy != 0 || dx == 0 && dy == 0 || i < 0 || i >= r || j < 0 || j >= r) {
+						if i, j := x+dx, y+dy; !(dx != 0 && dy != 0 || dx == 0 && dy == 0 || i < 0 || i >= r || j < 0 || j >= r) {
 							switch {
 							case grid[x][y] == 'R' && grid[i][j] == 'P':
 								tmp[x][y] = 'P'

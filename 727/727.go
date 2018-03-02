@@ -25,6 +25,30 @@ func push(s string) {
 	count++
 }
 
+func solve(s string) {
+	switch s {
+	case "+", "-":
+		for count > 0 && stack[count-1] != "(" {
+			pop()
+		}
+		push(s)
+	case "*", "/":
+		for count > 0 && stack[count-1] != "(" && stack[count-1] != "+" && stack[count-1] != "-" {
+			pop()
+		}
+		push(s)
+	case "(":
+		push(s)
+	case ")":
+		for stack[count-1] != "(" {
+			pop()
+		}
+		count--
+	default:
+		fmt.Fprint(out, s)
+	}
+}
+
 func main() {
 	in, _ := os.Open("727.in")
 	defer in.Close()
@@ -38,27 +62,7 @@ func main() {
 			if fmt.Fscanf(in, "%s\n", &s); len(s) == 0 {
 				break
 			}
-			switch s {
-			case "+", "-":
-				for count > 0 && stack[count-1] != "(" {
-					pop()
-				}
-				push(s)
-			case "*", "/":
-				for count > 0 && stack[count-1] != "(" && stack[count-1] != "+" && stack[count-1] != "-" {
-					pop()
-				}
-				push(s)
-			case "(":
-				push(s)
-			case ")":
-				for stack[count-1] != "(" {
-					pop()
-				}
-				count--
-			default:
-				fmt.Fprint(out, s)
-			}
+			solve(s)
 		}
 		for count != 0 {
 			pop()
