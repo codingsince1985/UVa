@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
@@ -16,7 +17,7 @@ var (
 	done            bool
 )
 
-func output(out *os.File) {
+func output(out io.Writer) {
 	fmt.Fprintln(out)
 	for _, row := range robotMap {
 		fmt.Fprintln(out, strings.Repeat("|---", m)+"|")

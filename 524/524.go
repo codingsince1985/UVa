@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"strconv"
 	"strings"
@@ -13,7 +14,7 @@ var (
 	n       int
 	visited []bool
 	list    []int
-	out     *os.File
+	out     io.WriteCloser
 )
 
 func isPrime(n int) bool {

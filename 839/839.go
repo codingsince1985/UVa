@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -12,7 +13,7 @@ type mobile struct {
 	left, right    *mobile
 }
 
-func readLine(in *os.File) *mobile {
+func readLine(in io.Reader) *mobile {
 	var m mobile
 	fmt.Fscanf(in, "%d%d%d%d", &m.wl, &m.dl, &m.wr, &m.dr)
 	if m.wl == 0 {

@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -72,7 +73,7 @@ func process(s1, s2 string, n1, n2 int) {
 	}
 }
 
-func output(out *os.File) {
+func output(out io.Writer) {
 	for i := range blocks {
 		fmt.Fprintf(out, "%d:", i)
 		for j := range blocks[i] {

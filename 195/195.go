@@ -4,13 +4,14 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"sort"
 )
 
 var (
 	chars   []byte
-	out     *os.File
+	out     io.WriteCloser
 	visited []bool
 )
 

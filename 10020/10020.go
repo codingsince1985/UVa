@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"sort"
 )
@@ -37,7 +38,7 @@ func solve(l, r int, lines [][2]int) [][2]int {
 	return ret
 }
 
-func output(out *os.File, r [][2]int) {
+func output(out io.Writer, r [][2]int) {
 	fmt.Fprintln(out, len(r))
 	for _, v := range r {
 		fmt.Fprintln(out, v[0], v[1])

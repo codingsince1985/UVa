@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
@@ -21,7 +22,7 @@ func leadingWordCross(h, v string) cross {
 	return cross{-1, -1}
 }
 
-func solve(out *os.File, h1, v1, h2, v2 string) {
+func solve(out io.Writer, h1, v1, h2, v2 string) {
 	c1, c2 := leadingWordCross(h1, v1), leadingWordCross(h2, v2)
 	if c1 == noCross || c2 == noCross {
 		fmt.Fprintln(out, "Unable to make two crosses")

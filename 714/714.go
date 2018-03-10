@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -46,7 +47,7 @@ func solve(books []int64) [][]int64 {
 	return scribers
 }
 
-func output(out *os.File, scribers [][]int64) {
+func output(out io.Writer, scribers [][]int64) {
 	for i, scriber := range scribers {
 		s := fmt.Sprint(scriber)
 		fmt.Fprint(out, s[1:len(s)-1])

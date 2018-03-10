@@ -4,11 +4,12 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
 var (
-	out     *os.File
+	out     io.WriteCloser
 	step, m int
 	pegs    [][]int
 )

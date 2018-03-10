@@ -5,6 +5,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -38,7 +39,7 @@ func min(a, b int) int {
 
 func max(a, b int) int { return a + b - min(a, b) }
 
-func solve(out *os.File, n1, n2 string) {
+func solve(out io.Writer, n1, n2 string) {
 	v1 := value(n1)
 	v2 := value(n2)
 	fmt.Fprintf(out, "%.2f %%\n", float64(min(v1, v2)*100)/float64(max(v1, v2)))

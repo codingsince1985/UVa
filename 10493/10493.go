@@ -4,10 +4,11 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
-func solve(out *os.File, n, m int) {
+func solve(out io.Writer, n, m int) {
 	fmt.Fprintf(out, "%d %d ", n, m)
 	switch {
 	case n == 1 && m == 1:

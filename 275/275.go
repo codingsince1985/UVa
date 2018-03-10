@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"strconv"
 )
@@ -35,7 +36,7 @@ func min(a, b int) int {
 	return b
 }
 
-func output(out *os.File, length int, digits string) {
+func output(out io.Writer, length int, digits string) {
 	for i := 0; i <= len(digits)/50; i++ {
 		segment := digits[i*50 : min((i+1)*50, len(digits))]
 		if len(segment) > 0 {

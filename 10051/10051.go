@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -78,7 +79,7 @@ func solve(l int, c []sides) ([][6][2]int, int, [2]int) {
 	return pre, mx, st
 }
 
-func output(out *os.File, pre [][6][2]int, mx int, st [2]int) {
+func output(out io.Writer, pre [][6][2]int, mx int, st [2]int) {
 	res := [][2]int{st}
 	for i := 0; i < mx-1; i++ {
 		res = append(res, pre[st[0]][st[1]])

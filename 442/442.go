@@ -4,12 +4,13 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
 var m = make(map[string][2]int)
 
-func solve(out *os.File, s string) {
+func solve(out io.Writer, s string) {
 	if len(s) == 1 {
 		fmt.Fprintln(out, 0)
 		return

@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -12,7 +13,7 @@ type (
 	line  struct{ s, e point }
 )
 
-func solve(out *os.File, l1, l2 line) {
+func solve(out io.Writer, l1, l2 line) {
 	a1, b1 := l1.s.y-l1.e.y, -l1.s.x+l1.e.x
 	a2, b2 := l2.s.y-l2.e.y, -l2.s.x+l2.e.x
 	c1, c2 := a1*l1.s.x+b1*l1.s.y, a2*l2.s.x+b2*l2.s.y

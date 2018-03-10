@@ -5,12 +5,13 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"sort"
 	"strings"
 )
 
-var out *os.File
+var out io.WriteCloser
 
 func outputLine(title []string, idx int) {
 	newTitle := make([]string, len(title))

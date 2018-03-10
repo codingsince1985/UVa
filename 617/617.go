@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -26,7 +27,7 @@ here:
 	return speeds
 }
 
-func output(out *os.File, speeds []int) {
+func output(out io.Writer, speeds []int) {
 	if len(speeds) == 0 {
 		fmt.Fprintln(out, "No acceptable speeds.")
 		return

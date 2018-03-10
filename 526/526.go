@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -102,7 +103,7 @@ func nonMove(e []string) int {
 	return count
 }
 
-func output(out *os.File, e []string, s2 string) {
+func output(out io.Writer, e []string, s2 string) {
 	fmt.Fprintln(out, nonMove(e))
 	count := 0
 	p, p1, p2 := 1, 0, 0

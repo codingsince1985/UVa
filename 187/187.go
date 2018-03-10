@@ -5,6 +5,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
@@ -21,7 +22,7 @@ type transaction struct {
 	amount        int
 }
 
-func solve(out *os.File, sequence string, transactions []transaction) {
+func solve(out io.Writer, sequence string, transactions []transaction) {
 	var balance int
 	for _, txn := range transactions {
 		balance += txn.amount

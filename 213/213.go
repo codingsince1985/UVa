@@ -5,6 +5,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"strconv"
 	"strings"
@@ -35,7 +36,7 @@ func getLength(l string) int {
 	return n
 }
 
-func solve(out *os.File, header string) {
+func solve(out io.Writer, header string) {
 	keyMap := buildKey(header)
 	var l int
 	var line, code string

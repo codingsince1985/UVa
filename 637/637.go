@@ -4,12 +4,13 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
 var pages = [2]string{"front", "back "}
 
-func solve(out *os.File, n int) {
+func solve(out io.Writer, n int) {
 	sheet := n / 4
 	if n%4 != 0 {
 		sheet++

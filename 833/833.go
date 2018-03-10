@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -18,7 +19,7 @@ func touchAt(p point, l line) float64 {
 	return float64(l.p1.y) + (float64(p.x-l.p1.x) / float64(l.p2.x-l.p1.x) * float64(l.p2.y-l.p1.y))
 }
 
-func solve(out *os.File, lines []line, points []point) {
+func solve(out io.Writer, lines []line, points []point) {
 	for _, p := range points {
 		for {
 			highest := -1.0

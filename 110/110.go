@@ -4,13 +4,14 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
 
 var (
 	n    int
-	out  *os.File
+	out  io.WriteCloser
 	vars []string
 )
 

@@ -5,12 +5,13 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"strconv"
 	"strings"
 )
 
-var out *os.File
+var out io.WriteCloser
 
 func parse(line string) []string {
 	var stack []string

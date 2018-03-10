@@ -5,6 +5,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"math"
 	"os"
 	"strings"
@@ -37,7 +38,7 @@ func eliminate(candidates []string, votes [][]int, eliminated map[int]bool) {
 	}
 }
 
-func count(out *os.File, candidates []string, votes [][]int) {
+func count(out io.Writer, candidates []string, votes [][]int) {
 	total := make([]int, len(candidates))
 	for _, v := range votes {
 		if len(v) > 0 {

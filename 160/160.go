@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -44,7 +45,7 @@ func factors(n int, ps []int) map[int]int {
 	return cache[n]
 }
 
-func output(out *os.File, n int, fs map[int]int, ps []int) {
+func output(out io.Writer, n int, fs map[int]int, ps []int) {
 	fmt.Fprintf(out, "%3d! =", n)
 	l := len(fs)
 	cnt := 0

@@ -4,12 +4,13 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
 type student struct{ id, amount int }
 
-func atm(out *os.File, queue []student, k int) {
+func atm(out io.Writer, queue []student, k int) {
 	for len(queue) > 0 {
 		for i := 1; len(queue) > 0 && i <= k; i++ {
 			for amount := i; amount != 0 && len(queue) > 0; queue = queue[1:] {

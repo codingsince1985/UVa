@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -27,7 +28,7 @@ func (c circle) contains(p point) bool {
 	return (p.x-c.x)*(p.x-c.x)+(p.y-c.y)*(p.y-c.y) < c.radius*c.radius
 }
 
-func testIn(out *os.File, count int, p point, shapes []shape) {
+func testIn(out io.Writer, count int, p point, shapes []shape) {
 	inAny := false
 	for i, v := range shapes {
 		if v.contains(p) {

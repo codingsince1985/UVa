@@ -5,6 +5,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -22,7 +23,7 @@ func dfs(x, y int, cell byte) {
 	}
 }
 
-func solve(out *os.File) {
+func solve(out io.Writer) {
 	for y, row := range grid {
 		for x, cell := range row {
 			if cell != 'X' && cell != ' ' {

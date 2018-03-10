@@ -4,13 +4,14 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
 const max = 21
 
 var (
-	out            *os.File
+	out            io.WriteCloser
 	matrix         [][]bool
 	total, n, fire int
 	visited        []bool

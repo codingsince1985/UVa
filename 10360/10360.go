@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -21,7 +22,7 @@ func process(d, x, y, population int, rats *[max][max]int) {
 	}
 }
 
-func output(out *os.File, rats *[max][max]int) {
+func output(out io.Writer, rats *[max][max]int) {
 	max, x, y := 0, 0, 0
 	for i := range rats {
 		for j := range rats[i] {

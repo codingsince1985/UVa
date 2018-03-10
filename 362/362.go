@@ -4,10 +4,11 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
-func output(out *os.File, size, b5 int) {
+func output(out io.Writer, size, b5 int) {
 	if b5 == 0 {
 		fmt.Fprintln(out, "   Time remaining: stalled")
 	} else {

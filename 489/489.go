@@ -4,10 +4,11 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
-func solve(out *os.File, solution, guess string) {
+func solve(out io.Writer, solution, guess string) {
 	chars := make(map[byte]bool)
 	for i := range solution {
 		chars[solution[i]] = true

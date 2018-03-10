@@ -4,12 +4,13 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
 var (
 	n, l, count int
-	out         *os.File
+	out         io.WriteCloser
 )
 
 func isEasy(level int, sequence []string) bool {

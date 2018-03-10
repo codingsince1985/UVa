@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"sort"
 	"strconv"
@@ -21,7 +22,7 @@ func sortInt(num string, descending bool) int {
 	return n
 }
 
-func solve(out *os.File, num string) {
+func solve(out io.Writer, num string) {
 	fmt.Fprintf(out, "Original number was %s\n", num)
 	chains := make(map[int]bool)
 	for {

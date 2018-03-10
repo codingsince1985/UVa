@@ -4,10 +4,11 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
-func solve(out *os.File, n int) {
+func solve(out io.Writer, n int) {
 	s2 := n * (n + 1) * (2*n + 1) / 6
 	r2 := (n+1)*n/2*(n+1)*n/2 - s2
 	s3 := n * (n + 1) / 2 * n * (n + 1) / 2

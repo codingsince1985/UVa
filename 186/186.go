@@ -5,6 +5,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"math"
 	"os"
 	"strings"
@@ -50,7 +51,7 @@ func spfa(n, start, end int, matrix [][][]path) ([]step, int) {
 	return append([]step{{start, -1}}, paths...), distance[end]
 }
 
-func solve(tokens []string, cityMap map[string]int, orderMap map[int]string, matrix [][][]path, out *os.File) {
+func solve(tokens []string, cityMap map[string]int, orderMap map[int]string, matrix [][][]path, out io.Writer) {
 	fmt.Fprintln(out, "\n\nFrom                 To                   Route      Miles")
 	fmt.Fprintln(out, "-------------------- -------------------- ---------- -----")
 	paths, distance := spfa(len(cityMap), cityMap[tokens[0]], cityMap[tokens[1]], matrix)

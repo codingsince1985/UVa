@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"math"
 	"os"
 	"sort"
@@ -28,7 +29,7 @@ func distance(t1, t2 town) float64 {
 	return math.Sqrt((t1.x-t2.x)*(t1.x-t2.x) + (t1.y-t2.y)*(t1.y-t2.y))
 }
 
-func solve(out *os.File, n int, towns []town, f []int) {
+func solve(out io.Writer, n int, towns []town, f []int) {
 	highways := buildHighways(n, towns)
 	noNew := true
 	for _, h := range highways {

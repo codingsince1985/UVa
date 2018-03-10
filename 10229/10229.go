@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"math/big"
 	"os"
 )
@@ -27,7 +28,7 @@ func multiply(a, b [2][2]big.Int, m int64) [2][2]big.Int {
 	return tmp
 }
 
-func calc(out *os.File, n, m int64) {
+func calc(out io.Writer, n, m int64) {
 	x, y := i, a
 	for ; n != 0; n /= 2 {
 		if n&1 == 1 {

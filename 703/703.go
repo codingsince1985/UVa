@@ -4,12 +4,13 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"strconv"
 	"strings"
 )
 
-func solve(out *os.File, matrix [][]bool) {
+func solve(out io.Writer, matrix [][]bool) {
 	var ties [][]string
 	var count int
 	for i := range matrix {

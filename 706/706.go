@@ -4,23 +4,27 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
-var digits = [][]byte{
-	{'-', '|', '|', ' ', '|', '|', '-'},
-	{' ', ' ', '|', ' ', ' ', '|', ' '},
-	{'-', ' ', '|', '-', '|', ' ', '-'},
-	{'-', ' ', '|', '-', ' ', '|', '-'},
-	{' ', '|', '|', '-', ' ', '|', ' '},
-	{'-', '|', ' ', '-', ' ', '|', '-'},
-	{'-', '|', ' ', '-', '|', '|', '-'},
-	{'-', ' ', '|', ' ', ' ', '|', ' '},
-	{'-', '|', '|', '-', '|', '|', '-'},
-	{'-', '|', '|', '-', ' ', '|', '-'},
-}
+var (
+	out    io.WriteCloser
+	digits = [][]byte{
+		{'-', '|', '|', ' ', '|', '|', '-'},
+		{' ', ' ', '|', ' ', ' ', '|', ' '},
+		{'-', ' ', '|', '-', '|', ' ', '-'},
+		{'-', ' ', '|', '-', ' ', '|', '-'},
+		{' ', '|', '|', '-', ' ', '|', ' '},
+		{'-', '|', ' ', '-', ' ', '|', '-'},
+		{'-', '|', ' ', '-', '|', '|', '-'},
+		{'-', ' ', '|', ' ', ' ', '|', ' '},
+		{'-', '|', '|', '-', '|', '|', '-'},
+		{'-', '|', '|', '-', ' ', '|', '-'},
+	}
+)
 
-func output135(out *os.File, n int, num string, idx int) {
+func output135(n int, num string, idx int) {
 	for i := range num {
 		d := num[i] - '0'
 		fmt.Fprint(out, " ")
@@ -35,7 +39,7 @@ func output135(out *os.File, n int, num string, idx int) {
 	fmt.Fprintln(out)
 }
 
-func output24(out *os.File, n int, num string, idx int) {
+func output24(n int, num string, idx int) {
 	for i := 0; i < n; i++ {
 		for j := range num {
 			d := num[j] - '0'
@@ -52,19 +56,19 @@ func output24(out *os.File, n int, num string, idx int) {
 	}
 }
 
-func output(out *os.File, n int, num string) {
-	output135(out, n, num, 0)
-	output24(out, n, num, 1)
-	output135(out, n, num, 3)
-	output24(out, n, num, 4)
-	output135(out, n, num, 6)
+func output(n int, num string) {
+	output135(n, num, 0)
+	output24(n, num, 1)
+	output135(n, num, 3)
+	output24(n, num, 4)
+	output135(n, num, 6)
 	fmt.Fprintln(out)
 }
 
 func main() {
 	in, _ := os.Open("706.in")
 	defer in.Close()
-	out, _ := os.Create("706.out")
+	out, _ = os.Create("706.out")
 	defer out.Close()
 
 	var n int
@@ -73,6 +77,6 @@ func main() {
 		if fmt.Fscanf(in, "%d%s", &n, &num); n == 0 {
 			break
 		}
-		output(out, n, num)
+		output(n, num)
 	}
 }

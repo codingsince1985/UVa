@@ -5,6 +5,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
@@ -35,7 +36,7 @@ func solve(thesis string) (map[int]int, int) {
 	return lengthMap, max
 }
 
-func output(out *os.File, lengthMap map[int]int, max int) {
+func output(out io.Writer, lengthMap map[int]int, max int) {
 	for i := 1; i <= max; i++ {
 		if lengthMap[i] > 0 {
 			fmt.Fprintf(out, "%d %d\n", i, lengthMap[i])

@@ -5,11 +5,12 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"sort"
 )
 
-func output(out *os.File, dict map[byte]int, max int) {
+func output(out io.Writer, dict map[byte]int, max int) {
 	var cs []int
 	for k, v := range dict {
 		if v == max {

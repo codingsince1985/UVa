@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -39,7 +40,7 @@ func isPrime(n int) bool {
 	return true
 }
 
-func primeFactorize(out *os.File, n int64) {
+func primeFactorize(out io.Writer, n int64) {
 	for idx := int64(2); n > 1 && idx*idx <= n; idx++ {
 		if isPrime(int(idx)) {
 			for n%idx == 0 {

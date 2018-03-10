@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"math"
 	"os"
 )
@@ -17,7 +18,7 @@ func sign(condition bool) string {
 	return "+"
 }
 
-func output(out *os.File, p []point) {
+func output(out io.Writer, p []point) {
 	a1, b1 := p[1].x-p[0].x, p[1].y-p[0].y
 	c1 := p[1].x*p[1].x - p[0].x*p[0].x + p[1].y*p[1].y - p[0].y*p[0].y
 	a2, b2 := p[2].x-p[0].x, p[2].y-p[0].y

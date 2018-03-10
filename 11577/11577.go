@@ -5,11 +5,12 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
 
-func solve(out *os.File, line string) {
+func solve(out io.Writer, line string) {
 	charMap := make(map[byte]int)
 	var max int
 	for i := range line {

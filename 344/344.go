@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
@@ -41,7 +42,7 @@ func solve(n int) string {
 	return num[n/10*10] + num[n%10]
 }
 
-func output(out *os.File, n int) {
+func output(out io.Writer, n int) {
 	dict := make(map[byte]int)
 	for i := 1; i <= n; i++ {
 		for _, v := range solve(i) {

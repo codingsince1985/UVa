@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -91,7 +92,7 @@ func checkBlack(board [8][8]byte) bool {
 		checkKnight(king, board, 'N')
 }
 
-func check(out *os.File, kase int, board [8][8]byte) {
+func check(out io.Writer, kase int, board [8][8]byte) {
 	fmt.Fprintf(out, "Game #%d: ", kase)
 	switch {
 	case checkWhite(board):

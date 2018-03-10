@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -42,7 +43,7 @@ func lis(l []int) [][]node {
 	return s
 }
 
-func output(out *os.File, l []int) {
+func output(out io.Writer, l []int) {
 	fmt.Fprintf(out, "%d\n-\n", len(l))
 	for i := len(l) - 1; i >= 0; i-- {
 		fmt.Fprintf(out, "%d\n", l[i])

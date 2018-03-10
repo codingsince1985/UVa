@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"math"
 	"os"
 )
@@ -17,7 +18,7 @@ func min(a, b int) int {
 	return b
 }
 
-func tsp(out *os.File, matrix [][]int) {
+func tsp(out io.Writer, matrix [][]int) {
 	dp := make([][]int, m)
 	for i := range dp {
 		dp[i] = make([]int, n)

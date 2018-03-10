@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"sort"
 )
@@ -51,7 +52,7 @@ func getResult(pre []int, max int, nodex []node) []node {
 	return res
 }
 
-func output(out *os.File, res, orig []node) {
+func output(out io.Writer, res, orig []node) {
 	fmt.Fprintln(out, len(res))
 	for i := range res {
 		for j := range orig {

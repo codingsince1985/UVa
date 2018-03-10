@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -121,7 +122,7 @@ func edit(ops []string, s1, s2 string) []string {
 	return ed
 }
 
-func output(out *os.File, ed []string) {
+func output(out io.Writer, ed []string) {
 	for _, v := range ed {
 		fmt.Fprint(out, v)
 	}

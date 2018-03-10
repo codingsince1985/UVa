@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -20,7 +21,7 @@ func valid(n int64) bool {
 	return true
 }
 
-func solve(out *os.File, n int64) {
+func solve(out io.Writer, n int64) {
 	for i := int64(1); ; i++ {
 		m := n * i
 		if m > 9876543210 {

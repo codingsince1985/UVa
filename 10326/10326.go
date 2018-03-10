@@ -4,10 +4,11 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
-func output(out *os.File, coefficients []int64) {
+func output(out io.Writer, coefficients []int64) {
 	var sign byte
 	for i := len(coefficients) - 1; i >= 0; i-- {
 		if coefficients[i] >= 0 {

@@ -4,12 +4,13 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
 var (
 	symbol = [4]byte{' ', '.', 'x', 'W'}
-	out    *os.File
+	out    io.WriteCloser
 )
 
 func output(dish []int) {

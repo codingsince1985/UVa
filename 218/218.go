@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"math"
 	"os"
 	"sort"
@@ -43,7 +44,7 @@ func convexHull(n int, points []point) []point {
 	return ch[:m]
 }
 
-func output(out *os.File, points []point) {
+func output(out io.Writer, points []point) {
 	var length float64
 	for i := len(points) - 1; i >= 0; i-- {
 		fmt.Fprintf(out, "(%.1f,%.1f)", points[i].x, points[i].y)

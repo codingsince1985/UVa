@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -14,7 +15,7 @@ func abs(a float64) float64 {
 	return a
 }
 
-func solve(out *os.File, gainers, losers int) {
+func solve(out io.Writer, gainers, losers int) {
 	ratio, delta := float64(gainers)/float64(losers), 1.0
 	for denominator := 1; denominator <= losers; denominator++ {
 		numerator := int(float64(gainers*denominator)/float64(losers) + .5)

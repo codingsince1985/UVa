@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -20,7 +21,7 @@ func judge(c1, c2 string) (int, int) {
 	}
 }
 
-func output(players []player, out *os.File) {
+func output(players []player, out io.Writer) {
 	for _, player := range players {
 		if player.w+player.l > 0 {
 			fmt.Fprintf(out, "%.3f\n", player.w/(player.w+player.l))

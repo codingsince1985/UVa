@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -14,7 +15,7 @@ func unionFind(x int, f []int) int {
 	return f[x]
 }
 
-func do(out *os.File, n, c, x, y int, f []int) {
+func do(out io.Writer, n, c, x, y int, f []int) {
 	fx1, fx2 := unionFind(x, f), unionFind(x+n, f)
 	fy1, fy2 := unionFind(y, f), unionFind(y+n, f)
 	switch c {

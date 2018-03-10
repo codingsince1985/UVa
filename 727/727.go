@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -12,7 +13,7 @@ const max = 50
 var (
 	count int
 	stack [max]string
-	out   *os.File
+	out   io.WriteCloser
 )
 
 func pop() {

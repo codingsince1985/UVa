@@ -4,13 +4,14 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
 
 var (
 	n, h int
-	out  *os.File
+	out  io.WriteCloser
 )
 
 func dfs(length, ones int, bits []string) {

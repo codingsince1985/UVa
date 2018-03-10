@@ -5,6 +5,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"sort"
 	"strings"
@@ -143,7 +144,7 @@ func dfs(level int, used []bool) {
 	dfs(level+1, used)
 }
 
-func solve(out *os.File, line string) {
+func solve(out io.Writer, line string) {
 	token := strings.Fields(line)
 	hand = buildCards(token[:cardNumber])
 	deck = buildCards(token[cardNumber:])

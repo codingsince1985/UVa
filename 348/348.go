@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"math"
 	"os"
 )
@@ -52,7 +53,7 @@ func dp(i, j int) int {
 	return c[i][j][0]
 }
 
-func output(out *os.File, i, j int) {
+func output(out io.Writer, i, j int) {
 	if i == j {
 		fmt.Fprintf(out, "A%d", i+1)
 	} else {

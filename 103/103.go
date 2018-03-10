@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"sort"
 	"strconv"
@@ -68,7 +69,7 @@ func isSame(a, b []int) bool {
 	return true
 }
 
-func output(out *os.File, order []int, box, original [][]int) {
+func output(out io.Writer, order []int, box, original [][]int) {
 	var ret []string
 	for _, v := range order {
 		for j := range original {

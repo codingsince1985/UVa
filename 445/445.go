@@ -5,11 +5,12 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
 
-var out *os.File
+var out io.WriteCloser
 
 func nextLine(s *bufio.Scanner) (string, bool) {
 	if s.Scan() {

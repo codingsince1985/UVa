@@ -4,12 +4,13 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"strconv"
 	"strings"
 )
 
-var out *os.File
+var out io.WriteCloser
 
 func output(nums []int, selected []bool) {
 	var tokens []string

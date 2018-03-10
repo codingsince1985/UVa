@@ -5,6 +5,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
@@ -92,7 +93,7 @@ func display(input string) {
 	}
 }
 
-func output(out *os.File, kase int) {
+func output(out io.Writer, kase int) {
 	fmt.Fprintf(out, "Case %d\n+----------+\n", kase)
 	for _, row := range term.text {
 		fmt.Fprint(out, "|")

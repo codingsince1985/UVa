@@ -4,13 +4,17 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
 
 const max = 50
 
-var in, out *os.File
+var (
+	in  io.ReadCloser
+	out io.WriteCloser
+)
 
 func split(r, c int) (int, int, int, int) {
 	r1, r2, c1, c2 := r/2, r/2, c/2, c/2

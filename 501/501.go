@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"sort"
 )
@@ -15,7 +16,7 @@ func insert(slice []int, pos, value int) []int {
 	return slice
 }
 
-func solve(out *os.File, m, n int, a, u []int) {
+func solve(out io.Writer, m, n int, a, u []int) {
 	blackBox := make([]int, 0, m)
 	var idx int
 	for _, ai := range a {

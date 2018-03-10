@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -12,7 +13,7 @@ type traveller struct {
 	balance int
 }
 
-func solve(out *os.File, travellers []traveller) {
+func solve(out io.Writer, travellers []traveller) {
 	for {
 		var max, min, idx1, idx2 int
 		for i, t := range travellers {

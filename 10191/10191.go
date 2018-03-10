@@ -5,6 +5,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"sort"
 	"strconv"
@@ -29,7 +30,7 @@ func find(jobs []job) (int, int) {
 	return max, start
 }
 
-func output(out *os.File, kase, max, start int) {
+func output(out io.Writer, kase, max, start int) {
 	var duration string
 	if max < 60 {
 		duration = strconv.Itoa(max) + " minutes"

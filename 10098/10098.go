@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"sort"
 	"strings"
@@ -11,7 +12,7 @@ import (
 
 var (
 	res     map[string]bool
-	out     *os.File
+	out     io.WriteCloser
 	visited map[int]bool
 )
 

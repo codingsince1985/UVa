@@ -4,10 +4,11 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
-func solve(out *os.File, s int, p, c []int) {
+func solve(out io.Writer, s int, p, c []int) {
 	for i := range p {
 		if s >= c[i] {
 			fmt.Fprintln(out, "No problem! :D")

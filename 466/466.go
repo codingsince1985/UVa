@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -89,7 +90,7 @@ func bfs() []int {
 	return []int{-1}
 }
 
-func output(out *os.File, path []int, kase int) {
+func output(out io.Writer, path []int, kase int) {
 	fmt.Fprintf(out, "Pattern %d was ", kase)
 	switch {
 	case len(path) == 0:

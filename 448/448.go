@@ -5,6 +5,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
@@ -22,7 +23,7 @@ var (
 	operandPrefix = []string{"R", "$", "PC+", ""}
 )
 
-func decode(out *os.File, code string) {
+func decode(out io.Writer, code string) {
 	var num1, num2 uint16
 	for r := strings.NewReader(code); ; {
 		if _, err := fmt.Fscanf(r, "%1x", &num1); err != nil {

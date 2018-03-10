@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -14,7 +15,7 @@ func abs(a int) int {
 	return -a
 }
 
-func output(out *os.File, coefficients []int) {
+func output(out io.Writer, coefficients []int) {
 	first := true
 	for i := range coefficients {
 		if coefficients[i] == 0 {

@@ -4,10 +4,11 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
-func output(out *os.File, count int) {
+func output(out io.Writer, count int) {
 	switch count {
 	case 0:
 		fmt.Fprintln(out, "No carry operation.")

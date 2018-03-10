@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"math"
 	"os"
 	"strings"
@@ -45,7 +46,7 @@ func dfs(current, d, parent int) int {
 	return low[current]
 }
 
-func solve(out *os.File, n int) {
+func solve(out io.Writer, n int) {
 	low = make([]int, n)
 	depth = make([]int, n)
 	cut = make([][]bool, n)

@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -12,7 +13,7 @@ type (
 	rectangle struct{ p1, p2 point }
 )
 
-func testIn(out *os.File, count int, p point, rectangles []rectangle) {
+func testIn(out io.Writer, count int, p point, rectangles []rectangle) {
 	inAny := false
 	for i, v := range rectangles {
 		if p.x > v.p1.x && p.x < v.p2.x && p.y < v.p1.y && p.y > v.p2.y {

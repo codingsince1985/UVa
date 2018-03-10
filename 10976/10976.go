@@ -4,12 +4,13 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
 type solution struct{ x, y int }
 
-func solve(out *os.File, k int) {
+func solve(out io.Writer, k int) {
 	var solutions []solution
 	for y := k + 1; y <= k*2; y++ {
 		if (y*k)%(y-k) == 0 {

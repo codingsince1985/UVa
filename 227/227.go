@@ -5,6 +5,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
@@ -36,7 +37,7 @@ func move(puzzle [][]byte, moves string) bool {
 	return true
 }
 
-func output(out *os.File, puzzle [][]byte) {
+func output(out io.Writer, puzzle [][]byte) {
 	for i := range puzzle {
 		for j := range puzzle[i] {
 			if j > 0 {

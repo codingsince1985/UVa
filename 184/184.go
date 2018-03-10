@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"sort"
 )
@@ -12,7 +13,7 @@ type node struct{ x, y int }
 
 func sameLine(n1, n2, n3 node) bool { return (n2.x-n1.x)*(n3.y-n1.y) == (n2.y-n1.y)*(n3.x-n1.x) }
 
-func output(out *os.File, nodes []node, lines [][]int) {
+func output(out io.Writer, nodes []node, lines [][]int) {
 	if len(lines) == 0 {
 		fmt.Fprintln(out, "No lines were found")
 		return

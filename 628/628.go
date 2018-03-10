@@ -4,12 +4,13 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
 
 var (
-	out  *os.File
+	out  io.WriteCloser
 	dict []string
 	rule string
 )

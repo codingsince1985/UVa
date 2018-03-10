@@ -4,10 +4,11 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
-var out *os.File
+var out io.WriteCloser
 
 func postOrder(n []int) {
 	if l := len(n); l > 0 {

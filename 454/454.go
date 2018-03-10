@@ -5,6 +5,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"sort"
 	"strings"
@@ -17,7 +18,7 @@ var keepLetter = func(r rune) rune {
 	return -1
 }
 
-func solve(out *os.File, words []string) {
+func solve(out io.Writer, words []string) {
 	wordMap := make(map[string]string)
 	for _, word := range words {
 		s := strings.Split(strings.Map(keepLetter, word), "")

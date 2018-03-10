@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"sort"
 )
@@ -13,7 +14,7 @@ type dict struct {
 	n int
 }
 
-func output(out *os.File, d map[byte]int) {
+func output(out io.Writer, d map[byte]int) {
 	arr := make([]dict, len(d))
 	i := 0
 	for k, v := range d {

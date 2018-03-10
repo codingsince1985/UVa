@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"math"
 	"os"
 	"strconv"
@@ -23,7 +24,7 @@ var cache, str = func() ([]int, []byte) {
 	return cache, str
 }()
 
-func binarySearch(out *os.File, n int) {
+func binarySearch(out io.Writer, n int) {
 	low, high := 1, max
 	for low+1 < high {
 		mid := (low + high) / 2

@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -37,7 +38,7 @@ func order(board [][]byte) []cell {
 	return order
 }
 
-func outputAcross(out *os.File, board [][]byte, order []cell) {
+func outputAcross(out io.Writer, board [][]byte, order []cell) {
 	fmt.Fprintln(out, "Across")
 	for i, curr := range order {
 		if curr.v&across != 0 {
@@ -50,7 +51,7 @@ func outputAcross(out *os.File, board [][]byte, order []cell) {
 	}
 }
 
-func outputDown(out *os.File, board [][]byte, order []cell) {
+func outputDown(out io.Writer, board [][]byte, order []cell) {
 	fmt.Fprintln(out, "Down")
 	for i, curr := range order {
 		if curr.v&down != 0 {

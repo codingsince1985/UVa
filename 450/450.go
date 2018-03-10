@@ -5,6 +5,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"sort"
 	"strings"
@@ -17,7 +18,7 @@ func parse(line, department string) faculty {
 	return faculty{token[0], token[1], token[2], token[3], department, token[4], token[5], token[6]}
 }
 
-func output(out *os.File, faculties []faculty) {
+func output(out io.Writer, faculties []faculty) {
 	for _, f := range faculties {
 		fmt.Fprintln(out, "----------------------------------------")
 		fmt.Fprintf(out, "%s %s %s\n%s\n", f.title, f.firstName, f.lastName, f.address)

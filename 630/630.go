@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"sort"
 	"strings"
@@ -11,7 +12,7 @@ import (
 
 var vocabulary [][2]string
 
-func solve(out *os.File, word string) {
+func solve(out io.Writer, word string) {
 	fmt.Fprintf(out, "Anagrams for: %s\n", word)
 	var count int
 	sw := sortWord(word)

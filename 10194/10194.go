@@ -5,6 +5,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"sort"
 	"strings"
@@ -80,7 +81,7 @@ func process(a, b string, s1, s2 int) {
 	teamMap[a], teamMap[b] = t1, t2
 }
 
-func output(out *os.File, t []team) {
+func output(out io.Writer, t []team) {
 	for i, v := range t {
 		fmt.Fprintf(out, "%d) %s %dp, %dg (%d-%d-%d), %dgd (%d-%d)\n",
 			i+1, v.name, v.points, v.games, v.wins, v.ties, v.losses, v.goalDiff, v.goalScored, v.goalAgainst)

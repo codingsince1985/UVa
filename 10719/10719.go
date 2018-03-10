@@ -5,11 +5,12 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
 
-func solve(out *os.File, k int, a1 []int) {
+func solve(out io.Writer, k int, a1 []int) {
 	a2 := make([]int, len(a1)-1)
 	a2[0] = a1[0]
 	fmt.Fprintf(out, "q(x): %d", a2[0])

@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"sort"
 )
@@ -48,7 +49,7 @@ type lang struct {
 	c int
 }
 
-func output(out *os.File, langMap map[byte]int) {
+func output(out io.Writer, langMap map[byte]int) {
 	var lc []lang
 	for k, v := range langMap {
 		lc = append(lc, lang{k, v})

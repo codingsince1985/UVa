@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -14,7 +15,7 @@ func unionFind(x int, f []int) int {
 	return f[x]
 }
 
-func solve(out *os.File, n int, friends [][2]int) {
+func solve(out io.Writer, n int, friends [][2]int) {
 	f, v := make([]int, n), make([]int, n)
 	for i := range f {
 		f[i], v[i] = i, 1

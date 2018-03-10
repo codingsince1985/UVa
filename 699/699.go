@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -17,7 +18,7 @@ type node struct {
 var (
 	low, high int
 	sums      []int
-	in        *os.File
+	in        io.ReadCloser
 )
 
 func nextNumber() int {

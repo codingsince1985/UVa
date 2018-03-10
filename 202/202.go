@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"strconv"
 	"strings"
@@ -36,7 +37,7 @@ func div(n, d int) (string, int) {
 	return ans.String(), count - idx
 }
 
-func output(out *os.File, n, d int, ans string, rep int) {
+func output(out io.Writer, n, d int, ans string, rep int) {
 	fmt.Fprintf(out, "%d/%d = ", n, d)
 	fmt.Fprint(out, ans[:len(ans)-rep], "(", ans[len(ans)-rep:], ")")
 	fmt.Fprintf(out, "\n   %d = number of digits in repeating cycle\n\n", rep)

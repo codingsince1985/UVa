@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"math"
 	"os"
 )
@@ -43,7 +44,7 @@ func backtracking(cur int, length float64) {
 	}
 }
 
-func output(out *os.File, kase int) {
+func output(out io.Writer, kase int) {
 	fmt.Fprintln(out, "**********************************************************")
 	fmt.Fprintf(out, "Network #%d\n", kase)
 	for i := range seg {

@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -32,7 +33,7 @@ here:
 	return false
 }
 
-func find(out *os.File, grid [][]byte, chars []byte) {
+func find(out io.Writer, grid [][]byte, chars []byte) {
 	for x := range grid {
 		for y := range grid[x] {
 			if found(x, y, grid, chars) {

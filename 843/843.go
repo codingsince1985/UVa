@@ -5,6 +5,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"sort"
 	"strings"
@@ -108,7 +109,7 @@ func backtracking(level int, m1, m2 map[byte]byte) map[byte]byte {
 	return nil
 }
 
-func solve(out *os.File, line string) {
+func solve(out io.Writer, line string) {
 	sortWords(dictionary)
 	words = strings.Fields(line)
 	sortWords(words)

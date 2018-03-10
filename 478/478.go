@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -46,7 +47,7 @@ func (t triangle) contains(p point) bool {
 	return diff <= zero
 }
 
-func testIn(out *os.File, count int, p point, shapes []shape) {
+func testIn(out io.Writer, count int, p point, shapes []shape) {
 	inAny := false
 	for i, v := range shapes {
 		if v.contains(p) {

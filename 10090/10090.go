@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -16,7 +17,7 @@ func extendedEuclidean(n1, n2 int) (int, int, int) {
 	return x, y, d
 }
 
-func solve(out *os.File, n, c1, n1, c2, n2 int) {
+func solve(out io.Writer, n, c1, n1, c2, n2 int) {
 	x, y, d := extendedEuclidean(n1, n2)
 	if n%d != 0 {
 		fmt.Fprintln(out, "failed")

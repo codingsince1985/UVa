@@ -4,13 +4,14 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"sort"
 )
 
 const max = 60
 
-func output(out *os.File, files []string, cols, maxLen int) {
+func output(out io.Writer, files []string, cols, maxLen int) {
 	for i := 0; i < max; i++ {
 		fmt.Fprint(out, "-")
 	}

@@ -5,6 +5,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
@@ -21,7 +22,7 @@ func dfs(x, y int, maze [][]byte) {
 	}
 }
 
-func output(out *os.File, maze [][]byte, line string) {
+func output(out io.Writer, maze [][]byte, line string) {
 	for _, vi := range maze {
 		fmt.Fprintln(out, string(vi))
 	}

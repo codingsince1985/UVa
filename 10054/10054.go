@@ -4,13 +4,14 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
 const max = 50
 
 var (
-	out    *os.File
+	out    io.WriteCloser
 	matrix [][]int
 	degree []int
 )

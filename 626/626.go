@@ -4,10 +4,11 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
-func solve(out *os.File, matrix [][]bool) {
+func solve(out io.Writer, matrix [][]bool) {
 	var count int
 	for i := range matrix {
 		for j := range matrix {

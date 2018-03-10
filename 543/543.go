@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -26,7 +27,7 @@ var primeSet = func() map[int]bool {
 	return primeSet
 }()
 
-func solve(out *os.File, n int) {
+func solve(out io.Writer, n int) {
 	for i := 3; i <= n/2; i += 2 {
 		if primeSet[i] && primeSet[n-i] {
 			fmt.Fprintf(out, "%d = %d + %d\n", n, i, n-i)

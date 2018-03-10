@@ -4,10 +4,11 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
-func output(out *os.File, ages [100]int) {
+func output(out io.Writer, ages [100]int) {
 	first := true
 	for i, v := range ages {
 		for ; v > 0; v-- {

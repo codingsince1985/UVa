@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -56,7 +57,7 @@ func dfs(matrix [][]bool, route []int) bool {
 	return false
 }
 
-func output(out *os.File, chars map[byte]int) {
+func output(out io.Writer, chars map[byte]int) {
 	for _, v := range order {
 		for k, idx := range chars {
 			if v == idx {

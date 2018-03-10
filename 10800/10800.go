@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
@@ -13,7 +14,7 @@ const (
 	mid = 52
 )
 
-func solve(out *os.File, line string) {
+func solve(out io.Writer, line string) {
 	graph := make([][]byte, max)
 	for i := range graph {
 		graph[i] = []byte(strings.Repeat(" ", mid))

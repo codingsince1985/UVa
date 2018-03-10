@@ -4,13 +4,14 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"sort"
 )
 
 type job struct{ no, time, fine int }
 
-func output(out *os.File, jobs []job) {
+func output(out io.Writer, jobs []job) {
 	first := true
 	for _, j := range jobs {
 		if first {

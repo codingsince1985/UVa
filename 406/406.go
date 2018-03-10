@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -29,7 +30,7 @@ func getPrimes() []int {
 	return primes
 }
 
-func output(out *os.File, lst []int) {
+func output(out io.Writer, lst []int) {
 	for _, v := range lst {
 		fmt.Fprintf(out, " %d", v)
 	}

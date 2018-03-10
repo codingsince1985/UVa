@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"sort"
 )
@@ -35,7 +36,7 @@ func lis(h []int) [][]node {
 	return s
 }
 
-func output(out *os.File, s [][]node, l int) {
+func output(out io.Writer, s [][]node, l int) {
 	var f []int
 	k := len(s)
 	fmt.Fprintf(out, "Max hits: %d\n", k)

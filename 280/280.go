@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -21,7 +22,7 @@ func dfs(node int) {
 	}
 }
 
-func output(out *os.File, n int, visited map[int]bool) {
+func output(out io.Writer, n int, visited map[int]bool) {
 	fmt.Fprint(out, n-len(visited))
 	for i := 0; i < n; i++ {
 		if !visited[i] {

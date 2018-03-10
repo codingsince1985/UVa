@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"math"
 	"os"
 )
@@ -33,7 +34,7 @@ func solve(points []point) [10]int {
 	return dist
 }
 
-func output(out *os.File, dist [10]int) {
+func output(out io.Writer, dist [10]int) {
 	for _, d := range dist {
 		fmt.Fprintf(out, "%4d", d)
 	}

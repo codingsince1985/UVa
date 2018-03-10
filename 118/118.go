@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -13,7 +14,7 @@ var (
 	dir = map[string]int{"N": 0, "E": 1, "S": 2, "W": 3}
 )
 
-func output(out *os.File, x, y, direction int, lost bool) {
+func output(out io.Writer, x, y, direction int, lost bool) {
 	fmt.Fprintf(out, "%d %d ", x, y)
 	for i, v := range dir {
 		if v == direction {

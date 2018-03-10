@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"math/big"
 	"os"
 )
@@ -16,7 +17,7 @@ func factorial(n int) string {
 	return res.String()
 }
 
-func output(out *os.File, str string) {
+func output(out io.Writer, str string) {
 	var res [10]int
 	for i := range str {
 		digit := str[i] - '0'

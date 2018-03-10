@@ -4,13 +4,14 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
 const max = 10
 
 var (
-	in           *os.File
+	in           io.ReadCloser
 	coefficients []int
 )
 
@@ -37,7 +38,7 @@ func dfs(n, k int) {
 	}
 }
 
-func output(out *os.File, kase int) {
+func output(out io.Writer, kase int) {
 	fmt.Fprintf(out, "Program #%d\n", kase)
 	fmt.Fprint(out, "Runtime = ")
 	var started bool

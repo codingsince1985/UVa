@@ -5,11 +5,12 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 )
 
 var (
-	out        *os.File
+	out        io.WriteCloser
 	directions = [][2]int{{0, -1}, {1, 0}, {0, 1}, {-1, 0}}
 	picture    [][]byte
 	m, n       int

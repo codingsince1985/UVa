@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -82,7 +83,7 @@ func bfs(fm, to node) []node {
 	return nil
 }
 
-func output(out *os.File, n string, p []node) {
+func output(out io.Writer, n string, p []node) {
 	fmt.Fprintln(out, n)
 	if p == nil {
 		fmt.Fprintln(out, "  No Solution Possible")

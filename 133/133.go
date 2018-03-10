@@ -4,11 +4,12 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
 
-func solve(n, k, m int, out *os.File) {
+func solve(n, k, m int, out io.Writer) {
 	dole := make([]int, n)
 	for i := range dole {
 		dole[i] = i + 1

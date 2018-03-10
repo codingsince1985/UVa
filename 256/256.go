@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"math"
 	"os"
 )
@@ -18,7 +19,7 @@ func squaresOf(n int) []int {
 
 func split(num, limit int) [2]int { return [2]int{num / limit, num % limit} }
 
-func quirksome(n int, out *os.File) {
+func quirksome(n int, out io.Writer) {
 	limit := int(math.Pow10(n / 2))
 	squares := squaresOf(limit)
 	for _, v := range squares {

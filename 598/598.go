@@ -5,13 +5,14 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"strconv"
 	"strings"
 )
 
 var (
-	out        *os.File
+	out        io.WriteCloser
 	n, size    int
 	newspapers []string
 )

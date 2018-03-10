@@ -4,12 +4,13 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
 var (
 	row, count int
-	out        *os.File
+	out        io.WriteCloser
 )
 
 func in(x, y int) bool { return x >= 0 && x < 8 && y >= 0 && y < 8 }

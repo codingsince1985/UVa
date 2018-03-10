@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -34,7 +35,7 @@ func solve(field [][]byte) [][]byte {
 	return res
 }
 
-func output(out *os.File, field [][]byte) {
+func output(out io.Writer, field [][]byte) {
 	for _, v := range field {
 		fmt.Fprintln(out, string(v))
 	}

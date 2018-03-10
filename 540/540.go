@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -39,7 +40,7 @@ func enqueue(element int) {
 	tail = tail.next
 }
 
-func solve(in, out *os.File) {
+func solve(in io.Reader, out io.Writer) {
 	var command string
 	var element int
 	for {
