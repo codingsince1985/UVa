@@ -11,9 +11,9 @@ import (
 
 type byteSlice []byte
 
-func (b byteSlice) Len() int           { return len(b) }
-func (b byteSlice) Less(i, j int) bool { return i < j }
-func (b byteSlice) Swap(i, j int)      { b[i], b[j] = b[j], b[i] }
+func (b byteSlice) Len() int         { return len(b) }
+func (byteSlice) Less(i, j int) bool { return i < j }
+func (b byteSlice) Swap(i, j int)    { b[i], b[j] = b[j], b[i] }
 
 func max(a, b int) int {
 	if a > b {
