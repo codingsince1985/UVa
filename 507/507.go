@@ -8,7 +8,7 @@ import (
 )
 
 func maxsub(s []int) (int, int) {
-	start, end := -1, -1
+	start := -1
 	longestStart, longestEnd := -1, -1
 	var meh, msf int
 	for i, v := range s {
@@ -20,9 +20,8 @@ func maxsub(s []int) (int, int) {
 				start = i
 			}
 			if msf <= meh {
-				end = i + 1
 				msf = meh
-				if end-start > longestEnd-longestStart {
+				if end := i + 1; end-start > longestEnd-longestStart {
 					longestStart = start
 					longestEnd = end
 				}
