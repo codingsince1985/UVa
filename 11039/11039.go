@@ -11,25 +11,25 @@ import (
 func solve(red, blue []int) int {
 	sort.Sort(sort.Reverse(sort.IntSlice(red)))
 	sort.Sort(sort.Reverse(sort.IntSlice(blue)))
-	var redIdx, blueIdx, curr int
+	var curr int
 	var isRed bool
 	if red[0] > blue[0] {
 		curr = red[0]
-		redIdx++
 		isRed = true
 	} else {
 		curr = blue[0]
-		blueIdx++
 	}
 	count := 1
 	for ; ; count, isRed = count+1, !isRed {
 		if isRed {
-			if blueIdx = sort.Search(len(blue), func(i int) bool { return blue[i] < curr }); blueIdx == len(blue) {
+			blueIdx := sort.Search(len(blue), func(i int) bool { return blue[i] < curr })
+			if blueIdx == len(blue) {
 				break
 			}
 			curr = blue[blueIdx]
 		} else {
-			if redIdx = sort.Search(len(red), func(i int) bool { return red[i] < curr }); redIdx == len(red) {
+			redIdx := sort.Search(len(red), func(i int) bool { return red[i] < curr })
+			if redIdx == len(red) {
 				break
 			}
 			curr = red[redIdx]
