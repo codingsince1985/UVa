@@ -50,7 +50,7 @@ func doStandardDeviation(s int, mean float64, students []student) float64 {
 
 func doBonus(students []student) {
 	for i, v := range students {
-		students[i].average += float64(int(v.bonus/2) * 3)
+		students[i].average += float64(v.bonus / 2 * 3)
 	}
 }
 

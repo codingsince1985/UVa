@@ -16,6 +16,6 @@ func main() {
 	var t, n, m int
 	for fmt.Fscanf(in, "%d", &t); t > 0; t-- {
 		fmt.Fscanf(in, "%d%d", &n, &m)
-		fmt.Fprintln(out, int(n/3)*int(m/3))
+		fmt.Fprintln(out, (n/3)*(m/3))
 	}
 }

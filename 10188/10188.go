@@ -12,7 +12,7 @@ import (
 var (
 	s       *bufio.Scanner
 	keepNum = func(r rune) rune {
-		if r >= rune('0') && r <= rune('9') {
+		if r >= '0' && r <= '9' {
 			return r
 		}
 		return -1

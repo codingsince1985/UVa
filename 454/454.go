@@ -12,7 +12,7 @@ import (
 )
 
 var keepLetter = func(r rune) rune {
-	if r >= rune('a') && r <= rune('z') || r >= rune('A') && r <= rune('Z') {
+	if r >= 'a' && r <= 'z' || r >= 'A' && r <= 'Z' {
 		return r
 	}
 	return -1
