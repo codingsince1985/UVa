@@ -10,7 +10,9 @@ import (
 
 type point struct{ x, y float64 }
 
-func distance(p1, p2 point) float64 { return math.Sqrt(math.Pow(p1.x-p2.x, 2) + math.Pow(p1.y-p2.y, 2)) }
+func distance(p1, p2 point) float64 {
+	return math.Sqrt(math.Pow(p1.x-p2.x, 2) + math.Pow(p1.y-p2.y, 2))
+}
 
 func radius(d1, d2, d3 float64) float64 {
 	t := d1 + d2 + d3

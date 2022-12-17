@@ -9,7 +9,9 @@ import (
 
 type guess struct{ code, correct, misplace int }
 
-func digits(code int) []int { return []int{code / 1000, (code / 100) % 10, (code / 10) % 10, code % 10} }
+func digits(code int) []int {
+	return []int{code / 1000, (code / 100) % 10, (code / 10) % 10, code % 10}
+}
 
 func compare(c1, c2 int) (int, int) {
 	var correct, misplace int
