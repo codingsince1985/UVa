@@ -9,13 +9,6 @@ import (
 
 const max = 1500
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func main() {
 	out, _ := os.Create("136.out")
 	defer out.Close()

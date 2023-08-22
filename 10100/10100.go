@@ -9,13 +9,6 @@ import (
 	"strings"
 )
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func lcs(s1, s2 string) int {
 	t1, t2 := strings.Fields(s1), strings.Fields(s2)
 	l1, l2 := len(t1), len(t2)

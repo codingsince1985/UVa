@@ -10,13 +10,6 @@ import (
 
 const max = 2000000
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func getDistance(highway string) int {
 	distance, drugIdx, restIdx := max, -1, -1
 	for i := range highway {

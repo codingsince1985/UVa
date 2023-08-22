@@ -8,13 +8,6 @@ import (
 	"os"
 )
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func skew(a, b float64) int {
 	cols := int(a)
 	rows := int(2*(b-1)/math.Sqrt(3)) + 1

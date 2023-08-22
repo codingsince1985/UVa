@@ -7,13 +7,6 @@ import (
 	"os"
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func main() {
 	in, _ := os.Open("278.in")
 	defer in.Close()

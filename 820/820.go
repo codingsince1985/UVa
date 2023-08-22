@@ -8,13 +8,6 @@ import (
 	"os"
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func edmondsKarp(s, t int, matrix [][]int) int {
 	var sum int
 	n := len(matrix)

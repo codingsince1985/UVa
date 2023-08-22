@@ -30,15 +30,6 @@ func value(name string) int {
 	return v
 }
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-func max(a, b int) int { return a + b - min(a, b) }
-
 func solve(out io.Writer, n1, n2 string) {
 	v1 := value(n1)
 	v2 := value(n2)

@@ -17,13 +17,6 @@ var (
 
 func currentPos(x, y, r float64) float64 { return x + math.Sqrt((y+r)*(y+r)-(y-r)*(y-r)) }
 
-func max(a, b float64) float64 {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func calculate(order []int) {
 	pos := make([]float64, m)
 	pos[0] = radius[order[0]]

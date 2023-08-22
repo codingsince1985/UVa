@@ -7,13 +7,6 @@ import (
 	"os"
 )
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func lcs(n, m int, r1, r2 []int) int {
 	var dp [101][101]int
 	for i := 1; i <= n; i++ {

@@ -8,13 +8,6 @@ import (
 	"os"
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func trace(op [][]int) []string {
 	ed := []string{"E"}
 	l1, l2 := len(op)-1, len(op[0])-1

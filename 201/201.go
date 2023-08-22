@@ -11,13 +11,6 @@ type point struct{ h, v bool }
 
 var n int
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func isSquare(i, j, k int, grid [][]point) bool {
 	for d := 0; d < k; d++ {
 		if !grid[i+d][j].v || !grid[i+d][j+k].v || !grid[i][j+d].h || !grid[i+k][j+d].h {

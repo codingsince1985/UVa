@@ -24,15 +24,6 @@ func clear(picture [][]byte) {
 	}
 }
 
-func min(x, y int) int {
-	if x < y {
-		return x
-	}
-	return y
-}
-
-func max(x, y int) int { return x + y - min(x, y) }
-
 func fill(picture [][]byte, x, y int, c byte) {
 	old := picture[y][x]
 	picture[y][x] = c

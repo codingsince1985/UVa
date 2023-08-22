@@ -7,13 +7,6 @@ import (
 	"os"
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func solve(m [][]byte) int {
 	l := len(m)
 	dp := make([][]int, l+1)

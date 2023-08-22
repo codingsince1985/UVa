@@ -9,13 +9,6 @@ import (
 
 var m, n int
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func initialize(grid [][]byte) [][]int {
 	dp := make([][]int, m)
 	for i := range dp {

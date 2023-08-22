@@ -7,13 +7,6 @@ import (
 	"os"
 )
 
-func max(a, b float64) float64 {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func floydWarshall(matrix [][]float64) {
 	for k := range matrix {
 		for i := range matrix {

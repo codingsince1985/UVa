@@ -10,15 +10,6 @@ import (
 
 type stone struct{ x, y float64 }
 
-func min(a, b float64) float64 {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-func max(a, b float64) float64 { return a + b - min(a, b) }
-
 func floydWarshall(n int, stones []stone) float64 {
 	minMax := make([][]float64, n)
 	for i := range minMax {

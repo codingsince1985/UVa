@@ -7,13 +7,6 @@ import (
 	"os"
 )
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func knapsack(l, tw int, p, w []int) int {
 	dp := make([][]int, l+1)
 	for i := range dp {

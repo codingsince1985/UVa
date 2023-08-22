@@ -51,13 +51,6 @@ func toMatrix(edges []edge) ([]int, int, [][]int) {
 	return odds, sum, matrix
 }
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func floydWarshall(odds []int, matrix [][]int) int {
 	for k := range matrix {
 		for i := range matrix {

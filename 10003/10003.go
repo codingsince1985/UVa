@@ -10,13 +10,6 @@ import (
 
 var dp [][]int
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func solve(c []int, l, r int) int {
 	if dp[l][r] != -1 {
 		return dp[l][r]

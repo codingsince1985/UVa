@@ -11,13 +11,6 @@ import (
 
 var m int
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func floydWarshall(matrix [][]int) {
 	for k := range matrix {
 		for i := range matrix {

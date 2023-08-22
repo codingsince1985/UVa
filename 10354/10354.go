@@ -8,13 +8,6 @@ import (
 	"os"
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func floydWarshall(places [][]int) {
 	for k := range places {
 		for i := range places {

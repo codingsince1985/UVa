@@ -13,13 +13,6 @@ var (
 	directions = [][2]int{{1, 0}, {0, -1}, {-1, 0}, {0, 1}}
 )
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func dfs(i, j int) int {
 	if dp[i][j] == 0 {
 		for _, direction := range directions {

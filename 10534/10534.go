@@ -50,13 +50,6 @@ func lds(num []int) []int {
 	return dp
 }
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func solve(num []int) int {
 	dp1, dp2 := lis(num), lds(num)
 	var length int

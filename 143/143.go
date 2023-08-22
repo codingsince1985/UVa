@@ -31,15 +31,6 @@ func (t triangle) contains(p point) bool {
 	return abs(area(p, t.p1, t.p2)+area(p, t.p1, t.p3)+area(p, t.p2, t.p3)-area(t.p1, t.p2, t.p3)) <= zero
 }
 
-func min(a, b float64) float64 {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-func max(a, b float64) float64 { return a + b - min(a, b) }
-
 func solve(t triangle) int {
 	minx := int(min(99, min(min(t.p1.x, t.p2.x), t.p3.x)))
 	miny := int(min(99, min(min(t.p1.y, t.p2.y), t.p3.y)))

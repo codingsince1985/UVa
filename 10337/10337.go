@@ -10,13 +10,6 @@ import (
 
 const level = 10
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func solve(steps int, matrix [][]int) int {
 	dp := make([][]int, steps+1)
 	for i := range dp {

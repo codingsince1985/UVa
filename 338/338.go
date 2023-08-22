@@ -10,13 +10,6 @@ import (
 	"strings"
 )
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func singleNonZero(n int64) bool {
 	var count int
 	for ; n > 0; n /= 10 {

@@ -7,15 +7,6 @@ import (
 	"os"
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-func max(a, b int) int { return a + b - min(a, b) }
-
 func main() {
 	in, _ := os.Open("10714.in")
 	defer in.Close()

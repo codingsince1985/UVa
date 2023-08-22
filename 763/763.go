@@ -8,13 +8,6 @@ import (
 	"strings"
 )
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func add(n1, n2 string) []uint8 {
 	l1, l2 := len(n1), len(n2)
 	sum := make([]uint8, max(l1, l2)+2)

@@ -18,13 +18,6 @@ func unionFind(x int, f []int) int {
 	return f[x]
 }
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func isTree(edges []edge) bool {
 	if len(edges) == 0 {
 		return true

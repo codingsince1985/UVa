@@ -8,13 +8,6 @@ import (
 	"os"
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func solve(n int, f []int) int {
 	prefixSum := make([]int, n+1)
 	for i := 1; i <= n; i++ {

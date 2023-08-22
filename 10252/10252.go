@@ -15,13 +15,6 @@ func charMap(s string) map[byte]int {
 	return cm
 }
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func commonPermutation(a, b string) map[byte]int {
 	cb := charMap(b)
 	cm := make(map[byte]int)

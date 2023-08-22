@@ -14,13 +14,6 @@ var (
 	area    int
 )
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func try() {
 	for hul := 1; hul < 11; hul++ {
 		for vlu := 1; vlu < 11; vlu++ {

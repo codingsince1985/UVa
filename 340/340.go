@@ -7,13 +7,6 @@ import (
 	"os"
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func match(s, g []int) (int, int) {
 	ms, mg := make(map[int]int), make(map[int]int)
 	strong, weak := 0, 0

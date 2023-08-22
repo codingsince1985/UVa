@@ -9,15 +9,6 @@ import (
 	"os"
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-func max(a, b int) int { return a + b - min(a, b) }
-
 func floydWarshall(matrix [][]int) {
 	for k := range matrix {
 		for i := range matrix {

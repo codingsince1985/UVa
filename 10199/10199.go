@@ -16,13 +16,6 @@ var (
 	disc, low, parent    []int
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func articulationPoint(curr, root int) {
 	t++
 	low[curr], disc[curr] = t, t

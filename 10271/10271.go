@@ -13,13 +13,6 @@ var (
 	dp  [][]int
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func doDP(k, n int) int {
 	if dp[k][n] == -1 {
 		switch {

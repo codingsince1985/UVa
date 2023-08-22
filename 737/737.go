@@ -10,15 +10,6 @@ import (
 
 type cube struct{ lx, ly, lz, hx, hy, hz int }
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-func max(a, b int) int { return a + b - min(a, b) }
-
 func solve(cubes []cube) int {
 	maxx, maxy, maxz := math.MaxInt32, math.MaxInt32, math.MaxInt32
 	minx, miny, minz := math.MinInt32, math.MinInt32, math.MinInt32

@@ -12,15 +12,6 @@ var (
 	paper [][]byte
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-func max(a, b int) int { return a + b - min(a, b) }
-
 func dfsUp(i, j, level int) int {
 	if i > 0 && paper[i-1][j] == '-' && paper[i-1][j+1] == '-' && paper[i-1][j+2] == '-' {
 		return min(dfsUp(i-1, j, level+1), min(dfsUp(i-1, j+1, level+1), dfsUp(i-1, j+2, level+1)))

@@ -8,13 +8,6 @@ import (
 	"os"
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func make2d(d1, d2 int) [][]int {
 	s := make([][]int, d1)
 	for i := range s {

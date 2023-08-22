@@ -8,13 +8,6 @@ import (
 	"os"
 )
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func findMax(s [][]int) int {
 	msf := math.MinInt32
 	for i, l := 0, len(s); i < l; i++ {

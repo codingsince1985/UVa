@@ -14,15 +14,6 @@ type town struct{ x, y float64 }
 
 func distance(t1, t2 town) float64 { return math.Sqrt(math.Pow(t1.x-t2.x, 2) + math.Pow(t1.y-t2.y, 2)) }
 
-func min(a, b float64) float64 {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-func max(a, b float64) float64 { return a + b - min(a, b) }
-
 func floydWarshall(matrix [][]float64) {
 	for k := range matrix {
 		for i := range matrix {

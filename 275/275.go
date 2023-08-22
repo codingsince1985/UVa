@@ -29,13 +29,6 @@ func divide(n, d int) (int, string) {
 	return len(digits) - pre, string(digits)
 }
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func output(out io.Writer, length int, digits string) {
 	for i := 0; i <= len(digits)/50; i++ {
 		segment := digits[i*50 : min((i+1)*50, len(digits))]

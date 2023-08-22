@@ -9,13 +9,6 @@ import (
 
 const maxHeight = 9
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func solve(k int, front, right []int) (int, int) {
 	var m, n int
 	for i, l, r := 0, k, k; i < maxHeight; i++ {

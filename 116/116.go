@@ -11,13 +11,6 @@ import (
 
 var m, n int
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func tsp(out io.Writer, matrix [][]int) {
 	dp := make([][]int, m)
 	for i := range dp {

@@ -18,15 +18,6 @@ var (
 	path    []string
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-func max(a, b int) int { return a + b - min(a, b) }
-
 func even() bool {
 	for _, m := range matrix {
 		if len(m)%2 != 0 {

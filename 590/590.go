@@ -8,13 +8,6 @@ import (
 	"os"
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func initialise(n, k int) [][]int {
 	dp := make([][]int, k+1)
 	for i := range dp {

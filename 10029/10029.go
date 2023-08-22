@@ -9,13 +9,6 @@ import (
 
 var dp = make(map[int]map[string]int)
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func add(word string) int {
 	var longest int
 	for j := 0; j <= len(word); j++ {

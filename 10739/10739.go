@@ -13,13 +13,6 @@ var (
 	dp   [][]int
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func find(i, j int) int {
 	switch {
 	case i > j:

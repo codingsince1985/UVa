@@ -16,13 +16,6 @@ const (
 
 type station struct{ distance, price int }
 
-func min(a, b int) int {
-	if a <= b {
-		return a
-	}
-	return b
-}
-
 func solve(distance int, stations []station) int {
 	if stations[0].distance != 0 {
 		stations = append([]station{{0, 0}}, stations...)

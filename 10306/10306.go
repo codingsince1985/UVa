@@ -10,13 +10,6 @@ import (
 
 type ecoin struct{ conventional, infoTechnological int }
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func solve(s int, ecoins []ecoin) int {
 	dp := make([][]int, s+1)
 	for i := range dp {

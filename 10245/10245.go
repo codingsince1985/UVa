@@ -11,13 +11,6 @@ import (
 
 type point struct{ x, y float64 }
 
-func min(a, b float64) float64 {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func distance(p1, p2 point) float64 {
 	return math.Sqrt((p1.x-p2.x)*(p1.x-p2.x) + (p1.y-p2.y)*(p1.y-p2.y))
 }

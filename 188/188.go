@@ -11,13 +11,6 @@ import (
 	"strings"
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func calc(w []int) int {
 	c, l := w[0], len(w)
 	for {

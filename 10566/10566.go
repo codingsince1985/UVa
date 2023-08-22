@@ -10,13 +10,6 @@ import (
 
 const zero = 0.00001
 
-func min(a, b float64) float64 {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func binarySearch(x, y, c float64) float64 {
 	var mid float64
 	low, high := 0.0, min(x, y)

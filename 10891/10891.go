@@ -13,13 +13,6 @@ var (
 	visited [][]bool
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func find(l, r int) int {
 	if !visited[l][r] {
 		visited[l][r] = true

@@ -7,15 +7,6 @@ import (
 	"os"
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-func max(a, b int) int { return a + b - min(a, b) }
-
 func solve(m, n int) int {
 	switch m, n = min(m, n), max(m, n); m {
 	case 1:

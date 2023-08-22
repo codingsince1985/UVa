@@ -14,13 +14,6 @@ func distance(b1, b2 building) float64 {
 	return math.Sqrt(float64((b1.x-b2.x)*(b1.x-b2.x) + (b1.y-b2.y)*(b1.y-b2.y)))
 }
 
-func min(a, b float64) float64 {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func prim(n int, campus [][]float64) float64 {
 	var total float64
 	low := make([]float64, n)

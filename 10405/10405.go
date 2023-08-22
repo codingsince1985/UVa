@@ -8,13 +8,6 @@ import (
 	"os"
 )
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func lcs(c1, c2 []byte) int {
 	l1, l2 := len(c1), len(c2)
 	dp := make([][]int, l1+1)

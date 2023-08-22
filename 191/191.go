@@ -13,15 +13,6 @@ type (
 	rectangle struct{ p1, p2, p3, p4 point }
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-func max(a, b int) int { return a + b - min(a, b) }
-
 func area(p point, l line) int { return (l.p1.y-p.y)*(l.p2.x-p.x) - (l.p2.y-p.y)*(l.p1.x-p.x) }
 
 func cross(p point, l line) bool {

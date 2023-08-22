@@ -7,13 +7,6 @@ import (
 	"os"
 )
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func solve(n, t, s int, c []int) (int, int) {
 	time, trip := -2*t, 0
 	mod := s % n

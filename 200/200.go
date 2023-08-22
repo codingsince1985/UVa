@@ -13,13 +13,6 @@ var (
 	visited map[int]bool
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func buildMatrix(chars map[byte]int, words []string) [][]bool {
 	matrix := make([][]bool, len(chars))
 	for i := range matrix {

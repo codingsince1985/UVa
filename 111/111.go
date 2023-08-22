@@ -7,13 +7,6 @@ import (
 	"os"
 )
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func lcs(s1, s2 []int) int {
 	l := len(s1)
 	dp := make([][]int, l+1)

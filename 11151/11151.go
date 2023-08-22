@@ -15,13 +15,6 @@ func (b byteSlice) Len() int         { return len(b) }
 func (byteSlice) Less(i, j int) bool { return i < j }
 func (b byteSlice) Swap(i, j int)    { b[i], b[j] = b[j], b[i] }
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func lcs(c1, c2 []byte) int {
 	l1, l2 := len(c1), len(c2)
 	dp := make([][]int, l1+1)

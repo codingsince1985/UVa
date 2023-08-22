@@ -18,13 +18,6 @@ func distance(s1, s2 [2]int) float64 {
 	return math.Sqrt(float64((s1[0]-s2[0])*(s1[0]-s2[0]) + (s1[1]-s2[1])*(s1[1]-s2[1])))
 }
 
-func min(a, b float64) float64 {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func dfs(level int) float64 {
 	if dp[level] == math.MaxFloat64 {
 		if level == (1<<num)-1 {

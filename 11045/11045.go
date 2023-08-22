@@ -10,13 +10,6 @@ import (
 
 var sizeMap = map[string]int{"XXL": 1, "XL": 2, "L": 3, "M": 4, "S": 5, "XS": 6}
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func edmondsKarp(s, t int, matrix [][]int) int {
 	var sum int
 	n := len(matrix)
