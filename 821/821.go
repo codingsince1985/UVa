@@ -52,8 +52,7 @@ func initialize(links [][2]int) [][]int {
 	return distance
 }
 
-func floydWarshall(links [][2]int) float64 {
-	distance := initialize(links)
+func floydWarshall(distance [][]int) [][]int {
 	for k := range distance {
 		for i := range distance {
 			for j := range distance {
@@ -64,9 +63,7 @@ func floydWarshall(links [][2]int) float64 {
 			}
 		}
 	}
-	total := sum(distance)
-	n := len(distance)
-	return total / float64(n*(n-1))
+	return distance
 }
 
 func main() {
@@ -87,6 +84,8 @@ func main() {
 		if len(links) == 0 {
 			break
 		}
-		fmt.Fprintf(out, "Case %d: average length between pages = %.3f clicks\n", kase, floydWarshall(links))
+		distance := floydWarshall(initialize(links))
+		total, n := sum(distance), len(distance)
+		fmt.Fprintf(out, "Case %d: average length between pages = %.3f clicks\n", kase, total/float64(n*(n-1)))
 	}
 }
