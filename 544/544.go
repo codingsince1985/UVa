@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-func floydWarshall(matrix map[string]map[string]int, c1, c2 string) int {
+func floydWarshall(matrix map[string]map[string]int) map[string]map[string]int {
 	for k := range matrix {
 		for i := range matrix {
 			for j := range matrix {
@@ -15,7 +15,7 @@ func floydWarshall(matrix map[string]map[string]int, c1, c2 string) int {
 			}
 		}
 	}
-	return matrix[c1][c2]
+	return matrix
 }
 
 func main() {
@@ -47,6 +47,6 @@ func main() {
 			matrix[c1][c2], matrix[c2][c1] = l, l
 		}
 		fmt.Fscanf(in, "%s%s", &c1, &c2)
-		fmt.Fprintf(out, "Scenario #%d\n%d tons\n", kase, floydWarshall(matrix, c1, c2))
+		fmt.Fprintf(out, "Scenario #%d\n%d tons\n", kase, floydWarshall(matrix)[c1][c2])
 	}
 }

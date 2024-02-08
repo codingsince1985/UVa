@@ -51,7 +51,7 @@ func toMatrix(edges []edge) ([]int, int, [][]int) {
 	return odds, sum, matrix
 }
 
-func floydWarshall(odds []int, matrix [][]int) int {
+func floydWarshall(matrix [][]int) [][]int {
 	for k := range matrix {
 		for i := range matrix {
 			for j := range matrix {
@@ -59,7 +59,7 @@ func floydWarshall(odds []int, matrix [][]int) int {
 			}
 		}
 	}
-	return matrix[odds[0]][odds[1]]
+	return matrix
 }
 
 func main() {
@@ -80,7 +80,7 @@ func main() {
 			if odds, sum, matrix := toMatrix(edges); len(odds) == 0 {
 				fmt.Fprintln(out, sum)
 			} else {
-				fmt.Fprintln(out, sum+floydWarshall(odds, matrix))
+				fmt.Fprintln(out, sum+floydWarshall(matrix)[odds[0]][odds[1]])
 			}
 			edges = nil
 		}
